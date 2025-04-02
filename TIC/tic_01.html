@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S1. Paradigmas tecnológicos | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1743459502/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S1. Paradigmas tecnológicos | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1743459502_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"UTqqaWM8bq","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1743459502","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21039,"courseContextId":2643474,"contextid":2659464,"contextInstanceId":649464,"langrev":1743578645,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21039 context-2659464 cmid-649464 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1743459502/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S1. Paradigmas tecnológicos</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Tecnologías de la Información y Comunicación 2° A 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S1. Paradigmas tecnológicos
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        miércoles, 2 de abril de 2025, 14:41
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21039&amp;section=2&amp;singlesec=2#:~:text=TIC_IFTS29-,S1,-S1" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649463" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"></path>
+                            </svg>
+                        </div>
+                        <p>Recorré</p>
+                    </section>
+                </a>
+
+
+
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-option" viewBox="0 0 16 16">
+                                <path d="M1 2.5a.5.5 0 0 1 .5-.5h3.797a.5.5 0 0 1 .439.26L11 13h3.5a.5.5 0 0 1 0 1h-3.797a.5.5 0 0 1-.439-.26L5 3H1.5a.5.5 0 0 1-.5-.5zm10 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"></path>
+                                </svg>
+                    </div>
+                    <p>Conectá</p>
+
+                </section>
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649465&amp;forceview=1" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="m10 10.414 4 4 5.707-5.707L22 11V5h-6l2.293 2.293L14 11.586l-4-4-7.707 7.707 1.414 1.414z"></path></svg>
+                        </div>
+
+                        <p>Proyectá</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Saberes técnicos" class="font-weight-bold text-decoration-none" href="#ch179772">1. Saberes técnicos</a></li><li><a title="2. Introducción general" class="font-weight-bold text-decoration-none" href="#ch179763">2. Introducción general</a></li><li><a title="3. Concepto de Tecnologías de la Información y la Comunicación" class="font-weight-bold text-decoration-none" href="#ch179764">3. Concepto de Tecnologías de la Información y la Comunicación</a><ul><li><a title="3.1. Características representativas de las TIC (parte 1)" class="text-decoration-none" href="#ch179765">3.1. Características representativas de las TIC (parte 1)</a></li><li><a title="3.2. Características representativas de las TIC (parte 2)" class="text-decoration-none" href="#ch179766">3.2. Características representativas de las TIC (parte 2)</a></li></ul></li><li><a title="4. Paradigma tecnológico de Castells" class="font-weight-bold text-decoration-none" href="#ch179767">4. Paradigma tecnológico de Castells</a></li><li><a title="5. Nuevas TIC" class="font-weight-bold text-decoration-none" href="#ch179768">5. Nuevas TIC</a></li><li><a title="6. Definiciones de TIC" class="font-weight-bold text-decoration-none" href="#ch179769">6. Definiciones de TIC</a></li><li><a title="7. Cuatro ejes de TIC" class="font-weight-bold text-decoration-none" href="#ch179770">7. Cuatro ejes de TIC</a></li><li><a title="8. Disciplinas relacionadas con la TIC" class="font-weight-bold text-decoration-none" href="#ch179771">8. Disciplinas relacionadas con la TIC</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179772"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179772/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Conectá los saberes técnicos</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div><br></div>
+        <div>El cambio de paradigma tecnológico indica una transformación en la forma en que interactuamos con la información y el mundo, lo que exige adaptabilidad y actualización constante de habilidades técnicas.&nbsp; <br>
+            <!-- Cuadro amarillo borde violeta -->
+            <br>
+
+            <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+                <div style="margin:16px">
+                    <p style="color: #5811BB; font-size: large; font-weight: 600">TIC</p><ul>
+                            <li>Representan un cambio cualitativo al mejorar la eficiencia y transformar los procesos, afectando directamente el desarrollo de software al demandar soluciones innovadoras y ágiles. Internet, omnipresente en la vida cotidiana,
+                                conecta y afecta cada aspecto, desde la comunicación hasta el entretenimiento.&nbsp; </li>
+                            <li>Considerando el futuro, las tecnologías prometen revolucionar sectores como la inteligencia artificial y la medicina, subrayando la importancia de los saberes técnicos para anticipar y liderar estas transformaciones.<br><br></li>
+                        </ul>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-left: 3%; margin-right: 3%;"><br></div>Comprender las Tecnologías de la Información y Comunicación (TIC) y sus características es esencial para un desarrollador de software. Estos conocimientos no solo permiten abordar las complejidades del desarrollo sino también:&nbsp;</div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <!--Inicio Caja violeta-->
+        <br>
+        <div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600"><br></p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li></li>
+                <ol>
+                    <li>
+                        <p><span><b><strong>Adaptabilidad a cambios tecnológicos</strong></b></span><strong>:</strong>&nbsp;Los conocimientos en TIC capacitan al/la desarrollador/a para adaptarse a las constantes evoluciones tecnológicas. Mantenerse al tanto
+                            de las últimas tendencias y herramientas es crucial para crear soluciones de software que estén alineadas con las demandas cambiantes del mercado.<br></p>
+                    </li>
+                    <li>
+                        <p><b><strong>Eficiencia en desarrollo y resolución de problemas:</strong></b>&nbsp;Comprender las TIC proporciona al/la desarrollador/a las habilidades necesarias para abordar las complejidades del desarrollo de software de manera
+                            eficiente. La familiaridad con diversas tecnologías y sus características permite la elección adecuada de herramientas y enfoques para resolver problemas específicos.</p>
+                    </li>
+                    <li>
+                        <p><b><strong>Innovación y creatividad:</strong></b>&nbsp;Los conocimientos profundos en TIC brindan al/la desarrollador/a la base necesaria para la innovación y la creatividad en el diseño de soluciones. Esto va más allá de la simple
+                            implementación de código, ya que implica la capacidad de idear soluciones originales y eficaces para desafíos tecnológicos.</p>
+                    </li>
+                </ol>
+            </ul>
+        </div>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><b><strong><span class="" style="color: rgb(51, 51, 51);">¡Comencemos!</span></strong></b></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p><br>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179763"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179763/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p> ¿Cómo se han desarrollado las TIC a lo largo de la historia? ¿Cómo han cambiado las formas de comunicación y de relacionarnos?
+        </p>
+
+        <p>Comenzaremos a definir las TIC, como aquellas tecnologías que se desarrollan a partir de los avances científicos producidos en los ámbitos de la informática y las telecomunicaciones. En este sentido, son el <span class="sub_negrita">conjunto de tecnologías</span>            que permiten el <span class="sub_negrita">acceso</span>, la <span class="sub_negrita">producción </span>, el <span class="sub_negrita">tratamiento</span> y la <span class="sub_negrita">comunicación</span> de información presentada
+            en diferentes formatos (texto, imagen, sonido, etc.) </p>
+
+        <p>En la actualidad, el elemento más representativo de las nuevas tecnologías es, sin duda, la computadora, y más específicamente, Internet. Tal y como indican diferentes autores, Internet supone un <span class="sub_negrita">salto cualitativo</span>            de gran magnitud, al cambiar y redefinir los modos de conocer y relacionarse del hombre. </p>
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179764"><div style="background-color: #FAFAFA; ">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179764/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Concepto de Tecnologías de la Información y la Comunicación</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-left: 3%; margin-right: 3%; font-size: large; color: #010614 ">
+
+        <br>
+
+        <p>Empecemos con la definición del concepto de Tecnologías de la Información y la Comunicación. En la literatura académica encontramos múltiples definiciones de las TIC según los diferentes autores. Nosotros tomaremos la definición de Cabero (1998),
+            quien sostiene que en líneas generales:</p>
+
+
+        <p style="font-size: large; padding-left: 88px; padding-right: 88px"><span style=" color: #9A3282; font-weight: 600">“Las nuevas tecnologías de la información y comunicación son las que giran en torno a tres medios básicos: la informática, la microelectrónica y las telecomunicaciones; pero giran, no sólo de forma aislada, sino lo que es más significativo, de manera interactiva e interconexionadas, lo que permite conseguir nuevas realidades comunicativas”.</span></p>
+
+
+
+        <p style="font-size: large; color: #010614 ">En las páginas que siguen, exploraremos en detalle las características significativas de las TIC, tal como las han definido diversos autores y como han sido compiladas por Cabero.</p>
+
+
+
+
+
+
+        <div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Características representativas de las TIC<br></p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>1. Inmaterialidad</li>
+                <li>2. Interactividad</li>
+                <li>3. Interconexión</li>
+                <li>4. Instantaneidad</li>
+                <li>5. Elevados parámetros de calidad de imagen y sonido</li>
+                <li>6. Digitalización</li>
+                <li>7. Mayor influencia sobre los procesos que sobre los productos<br>8. Abarca todos los sectores (culturales, económicos, educativos, industriales, etc.)<br>9. Innovación<br>10. Tendencia hacia la automatización<br>11. Diversidad<br></li>
+            </ul>
+        </div>
+
+        <br>
+
+
+
+        <!--- Acá abajo no puede haber nada -->
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179765"><div style="background-color: #FAFAFA;">
+
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179765/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 40px 8px 30px ; margin-left:-3%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;">Características representativas de las TIC <br></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+        
+
+
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">1. Inmaterialidad</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">En líneas generales, podemos decir que las TIC realizan la creación (aunque en algunos casos sin referentes reales, como pueden ser las simulaciones), el proceso y la comunicación de la información, la cual es básicamente inmaterial y puede
+                    ser llevada de forma transparente e instantánea a lugares lejanos. </p>
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+        <br>
+
+
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">2. Interactividad</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">La interactividad, es posiblemente la característica más importante de las TIC, dado que implica un intercambio de información entre el usuario y la computadora. Esta característica permite adaptar los recursos utilizados a las necesidades
+                    y características de los sujetos, en función de la interacción concreta del sujeto con la computadora. </p>
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+        <br>
+
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">3. Interconexión</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">La interconexión, hace referencia a la creación de nuevas posibilidades tecnológicas a partir de la conexión entre dos tecnologías. Por ejemplo, la telemática es la interconexión entre la informática y las tecnologías de comunicación, propiciando
+                    con ello, distintos recursos como el correo electrónico.</p>
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+        <br>
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">4. Instantaneidad</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Las redes de comunicación y su integración con la informática, han posibilitado el uso de servicios que permiten la comunicación y transmisión de la información, entre sitios alejados físicamente, de una forma rápida. </p>
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+        <br>
+
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">5. Elevados parámetros de calidad de imagen y sonido</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">El proceso y transmisión de la información han sido facilitados por la digitalización, que ha permitido alcanzar transmisiones de información como imagen, texto y sonido, de gran calidad.</p>
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+        <br>
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">6. Digitalización</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">La digitalización, permite que la información de distinto tipo (sonidos, texto, imágenes, animaciones, etc.) pueda ser transmitida por los mismos medios, al estar representada en un formato único universal. En algunos casos, como con los sonidos, la transmisión tradicional se hace de forma analógica y, para que puedan comunicarse de forma consistente por medio de las redes telemáticas, es necesario su transcripción a una codificación digital, que en este caso, realiza
+                    bien un soporte de hardware como el modem o un soporte de software para la digitalización. </p>
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+
+
+
+<br>
+
+
+        <!-- No puede haber nada abajo -->
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179766"><div style="background-color: #FAFAFA;">
+
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179766/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 40px 8px 30px ; margin-left:-3%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;">Características representativas de las TIC <br></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+        <p style="color: #010614 ; font-size: large; ">Sigamos con la lista de características de las TIC:<br></p>
+
+
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">7. Mayor influencia sobre los procesos que sobre los productos</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">En los distintos análisis realizados, sobre la sociedad de la información, se remarca la enorme importancia de la inmensidad de información a la que permite acceder Internet. Esto  posibilitaría, por un lado, que el uso de diferentes aplicaciones de la TIC, presente una influencia sobre los procesos mentales que realizan los usuarios para la adquisición de conocimientos, más que sobre los propios conocimientos adquiridos. Por otro lado, muy diversos autores, han señalado justamente el efecto negativo de la proliferación de la información, los problemas de la calidad de la misma y la evolución hacia aspectos evidentemente sociales, pero menos ricos en potencialidad educativa - económicos, comerciales, lúdicos, etc. </p>
+              
+              <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">No obstante, como otros muchos señalan, las posibilidades que brindan las TIC suponen un cambio cualitativo en los procesos más que en los productos. Ya hemos señalado el notable incremento del papel activo de cada sujeto, puesto que puede y debe aprender a construir su propio conocimiento sobre una base mucho más amplia y rica. </p>
+              
+              <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">En definitiva, un sujeto no sólo dispone, a partir de las TIC, de una <span>masa</span><b> </b>de información para construir su conocimiento sino que, además, puede construirlo en forma colectiva, asociándose a otros sujetos o grupos. Estas dos dimensiones básicas (mayor grado de protagonismo por parte de cada individuo y facilidades para la actuación colectiva) son las que suponen una modificación cuantitativa y cualitativa de los procesos personales y educativos en la utilización de las TIC.</p>
+
+
+
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+        <br>
+
+
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">8. Abarca todos los sectores (culturales, económicos, educativos, industriales, etc.)</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">El impacto de las TIC no se refleja únicamente en un individuo, grupo, sector o país, sino que, se extiende al conjunto de las sociedades del planeta. En este sentido, los propios conceptos de “la sociedad de la información” y “la globalización”,
+                    se refirieren a este proceso, entendiendo que los efectos de las TIC se extienden a todos los habitantes, grupos e instituciones conllevando importantes cambios, cuya complejidad está en el debate social hoy en día. </p>
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+        <br>
+
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">9. Innovación</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Como podemos ver en este análisis, las TIC, están produciendo una innovación y cambio constante en todos los ámbitos sociales. Sin embargo, es de reseñar que estos cambios no siempre indican un rechazo a las tecnologías o medios anteriores,
+                    sino que en algunos casos se produce una especie de simbiosis con otros medios. Por ejemplo, el uso de la correspondencia personal se había reducido ampliamente con la aparición del teléfono, pero el uso y potencialidades del correo
+                    electrónico ha llevado a un resurgimiento de la correspondencia personal.</p>
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+        <br>
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">10. Tendencia hacia la automatización </p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Otra de las características de las TIC, se revela ante la propia complejidad que empuja a la aparición de diferentes posibilidades y herramientas que permitan un manejo automático de la información en diversas actividades personales, profesionales
+                    y sociales. La necesidad de disponer de información estructurada hace que se desarrollen gestores personales o corporativos con distintos fines y de acuerdo con unos determinados principios.</p></div></div>
+
+        <br>
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">11. Diversidad </p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Finalmente, la utilidad de las tecnologías puede ser muy diversa, desde la mera comunicación entre personas, hasta el proceso de la información para crear informaciones nuevas.
+                </p>
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+
+        <br>
+
+
+        <!-- No puede haber nada abajo -->
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179767"><div style="background-color: #FAFAFA;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179767/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 100px 8px 50px ; margin-left:-1.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;">Paradigma tecnológico de Castells</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+
+        <p style="font-size: large;color: #010614 ">Luego de haber analizado las características más representativas de las TIC y su impacto en la sociedad a nivel planetario, es interesante traer a la escena la posición de Jordi Adell, Doctor en Filosofía y Educación y experto en los usos de las
+            tecnologías digitales en la educación. Adell sostiene que, dadas las características y nuevas posibilidades que ofrecen las redes telemáticas, se está produciendo un cambio de paradigma.<br></p>
+        <br>
+
+        <!--Caja + título + imagen + texto-->
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Adell (1997)</span></b>
+            </span>
+        </p>
+
+
+
+        <div style="border: 1px solid #9A3282; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179767/images.jpg?time=1708691454401" alt="Castells" width="179" height="181" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_middle">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">"El paradigma de las nuevas tecnologías, son las redes informáticas. Los ordenadores, aislados, nos ofrecen una gran cantidad de posibilidades, pero conectados incrementan su funcionalidad en varios órdenes de magnitud. Formando redes, los ordenadores sirven como herramienta para acceder a información, a recursos y servicios prestados por ordenadores remotos, como sistema de publicación y difusión de la información y como medio de comunicación entre seres humanos".</span>                        </span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + título + imagen + texto-->
+
+        <p style="font-size: large; padding-left: 88px; padding-right: 88px"><br></p>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span style=" color:#1345CD; font-weight: 600; font-size: x-large">Características del Paradigma</span>
+        <div>
+        </div>
+        <br>
+        <p style="font-size: large; color: #010614;">En la misma línea, Manuel Castells, sociólogo y autor de la trilogía <i>La era de la información </i>(1996-1998) presenta la noción de paradigma tecnológico, enfatizando su carácter abierto, adaptable e integrador con las siguientes características:</p>
+
+        <br>
+
+
+        <div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <!-- <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Características</p>-->
+            <ul style="color: #010614 ; font-size: large; padding: 16px; list-style-type: none;">
+                <li>- La información es su materia prima.</li>
+                <li>- Su capacidad de penetración se produce en todos los ámbitos sociales.</li>
+                <li>- La lógica de interconexión en el sistema tecnológico es la morfología de la red, que permite dotar de estructura y flexibilidad al sistema.</li>
+                <li>- Su flexibilidad y capacidad para reconfigurarse, permitiendo la fluidez organizativa.
+                </li>
+                <li>- Convergencia e integración de tecnologías específicas en un sistema general.</li>
+            </ul>
+        </div>
+
+        <br>
+
+
+
+        <p style="font-size: large; color: #010614;">De este modo, Castells sitúa a las TIC como el conjunto de tecnologías desarrolladas en el campo de la microelectrónica, la informática, las telecomunicaciones, la televisión y la radio, la optoelectrónica y su conjunto de desarrollo y aplicaciones.
+        </p>
+
+        <p style="font-size: large; color: #010614;">A partir de las definiciones anteriores, podemos decir que el término <b><strong>nuevas tecnologías de la información y comunicación&nbsp;</strong></b>se utiliza al referirse a diferentes instrumentos técnicos como la computadora, las redes, la realidad virtual,
+            que giran en torno de las telecomunicaciones, la informática y los audiovisuales de forma interactiva.
+            <br><br></p>
+
+
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179768"><div style="background-color: #FAFAFA; font-size: large;color: #010614 ">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179768/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 100px 8px 50px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;">Nuevas TIC</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p style="font-size: large; color: #010614 ;">Profundicemos ahora un poco más en esta definición. De acuerdo con Cabero, deberíamos distinguir entre:<br>
+        </p>
+        <ul>
+            <li>nuevas tecnologías (video e informática) y,</li>
+            <li>tecnologías avanzadas; término acuñado por diversos autores para diferenciar las realmente nuevas (multimedias, televisión por cable y satélite, internet, entre otras).</li>
+        </ul>
+        <p></p>
+
+        <br>
+
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179768/INFO3.png?time=1691593384575" alt="sd" width="700" height="404" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+
+
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Nuevas tecnologías de la información y comunicación según Cabero.</p>
+
+
+        <br>
+
+
+
+        <p style="font-size: large; color: #010614 ;">Entonces, dentro de lo que llamamos <b>nuevas tecnologías de la información y comunicación</b>, el elemento de mayor potencialidad en la actualidad es la <b>red informática Internet</b> como cauce de acceso a recursos, servicios e información
+            y canal de interacción de los usuarios.</p><div class="container"><div class="row"><div class="col-lg-8 col-md-12" style="margin: 0% auto"><div class="box "><div class="container-sm" ;="" style="text-align: left"><div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">Esta característica, conlleva una <b><strong>redefinición del concepto </strong></b>que supere su centralidad en los avances técnicos y de lugar a una centrada en las nuevas realidades generadas por estos
+                                avances.<br></div></div></div></div></div></div>
+        <p style="font-size: large; color: #010614 ;"><br>Este nuevo estadio o etapa, presenta las TIC como aquellos instrumentos técnicos que mediante el tratamiento de la información, dan lugar a nuevos escenarios y situaciones de comunicación. Esta propuesta, se aproxima a la caracterización de las
+            nuevas tecnologías que realiza Pérez García (en Cabero, 2000), la cual contempla una dimensión técnica y expresiva de las mismas.
+        </p>
+
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179768/Frame%2078.png" alt="sfsdfsfsd" width="800" height="902" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Dimensiones técnicas y expresivas de las nuevas tecnologías.</p>
+
+        <br></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179769"><div style="background-color: #FAFAFA; font-size: large;color: #010614 ">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179769/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 100px 8px 50px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;"> Definiciones de TIC</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Las TIC abarcan una diversidad de definiciones que varían según el enfoque desde el cual se aborden. Con el objetivo de enriquecer nuestro entendimiento, a continuación se presenta una recopilación de definiciones provenientes de distintos autores
+            e instituciones. </p>
+
+        <br>
+
+
+        <!--Caja título con foto y texto-->
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="" style="font-size: medium;">Castells (1998)</span></b>
+            </span>
+        </p>
+
+
+
+        <div style="border: 1px solid #9A3282; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179769/Castells.png" alt="Castells" width="70" height="70" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_middle">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">Conjunto de tecnologías desarrolladas en el campo de la microelectrónica, la informática, las telecomunicaciones, la televisión y la radio, la optoelectrónica y su conjunto de desarrollos y aplicaciones.</span>                        </span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja título con foto y texto-->
+
+        <br>
+
+
+
+        <!--Caja título con foto y texto-->
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="" style="font-size: medium;">Cabero (2000)</span></b>
+            </span>
+        </p>
+
+        <div style="border: 1px solid #A9228A; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179769/Cabrero.png" alt="Cabrero" width="70" height="70" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_text-top">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">Instrumentos técnicos que giran en torno a los nuevos descubrimientos de la información. Medios eléctricos que crean, almacenan, recuperan y transmiten la información de forma rápida, y en gran cantidad, y lo hacen combinando diferentes tipos de códigos en una realidad hipermedia. </span></span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja título con foto y texto-->
+
+
+
+        <br>
+
+
+
+        <!--Caja título con foto y texto-->
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="" style="font-size: medium;">UNESCO</span></b>
+            </span>
+        </p>
+
+        <div style="border: 1px solid #9A3282; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179769/Unesco.png" alt="Unesco" width="70" height="70" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_middle">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">El conjunto de disciplinas científicas, tecnológicas, de ingeniería y de técnicas de gestión utilizadas en el manejo y procesamiento de la información, sus aplicaciones; las computadoras y su interacción con hombres y máquinas; y los contenidos asociados de carácter social, económico y cultural.</span></span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja título con foto y texto-->
+
+
+
+
+        <br>
+
+
+
+        <!--Caja título con foto y texto-->
+
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="" style="font-size: medium;">La Prensa Digital</span></b>
+            </span>
+        </p>
+
+        <div style="border: 1px solid #9A3282; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179769/Prensa.png" alt="Castells" width="70" height="70" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_middle">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">Conjunto de tecnologías que se unen para atender las demandas del uso y el acceso al conocimiento e información de las sociedades.</span></span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja título con foto y texto-->
+
+
+
+
+        <br>
+
+
+
+        <!--Caja título con foto y texto-->
+
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="" style="font-size: medium;">Pérez Garcia (1997)</span></b>
+            </span>
+        </p>
+
+        <div style="border: 1px solid #9A3282; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179769/Perez.png" alt="Perez" width="70" height="70" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_middle">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">Contempla una dimensión técnica y otra expresiva que generan una transformación de los entornos comunicativos. </span></span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja título con foto y texto-->
+
+
+
+        <br>
+
+
+        <!--Inicio Caja título con foto y texto-->
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="" style="font-size: medium;">Gisbert y otros (1992)</span></b>
+            </span>
+        </p>
+
+
+
+        <div style="border: 1px solid #9A3282; border-radius: 8px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179769/Gisbert.png" alt="Castells" width="70" height="70" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_middle">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);"> Conjunto de herramientas, soportes y canales para el tratamiento y acceso a la información.</span></span></p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja título con foto y texto-->
+
+
+
+
+
+
+
+
+        <br>
+
+
+
+        <!--Caja título con foto y texto-->
+
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="" style="font-size: medium;">Bartolomé (1995)</span></b>
+            </span>
+        </p>
+
+        <div style="border: 1px solid #9A3282; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179769/Bartolom%C3%A9.png" alt="Castells" width="70" height="70" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_middle">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">Últimos desarrollos tecnológicos y sus aplicaciones.</span></span></p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja título con foto y texto-->
+
+
+
+        <br>
+
+
+
+        <!--Caja título con foto y texto-->
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="" style="font-size: medium;">Castells y otros (1986)</span></b>
+            </span>
+        </p>
+
+        <div style="border: 1px solid #9A3282; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179769/Castells.png" alt="Castells" width="70" height="70" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_text-bottom">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">Comprenden una serie de aplicaciones de descubrimiento científico cuyo núcleo central consiste en una capacidad cada vez mayor de tratamiento de la información.</span></span></p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja título con foto y texto-->
+
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179770"><div style="background-color: #FAFAFA; font-size: large;color: #010614 ">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179770/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 100px 8px 50px ; margin-left:-1.6%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;"> Cuatro ejes de TIC</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+      <p>¿Qué puntos en común tienen las definiciones anteriores? ¿Hay algún aspecto en el que se diferencien?
+</p>
+        <p>Para cerrar este capítulo sobre los conceptos de las TIC, podemos observar que un análisis pormenorizado de la denominación empleada: nuevas tecnologías de la información y comunicación, nos ofrece una serie de notas características. Cuatro ejes,
+            cuatro piezas de un rompecabezas que <b>construyen </b>una realidad que hasta ahora no existía. </p>
+
+        <p>Las cuatro características presentadas son una condición necesaria, pero no suficiente para obtener el resultado:</p>
+
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Nuevas:</span>&nbsp;incluye a tecnologías como el video, la televisión y la informática (a pesar de no ser nuevas —desde un punto de vista temporal— debido al carácter equívoco de este término) porque al añadir
+                    el resto de las piezas en juego (información y comunicación) las dota de un nuevo contenido comunicativo.</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Tecnologías:</span> son los instrumentos técnicos que deben su situación y desarrollo actual a los avances producidos en la informática, la microelectrónica, los multimedia y las comunicaciones.</p>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Información:</span> se refiere a la acción que realizan: crear, almacenar, recuperar y transmitir la información.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Comunicación:</span> alude a la generación de situaciones comunicativas como consecuencia de la interacción e interconexión. </p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179771"><div style="background-color: #FAFAFA; font-size: large;color: #010614 ">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659464/mod_book/chapter/179771/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 100px 8px 50px ; margin-left:-1.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;">Disciplinas relacionadas con la TIC</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>En función de lo que hemos visto hasta acá, acerca de las características de las tecnologías y sus redefiniciones, ahora les compartimos algunas disciplinas que se relacionan e interconectan con las TIC:</p>
+
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Ciencias computacionales</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Es el estudio sistemático de la factibilidad, estructura, expresión y mecanización de los procesos metódicos (o algoritmos), que sientan bases para la adquisición, representación, procesamiento, almacenamiento, comunicación y acceso a
+                    la información. </p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Los científicos de la computación estudian la naturaleza de la misma para determinar cuáles problemas son (o no son) computables. Comparan varios algoritmos para determinar si proveen una solución correcta y eficiente a un problema
+                    en concreto. La Ciencia de la computación no es sólo construir computadoras y escribir programas. Tampoco son las herramientas que se emplean. Se trata de cómo son usadas esas herramientas y lo que se descubre cuando son empleadas.
+                    La solución a muchos problemas de las ciencias de la computación ni siquiera puede requerir una computadora; sólo lápiz y papel.
+                </p>
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Programación de lenguaje</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Para permitir la especificación y expresión de tales algoritmos se diseñan, construyen y evalúan sistemas de cómputo que pueden eficientemente ejecutar tales especificaciones. Además, aplican tales algoritmos a dominios de aplicación importantes.
+                </p>
+
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Sistemas de Información</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Un Sistema de Información (SI) recoge, procesa, almacena, analiza y difunde información para cumplir con un propósito específico. Incluye entradas y salidas. Procesa las entradas y produce las salidas que se envían a los usuarios o a otros
+                    sistemas. Opera dentro de un entorno. </p>
+
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+
+
+
+
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Ingeniería de software</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Los requerimientos de la tecnología de la información que demandan los individuos, negocios y gobiernos se hacen más complejos con cada año que pasa. En la actualidad, grandes equipos de personas crean programas de cómputo que antes eran
+                    elaborados por un solo individuo. Los individuos, negocios y gobiernos dependen cada vez más del software para tomar decisiones estratégicas y tácticas, así como para sus operaciones y control cotidianos.</p>
+
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+      
+        <!-- Cuadro amarillo borde rosa -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Otras disciplinas:</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Matemáticas, Ciencias Cognitivas, Sociología, Psicología.</p>
+
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde rosa -->
+
+        <p>¿Hay alguna de las disciplinas que te atraiga más? ¿Por qué?</p>
+
+        <br></div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[649458,649459,649461,649462,649463,649465,649466,649467,649469,649471,676491]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2659464, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1743615022); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random67ed76d414f772'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random67ed76d414f772'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S2. Hardware de computadoras | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1743459502/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S2. Hardware de computadoras | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1743459502_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"iR0qehVRf6","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1743459502","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21039,"courseContextId":2643474,"contextid":2659470,"contextInstanceId":649470,"langrev":1743578645,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21039 context-2659470 cmid-649470 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1743459502/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S2. Hardware de computadoras</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Tecnologías de la Información y Comunicación 2° A 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S2. Hardware de computadoras
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        miércoles, 2 de abril de 2025, 14:02
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21039&amp;section=3" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649469&amp;forceview=1" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"></path>
+                            </svg>
+                        </div>
+                        <p>Recorré</p>
+                    </section>
+                </a>
+
+
+
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-option" viewBox="0 0 16 16">
+                                <path d="M1 2.5a.5.5 0 0 1 .5-.5h3.797a.5.5 0 0 1 .439.26L11 13h3.5a.5.5 0 0 1 0 1h-3.797a.5.5 0 0 1-.439-.26L5 3H1.5a.5.5 0 0 1-.5-.5zm10 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"></path>
+                                </svg>
+                    </div>
+                    <p>Conectá</p>
+
+                </section>
+
+                
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649471&amp;forceview=1" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="m10 10.414 4 4 5.707-5.707L22 11V5h-6l2.293 2.293L14 11.586l-4-4-7.707 7.707 1.414 1.414z"></path></svg>
+                        </div>
+
+                        <p>Proyectá</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Saberes técnicos" class="font-weight-bold text-decoration-none" href="#ch179792">1. Saberes técnicos</a></li><li><a title="2. Hardware" class="font-weight-bold text-decoration-none" href="#ch179787">2. Hardware</a><ul><li><a title="2.1. PC" class="text-decoration-none" href="#ch179793">2.1. PC</a></li><li><a title="2.2. Placa base" class="text-decoration-none" href="#ch179794">2.2. Placa base</a></li></ul></li><li><a title="3. La comunicación entre la computadora y los periféricos" class="font-weight-bold text-decoration-none" href="#ch179788">3. La comunicación entre la computadora y los periféricos</a><ul><li><a title="3.1. Los puertos" class="text-decoration-none" href="#ch179795">3.1. Los puertos</a></li></ul></li><li><a title="4. Elementos básicos de la computadora" class="font-weight-bold text-decoration-none" href="#ch179789">4. Elementos básicos de la computadora</a><ul><li><a title="4.1. Procesadores" class="text-decoration-none" href="#ch179790">4.1. Procesadores</a></li><li><a title="4.2. Memoria" class="text-decoration-none" href="#ch179791">4.2. Memoria</a></li></ul></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179792"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179792/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Conectá saberes técnicos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p>
+        <p></p>En esta oportunidad, los saberes técnicos se conectan con la importancia de reconocer el hardware en la computadora. El hardware, compuesto por componentes interrelacionados, determina el rendimiento y la eficiencia del software. 
+      <br><!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">En la actualidad, los desafíos y oportunidades emergen con la demanda de mayor potencia y eficiencia energética.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"></p><ul><li>El procesador, evolucionando para satisfacer crecientes demandas de velocidad, refleja la necesidad de adaptación constante.&nbsp;</li><li>En cuanto a la memoria, el desafío persiste en satisfacer las demandas de velocidad y capacidad sin comprometer la eficiencia económica. <br><br></li></ul><p></p>
+            </div>
+        </div>
+        El/la desarrollador/a, con conocimientos técnicos sólidos, puede optimizar la relación entre software y hardware,
+        enfrentando estos retos y capitalizando oportunidades para desarrollar soluciones eficaces y eficientes.</div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <!--Inicio Caja violeta-->
+        <br>
+        <div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Y..., ¿para qué estos saberes técnicos?</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li></li><b><strong>Rendimiento del sistema:</strong></b> El hardware influye directamente en el rendimiento general de la computadora. La elección de componentes como procesadores, memoria y unidades de almacenamiento impacta la velocidad
+                de procesamiento y la capacidad de ejecutar aplicaciones de manera eficiente.
+                <li></li>
+            </ul>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;"><b><strong>Compatibilidad y estabilidad:</strong></b> La compatibilidad entre el hardware y el software es esencial para lograr un sistema estable. Un/a desarrollador/a debe entender cómo los componentes interactúan para garantizar un funcionamiento
+                sin problemas y evitar conflictos que puedan afectar el rendimiento del software.<br></ul>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;"><b><strong>Capacidad de escalabilidad:</strong></b> La capacidad de actualizar y expandir el hardware es vital para mantener la relevancia a lo largo del tiempo. Comprender cómo los diferentes componentes interactúan y cómo afectan la escalabilidad
+                permite a los/as desarrolladores/as anticipar futuras necesidades y diseñar software que pueda adaptarse a cambios en la infraestructura de hardware.<br></ul>
+        </div><b><strong>
+
+        ¡Comencemos!
+        </strong></b>
+        <!--Fin Caja violeta-->
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p><br>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179787"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179787/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.6%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;">Explorando la arquitectura interna: hardware</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+        <p>Una <span class="sub_negrita">computadora</span> es una máquina capaz de procesar información. Es decir, la recibe, realiza transformaciones con ella, y presenta los resultados obtenidos a una gran velocidad. En este sentido, el hardware le proporciona
+            la parte física, permitiendo su funcionamiento.<br><br></p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12" style="margin: 0% auto">
+                    <div class="box ">
+                        <div class="container-sm" ;="" style="text-align: left">
+                            <div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">A lo largo de la historia, la computadora ha ido evolucionando en tamaño y eficiencia. En la actualidad, en una<b><strong> computadora portátil</strong></b>, por ejemplo, todos los componentes están integrados en un espacio reducido. Las ultra
+                                portátiles reúnen todos los elementos en poco más de un kilogramo de peso.<br></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><br></p>
+        <p>En una computadora podemos diferenciar:</p>
+
+        <ul>
+            <li>El <span class="sub_negrita">monitor</span> o <span class="sub_negrita">pantalla</span> que muestra el resultado de las transformaciones efectuadas por la máquina o las imágenes generadas. </li>
+            <li>El <span class="sub_negrita">teclado</span>, permite introducir texto o ejecutar órdenes. </li>
+            <li>El <span class="sub_negrita">ratón (<i>mouse</i>)</span> permite, a través de su desplazamiento sobre una superficie, el movimiento de una flecha o cursor en la pantalla que sirve para seleccionar opciones. En una portátil podemos usar el
+                <i>touchpad</i>: un área situada por delante del teclado para mover el cursor deslizando los dedos sobre ella.
+            </li>
+            <li>La unidad central de procesamiento <span class="sub_negrita">(CPU)</span> es la parte encargada de almacenar la información de acceso rápido y de realizar las transformaciones. En una computadora portátil, esta parte está integrada bajo el
+                teclado. </li>
+            <li>La <span class="sub_negrita">fuente de alimentación</span> proporciona la energía necesaria. Se conecta a la red eléctrica. En una computadora portátil, existe una batería que se recarga conectando la computadora a la red eléctrica. </li>
+
+        </ul>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+
+
+
+
+        <!-- aca abajo no puede haber nada -->
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179793"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179793/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.6%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;"><b>Componentes de una computadora de escritorio</b></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+        <p>El CPU es uno de los componentes más importantes de la computadora. Contiene un gran circuito electrónico, la placa base o placa madre, donde se conectan los demás componentes, como por ejemplo, el disco duro. En el exterior dispone de numerosas
+            conexiones donde acoplar el teclado, el ratón, el monitor.<br></p>
+
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179793/sd.png" alt="sdsdsdsd" width="800" height="651" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 1: La PC por dentro.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+        <p>Teniendo en cuenta las características de cada componente, podemos decir que cada uno realiza tareas diferentes.</p>
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Proporcionar la energía:</span> la fuente de alimentación o la pila.</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Introducir información:</span> un teclado.</p>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Procesar y almacenar la información:</span> el disco duro. Realizan cálculos y guardan la información.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Mostrar la información:</span> obtenida en algo visible o audible para nosotros: una impresora o los parlantes.</p>
+            </div>
+        </div>
+
+
+        <br>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+
+
+
+
+        <!-- aca abajo no puede haber nada -->
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179794"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179794/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.6%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;">Circuitos internos: la placa base</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+        <p>La <span class="sub_negrita">placa base</span> es un complejo circuito electrónico alojado dentro de la carcasa donde se conectan los demás componentes. La CPU de la computadora tiene una abertura en la parte trasera para mostrar algunos conectores
+            de esa la placa base.<br></p>
+
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179794/Placa%20base.png" alt="sd" width="800" height="676" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 2: La placa base y sus conexiones.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+
+
+
+
+        <!-- aca abajo no puede haber nada -->
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179788"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179788/_%20%2814%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;">La comunicación entre la computadora y los periféricos</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+        <p>Si tenemos en cuenta las características de cada elemento y su función, podemos preguntarnos ahora por la importancia de la comunicación entre la computadora y los periféricos.</p>
+
+
+
+        <span style=" color:#1345CD; font-weight: 600; font-size: x-large">Los periféricos </span>
+
+        <br>
+
+        <p>Llamamos <span class="sub_negrita">periféricos</span> a los componentes externos que se <span class="sub_negrita">conectan</span> a la computadora. Por ejemplo, el ratón (<i>mouse</i>), el teclado, el monitor o una impresora. </p>
+
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179788/peri.gif" alt="sd" width="600" height="450" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 3: periféricos.</p>
+
+        <br>
+
+
+
+        <!-- nada abajo -->
+    </div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179795"><p><br></p><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179795/_%20%2814%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;">Canal de comunicación: los puertos</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+        <p>¿Cómo se lleva adelante esa comunicación? Para que el microprocesador y la memoria puedan comunicarse con los periféricos se precisan una serie de «caminos intermedios» por los que circulan los datos, es decir, los bits.<br></p>
+
+        <p>Un <span class="sub_negrita">puerto</span> es un canal de comunicación por el que circulan los datos que intercambian la placa base y los periféricos. </p>
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179795/Peri.png?time=1708702359645" alt="sd" width="800" height="663" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 4: Puertos y periféricos.</p>
+
+        <br>
+
+
+
+        <!-- nada abajo -->
+    </div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179789"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179789/_%20%2814%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;">Elementos básicos de la computadora</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+        <p>Profundicemos un poco más sobre los elementos básicos de la computadora. </p>
+        <p>Al más alto nivel, una computadora consta del procesador, la memoria y los componentes de E/S (entrada y salida) incluyendo uno o más módulos de cada tipo. Estos componentes se interconectan de manera que se pueda lograr la función principal de
+            la computadora, que es ejecutar programas.</p>
+
+        <p>Veamos 4 (cuatro) elementos estructurales principales: </p>
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Procesador:</span> controla el funcionamiento de la computadora y realiza sus funciones de procesamiento de datos. Cuando sólo hay un procesador, se denomina usualmente unidad central de procesamiento (Central
+                    Processing Unit, CPU).</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Memoria principal:</span> almacena datos y programas. Esta memoria es habitualmente volátil: es decir, cuando se apaga la computadora, se pierde su contenido. En contraste, el contenido de la memoria del
+                    disco se mantiene incluso cuando se apaga la máquina. A la memoria principal se la denomina también memoria real o memoria primaria.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Módulos de E/S: </span>transfieren los datos entre la computadora y su entorno externo. El entorno externo está formado por diversos dispositivos, incluyendo dispositivos de memoria secundaria (por ejemplo,
+                    discos), equipos de comunicaciones y terminales.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Bus del sistema:</span> proporciona comunicación entre los procesadores, la memoria principal y los módulos de E/S.
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179789/unnamed%20%285%29.png" alt="sdv" width="521" height="428" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 5: Componentes de una computadora: visión al más alto nivel.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+        <span style=" color:#1345CD; font-weight: 600; font-size: x-large">Funciones Vitales del Procesador: Intercambio de Datos y Registros</span>
+
+
+        <br>
+
+        <p>Una de las funciones del procesador, es el intercambio de datos con la memoria. Para este fin, se utilizan normalmente dos registros internos (al procesador): un registro de dirección de memoria (RDIM), que especifica la dirección de memoria de
+            la siguiente lectura o escritura; y un registro de datos de memoria (RDAM), que contiene los datos que se van a escribir en la memoria o que recibe los datos leídos de la memoria. De manera similar, un registro de dirección de E/S (RDIE/S)
+            especifica un determinado dispositivo de E/S, un registro de datos de E/S y el procesador.<br><br></p>
+
+        <!--Inicio caja Conclusión-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #9a3282; font-size: large; font-weight: 600">Módulo de memoria:</p>
+            </div>
+            <div class="col" style="border-left: solid  #9a3282 2px;">
+                <p style=" color: #7746E2"><span class=" " style="font-size: large; color: #010614">Consta de un conjunto de posiciones definidas mediante dirección numeradas secuencialmente. Cada posición, contiene un patrón de bits que se puede interpretar como una instrucción o como datos. Un módulo de E/S transfiere datos desde los dispositivos externos hasta el procesador y la memoria, y viceversa. Contiene&nbsp;<i>buffers&nbsp;</i>(es decir, zonas de almacenamiento internas) que mantienen temporalmente los datos hasta que se pueden enviar.</span></p>
+            </div>
+        </div>
+        <!--Fin Caja Conclusión-->
+        <p><br></p>
+
+
+
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179790"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179790/_%20%2814%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-2.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;">Procesadores</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+        <p>Como podemos deducir, el <span class="sub_negrita">cerebro </span>de la computadora es la CPU,&nbsp; obtiene las instrucciones de la memoria y las ejecuta. El ciclo básico de toda CPU es <span class="sub_negrita">obtener</span> la primera instrucción
+            de memoria,
+            <span class="sub_negrita">decodificarla</span> para determinar su tipo y operandos y,&nbsp;&nbsp;<span class="sub_negrita">ejecutarla</span>. Luego, repite el ciclo con las instrucciones subsiguientes, hasta que el programa termina. De esta
+            forma se ejecutan los programas. Cada CPU, tiene un conjunto específico de instrucciones que puede entender y ejecutar.</p>
+
+
+        <br>
+        <span style="color: rgb(0, 61, 245); font-weight: 600; font-size: x-large;" class="">Optimización de Procesadores con Registros Internos</span>
+
+        <br>
+
+
+
+        <p>Como el acceso a la memoria para obtener una instrucción o palabra de datos requiere mucho más tiempo que ejecutar una instrucción, todas las CPU contienen ciertos registros en su interior (área de almacenamiento de datos) para almacenar las variables
+            clave y los resultados temporales mientras se están procesando.&nbsp;</p>
+        <p><br></p>
+      <div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-12" style="margin: 0% auto">
+<div class="box ">
+<div class="container-sm" ;="" style="text-align: left">
+<div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%"><p>Debido a esto, el conjunto de instrucciones generalmente contiene instrucciones para cargar una palabra de memoria en un registro y almacenar una palabra de un registro en la memoria. Esto permite que la CPU pueda trabajar con los datos de manera más rápida al tenerlos en los registros internos.</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>  
+      <p><br></p>
+
+        <span style="color: rgb(0, 61, 245); font-weight: 600; font-size: x-large;" class="">Interacción Crucial con el Sistema Operativo y E/S</span>
+
+        <br>
+        <!--Tabla 2 columnas varias filas de colore-->
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div data-testid="conversation-turn-15">
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div data-message-author-role="assistant" data-message-id="3d6bd177-78bd-42c7-8a3f-ccc4ecb9e8ae">
+                                                    <div>A continuación podrás recorrer los tipos de registros y sus descripciones<br><br></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="tabla-filaColores texto-principal" style="width: 90%; margin: 0 auto;">
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="80%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado">Registros</td>
+                    <td class="tabla-filaColores-categoria texto-centrado"> Descripciones</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b><strong>Operaciones de registros y memoria</strong></b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">Instrucciones que combinan operandos de registros y memoria para operaciones, como la suma de palabras y su almacenamiento.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b><strong>Registros especiales</strong></b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                        <ul>
+                            <li>Son visibles para el/la programador/a.</li>
+                            <li>El <b><strong>Contador de Programa (program counter)</strong></b> contiene la dirección de la siguiente instrucción.</li>
+                            <li>El <b><strong>Apuntador de Pila (stack pointer)</strong></b> señala la cima de la pila actual de memoria.&nbsp;La pila contiene un conjunto de valores por cada procedimiento al que se ha entrado pero del que todavía no se ha
+                                salido. El conjunto de valores en la pila por procedimiento contiene los parámetros de entrada, las variables locales y las variables temporales que no se mantienen en los registros.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b><strong>Program Status Word</strong></b> (PSW - Palabra de estado del programa)</td>
+
+
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                        <ul>
+                            <li>Contiene información sobre el estado de un programa utilizado por el sistema operativo.&nbsp;</li>
+                            <li>Este registro contiene los <b><strong>bits de código de condición</strong></b>, que se asignan cada vez que se ejecutan las instrucciones de comparación, la prioridad de la CPU, el modo (usuario o&nbsp;<i>kernel</i>) y varios
+                                otros bits de control.&nbsp;
+                            </li>
+                            <li>Los <b><strong>programas de usuario</strong></b> pueden leer normalmente todo el PSW pero por lo general sólo pueden escribir en algunos de sus campos. El PSW juega un papel importante en las llamadas al sistema y en las operaciones
+                                de E/S (entrada y salida).<br></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><br></p>
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179791"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179791/_%20%2814%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;margin: 0;">Memoria</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+        <p>Analicemos ahora la memoria. Esta debería ser en extremo rápida (más rápida que la velocidad de ejecución de una instrucción, de manera que la memoria no detenga a la CPU), de gran tamaño y muy económica. Ninguna tecnología en la actualidad cumple
+            con todos estos objetivos, por lo que se adopta una solución distinta. El sistema de memoria está construido como una <span class="sub_negrita">jerarquía de capas</span>, las capas superiores tienen mayor velocidad, menor capacidad y mayor
+            costo por bit que las capas inferiores, a menudo por factores de mil millones o más. </p>
+
+
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659470/mod_book/chapter/179791/unnamed%20%286%29.png" alt="sdv" width="800" height="284" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 6: Una jerarquía común de memoria. Los números son sólo aproximaciones.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+        <span style="color: rgb(0, 61, 245); font-weight: 600; font-size: x-large;" class="">Capa Superior: Registros Internos y Memoria Caché</span>
+
+
+        <br>
+        <!--Tabla simple dos columnas-->
+        <table class="tabla-simple texto-principal" style="margin: 0 auto;">
+            <!--Cantidad de columnas-->
+            <colgroup span="1" width="44%"></colgroup>
+            <colgroup span="1" width="2%"></colgroup>
+            <colgroup span="1" width="44%"></colgroup>
+
+            <!--Categorías-->
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado">Los registros internos de la CPU</td>
+                    <td></td>
+                    <td class="tabla-simple-categoria texto-centrado">La memoria caché</td>
+                </tr>
+
+                <!--filas-->
+                <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>Comparten el mismo material que la CPU y, por lo tanto, tienen la misma velocidad.<br></li>
+                            <li>No hay retraso al utilizarlos debido a su proximidad y velocidad.<br></li>
+
+                        </ul>
+                    </td>
+                    <td></td>
+
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>Controlada parcialmente por el hardware.<br></li>
+                            <li>Se divide en líneas de 64 bytes, con direcciones de 0 a 63 en la línea de caché 0, direcciones de 64 a 127 en la línea de caché 1 y así sucesivamente.</li>
+                            <li>Las líneas de caché que se utilizan con más frecuencia se mantienen en una caché de alta velocidad, ubicada dentro o muy cerca de la CPU.</li>
+                            <li>Cuando el programa necesita leer una palabra de memoria, el hardware de la caché comprueba si la línea requerida se encuentra en la caché.</li>
+                            <li>Los aciertos de caché por lo general requieren un tiempo aproximado de dos ciclos de reloj.</li>
+                            <li>Los fallos de caché tienen que ir a memoria, con un castigo considerable de tiempo.</li>
+                            <li>La memoria caché está limitada en tamaño debido a su alto costo.</li>
+                            <li>Algunas máquinas tienen dos o incluso tres niveles de caché, cada una más lenta y más grande que la anterior.</li>
+                        </ul>
+                        <ul></ul>
+                        <ul></ul>
+                        <ul></ul>
+                        <ul></ul>
+                        <ul></ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><br></p>
+
+
+
+        <span style="color: rgb(0, 61, 245); font-weight: 600; font-size: x-large;" class="">Rol de las Cachés en el Rendimiento Computacional</span>
+
+        <br>
+
+        <p>El uso de cachés juega un papel importante en muchas áreas de las ciencias computacionales, no sólo en la caché de las líneas de <span class="sub_negrita">RAM</span>. Cada vez que hay un recurso extenso que se puede dividir en piezas, algunas
+            de las cuales se utilizan con mucho más frecuencia que otras, a menudo se invoca a la caché para mejorar el rendimiento. <br>
+        </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12" style="margin: 0% auto">
+                    <div class="box ">
+                        <div class="container-sm" ;="" style="text-align: left">
+                            <div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">Los sistemas operativos la utilizan todo el tiempo. Por ejemplo, la mayoría de los sistemas operativos mantienen los archivos que se utilizan con frecuencia en la memoria principal para evitar tener que obtenerlos del disco en forma repetida.</div></div></div></div></div></div><p></p>
+
+        <p>Además de la memoria principal, muchas computadoras tienen una pequeña cantidad de memoria de acceso aleatorio no volátil. La <span class="sub_negrita">ROM</span> (Read Only Memory, Memoria de sólo lectura) se programa en la fábrica y no puede
+            modificarse después. Es rápida y económica.&nbsp;</p>
+      <div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-12" style="margin: 0% auto">
+<div class="box ">
+<div class="container-sm" ;="" style="text-align: left">
+<div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">En algunas computadoras, el cargador de arranque (<i>bootstrap loader</i>) que se utiliza para iniciar la computadora está contenido en la ROM.
+<br></div>
+</div>
+</div>
+</div>
+</div>
+</div>  
+      <p><br>Además, algunas tarjetas de E/S vienen con ROM para manejar el control de los dispositivos de bajo nivel.<br></p>
+
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[649458,649459,649461,649462,649463,649465,649466,649467,649469,649471,676491]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2659470, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1743612787); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random67ed6dbc3a9662'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random67ed6dbc3a9662'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

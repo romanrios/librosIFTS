@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>E1. Fundamentos y ciclo de vida de apps | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1743459502/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, E1. Fundamentos y ciclo de vida de apps | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1743459502_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"iR0qehVRf6","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1743459502","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21042,"courseContextId":2643742,"contextid":2665725,"contextInstanceId":655214,"langrev":1743578645,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21042 context-2665725 cmid-655214 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1743459502/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>E1. Fundamentos y ciclo de vida de apps</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Desarrollo de Aplicaciones para Dispositivos 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        E1. Fundamentos y ciclo de vida de apps
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        miércoles, 2 de abril de 2025, 13:57
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21042&amp;section=2" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=655213" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=655215" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Prácticas</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=655216" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción al libro" class="font-weight-bold text-decoration-none" href="#ch186426">1. Introducción al libro</a></li><li><a title="2. TEMA I. Conceptos generales de aplicaciones móviles" class="font-weight-bold text-decoration-none" href="#ch186418">2. TEMA I. Conceptos generales de aplicaciones móviles</a><ul><li><a title="2.1. ¿Qué es una aplicación móvil?" class="text-decoration-none" href="#ch186419">2.1. ¿Qué es una aplicación móvil?</a></li><li><a title="2.2. ¿Cuáles son las etapas del desarrollo de una app?" class="text-decoration-none" href="#ch186420">2.2. ¿Cuáles son las etapas del desarrollo de una app?</a></li><li><a title="2.3. Elementos del desarrollo" class="text-decoration-none" href="#ch186421">2.3. Elementos del desarrollo</a></li><li><a title="2.4. Cómo elegir tipos de app" class="text-decoration-none" href="#ch186422">2.4. Cómo elegir tipos de app</a></li></ul></li><li><a title="3. TEMA II. Ciclo de vida de una aplicación móvil" class="font-weight-bold text-decoration-none" href="#ch186423">3. TEMA II. Ciclo de vida de una aplicación móvil</a><ul><li><a title="3.1. Inicio/selección del proyecto" class="text-decoration-none" href="#ch186406">3.1. Inicio/selección del proyecto</a></li><li><a title="3.2. Ciclo de vida de un desarrollo móvil" class="text-decoration-none" href="#ch186405">3.2. Ciclo de vida de un desarrollo móvil</a></li><li><a title="3.3. Diseño" class="text-decoration-none" href="#ch186407">3.3. Diseño</a></li><li><a title="3.4. Desarrollo" class="text-decoration-none" href="#ch186408">3.4. Desarrollo</a></li><li><a title="3.5. Pruebas y calidad" class="text-decoration-none" href="#ch186409">3.5. Pruebas y calidad</a></li><li><a title="3.6. Implementación / puesta en producción" class="text-decoration-none" href="#ch186410">3.6. Implementación / puesta en producción</a></li></ul></li><li><a title="4. Consideraciones sobre el desarrollo móvil" class="font-weight-bold text-decoration-none" href="#ch186411">4. Consideraciones sobre el desarrollo móvil</a><ul><li><a title="4.1. Comunes" class="text-decoration-none" href="#ch186412">4.1. Comunes</a></li><li><a title="4.2. de iOS" class="text-decoration-none" href="#ch186414">4.2. de iOS</a></li><li><a title="4.3. de Android" class="text-decoration-none" href="#ch186413">4.3. de Android</a></li></ul></li><li><a title="5. Documentar una app" class="font-weight-bold text-decoration-none" href="#ch186415">5. Documentar una app</a><ul><li><a title="5.1. Plantilla de planificación" class="text-decoration-none" href="#ch186416">5.1. Plantilla de planificación</a></li><li><a title="5.2. Historias de usuario" class="text-decoration-none" href="#ch186417">5.2. Historias de usuario</a></li></ul></li><li><a title="6. EXTRA: Glosario" class="font-weight-bold text-decoration-none" href="#ch186424">6. EXTRA: Glosario</a><ul><li><a title="6.1. Glosario" class="text-decoration-none" href="#ch186425">6.1. Glosario</a></li></ul></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186426"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186426/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="color: rgb(1, 6, 20); font-size: large;">Este primer libro es la puerta de entrada al universo de las aplicaciones móviles. Contiene las bases conceptuales de este tipo de desarrollo, presentadas en torno a dos temas:<br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">
+        </p>
+        <ul style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Conceptos generales de aplicaciones móviles</span></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Ciclo de vida de una aplicación móvil</span></p>
+                    </div>
+                </div>
+            </div>
+        </ul><br>
+        <ul>
+            <li><span class="" style="font-size: large; color: rgb(51, 51, 51);">Además... <b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">¡tenemos un extra!&nbsp;</span></b>
+                </span>
+            </li>
+        </ul>
+        <div style="margin-left: 3%; margin-right: 3%;">
+            <!-- Cuadro amarillo borde violeta -->
+            <br>
+
+            <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+                <div style="margin:16px">
+                    <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">Un glosario de términos técnicos que te permitirá familiarizarte con el vocabulario del área.</p>
+                    <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+                </div>
+            </div>
+            <p style="color: rgb(1, 6, 20); font-size: large;"><b class="sub_negrita">¡Comencemos!</b><br><br><br><br></p>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186418"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186418/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Conceptos generales de aplicaciones móviles</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%; font-size: large">
+        <p></p>
+        <p><span class="" style="font-size: large;">¡Comenzamos
+nuestro recorrido sobre <b class="sub_ negrita"><strong> <span style="color: rgb(0, 61, 245);">aplicaciones móviles</span></strong>
+            </b>! Nuestra vida cotidiana y profesional está atravesada por el uso de este tipo de desarrollos... desde pedir comida por el celular o utilizar el GPS para llegar a un lugar, estamos usando aplicaciones móviles. <br>
+            <!--Inicio Caja definición verde-->
+            </span>
+        </p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #ae11a0;"><b class="sub_negrita">Definición</b></span> </p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: solid  #ae11a0 2px;">
+                <p><span class="" style="font-size: large; color: #ae11a0;"><span class="" style="color: #ae11a0;">Una</span><span class="" style="color: #ae11a0;">&nbsp;aplicación móvil&nbsp;</span><span class="" style="color: rgb(51, 51, 51);">es el&nbsp;<i><span>software&nbsp;</span></i><span>en un dispositivo portátil (similar a los programas en una computadora de escritorio). Desarrollar una aplicación de este tipo supone un largo camino, que consta de varias etapas de desarrollo, desde su conceptualización hasta su planificación.</span></span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja definición-->
+        <br><span class="" style="font-size: large;">A lo largo de este tema,
+estudiaremos en detalle cada etapa.</span><br><span class="" style="font-size: large;">
+</span><br><span class="" style="font-size: large;">Vamos a empezar por ahondar en la
+definición de desarrollo móvil,&nbsp;los elementos que se usan para el
+desarrollo, como la plataforma -de&nbsp;</span><i><span class="" style="font-size: large;">software</span></i><span class="" style="font-size: large;">&nbsp;y de&nbsp;</span><i><span class="" style="font-size: large;">hardware</span></i><span class="" style="font-size: large;">-
+y las aplicaciones móviles, clasificándolas y presentando sus ventajas y
+desventajas. También, aprenderemos cómo elegir los tipos de app que varía según
+nuestro público, el tiempo, el rendimiento y acceso al dispositivo y, muy
+importante, según el presupuesto.</span><br><span class="" style="font-size: large;">
+Entramos en un nuevo universo de conocimiento, y
+<b class="sub_ negrita"><strong><span style="color: rgb(0, 61, 245);">es necesario empezar a familiarizarnos con los términos técnicos</span></strong></b> de los dispositivos móviles: para eso, tendrás un glosario con los conceptos más importantes.
+        </span><br>
+        <!--Inicio Caja celeste-->
+        <br>
+        <div class="col" style="border-left: solid  #0c76f0 3px; background-color: #edf5fd; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #0c76f0; font-size: large; padding: 14px; font-weight: 600">Algunas preguntas clave que trataremos de responder son:</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>-&nbsp; ¿Qué tipos de aplicaciones móviles hay?</li><span>-&nbsp;&nbsp;¿En qué se parecen y en qué se diferencian?</span><br><span>-&nbsp;&nbsp;¿Qué es necesario considerar para elegir una aplicación para nuestro proyecto?</span><br><span>-&nbsp;&nbsp;¿Qué se realiza en cada etapa de su desarrollo?</span>
+                <li></li>
+            </ul>
+        </div>
+
+        <p><span class="" style="font-size: large;"><b class="sub_negrita">¡Adelante!</b><br><br></span></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186419"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186419/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Qué es una aplicación móvil?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%; font-size: large">
+
+
+        <p>El<span class="" style="color: rgb(0, 61, 245);"> </span><b><strong><span class="" style="color: rgb(0, 61, 245);">teléfono celular</span></strong></b> revolucionó los formatos de comunicación y a medida que la tecnología avanza cambia la perspectiva en cuanto
+            a su uso.</p>
+
+
+        <p><span lang="ES-AR">Podemos
+decir que<b class="sub_negrita"> <span class="" style="color: rgb(0, 61, 245);">el </span><i><span class="" style="color: rgb(0, 61, 245);">software</span></i><span class="" style="color: rgb(0, 61, 245);"> transita una nueva era</span></b>, ya que las
+            distintas <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">actividades
+</span></b>que se realizaban por medio de una computadora; ahora <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">pueden ser ejecutadas en
+pequeños dispositivos portátiles</span></b>. Es así como surgen las populares aplicaciones móviles.
+            </span>
+        </p>
+        <!-- Cuadro amarillo borde verde+ -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #00bf63; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #00bf63; font-size: large; font-weight: 600">Evolución de las aplicaciones móviles</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Aunque parecen un fenómeno reciente, la realidad es que las aplicaciones hace tiempo que están entre nosotros. Últimamente, no sólo se han vuelto más populares y atractivas para los/las usuarios/as, sino también para los/las diseñadores/as
+                    y desarrolladores/as que están sacando provecho de las posibilidades que ofrecen las nuevas pantallas de teléfono de mayor calidad; por ello deben trabajar codo a codo para lograr aplicaciones que cuiden todos y cada uno de los detalles.
+                </p>
+            </div>
+        </div>
+        <p>En esencia, una aplicación no deja de ser un <i>software</i>. Para entender un poco mejor el concepto, podemos decir que <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">las aplicaciones son para los móviles lo que los programas son para las computadoras de escritorio</span>.</b><br></p>
+
+        <p><span lang="ES-AR">Las
+aplicaciones comparten la pantalla del teléfono con las webs móviles, pero
+mientras las primeras tienen que ser descargadas e instaladas antes de usar, a
+una web puede accederse simplemente usando internet y un navegador; sin
+embargo, no todas pueden verse correctamente desde una pantalla generalmente
+más pequeña que la de una computadora de escritorio.</span></p>
+        <p><b class="sub_negrita"><span lang="ES-AR">Pero, ¿cuáles son las etapas del desarrollo de una app?&nbsp;</span>¡Te lo contamos!</b></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186420"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186420/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Cuáles son las etapas del desarrollo de una app?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p>Cuando estamos frente al desarrollo de una app puede ocurrir que ya exista una web como antecedente o que el diseño comienza desde cero, que es cuando todavía no hay ni web ni aplicación y hay que decidir por cuál de ellas empezar. Si estamos
+            en este último caso se puede considerar un nuevo concepto conocido como <b style="font-weight: 600"><span class="" style="color: rgb(0, 61, 245);">mobile first.</span></b></p>
+        <!-- Cuadro amarillo borde verde+ --><span class="" style="color: rgb(0, 61, 245);">
+        </span><br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #00bf63; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #00bf63; font-size: large; font-weight: 600">Mobile first sugiere plantear el proceso de diseño teniendo en cuenta el móvil en primer lugar.<br></p>
+                <ul>
+                    <li><span lang="ES-AR" style="color: rgb(1, 6, 20); font-weight: 400;">La </span><span lang="ES-AR" style="color: rgb(1, 6, 20);"><b style="font-weight: 600">ventaja</b></span><span lang="ES-AR" style="color: rgb(1, 6, 20); font-weight: 400;"> de esta forma de trabajar es que el pensar en el móvil como punto de partida, obliga a concentrarse en lo esencial de un producto y a hacer foco sólo en lo que tiene sentido para este dispositivo.</span>
+                        <span style="color: rgb(1, 6, 20); font-weight: 400;">&nbsp;</span>
+                    </li>
+                    <li><span lang="ES-AR">Una vez que la aplicación está diseñada, puede preguntarse <b style="font-weight: 600">cuál es la mejor forma de llevar lo hecho para el teléfono a una pantalla de computadora o a otros dispositivos,</b> extendiendo y escalando el contenido y repensando la diagramación.&nbsp;</span></li>
+                    <li><span lang="ES-AR">Todos los dispositivos tienen usos diferentes, y en el momento de adaptar el diseño, <b style="font-weight: 600">hay que tener en cuenta las características particulares de cada uno de ellos.</b><br><br></span></li>
+                </ul>
+                <p></p>
+            </div>
+        </div>
+
+        <p><span lang="ES-AR">El
+<b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">proceso de diseño y desarrollo de una aplicación</span></b>, abarca desde la concepción de
+la idea hasta el análisis posterior a su publicación en las tiendas. Durante
+las diferentes etapas, diseñadores/as y desarrolladores/as trabajan la mayor parte
+del tiempo de manera simultánea y coordinada.</span></p>
+
+        <p><span lang="ES-AR">Las
+etapas son las siguientes:</span></p>
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAF-RDtBceE/BGK6pbrRBG_UyGjEfzl0vg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+        </div>
+        Hacé clic en el ícono expandir pantalla&nbsp;del
+        visor y podrás ampliar la imagen<br clear="ALL">
+
+        <br>
+
+        <p><span lang="ES-AR">Veamos
+cómo trabajan solapados los/las diseñadores/as y desarrolladores/as:</span></p>
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAF-REF6Pig/AaTLGaXwl53j572ckbFQIQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+        </div>
+        <a href="https://www.canva.com/design/DAF-REF6Pig/AaTLGaXwl53j572ckbFQIQ/view?utm_content=DAF-REF6Pig&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>Hacé clic en el ícono expandir pantalla del visor y podrás ampliar la imagen
+        <br>
+        <p><span lang="ES-AR">&nbsp;</span></p>
+
+        <p><span lang="ES-AR">&nbsp;<b class="sub_negrita">¡Estudiaremos los elementos de desarrollo!</b></span></p>
+        <p></p>
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186421"><div style="background-color: rgb(250, 250, 250);"><br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186421/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Elementos del desarrollo</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Muchos términos son nuevos en tu lenguaje, por eso en el “<b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">glosario de términos técnicos</span></b>” se explica el significado para que la lectura del material pueda ser comprendida.
+        </p>
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES-AR">¡No
+dudes en consultarlo haciendo click <span class="" style="color: rgb(0, 61, 245);"><a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=655214&amp;chapterid=186425" title="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=655214&amp;chapterid=186425">aquí</a></span>!</span>
+        </p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES-AR">Para
+introducirnos en el mundo de las aplicaciones móviles debemos conocer los
+elementos que se usan para el desarrollo.</span></p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES-AR">Analicemos cuáles son:</span></p>
+        <!--Inicio caja Definición morada-->
+        <div class="row row-cols-auto" style="color: rgb(1, 6, 20); font-size: large;">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #ae11a0; font-size: large; font-weight: 600">Plataforma:</p>
+            </div>
+            <div class="col" style="border-left: solid  #ae11a0 2px;">
+                <p style=" color: #ae11a0"><span class=" " style="font-size: large; color: #010614">Una plataforma es una combinación de&nbsp;<i>hardware</i>&nbsp;y&nbsp;<i>software</i>&nbsp;utilizado para ejecutar aplicaciones de software. Una&nbsp;<b><span class="" style="color: #ae11a0;">plataforma</span></b>
+                    <span class="" style="color: rgb(0, 61, 245);">
+                        </span><span class="" style="color: rgb(0, 61, 245);">&nbsp;</span>puede ser descrita simplemente como un&nbsp;sistema operativo, la arquitectura de una computadora o la combinación de ambos (un ejemplo de una
+                    plataforma común es Microsoft&nbsp;Windows&nbsp;que se ejecuta en la arquitectura x86).&nbsp;
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja Definición morada-->
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(0, 61, 245);"><span><br><span class="" style="color: rgb(51, 51, 51);">Teniendo en cuenta la definición anterior, a continuación te presentamos los distintos tipos de plataformas:</span></span>
+            </span>
+        </p>
+        <ul style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span><span lang="ES-AR">Una&nbsp;<span><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">plataforma de&nbsp;</span><i><span class="" style="color: rgb(0, 61, 245);">hardware</span></i></b>&nbsp;</span>se
+                            refiere a la arquitectura de la computadora o del procesador. Las&nbsp;</span>
+                            <span lang="ES-AR">más comunes son x86 o x64 (para computadoras) o arquitectura ARM para dispositivos móviles.&nbsp;</span>
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span >Una&nbsp;<b style="font-weight: 600;"><span class="" style="color: rgb(0, 61, 245);">plataforma de&nbsp;</span><i><span class="" style="color: rgb(0, 61, 245);">software</span></i></b><b>&nbsp;</b></span>se refiere
+                            al sistema operativo, entorno de programación o la combinación de ambos. Una notable excepción a esto es Java, que utiliza un sistema operativo independiente de la&nbsp;máquina virtual&nbsp;para cada código compilado, conocido
+                            en el mundo de Java como&nbsp;
+                            <i >bytecode</i>&nbsp;(es por esto que se dice que Java es multiplataforma).<br><span ><span style="font-weight: bold; color: rgb(0, 61, 245);" class="sub_negrita"><br>Ejemplos de plataformas de&nbsp;</span>
+                            <span class="" style="font-weight: 600; color: rgb(0, 61, 245);">
+                                </span><span style="font-weight: bold;"><span class="" style="color: rgb(0, 61, 245);"><i>software </i>incluyen</span></span><span ><span ><span class="" style="color: rgb(0, 61, 245);">:</span></span><br></span>
+                            </span>
+
+                        </p>
+                        <li >Android&nbsp;(sistema operativo móvil)&nbsp;<br></li>
+                        <li >iOS (sistema operativo móvil)&nbsp;<br></li>
+                        <li >Java<br></li>
+                        <li >Linux (x86, x86-64, PowerPC, y otras arquitecturas)<br></li>
+                        <li >Mac OS X (x86, x86-64)<br></li>
+                        <li >Microsoft Windows (x86, x86-64)</li>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <p>&nbsp;<br></p>
+            </div>
+        </ul>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #ae11a0; font-size: large; font-weight: 600">Aplicaciones móviles:</p>
+            </div>
+            <div class="col" style="border-left: solid  #ae11a0 2px;">
+                <p style=" color: #ae11a0"><span class=" " style="font-size: large; color: #010614">Deben correr en un sistema operativo y en la actualidad existen 2 grandes sistemas operativos móviles: Android y iOS. Esto quiere decir que tenemos que sortear de alguna manera el problema de la incompatibilidad entre ambas plataformas.</span></p>
+            </div>
+        </div>
+        <!--Fin Caja Definición morada-->
+
+
+        <br>
+        <p></p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES-AR">Tenemos hoy en día 3 posibles soluciones a esto, resultando
+en 3 tipos de aplicaciones diferentes:</span></p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+
+            <br>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span><b class="sub_negrita"><span lang="ES-AR" class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="color: rgb(0, 61, 245);">Aplicaciones móviles nativas (Native App):</span>&nbsp;</span></b>
+                        <span lang="ES-AR" class="" style="font-size: large; color: rgb(51, 51, 51);">se desarrollan específicamente para una plataforma. Las aplicaciones nativas sólo pueden ser ejecutadas en la plataforma para la que se desarrollaron, y si se desea que se ejecuten en otra plataforma debe hacerse una aplicación
+                            distinta para la misma. Para una aplicación en iOS programamos en el lenguaje propietario de Apple, Swift (también podemos usar Objective-C), y para una aplicación nativa de Android programamos en Java/Kotlin usando Android
+                            Studio. En el mundo de los videojuegos encontramos muchísimas aplicaciones nativas que solo existen para la plataforma Windows, si se tiene una computadora con Mac OS o con Linux no se podrá jugar.</span>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" class=""><span class="" style="color: rgb(0, 61, 245);">Aplicaciones móviles híbridas o multiplataforma:</span>&nbsp;</span><span class="" style="font-size: large; color: rgb(51, 51, 51);">
+                        </span><span lang="ES-AR" class="" style="font-size: large; color: rgb(51, 51, 51);">son aquellas aplicaciones que desarrollamos para múltiples plataformas a la vez, haciendo sólo una aplicación. Para esto podemos usar lenguajes como Flutter o React Native.</span></p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span><span><span lang="ES-AR" class="" style="font-weight: bold; font-size: large; color: rgb(51, 51, 51);"><span class="" style="color: rgb(0, 61, 245);">Aplicaciones móviles web:</span>&nbsp;</span>
+                        <span lang="ES-AR" ><span class="" style="font-size: large; color: rgb(51, 51, 51);">se realiza un único desarrollo para todas las plataformas, pero se acceden desde el navegador web. Se les llama también “aplicaciones web&nbsp;</span>
+                        <i ><span class="" style="font-size: large; color: rgb(51, 51, 51);">responsive</span></i>
+                        <span class="" style="font-size: large;">
+                            </span><span class="" style="font-size: large; color: rgb(51, 51, 51);">” ya que deben programarse teniendo en cuenta que se utilizarán en dispositivos móviles. Cualquier lenguaje web sirve para este tipo de desarrollo, como por ejemplo React.</span>
+                        </span>
+                        </span>
+                    </p><b>
+                </b></div><b>
+            </b></div><span>
+
+            <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES-AR" >Te
+mostramos un cuadro con las ventajas y desventajas de cada tipo de aplicación
+para que al momento de analizar el desarrollo puedas elegir cual utilizar.</span></p>
+
+            <!--Tabla 3 columnas varias filas de colore-->
+            <table class="tabla-filaColores texto-principal" style="font-weight: bold; color: rgb(1, 6, 20); font-size: large; width: 90%; margin: 0px auto;">
+                <colgroup span="1" width="10%"></colgroup>
+                <colgroup span="1" width="45%"></colgroup>
+                <colgroup span="1" width="45%"></colgroup>
+                <tbody>
+                    <tr>
+                        <td class="tabla-filaColores-categoria texto-centrado" style="text-align: center; background-color: rgb(139, 130, 215);"><br></td>
+                        <td class="tabla-filaColores-categoria texto-centrado" style="text-align: center; background-color: rgb(139, 130, 215);"><b>Ventajas</b></td>
+                        <td class="tabla-filaColores-categoria texto-centrado" style="text-align: center; background-color: rgb(139, 130, 215);"><b>Desventajas</b></td>
+                    </tr>
+
+                    <tr class="tabla-filaColores-par">
+                        <td class="texto-margen-tabla texto-centrado"><i><span lang="ES-AR">Nativas</span></i></td>
+                        <td class="texto-margen-tabla texto-centrado">
+                            <p style="text-align: left;"></p>
+                            <ul>
+                                <li style="text-align: left;"><span lang="ES-AR" style="font-weight: normal;">Tienen el mejor rendimiento posible de todas las aplicaciones móviles.</span></li>
+                                <li style="text-align: left;"><span lang="ES-AR" style="font-weight: normal;">Tenemos acceso completo a todas las funciones nativas del dispositivo (como cámara, GPS, almacenamiento, sensores, etc.)</span></li>
+                                <li style="text-align: left;"><span lang="ES-AR" style="font-weight: normal;">Cada aplicación puede ser subida a su respectiva App Store.</span></li>
+                            </ul>
+                            <p></p>
+
+
+                        </td>
+                        <td class="texto-margen-tabla">
+                            <p></p>
+                            <ul>
+                                <li><span lang="ES-AR" style="font-weight: normal;">Debemos aprender más de un lenguaje de programación (si es que queremos cubrir todos los dispositivos).</span></li>
+                                <li><span lang="ES-AR" style="font-weight: normal;">Debemos desarrollar varias aplicaciones (al menos 2), lo cual aumenta considerablemente el costo.</span></li>
+                            </ul>
+                            <p></p>
+
+                        </td>
+                    </tr>
+                    <tr class="tabla-filaColores-inpar">
+                        <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                            <i><span lang="ES-AR">Híbridas</span></i><br>
+                            <ul>
+                            </ul>
+                        </td>
+                        <td class="texto-margen-tabla texto-centrado">
+                            <p style="text-align: left;"></p>
+                            <ul>
+                                <li style="text-align: left;"><span lang="ES-AR" style="font-weight: normal;">Al ser multiplataforma se puede subir a la App Store.</span></li>
+                                <li style="text-align: left;"><span lang="ES-AR" style="font-weight: normal;">Solo se necesita desarrollar una sola aplicación, disminuyendo el tiempo y los costos.</span></li>
+                            </ul>
+                            <p></p>
+
+                        </td>
+                        <td class="texto-margen-tabla">
+                            <p></p>
+                            <ul>
+                                <li><span lang="ES-AR" style="font-weight: normal;">Tienen menos rendimiento que las aplicaciones nativas. El rendimiento que requiere una aplicación depende del tipo de experiencia que se quiera generar, por ejemplo, hay juegos que requieren una interfaz visual muy optimizada para brindar una mejor experiencia, por lo que el rendimiento es un punto clave.</span></li>
+                                <li><span lang="ES-AR" style="font-weight: normal;">El acceso al dispositivo es menos permisivo que en las apps desarrolladas en nativo.</span></li>
+                            </ul>
+                            <p></p>
+
+                        </td>
+                    </tr>
+                    <tr class="tabla-filaColores-par">
+                        <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                            <i><span lang="ES-AR">Web</span></i><br>
+                            <ul>
+                            </ul>
+                        </td>
+                        <td class="texto-margen-tabla texto-centrado">
+                            <p style="text-align: left;"></p>
+                            <ul>
+                                <li style="text-align: left;"><span lang="ES-AR" style="font-weight: normal;">El tiempo y costo de desarrollo son más bajos ya que es más simple hacer una aplicación web&nbsp;<i>responsive</i>&nbsp;que una aplicación móvil.</span></li>
+                                <li style="text-align: left;"><span lang="ES-AR" style="font-weight: normal;">Es más simple encontrar desarrolladores/as con el conocimiento necesario para hacer este tipo de aplicación.</span></li>
+                            </ul>
+                            <p></p>
+
+                        </td>
+                        <td class="texto-margen-tabla">
+                            <p></p>
+                            <ul>
+                                <li><span style="font-weight: normal;"><span lang="ES-AR">&nbsp;</span><span lang="ES-AR">No puede subirse a Apps Stores.</span></span>
+                                </li>
+                                <li><span lang="ES-AR" style="font-weight: normal;">Requiere acceso a internet para funcionar.</span></li>
+                                <li><span lang="ES-AR" style="font-weight: normal;">El acceso a los permisos del dispositivo es significativamente menor al de las aplicaciones híbridas.</span></li>
+                            </ul>
+                            <p></p>
+
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <p style="font-weight: bold; color: rgb(1, 6, 20); font-size: large;"><span lang="ES-AR">&nbsp;</span></p>
+            <p style="font-weight: bold; color: rgb(1, 6, 20); font-size: large;"></p>
+
+
+            <!-- nada puede haber abajo -->
+
+            </span>
+        </div><b>
+    </b></div><b>
+    <p><br></p>
+</b></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186422"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186422/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Cómo elegir tipos de app</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p>El tipo de aplicación a elegir dependerá de la situación de partida, los recursos y el público al que nos queramos dirigir.</p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+
+            <br>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600; color: rgb(0, 61, 245);" class="">Según nuestro público:</span><span lang="ES-AR">&nbsp;tenemos que tener en cuenta el sistema operativo que utiliza mayoritariamente nuestro público objetivo.</span></p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600; color: rgb(0, 61, 245);" class="">Según el tiempo:</span><span lang="ES-AR"><span class="" style="color: rgb(0, 61, 245);">&nbsp;</span>si necesitás contar con una aplicación en el menor tiempo posible,
+                        las aplicaciones web y las híbridas serán una gran opción.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600; color: rgb(0, 61, 245);" class="">Según el rendimiento y acceso al dispositivo:</span><span lang="ES-AR">&nbsp;si lo que necesitás es un gran rendimiento y acceso a funciones específicas del dispositivo, requerís una app nativa.</span></p>
+                </div>
+            </div>
+
+
+            <!-- 4 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+ <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600; color: rgb(0, 61, 245);" class="">Según el presupuesto:</span><span lang="ES-AR">&nbsp;si tu presupuesto es limitado, las aplicaciones web e híbridas son las opciones más económicas. Luego, podés elegir en función de si deseás tener presencia en las tiendas de apps o no, entre otros factores.<br><br></span></p>
+                </div>
+            </div>
+            <div class="" style="width: 96%;  margin: 0 auto; ">
+
+                <div class="row">
+
+                    <div class="col-1" style="background-color: #00bf63; border-radius: 4px 0px 0px 4px;">
+
+                        <div class="d-flex justify-content-center" style="margin-top: 20px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="color: white;">
+						                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"></path>
+  <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"></path>
+</svg>
+                        </div>
+                    </div>
+
+                    <div class="col-11" style="background-color: #fafffd;border: 1px solid #00bf63; border-radius: 0px 4px 4px 0px;">
+
+                        <p style="margin-top: 16px;">
+                        </p>
+                        <p>
+                        </p>
+                        <ul>
+                            <li>En resumen, antes de desarrollar una app, debés sentarte a pensar qué funcionalidades querés que tenga, a quién te dirigirás con ella y ser realista en cuanto a presupuesto.&nbsp;</li>
+                            <li>Solo a partir de ahí podrás elegir el tipo de aplicación más conveniente para tu negocio.&nbsp;</li>
+                            <li>Sin embargo, esto es solo el principio si realmente querés triunfar con tu app.</li>
+                        </ul>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <br>
+                    <!-- Fin Caja verde-->
+
+                    <p><br></p><br>
+                    <p></p>
+
+                    <!-- nada puede haber abajo -->
+
+                </div>
+            </div>
+            <p><br></p>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186423"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186423/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Ciclo de vida de una aplicación móvil</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%; font-size: large">
+        <p></p>
+        <p dir="ltr">Con este tema nos adentraremos en el estudio del ciclo de vida de un desarrollo de&nbsp;<i>software</i>&nbsp; móvil, desde la selección del proyecto, pasando por su diseño y desarrollo de&nbsp;<i>software</i>, luego por sus pruebas y calidad,
+            hasta la implementación y puesta en producción.</p>
+        <!--Inicio Caja definición ciruela-->
+        <p></p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #ae11a0;"><b class="sub_negrita">Definición</b></span> </p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: solid  #ae11a0 2px;">
+                <p><span class="" style="font-size: large; color: #ae11a0;"><span class="" style="color: #ae11a0;"></span><span class="" style="color: rgb(51, 51, 51);">Entendemos al&nbsp;</span><span class="" style="color: #ae11a0;">ciclo de vida&nbsp;</span>
+                    <span class="" style="color: rgb(51, 51, 51);">como el tiempo de duración de una aplicación de software, desde que se concibe la idea hasta que se retira del uso.<span></span></span>
+                        </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja definición-->
+        <p dir="ltr"><br>Analizaremos las consideraciones sobre el desarrollo móvil, que comprenden: las consideraciones comunes, las consideraciones de iOS y las consideraciones de Android. También, aprenderemos cómo documentar una app, siguiendo un orden de planificación,
+            con su determinada plantilla, y la historia de usuario.</p>
+        <!--Inicio Caja celeste-->
+        <br>
+        <div class="col" style="border-left: solid  #0c76f0 3px; background-color: #edf5fd; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #0c76f0; font-size: large; padding: 14px; font-weight: 600">Hay preguntas claves que vamos a respondernos:</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>- ¿Cómo seleccionamos un proyecto?</li>- ¿De qué manera lo diseñamos y luego lo desarrollamos?<br>- ¿Qué método de prueba llevamos a cabo y cómo evaluamos su calidad?<br>- ¿Cuándo es preciso su implementación y cuándo su puesta en producción?&nbsp;</ul>
+        </div>
+        <p dir="ltr"><b class="sub_negrita">La respuesta a estas preguntas será el punto de partida de nuestra búsqueda de conocimiento.&nbsp;¡Hacía allí vamos!</b></p><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186406"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186406/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Inicio/selección del proyecto</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p>
+        <p>La fase de inicio consiste en definir y perfeccionar la idea de una aplicación. Para crear una aplicación correctamente, es importante hacerse algunas preguntas fundamentales. </p>
+
+        <p>Antes de publicar una aplicación en una de las App Store públicas debemos observar los siguientes puntos:</p>
+
+        <p></p>
+        <ul>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600; color: rgb(0, 61, 245);" class="">Ventaja competitiva:</span><span lang="ES-AR">&nbsp;¿ya existen aplicaciones similares? Si es así, ¿cómo se diferencia esta aplicación de las otras?</span></p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600; color: rgb(0, 61, 245);" class="">Integración de la infraestructura:</span><span lang="ES-AR"><span class="" style="color: rgb(0, 61, 245);">&nbsp;</span>¿con qué infraestructura existente se integrará
+                        o cuál extenderá?</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600; color: rgb(0, 61, 245);" class="">Valor:</span><span lang="ES-AR">&nbsp;¿qué valor aporta esta aplicación a los usuarios? ¿Cómo la usarán?</span></p>
+                </div>
+            </div>
+
+
+            <!-- 4 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+ <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600; color: rgb(0, 61, 245);" class="">Forma/movilidad:</span><span lang="ES-AR">&nbsp;¿cómo funcionará esta aplicación en un factor de forma móvil? ¿Cómo puedo agregar valor mediante tecnologías móviles, como el reconocimiento de ubicación, la cámara, etc.?<br><br></span></p>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186405"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186405/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Ciclo de vida de un desarrollo móvil</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p></p>
+        <p>Una buena gestión del ciclo de vida de las aplicaciones de cualquier tipo, es fundamental para el éxito de cualquier desarrollador/ra de <i>software</i> en el mercado actual.
+        </p>
+
+        <p>El ciclo de vida de una aplicación es la <span><b ><span style="font-weight: 600; color: rgb(0, 61, 245);" class="">vida útil</span></b><span class="" style="color: rgb(0, 61, 245);">
+</span>            </span>completa de una aplicación de <i>software</i>, desde el concepto hasta el final de su vida útil. Es decir, el término se refiere a todo el proceso desde el momento en que se concibe la idea de la aplicación hasta el momento en que se retira
+            del uso.</p>
+
+        <p>Si bien el ciclo de vida de la app la podemos resumir en los pasos de </p>
+        <p></p>
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAF-u0dTGQY/jNj7DdkmGsUnBhzowaxI2w/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https://www.canva.com/design/DAF-u0dTGQY/jNj7DdkmGsUnBhzowaxI2w/view?utm_content=DAF-u0dTGQY&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>Hacé clic en el ícono expandir pantalla del visor y podrás ampliar la imagen<br><br clear="ALL">
+        <p>A estas etapas las podemos descomponer en otras más detalladas y específicas al desarrollar una aplicación móvil, es decir que, cuando nos referimos a este ciclo de vida, agregamos 5 partes importantes en el proceso:</p>
+        <p></p>
+        <div class="editor-indent" style="margin-left: 30px;">
+            <p></p>
+            <p></p>
+            <p>1)&nbsp;<b style="font-weight:600"><span class="" style="color: rgb(0, 61, 245);">Inicio/selección del proyecto:</span></b> todas las aplicaciones se inician con una idea. Normalmente, la idea se perfecciona en una base sólida para una aplicación.
+            </p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p>2)&nbsp;<b style="font-weight:600"><span class="" style="color: rgb(0, 61, 245);">Diseño:</span></b> la fase de diseño consiste en definir la experiencia del usuario (UX) de la aplicación (como cuál es el diseño general, cómo funciona, etc.),
+                así como convertir esa experiencia del usuario en un diseño de interfaz de usuario (UI) adecuado, normalmente con la ayuda de un diseñador gráfico.</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p>3)&nbsp;<b style="font-weight:600"><span class="" style="color: rgb(0, 61, 245);">Desarrollo:</span></b> normalmente, es la fase con un uso más intensivo de recursos, esta es la creación real de la aplicación. Principalmente, esto implica
+                dos partes: </p>
+            <p></p>
+            <p></p>
+        </div>
+        <div class="editor-indent" style="margin-left: 30px;">
+            <div class="editor-indent" style="margin-left: 30px;">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p>a.&nbsp; <span><span style="font-weight: 600;">Desarrollo
+<i>front-end</i>:</span> </span>se trata del desarrollo de la parte que verá el/la cliente, la capa con la que interactuará el/la usuario/a. </p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="editor-indent" style="margin-left: 30px;">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p>b.&nbsp;&nbsp;<span><span style="font-weight: 600;">Desarrollo
+<i><span>back-end</span></i>
+                    </span><span >:</span> </span>es la parte de desarrollo en conexión con un servidor o base de datos, que conecta el
+                    <i>front-end</i> de la aplicación móvil con los datos.</p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="editor-indent" style="margin-left: 30px;">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p><span>4)&nbsp;<b style="font-weight:600"> <span class="" style="color: rgb(0, 61, 245);">Pruebas
+y calidad:</span></b>
+                </span><b></b><span> cuando el desarrollo ha avanzado lo suficiente,
+normalmente el control de calidad empieza a probar la aplicación y se corrigen
+los errores. A veces, una aplicación pasará a una fase <i>beta </i>limitada en la que
+una audiencia de usuarios más amplia tiene la oportunidad de usarla, enviar
+comentarios y notificar cambios.</span><br></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p><span>5)&nbsp;</span><b style="font-weight:600"><span class="" style="color: rgb(0, 61, 245);">Implementación/puesta en producción:</span> </b>a menudo, muchas de estas partes se superponen, por ejemplo, es común que el desarrollo siga mientras
+                se finaliza la interfaz de usuario e incluso puede afectar al diseño de la interfaz de usuario. Además, una aplicación puede estar en una fase de pruebas al mismo tiempo que se agregan nuevas características a una nueva versión.</p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <p></p>
+        <p>
+
+
+
+        </p>
+        <p style="text-align: right;">
+
+
+
+
+
+        </p>
+        <p><span class="" style="font-size: large;"><span style="font-weight:600">¿Pero qué
+implica cada fase?</span></span>
+        </p>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186407"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186407/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Diseño</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p>
+        <p>Una vez que se hayan determinado las características y funcionalidades de la aplicación, el siguiente paso es intentar resolver la experiencia del usuario o UX.
+        </p>
+
+        <p>El UX está formado por la experiencia del usuario y por la interfaz del usuario, veamos de que se trata:</p>
+        <p></p>
+        <ul>
+          <!--Tabla simple dos columnas-->
+<table class="tabla-simple texto-principal" style="margin: 0 auto;">
+	  <!--Cantidad de columnas-->
+        <colgroup span="1" width="44%"></colgroup>
+         <colgroup span="1" width="2%"></colgroup>
+         <colgroup span="1" width="44%"></colgroup>
+
+							<!--Categorías-->
+              <tbody><tr>
+                   <td class="tabla-simple-categoria texto-centrado">Diseño de la experiencia del usuario</td>
+                   <td></td>
+                   <td class="tabla-simple-categoria texto-centrado">Diseño de la interfaz de usuario (UI)</td>
+               </tr>
+
+                 <!--filas-->
+               <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+	                     <ul>
+                           <li>La experiencia del usuario se efectúa normalmente a través de prototipos con uno de los muchos conjuntos de herramientas de diseño.&nbsp;</li><li>Los prototipos de experiencia del usuario permiten diseñar esta experiencia sin tener que preocuparse por el diseño real de la interfaz de usuario.&nbsp;</li><li>Al crear prototipos de experiencia del usuario, es importante tener en cuenta las instrucciones de la interfaz para las diferentes plataformas a las que se dirigirá la aplicación.&nbsp;</li><li>La aplicación debería "sentirse cómoda" en todas las plataformas.&nbsp;</li><li>Además, el propio&nbsp;<i>hardware</i>&nbsp;también impone decisiones de la experiencia del usuario.&nbsp;</li><li>Asimismo, el factor de forma también influye en las decisiones de la experiencia del usuario.&nbsp;</li><li>Una tableta tiene mucho más espacio y, por tanto, puede mostrar más información. A menudo, lo que necesita varias pantallas en un teléfono, se comprime en una para una tableta.</li>
+
+                        </ul>
+                     </td>
+                     <td></td>
+
+                     <td class="tabla-simple-fila1" valign="top">
+                         <ul>
+                            <li>Una vez determinada la experiencia del usuario, el siguiente paso es crear el diseño de la interfaz de usuario.</li><li>Mientras que la experiencia del usuario suele componerse de prototipos en blanco y negro, la fase de diseño de la interfaz de usuario es donde se introducen y finalizan los colores, gráficos, etc.&nbsp;</li><li>Es importante dedicar tiempo a un buen diseño de la interfaz de usuario y, por lo general, las aplicaciones más populares tienen un diseño profesional.&nbsp;</li><li>Al igual que con la experiencia del usuario, es importante comprender que cada plataforma tiene su propio lenguaje de diseño, por lo que una aplicación bien diseñada puede tener un aspecto diferente en cada plataforma.<br></li>
+
+                         </ul>
+                       </td>
+                   </tr>
+                </tbody></table></ul><ul>
+        </ul>
+        <p></p>
+
+        <p></p>
+        <div class="editor-indent" style="margin-left: 30px;">
+            <p><br></p></div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186408"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186408/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Desarrollo</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p></p>
+        <p>Normalmente, la fase de desarrollo se inicia muy pronto.</p>
+<div class="col" style="border-left: solid  #0c76f0 3px; background-color: #edf5fd; width: 92%; margin: 0 auto; border-radius: 8px">
+
+        <p style="color: #0c76f0; font-size: large; padding: 14px; font-weight: 600">Una vez que la idea ha madurado en la fase conceptual o de inspiración:</p>
+        <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+            <li>- Se desarrolla un prototipo de trabajo que valida la funcionalidad, las suposiciones y ayuda a comprender el ámbito del trabajo.</li><li></li>
+        </ul>
+    </div>
+
+    <br>
+    <!--Fin Caja celeste-->
+
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186409"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186409/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas y calidad</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p>
+        <!--Inicio Caja definición ciruela-->
+    <p></p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #ae11a0;"><b class="sub_negrita">Definición</b></span> </p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: solid  #ae11a0 2px;">
+                <p><span class="" style="font-size: large; color: #ae11a0;"><span class="" style="color: rgb(51, 51, 51);">Una</span><span class="" style="color: #ae11a0;">&nbsp;prueba&nbsp;</span><span class="" style="color: rgb(51, 51, 51);">es el proceso de solucionar los errores de la aplicación. No debe entenderse sólo desde un punto de vista funcional (por ejemplo: "Se bloquea al hacer clic en este botón"), sino también de facilidad de uso y rendimiento. Es mejor empezar la estabilización muy pronto en el proceso de desarrollo para que se puedan realizar correcciones antes de que sean costosas.&nbsp;<span></span></span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja definición-->
+  
+      <p><br>Normalmente, las aplicaciones pasan por las fases Prototipo, Alfa, Beta y Versión candidata para lanzamiento. Hay
+            personas que las definen de forma diferente, pero, generalmente, siguen el modelo siguiente:</p>
+
+        <p></p>
+        <div class="editor-indent" style="margin-left: 30px;">
+            <p></p>
+            <p>a)&nbsp;<span ><span class="sub_negrita" style="color: rgb(0, 61, 245);">Prototipo</span>:</span> la aplicación aún está en fase de prueba de concepto y sólo funcionan la funcionalidad principal o determinadas partes de la aplicación.
+                Hay errores principales.
+            </p>
+            <p></p>
+            <p></p>
+            <p>b)&nbsp;<span ><span class="sub_negrita" style="color: rgb(0, 61, 245);">Alfa</span>:</span> la funcionalidad principal tiene normalmente el código completado (compilado, pero no probado por completo). Aún hay errores principales,
+                puede que no haya funcionalidades aisladas.</p>
+            <p></p>
+            <p></p>
+            <p>c)<span><span class="" style="color: rgb(0, 61, 245);">&nbsp;</span><span style="color: rgb(0, 61, 245);" class="sub_negrita">Beta</span></span>: la mayoría de la funcionalidad está completa y ha pasado al menos una corrección de errores y
+                una prueba ligera. Puede que aún haya problemas conocidos principales.</p>
+            <p></p>
+            <p></p>
+            <p>d)&nbsp;<span style="color: rgb(0, 61, 245);" class="sub_negrita">Versión
+candidata para lanzamiento</span>: toda la funcionalidad está completa y probada. Salvo errores nuevos, la aplicación es una versión candidata para lanzamiento.
+            </p>
+            <p></p>
+        </div>
+        <p>
+
+
+
+
+
+
+
+        </p>
+        <p>Nunca es demasiado pronto para empezar a probar una aplicación.
+            <!--Inicio caja ejemplo-->
+        </p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Por ejemplo</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; ">Si se encuentra un problema importante en la fase de prototipo, aún se puede modificar la experiencia del usuario de la aplicación para darle cabida. Si se encuentra un problema de rendimiento en la fase&nbsp;<i>alfa</i>, es lo suficientemente pronto para modificar la arquitectura antes de que se haya generado mucho código basado en suposiciones falsas.</span></p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p><br>Normalmente, según una aplicación avanza en el ciclo de vida, se abre a más personas para que la prueben, envíen comentarios, etc.
+            <!--Inicio caja ejemplo-->
+        </p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Por ejemplo</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; ">Las aplicaciones prototipo pueden mostrarse sólo a partes interesadas clave o ponerse a disposición de estas partes, mientras que las aplicaciones de versión candidata para lanzamiento pueden distribuirse a los clientes que se hayan registrado para obtener acceso anticipado.</span></p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p>Para realizar primeras pruebas y la implementación en pocos dispositivos, normalmente es suficiente implementar directamente desde un equipo de desarrollo. En cambio, si se va ampliando el público, se puede volver más complicado rápidamente. Por
+            tanto, hay una serie de <b><span class="sub_negrita" style="color: rgb(0, 61, 245);">opciones de implementación de pruebas</span></b> que facilitan este proceso al permitirle invitar a usuarios a un grupo de pruebas, lanzar compilaciones en
+            la web y proporcionar herramientas que permiten que los usuarios envíen comentarios.
+        </p><br>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186410"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186410/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Implementación / puesta en producción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p></p>
+        <p>Una vez que la aplicación se ha estabilizado o probado, es el momento de <b><span class="sub_negrita" style="color: rgb(0, 61, 245);">publicarla.</span></b> Hay una serie de opciones de distribución diferentes, dependiendo de la plataforma.</p><br>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186411"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186411/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Consideraciones sobre el desarrollo móvil</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p></p>
+        <p>Aunque desarrollar aplicaciones móviles no es fundamentalmente diferente que el desarrollo web o de escritorio tradicional en términos de proceso o arquitectura, existen algunas consideraciones que se deben tener en cuenta, veamos cuales son:</p>
+        <p></p>
+        <ul>
+            <ul>
+                <ul>
+                    <ul>
+                        <div style="margin-left: 3%; margin-right: 3%;">
+
+                            <br>
+                            <!-- 1 -->
+                            <div class="row" style="margin-left: 32px">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                                </div>
+                                <div class="col">
+                                    <p><span style="font-weight: 600">Consideraciones comunes</span></p>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 2 -->
+                            <div class="row" style="margin-left: 32px">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                                </div>
+                                <div class="col">
+                                    <p><span style="font-weight: 600">Consideraciones de IOS</span></p>
+                                </div>
+                            </div>
+
+                            <!-- 3 -->
+                            <div class="row" style="margin-left: 32px">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                                </div>
+                                <div class="col">
+                                    <p><span style="font-weight: 600">Consideraciones de Android</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </ul>
+            </ul>
+        </ul>
+        <p>A continuación profundizarás más en cada una de ellas.</p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186412"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186412/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Comunes</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p></p>
+        <p><span ><span class="" style="color: rgb(0, 61, 245);"><span class="" style="color: rgb(51, 51, 51);">Estas consideraciones comunes abordan aspectos fundamentales que deben tenerse en cuenta independientemente del tipo de dispositivo o plataforma de desarrollo.</span>
+            <!--Tabla 2 columnas varias filas de colore-->
+            </span>
+            </span>
+        </p>
+        <table class="tabla-filaColores texto-principal" style="width: 90%; margin: 0 auto;">
+            <colgroup span="1" width="25%"></colgroup>
+            <colgroup span="1" width="75%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado" style="text-align: center; background-color: rgb(139, 130, 215);">Consideraciones</td>
+                    <td class="tabla-filaColores-categoria texto-centrado" style="text-align: center; background-color: rgb(139, 130, 215);"> Descripción</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado"><b class="sub_negrita">Multitarea</b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">Implica la gestión eficiente del rendimiento y la energía cuando varias aplicaciones se ejecutan simultáneamente.&nbsp;</li>
+                            <li style="text-align: left;">Por ejemplo, en dispositivos móviles, solo una aplicación puede estar en primer plano a la vez para maximizar el espacio en pantalla y reducir el consumo de batería.&nbsp;</li>
+                            <li style="text-align: left;">La multitarea debe abordarse considerando las diferencias en la gestión entre plataformas como iOS y Android.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado"><b class="sub_negrita">
+                        Factor de forma</b><br>
+                        <ul>
+                        </ul>
+                    </td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">Refiere a adaptar el diseño de la interfaz de usuario según el tamaño y las características del dispositivo, ya sea teléfono o tableta.&nbsp;</li>
+                            <li style="text-align: left;">Por ejemplo, el espacio limitado en la pantalla de un teléfono requiere un diseño más compacto y simplificado, mientras que las tabletas permiten una disposición más espaciosa de los elementos de la interfaz.&nbsp;</li>
+                            <li style="text-align: left;">La efectividad en el diseño de la interfaz varía según el factor de forma del dispositivo.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado"><b class="sub_negrita">Fragmentación del sistema operativo y del dispositivo</b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">Considera las diferencias en hardware y características entre dispositivos, lo que puede afectar el rendimiento y la compatibilidad de la aplicación.&nbsp;</li>
+                            <li style="text-align: left;">Por ejemplo, una aplicación de videollamadas puede no ser compatible con todos los dispositivos si no todos tienen cámaras funcionales.&nbsp;</li>
+                            <li style="text-align: left;">Es esencial adaptar el desarrollo, diseño y pruebas para garantizar la compatibilidad con una amplia gama de dispositivos:<br><br>
+                                <p><u>Planeación y conceptualización</u>: hay que tener en cuenta que el hardware y las características varían de un dispositivo a otro, puede que una aplicación que se basa en determinadas características no funcione correctamente
+                                    en algunos dispositivos. Por ejemplo, no todos los dispositivos tienen cámaras, por lo que, si se está creando una aplicación de mensajería de vídeo, puede que algunos dispositivos reproduzcan vídeos, pero no los puedan
+                                    grabar.
+                                </p>
+                                <p><u>Diseño:</u>&nbsp;al diseñar la experiencia del usuario (UX) de una aplicación, hay que prestar atención a las diferentes relaciones y tamaños de pantalla de los dispositivos. Además, al diseñar la interfaz de usuario
+                                    (UI) de una aplicación, se deben tener en cuenta diferentes resoluciones de pantalla.</p>
+                                <p><u>Desarrollo:</u>&nbsp;al usar una característica del código, siempre se debe probar primero la presencia de esa característica. Por ejemplo, antes de usar una característica de dispositivo, como una cámara, confirmar
+                                    siempre primero que el sistema operativo tenga esa característica. Después, al inicializar el dispositivo o característica, hay que asegurarse de solicitar la compatibilidad actual del sistema operativo sobre el dispositivo
+                                    y después usar esas opciones de configuración.</p>
+                                <p><u>Pruebas:</u>&nbsp;es muy importante probar la aplicación al principio y con frecuencia en dispositivos reales. Puede haber incluso dispositivos con las mismas especificaciones de hardware en que varíe mucho su comportamiento.</p><br></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado"><b class="sub_negrita">Recursos limitados</b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">Reconoce las limitaciones de memoria, procesamiento y rendimiento en dispositivos móviles en comparación con equipos de escritorio.&nbsp;</li>
+                            <li style="text-align: left;">Por ejemplo, cargar imágenes de alta calidad puede agotar rápidamente la memoria disponible, y las aplicaciones que requieren mucho procesamiento pueden impactar negativamente en el rendimiento del dispositivo.&nbsp;</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <div class="editor-indent" style="margin-left: 30px;">
+            <p>Debido a consideraciones como estas, <b><span class="sub_negrita" style="color: rgb(0, 61, 245);">es importante crear el código de manera inteligente y realizar la implementación pronto y con frecuencia</span></b> en dispositivos reales para
+                validar la capacidad de respuesta.</p>
+        </div>
+        <div class="editor-indent" style="margin-left: 30px;">
+
+            Según el tipo de dispositivo y la plataforma de desarrollo debemos tener en cuenta diferentes consideraciones
+        </div>
+
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186414"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186414/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">De IOS</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <!--Tabla 2 columnas varias filas de colore-->
+        <table class="tabla-filaColores texto-principal" style="width: 90%; margin: 0 auto;">
+            <colgroup span="1" width="25%"></colgroup>
+            <colgroup span="1" width="75%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado" style="text-align: center; background-color: rgb(139, 130, 215);">Consideraciones </td>
+                    <td class="tabla-filaColores-categoria texto-centrado" style="text-align: center; background-color: rgb(139, 130, 215);"> Descripción</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado"><b class="sub_negrita">Multitarea</b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">La multitarea está muy controlada en iOS y hay una serie de reglas y comportamientos que la aplicación debe cumplir cuando otra aplicación está en primer plano, de lo contrario, iOS cancelará la aplicación.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado"><b class="sub_negrita">Recursos específicos del dispositivo</b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">En un factor de forma determinado, el hardware puede variar considerablemente entre diferentes modelos.&nbsp;</li>
+                            <li style="text-align: left;">Por ejemplo, algunos dispositivos tienen una cámara trasera, algunos también tienen una cámara frontal y otros no tienen ninguna.&nbsp;</li>
+                            <li style="text-align: left;">&nbsp;Algunos dispositivos antiguos (iPhone 3G y anteriores) ni siquiera permiten la multitarea.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado"><b class="sub_negrita">Restricciones específicas del sistema operativo</b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">Para asegurarse de que las aplicaciones respondan correctamente y sean seguras, iOS impone una serie de reglas que deben cumplir las aplicaciones.&nbsp;</li>
+                            <li style="text-align: left;">Además de las reglas con respecto a la multitarea, hay una serie de métodos de evento de los que la aplicación debe volver en una determinada cantidad de tiempo, de lo contrario, iOS la cancelará.&nbsp;</li>
+                            <li style="text-align: left;">También las aplicaciones se ejecutan en lo que se conoce como espacio aislado, un entorno que aplica restricciones de seguridad que restringen a qué puede tener acceso la aplicación.&nbsp;</li>
+                            <li style="text-align: left;">Por ejemplo, una aplicación puede leer y escribir en su propio directorio, pero si intenta escribir en otro directorio de aplicaciones, se cancelará.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <p><br></p>
+    </div>
+
+    <!-- nada puede haber abajo -->
+    <br>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186413"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186413/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">De Android</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <!--Tabla 2 columnas varias filas de colore-->
+        <table class="tabla-filaColores texto-principal" style="width: 90%; margin: 0 auto;">
+            <colgroup span="1" width="25%"></colgroup>
+            <colgroup span="1" width="75%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado" style="text-align: center; background-color: rgb(139, 130, 215);">Consideraciones </td>
+                    <td class="tabla-filaColores-categoria texto-centrado" style="text-align: center; background-color: rgb(139, 130, 215);"> Descripción</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado"><b class="sub_negrita">Multitarea</b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">La multitarea en Android tiene dos componentes; el primero es el ciclo de vida de la actividad: <br>Cada pantalla de una aplicación de Android se representa mediante una actividad y hay un conjunto específico de eventos que
+                                se producen cuando una aplicación se coloca en segundo plano o vuelve al primer plano. <br>Las aplicaciones deben respetar este ciclo de vida para responder y comportarse correctamente.&nbsp;</li>
+                            <li style="text-align: left;">El segundo componente de la multitarea de Android es el uso de servicios. <br>Los servicios son procesos de ejecución prolongada que existen independientes de una aplicación y se usan para ejecutar procesos mientras la aplicación
+                                está en segundo plano.</li>
+                            <li style="text-align: left;">La multitarea está muy controlada en iOS y hay una serie de reglas y comportamientos que la aplicación debe cumplir cuando otra aplicación está en primer plano, de lo contrario, iOS cancelará la aplicación.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado"><b>Muchos dispositivos y muchos factores de forma</b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">
+                                Google no impone ningún límite en lo que concierne a los dispositivos que pueden ejecutar el sistema operativo Android.&nbsp;</li>
+                            <li style="text-align: left;">Este paradigma abierto da como resultado un entorno de productos lleno de una gran variedad de dispositivos diferentes con hardware, resoluciones y relaciones de pantalla, características del dispositivo y capacidades muy diferentes.&nbsp;</li>
+                            <li style="text-align: left;">Debido a la fragmentación extrema de los dispositivos Android, la mayoría de los usuarios elige los 5 o 6 dispositivos más populares para los que diseñar y probar y les da prioridad a estos.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado"><b class="sub_negrita">Consideraciones de seguridad</b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">
+                                Todas las aplicaciones en el sistema operativo Android se ejecutan bajo una identidad distinta y aislada con permisos limitados.&nbsp;</li>
+                            <li style="text-align: left;">De manera predeterminada, las aplicaciones pueden hacer muy poco.&nbsp;</li>
+                            <li style="text-align: left;">Por ejemplo, sin permisos especiales, una aplicación no puede enviar un mensaje de texto, determinar el estado del teléfono, ni siquiera obtener acceso a Internet.&nbsp;</li>
+                            <li style="text-align: left;">Para tener acceso a estas características, las aplicaciones deben especificar en su archivo de manifiesto de la aplicación qué permisos quieren y cuándo se instalan.&nbsp;</li>
+                            <li style="text-align: left;">El sistema operativo lee los permisos, notifica al usuario que la aplicación pide esos permisos y, después, permite al usuario continuar o cancelar la instalación.&nbsp;</li>
+                            <li style="text-align: left;">Este es un paso esencial en el modelo de distribución de Android, debido al modelo de tienda de aplicaciones abierto, ya que las aplicaciones no se mantienen de la misma forma que en iOS.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="editor-indent" style="margin-left: 30px;">
+            <p></p>
+        </div>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186415"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186415/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Documentar una app</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Uno de los elementos más importantes en el ciclo de vida del desarrollo de un <i>software</i> es el de su <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">documentación,</span></b> pues esta ayuda entender de manera sencilla
+            los programas y procesos, evitando así que el conocimiento se pierda.</p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Generalmente <span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">se siguen pasos de alguna metodología</b></span> para ajustarse a normas y reglas entre los participantes de la tarea de documentación.</p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Proponemos documentar el desarrollo de la app usando metodologías ágiles, dentro del proceso de desarrollo brinda mayor flexibilidad y rapidez en cuanto a las modificaciones que requiera el proyecto, mediante la inclusión constante del usuario
+            en las actividades requeridas; por otro lado, beneficia la aplicación móvil al asegurar la calidad, usabilidad y demás requerimientos especiales que posee el <i>software</i> móvil.</p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Veamos entonces como aplicar esta metodología. </p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Pasemos a describir de manera concisa las etapas:</p>
+        <div style="color: rgb(1, 6, 20); font-size: large; position: relative; width: 100%; height: 0px; padding-top: 56.25%; padding-bottom: 0px; box-shadow: rgba(63, 69, 81, 0.16) 0px 2px 8px 0px; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAF-u_wqAv8/83_m78BFLltFL7-Mghfi1Q/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+        </div>
+        <a href="https://www.canva.com/design/DAF-u_wqAv8/83_m78BFLltFL7-Mghfi1Q/view?utm_content=DAF-u_wqAv8&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a><span class="" style="font-size: large;">Hacé clic en el ícono expandir pantalla&nbsp;</span><span class="" style="font-size: large;">del visor y podrás ampliar la imagen</span>
+        <br clear="ALL">
+        <p style="color: rgb(1, 6, 20); font-size: large; text-align: left;"><span lang="ES-MX"></span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">El modelo propone en primer lugar <b><span class="sub_negrita" style="color: rgb(0, 61, 245);">realizar una correcta planificación de las principales dimensiones del proyecto</span></b>, de esta manera se conoce el entorno y modelo de negocio
+            que posee la empresa y con ello dar paso al planeamiento de soluciones.
+        </p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Cuando la planificación esté lista se procede <span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">al modelado de la base de datos</b></span>, así como la <span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">elaboración de prototipos</b></span>            que permitirán a todos los interesados tener una noción del entregable o producto final. </p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">La <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">ejecución o codificación</span></b> es la parte más extensa del proyecto, los/las desarrolladores/as se limitan a realizar lo que está planificado para dicho <i>sprint</i>.
+            Para que una aplicación pueda ser lanzada a los usuarios finales, esta debe pasar por una serie de <span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">pruebas </b></span>que permitan garantizar la calidad de la misma, donde
+            <span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">en caso de identificar errores</b></span> o no alcanzar un determinado requerimiento, se debe llevar un <span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">registro de cambios.</b></span> </p>
+
+        <!-- Cuadro amarillo borde verde+ --><span class="" style="color: rgb(0, 61, 245); font-size: large;">
+        </span><br>
+
+        <div style="background-color: rgb(255, 254, 235); border-top: 2px solid rgb(0, 191, 99); width: 96%; margin: 0px auto;">
+            <div style="margin: 16px;">
+                <p style="color: rgb(0, 191, 99); font-size: large; font-weight: 600;">Fases</p><span class="" style="font-size: large; color: rgb(51, 51, 51);">Cada una de las fases posee actividades organizadas con el objetivo de obtener un producto funcional como entregable al terminar cada&nbsp;</span><i style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);">sprint</span></i>
+                <span class="" style="font-size: large; color: rgb(51, 51, 51);">, donde además se obtendrá los cambios necesarios a realizarse lo cuáles serán discutidos antes de empezar un nuevo&nbsp;</span><i style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);">sprint</span></i>
+                <span class="" style="font-size: large; color: rgb(51, 51, 51);">, esto con la finalidad de ofrecer una aplicación de calidad.</span><br>
+                <ul style="color: rgb(1, 6, 20); font-size: large;"><br></ul>
+            </div>
+        </div><span class="" style="font-size: large; color: rgb(51, 51, 51);">Vamos a documentar la primera etapa.</span>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186416"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186416/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Plantilla de planificación</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">&nbsp;<br>
+        <p>Esta planilla nos da la primera aproximación al desarrollo, una vez analizada podemos completar la planilla de constitución del proyecto y pasar a las historias de usuario.<br></p>
+
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAF-u9qj7hI/dILT0SyK2uyZ-5naW9SNxA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https://www.canva.com/design/DAF-u9qj7hI/dILT0SyK2uyZ-5naW9SNxA/view?utm_content=DAF-u9qj7hI&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"> </a>Hacé clic en el ícono expandir pantalla&nbsp;del visor y podrás ampliar la imagen<!--Inicio Caja definición ciruela-->
+        <p></p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #ae11a0;"><b class="sub_negrita">Historias de usuario</b></span></p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: solid  #ae11a0 2px;">
+                <p><span class="" style="font-size: large; color: #ae11a0;"><span class="" style="color: #ae11a0;"><span class="" style="color: rgb(51, 51, 51);">Se pueden definir como</span> cartillas&nbsp;</span><span class="" style="color: rgb(51, 51, 51);">que poseen los pasos a seguir para efectuar una determinada actividad, estas indicaciones deben ser entendibles para los demás interesados, debido a que deben pasar por una revisión donde se valide y confirme su contenido.<span></span></span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja definición-->
+
+
+        <p>Debido a las características propias de los dispositivos móviles como sus pantallas es necesario <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">diseñar una aplicación que sea fácil de comprender y navegar para el usuario</span></b>,
+            pero a su vez tenga todo el potencial para cumplir con su función, por tal razón este modelo recomienda el <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">uso de bosquejos digitales o prototipos</span></b>, de esta manera
+            se busca complementar las historias de usuario.</p><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186417"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186417/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Historias de usuario</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p>
+        <p>Por lo general, el encargado del producto es quien redacta las historias de usuario con base en la investigación de los usuarios y las organiza en una lista para el equipo de desarrollo, también conocida como trabajo pendiente del producto (<i>backlog</i>).
+            Aunque <strong><span class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">técnicamente cualquiera puede redactar historias de usuario</span></span></strong>, <span class="" style="color: rgb(0, 61, 245);"><strong><span class="sub_negrita">es responsabilidad del gerente de producto asegurarse de tener toda la información</span></strong></span>            que el equipo de desarrollo necesita para ejecutar sus iniciativas.</p>
+
+        <p>Luego, el equipo de desarrollo priorizará y decidirá qué historias de usuario abordar durante su reunión de <strong><span class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">planificación de </span><i><span class="" style="color: rgb(0, 61, 245);">sprint</span></i><span class="" style="color: rgb(0, 61, 245);">.</span></span></strong></p>
+
+        <p>Para la definición de las historias de usuario se tomó un modelo que presenta los siguientes campos:</p>
+        <ul>
+            <ul>
+                <ul>
+                    <div style="margin-left: 3%; margin-right: 3%;">
+                        <!-- 1 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">ID:</span> identificador de la historia de usuario.</p>
+                            </div>
+                        </div>
+
+
+
+                        <!-- 2 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">Rol:&nbsp;</span>tipo de usuario o función que tiene la persona.</p>
+                            </div>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">Característica/funcionalidad:</span> <a name="_Hlk122536946">descripción de la historia de&nbsp;<span>usuario</span></a><span>, acción que el&nbsp;</span><span>usuario va a realizar.&nbsp;Acción principal que el usuario realiza en el sistema para cumplir con una necesidad</span></p>
+                            </div>
+                        </div>
+
+
+                        <!-- 4 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">Razón/resultado:</span> describe el resultado obtenido al realizar una acción. </p>
+                            </div>
+                        </div>
+
+
+                        <!-- 5 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">Número de escenario:</span> identifica el número de escenarios asociado con la historia de<span>&nbsp;&nbsp;</span><span>usuario.</span> </p>
+                            </div>
+                        </div>
+
+                        <!-- 6 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">Criterio de aceptación:</span>&nbsp;condiciones o requisitos que deben cumplirse para que la historia de usuario sea considerada<span> <span data-start="2007" data-end="2019" >c</span></span><span data-start="2007" data-end="2019">ompleta</span> y funcional. </p>
+                            </div>
+                        </div>
+
+                        <!-- 7 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.37 5.11h3.972v.07L6.025 12H7.42l3.258-6.85V4.002H5.369v1.107Z"></path>
+</svg>
+
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">Contexto:</span> describe la situación en la que se ejecuta el escenario y las condiciones bajo las cuales se debe cumplir el criterio de aceptación.. </p>
+                            </div>
+                        </div>
+
+
+                        <!-- 8 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-5.03 1.803c0-1.248-.943-1.84-1.646-1.992v-.065c.598-.187 1.336-.72 1.336-1.781 0-1.225-1.084-2.121-2.654-2.121-1.57 0-2.66.896-2.66 2.12 0 1.044.709 1.589 1.33 1.782v.065c-.697.152-1.647.732-1.647 2.003 0 1.39 1.19 2.344 2.953 2.344 1.77 0 2.989-.96 2.989-2.355Zm-4.347-3.71c0 .739.586 1.255 1.383 1.255s1.377-.516 1.377-1.254c0-.733-.58-1.23-1.377-1.23s-1.383.497-1.383 1.23Zm-.281 3.645c0 .838.72 1.412 1.664 1.412.943 0 1.658-.574 1.658-1.412 0-.843-.715-1.424-1.658-1.424-.944 0-1.664.58-1.664 1.424Z"></path>
+</svg>
+
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">Evento:</span> acción específica que el usuario lleva a cabo dentro del sistema, activando un proceso o interacción. </p>
+                            </div>
+                        </div>
+
+
+
+                        <!-- 9 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.223 4.146c2.104 0 3.123-1.464 3.123-4.3 0-3.147-1.459-4.014-2.97-4.014-1.63 0-2.871 1.02-2.871 2.73 0 1.706 1.171 2.667 2.566 2.667 1.06 0 1.7-.557 1.934-1.184h.076c.047 1.67-.475 3.023-1.834 3.023-.71 0-1.149-.363-1.248-.72H5.258c.094.908.926 1.798 2.52 1.798Zm.118-3.972c.808 0 1.535-.528 1.535-1.594s-.668-1.676-1.56-1.676c-.838 0-1.517.616-1.517 1.659 0 1.072.708 1.61 1.54 1.61Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">Resultado/comportamiento esperado:</span>&nbsp;comportamiento esperado o el resultado que debe ocurrir una vez que el usuario haya realizado la acción.</p>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </ul>
+        </ul>
+        <!--[if !supportLists]-->
+        <p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186417/Copia%20de%20E2-S5-Plantilla%20vac%C3%ADa.png" alt="" width="800" height="135" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p style="text-align: left;"><span lang="ES-MX"></span></p>
+        <p>Ejemplo de una historia de usuario:</p>
+        <div style="position: relative; width: 100%; height: 0; padding-top: 70.7071%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAF-vLjo28I/VgHw42dYE6bT4A9SyeuhQg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+        </div>
+        <a href="https://www.canva.com/design/DAF-vLjo28I/VgHw42dYE6bT4A9SyeuhQg/view?utm_content=DAF-vLjo28I&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>Hacé clic en el ícono expandir pantalla&nbsp;del visor y podrás ampliar la imagen
+        <p></p><br>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186424"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665725/mod_book/chapter/186424/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Glosario</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%; font-size: large">
+        <p>Aquí encontrarás una herramienta muy útil para tu inmersión en el mundo del desarrollo móvil: un glosario de términos técnicos.</p>
+        <p>En este glosario están las <b class="sub_nerita"><span class="" style="color: rgb(0, 61, 245);">definiciones de los principales términos clave de esta materia.</span></b> Te recomendamos consultarlo cada vez que lo necesites.<br><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186425"><article class="flex_titulo_botonera">
+    <p class="titulo_principal">Glosario</p>
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+            </article>
+        </section>
+    </section>
+</article>
+
+
+<div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando 
+				<p></p>
+				<p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> -->
+
+        <!-- nada puede haber abajo -->
+        <div style="color: rgb(1, 6, 20);">
+
+
+
+            <!--Inicio tag celeste-->
+            <div class="row" style=" background-color: #8b82d7; color: white; height: 40px; border-radius: 0px 20px 20px 0px; display: inline-flex; align-items: center; white-space: nowrap;">
+                <p style="font-size: large;padding: 6px 12px 0px 24px">Capacitor</p>
+            </div>
+            <!--Fin taga verde-->
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                <p><br>Capacitor es una herramienta que permite convertir cualquier aplicación web (desarrollada con HTML, CSS y JS) en una aplicación multiplataforma (para iOS, Android, Escritorio o Web), es decir, es el puente de Ionic hacia lo nativo.
+                    Capacitor nos permite acceder a los recursos nativos de cada dispositivo (cámara, GPS, multimedia, almacenamiento, etc.) a través de una comunicación sencilla.</p>
+            </div>
+
+            <!--Inicio tag celeste-->
+            <div class="row" style=" background-color: #8b82d7; color: white; height: 40px; border-radius: 0px 20px 20px 0px; display: inline-flex; align-items: center; white-space: nowrap;">
+                <p style="font-size: large;padding: 6px 12px 0px 24px">Framework</p>
+            </div>
+            <!--Fin taga verde-->
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                <p><br>Conjunto estandarizado de conceptos, prácticas y criterios para enfocar un tipo de problemática particular. Su objetivo principal es ofrecer funcionalidad extra a un lenguaje de forma autocontenida para que la programación sea más
+                    simple.
+                </p>
+            </div>
+
+            <!--Inicio tag verde-->
+            <div class="row" style=" background-color: #8b82d7; color: white; height: 40px; border-radius: 0px 20px 20px 0px; display: inline-flex; align-items: center; white-space: nowrap;">
+                <p style="font-size: large;padding: 6px 12px 0px 24px">Gestor de paquetes</p>
+            </div>
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                <p><br>Software que maneja de forma automática los paquetes que podamos necesitar. Se encargan de instalar, actualizar, configurar y eliminar de forma automática los paquetes que se desee utilizar. Los gestores de paquetes más conocidos son
+                    npm y yarn.</p>
+            </div>
+            <!--Inicio tag verde-->
+            <div class="row" style=" background-color: #8b82d7; color: white; height: 40px; border-radius: 0px 20px 20px 0px; display: inline-flex; align-items: center; white-space: nowrap;">
+                <p style="font-size: large;padding: 6px 12px 0px 24px">JavaScript</p>
+            </div>
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                <p><br>Lenguaje web por excelencia, todas las páginas web modernas están hechas con JavaScript, aunque la mayoría utiliza algún tipo de framework.</p>
+            </div>
+            <!--Inicio tag verde-->
+            <div class="row" style=" background-color: #8b82d7; color: white; height: 40px; border-radius: 0px 20px 20px 0px; display: inline-flex; align-items: center; white-space: nowrap;">
+                <p style="font-size: large;padding: 6px 12px 0px 24px">Lenguaje de programación</p>
+            </div>
+            <!--Fin taga verde-->
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                <p><br>Lenguaje formal que da a una persona la capacidad de escribir una serie de instrucciones en forma de algoritmos con el fin de controlar el comportamiento de un sistema informático.</p>
+            </div>
+            <!--Inicio tag verde-->
+            <div class="row" style=" background-color: #8b82d7; color: white; height: 40px; border-radius: 0px 20px 20px 0px; display: inline-flex; align-items: center; white-space: nowrap;">
+                <p style="font-size: large;padding: 6px 12px 0px 24px">Open-Source Software
+                </p>
+            </div>
+            <!--Fin taga verde-->
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><br>Es un software que tiene una licencia abierta, esto quiere decir que permite que los/las usuarios/as lo utilicen de forma libre. El código Open-Source es de uso libre y gratuito para cualquiera que desee usarlo, para cualquier propósito.<br><br></div>
+            <!--Inicio tag verde-->
+            <div class="row" style=" background-color: #8b82d7; color: white; height: 40px; border-radius: 0px 20px 20px 0px; display: inline-flex; align-items: center; white-space: nowrap;">
+                <p style="font-size: large;padding: 6px 12px 0px 24px">Paquete</p>
+            </div>
+            <!--Fin taga verde-->
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><br>Archivos de software que traen data y metadata necesaria para programar. Pueden incluir funcionalidades puntuales o componentes totalmente nuevos y pre-programados.<br><br></div>
+            <!--Inicio tag verde-->
+            <div class="row" style=" background-color: #8b82d7; color: white; height: 40px; border-radius: 0px 20px 20px 0px; display: inline-flex; align-items: center; white-space: nowrap;">
+                <p style="font-size: large;padding: 6px 12px 0px 24px">Software Development Kit (SDK)</p>
+            </div>
+            <!--Fin taga verde-->
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                <p><br>Colección de herramientas que facilitan el desarrollo de software. Estos SDK suelen ser específicos a un lenguaje y una plataforma en particular. Por ejemplo, si queremos desarrollar aplicaciones móviles para Android necesitamos el
+                    JDK (Java Development Kit) y si queremos desarrollar aplicaciones para iOS necesitamos el iOS SDK.</p>
+            </div>
+
+            <!--Inicio tag verde-->
+            <div class="row" style=" background-color: #8b82d7; color: white; height: 40px; border-radius: 0px 20px 20px 0px; display: inline-flex; align-items: center; white-space: nowrap;">
+                <p style="font-size: large;padding: 6px 12px 0px 24px">Software multiplataforma</p>
+            </div>
+            <!--Fin taga verde-->
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><br></div>
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                <p>Para que el software pueda ser considerado multiplataforma, debe ser capaz de funcionar en más de una arquitectura de computadora o sistema operativo. Esto puede ser una tarea que consume tiempo, ya que los diferentes sistemas operativos
+                    tienen diferentes interfaces de programación de aplicaciones o API. Lo que funciona sin problemas en una plataforma puede no compilar en otra, esto aplica no solo para programas de software sino también para lenguajes.</p>
+            </div>
+        </div>
+    </div>
+    <p><br></p>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[655204,655205,655206,655207,655209,655211,655213,655216,655217,655220,673166,675942]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2665725, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1743612787); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random67ed6c67ee6282'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random67ed6c67ee6282'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
