@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S3_L: Comunicaciones en organizaciones | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1743646678/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S3_L: Comunicaciones en organizaciones | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1743646678_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"QHZEt20riD","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1743646678","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21036,"courseContextId":2643294,"contextid":2657844,"contextInstanceId":647992,"langrev":1743837844,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21036 context-2657844 cmid-647992 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1743646678/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S3_L: Comunicaciones en organizaciones</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Taller de Comunicación 2° A 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S3_L: Comunicaciones en organizaciones
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        domingo, 6 de abril de 2025, 12:35
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21036&amp;section=4" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_apertura_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+  <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"></path>
+</svg>
+                    </div>
+                    <p>Luz</p>
+                </section>
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/journal/view.php?id=647993" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_desarrollo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+  <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"></path>
+  <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"></path>
+  <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+</svg>
+                        </div>
+                        <p>Cámara</p>
+
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/forum/view.php?id=647994" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
+  <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z"></path>
+</svg>
+                        </div>
+                        <p>Acción</p>
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. ¡Luz!" class="font-weight-bold text-decoration-none" href="#ch176078">1. ¡Luz!</a></li><li><a title="2. El modelo físico según Capriotti" class="font-weight-bold text-decoration-none" href="#ch176069">2. El modelo físico según Capriotti</a><ul><li><a title="2.1. La circulación del discurso y su consumo" class="text-decoration-none" href="#ch176070">2.1. La circulación del discurso y su consumo</a></li><li><a title="2.2. Fase de producción del discurso" class="text-decoration-none" href="#ch176079">2.2. Fase de producción del discurso</a></li><li><a title="2.3. Fase de circulación del discurso" class="text-decoration-none" href="#ch176080">2.3. Fase de circulación del discurso</a></li><li><a title="2.4. Fase consumo" class="text-decoration-none" href="#ch176081">2.4. Fase consumo</a></li><li><a title="2.5. El sentido del mensaje" class="text-decoration-none" href="#ch176071">2.5. El sentido del mensaje</a></li><li><a title="2.6. Vinculando conceptos" class="text-decoration-none" href="#ch176072">2.6. Vinculando conceptos</a></li><li><a title="2.7. Recapitulando" class="text-decoration-none" href="#ch176073">2.7. Recapitulando</a></li></ul></li><li><a title="3. El modelo físico según  Ferdinand de Saussure" class="font-weight-bold text-decoration-none" href="#ch176074">3. El modelo físico según  Ferdinand de Saussure</a><ul><li><a title="3.1. Significado y significante" class="text-decoration-none" href="#ch176075">3.1. Significado y significante</a></li><li><a title="3.2. Arbitrariedad y linealidad" class="text-decoration-none" href="#ch176076">3.2. Arbitrariedad y linealidad</a></li><li><a title="3.3. Sincronía y diacronía" class="text-decoration-none" href="#ch176077">3.3. Sincronía y diacronía</a></li></ul></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176078"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176078/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¡Luz! La trama del lenguaje en las organizaciones</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">En la sala 3 nos proponemos:</p>
+
+
+        <!-- Inicio caja-->
+
+        <div class="" style="width: 70%; margin: 0px auto; box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;">
+
+            <div class="row" style="">
+
+                <div class="col-1" style="color: white; font-size: large; background-color: rgb(82, 145, 122); border-radius: 4px 0px 0px 4px; text-align: center;">
+
+                    <p style="font-weight: 600; margin-top: 16px">M</p>
+                    <p style="font-weight: 600; margin-top: -18px">E</p>
+                    <p style="font-weight: 600; margin-top: -18px">T</p>
+                    <p style="font-weight: 600;margin-top: -18px">A</p>
+
+                </div>
+
+
+
+                <div class="col-11 d-flex " style="background-color: rgb(242, 248, 246); border: 1px solid rgb(82, 145, 122); border-radius: 0px 4px 4px 0px;">
+
+
+                    <p style="margin: auto;"><span class="" style="font-size: large; color: rgb(51, 51, 51);">"</span><span style="color: rgb(51, 51, 51); font-size: large;">Adaptarse proactivamente al lenguaje organizacional para fomentar una colaboración fluida y comprensión clara entre equipos."</span></p><p style="color: rgb(1, 6, 20); font-size: large; margin: auto;"><br></p><p style="color: rgb(1, 6, 20); font-size: large; margin: auto;"><br></p>
+                </div>
+
+
+            </div>
+        </div><br>
+        <!-- Fin Caja-->
+
+        
+        <p style="color: rgb(1, 6, 20); font-size: large;">En esta intrigante sala sobre comunicación en las organizaciones, la película se desarrolla en tres actos: producción, circulación y consumo. Para lograr una narrativa cohesionada, nos sumergimos en la importancia de adaptarnos proactivamente al lenguaje organizacional. Este ajuste estratégico actúa como el grito de "¡LUZ!" en el set, iluminando el camino para una colaboración fluida y una comprensión clara entre los equipos.&nbsp;</p><p style="color: rgb(1, 6, 20); font-size: large;">Cada palabra y acción se convierten en escenas fundamentales, donde la adaptación al lenguaje de la organización se erige como el hilo conductor. Exploraremos cómo este enfoque no solo facilita la producción de ideas, sino también su eficiente circulación y consumación en un diálogo organizacional cohesivo.&nbsp;</p><p style="color: rgb(1, 6, 20); font-size: large;">¡Prepárense para ser los/as protagonistas de esta historia de comunicación empresarial, donde la adaptación impulsa el éxito y la comprensión!.<br></p><p style="color: rgb(1, 6, 20); font-size: large;">
+      
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </p></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176069"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176069/_%20%2814%29%20%281%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Aproximaciones al modelo planteado por Paul Capriotti</p>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+        <p> En línea con los conceptos que venimos trabajando, retomamos los aportes del autor Capriotti (1992) quien plantea la necesidad de contar con un modelo que pueda ser aplicado al ámbito de las organizaciones, y que, a su vez, nos brinde elementos
+            para superar las carencias de los modelos anteriores.</p>
+
+        <br>
+        <p style=" color:#1345CD; font-weight: 600">Los componentes del modelo planteado por Capriotti</p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176069/Cl3%20imagen%201.png?time=1694651870012" alt="sd" width="700" height="700" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+
+
+        <br>
+
+        <!-- Fin imagen -->
+
+        <div style="margin-left: 3%; margin-right: 3%;">
+            <p>En la producción del discurso por parte del emisor intervienen los siguientes factores:</p>
+            <p></p>
+            <ul>
+                <li><b style=" color:#1345CD; font-weight: 600">Contexto: </b>hace referencia al ambiente que rodea la organización. Podemos distinguir entre: a) el contexto general, que es toda la estructura social, política, jurídica, económica y competitiva de la sociedad
+                    donde vive la organización, y b) el entorno, que es el contexto particular del sitio donde está ubicada físicamente la organización.</li>
+                <li><b style=" color:#1345CD; font-weight: 600">Circunstancia: </b>es la situación actual y concreta que atraviesa la organización al momento de producir el discurso.</li>
+                <li><b style=" color:#1345CD; font-weight: 600">Capacidad comunicativa: </b>es el conjunto de conocimientos y capacidades que posee la organización, que ha ido adquiriendo a lo largo de su historia y de los cuales se valdrá para construir su discurso.</li>
+                <li><b style=" color:#1345CD; font-weight: 600">Identidad corporativa:</b> es la personalidad de la organización, como se ve a sí misma. Es un conjunto de atributos con los que se identifica, la imagen que la organización tiene de ella misma.</li>
+                <li><b style=" color:#1345CD; font-weight: 600">Realidad de la empresa: </b>es lo que la organización es materialmente.</li>
+                </ul><br><ul>
+            </ul>
+            <p></p>
+
+            <!-- Acá todo el contenido utilizando <p></p> -->
+
+            <!-- nada puede haber abajo -->
+            <br>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176070"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176070/_%20%2814%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">El discurso y la fase de consumo</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+        <p> <ul><li><b>Circulación:</b>&nbsp;esta fase consiste en la transmisión del discurso desde la organización hacia el/la destinatario/a.</li></ul>En la circulación del discurso, la organización puede utilizar:</p>
+
+        <!--Caja + título + imagen + texto-->
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="">Mass media</span></b>
+            </span>
+        </p>
+        <div style="border: 1px solid #9A3282; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176070/megafono.png" alt="Castells" width="10" height="10" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_text-top">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">Son aquellos que se utilizan para difundir el discurso a nivel general y no específico. Son medios técnicos, unidireccionales, impersonales, y por ello no crean una implicación psicológica fuerte y duradera en el destinatario. Son la TV, radio, prensa, video, etc.</span>                        </span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + título + imagen + texto-->
+        <br>
+        <!--Caja + título + imagen + texto-->
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="">Micro media</span></b>
+            </span>
+        </p>
+
+
+
+        <div style="border: 1px solid #9A3282; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176070/llamada.png" alt="Castells" width="30" height="30" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_middle">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">Son los que permiten un contacto directo entre la organización y el destinatario, pero que también implican el uso de la técnica (teléfono, cartas, memorias, etc.) Son de carácter bidireccional, selectivos, directos, y generan una mayor implicación psicológica del destinatario.</span>                        </span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + título + imagen + texto-->
+        <br>
+        <!--Caja + título + imagen + texto-->
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="">Contacto personal</span></b>
+            </span>
+        </p>
+
+
+
+        <div style="border: 1px solid #9A3282; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176070/conversacion.png" alt="Castells" width="30" height="30" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_middle">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">Es el contacto directo sin la intervención de ningún medio técnico (atención al público, entrevista personal, atención de reclamaciones, etc.) Provocan una implicación psicológica muy fuerte y duradera en el destinatario.</span>                        </span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + título + imagen + texto-->
+        <br>
+        <span style=" color:#1345CD; font-weight: 600">La fase de consumo</span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><b><br></b>
+        <p style="color: rgb(1, 6, 20);">Allí es cuando se realiza la interpretación del discurso por parte del destinatario. En el caso de la <span class="sub_negrita">comunicación organizacional</span>, el destinatario son los públicos de la organización. En este
+            modelo, el destinatario es activo y protagonista en el proceso de comunicación porque interpreta y le da un sentido determinado al mensaje que recibe (que puede coincidir con el sentido que le da el emisor o no).</p>
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176079"><p>En el marco de un encuentro gastronómico, la empresa... tiene la misión de contar su historia:&nbsp;</p><p>Hoy nos reunimos para explorar los sabores que han marcado la historia de DeliTradición, una empresa que ha convertido la pasión por la comida en un legado gastronómico. Desde nuestro humilde inicio hasta convertirnos en un referente en la industria alimentaria, cada bocado cuenta una historia, una historia que queremos compartir con cada uno de ustedes.<br></p><p>Contexto General:</p><p>En el tejido social y económico de nuestra sociedad, DeliTradición ha sido testigo de cambios profundos. Desde nuestras raíces modestas, hemos crecido en sintonía con las transformaciones sociales, adaptándonos a la dinámica competencia en la industria alimentaria. Nuestra perseverancia nos ha permitido destacar, ofreciendo productos que no solo llenan estómagos, sino también corazones.</p><p><br></p><p>Entorno Local:</p><p>Ubicados en el corazón de [Nombre de la Ciudad], hemos cultivado una relación especial con nuestra comunidad. Desde los mercados locales hasta los eventos comunitarios, nos integramos con el entorno que da vida a nuestra empresa. Es en este entorno que hemos encontrado inspiración para fusionar tradición con innovación.</p><p>Circunstancia:</p><p><br></p><p>Hoy, enfrentamos desafíos y oportunidades en un mundo que cambia rápidamente. La globalización nos presenta desafíos logísticos, pero también nos brinda la oportunidad de compartir nuestros sabores con el mundo. Estamos comprometidos a superar estos desafíos, enfocándonos en la calidad y autenticidad que nos ha definido desde el principio.</p><p><br></p><p>Capacidad Comunicativa:</p><p><br></p><p>Nuestra historia comunicativa ha sido clave para forjar conexiones duraderas. Desde las primeras interacciones en los mercados locales hasta la era digital actual, hemos aprendido a contar nuestra historia de maneras que resuenan con nuestra audiencia. La confianza que hemos construido a lo largo de los años nos permite comunicarnos con autenticidad y transparencia.</p><p><br></p><p>Identidad Corporativa:</p><p><br></p><p>En el corazón de DeliTradición está una identidad que va más allá de los ingredientes. Nos vemos a nosotros mismos como artesanos culinarios, preservadores de recetas familiares y creadores de experiencias gastronómicas memorables. Nuestra dedicación a la calidad y a la autenticidad ha sido el sello distintivo que nos define.</p><p><br></p><p>Realidad de la Empresa:</p><p><br></p><p>Al caminar por nuestras instalaciones, pueden sentir la energía de la producción, el olor de las especias frescas y la meticulosidad de nuestros procesos. La sostenibilidad y la responsabilidad social son más que palabras para nosotros; son parte de nuestra realidad. Desde la granja hasta su mesa, cada paso es cuidadosamente considerado para asegurar la frescura y la calidad que nos caracteriza.</p><p><br></p><p>Conclusión:</p><p><br></p><p>En resumen, cada producto que sale de nuestras cocinas lleva consigo la esencia de nuestra historia. Invitamos a cada uno de ustedes a ser parte de este viaje, a explorar los sabores que trascienden el tiempo y a ser cómplices de los capítulos que aún están por escribirse en la historia de DeliTradición. Gracias por ser parte de nuestra familia culinaria. ¡Salud y buen provecho!</p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176080"><p><p><strong>Micro Media:</strong></p><p>En los primeros días de DeliTradición, nuestro contacto directo con la comunidad local a través de ferias gastronómicas y eventos comunitarios nos permitió establecer conexiones profundas. La entrega de catálogos personalizados a los asistentes generó un interés directo, estableciendo una comunicación bidireccional que ha perdurado a lo largo del tiempo.</p><p><strong>Contacto Personal:</strong></p><p>En cada atención al cliente, entrevista personal y manejo de reclamaciones, hemos fortalecido la conexión emocional con nuestros clientes. Cada interacción directa ha sido una oportunidad para compartir nuestra pasión, resolver inquietudes y construir relaciones sólidas que trascienden la simple transacción comercial.</p><p><p><strong>Mass Media:</strong></p><p>A medida que crecimos, abrazamos los medios de comunicación masiva para compartir nuestra historia a un nivel más amplio. Nuestros anuncios en televisión y radio han llevado la esencia de DeliTradición a hogares de todo el país, extendiendo nuestra narrativa a audiencias diversas. La prensa y las plataformas digitales también han sido aliados cruciales para difundir nuestra historia a un público más amplio.</p><br></p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176081"><p><p><strong></strong></p><p><strong>Historia 1 - Experiencia Positiva:</strong></p><p>María, una entusiasta amante de la buena comida, descubrió a DeliTradición a través de las redes sociales. Fascinada por la historia que la empresa compartía, decidió probar sus productos. Desde el primer bocado, quedó cautivada por la autenticidad de los sabores y la calidad excepcional. María se convirtió en una devota seguidora en redes sociales, compartiendo sus experiencias culinarias con la etiqueta #SaboresDeDeliTradición. Su historia es un testimonio vibrante de cómo la conexión emocional creada a través de la narrativa de la empresa puede convertir a los clientes en embajadores entusiastas.</p><hr><p><strong>Historia 2 - Compromiso con la Sostenibilidad:</strong></p><p>Juan, un defensor apasionado del medio ambiente, se sintió atraído por la historia de sostenibilidad de DeliTradición que descubrió en sus redes sociales. La empresa compartía sus prácticas responsables, desde la producción hasta el empaque. Juan decidió probar los productos y quedó impresionado no solo por los sabores exquisitos sino también por el compromiso palpable con la sostenibilidad. Comparte regularmente publicaciones destacando la responsabilidad ambiental de DeliTradición, contribuyendo a difundir su mensaje más allá de las fronteras.</p><hr><p><strong>Historia 3 - Desafíos Logísticos:</strong></p><p>Pedro, un cliente leal de DeliTradición, expresó su insatisfacción en redes sociales debido a desafíos logísticos. Recientemente, experimentó retrasos en la entrega de su pedido, lo que afectó su planificación de eventos especiales. Aunque amaba los productos, Pedro señaló la importancia de mejorar la eficiencia logística para garantizar la puntualidad. Esta historia destaca cómo las experiencias operativas pueden afectar la percepción del cliente, incluso cuando el producto en sí es apreciado.</p><hr><p><strong>Historia 4 - Problemas con la Calidad:</strong></p><p>Isabel, una seguidora asidua de DeliTradición, compartió su experiencia negativa después de recibir un lote de productos con problemas de calidad. La frescura y la presentación no estaban a la altura de las expectativas, lo que generó frustración. Aunque Isabel admiraba la historia de la empresa, expresó su decepción y sugirió mejoras en el control de calidad. Esta historia resalta la importancia de mantener los estándares de calidad para preservar la confianza del cliente.</p><p></p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176071"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176071/_%20%2814%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Factores condicionantes</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+        <p> Hay ciertos factores que condicionan el sentido que se dará al mensaje. Estos son:</p>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Contexto:</span> en el caso del destinatario, tiene un contexto general y un contexto grupal. Por ejemplo: los/las empleados/as de La Costeña están condicionados por un contexto general (estructura política,
+                    social y económica de la sociedad donde viven) y por sus grupos de pertenencia (en los cuales está inmerso) y de referencia (aquellos que tienen como modelo a seguir).</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Circunstancia:</span> es la situación particular en que se encuentra el destinatario en el momento de recepción del discurso y engloba tanto la situación psicológica de recepción (si se siente influenciado
+                    directamente por otro destinatario o por el grupo) como la situación física de recepción (lugar donde recibe el discurso).</p>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Capacidad comunicativa:</span> hace referencia al conjunto de conocimientos que posee el destinatario para interpretar correctamente el discurso.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Personalidad:</span> se trata de aquellas características psicológicas y psicoanalíticas que tiene el destinatario, que lo conforman como individuo. </p>
+            </div>
+        </div>
+        <br>
+        <span style=" color:#1345CD; font-weight: 600">La interpretación del discurso</span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><b><br></b>
+
+        <p style="color: rgb(1, 6, 20);">En el modelo planteado por Capriotti (1992), los efectos se refieren a la interpretación del discurso por parte del destinatario. El sentido que el destinatario le da al mensaje recibido puede ser diferente al sentido que le dio el emisor, esto
+            es, lo que se denomina <span class="sub_negrita">interpretación aberrante</span>.</p>
+        <p style="color: rgb(1, 6, 20);">En este sentido, “por código entendemos los sistemas de reglas (tanto sintácticas como semánticas) que permiten la producción e interpretación de un discurso” (Capriotti, 1992, p. 86). Sin embargo, en una sociedad no existe un único código, sino
+            una gran variedad de ellos que conforman los subcódigos. Es decir, que “en el proceso de comunicación, el emisor, el canal y el destinatario no son independientes, sino que están interrelacionados, se ejercen una influencia mutua, y estas
+            interinfluencias inciden en el proceso de producción e interpretación del discurso” (Capriotti, 1992, p. 84).</p>
+
+
+
+
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176072"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176072/_%20%2814%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"> Los aportes del modelo </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+    <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+
+
+        <p>Tal como estudiamos en el apartado anterior, el modelo planteado por Capriotti es democrático, ya que las relaciones entre el emisor y receptor son bidireccionales. El receptor, lejos de tener un rol pasivo en proceso comunicativo, es activo y
+            creativo. En este modelo, aparece el <i>feedback</i> como la realimentación que realiza el emisor con la información proveniente del receptor.</p>
+        <span style=" color:#1345CD; font-weight: 600">Vinculando conceptos</span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><b><br></b>
+        <p style="color: rgb(1, 6, 20);">¿Recuerdan <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=647989&amp;chapterid=176065" target="_blank">el caso práctico </a>que compartimos sobre la estación de bomberos? Retomando las situaciones planteadas por dicho caso práctico,
+            resulta interesante rescatar qué es lo que debe realizar para poder uniformar los mensajes que va a emitir, con el objetivo de lograr, el mejor resultado posible.</p>
+        <p style="color: rgb(1, 6, 20);">Cuando los llamados con las emergencias ocurren, el/la agente encargado/a de recibirlos va siguiendo un protocolo guiado por un sistema que va solicitando los datos esenciales para armar el caso en el menor tiempo posible. Este compendio de información
+            son deliberadas previamente, para cuando ocurra la emergencia para actuar con efectividad.</p>
+        <p style="color: rgb(1, 6, 20);">Esto produce una serie de comunicados, información que va a circular, fotografías e imágenes para poder ser cargadas en las redes sociales, página web, sitio de gobierno, o utilizadas para la difusión de la institución.
+        </p>
+
+        <br>
+        <p style=" color:#1345CD; font-weight: 600">Armado de la ficha</p>
+      <p><span class="" style="color: rgb(51, 51, 51);">La información solicitada para poder armar la ficha del caso es la siguiente:</span></p>
+      
+       
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176072/Rosa%20y%20Blanco%20Taza%20de%20Cafe%CC%81%20Nota%20Simple%20Tarjeta%20%281%29.png" alt="sd" width="601" height="426" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);"><br></p>
+
+        <!-- Fin imagen -->
+
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176073"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176073/_%20%2814%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"> Fase de producción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+    <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+        <p>Para elaborar este listado de datos, previamente se estudió de la organización: el contexto, la circunstancia, la capacidad comunicativa, la identidad corporativa y la realidad de la institución. Todo esto ocurre en la primera fase que es la de
+            elaboración del discurso:<span class="sub_negrita"> fase de producción</span>.</p>
+        <p>Como la institución en este caso ofrece un servicio de asistencia, el contacto con su público externo y todas las comunicaciones que se realizan en su mayoría se realizan a través del contacto personal. Asimismo, es importante que la estación
+            de bomberos difunda sus protocolos, teléfonos de contacto y su trabajo en los <i>massmedia</i> para que la sociedad esté al tanto de la contribución de la institución para con ellos, como así mismo la tengan presente a la hora de los siniestros.</p>
+        <p>A través de contextos, circunstancia, capacidad comunicativa, y personalidad de los diferentes públicos, es que se va a interactuar y consumir la información que se presenta en redes sociales, sitios web y servicios de la institución. Consiguiendo
+            un buen posicionamiento en el inconsciente colectivo de la sociedad, para solicitar su ayuda cuando se le requiera.
+        </p>
+        <p><br></p>
+
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176074"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176074/_%20%2814%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><span id="docs-internal-guid-56d5b00f-7fff-db80-3002-eb5a63ca4566">Aproximaciones al modelo planteado por Ferdinand de Saussure</span></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p>Este modelo fue escogido porque nos permite reflexionar y conocer cómo se componen los elementos de la lengua y del habla, que se constituyen como fundamentales para que los/las profesionales se relacionen de manera exitosa con la sociedad.</p>
+        <p>El autor consideraba analizar el lenguaje desde un punto de vista estructural. Los invitamos a ver el siguiente video sobre el lenguaje y signo de Ferdinand de Saussure: </p>
+        <p><br></p>
+        <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/FusXsAkcRaU?si=ughW18v3RR1XXjPZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></p>
+        <p>El enfoque de Saussure sostiene que todas las palabras tienen un componente material, una imagen acústica, a la que denominó <span class="sub_negrita">significante,</span> y un componente mental referida a la idea o concepto
+            representado por el significante al que denominó <span class="sub_negrita">significado</span>. El significante y el significado conforman un signo. El autor relacionó a la lingüística con un estudio más general que los
+            signos. Identificó las características de la lengua como entidades mentales y subrayó la creatividad del lenguaje. </p>
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176075"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176075/_%20%2814%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Lengua y habla</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+        <p>Se presenta así la primera distinción teórica entre:</p>
+
+        <ul>
+            <li>Lengua (el sistema): lo que podemos hacer con nuestro lenguaje.</li>
+            <li>Habla (el uso del sistema): lo que de hecho hacemos al hablar.</li>
+        </ul>
+
+        <p>En algunos idiomas, existen vocablos diferentes para referir estos dos conceptos, en inglés, por ejemplo, se utilizan los términos<i> language</i> para significar "lengua" y<i> speech </i>para el habla. Sin embargo, pese a esta diferenciación
+            conceptual, ningún lingüista antes había focalizado sus estudios desde esta perspectiva y la principal crítica de Saussure al enfoque tradicional de la lingüística.</p>
+        <span style=" color:#1345CD; font-weight: 600">Entonces, ¿qué es para Saussure el significante y significado?</span></div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <b><br></b>
+        <p style="color: rgb(1, 6, 20);">Saussure, en su definición de signo, reemplazará el vocablo nombre, utilizada en la conceptualización de nomenclatura, por imagen acústica. Esto es, la imagen mental de un nombre, que le permite al hablante decirlo, y luego reemplazará a la cosa
+            por el concepto.</p>
+        <p style="color: rgb(1, 6, 20);">En otras palabras, en su definición, une dos entidades que pertenecen al lenguaje, eliminando el plano de la realidad de los objetos, esto es, los referentes sobre los cuales se emplea el lenguaje. Porque si tanto el significado como el significante
+            son entidades mentales, es evidente que su marco teórico propone una ruptura entre el plano lingüístico y el plano del mundo externo a la mente.</p>
+        <p style="color: rgb(1, 6, 20);">Finalmente, esta definición de signo lingüístico se completará cuando le da el nombre de significante a la imagen acústica y significado al concepto mental con el que se corresponde dicha imagen acústica.</p>
+        <!-- inicio imagen -->
+ <br>
+		 <div style="text-align: center;">
+		        <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+		            <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176075/dsd.png" alt="arbol" width="995" height="492" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+		        </p>
+		    </div>
+
+    <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176076"><div style="background-color: rgb(250, 250, 250);">
+    <p style="text-align: center;"><span style="font-size: large;"><br></span></p>
+
+    <div class="container" style="font-size: large; color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176076/_%20%2814%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Descifrando la relación entre significante y significado</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="font-size: large; color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+        <p>Retomando el desarrollado del apartado anterior, les proponemos continuar explorando sobre principios de <span class="sub_negrita">arbitrariedad </span>y <span class="sub_negrita">linealidad</span>.</p>
+        <p>Saussure sostiene que el signo lingüístico es <span class="sub_negrita">arbitrario</span> en el sentido que la conexión entre significante y significado no se basa en una relación causal. La prueba de tal afirmación reside
+            en el hecho que las distintas lenguas desarrollaron diferentes signos, esto es, diferentes vínculos entre significantes y significados; de otra forma, sólo una lengua existiría en el mundo.</p>
+        <p>Ahora bien, aun aceptando la arbitrariedad del signo en lo que respecta al vínculo entre significante y significado, es claro que esta conexión no es arbitraria para quienes usan una misma lengua, porque si esto fuera así, los significados no
+            serían estables y desaparecería la posibilidad de comunicación.
+        </p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176076/pero.png" alt="perro" width="700" height="693" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p>
+        </div>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+        <p>Los invitamos a ver el siguiente video donde se abordan los principales conceptos y planteos de Ferdinand de Saussure en relación con su obra “Curso de lingüística general”: </p>
+        <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Iroi_cLW8DA?si=IA4WHNL-ON9ZSRoa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></p>
+        <span style=" color:#1345CD; font-weight: 600">Sobre la inmutabilidad del signo</span>
+        <p>Al analizar el signo en relación con sus usuarios/as, Saussure observa una paradoja: la lengua es libre de establecer un vínculo entre cualquier sonido o secuencia de sonidos con cualquier idea, pero una vez establecido este vínculo, ni el hablante
+            individual ni toda la comunidad lingüística es libre para deshacerlo. Tampoco es posible sustituir un signo por otro. La lengua castellana podría haber elegido cualquier otra secuencia de sonidos para el significado que se corresponde con
+            la secuencia C-L-I-M-A, pero una vez que dicho vínculo se ha consolidado, la combinación ha de perdurar. No es posible legislar sobre el uso de la lengua.</p>
+        <br>
+        <span style=" color:#1345CD; font-weight: 600">Sobre la mutabilidad del signo</span>
+        <p>Sin embargo, con el tiempo, la lengua y sus signos, cambian. Aparecen así, lentamente, modificaciones en los vínculos entre significantes y significados. Los significados antiguos se especifican, se agregan nuevos o se clasifican de modo diferente.
+            Por ejemplo, la palabra<i> ratón</i> adquiere un significado distinto en relación con las computadoras, en este caso, dos vínculos entre significado y significante coexisten simultáneamente.</p>
+
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176077"><div style="background-color: rgb(250, 250, 250);">
+    <p style="text-align: center;"><span style="font-size: large;"><br></span></p>
+
+    <div class="container" style="font-size: large; color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657844/mod_book/chapter/176077/_%20%2814%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Descifrando la relación entre significante y significado</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="font-size: large; color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+        <p>
+            Saussure considera que no es posible describir plenamente un lenguaje si esto se hace de forma aislada en relación con la comunidad que hace uso de él y a su vez los efectos que el tiempo tiene sobre el lenguaje (su evolución). Efectivamente, durante
+            el transcurso del tiempo, el lenguaje evoluciona, lo que pone en evidencia que los signos cambian. En consecuencia, el autor afirma que una lengua puede ser estudiada tanto en un momento particular como a través de su evolución en el tiempo.</p>
+        <p>En este sentido, diferenciará dos modalidades respecto al uso del lenguaje:</p>
+
+        <!--Tabla simple dos columnas-->
+        <table class="tabla-simple texto-principal" style="margin: 0 auto;">
+            <!--Cantidad de columnas-->
+            <colgroup span="1" width="44%"></colgroup>
+            <colgroup span="1" width="2%"></colgroup>
+            <colgroup span="1" width="44%"></colgroup>
+
+            <!--Categorías-->
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado">Sincrónica</td>
+                    <td></td>
+                    <td class="tabla-simple-categoria texto-centrado">Diacrónica</td>
+                </tr>
+
+                <!--filas-->
+                <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            Es al mismo tiempo. Examina las relaciones entre los elementos coexistentes de la lengua con independencia de cualquier factor temporal. Por ejemplo: el estudio del español en el Siglo XV.
+
+                        </ul>
+                    </td>
+                    <td></td>
+
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            A través del tiempo. Se enfoca en el proceso evolutivo y se centra en aquellos fragmentos que se corresponden con ciertos momentos históricos. Por ejemplo: fierro&gt; hierro.
+
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p></p>
+        <p>Cuando se verbaliza el sistema de una lengua, sólo intervienen elementos sincrónicos, puesto que nadie necesita conocer la historia de una lengua para hacer uso de ella. Por otra parte, los factores diacrónicos no alteran al sistema como tal.
+            Para explicar este punto, Saussure recurre a una metáfora planetaria, diciendo que, si un planeta del sistema solar cambiara de peso y tamaño, tales cambios alterarían el equilibrio del conjunto en su totalidad, aunque, de todas formas, el
+            sistema solar, seguiría siendo un conjunto.</p>
+        <!--Inicio caja Conclusión-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #7746E2; font-size: large; font-weight: 600">En conclusión:</p>
+            </div>
+            <div class="col" style="border-left: solid  #7746E2 2px;">
+                <p style=" color: #7746E2"><span class=" " style="font-size: large; ">Si bien los hechos sincrónicos y diacrónicos son autónomos, existe una relación de interdependencia entre ambos. No es posible conocer el estado de una lengua si no analizamos los cambios que sufrió.</span></p>
+            </div>
+        </div>
+        <!--Fin Caja Conclusión-->
+        <p><br></p>
+        <span style=" color:#1345CD; font-weight: 600">Explorando los matices: significación y valor en el lenguaje</span>
+        <p>El lenguaje es un sistema de valores en el sentido en que todo signo lingüístico vincula sonidos e ideas. Si tal vínculo no existiera, sería imposible separar un pensamiento de otro. Los sonidos no se diferencian entre sí más que los pensamientos
+            no expresados. La función del lenguaje no es crear un medio sonoro para expresar el pensamiento, sino mediar entre el pensamiento y el sonido, de modo tal que el vínculo entre ambos dé por resultado unidades que se determinen mutuamente.</p>
+        <p>Existen, para Saussure, dos tipos diferentes de significación, una que corresponde al signo tomado en forma aislada y otra, que surge de contrastar ambos signos.</p>
+        <p>El signo, en efecto, comunica un valor lingüístico, el cual deriva de su contraste con otros signos con los que está vinculado. Por ejemplo: nieve, helado, hielo, glaciar. Cada una se entiende en la medida que se entiende la otra, porque podemos
+            diferenciarlas una de otra. "Helado" no significa "nieve" y "hielo" no significa "glaciar", etc. El principio que distingue el valor del significado distingue también las formas entre sí y crea el significado.</p>
+        <span style=" color:#1345CD; font-weight: 600">Explorando el contraste formal en el lenguaje</span>
+        <p>Si tomamos la palabra "nieve" significa lo que significa porque es diferente de "nave" y "nieto", esto se debe a que poseen formas contrastantes. Si bien la diferencia sonora es mínima, esta es suficiente para hacer de cada una un signo lingüístico diferente.</p>
+       
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[647985]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2657844, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1743952386); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random67f29f44908262'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random67f29f44908262'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

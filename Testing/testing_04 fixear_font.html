@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S4. Reporte de errores | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1743646678/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S4. Reporte de errores | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1743646678_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"QHZEt20riD","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1743646678","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21046,"courseContextId":2643972,"contextid":2658975,"contextInstanceId":649011,"langrev":1743837844,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21046 context-2658975 cmid-649011 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1743646678/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S4. Reporte de errores</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Metodología de Pruebas de Sistemas 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S4. Reporte de errores
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        domingo, 6 de abril de 2025, 12:14
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21046&amp;section=6" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649010" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=649012" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649013" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción" class="font-weight-bold text-decoration-none" href="#ch178175">1. Introducción</a></li><li><a title="2. Bug Advocacy" class="font-weight-bold text-decoration-none" href="#ch178176">2. Bug Advocacy</a></li><li><a title="3. ¿Cómo usar Bug Advocacy?" class="font-weight-bold text-decoration-none" href="#ch178177">3. ¿Cómo usar Bug Advocacy?</a></li><li><a title="4. Motivar para arreglar errores" class="font-weight-bold text-decoration-none" href="#ch178178">4. Motivar para arreglar errores</a></li><li><a title="5. Error 1: En la programación" class="font-weight-bold text-decoration-none" href="#ch178180">5. Error 1: En la programación</a><ul><li><a title="5.1. Tres tipos de seguimientos" class="text-decoration-none" href="#ch178181">5.1. Tres tipos de seguimientos</a></li></ul></li><li><a title="6. Error 2: &amp;quot;En mi máquina no funciona&amp;quot;" class="font-weight-bold text-decoration-none" href="#ch178182">6. Error 2: "En mi máquina no funciona"</a></li><li><a title="7. Identificando errores, ampliando los valores límites" class="font-weight-bold text-decoration-none" href="#ch178183">7. Identificando errores, ampliando los valores límites</a></li><li><a title="8. Arreglando errores, superando resistencias" class="font-weight-bold text-decoration-none" href="#ch178179">8. Arreglando errores, superando resistencias</a></li><li><a title="9. Errores no reproducibles" class="font-weight-bold text-decoration-none" href="#ch178184">9. Errores no reproducibles</a></li><li><a title="10. A. Condiciones y variaciones para reportar errores" class="font-weight-bold text-decoration-none" href="#ch178185">10. A. Condiciones y variaciones para reportar errores</a></li><li><a title="11. B. Condiciones y variaciones para reportar errores" class="font-weight-bold text-decoration-none" href="#ch178191">11. B. Condiciones y variaciones para reportar errores</a></li><li><a title="12. Reportes claros y concisos" class="font-weight-bold text-decoration-none" href="#ch178186">12. Reportes claros y concisos</a><ul><li><a title="12.1. Partes de un reporte" class="text-decoration-none" href="#ch178192">12.1. Partes de un reporte</a></li><li><a title="12.2. Herramientas para reportar errores" class="text-decoration-none" href="#ch178187">12.2. Herramientas para reportar errores</a></li><li><a title="12.3. Escritura en los reportes" class="text-decoration-none" href="#ch178188">12.3. Escritura en los reportes</a></li><li><a title="12.4. Un ejemplo más de reporte" class="text-decoration-none" href="#ch178189">12.4. Un ejemplo más de reporte</a></li></ul></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178175"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178175/_%20%2814%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando-->
+        <p style=""><span class="" style="font-size: large; color: rgb(1, 6, 20);">En las semanas previas, exploramos las estrategias de </span><i><span class="" style="font-size: large; color: rgb(1, 6, 20);">testing</span></i><span class="" style="font-size: large; color: rgb(1, 6, 20);"> que desempeñan un papel crucial en la identificación de casos de prueba eficientes. La eficiencia se refiere a la capacidad de lograr un equilibrio entre minimizar el número de casos de prueba y maximizar la detección de errores y defectos. Esto significa encontrar la mayor cantidad de problemas posibles con el menor esfuerzo y recursos invertidos.</span><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Por otra parte, realizamos una introducción a las dos estrategias de <i>testing </i>que existen: la estrategia de <span style=" color:#1345CD; font-weight: 600">caja negra</span> y la estrategia de <span style=" color:#1345CD; font-weight: 600">caja blanca</span>;
+            enfatizamos que la estrategia de <b>caja negra</b> no debería importarnos el comportamiento interno del software ni su estructura. En otras palabras, esta estrategia de testing sólo se concentra en encontrar las circunstancias en las cuales
+            el software no se comporta según su especificación.</p>
+
+        <div style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(255, 254, 235); border-top: 2px solid rgb(70, 14, 149); width: 96%; margin: 0px auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Estudiamos cuatro métodos de pruebas de caja negra:</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">
+                </p>
+                <ul>
+                    <li> Método de partición de clases de equivalencias&nbsp;</li>
+                    <li>Método de análisis de valores límites&nbsp;</li>
+                    <li>Método de grafo de causa – efecto&nbsp;</li>
+                    <li>Método de adivinación de defectos </li>
+                </ul>
+
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">En cuanto a la estrategia de <b>caja blanca</b>, aprendimos que esta estrategia examina la estructura interna de un programa. Y que deriva casos de prueba a partir de la lógica del software, ignorando la especificación de requerimientos.</p>
+
+        <div style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(255, 254, 235); border-top: 2px solid rgb(70, 14, 149); width: 96%; margin: 0px auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Estudiamos seis métodos de pruebas de caja blanca:</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">
+                </p>
+                <ul>
+                    <li> Cobertura de caminos&nbsp;</li>
+                    <li>Cobertura de sentencias&nbsp;</li>
+                    <li>Cobertura de decisión&nbsp;</li>
+                    <li>Cobertura de condición&nbsp;</li>
+                    <li>Cobertura de decisión/condición&nbsp;</li>
+                    <li>Cobertura múltiple </li>
+                </ul>
+
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Finalmente, realizamos una introducción al reporte de errores, recorriendo el ciclo de vida básico de los errores o defectos, el cual puede variar de organización a organización. También revisamos cómo clasificar los errores y defectos según su
+            nivel de gravedad y analizamos qué elementos básicos debe tener un error o defecto para ser reportado.
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Ahora ampliaremos ese conocimiento y aprenderemos acerca de una filosofía llamada <span style=" color:#1345CD; font-weight: 600"><i>Bug Advocacy</i></span>, orientada al reporte y seguimiento de fallas y cómo hacerlas efectivas.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178176"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <div class="container" style="color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178176/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><i>Bug Advocacy</i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando 
+				
+<p></p>
+<!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto" style="color: rgb(1, 6, 20);">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; "><span class="" style="color: rgb(1, 6, 20);">En inglés la palabra</span><span class="" style="color: rgb(0, 61, 245);"> </span><span class="" style="color: rgb(184, 138, 0);"><i><span class="" style="color: rgb(0, 61, 245);">advocacy</span></i> </span> <span class="" style="color: rgb(51, 51, 51);">quiere decir abogacía o defensa. Si traducimos de forma literal este concepto, podríamos llamarlo como</span>                    <span class="" style="color: rgb(0, 46, 184);">defensa de errores</span><span class="" style="color: rgb(1, 6, 20);">,</span><span class="" style="color: rgb(1, 6, 20);"><span class="" style="color: rgb(1, 6, 20);"> </span>aunque
+                    este término no es usado, y si se buscara bibliografía del mismo no se encontraría ninguna. Lo importante de esta traducción, sin embargo, es que ya podemos hacernos una idea respecto a qué implica con su nombre.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p style="color: rgb(1, 6, 20);">Alguien que está solo aprendiendo, podría decir que <i><span class="" style="color: rgb(0, 46, 184);">Bug Advocacy</span></i> es el arte de defender el arreglo de errores de forma persuasiva. Sin embargo, aquellos que ya lo practican hace tiempo dirían que esta habilidad se extiende más allá de sólo
+            hacer campaña para que los errores se arreglen, sino que también se trata de fomentar y defender lo siguiente:</p>
+        <div class="row" style="margin-left: 32px;">
+
+            <p style="color: rgb(1, 6, 20);"></p>
+            <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Calidad</span>: El profesor Gerald “Jerry” Weinberg define la calidad como el <b>valor </b>para alguien. La filosofía
+                        <i>Bug Advocacy</i> involucra hacer énfasis en el valor del software perdido debido a los errores y defectos.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Clientes</span>: <span>Las diferentes personas con interés en un software en particular tienen diferentes percepciones de qué es valioso y qué no. Un cliente externo (por ejemplo, un usuario del sistema) no necesariamente percibe como valioso lo que sí es valioso para un cliente interno (por ejemplo, un desarrollador). La filosofía <i>Bug Advocacy</i> implica mirar el software considerando todas las perspectivas</span>.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="row" style="margin-left: 32px;">
+                <div style="color: rgb(1, 6, 20);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+                </div>
+                <div class="col" style="">
+                    <p style=""><span><b><span class="" style=" color:#1345CD; font-weight: 600">Éxito del producto</span></b>: <span class="" style="color: rgb(1,6,20);">El éxito a largo plazo de un producto viene de la aceptación de sus usuarios y de decisiones conscientes. La filosofía de <i>Bug Advocacy</i> nos permitirá mostrar la información de los problemas y errores de forma que los involucrados en el desarrollo de un software puedan tomar esas decisiones de forma consciente y bien informados.</span></span>
+                    </p>
+                </div>
+            </div>
+
+
+            <p style="color: rgb(1, 6, 20);">Sabiendo qué es <i>Bug Advocacy</i>, es igual de importante comprender qué&nbsp;<span style=" color:#1345CD; font-weight: 600">no</span> es. Hay varios conceptos que suelen ser confundidos con <i>Bug Advocacy</i>, pero en realidad no lo son:</p>
+            
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                <div style="margin-left: 3%; margin-right: 3%;">
+                    <!-- 1 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Avergonzar a los/as desarrolladores/as.</p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 2 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Defender y promover cualquier tema aleatorio y poco “importante”.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Mostrar una imagen errónea del software con historias “interesantes” pero exageradas.</p>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <p style="color: rgb(1, 6, 20);">Con <i>Bug Advocacy </i>no queremos entonces promover la resolución de cualquier error o defecto, sino promover la solución de los errores y defectos claves y de más valor, evitando las objeciones que puedan plantear los desarrolladores
+                    del producto de software. Utilizando esta filosofía y habilidad, queremos evitar pérdidas de valor a futuro, promover la calidad consciente de nuestro software, prevenir errores de comunicación y construir nuestra credibilidad como
+                    <i>testers</i>.</p>
+                <p style="color: rgb(1, 6, 20);"><span class="" style="color: rgb(0, 61, 245);"><b>Veamos, a continuación, cómo conseguirlo.</b></span></p>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178177"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178177/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Cómo usar <i>Bug Advocacy</i>?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20);">El <span style=" color:#1345CD; font-weight: 600">Doctor Cem Kaner</span> dice que el mejor <i>tester </i>no es el que encuentra la mayor cantidad de defectos ni avergüenza a la mayor cantidad de desarrolladores, sino el que logra que se arreglen
+            la mayor cantidad de defectos.</p>
+        <p style="color: rgb(1, 6, 20);">Si bien esta filosofía y habilidad será útil a lo largo de todo el ciclo de vida del proyecto, hay algunas consideraciones especiales a tener en cuenta según la etapa del desarrollo en la que nos encontramos:</p>
+        <p><span style=" color:#1345CD; font-weight: 600">Inicios y mediados del proyecto:</span></p>
+        <p style="color: rgb(1, 6, 20);">Identificar diferentes errores y defectos en las etapas tempranas del desarrollo nos dará una ventaja cuando aboguemos por los errores. Es muy fácil defender el arreglo de los siguientes tipos de errores en estas etapas tempranas:</p>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span>Problemas de diseño</span>.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span>Problemas de experiencia de usuario (UX) e interfaz de usuario (UI)</span>.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span>Problemas de usabilidad</span>.</span>
+                </p>
+            </div>
+        </div>
+        <p><span style=" color:#1345CD; font-weight: 600">Etapas tardías y finales del proyecto:</span></p>
+        <p style="color: rgb(1, 6, 20);">Este es el momento de concentrarnos en los problemas más grandes y los errores críticos. Los problemas mencionados en el apartado anterior no serán priorizados por el equipo de desarrollo debido a la cercanía de las fechas de entrega.
+        </p>
+        <p style="color: rgb(1, 6, 20);">Lo que debemos hacer es convencer a los/as programadores/as que deben utilizar su tiempo resolviendo y arreglando nuestro error (sí, <span style=" color:#1345CD; font-weight: 600">el error</span>, no es sólo del desarrollador que lo introdujo, sino también el comportamiento del <i>tester</i>), en vez de utilizarlo
+            para desarrollar cosas nuevas o arreglar otros errores diferentes. Puede ocurrir que un producto de software tenga miles de errores, y el que nosotros encontramos sea sólo uno de ellos. Debemos hacer notar nuestro error y abogar por su corrección.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Este proceso tiene dos objetivos fundamentales que exploraremos a continuación:</p>
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Motivar al comprador<span style="color: rgb(1, 6, 20); font-weight: 400;"> : Debemos hacer que el/la desarrollador/a quiera arreglar el error. No debemos pensar que el/la desarrollador/a lo arreglará solo, porque eso es lo que tiene que hacer, sino
+                    que lo hará porque quiere hacerlo.</span><br></p>
+                <p style="color: rgb(1, 6, 20);"><span style=" color:#5811BB; font-weight: 600">Superar las objeciones</span>:&nbsp;Debemos superar las excusas, motivos y explicaciones que el/la desarrollador/a tendrá para no arreglar el error que le estamos reportando.</p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178178"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178178/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Motivar para arreglar errores</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Cuando reportemos un error o defecto, por lo general los mismos desarrolladores serán la primera línea de defensa en contra de arreglar ese error. Puede sonar contraproducente pensar que un desarrollador no quiere arreglar un error de su código,
+            pero muchas veces ocurre. Esto puede darse por un problema de ego, porque el desarrollador no cree que el error es tan grave, porque ya está con otra cosa y no desea volver a algo viejo. Hay muchos motivos y los desarrolladores siempre tienen
+            su motivo perfecto, es por eso que como <i>testers</i> debemos motivar a quien corresponda para que “compre” la idea de arreglar nuestro error.
+        </p>
+        <p>Como se mencionó en la introducción de <i>Bug Advocacy </i>el error que encontramos es nuestro. No es un error del desarrollador, ni del analista funcional. Es un error de todos. Es por eso que es nuestra responsabilidad ver que se le de la atención
+            necesaria para ese error o defecto en particular. </p>
+        <p>Algunos motivos comunes por los que un desarrollador querrá arreglar un error sin la necesidad de ser motivado pueden ser:</p>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span>El problema se ve muy mal ante los ojos de los usuarios y clientes externos</span>.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span>Afecta a muchos usuarios</span>.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span>Encontrar la causa y arreglarlo será relativamente fácil para ellos</span>.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span>Un error similar ha avergonzado a un competidor o a la organización</span>.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span>Alguien con mucho poder e influencia en la organización (un jefe, por ejemplo) ha dicho que se debe arreglar si o si</span>.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span>Como<i> <span class="" style="color: rgb(0, 46, 184);">testers</span></i>, hemos dicho que nos gustaría que el error se arregle y tenemos una excelente relación con el desarrollador así que nos “hará el favor”. Debemos notar
+                    que el desarrollador no nos está haciendo ningún favor por arreglar un error que debe ser arreglado, pero así es como ellos lo verán y desde donde nosotros tendremos que partir para lo que sigue.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <p>Cuando ejecutamos pruebas y encontramos fallas, a veces hallamos un <span style=" color:#1345CD; font-weight: 600">síntoma</span> de algo que está mal, pero no el error real. Es decir que siempre debemos hacer seguimiento del error antes de
+            reportarlo para probar que el defecto es una de dos cosas:</p>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span>Más serio de lo que aparenta a primera vista</span>.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span>Más general de lo que aparenta a primera vista</span>.</span>
+                </p>
+            </div>
+        </div>
+        <p>Volviendo al tema de la motivación de los desarrolladores para arreglar un error, si el error que encontramos es serio o grave, entonces estará más predispuesto a arreglarlo. Lo mismo ocurrirá con los errores más generales: como afectan a más personas, el desarrollador estará más dispuesto a arreglarlo.</p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178180"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178180/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Error 1: En la programación</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Cuando encontramos un error o defecto de programación, quiere decir que hemos encontrado al software en un estado que es distinto a las intenciones del desarrollador y que probablemente no esperaba.&nbsp;</p>
+        <p>El programa se encuentra entonces en un estado vulnerable. Si continuamos probando alrededor de ese error, probablemente encontremos que el impacto real que la falla subyacente es aún mayor de lo que aparenta. Fallas subyacentes como <i>crashes </i>del
+            sistema o información corrupta.
+        </p>
+        <p>El Doctor Cem Kaner, experto en ingeniería de software reconocido por su trabajo en el campo de la calidad del software y las pruebas de software, realiza tres tipos de seguimiento:</p>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+
+
+            </div>
+            <div class="col">
+                <p>Variar nuestro<span class="" style="color: rgb(0, 61, 245);"> comportamiento</span>, es decir, cambiar las condiciones en las que se da un error cambiando un poco los pasos del caso de prueba.
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Variar las<span class="" style="color: rgb(0, 61, 245);"> opciones y configuraciones</span> del programa, es decir cambiar el entorno del programa cambiando un poco las pre-condiciones del caso de prueba.
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Variar el<span class="" style="color: rgb(0, 61, 245);"> entorno de software y hardware</span>. Cambiar de máquina o servidor para probar exactamente lo mismo.</p>
+            </div>
+        </div>
+        <p><span class="" style="color: rgb(0, 61, 245);"><b>A continuación, repasemos cada seguimiento, en detalle.</b></span></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178181"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178181/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Tres tipos de seguimientos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Te invitamos a recorrer el siguiente material multimedia para conocer quién es Cem Kaner y repasar los tres tipos de seguimiento propuestos.</p>
+        <!-- Inicio video -->
+        <div class="col-md-9 mx-auto" style="margin-top: 12px;">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/x3bEawLX5wM?si=TXUi_CVJmLzhSFwB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+            <div class="btn col-md-12 collapsed" type="button" data-toggle="collapse" data-target="#btncollap_01" aria-expanded="false" style="border: 1px solid #342951; border-radius: 8px">
+                <p class="li li-plus" aria-hidden="true" style="padding-bottom: 12px; font-size: large; font-weight: 600; color: #342951;">Mostrar transcripción del Video</p>
+                <br>
+            </div>
+            <div class="collapse" id="btncollap_01" aria-expanded="false" style="">
+                <div class="alert" style="font-size: large; color: #010614; background-color: #F3F1F8; border-radius: 0px 0px 8px 8px;">
+                    <!-- traductor -->
+                    <p style="font-size: large; color: #342951;">El Doctor <b>Cem Kaner </b>realiza 3 tipos de seguimiento:</p><p style="font-size: large; color: #342951;"></p><ul><li>&nbsp;Variar nuestro comportamiento, es decir, cambiar las condiciones en las que se da un error cambiando un poco los pasos del caso de prueba.&nbsp;</li><li>Variar las opciones y configuraciones del programa, es decir cambiar el entorno del programa cambiando un poco las pre-condiciones del caso de prueba.</li><li>Variar el entorno de software y hardware. Cambiar de máquina o servidor para probar exactamente lo mismo.&nbsp;</li></ul><span class="" style="color: rgb(0, 46, 184);"><b>Variar nuestro comportamiento</b></span>&nbsp;<p></p><p style="font-size: large; color: #342951;">Debemos seguir utilizando el programa una vez que encontramos el problema. Debemos ejecutar el caso de prueba varias veces para asegurarnos que el error puede reproducirse y para verificar si existe o no algún efecto acumulativo.&nbsp;</p><p style="font-size: large; color: #342951;">Cuando hacemos X el programa falla, y cuando hacemos X muchas veces el programa falla de manera exponencial. Una vez que ejecutamos nuestro caso de prueba muchas veces y registramos nuestros resultados, deberíamos probar funcionalidades o combinaciones relacionadas a la tarea fallida.</p><p style="font-size: large; color: #342951;">Cuando los desarrolladores tienen mucha información respecto a un problema o falla, tienden a ser más predispuestos para corregir dicha falla. Esto quiere decir que, si logramos hacer pruebas exploratorias tomando como base el error que acabamos de encontrar y registramos nuestros hallazgos, los desarrolladores con los que trabajamos estarán más predispuestos a resolver los errores que reportemos.&nbsp;</p><p style="font-size: large; color: #342951;">&nbsp;<b><span class="" style="color: rgb(0, 46, 184);">Variar las opciones y configuraciones&nbsp;</span></b></p><p style="font-size: large; color: #342951;">En este caso, damos por hecho los pasos para reproducir el error. Podemos utilizar este caso luego de haber obtenido más información variando nuestro comportamiento. Lo que queremos ahora es reproducir el error teniendo el programa en un estado diferente:</p><p style="font-size: large; color: #342951;"></p><ul><li>Usando una base de datos diferente&nbsp;</li><li>Cambiando los valores de constantes hardcodeadas en el código&nbsp;</li><li>Cambiar el uso de memoria del programa&nbsp;</li><li>Cambiar cualquier cosa que parezca relevante del contexto dentro del programa&nbsp;</li></ul>Si nuestro error está relacionado con el tiempo, podemos probar utilizar computadoras y módems muy lentos, así como también muy rápidos.&nbsp;Cuando tenemos problemas de videos o imágenes podemos probar con tarjetas de video de mayor resolución o bajando la resolución de nuestra computadora. Lo que estamos buscando es evitar las configuraciones estándar para concentrarnos en algunas que sean posibles para nuestros usuarios e impensadas para nuestros desarrolladores.
+Lo que estamos haciendo es preguntar si hay alguna configuración en particular que mostrará el error más gravemente.&nbsp;<p></p><p style="font-size: large; color: #342951;"><b><span class="" style="color: rgb(0, 46, 184);">Variar el entorno de software y hardware&nbsp;</span></b></p><p style="font-size: large; color: #342951;">En muchos proyectos, un error viejo (de versiones anteriores del software) puede no ser tomado en serio si pocos usuarios se han quejado del mismo. Sabemos que si un error se arrastra de una versión a otra del software es porque no hubo un interés real por arreglarlo en un primer lugar. Deberíamos revisar el historial de un error para ver si es nuevo o viejo. 
+Podríamos decir que el error debería tratarse como nuevo si encontramos una nueva variación o un nuevo síntoma que no existía en versiones previas del producto. Debemos ver cómo es que la nueva versión interactúa con este error y cómo se agrega al mismo.<br></p>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <!-- Fin video -->
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px"><br></p>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178182"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178182/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Error 2: "En mi máquina no funciona"</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Un típico motivo para no arreglar un error que utilizan los desarrolladores es “en mi máquina funciona”. Existen miles de chistes en internet con esta frase.</p><p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <!---tabla memes-->
+        <table style="width: 95%; margin-left: auto; margin-right: auto; border-collapse: collapse;" border="0">
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top; padding: 5px; box-shadow: 1px 2px 7px rgba(208, 208, 208, .8);" width="31%">
+                        <p style="margin: 2px 0 0;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178182/en%20mi%20pc_1.png" alt="" width="100%" height="100%" role="presentation" class="img-responsive atto_image_button_middle"></p>
+                    </td>
+                    <td width="2%">&nbsp;</td>
+                    <td style="vertical-align: top; padding: 5px; box-shadow: 1px 2px 7px rgba(208, 208, 208, .8);" width="32%">
+                        <p style="margin: 0 0 3px; font-size: 1.125rem; line-height: 1.5rem; font-weight: bold; color: #585858;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178182/en%20mi%20pc2.png?time=1697658125311" alt="" width="100%" height="100%" role="presentation" class="img-responsive atto_image_button_middle"></p>
+                    </td>
+                    <td width="2%">&nbsp;</td>
+                    <td style="vertical-align: top; padding: 5px; box-shadow: 1px 2px 7px rgba(208, 208, 208, .8);" width="31%"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178182/en%20mi%20pc3%20%281%29.png" alt="" width="100%" height="100%" role="presentation" class="img-responsive atto_image_button_middle"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Los errores que funcionan en la máquina del desarrollador, pero no en el entorno donde estamos probando tienen mucha menos credibilidad que los errores que ocurren en todos lados.&nbsp;</p><p style="color: rgb(1, 6, 20); font-size: large;">Es importante notar que con <span style="color: rgb(19, 69, 205); font-weight: 600;">credibilidad</span>            nos referimos a ser tomados en serio y que los errores reportados sean arreglados. Si los errores que encontramos dependen de la configuración, el reporte será mucho más creíble si identifica la configuración en particular que ocasiona el
+            error.&nbsp;</p><p style="color: rgb(1, 6, 20); font-size: large;">De esta forma, el desarrollador tendrá la expectativa que el error no aparece en todas las computadoras, y estará abierto a probar las configuraciones para poder depurarlo y arreglarlo.<br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span style=" color:#1345CD; font-weight: 600">En un caso ideal las pruebas se realizan en dos máquinas:</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col" style="">
+                <p style="color: rgb(1, 6, 20); font-size: large;">El flujo principal del proceso de pruebas se realiza en la <span class="" style="color: rgb(0, 46, 184);">primera máquina</span>. Esta puede ser la mejor computadora que hay en el mercado o que tenemos disponible. El mejor procesador, las últimas actualizaciones al sistema operativo, una
+                    tarjeta grafica espectacular, un disco con mucho espacio, mucha RAM, internet por cable Ethernet, etc.<br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col" style="">
+                <p style="color: rgb(1, 6, 20); font-size: large;">Al encontrar un error en la primera máquina, intentaremos replicar el error en la <span class="" style="color: rgb(0, 46, 184);">segunda máquina</span>. La segunda máquina debería ser todo lo contrario, una “tortuga”. Un procesador diferente y más viejo, un teclado diferente y de baja calidad,
+                    sin placa de video, apenas la RAM necesaria para ejecutar el programa, lenta, con poco espacio en disco, etc.&nbsp;<br></p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Usando esta técnica podemos hacer dos cosas:</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col" style="">
+                <p style="color: rgb(1, 6, 20); font-size: large;">Asegurarnos que <span class="" style="color: rgb(0, 46, 184);">el error ocurre (o no) en varias configuraciones distintas</span>. Si el error no ocurre en alguna de las 2 máquinas, pero si en la otra, entonces tenemos un error dependiente de la configuración.&nbsp;<br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col" style="">
+                <p style="color: rgb(1, 6, 20); font-size: large;">Asegurarnos que nuestro paso a paso es correcto. Si podemos <span class="" style="color: rgb(0, 46, 184);">ejecutar nuestro paso a paso sin problemas en ambas máquinas</span>, quiere decir que la descripción es muy buena.&nbsp;<br></p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Replicar los errores en una segunda máquina nos dará muchos beneficios y es una muy buena práctica. Sin embargo, se entiende que no siempre será posible.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178183"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178183/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Identificando errores, ampliando los valores límites</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style=""><span class="" style="font-size: large; color: rgb(1, 6, 20);">¿Recuerdas que en la semana 2 exploramos el</span><i><span class="" style="font-size: large; color:  rgb(1, 6, 20);"> testing </span></i><span class="" style="font-size: large; color:  rgb(1, 6, 20);">de caja negra y el método de los valores límites? Este método se enfoca en las situaciones límite, donde suelen surgir la mayoría de los problemas.&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(1, 6, 20);">Pero una vez que identificamos un error, ¿debemos preguntarnos si este error también se presenta en condiciones que no son límites?</span><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span style=" color:#1345CD; font-weight: 600">Por lo tanto, debemos probar valores no límites</span>. Estos son valores “fáciles” que no deberían ser ningún problema para el software.&nbsp;</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(0, 46, 184);"><b><span class="" style="color: rgb(0, 61, 245);">¿Acaso podemos replicar el error?</span></b>
+            </span> Si la respuesta es <span style=" color:#1345CD; font-weight: 600">sí</span>, deberíamos reportarlo inmediatamente.&nbsp;</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">En el reporte debemos referenciar principalmente a:</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <ul>
+            <li><span class="" style="font-size: large; color: rgb(51, 51, 51);">los valores normales&nbsp;</span></li>
+            <li><span class="" style="font-size: large; color: rgb(51, 51, 51);">los valores no límites.&nbsp;</span></li>
+        </ul><span class="" style="font-size: large; color: rgb(51, 51, 51);">Esta información hará que nuestro reporte tenga más credibilidad.</span><br>
+        <p></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Si la respuesta a nuestra pregunta es <span style=" color:#1345CD; font-weight: 600">no, pero los extremos sí</span>, entonces debemos hacer un poco de exploración cerca de los límites.</p>
+
+        <div style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(255, 254, 235); border-top: 2px solid rgb(70, 14, 149); width: 96%; margin: 0px auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Este problema, ¿es un problema de valor límite real? ¿O también ocurre con un rango límite? </p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Debemos reportar todos los incidentes para que el error sea tomado en serio y considerado para ser arreglado.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">En resumen</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">la relación entre valores límites y valores no límites en el proceso de reportar errores juega un papel crucial para mejorar la calidad del software,
+            ya que permite identificar problemas en una variedad de condiciones y garantiza que los errores sean abordados de manera efectiva. </p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+ 
+      
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+        <!-- nada puede haber abajo -->
+        
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178179"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178179/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Arreglando errores, superando resistencias</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Como dijimos anteriormente, hay muchos motivos por los cuales el equipo de desarrollo puede resistirse a arreglar un error. Algunos de esos motivos son:</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col" style="color: rgb(1, 6, 20); font-size: large;">
+                <p style="">El famoso “en mi máquina funciona”. Si el equipo de desarrollo no puede replicar el error por algún motivo, entonces es muy probable que se resistan a arreglarlo. Los desarrolladores piensan que, en general, si para ellos un error no es
+                    un problema, entonces no lo es para nadie. Debemos tener cuidado con este tipo de errores.<br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col" style="">
+                <p style="color: rgb(1, 6, 20); font-size: large;">Los pasos para reproducir el error son “extraños” o “complicados”. En general los equipos de desarrollo desestimaran estos errores porque pensaran que nunca llegaran a afectar al usuario. Su argumento será que es tan complicado de reproducir,
+                    que el usuario promedio nunca podría hacerlo.<br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col" style="">
+                <p style="color: rgb(1, 6, 20); font-size: large;">No se tiene la suficiente información para reproducir el error. Si el equipo de desarrollo debe tomarse mucho trabajo para descubrir como replicar el error, entonces probablemente vayan a desestimarlo. Nadie del equipo querrá pasar horas
+                    adivinando los pasos para reproducir un error, por lo que no podrán depurar el error por lo que no podrán corregirlo.<br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col" style="color: rgb(1, 6, 20); font-size: large;">
+                <p style="">El equipo de desarrollo no comprende el reporte. Si el reporte es muy complejo de leer, entonces el equipo desestimara los errores que contenga.<br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+            </div>
+            <div class="col" style="color: rgb(1, 6, 20); font-size: large;">
+                <p style="">Esos errores son poco realistas. En general esto ocurre cuando usamos la técnica de valores límite en casos muy específicos. Si los casos de los valores límites son poco probables, entonces el equipo de desarrollo puede decir que ese valor
+                    no se dará nunca, por lo tanto, no necesitan arreglar el error.&nbsp;<br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+            </div>
+            <div class="col" style="color: rgb(1, 6, 20); font-size: large;">
+                <p style="">Se necesitará mucho trabajo y tiempo para arreglar ese defecto. Si el equipo de desarrollo cree que arreglar un error será muy trabajoso, y no les parece lo suficientemente importante, entonces se resistirán a arreglarlo.&nbsp;<br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.37 5.11h3.972v.07L6.025 12H7.42l3.258-6.85V4.002H5.369v1.107Z"></path>
+</svg>
+            </div>
+            <div class="col" style="color: rgb(1, 6, 20); font-size: large;">
+                <p style="">Un arreglo introducirá mucho riesgo en el código. Si el error no es critico, pero se relaciona con componentes críticos, entonces los desarrolladores pueden decir que es muy arriesgado arreglar el error. Si arreglar un error introducirá
+                    muchos errores en una parte critica del código, el equipo de desarrollo tiene la objeción “perfecta” para no arreglarlo.<br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-5.03 1.803c0-1.248-.943-1.84-1.646-1.992v-.065c.598-.187 1.336-.72 1.336-1.781 0-1.225-1.084-2.121-2.654-2.121-1.57 0-2.66.896-2.66 2.12 0 1.044.709 1.589 1.33 1.782v.065c-.697.152-1.647.732-1.647 2.003 0 1.39 1.19 2.344 2.953 2.344 1.77 0 2.989-.96 2.989-2.355Zm-4.347-3.71c0 .739.586 1.255 1.383 1.255s1.377-.516 1.377-1.254c0-.733-.58-1.23-1.377-1.23s-1.383.497-1.383 1.23Zm-.281 3.645c0 .838.72 1.412 1.664 1.412.943 0 1.658-.574 1.658-1.412 0-.843-.715-1.424-1.658-1.424-.944 0-1.664.58-1.664 1.424Z"></path>
+</svg>
+            </div>
+            <div class="col" style="color: rgb(1, 6, 20); font-size: large;">
+                <p style="">No se percibe un impacto en los usuarios. Si el equipo de desarrollo no piensa que arreglar un error tendrá beneficios para los usuarios del sistema, entonces se resistirá a arreglarlo.<br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.223 4.146c2.104 0 3.123-1.464 3.123-4.3 0-3.147-1.459-4.014-2.97-4.014-1.63 0-2.871 1.02-2.871 2.73 0 1.706 1.171 2.667 2.566 2.667 1.06 0 1.7-.557 1.934-1.184h.076c.047 1.67-.475 3.023-1.834 3.023-.71 0-1.149-.363-1.248-.72H5.258c.094.908.926 1.798 2.52 1.798Zm.118-3.972c.808 0 1.535-.528 1.535-1.594s-.668-1.676-1.56-1.676c-.838 0-1.517.616-1.517 1.659 0 1.072.708 1.61 1.54 1.61Z"></path>
+</svg>
+            </div>
+            <div class="col" style="color: rgb(1, 6, 20); font-size: large;">
+                <p style="">No es importante. Si el error o defecto encontrado es un error de severidad baja o es sobre una funcionalidad no utilizada, entonces el equipo de desarrollo puede argumentar que no es importante y no se arreglara. Esto ocurre mucho con
+                    errores de tipo cosmético como errores de ortografía, colores mal usados o textos mal escritos.<br></p>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="row" style="margin-left: 32px">
+            <div style="margin-left: -10px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178179/10_1.png" alt="10" width="24" height="24" role="presentation" class="img-responsive atto_image_button_text-bottom">
+            </div>
+            <div class="col" style="margin-left: -8px">
+                <p><span class="" style="color: rgb(1, 6, 20); font-size: large;">A la administración no le importa. Si quienes gestionan y manejan el proyecto de desarrollo no tienen un interés en arreglar un error en particular, es posible que el equipo de desarrollo decida no arreglar un error que encontramos porque
+                    no hay nadie que los obligue.</span></p>
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="row" style="margin-left: 32px">
+            <div style="margin-left: -10px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178179/11.png" alt="10" width="24" height="24" role="presentation" class="img-responsive atto_image_button_text-bottom">
+            </div>
+            <div class="col" style="margin-left: -8px">
+                <p><span class="" style="color: rgb(1, 6, 20); font-size: large;">No le agradamos al equipo de desarrollo. Es muy común en los proyectos de software que el equipo de desarrollo y e<i>l tester</i> no tengan una buena relación, ya que el<i> tester </i>busca errores en el trabajo del equipo de desarrollo.
+                    Si bien la filosofía
+                    <i> Bug Advocacy</i> intenta evitar esto, no todos los <i>testers</i> se suscriben a ella. Cuando el equipo de desarrollo no esta feliz con el <i>tester</i>, es común que se reúsen fuertemente a arreglar los errores reportados por
+                    ese
+                    <i> tester</i>.<br></span></p>
+            </div>
+        </div>
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178184"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178184/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Errores no reproducibles</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Siempre debemos reportar los errores no reproducibles. No importa si no sabemos como reproducirlo de forma consistente, si lo reportamos el equipo de desarrollo probablemente podrá descubrir cuál es el problema subyacente y así arreglarlo.&nbsp;</p>
+        <p>Con este apartado intentaremos abarcar la primera y tercera objeción presentadas anteriormente. No podremos eliminarlas por completo, pero podemos mitigar su impacto si sabemos describir las fallas lo más precisamente posibles. Es importante notar
+            que la objeción 1<span class="" style="color: rgb(255, 51, 102);"><b> <span class="" style="color: rgb(0, 46, 184);">(“en mi máquina funciona”)</span> </b>
+            </span>también tiene como problema el entorno en el que trabajan los desarrolladores. Si logramos mostrarles como ocurre el error en nuestros dispositivos será más fácil superar esta objeción.</p>
+        <p>Para ayudar a este proceso, debemos describir la falla lo más precisamente posible. Algunos consejos para lograrlo son:</p>
+        <p></p>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span class="" style="color: rgb(0, 46, 184);"><b>Identificar un mensaje</b> que nos da el software, escribirlo tal cual</span>, ayudará al equipo a encontrar el punto del error. Deberán buscar ese mensaje, si es lo suficientemente
+                    raro en el software, podrán buscarlo con facilidad.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span class="" style="color: rgb(0, 46, 184);"><b>Escribir tod</b><b>o </b>lo que recordamos de ese error que no podemos reproducir.</span>&nbsp;Se debe hacer en el momento para evitar olvidar aún más cosas. A medida que escribamos
+                    todo lo que recordemos debemos preguntarnos si hicimos y ejecutamos los pasos tal cual los estamos escribiendo. Si no estamos seguros, es importante dejar constancia de eso. Se debe diferenciar entre las instrucciones e información
+                    que podemos recordar con certeza y la información que no recordamos de forma 100% precisa.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span class="" style="color: rgb(0, 46, 184);"><b>Escribir las pruebas</b> que hicimos antes de encontrarnos el error irreproducible.</span> Es posible que este error sea una reacción tardía a algo que probamos anteriormente,
+                    por eso queremos que el equipo de desarrollo conozca todas las pruebas que hicimos anteriormente. Si el equipo conoce toda esta información, puede buscar en el código estas reacciones tardías.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span class="" style="color: rgb(0, 46, 184);"><b>Revisar el sistema</b> de seguimiento de errores</span> que estemos utilizando para ver si encontramos fallas similares, podríamos encontrarnos un patrón más grande que este
+                    error.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <p><span style=" color:#1345CD; font-weight: 600">Watts Humphrey</span>, un ingeniero de software estadounidense conocido como el “padre de la calidad del software” dice:</p>
+        <p></p>
+        <ul>
+            <li>los errores no reproducibles son errores del<i> tester</i>,&nbsp;</li>
+            <li>los errores de programación son errores de los/as desarrolladores/as.&nbsp;</li></ul>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">En resumen</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Para mejorar en la búsqueda de errores, es bueno tener un <span style=" color:#1345CD; font-weight: 600">listado de condiciones y variaciones</span> a las que no estamos
+            prestando atención o nos parece muy difícil o complicado de manipular. Si, por ejemplo, queremos probar la velocidad del microprocesador y no sabemos cómo hacerlo, o disminuir la velocidad de Internet y tampoco sabemos cómo hacerlo.</p>
+            </div>
+        </div>
+        <p>Es por eso que a continuación se listan algunas de las condiciones que son más comúnmente ignoradas por los <i>testers</i>. Cuando nos encontremos con algún error irreproducible debemos mirar esta lista antes de reportarlo y ver si hay alguna
+            condición que no hemos cambiado.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178185"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178185/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Condiciones y variaciones para reportar errores</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Antes de reportar un error en un software, los <i>testers</i> deben prestar atención a una serie de condiciones y variaciones que pueden afectar su informe. Es esencial asegurarse de que el error sea genuino y no una consecuencia de factores externos o configuraciones específicas. Además, considerar las diferentes circunstancias en las que se presenta el error es fundamental para proporcionar información precisa al equipo de desarrollo. En la lista siguiente, exploraremos las consideraciones clave que los <i>testers</i> deben tener en cuenta antes de reportar un error, destacando la importancia de la reproducibilidad, la documentación detallada y la identificación de patrones. Estas prácticas ayudarán a garantizar que los errores informados sean válidos y útiles para mejorar la calidad del software.</p>
+        <p></p>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span>¿<span class="" style="color: rgb(0, 46, 184);">Estamos considerando que este error puede ser de algún problema anterior?</span> Una fuga de memoria o corrupción del <i>stack </i>de procesamiento pueden no notarse de forma
+                    instantánea, a veces pueden demorar horas. Si sospechamos que este puede ser nuestro problema, lo que debemos hacer es usar herramientas como <i>debuggers</i>, grabaciones o medidores de memoria para revisar que todo funciona correctamente.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span class="" style="color: rgb(0, 46, 184);">El error puede depender de una variable oculta.</span> Cuando definimos las clases de equivalencia y los pasos del caso de prueba estamos haciendo foco en la información que nos
+                    parece relevante para probar algo en particular y no prestamos atención a lo que consideramos relevante. Si esta información que estamos usando no nos permite replicar el error, entonces es probable que haya otras variables que no
+                    estamos viendo que causan en error. Debemos preguntarnos cuáles son esas variables y cómo podemos manipularlas para reproducir el error.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span class="" style="color: rgb(0, 46, 184);">Algunas variables están ocultas, pero otras son invisibles.</span> Cuando estudiamos pruebas de caja blanca cambiamos el valor de las variables para obtener los resultados que
+                    queríamos, muchas de esas variables pueden ser variables internas, como contadores o banderas que utiliza el programa de manera interna. Estos valores no pueden ser manipulados desde las interfaces así que es más difícil reconocer
+                    que existen. Es una buena idea hablar con el/la desarrollador/a de esta porción del código para encontrar estas variables y así poder dar un informe más completo.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span class="" style="color: rgb(0, 46, 184);">Algunas condiciones son catalizadores.</span> Esto quiere decir, que hacen que sea más probable encontrar una falla. Por ejemplo, poca memoria RAM para una perdida de memoria,
+                    una máquina lenta para algo que depende del tiempo. Pero también puede ocurrir que estos catalizadores sean más sutiles, como una funcionalidad que tiene una interacción muy pequeña con otra y le ocasiona errores.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span class="" style="color: rgb(0, 46, 184);">Algunas fallas ocurren cuando tenemos información corrupta o dañada</span>. No aparecen hasta que no vemos información en la base de datos que es “imposible” ya que el programa
+                    nunca debería guardarlas de esa manera. Aquí la raíz del problema es, ¿Qué hemos hecho para que la información esté corrupta? Si bien la falla se produce por la información corrupta, el problema real es lo que hizo que la información
+                    esté corrupta en un primer lugar.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span class="" style="color: rgb(0, 46, 184);">El error puede aparecer en una hora del día, o día del mes especifico</span>. Es importante prestar atención sobre todo al final del día, los fines de semana, finales del mes o
+                    cualquier otra fecha o período de tiempo significativo para nuestro programa.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span class="" style="color: rgb(0, 46, 184);">El programa tiene muchos grados de acoplamiento de información</span>. Cuando el equipo de desarrollo está trabajando, puede ocurrir que utilicen las mismas funciones o variables
+                    para distintos módulos. Si bien en algunos casos esto es una buena práctica, puede traer problemas cuando esa variable se cambia porque el módulo 1 la necesita de una forma, pero no se revisa su uso en el módulo 2. Esto ocasionará
+                    fallas en el módulo 2 que parecerán no replicables, pero el problema de base no está para nada relacionado con el módulo 2.</span></span></p></div></div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178191"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178191/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Condiciones y variaciones para reportar errores&nbsp;</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Continuemos con los ejemplos más comunes de condiciones que a veces pueden ser ignoradas por <i>testers</i>. Esta lista no es para nada exhaustiva y podemos ir ampliándola a medida que vayamos experimentando y probando.&nbsp;</p><div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;"><div class="col">
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span class="" style="color: rgb(0, 46, 184);">El error puede depender de hacer las tareas relacionadas en un orden especifico. </span>Por ejemplo, si registramos un producto, registramos un cliente y luego registramos una
+                    venta de ese producto a ese cliente, todo sale bien. Pero si primero registramos el cliente y luego el producto tenemos un error. Estos errores no siempre son fáciles de descubrir y se dan más en instancias de pruebas exploratorias
+                    que del uso de casos de prueba.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span class="" style="color: rgb(0, 46, 184);">U</span><span class="" style="color: rgb(0, 46, 184);">na falla del software puede darse como resultado de un manejo de error.</span> Esto quiere decir que cuando tuvimos un error
+                    anterior, el software no puede manejarlo y tiene otra falla. Cuando este sea el caso debemos forzar el primer error para llegar al segundo.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span><span style=""><span class="" style="color: rgb(0, 46, 184);">Los problemas de Time-out son comunes en sistemas de tiempo real</span></span><span class="" style="color: rgb(0, 46, 184);">.</span></span> Estos escenarios no son siempre considerados por los/as desarrolladores/as y son difíciles de replicar cuando no se sabe que esa es la causa.&nbsp;</span></span></p><p></p><ul><li><span><span>Si el proceso A le envía un mensaje al proceso B y a la vez espera una respuesta, ¿Qué ocurre si B no responde? ¿Qué es lo que debería hacer A? ¿Qué pasa si el proceso B responde mucho después que el tiempo de Time-out haya expirado?&nbsp;</span></span></li><li><span><span>Estos son caminos que no siempre son tan fáciles de replicar, pero a la vez son escenarios poco pensados por los desarrolladores. Lo que es peor, en un ambiente de producción estos errores son relativamente comunes. Se dan especialmente en casos de mal internet o una máquina lenta.</span></span></li></ul><p></p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span><span class="" style="color: rgb(0, 46, 184);">Alg</span></span><span><span class="" style="color: rgb(0, 46, 184);">unos errores son los llamados “errores de estado inicial”</span></span>. Estos errores pueden ocurrir solo la primera vez que usamos el programa luego de instalarlo o cuando cargamos el programa y no vuelve a aparecer hasta que no cerramos y volvemos a cargarlo.&nbsp;</span></span></p><p></p><ul><li><span><span>Son errores difíciles de replicar porque los veremos una vez, pero luego no podremos replicarlos. Si no comprendemos que esta es la causa del error, entonces podemos pasar horas intentando replicarlo sin éxito.&nbsp;</span></span></li><li><span><span>Para replicar los errores probablemente tendremos que desinstalar y volver a instalar el programa, a veces incluso necesitaremos una máquina nueva.</span></span></li></ul><p></p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span><span class="" style="color: rgb(0, 46, 184);">El programa que estamos usando para probar tiene instaladas librerías viejas que no son compatibles con las funcionalidades probadas.</span></span> Es posible que el/la desarrollador/a tenga la última versión de estas librerías y no se haya actualizado la versión en la máquina donde estamos probando.</span></span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span><span class="" style="color: rgb(0, 46, 184);">El error solo aparece en condiciones extremas.</span></span> No siempre es fácil o simple replicar las condiciones extremas en las que encontramos un error, especialmente si es un error reportado desde producción. No siempre sabemos exactamente cómo replicar la máquina de nuestros usuarios y menos las condiciones extremas de las máquinas de los usuarios.</span></span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span><span><span><span class="" style="color: rgb(0, 46, 184);">El software es un sistema cooperativo multitareas</span></span> (como un videojuego online, por ejemplo). La actividad que puede ocurrir de “fondo” por otros usuarios o testers puede afectar nuestras pruebas.</span></span>
+                </p>
+            </div>
+        </div>
+        <p></p>
+        <p>Una muy buena forma de aprender sobre los errores es hablando con
+            el/la desarrollador/a que arregló el error que se había marcado como no reproducible y preguntarle cómo hizo para encontrarlo, para reproducirlo y para tenerlo en cuenta en próximos testeos.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div><p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178186"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178186/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Reportes claros y concisos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Los errores deben ser reportados por más que sean difíciles de reproducir. Esos errores que son complicados de reproducir deben tener reportes claros y concisos para evitar las objeciones típicas 3 y 4 (<span class="" style="color: rgb(0, 46, 184);">No se tiene la suficiente información para reproducir el error / El equipo de desarrollo no comprende el reporte</span>).</p>
+        <p>Cuando los pasos para un error son complicados de reproducir, <span class="" style="color: rgb(0, 46, 184);">necesitamos un reporte simple de leer con pasos concisos</span>. Si nos hemos olvidado algunos de los detalles de las pruebas que hemos
+            ejecutado, incluyendo detalles críticos o alguna prueba automática que nos permite detectar un error invisible a los ojos, será difícil para el equipo de desarrollo reproducir el error. </p>
+        <p>Si estamos utilizando herramientas que nos ayudan a encontrar errores es importante incluirlas en el reporte. </p>
+        <p>Una vez que terminemos de escribir nuestros reportes es una buena práctica mostrarlo a otros <i>testers</i> o otras personas del proyecto para asegurarnos que esas otras personas también pueden reproducir el error.</p>
+        <p>Analicemos un pequeño reporte con pasos concisos.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Asunto: Error en la función de autenticación</p>
+                <p>Descripción del Error:</p>
+                <ul>
+                    <li><strong>Descripción</strong>: Al intentar iniciar sesión en la aplicación móvil, se produce un error que impide a los usuarios acceder a sus cuentas.</li>
+                    <li><strong>Paso a paso</strong>:
+                        <ol>
+                            <li>ab</li>
+                            <li>Ingreso mi nombre de usuario y contraseña.</li>
+                            <li>Hago clic en "Iniciar sesión".</li>
+                        </ol>
+                    </li>
+                    <li><strong>Mensaje de Error</strong>: Aparece un mensaje que dice "Error de autenticación. Inténtelo de nuevo".</li>
+                    <li><strong>Comportamiento Esperado</strong>: Debería poder iniciar sesión sin problemas.</li>
+                    <li><strong>Fecha y Hora</strong>: 15 de octubre de 2023 a las 14:30.</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Información Adicional:</p>
+                 <p>Información Adicional:</p>
+        <ul>
+            <li><strong>Dispositivo</strong>: iPhone X con iOS 15.</li>
+            <li><strong>Versión de la Aplicación</strong>: 2.5.0.</li>
+            <li><strong>Conexión a Internet</strong>: Wi-Fi estable.</li>
+            <li><strong>Historial de Uso</strong>: No había experimentado este problema antes.</li>
+            <li><strong>Capturas de Pantalla</strong>: Adjunto capturas de pantalla del mensaje de error.</li>
+        </ul>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+
+       
+        <p>Este error afecta la experiencia del usuario y debe resolverse lo antes posible. Por favor, avísenme si necesitan más detalles o pruebas adicionales para abordar este problema.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178192"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178192/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Partes de un reporte</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+
+
+
+        <p></p>
+        <p>Un reporte claro y conciso de un<i> tester</i> generalmente consta de las siguientes partes:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Descripción del error:</span> Una breve pero precisa descripción del error o problema encontrado en el software.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Pasos para reproducirlo:</span> Detalles claros sobre los pasos específicos que se deben seguir para reproducir el error. Esto incluye las acciones realizadas en el software antes de que ocurra el
+                            error.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Resultado esperado:</span> Una declaración que indica cuál debería ser el resultado correcto o esperado al ejecutar los pasos mencionados.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Resultado observado:</span> Lo que sucedió realmente cuando se ejecutaron los pasos. Aquí se proporciona información sobre el error o el comportamiento inesperado.</p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Entorno de prueba:</span> Información sobre el entorno en el que se realizó la prueba, incluyendo detalles sobre la configuración, el sistema operativo, la versión del software y cualquier otra información
+                            relevante. </p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Comentarios adicionales:</span> Cualquier información adicional que el tester considere relevante, como posibles causas del error, impacto en el usuario, sugerencias para solucionar el problema, evidencia
+                            adicional (capturas de pantalla, registros, etc.). </p>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.37 5.11h3.972v.07L6.025 12H7.42l3.258-6.85V4.002H5.369v1.107Z"></path>
+</svg>
+
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Prioridad y severidad:</span> La importancia y gravedad del error, que puede estar categorizada en niveles como baja, media, alta o crítica.</p>
+                    </div>
+                </div>
+
+
+                <!-- 8 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-5.03 1.803c0-1.248-.943-1.84-1.646-1.992v-.065c.598-.187 1.336-.72 1.336-1.781 0-1.225-1.084-2.121-2.654-2.121-1.57 0-2.66.896-2.66 2.12 0 1.044.709 1.589 1.33 1.782v.065c-.697.152-1.647.732-1.647 2.003 0 1.39 1.19 2.344 2.953 2.344 1.77 0 2.989-.96 2.989-2.355Zm-4.347-3.71c0 .739.586 1.255 1.383 1.255s1.377-.516 1.377-1.254c0-.733-.58-1.23-1.377-1.23s-1.383.497-1.383 1.23Zm-.281 3.645c0 .838.72 1.412 1.664 1.412.943 0 1.658-.574 1.658-1.412 0-.843-.715-1.424-1.658-1.424-.944 0-1.664.58-1.664 1.424Z"></path>
+</svg>
+
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Responsable asignado:</span> Si es aplicable, se puede indicar quién es el encargado de solucionar el error. </p>
+                    </div>
+                </div>
+
+
+
+                <!-- 9 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.223 4.146c2.104 0 3.123-1.464 3.123-4.3 0-3.147-1.459-4.014-2.97-4.014-1.63 0-2.871 1.02-2.871 2.73 0 1.706 1.171 2.667 2.566 2.667 1.06 0 1.7-.557 1.934-1.184h.076c.047 1.67-.475 3.023-1.834 3.023-.71 0-1.149-.363-1.248-.72H5.258c.094.908.926 1.798 2.52 1.798Zm.118-3.972c.808 0 1.535-.528 1.535-1.594s-.668-1.676-1.56-1.676c-.838 0-1.517.616-1.517 1.659 0 1.072.708 1.61 1.54 1.61Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Fecha y hora del reporte:</span> La fecha y hora en que se reportó el error.</p>
+                    </div>
+                </div>
+
+
+                <!-- 10 -->
+                <div class="row" style="margin-left: 32px">
+                    <div style="margin-left: -10px">
+                        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/1777329/mod_book/chapter/74611/10_1.png" alt="10" width="24" height="24" role="presentation" class="img-responsive atto_image_button_text-bottom">
+                    </div>
+                    <div class="col" style="margin-left: -8px">
+                        <p><span style="font-weight: 600">Estado del error:</span> Un seguimiento del estado del error, como "Abierto", "En Proceso", "Resuelto" o "Cerrado", a medida que se avanza en su solución. </p>
+                    </div>
+                </div>
+                <p>Un reporte de prueba efectivo y claro debe proporcionar suficiente información para que los/as desarrolladores/as puedan entender y abordar el error de manera eficiente.</p><br>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178187"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178187/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Herramientas para reportar errores</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Para reportar errores muchas veces utilizaremos un software de reporte y seguimiento de errores. Estos softwares pueden ser simples como <span style=" color:#1345CD; font-weight: 600">Trello</span>, una herramienta de tableros de trabajo que podemos
+            ver en la imagen debajo de estas líneas, o algo más complejo como
+            <span style=" color:#1345CD; font-weight: 600">Jira</span>, otra herramienta de trabajo de desarrollo de software.&nbsp;</p>
+        <p>Existen softwares especializados en la gestión y seguimiento de errores, uno de los más conocidos en el 2022 es <span style=" color:#1345CD; font-weight: 600">Bugzilla</span>. Estos softwares nos permiten escribir reportes diferenciados por cada
+            error y dar un seguimiento al estado de dichos errores. Si queremos encontrar alguno simplemente basta con buscar “<i>Bug Tracking Software</i>” y nuestro motor de búsqueda nos proveerá con muchos resultados diferentes y nos permitirá elegir el de
+            nuestra preferencia.&nbsp;</p>
+        <p>Para esta materia se recomienda utilizar <span style=" color:#1345CD; font-weight: 600">Trello</span> ya que es una herramienta fácil de aprender a usar y puede servir para gestionar proyectos, no sólo errores.
+        </p>
+        <p></p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178187/Imagen%204.1.png" alt="sd" width="100%" height="100%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);"></p>
+
+        <p>En Trello reportamos los errores en “tarjetas” que acomodamos en “columnas” convenientemente nombradas. La semana anterior vimos que para reportar un error debemos tener lo siguiente:
+        </p>
+        <p><span style=" color:#1345CD; font-weight: 600">Nombre</span>: Un nombre representativo del problema.</p>
+        <p><span style=" color:#1345CD; font-weight: 600">Caso de prueba que lo encontró</span>: El caso de prueba que estábamos usando para encontrarlo, si es que utilizamos un caso de prueba.&nbsp;</p>
+        <p><span style=" color:#1345CD; font-weight: 600">Pasos para reproducirlo</span>: Un listado ordenado de todos los pasos que se necesitaron para llegar a el. Es importante que si reproducimos esos pasos tenemos que llegar al mismo error, ya que un
+            error que no puede reproducirse no es un error.&nbsp;</p>
+        <p><span style=" color:#1345CD; font-weight: 600">Gravedad</span>: Alguno de los niveles de gravedad que vimos anteriormente. Necesitamos saber cuál es su gravedad ya que se suele considerar a los errores bloqueantes, críticos y graves como prioritarios
+            para su resolución.&nbsp;</p>
+        <p><span style=" color:#1345CD; font-weight: 600">Descripción</span>: Se suele agregar una descripción de qué es lo que ocurre, detallando porque es un error. En esta descripción suele compararse con lo que debería ser, los resultados esperados de
+            cada caso de prueba. Dentro de la descripción también solemos agregar capturas de pantalla del error para ayudar a los desarrolladores a resolverlo de la mejor manera.
+        </p>
+        <p>En la imagen siguiente podemos ver un error con este formato en Trello. Tenemos todos los ítems y unas imágenes representativas que ayudan a ilustrar el problema.</p>
+        <p></p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178187/Imagen%204.2.png" alt="sd" width="100%" height="100%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><br></p>
+
+        <!-- Fin imagen -->
+
+        <p>A este reporte de errores le faltan algunas cosas claves que veremos a continuación.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178188"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178188/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Escritura en los reportes</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Es importante que este reporte se mantenga lo más simple posible manteniendo la mayor cantidad de información posible. Como dijimos anteriormente, necesitamos que este error pueda ser reproducible y eso puede implicar incluir imágenes (capturas
+            de pantalla) o grabaciones de pantalla en los pasos para reproducirlo y/o la descripción.&nbsp;</p><p><b><span class="" style="color: rgb(0, 46, 184);">Errores distintos, reportes distintos</span></b></p><p></p><ul><li>Si encontramos 2 errores distintos debemos escribir 2 reportes distintos incluso si los errores parecen estar relacionados entre si. Esto es para mantener
+            los reportes simples y para que el error a arreglar parezca menos intimidante para los desarrolladores. Psicológicamente hablando, no es lo mismo arreglar 2 errores más pequeños que 1 un error muy grande.&nbsp;</li><li>El equipo de desarrollo catalogará
+            1 reporte como 1 error, así que es nuestro trabajo separar los errores cada uno en sus reportes. Además, si juntamos 2 errores en un solo reporte, es probable que uno de esos errores sea arreglado y el otro no.&nbsp;</li><li>Es importante referenciar otros errores relacionados en nuestros reportes:</li><ul><li>agregar un <span><span style="color: rgb(19, 69, 205);">número de error</span> </span>para que cada error tenga un número identificador único y;</li><li>un apartado con los&nbsp;<span style="color: rgb(19, 69, 205);"><span>errores relacionados</span></span>            al nuevo error identificado con un número.</li></ul></ul><p></p>
+        <p><b><span class="" style="color: rgb(0, 46, 184);">En la descripción ser explícitos</span></b></p><p>Es importante evitar declaraciones en la descripción que digan “no funciona”, “se rompe” o “falla”, ya que no ayudan a replicar el error ni ver porque estamos hablando de un error. Debemos ser explícitos en lo que queremos escribir y el mensaje
+            que queremos que llegue al equipo de desarrollo. Mientras evitamos esas descripciones vagas, también debemos evitar descripciones extremadamente complicadas.&nbsp;</p><p></p><ul><li>Utilizar oraciones simples y concisas, evitando las oraciones subordinadas.&nbsp;</li><li>Transmitir en las oraciones la información necesaria para replicar el error y encontrar su origen.</li><li>Eliminar los pasos innecesarios, analizando la secuencia de pasos que estamos describiendo y ver si todos
+            son necesarios</li><li>Destacar los pasos críticos para hacer reportes más claros.&nbsp;</li></ul><p></p>
+        <!--Inicio caja borde azul-->
+        <div class="container">
+            <div class="caja-azul">
+                <p style="padding: 1% 2%; word-wrap: break-word;">Por ejemplo, si encontramos un error en la interfaz de venta y, al seguir los pasos originales, notamos que completar un campo obligatorio no afecta el resultado, podemos omitir mencionar ese paso en nuestro reporte. Esto ayudará a simplificar y hacer más claro el reporte para el equipo de desarrollo.</p>
+            </div>
+        </div>
+        <!--Fin caja borde azul-->
+        <p> Una vez que identificamos los pasos y condiciones criticas, podemos eliminar el relleno. Sigamos con el ejemplo de la interfaz de un sitio de ventas</p>
+        <!--Inicio caja borde azul-->
+        <div class="container">
+            <div class="caja-azul">
+                <p style="padding: 1% 2%; word-wrap: break-word;"></p><p><em>Descripción</em>: Error en la interfaz de venta al utilizar el campo de "Con cuánto paga" para calcular el vuelto.</p><p><em>Pasos para reproducir</em>:</p><ol><li>Seleccionar el producto A.</li><li>Ingresar que se paga con $500.</li></ol><p><em>Resultado esperado</em>: Se espera que el cálculo del vuelto sea correcto.</p><p><em>Comentarios adicionales</em>: No es necesario describir el proceso de venta completo si el campo de "Con cuánto paga" falla. Con los pasos mencionados, se puede visualizar el error, como un posible mal cálculo del vuelto, sin necesidad de incluir la selección de cliente, tipo de factura u otros medios de pago.</p><p></p>
+            </div>
+        </div>
+        <!--Fin caja borde azul-->
+        <p></p>
+        <p>Los pasos para reproducir un error no son necesariamente los mismos que tendremos en el caso de prueba que utilizamos para encontrarlo, pero si podemos simplificar los pasos del caso de prueba, entonces debemos hacerlo.
+        </p>
+        <p></p>
+        <p></p>
+        <p>Si encontramos que el error o defecto también puede escribirse bajo distintas condiciones levemente similares entre si, debemos incluirlas en el reporte que estamos haciendo. Pero, debemos considerar no podemos simplemente escribir un párrafo complejo mostrando estas otras circunstancias, es por eso que queremos utilizar un <span class="" style="color: rgb(0, 61, 245);"><span class="" style="color: rgb(0, 46, 184);">apartado extra</span> </span>para comentarios adicionales donde podamos describir información extra q<span class="" style="color: rgb(0, 46, 184);">ue pueden provocar el error o defecto</span>. Es importante agregar las condiciones o caminos alternativos porque dan más información al/la desarrollador/a de cual puede ser el problema para arreglar el error.</p>
+        <p>Esto quiere decir, que ahora podemos <span style="color: rgb(19, 69, 205);">identificar nuevos ítems</span> a agregar en nuestro reporte de errores.&nbsp;</p>
+        <p>Veamos a continuación qué podemos reportar.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178189"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178189/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Otro ejemplo</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Recuerda que:</p><p></p><ul><li>el error no se encuentra en&nbsp; una sección de “sugerencia” o “como arreglarlo”.&nbsp;</li><li>el trabajo de un <i>tester</i> no es el de arreglar un error ni sugerir como arreglarlo.&nbsp;</li><li>el trabajo de un<i> tester</i> es el de reportar un error llegando a la raíz del problema.&nbsp;</li><li>el equipo de desarrollo sabe hacer su trabajo, por lo que cuando van a arreglar un error saben cómo hacerlo.</li></ul>En la imagen siguiente podemos ver un ejemplo del error con el formato en Trello.<br><p></p>
+        <!-- inicio imagen -->
+        
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658975/mod_book/chapter/178189/Imagen%204.3.png" alt="sd" width="100%" height="100%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p>
+        </div>
+
+        <!-- Fin imagen -->
+
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[648989,648991,648992,648993,648994,648995,648996,648997,649000,649001,649004,649005,649009,649010,649013]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2658975, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1743952386); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random67f29a59db2912'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random67f29a59db2912'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

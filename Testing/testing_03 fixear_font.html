@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S3. Métodos de la estrategia de caja blanca | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1743646678/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S3. Métodos de la estrategia de caja blanca | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1743646678_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"QHZEt20riD","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1743646678","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21046,"courseContextId":2643972,"contextid":2658970,"contextInstanceId":649006,"langrev":1743837844,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21046 context-2658970 cmid-649006 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1743646678/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S3. Métodos de la estrategia de caja blanca</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Metodología de Pruebas de Sistemas 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S3. Métodos de la estrategia de caja blanca
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        domingo, 6 de abril de 2025, 12:17
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21046&amp;section=5" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649005" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=649007" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649009" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Diagramas de flujo" class="font-weight-bold text-decoration-none" href="#ch178139">1. Diagramas de flujo</a><ul><li><a title="1.1. Símbolos de los diagramas de flujo" class="text-decoration-none" href="#ch178140">1.1. Símbolos de los diagramas de flujo</a></li><li><a title="1.2. Uso de un diagrama de flujo: la empresa potabilizadora de agua" class="text-decoration-none" href="#ch178141">1.2. Uso de un diagrama de flujo: la empresa potabilizadora de agua</a></li><li><a title="1.3. Diagrama completo" class="text-decoration-none" href="#ch178142">1.3. Diagrama completo</a></li></ul></li><li><a title="2. Repaso de contenidos previos" class="font-weight-bold text-decoration-none" href="#ch178143">2. Repaso de contenidos previos</a></li><li><a title="3. Métodos de caja blanca" class="font-weight-bold text-decoration-none" href="#ch178144">3. Métodos de caja blanca</a></li><li><a title="4. Método 1: Cobertura de caminos básicos" class="font-weight-bold text-decoration-none" href="#ch178145">4. Método 1: Cobertura de caminos básicos</a><ul><li><a title="4.1. Paso 1: Grafos de flujo" class="text-decoration-none" href="#ch178146">4.1. Paso 1: Grafos de flujo</a></li><li><a title="4.2. Paso 2: complejidad ciclomática" class="text-decoration-none" href="#ch178147">4.2. Paso 2: complejidad ciclomática</a></li><li><a title="4.3. Paso 3: caminos independientes" class="text-decoration-none" href="#ch178148">4.3. Paso 3: caminos independientes</a></li><li><a title="4.4. Paso 4: casos de prueba" class="text-decoration-none" href="#ch178149">4.4. Paso 4: casos de prueba</a></li></ul></li><li><a title="5. Método 2: Cobertura de sentencias" class="font-weight-bold text-decoration-none" href="#ch178150">5. Método 2: Cobertura de sentencias</a></li><li><a title="6. Método 3: Cobertura de decisión" class="font-weight-bold text-decoration-none" href="#ch178151">6. Método 3: Cobertura de decisión</a></li><li><a title="7. Método 4: Cobertura de condición" class="font-weight-bold text-decoration-none" href="#ch178152">7. Método 4: Cobertura de condición</a></li><li><a title="8. Método 5: Cobertura de decisión / condición" class="font-weight-bold text-decoration-none" href="#ch178153">8. Método 5: Cobertura de decisión / condición</a></li><li><a title="9. Método 6: Cobertura de condición múltiple" class="font-weight-bold text-decoration-none" href="#ch178154">9. Método 6: Cobertura de condición múltiple</a></li><li><a title="10. Registro y seguimiento de fallas" class="font-weight-bold text-decoration-none" href="#ch178155">10. Registro y seguimiento de fallas</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178139"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178139/_%20%2814%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Diagramas de flujo</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p>Antes de introducirnos en la estrategia de caja blanca, veamos una herramienta muy útil a la hora de utilizar esta estrategia: el <span style=" color:#1345CD; font-weight: 600">diagrama de flujo</span>.&nbsp;</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;">Un diagrama de flujo es un esquema que describe un proceso, sistema o algoritmo informático. Se usa ampliamente en numerosos campos para documentar, estudiar, planificar, mejorar y comunicar procesos -que suelen ser complejos- mediante diagramas
+            claros y fáciles de comprender.&nbsp;</span><br></p>
+        <p>Los diagramas de flujo emplean rectángulos, óvalos, diamantes y otras numerosas figuras para definir el tipo de paso, junto con flechas conectoras que establecen el flujo y la secuencia. Pueden variar desde diagramas simples y dibujados a mano
+            hasta diagramas exhaustivos creados por computadora que describen múltiples pasos y rutas.&nbsp; </p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p>Si tomamos en cuenta todas las diversas figuras, los diagramas de flujo son los más usados por personas con y sin conocimiento técnico en una variedad de campos.<br></p>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">En este primer capítulo, te invitamos a recorrer las principales características de esta herramienta.</div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178140"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178140/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Símbolos de los diagramas de flujo</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <div style="width: 100%;"><div style="position: relative; padding-bottom: 141.4%; padding-top: 0; height: 0;"><iframe title="MPS Diagrama de flujo" frameborder="0" width="1000" height="1414" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/650c74874b3b670011ef944a" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178141"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178141/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Uso de un diagrama de flujo: la&nbsp;<span>empresa potabilizadora de agua</span></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p>A lo largo de la materia, y especialmente esta semana, utilizaremos el diagrama de flujo para representar de una manera gráfica el código que deberán construir en la práctica formativa.<b><span class="" style="color: rgb(255, 51, 102);"> </span></b>Si recordamos la semana anterior, para algunos ejemplos de <i>testing</i> de caja negra utilizamos el caso de la <span style="color: rgb(19, 69, 205);"><b>empresa potabilizadora de agua</b><span class="" style="color: rgb(51, 51, 51);">;&nbsp;</span></span>retomaremos el mismo ejemplo para poner en práctica el uso de diagramas de flujo.</p>
+        <!--Caja amarilla centrada-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12" style="margin: 0% auto">
+                    <div class="box ">
+                        <div class="container-sm">
+                            <div class="caja-amarilla texto-margen-caja-amarilla">
+
+
+                                <!--ACÁ VA EL CONTENIDO-->
+                                <p>Podés revisar el documento <span class="" style="color: rgb(0, 46, 184);"><u><a href="https://drive.google.com/file/d/1XIhAC79gGHAEPeMA37aZMrNuVytb2n8-/view?usp=drive_link" target="_blank">S2. Historias de usuario: El caso de la Empresa potabilizadora de agua</a></u></span> para recordar los requerimientos del dominio y su historia de usuario.</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><br></p><p>Sabemos que esta Historia de Usuario es una especificación de un requerimiento de código. Se presenta a continuación una parte del pseudocódigo de la misma.<br></p>
+        <p></p>
+        <!-- nada puede haber abajo -->
+        <p style="text-align: center;"></p>
+      <iframe src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&amp;t=vscode&amp;wt=none&amp;l=text%2Fx-csharp&amp;width=680&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=56px&amp;ph=56px&amp;ln=true&amp;fl=1&amp;fm=Hack&amp;fs=13px&amp;lh=164%25&amp;si=false&amp;es=2x&amp;wm=false&amp;code=If%2520%28fecha%2520inicial%2520del%2520per%25C3%25ADodo%2520seleccionado%2520%253C%253D%2520fecha%2520final%2520del%2520per%25C3%25ADodo%2520seleccionado%2520%2526%2526%2520fecha%2520inicial%2520del%2520per%25C3%25ADodo%2520seleccionado%2520%253C%253D%2520fecha%2520actual%29%250A%2509If%2520%28Localidad%2520IS%2520NOT%2520NULL%2520%2526%2526%2520Localidad%2520existe%29%250A%2509%2509If%2520%28Zona%2520IS%2520NOT%2520NULL%2520%2526%2526%2520Zona%2520existe%29%250AMostrar%2520reporte%2520estad%25C3%25ADstico%2520de%2520consumos%2520para%2520los%2520clientes%2520de%2520la%2520localidad%2520y%2520zona%2520seleccionada%250A%2509%2509Else%250A%2509%2509%2509If%2520%28Zona%2520is%2520NULL%29%250AMostrar%2520reporte%2520estad%25C3%25ADstico%2520de%2520consumos%2520para%2520TODOS%2520los%2520clientes%2520de%2520la%2520localidad%2520seleccionada%250AElse%250A%2509%2509%2509%2509Mostrar%2520mensaje%2520%25E2%2580%259CLa%2520Zona%2520ingresada%2520NO%2520existe%25E2%2580%259D%250AEnd%2520if%250A%2509%2509End%2520if%250A%2509Else%250A%2509%2509If%2520%28Localidad%2520is%2520NULL%29%250A%2509%2509%2509Mostrar%2520reporte%2520estad%25C3%25ADstico%2520de%2520consumos%2520para%2520TODOS%2520los%2520clientes%250AElse%250A%2509%2509%2509Mostrar%2520mensaje%2520%25E2%2580%259CLa%2520Localidad%2520ingresada%2520NO%2520existe%25E2%2580%259D%250AEnd%2520if%250AElse%250AMostrar%2520mensaje%2520%25E2%2580%259Cel%2520per%25C3%25ADodo%2520no%2520es%2520v%25C3%25A1lido%25E2%2580%259D%250AEnd%2520if%250A%2520%2520return%2520go%28f%252C%2520seed%252C%2520%255B%255D%29%250A%257D" style="width: 1024px; height: 659px; border:0; transform: scale(1); overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+</iframe>
+<p>Si quisiéramos armar un diagrama de flujo que representa este pseudocódigo para comprenderlo mejor:</p><p></p><ol><li>comenzaríamos con un símbolo de <span style="color: rgb(19, 69, 205); font-weight: 600;">inicio</span>.&nbsp;</li><li>Luego del símbolo de inicio nos encontramos con una sentencia
+            IF, es decir con una<span class="" style="color: rgb(0, 61, 245);"><b> </b><b>decisión</b></span>. Utilizaremos un símbolo de <span style="color: rgb(19, 69, 205); font-weight: 600;">decisión</span> como muestra la imagen a continuación:</li></ol><p></p>
+    </div>
+    <!-- inicio imagen -->
+    <div style="text-align: center;"><p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178141/1.%20Diagrama.png" alt="sd" width="98%" height="98%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+        </p>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><p>Habiendo graficado la primera decisión, queremos continuar con la siguiente. Para esto:</p><p></p><ol><li>Elegiremos una de las ramas: la verdadera (<span style=" color:#1345CD; font-weight: 600">True</span>) o la falsa (<span style=" color:#1345CD; font-weight: 600">False</span>),
+            y graficaremos la decisión.&nbsp;</li><li>En este caso comenzaremos con la rama verdadera. En esta rama tenemos otra decisión, y a la rama verdadera de esa decisión le sigue otra.&nbsp;</li><li>Si graficamos ambas decisiones nos queda un diagrama como el siguiente:</li></ol><p></p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178141/2%20Diagrama.png" alt="sd" width="95%" height="95%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><span style="font-size: large;">Luego de graficar las <span class="" style="color: rgb(0, 46, 184);">dos decisiones</span>, encontramos una sentencia “<span class="" style="color: rgb(0, 46, 184);">mostrar</span>”. Esta es una sentencia del código y utilizamos el símbolo de </span><span style="font-size: large; color: rgb(19, 69, 205); font-weight: 600;">proceso</span><span style="font-size: large;"> para representarlo. Nos quedaría un diagrama de
+            esta manera:</span></p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178141/3.%20Diagrama.png" alt="sd" width="95%" height="95%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><span style="font-size: large;">¿Cómo sigue el diagrama? </span><span class="" style="font-size: large; color: rgb(0, 46, 184);"><span><b>Veámoslo a continuación</b><span class="" style="color: rgb(51, 51, 51);">.</span></span></span><br></p>
+        <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178142"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178142/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Diagrama completo</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+<p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><span style="font-size: large;">Para graficar el resto del código, simplemente continuamos utilizando los símbolos correspondientes hasta que hemos graficado todas las decisiones y todas las sentencias normales.&nbsp;</span></p><p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><span style="font-size: large;">Si terminamos de graficar este código, quedaría como muestra la imagen a continuación:</span><br></p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178142/4.diagrama%20completo.png" alt="sd" width="98%" height="98%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><span style="font-size: large;">Ahora sí, sabiendo cómo se construye un diagrama de flujo, </span><span style="font-size: large; color: rgb(19, 69, 205); font-weight: 600;">podemos comenzar a estudiar los métodos de prueba de caja blanca</span><span style="font-size: large; color: rgb(51, 51, 51);" class="">.</span></p><p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><span style="font-size: large; color: rgb(19, 69, 205); font-weight: 600;"><br></span></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178143"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178143/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Repaso de contenidos previos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p>Antes de comenzar con los métodos de la estrategia de caja blanca, hagamos un repaso general de lo que vimos hasta el momento.</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>En la semana 1 realizamos una introducción a las estrategias de testing. Recordemos que las estrategias de testing nos sirven para encontrar casos de prueba con el objetivo de economizar tiempo y dinero. Economizar implica utilizar
+                            la menor cantidad de casos de prueba posibles para encontrar la mayor cantidad de errores y defectos posibles.&nbsp;</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Vimos también una introducción a las dos estrategias de&nbsp;<i>testing</i>&nbsp;que existen: la&nbsp;<span class="" style="color: rgb(0, 46, 184);">estrategia de caja negra</span>&nbsp;y la&nbsp;<span class="" style="color: rgb(0, 46, 184);">estrategia de caja blanca</span>.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Aprendimos que en la estrategia de <span class="" style="color: rgb(0, 46, 184);">caja negra</span> no debería importarnos el comportamiento interno del software ni su estructura. Esta estrategia de testing solo se concentra en
+                            encontrar las circunstancias en las cuales el software no se comporta según su especificación.</p>
+                    </div>
+                </div>
+
+                <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+                    <div style="margin:16px">
+                        <p style="text-align: left; color: rgb(88, 17, 187); font-size: large; font-weight: 600;"> Estudiamos 4 métodos de pruebas de caja negra:</p>
+                        <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">
+                        </p>
+                        <ul>
+                            <li style="text-align: left;"> Método de partición de clases de equivalencias&nbsp;</li>
+                            <li style="text-align: left;">Método de análisis de valores límites&nbsp;</li>
+                            <li style="text-align: left;">Método de grafo de causa – efecto&nbsp;</li>
+                            <li style="text-align: left;">Método de adivinación de defectos </li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <!-- Fin Cuadro amarillo borde violeta -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>En cuanto a la estrategia de <span class="" style="color: rgb(0, 61, 245);">caja blanc</span><span class="" style="color: rgb(0, 61, 245);">a</span>, vimos una pequeña introducción. Aprendimos que esta estrategia examina la estructura
+                            interna de un programa y que deriva casos de prueba a partir de la lógica del software, ignorando la especificación de requerimientos..</p>
+                    </div>
+                </div>
+                <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+                    <div style="margin:16px">
+                        <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">El objetivo de la estrategia&nbsp;de caja blanca es causar que cada declaración en el programa se ejecute al menos una vez, sabiendo que esto será extremadamente complejo e inadecuado. El número de caminos lógicos de un programa
+                            puede ser astronómicamente grande, lo que se demostró en la semana 2.</p>
+                    </div>
+                </div>
+                <p>Debemos recordar también que el probar todos los caminos internos del software no necesariamente implica que la prueba está completa y que el software funciona correctamente y cómo debe funcionar.</p>
+
+                <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+                    <div style="margin:16px">
+                        <p style="color: #5811BB; font-size: large; font-weight: 600">Recordamos los motivos para esto:</p>
+                        <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"></p>
+                        <ol>
+                            <li> Una prueba exhaustiva de caminos no garantiza que el programa cumpla con su especificación. Si un software no cumple con sus especificaciones, la prueba de caminos no encontrara jamás este gran problema.&nbsp;</li>
+                            <li>Un programa puede estar erróneo porque faltan programar algunos caminos.&nbsp;</li>
+                            <li>La prueba exhaustiva de caminos no descubriría este problema.&nbsp;</li>
+                            <li>Un camino podría faltar porque el desarrollador no lo consideró, y una prueba exhaustiva de caminos nunca detectaría la falta de este camino en particular.&nbsp;</li>
+                            <li>Una prueba de caminos exhaustiva puede no descubrir errores dados por los datos.
+                            </li>
+                        </ol>
+                        <p></p>
+                    </div>
+                </div>
+                En las siguientes páginas, te invitamos a profundizar en los métodos de la estrategia de caja blanca.<br></div>
+            <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178144"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178144/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Métodos de caja blanca</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+
+        <p>La estrategia de caja blanca será el foco de esta semana. Esta estrategia pretende:</p>
+        <p></p>
+        <ul>
+            <li>Investigar sobre la<span class="" style="color: rgb(0, 46, 184);"> estructura interna del código</span>, exceptuando detalles referidos a datos de entrada o salida, para probar la lógica del programa desde el punto de vista algorítmico.&nbsp;</li>
+            <li>Realizar un <span class="" style="color: rgb(0, 46, 184);">seguimiento del código fuente </span>según se van ejecutando los casos de prueba, determinándose de manera concreta las instrucciones, bloques, etc. que han sido ejecutados por los
+                casos de prueba.</li>
+            <li>Desarrollar casos de prueba que produzcan la <span class="" style="color: rgb(0, 46, 184);">ejecución de cada posible ruta o camino del programa o módulo</span>, considerándose una ruta como una combinación específica de condiciones manejadas
+                por un programa.</li>
+        </ul>
+        <p></p>
+        <p>Hay que señalar que no todos los errores de software se pueden descubrir verificando todas las rutas de un programa, hay errores que se descubren al integrar unidades del sistema y pueden existir errores que no tengan relación con el código específicamente,
+            como vimos en la semana 2.</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">En esta materia veremos como métodos de caja blanca:</p>
+                <ol>
+                    <li> cobertura de caminos.</li>
+                    <li>cobertura de sentencias.</li>
+                    <li>cobertura de decisión.&nbsp;</li>
+                    <li>cobertura de condición.&nbsp;</li>
+                    <li>cobertura de decisión/condición.</li>
+                    <li>cobertura múltiple.</li>
+                </ol>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178145"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178145/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Método 1: Cobertura de caminos básicos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p>Recordemos que la esta estrategia de caja blanca, tiene como objetivo <span class="" style="color: rgb(0, 46, 184);">probar</span> la lógica del software y <span class="" style="color: rgb(0, 46, 184);">ejecutar</span> todas las líneas de código
+            al menos una vez.</p>
+        <p> Iniciemos definiendo el primer método de caja blanca.
+
+            <!--Inicio caja ejemplo-->
+        </p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; "><span class="" style="color: rgb(1, 6, 20);"><span class="" style="color: rgb(184, 138, 0);">&nbsp;Cobertura de Caminos Básicos</span>.&nbsp;</span>
+                    </span>
+                </p>
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; "><span class="" style="color: rgb(1, 6, 20);">Con este método se escriben casos de prueba suficientes para ejecutar todos los caminos de un programa. Entendemos que un camino es una secuencia de sentencias encadenadas desde la entrada de datos hasta la salida del software. Este criterio de cobertura asegura que los casos de prueba diseñados permiten que todas las sentencias del programa sean ejecutadas al menos una vez y que las condiciones sean probadas tanto para su valor verdadero como falso.</span>                    </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p>Una de las técnicas empleadas para aplicar este criterio de cobertura es la <span style=" color:#1345CD; font-weight: 600">prueba del camino básico</span>. Esta técnica se basa en obtener una medida de la complejidad del diseño procedimental
+            de un programa (o de la lógica del programa). Esta medida es la <span style=" color:#1345CD; font-weight: 600">complejidad ciclomática</span> de McCabe, y representa un límite superior para el número de casos de prueba que se deben realizar
+            para asegurar que se ejecuta cada camino del programa.</p>
+        <p>Los pasos a realizar para aplicar esta técnica son:&nbsp;</p>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #234076">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p>Representar el programa en un grafo de flujo (no confundir con un diagrama de flujo). </p>
+            </div>
+        </div>
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #234076">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Calcular la complejidad ciclomática.</p>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #234076">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Determinar el conjunto básico de caminos independientes.</p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #234076">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Derivar los casos de prueba que fuerzan la ejecución de cada camino.&nbsp;</p>
+            </div>
+        </div>
+        <p><span class="" style="color: rgb(0, 46, 184);"><b>&nbsp;A continuación, se detallan cada uno de los pasos.</b></span>
+        </p>
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178146"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178146/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Paso 1: Grafos de flujo</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p>El grafo de flujo se utiliza para<span class="" style="color: rgb(0, 46, 184);"> representar el flujo de control lógico de un programa</span>. Para ello se utilizan los siguientes elementos:</p>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Nodos:</span> representan cero, una o varias sentencias en secuencia. Cada nodo comprende como máximo una sentencia de decisión (bifurcación).</p>
+            </div>
+        </div>
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Aristas:&nbsp;</span>líneas que unen dos nodos. </p>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Regiones:&nbsp;</span>áreas delimitadas por aristas y nodos. Cuando se contabilizan las regiones de un programa debe incluirse el área externa como una región más.</p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Nodo predicado:&nbsp;</span>cuando en una condición aparecen uno o más operadores lógicos (AND, OR, XOR, …) se crea un nodo distinto por cada una de las condiciones simples. Cada nodo generado de esta
+                    forma se denomina nodo predicado. La figura a continuación muestra un ejemplo de condición múltiple.</p>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178146/Figura%203.1.png" alt="sd" width="80%" height="80%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><span style="font-size: large;">Así, cada construcción lógica de un programa tiene una representación. La siguiente figura muestra dichas representaciones.</span></p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178146/Figura%203.2.png" alt="sd" width="85%" height="85%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);"></p>
+        <p>Y la última figura muestra cómo podemos construir un grafo de flujo a partir de un diagrama de flujo. Nótese cómo la estructura principal corresponde a un <span class="" style="color: rgb(255, 51, 102);">WHILE</span>, y dentro del bucle se encuentran
+            anidados dos constructores<span class="" style="color: rgb(255, 51, 102);"> IF</span>.</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178146/Figura%203.3.png" alt="sd" width="85%" height="85%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178147"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178147/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Paso 2: complejidad ciclomática</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">
+            <!--Inicio caja ejemplo-->
+        </p>
+        <div class="row row-cols-auto" style="">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición</p>
+            </div>
+            <div class="col" style="border-left: 2px solid rgb(78, 124, 250);">
+                <p style=""><span class=" " style="color: black; font-size: large;"><span class="" style="color: rgb(184, 138, 0);"><span class="" style="color: rgb(0, 46, 184);">La complejidad ciclomática</span></span>
+                    </span>&nbsp;<span class="" style="font-size: large;color: rgb(1, 6, 20);">es una métrica del software que cuantifica la complejidad lógica de un programa. En el contexto del método de prueba del camino básico, la complejidad ciclomática representa el número de rutas independientes dentro del programa, lo que a su vez determina la cantidad de casos de prueba requeridos.</span></p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><b><span>¿</span></b>Cómo se puede calcular la <span class="" style="color: rgb(0, 46, 184);">complejidad ciclomática a partir de un grafo de flujo</span>, para obtener el número de caminos a identificar?</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Existen varias formas de calcular esta complejidad:&nbsp;</p>
+
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">El número de regiones del grafo coincide con la complejidad ciclomática, V(G).</span></p>
+                    </div>
+                </div>
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">La complejidad ciclomática, V(G), de un grafo de flujo G se define como&nbsp;</span></p>
+                        <p><span>&nbsp;V(G) = Aristas – Nodos + 2
+</span></p>
+                    </div>
+                </div>
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">La complejidad ciclomática, V(G), de un grafo de flujo G se define como&nbsp;</span></p>
+                        <p><span>&nbsp;V(G) = Nodos Predicado + 1</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div class="col">
+            </div>
+        </div>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">La figura siguiente representa, por ejemplo, las cuatro regiones del grafo de flujo que vimos en la figura del punto anterior, obteniéndose así la complejidad ciclomática de la figura de abajo.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Análogamente se puede calcular el número de aristas y nodos predicados para confirmar la complejidad ciclomática. Así:&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;">V(G) = Número de regiones = 4&nbsp;<br></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;">V(G) = Aristas – Nodos + 2 = 11-9 + 2 = 4&nbsp;</p>
+                <p style="color: rgb(1, 6, 20); font-size: large;">&nbsp;V(G) = Nodos Predicado + 1 = 3 +1 = 4</p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+        <div style="color: rgb(1, 6, 20); font-size: large; text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178147/Figura%203.4.png" alt="sd" width="85%" height="85%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="color: rgb(1, 6, 20); font-size: medium; text-align: center;"></p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Esta complejidad ciclomática determina el número de casos de prueba que deben ejecutarse para garantizar que todas las sentencias de un programa se han ejecutado al menos una vez, y que cada condición se habrá ejecutado en sus vertientes verdadera
+            y falsa. </p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178148"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178148/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Paso 3: caminos independientes</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">
+            <!--Inicio caja ejemplo-->
+        </p>
+        <div class="row row-cols-auto" style="color: rgb(1, 6, 20); font-size: large;">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: black"><span class=" " style="font-size: large; "><span class="" style="color: rgb(0, 46, 184);">Un camino independiente</span> es cualquier camino del programa que introduce, por lo menos, un nuevo conjunto de sentencias de proceso o una condición,
+                    respecto a los caminos existentes. En términos del grafo de flujo, un camino independiente está constituido por lo menos por una arista que no haya sido recorrida anteriormente a la definición del camino.</span>
+                </p>
+
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p style="color: rgb(1, 6, 20); font-size: large;">En la identificación de los distintos caminos de un programa para probar se debe tener en cuenta que cada nuevo camino debe tener el mínimo número de sentencias nuevas o condiciones nuevas respecto a los que ya existen. De esta manera se intenta
+            que el proceso de depuración sea más sencillo.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">El conjunto de caminos independientes de un grafo no es único. No obstante, a continuación, se muestran algunas heurísticas para identificar dichos caminos:</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">Elegir un <span style=" color:#1345CD; font-weight: 600">camino principal</span> que represente una <b>función válida </b>que no sea un tratamiento de error. Debe intentar
+                    elegirse el camino que atraviese el máximo número de decisiones en el grafo.&nbsp;</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col" style="">
+                <p style=""><span class="" style="font-size: large; color: rgb(1, 6, 20);">Identificar el <b><span class="" style="color: rgb(0, 46, 184);">segundo camino </span></b>mediante la localización de la <span style=" color:#1345CD; font-weight: 600">primera decisión</span>                    en el camino de la línea básica alternando su resultado mientras se mantiene el máximo número de decisiones originales del camino inicial.</span><br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col" style="">
+                <p style=""><span class="" style="color: rgb(1, 6, 20); font-size: large;">Identificar un <span class="" style="color: rgb(0, 46, 184);"><b>tercer camino</b></span>, colocando la primera decisión en su valor original a la vez que se altera la
+                    <span style=" color:#1345CD; font-weight: 600">segunda decisión</span> del camino básico, mientras se intenta mantener el resto de decisiones originales.&nbsp;</span><br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col" style="">
+                <p style=""><span class="" style="color: rgb(1, 6, 20); font-size: large;">Continuar el proceso hasta haber conseguido <span style=" color:#1345CD; font-weight: 600">tratar todas las decisiones</span>, intentando mantener en su origen el resto de
+                    ellas.&nbsp;
+                    </span><br></p>
+            </div>
+        </div>
+        <div style="text-align: left; color: rgb(1, 6, 20); font-size: large;">Este método permite obtener V(G) caminos independientes cubriendo el método de cobertura de decisión y sentencia.&nbsp;</div>
+        <div style="text-align: left; color: rgb(1, 6, 20); font-size: large;">&nbsp;</div>
+        <div style="text-align: left; color: rgb(1, 6, 20); font-size: large;">Así por ejemplo, para la el grafo de la figura 4, presentada anteriormente:</div>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/1775912/mod_book/chapter/74465/Figura%203.4.png" alt="sd" width="60%" height="60%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);"></p>
+
+        <div style="text-align: left; color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(0, 46, 184);">los cuatro posibles caminos independientes</span> generados serían:&nbsp;</div>
+        <div style="text-align: left; color: rgb(1, 6, 20); font-size: large;"><br></div>
+        <!--Inicio caja borde azul-->
+        <div class="container">
+            <div class="caja-azul">
+                <p style="padding: 1% 2%; word-wrap: break-word;"></p>
+                <div style="text-align: left; color: rgb(1, 6, 20); font-size: large;">Camino 1: 1 - 10&nbsp;<br></div>
+                <div style="text-align: left; color: rgb(1, 6, 20); font-size: large;">Camino 2: 1-2-4-8-1-9&nbsp;</div>
+                <div style="text-align: left; color: rgb(1, 6, 20); font-size: large;">Camino 3: 1-2-3-5-7-8-1-9&nbsp;</div>
+                <div style="text-align: left; color: rgb(1, 6, 20); font-size: large;">Camino 4: 1-2-5-6-7-8-1-9&nbsp;</div>
+                <div style="text-align: left; color: rgb(1, 6, 20); font-size: large;"><br></div>
+                <p></p>
+            </div>
+        </div>
+        <!--Fin caja borde azul-->
+        <div style="text-align: left; color: rgb(1, 6, 20); font-size: large;">Estos cuatro caminos constituyen el camino básico para el grafo de flujo correspondiente.<br></div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178149"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178149/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Paso 4: casos de prueba</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p>El ultimo paso del método "cobertura de caminos básicos" es <span class="" style="color: rgb(0, 46, 184);">construir los casos de prueba que fuerzan la ejecución de cada uno de esos caminos</span>. Ya hemos aprendido a construir casos de prueba
+            la semana 2, pero estos son un poco diferentes.&nbsp;
+        </p>
+        <p>En la tabla siguiente podemos ver la información necesaria:</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178149/casos%20de%20prueba%20tabla.png" alt="sd" width="100%" height="100%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p><br></div>
+
+        <p>Debido a que estos casos de prueba se centran en el código, no habrá una serie de pasos en el caso de prueba, sino que debemos darle directamente un valor a las variables del mismo.</p>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178150"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178150/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Método 2: Cobertura de sentencias</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p>Con esta técnica, el objetivo es ejecutar todas las sentencias declarativas al menos una vez, de forma tal que cada línea de código se ejecute al menos una vez.&nbsp;</p>
+        <p>Esto quiere decir que vamos a diseñar casos de prueba de forma tal que fuercen a pasar por todas las sentencias.</p>
+        <p></p>
+        <p>Supongamos que tenemos un programa de cálculo de impuestos que debe calcular el impuesto sobre la renta en función del ingreso anual de una persona. El programa contiene las siguientes sentencias:</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <ol>
+                    <li>IngresoAnual = 50,000</li>
+                    <li>Impuesto = 0</li>
+                    <li>Si IngresoAnual &gt; 30,000, entonces</li>
+                    <li>Impuesto = (IngresoAnual - 30,000) * 0.15</li>
+                    <li>Fin Si</li>
+                    <li>Mostrar "El impuesto a pagar es: " + Impuesto</li>
+                </ol>
+            </div>
+        </div>
+        <p>Para aplicar el método de cobertura de sentencias, necesitamos asegurarnos de que cada sentencia se ejecute al menos una vez durante las pruebas. Veamos cómo podríamos lograrlo:&nbsp;<br></p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <ol>
+                    <li>Para cubrir la <span class="" style="color: rgb(0, 61, 245);">Sentencia 1</span>, podríamos proporcionar un valor de IngresoAnual diferente de 50,000 en nuestras pruebas, como 40,000.</li>
+                    <li>Para cubrir la <span class="" style="color: rgb(0, 61, 245);">Sentencia 2</span>, debemos asegurarnos de que la variable Impuesto se inicialice en 0 antes de ejecutar las pruebas.</li>
+                    <li>Para cubrir la <span class="" style="color: rgb(0, 61, 245);">Sentencia 3</span>, necesitamos ejecutar pruebas con valores de IngresoAnual que sean tanto mayores como menores que 30,000 para evaluar ambas ramas del condicional.</li>
+                    <li>Para cubrir la <span class="" style="color: rgb(0, 61, 245);">Sentencia 4</span>, debemos ejecutar pruebas donde la condición (IngresoAnual &gt; 30,000) sea verdadera.</li>
+                    <li>Para cubrir la <span class="" style="color: rgb(0, 61, 245);">Sentencia 5</span>, necesitamos ejecutar pruebas que pasen por el bloque de código dentro del "Si".</li>
+                    <li>Para cubrir la <span class="" style="color: rgb(0, 61, 245);">Sentencia 6</span>, debemos asegurarnos de que la variable Impuesto se muestre en la salida de las pruebas.</li>
+                </ol>
+            </div>
+        </div>
+        <p>En este ejemplo, la cobertura de sentencias garantiza que todas las sentencias del programa se ejecuten al menos una vez durante las pruebas, lo que ayuda a identificar posibles errores en el código y garantiza una mayor confiabilidad del software.</p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178151"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178151/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Método 3: Cobertura de decisión</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p>Con esta técnica, el objetivo es probar tanto la rama falsa como verdadera de cada decisión que tenemos.&nbsp;</p>
+        <p>Consideramos una decisión al tipo de sentencia que escribimos dentro de un <span class="" style="color: rgb(0, 46, 184);">IF</span>, un ciclo <span class="" style="color: rgb(0, 46, 184);">FOR</span> o un ciclo <span class="" style="color: rgb(0, 46, 184);">WHILE</span>            para controlar el flujo del código. Por lo general, una decisión puede tener un valor booleano, aunque en el caso de un <span class="" style="color: rgb(0, 46, 184);">SWITCH </span>puede tener más de dos valores.&nbsp;</p>
+        <p>Podemos decir que las decisiones pueden ser simples o complejas, las últimas incluyen sentencias <span class="" style="color: rgb(0, 46, 184);">OR </span>y/o <span class="" style="color: rgb(0, 46, 184);">AND</span>.&nbsp;</p>
+        <p>Es decir, que con esta técnica vamos a forzar a que todas las decisiones de una porción de código se ejecuten tanto por la rama verdadera como por la rama falsa.
+        </p>
+        <p>Analicemos el siguiente ejemplo</p>
+        <pre><span class="" style="font-size: large; color: rgb(255, 51, 102);">Si PuntuaciónDeCliente &gt;= 100, entonces
+   ConcederDescuento = Verdadero
+Sino
+   ConcederDescuento = Falso
+</span><span class="" style="color: rgb(255, 51, 102);">Fin Si</span></pre>
+
+        <!-- nada puede haber abajo -->
+        Para aplicar la cobertura de decisión, necesitamos asegurarnos de que tanto la condición verdadera como la falsa se prueben. Veamos cómo podríamos hacerlo:<br>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <ol>
+            <li>
+                <p>Caso de Prueba 1 (Condición Verdadera):</p>
+                <ul>
+                    <li>Establecemos <code>PuntuaciónDeCliente</code> en un valor igual o mayor a 100.</li>
+                    <li>Verificamos que <code>ConcederDescuento</code> sea verdadero.</li>
+                </ul>
+            </li>
+            <li>
+                <p>Caso de Prueba 2 (Condición Falsa):</p>
+                <ul>
+                    <li>Establecemos <code>PuntuaciónDeCliente</code> en un valor menor a 100.</li>
+                    <li>Verificamos que <code>ConcederDescuento</code> sea falso.</li>
+                </ul>
+            </li>
+        </ol>En este ejemplo, hemos creado dos casos de prueba para cubrir ambas ramas de la decisión condicional. Esto garantiza que la decisión se haya evaluado en ambas condiciones, lo que es esencial para identificar problemas lógicos en el código y asegurar
+        su correcto funcionamiento.<br></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178152"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178152/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Método 4: Cobertura de condición</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Con esta técnica, el objetivo es probar tanto la rama falsa como verdadera de cada condición de una porción de código. A primera vista puede sonar igual a la anterior, pero ese será sólo el caso de tener decisiones simples.&nbsp;</p>
+        <!--Inicio caja ejemplo-->
+        <p></p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large;"><span class="" style="color: rgb(1, 6, 20);"><span class="" style="color: rgb(1, 6, 20);">Definimos a una</span><span class="" style="color: rgb(184, 138, 0);">&nbsp;<span class="" style="color: rgb(0, 46, 184);">condición</span></span>
+</span></span><span style="font-size: large; color: rgb(1, 6, 20);" class="">como cada una de las expresiones atómicas que conforman una decisión y que pueden anidarse utilizando operadores <span class="" style="color: rgb(0, 46, 184);">OR</span>                    y/o <span class="" style="color: rgb(0, 46, 184);">AND</span>. Con esta técnica, lo que queremos hacer es probar cada condición individualmente, sin importar el resultado de la decisión.</span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p><span style="color: rgb(1, 6, 20); font-size: large;">Es muy importante destacar que en esta técnica </span><span style="font-size: large; color: rgb(19, 69, 205); font-weight: 600;">no nos interesa el cortocircuitado de los operadores lógicos</span>
+            <span style="color: rgb(1, 6, 20); font-size: large;">.&nbsp;</span><br></p>
+        <p><span class="" style="font-size: large; color: rgb(1, 6, 20);">En la mayoría de los lenguajes de programación, si observamos una decisión como la siguiente:</span></p>
+        <pre><span class="" style="color: rgb(184, 138, 0);"><span class="" style="color: rgb(255, 51, 102);">&nbsp;</span><span class="" style="font-size: large;"><span class="" style="color: rgb(255, 51, 102);">IF (X &gt; 0 &amp;&amp; Y &lt; 15) {&nbsp;</span><br></span></span><pre><span class="" style="color: rgb(184, 138, 0); font-size: large;"><span class="" style="color: rgb(255, 51, 102);">…&nbsp;</span><br></span><span class="" style="color: rgb(255, 51, 102); font-size: large;">}</span></pre></pre>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span style="color: rgb(1, 6, 20);">podemos decir que es una sola decisión con 2 condiciones. Estas condiciones están unidas por un operador <span class="" style="color: rgb(0, 46, 184);">AND</span>.&nbsp;</span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span style="color: rgb(1, 6, 20);">En la mayoría de los lenguajes de programación, si yo pruebo la condición “<span class="" style="color: rgb(184, 138, 0);">X &gt; 0</span>” como falsa, entonces la segunda condición no se ejecutará, ya que para
+            que esta decisión sea verdadera necesito que ambas condiciones lo sean.&nbsp;</span>
+        </p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Esta técnica, a nivel teórico, no contempla este fenómeno (el cortocircuitado de los operadores) ya que es algo que depende enteramente del lenguaje de programación. En la práctica debemos aplicar esta técnica considerando el lenguaje
+                    de programación que vayamos a utilizar para respetar el cortocircuitado de los operadores como corresponde.</p>
+            </div>
+        </div>
+        <p><span class="" style="font-size: large; color: rgb(1, 6, 20);">También es importante destacar que para esta técnica no sólo debemos prestar atención al cortocircuitado, sino a <span style=" color:#1345CD; font-weight: 600">qué tan posible es ejecutar una prueba</span>.&nbsp;</span>
+        </p>
+        <p><span class="" style="font-size: large; color: rgb(1, 6, 20);">Si tomamos el ejemplo del validador de un numero del 1 al 10 que vimos la semana 1,&nbsp;</span></p>
+        <!--Inicio caja borde azul-->
+        <div class="container">
+            <div class="caja-azul">
+                <ul>
+                    <li><span class="" style="font-size: large; color: rgb(1, 6, 20);">Si necesitamos que el usuario ingrese un número entre el 1 y el 10, entonces deberemos probar una entrada válida y esperada (un número del 1 al 10), pero también deberemos probar las entradas inválidas (un número negativo o un número mayor a 10).</span></li>
+                </ul>
+                <p></p>
+            </div>
+        </div>
+        <!--Fin caja borde azul-->
+        <p><span class="" style="font-size: large; color: rgb(1, 6, 20);">&nbsp;entonces podríamos tener un código como el siguiente:</span>
+        </p>
+        <pre><span class="" style="font-size: large; color: rgb(184, 138, 0);"><span class="" style="color: rgb(255, 51, 102);">IF (X &gt; 1 &amp;&amp; x &lt; 10) {&nbsp;</span><br></span><pre><span class="" style="font-size: large; color: rgb(184, 138, 0);"><span class="" style="color: rgb(255, 51, 102);">…&nbsp;</span><br></span><span class="" style="font-size: large; color: rgb(255, 51, 102);">}</span></pre></pre>
+        <p><span style="color: rgb(1, 6, 20); font-size: large;">En este ejemplo no podríamos probar con un solo caso de prueba, pero no por el cortocircuitado del operador <span class="" style="color: rgb(0, 46, 184);">AND</span>, sino porque es imposible
+            probar las dos ramas falsas a la vez. Como X no puede ser menor a 1 y a la vez mayor a 10, necesitaríamos más casos de prueba para ejecutar todas las pruebas.</span><br></p>
+        <p><span style="color: rgb(1, 6, 20); font-size: large;"><br></span></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178153"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178153/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Método 5: Cobertura de decisión / condición</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Con esta técnica, el objetivo es que cada condición en una decisión tome todas las posibles salidas, al menos una vez, y cada decisión tome todas las posibles salidas, al menos una vez.&nbsp;</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Se puede ver como la combinatoria de las dos técnicas anteriores. Esta técnica tiene las mismas consideraciones que las 2 técnicas anteriores.</p>
+        <p style=""><span class="" style="font-size: large; color: rgb(1, 6, 20);">Supongamos que estamos probando un programa que decide si una persona es elegible para un descuento en una tienda en línea. El programa contiene la siguiente decisión con múltiples condiciones:</span><br></p>
+        <pre><span class="" style="font-size: large; color: rgb(1, 6, 20);">Si PuntuaciónDeCliente &gt;= 100 y MiembroFrecuente = Verdadero, entonces<br></span><pre><span class="" style="font-size: large; color: rgb(1, 6, 20);">&nbsp; &nbsp;ConcederDescuento = Verdadero<br></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">Sino<br></span><span class="" style="font-size: large; color: rgb(1, 6, 20);">&nbsp; &nbsp;ConcederDescuento = Falso<br></span><span class="" style="font-size: large; color:  rgb(1, 6, 20);">Fin Si</span></pre></pre>
+        <p></p>
+        <p><span class="" style="font-size: large;"><span class="" style="color: rgb(1, 6, 20);">Para aplicar la</span> <span class="" style="color: rgb(0, 46, 184);">Cobertura de decisión/condición</span>, <span class="" style="color: rgb(1, 6, 20);">necesitamos asegurarnos de que todas las condiciones se evalúen tanto en su estado verdadero como falso. Veamos cómo podríamos hacerlo:</span></span>
+        </p>
+        <ol>
+            <li>
+                <p><span class="" style="font-size: large;"><span class="" style="color: rgb(0, 61, 245);">Caso de Prueba 1 (Todas las condiciones verdaderas)</span>:</span>
+                </p>
+                <ul>
+                    <li><span class="" style="font-size: large; color: rgb(1, 6, 20)">Establecemos </span><code><span class="" style="font-size: large;">PuntuaciónDeCliente</span></code><span class="" style="font-size: large;color: rgb(1, 6, 20) "> en un valor igual o mayor a 100.</span></li>
+                    <li><span class="" style="font-size: large;">Establecemos </span><code><span class="" style="font-size: large;">MiembroFrecuente</span></code><span class="" style="font-size: large; color: rgb(1, 6, 20)"> en Verdadero.</span></li>
+                    <li><span class="" style="font-size: large;">Verificamos que </span><code><span class="" style="font-size: large;color: rgb(1, 6, 20) ">ConcederDescuento</span></code><span class="" style="font-size: large;"> sea verdadero.</span></li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="" style="font-size: large; color: rgb(1, 6, 20)"><span class="" style="color: rgb(0, 61, 245);">C</span><span class="" style="color: rgb(0, 61, 245);">aso de Prueba 2 (Todas las condiciones falsas):</span></span>
+                </p>
+                <ul>
+                    <li><span class="" style="font-size: large;color: rgb(1, 6, 20) ">Establecemos </span><code><span class="" style="font-size: large;">PuntuaciónDeCliente</span></code><span class="" style="font-size: large; color: rgb(1, 6, 20)"> en un valor menor a 100.</span></li>
+                    <li><span class="" style="font-size: large;color: rgb(1, 6, 20) ">Establecemos </span><code><span class="" style="font-size: large;">MiembroFrecuente</span></code><span class="" style="font-size: large;color: rgb(1, 6, 20) "> en Falso.</span></li>
+                    <li><span class="" style="font-size: large;color: rgb(1, 6, 20) ">Verificamos que </span><code><span class="" style="font-size: large;">ConcederDescuento</span></code><span class="" style="font-size: large;color: rgb(1, 6, 20)"> sea falso.</span></li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="" style="font-size: large;"><span class="" style="color: rgb(0, 61, 245);">Caso de Prueba 3 (Primera condición verdadera, segunda condición fal</span><span class="" style="color: rgb(0, 61, 245);">sa):</span></span>
+                </p>
+                <ul>
+                    <li><span class="" style="font-size: large; color: rgb(1, 6, 20)">Establecemos </span><code><span class="" style="font-size: large;">PuntuaciónDeCliente</span></code><span class="" style="font-size: large;color: rgb(1, 6, 20)"> en un valor igual o mayor a 100.</span></li>
+                    <li><span class="" style="font-size: large; color: rgb(1, 6, 20)">Establecemos </span><code><span class="" style="font-size: large;">MiembroFrecuente</span></code><span class="" style="font-size: large;color: rgb(1, 6, 20) "> en Falso.</span></li>
+                    <li><span class="" style="font-size: large; color: rgb(1, 6, 20)">Verificamos que </span><code><span class="" style="font-size: large;">ConcederDescuento</span></code><span class="" style="font-size: large;color: rgb(1, 6, 20) "> sea falso.</span></li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="" style="font-size: large; color: rgb(0, 61, 245);">Caso de Prueba 4 (Primera condición falsa, segunda condición verdadera):</span></p>
+                <ul>
+                    <li><span class="" style="font-size: large; color: rgb(1, 6, 20)">Establecemos </span><code><span class="" style="font-size: large;">PuntuaciónDeCliente</span></code><span class="" style="font-size: large;"> <span class="" style="color: rgb(1, 6, 20)">en un valor menor a 100.</span></span>
+                    </li>
+                    <li><span class="" style="font-size: large;color: rgb(1, 6, 20) ">Establecemos </span><code><span class="" style="font-size: large; ">MiembroFrecuente</span></code><span class="" style="font-size: large;color: rgb(1, 6, 20) "> en Verdadero.</span></li>
+                    <li><span class="" style="font-size: large; color: rgb(1, 6, 20)">Verificamos que </span><code><span class="" style="font-size: large;">ConcederDescuento</span></code><span class="" style="font-size: large;color: rgb(1, 6, 20) "> sea falso.</span></li>
+                </ul>
+            </li>
+        </ol>
+        <p><span class="" style="font-size: large;color: rgb(1, 6, 20) ">En este ejemplo, hemos creado cuatro casos de prueba para cubrir todas las combinaciones posibles de condiciones verdaderas y falsas. Esto garantiza que todas las condiciones y combinaciones dentro de la decisión se evalúen exhaustivamente, lo que es esencial para detectar posibles problemas lógicos en el código y asegurar su correcto funcionamiento.</span></p><br>
+        <p></p>
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178154"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178154/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Método 6: Cobertura de condición múltiple</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p>Con esta técnica, el objetivo es probar que todas las combinaciones posibles de resultados de cada condición se invoquen al menos una vez.&nbsp;</p>
+        <p>Para poder utilizar esta técnica, utilizaremos <span style=" color:#1345CD; font-weight: 600">tablas de verdad</span> para ver cómo quedaría la combinatoria de todos los resultados de todas las condiciones de una porción de código.&nbsp;</p>
+        <p>Si eliminamos las pruebas imposibles, entonces podemos decir que tenemos una cobertura múltiple de las decisiones.</p>
+        <!-- Caja Violeta de descarga-->
+        <br>
+        <div class="" style="width: 80%;  margin: 0 auto; ">
+
+            <div class="row">
+
+                <div class="col-1" style="background-color: #460E95; border-radius: 4px 0px 0px 4px;">
+
+                    <div class="d-flex justify-content-center" style="margin-top: 20px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-download" style=" color: #FFFFFF" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path>
+</svg>
+                    </div>
+                </div>
+
+                <div class="col-8" style="background-color: #FFFEEB;border: 1px solid #460E95; border-radius: 0px 4px 4px 0px;">
+
+                    <p style="margin-top: 16px;"><span style="font-size: 0.9375rem;"><span class="" style="font-size: large;">Te invitamos a leer el documento </span><span class="" style="color: rgb(0, 46, 184);"><u><span class="" style="font-size: large;"><span class="" style="color: rgb(0, 46, 184);"><a href="https://drive.google.com/file/d/1oxPUW-tKUR3n8Bq3kdnj3eneV9wPqPZr/view?usp=drive_link" target="_blank"><span class="" style="color: rgb(0, 46, 184);">S3-Ejemplos de caja blanca</span></a>
+                        </span>
+                        </span>
+                        </u>
+                        </span>
+                        <span class="" style="font-size: large;"> donde analizaremos cómo se aplican los métodos de caja blanca en casos concretos.</span></span><br></p>
+                </div>
+                <br>
+                <!-- Fin Caja violeta de descarga-->
+                <p><b><span class="" style="color: rgb(51, 51, 51);">&nbsp;</span></b></p>
+
+
+
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178155"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658970/mod_book/chapter/178155/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Registro y seguimiento de fallas</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <p>El seguimiento de errores es el proceso de registrar y monitorear errores o defectos durante las pruebas de software. También se conoce como seguimiento de defectos o seguimiento de problemas. Los sistemas grandes pueden tener cientos o miles
+            de defectos. Cada uno debe ser evaluado, monitoreado y priorizado para la depuración y arreglo. En algunos casos, es posible que sea necesario realizar un seguimiento de los errores durante un período prolongado.</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Dice Tutorials Point:</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> "El seguimiento de defectos es un proceso importante en la ingeniería de software, ya que los sistemas complejos y críticos para el negocio tienen cientos de defectos. Uno de los factores desafiantes es gestionar, evaluar y priorizar estos
+                    defectos. El número de defectos se multiplica durante un período de tiempo y, para gestionarlos de forma eficaz, se utiliza un sistema de seguimiento de defectos para facilitar el trabajo".</p>
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde violeta -->
+        <p>Los defectos pasaran por varias etapas o estados a lo largo de su vida. Estos estados son los siguientes:
+        </p>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Activo</span>: El error o defecto está siendo investigado por los desarrolladores para ver cuál es su causa y así poder arreglarlo.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">En prueba</span>: Está en etapa de pruebas nuevamente donde se verá si se ha corregido o no.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Cerrado</span>: Luego de las nuevas pruebas se puede cerrar el error si es que se ha notado que ya se arregló.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Reabierto</span>: Se volvió a encontrar el mismo error, ya sea por un usuario o un desarrollador.</span>
+                </p>
+            </div>
+        </div>
+        <p>Los errores se gestionan en función de la prioridad y la gravedad. Los niveles de gravedad ayudan a identificar el impacto relativo de un problema en el lanzamiento de un producto. Estas clasificaciones pueden variar en número, pero generalmente
+            incluyen alguna forma de lo siguiente:</p>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Bloqueante</span>: Inhibe la continuidad de desarrollo o pruebas del programa.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Crítico</span>: Crash de la aplicación, pérdida de datos o fuga de memoria severa.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Grave</span>: Pérdida mayor de funcionalidad, como menús inoperantes, datos de salida extremadamente incorrectos, o dificultades
+                    que inhiben parcial o totalmente el uso del programa.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Normal</span>: Una parte menor del componente no es funcional.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Leve</span>: Una pérdida menor de funcionalidad, o un problema que puede ser resuelto de otra manera. Es decir, algo que
+                    será un inconveniente para nuestros usuarios, pero podrán seguir utilizando nuestro software.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Cosmético</span>: Un problema estético, como puede ser una falta de ortografía o un texto desalineado.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Mejora</span>: Solicitud de una nueva característica o funcionalidad.</span>
+                </p>
+            </div>
+        </div>
+        <p>A la hora de registrar o reportar un error es importante que contenga lo siguiente:</p>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Nombre</span>: Un nombre representativo del problema.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Caso de prueba que lo encontró</span>: El Caso de Prueba que estábamos usando para encontrarlo, si es que utilizamos un caso
+                    de prueba.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Pasos para reproducirlo</span>: Un listado ordenado de todos los pasos que se necesitaron para llegar a él. Es importante
+                    que si reproducimos esos pasos tenemos que llegar al mismo error, ya que un error que no puede reproducirse no es un error.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Gravedad</span>: Alguno de los niveles de gravedad que vimos anteriormente. Necesitamos saber cuál es su gravedad ya que
+                    se suele considerar a los errores bloqueantes, críticos y graves como prioritarios para su resolución.</span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d"><span style=" color:#1345CD; font-weight: 600">Descripción</span>: Se suele agregar una descripción de qué es lo que ocurre, detallando porqué es un error. En esta descripción
+                    suele compararse con lo que debería ser, los resultados esperados de cada caso de prueba. Dentro de la descripción también solemos agregar capturas de pantalla del error, para ayudar a los desarrolladores a resolverlo de la mejor manera</span>
+                </p>
+            </div>
+        </div>
+        <p>Es importante destacar que el trabajo de los testers es encontrar errores, no resolverlos. Si bien debemos darle un seguimiento a los errores que encontramos para ver que se resuelvan, nosotros no debemos resolverlos ni tampoco es nuestro trabajo
+            sugerir cómo pueden resolverse.</p>
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[648989,648991,648992,648993,648994,648995,648996,648997,649000,649001,649004,649005,649009,649010,649013]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2658970, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1743952386); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random67f29b16134762'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random67f29b16134762'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
