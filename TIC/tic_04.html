@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S4. Hardware de red | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1744219673/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S4. Hardware de red | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1744219673_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"QYIWcsy184","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1744219673","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21039,"courseContextId":2643474,"contextid":2659474,"contextInstanceId":649474,"langrev":1743837844,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21039 context-2659474 cmid-649474 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1744219673/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S4. Hardware de red</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Tecnologías de la Información y Comunicación 2° A 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S4. Hardware de red
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        viernes, 11 de abril de 2025, 23:13
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21039&amp;section=5" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649473&amp;forceview=1" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"></path>
+                            </svg>
+                        </div>
+                        <p>Recorré</p>
+                    </section>
+                </a>
+
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-option" viewBox="0 0 16 16">
+                                <path d="M1 2.5a.5.5 0 0 1 .5-.5h3.797a.5.5 0 0 1 .439.26L11 13h3.5a.5.5 0 0 1 0 1h-3.797a.5.5 0 0 1-.439-.26L5 3H1.5a.5.5 0 0 1-.5-.5zm10 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"></path>
+                                </svg>
+                    </div>
+                    <p>Conectá</p>
+
+                </section>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649476" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="m10 10.414 4 4 5.707-5.707L22 11V5h-6l2.293 2.293L14 11.586l-4-4-7.707 7.707 1.414 1.414z"></path></svg>
+                        </div>
+
+                        <p>Proyectá</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Saberes técnicos" class="font-weight-bold text-decoration-none" href="#ch179806">1. Saberes técnicos</a></li><li><a title="2. ¿Qué es el  hardware de red?" class="font-weight-bold text-decoration-none" href="#ch179798">2. ¿Qué es el  hardware de red?</a></li><li><a title="3. Tecnología de redes de transmisión" class="font-weight-bold text-decoration-none" href="#ch179799">3. Tecnología de redes de transmisión</a><ul><li><a title="3.1. Diferencias entre punto a punto y difusión" class="text-decoration-none" href="#ch179808">3.1. Diferencias entre punto a punto y difusión</a></li></ul></li><li><a title="4. Tecnología de redes de escala" class="font-weight-bold text-decoration-none" href="#ch179800">4. Tecnología de redes de escala</a></li><li><a title="5. Redes de área personal (PAN)" class="font-weight-bold text-decoration-none" href="#ch179801">5. Redes de área personal (PAN)</a></li><li><a title="6. Redes de área local (LAN)" class="font-weight-bold text-decoration-none" href="#ch179802">6. Redes de área local (LAN)</a><ul><li><a title="6.1. Topología" class="text-decoration-none" href="#ch179813">6.1. Topología</a></li></ul></li><li><a title="7. Redes de área metropolitana (MAN)" class="font-weight-bold text-decoration-none" href="#ch179803">7. Redes de área metropolitana (MAN)</a></li><li><a title="8. Redes de área amplia (WAN)" class="font-weight-bold text-decoration-none" href="#ch179804">8. Redes de área amplia (WAN)</a><ul><li><a title="8.1. Componentes de WAN" class="text-decoration-none" href="#ch179809">8.1. Componentes de WAN</a></li><li><a title="8.2. Red privada (VPN)" class="text-decoration-none" href="#ch179810">8.2. Red privada (VPN)</a></li><li><a title="8.3. Subred (ISP) Proveedor de servicios de Internet" class="text-decoration-none" href="#ch179811">8.3. Subred (ISP) Proveedor de servicios de Internet</a></li></ul></li><li><a title="9. ¿Qué es una interred?" class="font-weight-bold text-decoration-none" href="#ch179805">9. ¿Qué es una interred?</a><ul><li><a title="9.1. Constitución de la interred" class="text-decoration-none" href="#ch179812">9.1. Constitución de la interred</a></li></ul></li><li><a title="10. Checkpoint" class="font-weight-bold text-decoration-none" href="#ch179807">10. Checkpoint</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179806"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179806/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.6%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Conectá con saberes técnicos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);">Los saberes técnicos de un/a desarrollador/a de software son cruciales para comprender la relevancia del hardware de red y abordar preguntas fundamentales. El hardware de red es esencial para la conectividad y comunicación eficiente entre dispositivos.
+            <!-- Cuadro amarillo borde violeta -->
+            <br>
+
+        </p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Las diferencias en los hardware de redes surgen de las variadas necesidades y contextos de implementación.&nbsp;<br><span style="color: rgb(1, 6, 20); font-weight: 400;">Las subredes, redes e interredes permiten organizar y optimizar la gestión de direcciones IP, facilitando la administración y seguridad de la red.</span></p>
+                <p style="color: rgb(1, 6, 20); font-size: large; padding-bottom: 16px; margin-top: -12px;"><br></p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20);">Imaginar un hardware de red con componentes intercambiables y personalizables implica una adaptabilidad a las necesidades específicas de una organización, optimizando recursos y mejorando la eficiencia. La adopción de enfoques de código abierto
+            en el diseño de hardware de red permitiría la colaboración comunitaria, impulsando la innovación y la transparencia.</p>
+        <p style="color: rgb(1, 6, 20);">Una estructura de red sin cables, imaginada por un desarrollador/a, podría emplear tecnologías como el 5G, el Wi-Fi 6 y la computación en la nube, cambiando radicalmente la forma en que se construyen y ofreciendo una conectividad más ágil y ubicua.</p>
+        <div class="col" style="color: rgb(1, 6, 20); border-left: 3px solid rgb(70, 14, 149); background-color: rgb(243, 236, 253); width: 92%; margin: 0px auto; border-radius: 8px;">
+
+            <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Y..., ¿para qué estos saberes técnicos?</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li></li>
+                <li><b><strong>Conectividad eficiente:</strong></b> El hardware de red es crucial para establecer y mantener una conectividad eficiente entre dispositivos. Comprender la infraestructura subyacente ayuda a los/as desarrolladores/as a optimizar
+                    la velocidad y la confiabilidad de las comunicaciones, fundamentales para el rendimiento de aplicaciones y sistemas.<br></li>
+                <li><b><strong>Diversidad de hardware:</strong></b> La comprensión de las diferencias en el hardware de red es esencial para seleccionar la infraestructura adecuada para diferentes contextos y necesidades. Factores como ancho de banda, protocolos
+                    de comunicación y tecnologías inalámbricas varían, y un/a desarrollador/a informado/a puede tomar decisiones adecuadas según los requisitos del proyecto.<br></li>
+                <li><b><strong>Organización y seguridad de redes:</strong></b> El conocimiento del hardware de red es vital para la implementación efectiva de estructuras como subredes, redes e interredes. Estas permiten una gestión ordenada de direcciones
+                    IP, mejorando la seguridad y la administración de la red. Un/a desarrollador/a competente puede diseñar arquitecturas de red que sean eficientes y seguras.<br></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <br>
+        <!--Fin Caja violeta-->
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179798"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179798/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Qué es el hardware de red?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>En principio, podemos decir que la arquitectura de red se refiere a la estructura y diseño organizativo de una red de computadoras o sistemas de comunicación. De este modo, se define cómo los componentes de la red se organizan, comunican y trabajan
+            juntos para lograr objetivos específicos. La arquitectura de red está compuesta tanto por hardware de red como por software de red y cuyo objetivo principal es optimizar el rendimiento, la eficiencia y la confiabilidad de la comunicación en
+            la red.<br><br></p>
+
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #9a3282; font-size: large; font-weight: 600">Hardware de red</p>
+            </div>
+            <div class="col" style="border-left: solid  #9a3282 2px;">
+                <p style=" color: #7746E2"><span class=" " style="font-size: large; color: #010614">Se trata de un equipo de red, que facilita la comunicación y la interacción entre dispositivos en una red informática.</span></p>
+            </div>
+        </div>
+        <!--Fin Caja Conclusión-->
+        <br>
+        <p></p>
+        <p><span class="" style="color: rgb(0, 61, 245);"><b><strong><span class="" style="font-size: x-large;">Clasificación del hardware de red</span></strong></b>
+            </span>
+        </p>
+        <p>No existe una clasificación aceptada en la que encajen todas las redes, pero hay dos que sobresalen de manera importante: <span class="sub_negrita"> la tecnología de transmisión </span> y <span class="sub_negrita">la escala</span>. Ambas, son
+            dos aspectos fundamentales que definen las características y el alcance de una red. La tecnología de transmisión se refiere a los medios y métodos utilizados para transmitir datos entre dispositivos en la red, mientras que la escala se refiere
+            al tamaño y alcance geográfico de la red.
+        </p>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179799"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179799/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Tecnología de transmisión</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20);">Hablando en sentido general, existen dos tipos de <span class="sub_negrita">tecnología de transmisión</span> que se emplean mucho en la actualidad:&nbsp;</p>
+        <ol style="color: rgb(1, 6, 20);">
+<!--Tabla simple dos columnas-->
+<table class="tabla-simple texto-principal" style="margin: 0 auto;">
+	  <!--Cantidad de columnas-->
+        <colgroup span="1" width="44%"></colgroup>
+         <colgroup span="1" width="2%"></colgroup>
+         <colgroup span="1" width="44%"></colgroup>
+
+							<!--Categorías-->
+              <tbody><tr>
+                   <td class="tabla-simple-categoria texto-centrado">Enlaces de punto a punto</td>
+                   <td></td>
+                   <td class="tabla-simple-categoria texto-centrado"><span>Enlaces de difusión</span>&nbsp;(<i>broadcast</i>)</td>
+               </tr>
+
+                 <!--filas-->
+               <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+	                     <ul>
+                           <li>Los enlaces de punto a punto conectan pares individuales de máquinas.<br></li><li>En una red formada por enlaces de punto a punto, los mensajes cortos (paquetes) pueden tener que visitar una o más máquinas intermedias para llegar del origen al destino.<br></li><li>Es posible usar varias rutas de distintas longitudes en las redes de punto a punto.<br></li><li>Es importante encontrar las rutas más adecuadas en las redes de punto a punto.<br></li><li>La transmisión punto a punto en donde solo hay un emisor y un receptor se le conoce como unidifusión (unicasting).</li>
+
+                        </ul>
+                     </td>
+                     <td></td>
+
+                     <td class="tabla-simple-fila1" valign="top">
+                         <ul>
+                            <li>En una red de difusión, todas las máquinas comparten el canal de comunicación.<br></li><li>Los paquetes enviados por una máquina son recibidos por todas las demás.<br></li><li>Cada paquete contiene un campo de dirección que especifica el destinatario.<br></li><li>Cuando una máquina recibe un paquete, verifica el campo de dirección para determinar si es para ella.<br></li><li>Las redes inalámbricas son un ejemplo común de enlaces de difusión.<br></li><li>En una red inalámbrica, la comunicación se comparte a través de una región de cobertura dependiente del canal inalámbrico y de la máquina que transmite.<br></li><li>Los sistemas de difusión también permiten enviar un paquete a todos los destinos mediante un código especial en el campo de dirección, conocido como difusión (broadcasting).<br></li><li>Algunos sistemas de difusión soportan la transmisión a un subconjunto de máquinas, lo que se conoce como multidifusión (multicasting).</li>
+
+                         </ul>
+                       </td>
+                   </tr>
+                </tbody></table></ol>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179808"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179808/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Diferencias entre punto a punto y difusión</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Este cuadro comparativo destaca las diferencias clave entre los enlaces de punto a punto y los enlaces de difusión, abordando sus características, modos de operación, campos de dirección y ejemplos de uso.</p>
+        <p>
+            <!--Tabla 3 columnas varias filas de colore-->
+        </p>
+        <table class="tabla-filaColores texto-principal" style="width: 80%; margin: 0 auto;">
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="40%"></colgroup>
+            <colgroup span="1" width="40%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado">Características</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">Enlace de punto a punto</td>
+                    <td class="tabla-filaColores-categoria texto-centrado"><span style="white-space: normal;"><span style="white-space:pre">	</span>Enlace de difusión</span><br></td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Definición</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Conecta pares individuales de máquinas.</td>
+                    <td class="texto-margen-tabla">Todas las máquinas comparten el canal de comunicación.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Rutas posibles</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Varias rutas de distintas longitudes.</td>
+                    <td class="texto-margen-tabla">n canal compartido, todos comparten la comunicación.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Transmisión</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Unidifusión (unicasting) - Un emisor, un receptor.</td>
+                    <td class="texto-margen-tabla">Difusión (broadcasting) - Un emisor, todos los receptores.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Campo de dirección<span style="white-space:pre">	</span><br></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Especifica la máquina receptora en cada paquete.</td>
+                    <td class="texto-margen-tabla">Especifica a quién se dirige cada paquete, ignorado por las otras máquinas.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Ejemplo común</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Redes punto a punto.</td>
+                    <td class="texto-margen-tabla">Redes inalámbricas.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Analogía<br></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Comunicación como una conversación privada.</td>
+                    <td class="texto-margen-tabla">Comunicación como alguien gritando en una sala, donde solo el destinatario responde.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Modo de operación</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Unidifusión (unicasting) - Un emisor, un receptor.</td>
+                    <td class="texto-margen-tabla">Difusión (broadcasting) - Un emisor, todos los receptores.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Difusión (Broadcasting)<br></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">No aplica.</td>
+                    <td class="texto-margen-tabla">Permite enviar un paquete a todos los destinos en la red.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Multidifusión (Multicasting)<br></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">No aplica.</td>
+                    <td class="texto-margen-tabla">Posibilidad de enviar un paquete a un subconjunto específico de máquinas.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Ejemplo de uso<br></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Mensajes entre dos dispositivos conectados directamente.</td>
+                    <td class="texto-margen-tabla">Red inalámbrica donde todos los dispositivos reciben los mensajes.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Flexibilidad de comunicación</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Menos flexibilidad, ruta directa entre origen y destino.</td>
+                    <td class="texto-margen-tabla">Mayor flexibilidad, permite la comunicación con múltiples destinatarios simultáneamente.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Eficiencia en la transmisión<br></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Eficiente para comunicación punto a punto.</td>
+                    <td class="texto-margen-tabla">Eficiente para la comunicación a múltiples destinatarios simultáneamente.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p></p>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179800"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179800/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Tecnología de redes de escala</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Investiguemos ahora la otra forma de clasificar las redes: <span class="sub_negrita">por su escala</span>. 
+<!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        </p><div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">La&nbsp;<span>distancia</span>&nbsp;es importante como&nbsp;<span>medida de clasificación</span>, ya que las distintas tecnologías se utilizan a diferentes escalas.<br><br></p>
+            </div>
+        </div>
+        <p>En la figura 1, se muestra la clasificación de los sistemas multiprocesadores con base en su tamaño físico. En la parte de arriba, están las redes de área personal, las cuales están destinadas a una persona. Después, se encuentran redes más grandes.
+            Estas se pueden dividir en:</p>
+        <ul>
+            <li><span class="sub_negrita">redes de área local</span>,</li>
+            <li><span class="sub_negrita">redes de área metropolitana</span>, y <br></li>
+            <li><span class="sub_negrita">redes de área amplia</span> <br></li>
+
+        </ul>Cada una con una escala mayor que la anterior.<p>Por último, a la conexión de dos o más redes se le conoce como <span class="sub_negrita">interred</span> (<i>internetwork</i>). La Internet de nivel mundial es sin duda el mejor ejemplo (aunque no el único) de una interred. La interred más grande
+            es la <span class="sub_negrita">Internet interplanetaria</span> que conecta redes a través del espacio.</p>
+
+        <br>
+
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179800/asas.png" alt="sd" width="600" height="568" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+
+
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 1: Clasificación de los sistemas multiprocesadores con base en su tamaño físico.</p>
+
+
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179801"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179801/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Redes de área personal</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Las <span class="sub_negrita">redes de área personal</span>, generalmente llamadas <span class="sub_negrita">PAN</span> (Personal Area Network) permiten a los dispositivos comunicarse dentro del rango de una persona.&nbsp;</p>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Ejemplo</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; ">Una red inalámbrica que conecta a una computadora con sus periféricos: monitor, teclado, mouse e impresora. Gracias al diseño de la red inalámbrica de corto alcance conocida como&nbsp;<span><b><strong><span class="">Bluetooth</span></strong></b></span>, se pueden conectar los dispositivos sin necesidad de cables. Este es otro ejemplo de PAN.&nbsp;</span>La idea es que si sus dispositivos tienen Bluetooth, no necesitará cables. Sólo hay que ponerlos en el lugar apropiado, encenderlos
+                    y trabajarán en conjunto.&nbsp;</p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+
+        <p><br>En la figura 1 se puede apreciar la configuración de la red PAN con bluetooth. Las redes PAN también se pueden construir con otras tecnologías que se comunican dentro de rangos cortos, como RFID en las tarjetas inteligentes y los libros de
+            las bibliotecas.
+            <br></p>
+
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179801/red.png" alt="sd" width="400" height="402" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+
+
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 1: Red de área personal.</p>
+
+
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179802"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179802/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Redes de área local</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>En una escala mayor, están las <span class="sub_negrita">redes de área local</span>, generalmente llamadas <span class="sub_negrita">LAN</span> (Local Area Networks). Son redes de propiedad privada que operan dentro de un solo edificio, como una
+            casa, oficina o fábrica.&nbsp;</p>
+        <p>Las redes LAN, se utilizan ampliamente para conectar computadoras personales y electrodomésticos con el fin de compartir recursos (por ejemplo, impresoras) e intercambiar información. Cuando las empresas utilizan redes LAN se les conoce como
+            <span class="sub_negrita">redes empresariales.</span>
+        </p>
+        <p><b><spanspan class="sub_negrita"><span style=""><span class="" style="color: rgb(0, 61, 245); font-size: x-large;">Componentes</span><span class="" style="color: rgb(0, 61, 245); font-size: x-large;">&nbsp;</span></span><br></spanspan></b></p>
+        <p>En estos sistemas, cada computadora tiene:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Un módem</span></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Una antena&nbsp;que utiliza para comunicarse con otras computadoras.</span></p>
+                    </div>
+                </div>
+                <p>En la mayoría de los casos, cada computadora se comunica con un dispositivo en el techo, como se muestra en la figura 1.&nbsp;</p>
+
+                <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+                    <div style="margin:16px">
+                        <p style="color: #5811BB; font-size: large; font-weight: 600">AP&nbsp;<span>(Punto de Acceso</span>, del inglés&nbsp;<i>Access Point</i>)</p>
+                        <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><span>A este último se lo denomina de esta forma así como enrutador inalámbrico o estación base. Su función consiste en transmitir</span>&nbsp;paquetes entre las computadoras inalámbricas y también entre éstas e Internet.&nbsp;</p>
+                    </div>
+                </div>
+                <p>Pero si hay otras computadoras que estén lo bastante cerca una de otra, se pueden comunicar directamente entre sí en una configuración de igual a igual.
+                </p>
+
+
+                <!-- inicio imagen -->
+                <br>
+                <div style="text-align: center;">
+                    <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179802/punto.png" alt="sd" width="500" height="449" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                    </p>
+                </div>
+
+                <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 1: Punto de acceso de red.</p>
+
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179813"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179813/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Topología</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+   
+                <p>La topología (es decir, la forma o disposición física en la que se conectan los dispositivos en una red de computadoras) de muchas redes LAN alámbricas, está basada en los <span class="sub_negrita">enlaces de punto a punto</span>. <br>
+                    <!-- Cuadro amarillo borde violeta -->
+                    <br>
+
+                </p>
+                <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+                    <div style="margin:16px">
+                        <p style="color: #5811BB; font-size: large; font-weight: 600">Ethernet</p>
+                        <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> El estándar IEEE 802.3, comúnmente conocido como&nbsp;<span>Ethernet</span>, es hasta ahora el tipo más común de LAN alámbrica. Cada computadora se comunica mediante el protocolo<b>&nbsp;Ethernet&nbsp;</b>y se conecta a una caja
+                            conocida como&nbsp;<span><i>switch</i></span>&nbsp;con un enlace de punto a punto. De aquí́ que tenga ese nombre. </p>
+                    </div>
+                </div>
+                <p>Un <i>switch </i>tiene varios <span class="sub_negrita">puertos</span>, cada uno de los cuales se puede conectar a una computadora. <br>El trabajo del <i>switch </i>es transmitir paquetes entre las computadoras conectadas a él, y utiliza
+                    la dirección en cada paquete para determinar a qué computadora se lo debe enviar. (Figura 2)</p>
+
+
+                <!-- inicio imagen -->
+                <br>
+                <div style="text-align: center;">
+                    <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179813/switch.png" alt="sd" width="500" height="446" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                    </p>
+                </div>
+
+                <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 2: Switch Ethernet.</p>
+
+                <br>
+            </div>
+        </div>
+    
+</div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179803"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179803/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Redes de área metropolitana</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Aprendamos ahora acerca de una red de escala aún mayor, la <span class="sub_negrita">Red de Área Metropolitana, o MAN</span> (Metropolitan Area Network), que cubre toda una ciudad.&nbsp;</p>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Ejemplo</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; "><span>El ejemplo más popular&nbsp;</span>de una MAN es el de las redes de televisión por cable disponibles en muchas ciudades.</span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p><br></p>
+        <p><span class="" style="color: rgb(0, 61, 245); font-size: x-large;"><b><strong>Un poco de historia</strong></b></span><br></p>
+        <p>Estos sistemas surgieron a partir de los primeros sistemas de antenas comunitarias que se utilizaban en áreas donde la recepción de televisión por aire era mala. En esos primeros sistemas, se colocaba una gran antena encima de una colina cercana
+            y después se canalizaba una señal a las casas de los suscriptores. </p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Red de área metropolitana</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Cuando Internet empezó́ a atraer una audiencia masiva, los operadores de red de TV por cable empezaron a darse cuenta de que, con unos cambios en el sistema, podían proveer servicio de Internet de dos vías en partes no usadas del espectro.
+                    En ese momento,&nbsp;<span>el sistema de TV por cable</span>&nbsp;empezó́ a transformarse, de ser una simple forma de distribuir televisión, para convertirse en una red de área metropolitana.</p>
+            </div>
+        </div>
+
+
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179803/Casa.png" alt="sd" width="600" height="421" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 1: Red de área metropolitana.</p>
+
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179804"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179804/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Redes de área amplia</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>En este apartado, nos focalizaremos en la <span class="sub_negrita">Red de Área Amplia, o WAN </span> (<i>Wide Area Network</i>), es decir aquella que abarca una extensa área geográfica, por lo general un país o continente.&nbsp;</p>
+        <p><span class="" style="color: rgb(51, 51, 51);">Por ejemplo, como se
+            ilustra en la figura 1,</span><span class="" style="color: rgb(51, 51, 51);"> </span>la WAN, es una red que conecta las oficinas en Perth, Melbourne y Brisbane.&nbsp;</p>
+        <p><span><span style=""><b><strong><span class="" style="color: rgb(0, 61, 245); font-size: x-large;">Características</span></strong></b></span></span><br></p>
+        <p></p>
+        <ul>
+            <li>Cada una de estas oficinas, contiene computadoras destinadas a ejecutar programas de usuario (aplicaciones).&nbsp;</li>
+            <li>Seguiremos el uso tradicional y llamaremos a estas máquinas <span class="sub_negrita">hosts</span>.&nbsp;</li>
+            <li>Al resto de la red, que conecta estos <i>hosts, </i>se le denomina <span class="sub_negrita">subred de comunicación</span>, o para abreviar solo subred.&nbsp;</li>
+            <li>La tarea de la
+                <span class="sub_negrita">subred</span> es transportar los mensajes de <i>host </i>a <i>host</i>, al igual que el sistema telefónico transporta las palabras (en realidad sólo los sonidos) de la persona que habla a la persona que escucha.
+                </li>
+        </ul>
+        <p></p>
+
+
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179804/Mapa.png" alt="sd" width="600" height="423" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 1: Red de área amplia.</p>
+
+        <!-- Fin imagen -->
+
+
+        <p><br></p>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179809"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179809/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Componentes de las redes WAN</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+
+        <!-- Fin imagen -->
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">En la mayoría de las <span class="sub_negrita">redes WAN</span>, la subred cuenta con <span class="sub_negrita">dos componentes distintos</span>:&nbsp;</p>
+        <!--Tabla simple dos columnas-->
+        <table class="tabla-simple texto-principal" style="color: rgb(1, 6, 20); font-size: large; margin: 0px auto;">
+            <!--Cantidad de columnas-->
+            <colgroup span="1" width="44%"></colgroup>
+            <colgroup span="1" width="2%"></colgroup>
+            <colgroup span="1" width="44%"></colgroup>
+
+            <!--Categorías-->
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado">Líneas de transmisión</td>
+                    <td></td>
+                    <td class="tabla-simple-categoria texto-centrado">Elementos de conmutación</td>
+                </tr>
+
+                <!--filas-->
+                <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li><span>Las líneas de transmisión mueven bits entre maquinas</span>.&nbsp;</li>
+                            <li>Se pueden fabricar a partir de alambre de cobre, fibra óptica o incluso enlaces de radio.&nbsp;</li>
+                            <li>Como la mayoría de las empresas no poseen líneas de transmisión, tienen que alquilarlas a una compañía de telecomunicaciones.&nbsp;</li>
+
+                        </ul>
+                    </td>
+                    <td></td>
+
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>Los&nbsp;<span>elementos de<i>&nbsp;conmutación o switches</i></span>&nbsp;son computadoras especializadas que conectan dos o más líneas de transmisión.&nbsp;</li>
+                            <li>Cuando los datos llegan por una línea entrante, el elemento de conmutación debe elegir una línea saliente hacia la cual reenviarlos.&nbsp;<br></li>
+                            <li>En el pasado, estas computadoras de conmutación han recibido varios nombres; ahora se conocen como&nbsp;<span>enrutador</span>. Por ejemplo; el término&nbsp;<b>subred</b>, implica una colección de enrutadores y líneas de comunicación
+                                que transmitían paquetes desde el&nbsp;<i>host&nbsp;</i>de origen hasta el&nbsp;<i>host&nbsp;</i>de destino.</li>
+
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul style="color: rgb(1, 6, 20); font-size: large;">
+        </ul>
+        <p style="color: rgb(1, 6, 20); font-size: large;">
+        </p>
+        <ul style="color: rgb(1, 6, 20); font-size: large;">
+            <li>En una WAN, los <i>hosts </i>y la subred pertenecen a distintas personas, quienes actúan también como operadores. Al separar los aspectos exclusivos de comunicación (la subred) de los aspectos relacionados con la aplicación (los <i>hosts</i>)
+                se simplifica en forma considerable el diseño de la red en general. </li>
+            <li>En una WAN, los enrutadores por lo general, conectan distintos tipos de tecnología de red. Esto significa que muchas redes WAN serán de hecho <span class="sub_negrita">interredes</span>, o redes compuestas formadas por más de una red.<br></li>
+        </ul>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Ejemplo</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; "><span>Si una empresa conecta sus oficinas a internet, esta variación de WAN</span>&nbsp;le permite hacer conexiones entre las oficinas como enlaces virtuales que utilizan la capacidad subyacente
+                    de Internet.&nbsp;</span>
+                </p>
+            </div>
+        </div>
+        <br style="font-size: 0.9375rem;">
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179810"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179810/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Red Privada Virtual</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+
+        <!-- Fin imagen -->
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">A este arreglo, que se muestra en la siguiente figura 2, se le denomina <span class="sub_negrita">VPN (Red Privada Virtual)</span>, del inglés Virtual Private Network).&nbsp;<br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">A continuación mencionamos algunas ventajas y desventajas de una VPN:</p>
+        <!--Tabla 2 columnas varias filas de colore-->
+        <table class="tabla-filaColores texto-principal" style="width: 90%; margin: 0 auto;">
+            <colgroup span="1" width="50%"></colgroup>
+            <colgroup span="1" width="50%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado">Virtualización</td>
+                    <td class="tabla-filaColores-categoria texto-centrado"> Falta de control de recursos subyacentes</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">Proporciona flexibilidad en la reutilización de un recurso, como la conectividad a Internet.</li>
+                        </ul>
+                    </td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">Carece de control sobre los recursos subyacentes.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">Permite una fácil conexión de nuevas ubicaciones, como una cuarta oficina.</li>
+                        </ul>
+                    </td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">La capacidad de la VPN puede variar según el servicio de Internet contratado, a diferencia de una línea dedicada donde la capacidad está clara.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="color: rgb(1, 6, 20); font-size: large; text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179810/red%202.png" alt="red 2" width="600" height="391" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="color: rgb(1, 6, 20); font-size: medium; text-align: center;">Figura 1: Red privada virtual.</p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179811"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179811/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Subred (ISP) Proveedor de servicios de Internet</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+
+        <!-- Fin imagen -->
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">La <span class="sub_negrita">segunda variación</span> es que una empresa distinta puede operar la subred. Al operador de la subred se le conoce como <span class="sub_negrita">proveedor de servicios de red</span> y las oficinas son sus clientes.
+            En la figura 2 se muestra esta estructura. El operador de la subred se conecta también con otros clientes, siempre y cuando puedan pagar y les pueda proveer servicio.<br></p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">En este sentido, como sería un servicio de red decepcionante si los clientes sólo pudieran enviarse paquetes entre sí, el operador de la subred también puede conectarse con otras redes que formen parte de Internet.
+            <!-- Cuadro amarillo borde violeta -->
+            <br>
+
+        </p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">ISP (Proveedor de Servicios de Internet)</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Es el operador de subred llamado ISP, del inglés&nbsp;<i>Internet Service Provider</i>) y la subred es una&nbsp;<span>red ISP</span>. Los clientes que se conectan al ISP reciben servicio de Internet. </p>
+            </div>
+        </div>
+        <br>
+        <div style="color: rgb(1, 6, 20); font-size: large; text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179811/red%203.png" alt="red 3" width="600" height="397" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="color: rgb(1, 6, 20); font-size: medium; text-align: center;">Figura 2: Red con proveedor de servicio de internet.</p>
+
+        <span class="" style="font-size: x-large;"><b><span class="" style="color: rgb(0, 61, 245);">Redes WAN y tecnologías inalámbricas</span></b>
+        </span><br>
+
+        <!-- Fin imagen -->
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <ul>
+            <li>
+                <p style="font-size: 0.9375rem; display: inline !important;"><span class="" style="font-size: large; color: rgb(51, 51, 51);">En las redes WAN, múltiples líneas de transmisión conectan enrutadores.</span></p>
+            </li>
+            <li><span style="font-size: large; color: rgb(51, 51, 51);" class="">Si dos enrutadores que no comparten una línea de transmisión desean comunicarse, deben hacerlo en forma indirecta a través de otros enrutadores.</span></li>
+            <li><span style="font-size: large; color: rgb(51, 51, 51);" class="">E</span><span class="" style="font-size: large; color: rgb(51, 51, 51);">l proceso de determinar la ruta óptima en una red se llama algoritmo de enrutamiento.</span></li>
+            <li><span style="font-size: large; color: rgb(51, 51, 51);" class="">Hay varios algoritmos de enrutamiento disponibles.</span></li>
+            <li><span class="" style="font-size: large; color: rgb(51, 51, 51);">La decisión de hacia dónde enviar el siguiente paquete se llama algoritmo de reenvío. Existen múltiples algoritmos de reenvío.</span></li>
+            <li><span class="" style="font-size: large; color: rgb(51, 51, 51);">Las redes WAN inalámbricas, como las de satélite, utilizan tecnologías inalámbricas.</span></li>
+            <li><span style="font-size: large; color: rgb(51, 51, 51);" class="">En los sistemas de satélite, cada computadora en la Tierra tiene una antena a través de la cual es posible enviar y recibir datos de un satélite en órbita.</span></li>
+            <li><span class="" style="font-size: large; color: rgb(51, 51, 51);">Las redes de satélite son de difusión por naturaleza.</span></li>
+            <li><span class="" style="font-size: large; color: rgb(51, 51, 51);">Son útiles cuando se necesita la propiedad de difusión.</span><br><br></li>
+        </ul>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179805"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179805/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-2.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Qué es una interred?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Por último, abordaremos la interredes. ¿A qué nos referimos con este término? </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Existen muchas redes en el mundo, a menudo con distintos componentes de hardware y software. Por lo general, las personas conectadas a una red se quieren comunicar con las personas conectadas a una red distinta; para lograrlo, es necesario
+            <span class="sub_negrita">conectar redes distintas que con frecuencia son incompatibles</span>.&nbsp;</p>
+        <!--Inicio Caja definición-->
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div class="row row-cols-auto" style="color: rgb(84, 72, 173); font-size: large;">
+            <div style="">
+                <p style="margin-right: 10px; margin-left: 20px;"><b><strong>Interred o internet</strong></b></p>
+            </div>
+            <div class="col caja-definiciones" style="color: rgb(1, 6, 20); border-left: 2px solid rgb(84, 72, 173);">
+                <p><span class="" style="font-size: large; color: #5448ad;"><span class="" style="color: #010614;"></span><span class="" style="color: rgb(51, 51, 51);">Es la denominación que se le da a una colección de redes interconectadas . Utilizaremos estos términos en un sentido genérico, en contraste a la red Internet mundial (que es una internet específica), a la cual nos referiremos siempre con I mayúscula. Internet usa redes de ISP para conectar redes empresariales, domésticas y muchos otros tipos más.</span>
+                    <span class="" style="color: rgb(51, 51, 51);"></span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja definición-->
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(0, 61, 245);"><b><strong><span class="" style="font-size: x-large;"><br>Diferencias entre subredes, redes e interredes</span></strong>
+            </b>
+            </span><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">A menudo se confunden los conceptos pero para diferenciarlos es necesario considerar:&nbsp;</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="background-color: rgb(250, 250, 250);">
+
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Subred:</span> tiene más sentido en el contexto de una red de área amplia, en donde se refiere a la colección de enrutadores y líneas de comunicación que pertenecen al operador de red.&nbsp;<br>Como
+                            analogía, el sistema telefónico está compuesto por oficinas de conmutación telefónica conectadas entre sí mediante líneas de alta velocidad y conectadas a los hogares y negocios mediante líneas de baja velocidad. Estas líneas
+                            y equipos, que pertenecen y son administradas por la compañía telefónica, forman la subred del sistema telefónico. Los teléfonos en sí (los&nbsp;<i>hosts&nbsp;</i>en esta analogía) no forman parte de la subred<br></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Red:</span> se forma al combinar una subred y sus&nbsp;<i>hosts</i>. Sin embargo, la palabra&nbsp;<b>red&nbsp;</b>a menudo también se utiliza en un sentido amplio.</p>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179812"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179812/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-2.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Constitución de la interred</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Ahora analicemos detalladamente cómo está constituida una interred. Sabemos que una interred se forma cuando hay distintas redes interconectadas. A nuestro parecer, conectar una LAN y una WAN o conectar dos redes LAN es la forma usual de formar
+            una interred, pero la industria no ha llegado a un buen acuerdo en cuanto a la terminología utilizada en esta área.&nbsp;</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Hay <span class="sub_negrita"> dos reglas prácticas</span> y útiles a este respecto.<br></p>
+        <ul style="color: rgb(1, 6, 20); font-size: large;">
+            <li><span class="sub_negrita">En primer lugar</span>, si varias organizaciones han pagado para construir distintas partes de la red y cada una se encarga de dar mantenimiento a la parte que le corresponde, entonces tenemos una interred en vez
+                de una sola red.&nbsp;<span style=" color:#1345CD; "></span></li>
+            <li><span class="sub_negrita">En segundo lugar</span>, si la tecnología subyacente es distinta en diferentes partes (por ejemplo, difusión frente punto a punto y alámbrica frente a inalámbrica), es probable que sea una interred. </li>
+        </ul>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: x-large;"><b><strong><span class="" style="color: rgb(0, 61, 245);">Formas de conexión de redes</span></strong>
+            </b>
+            </span><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Para profundizar en este tema, hablaremos sobre la forma en que se pueden conectar dos redes distintas.&nbsp;</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="background-color: rgb(250, 250, 250);">
+
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Puertas de enlace:&nbsp;<span style="font-weight: 400;">El nombre general para una máquina que realiza una conexión entre dos o más redes y provee la traducción necesaria, tanto en términos de hardware como de software, es&nbsp;</span>
+                            <span style="font-weight: 400;">puerta de enlace</span><span style="font-weight: 400;">&nbsp;(</span><i style="font-weight: 400;">gateway</i><span style="font-weight: 400;">). Las puertas de enlace se distinguen por la capa en la que operan en la jerarquía de protocolos. Más adelante, discutiremos sobre las capas y las jerarquías de protocolos, pero por ahora, basta con imaginar que las capas superiores están más relacionadas con las aplicaciones (como la web), mientras que las capas inferiores están más relacionadas con los enlaces de transmisión (como Ethernet).</span></span><br>
+                        </p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-12" style="margin: 0% auto">
+                                    <div class="box ">
+                                        <div class="container-sm" ;="" style="text-align: left">
+                                            <div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">Como el beneficio de formar un internet es para conectar computadoras entre distintas redes, no es conveniente usar una puerta de enlace de una capa demasiado baja, ya que no podremos realizar conexiones entre
+                                                distintos tipos de redes. Tampoco es conveniente usar una puerta de enlace de una capa demasiado alta, o de lo contrario la conexión solo funcionará para ciertas aplicaciones.&nbsp;<br></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Capa de red:&nbsp;</span>A la capa en la parte media que resulta ser la&nbsp;<b>ideal&nbsp;</b>se le denomina comúnmente&nbsp;<span>capa de red</span>; un enrutador es una puerta de enlace que conmuta
+                            paquetes en la capa de red. Así, para detectar una interred o internet hay que buscar una red que tenga enrutadores.</p>
+                    </div>
+                </div>
+            </div>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <ul style="color: rgb(1, 6, 20); font-size: large;">
+            </ul>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <!--Inicio caja Conclusión-->
+            <div class="row row-cols-auto" style="color: rgb(1, 6, 20); font-size: large;">
+                <div>
+                    <p style="margin-right: 10px;  margin-left: 16px; color: #5448ad; font-size: large; font-weight: 600">En conclusión:</p>
+                </div>
+                <div class="col" style="border-left: solid  #5448ad 2px;">
+                    <p style=" color: #5448ad"><span class=" " style="font-size: large; ">El hardware de red es la infraestructura física necesaria para establecer y mantener una red de computadoras. Cada componente tiene un papel específico en la transmisión y el procesamiento de datos para permitir la comunicación y conectividad entre los dispositivos en la red.</span></p>
+                </div>
+            </div>
+            <!--Fin Caja Conclusión-->
+            <p style="color: rgb(1, 6, 20); font-size: large;"><br>Como se puede ver, si bien, no existe una clasificación única de las redes, esta clasificación basada en la tecnología de transmisión y la escala es una de las más utilizadas y relevantes en el campo de las redes de computadoras debido
+                a su simplicidad y aplicabilidad en la mayoría de los casos.<br></p>
+
+            <!-- nada puede haber abajo -->
+            <br>
+        </div>
+    </div>
+    <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179807"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659474/mod_book/chapter/179807/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-2.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Checkpoint</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+
+
+
+<p>Luego de la lectura de esta semana, te invitamos a que revises los contenidos pasando por el <a href="https://aulasvirtuales.bue.edu.ar/mod/quiz/view.php?id=649475&amp;forceview=1"><span class="" style="color: rgb(0, 46, 184);"><u>Check Point.</u></span></a></p>
+<p>De esta forma, podrás verificar si has comprendido las ideas principales.</p>
+<p>¡No dudes en volver a este libro en caso que necesites repasar algún concepto!</p>
+
+      
+      <!-- nada abajo -->
+</div>
+    </div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[649458,649459,649461,649462,649463,649465,649466,649467,649469,649471,649473,649476,676491,680812,680813,681319]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2659474, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1744419736); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random67f9cc5fedd972'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random67f9cc5fedd972'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
