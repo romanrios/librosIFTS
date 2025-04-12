@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S4_ L: Comunicación de requerimientos | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1744219673/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S4_ L: Comunicación de requerimientos | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1744219673_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"urtOajjkP7","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1744219673","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21036,"courseContextId":2643294,"contextid":2657848,"contextInstanceId":647996,"langrev":1743837844,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21036 context-2657848 cmid-647996 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1744219673/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S4_ L: Comunicación de requerimientos</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Taller de Comunicación 2° A 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S4_ L: Comunicación de requerimientos
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        sábado, 12 de abril de 2025, 12:16
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21036&amp;section=5" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_apertura_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+  <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"></path>
+</svg>
+                    </div>
+                    <p>Luz</p>
+                </section>
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/journal/view.php?id=647997" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_desarrollo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+  <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"></path>
+  <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"></path>
+  <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+</svg>
+                        </div>
+                        <p>Cámara</p>
+
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/forum/view.php?id=647998" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
+  <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z"></path>
+</svg>
+                        </div>
+                        <p>Acción</p>
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. ¡Luz!" class="font-weight-bold text-decoration-none" href="#ch176092">1. ¡Luz!</a></li><li><a title="2. Dispositivos de comunicación" class="font-weight-bold text-decoration-none" href="#ch176082">2. Dispositivos de comunicación</a><ul><li><a title="2.1. Características de la comunicación oral: elementos y tipos" class="text-decoration-none" href="#ch176083">2.1. Características de la comunicación oral: elementos y tipos</a></li><li><a title="2.2. Características de la comunicación escrita: definición y tipos" class="text-decoration-none" href="#ch176084">2.2. Características de la comunicación escrita: definición y tipos</a></li></ul></li><li><a title="3. Requerimientos" class="font-weight-bold text-decoration-none" href="#ch176085">3. Requerimientos</a></li><li><a title="4. PNL: método del área de programación" class="font-weight-bold text-decoration-none" href="#ch176086">4. PNL: método del área de programación</a><ul><li><a title="4.1. ¿En qué consiste la supresión?" class="text-decoration-none" href="#ch176090">4.1. ¿En qué consiste la supresión?</a></li><li><a title="4.2. ¿Por qué generalizamos?" class="text-decoration-none" href="#ch176087">4.2. ¿Por qué generalizamos?</a></li><li><a title="4.3. ¿Cómo funciona la distorsión?" class="text-decoration-none" href="#ch176088">4.3. ¿Cómo funciona la distorsión?</a></li></ul></li><li><a title="5. El metamodelo" class="font-weight-bold text-decoration-none" href="#ch176089">5. El metamodelo</a></li><li><a title="6. Comunicar como un analista en sistemas" class="font-weight-bold text-decoration-none" href="#ch176091">6. Comunicar como un analista en sistemas</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176092"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176092/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Luz: Comunicar requerimientos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p></p>
+        <p>En la sala 4 nos proponemos:</p>
+
+
+
+        <!-- Inicio caja-->
+
+        <div class="" style="width: 70%;  margin: 0 auto; box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; ">
+
+            <div class="row">
+
+                <div class="col-1" style="background-color: #52917A; border-radius: 4px 0px 0px 4px; text-align: center; color: white">
+
+                    <p style="font-weight: 600; margin-top: 16px">M</p>
+                    <p style="font-weight: 600; margin-top: -18px">E</p>
+                    <p style="font-weight: 600; margin-top: -18px">T</p>
+                    <p style="font-weight: 600;margin-top: -18px">A</p>
+
+                </div>
+
+
+
+                <div class="col-11 d-flex " style="background-color: #F2F8F6;border: 1px solid #52917A; border-radius: 0px 4px 4px 0px;">
+
+
+                    <p style="margin: auto">"<span id="docs-internal-guid-672ab8a9-7fff-db68-7b7d-474c7dc80f94">Implementar prácticas de interpretación de los requerimientos para el desarrollo de un sistema de software, incluso cuando no se expresan con precisión.</span>"</p>
+                </div>
+
+
+            </div>
+        </div><br>
+        <!-- Fin Caja-->
+
+
+        <p>En la trama cautivadora de la comunicación en el&nbsp; desarrollo de software, nos sumergimos en la implementación de prácticas de interpretación de requerimientos, incluso en situaciones de imprecisión. Como el llamado de "¡LUZ!" que anticipa una escena crucial, esta acción estratégica ilumina la ruta hacia la comprensión clara y la ejecución efectiva.&nbsp;</p><p>La sala se despliega en tres actos fundamentales: la identificación y producción de requerimientos, su circulación a lo largo del proceso y su consumación en el desarrollo del sistema. Aquí, la habilidad de interpretar sutilmente se convierte en nuestra guía, permitiéndonos tejer una narrativa coherente incluso cuando los detalles son difusos.&nbsp;</p><p>Prepárense para ser los/as protagonistas de esta trama de interpretación, donde cada escena es una oportunidad para llevar a cabo el desarrollo del software con precisión y éxito. ¡Acción!</p>
+        <p>¿Están listos/as?</p>
+        <p>¡Comencemos!</p>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176082"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="">
+        <div style="color: rgb(1, 6, 20); font-size: large; display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176082/_%20%2815%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><span id="docs-internal-guid-2e1b41a7-7fff-9498-3ca1-9b8327028117">Comunicación oral y escrita</span></p>
+            </div>
+        </div>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span style="color: rgb(1, 6, 20); font-size: large;"><span><span style=""><br></span></span>
+                    </span>
+                </p>
+                <p style="margin-right: 10px; margin-left: 20px"><span style="color: rgb(1, 6, 20); font-size: large;"><span><span id="docs-internal-guid-da261d91-7fff-05eb-e8f4-358dfa8f390d" style=""><span id="docs-internal-guid-321634a0-7fff-2513-8811-22b6b1e79f59"><span class="" style="font-size: large; color: rgb(51, 51, 51);">La comunicación oral es un tipo de comunicación que se establece entre <span class="sub_negrita">dos o más personas</span>                    que intercambian ideas, pensamientos y emociones a través del lenguaje hablado. Por otro lado, la comunicación escrita es un tipo de comunicación que permite expresar ideas, pensamientos y emociones a través de los signos que conforman
+                    el lenguaje escrito.</span>
+                    </span>
+
+
+                    </span>
+                    </span>
+                    </span>
+                </p>
+                <p style="margin-right: 10px; margin-left: 20px"><span style="color: rgb(1, 6, 20); font-size: large;"><span><span style=""><span><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></span>
+                    </span>
+                    </span>
+                    <span style=" color:#1345CD; font-weight: 600">Algunas definiciones</span></span>
+                </p>
+                <p style="margin-right: 10px; margin-left: 20px"><span style="color: rgb(1, 6, 20); font-size: large;"><span><span style=""><span><span class="" style="font-size: large; color: rgb(51, 51, 51);">La distinción entre comunicación oral y escrita tiene que ver con los medios que se utilizan para expresarse, con la posibilidad de recibir un <i>feedback</i> o respuesta del interlocutor y con la naturaleza efímera o permanente de dicha comunicación, entre otras diferencias.</span></span>
+                    </span>
+                    <!--Tabla 3 columnas varias filas de colore-->
+                    </span>
+                    </span>
+                </p>
+                <table class="tabla-filaColores texto-principal" style="width: 80%; margin: 0 auto;">
+                    <colgroup span="1" width="20%"></colgroup>
+                    <colgroup span="1" width="40%"></colgroup>
+                    <colgroup span="1" width="40%"></colgroup>
+                    <tbody>
+                        <tr>
+                            <td class="tabla-filaColores-categoria texto-centrado"><br></td>
+                            <td class="tabla-filaColores-categoria texto-centrado">Comunicación oral</td>
+                            <td class="tabla-filaColores-categoria texto-centrado">Comunicación escrita</td>
+                        </tr>
+
+                        <tr class="tabla-filaColores-par">
+                            <td class="texto-margen-tabla texto-centrado">Definición</td>
+                            <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Intercambio de ideas entre dos o más personas a través del lenguaje hablado.</td>
+                            <td class="texto-margen-tabla">Es la expresión de ideas en lenguaje escrito.</td>
+                        </tr>
+                        <tr class="tabla-filaColores-inpar">
+                            <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Elementos que la conforman</td>
+                            <td class="texto-margen-tabla texto-centrado">
+                                <ul>
+                                    <li style="text-align: left;">Emisor.</li>
+                                    <li style="text-align: left;">Receptor.</li>
+                                    <li style="text-align: left;">Mensaje.</li>
+                                    <li style="text-align: left;">Canal.</li>
+                                    <li style="text-align: left;">Código.</li>
+                                    <li style="text-align: left;">Retroalimentación.</li>
+                                    <li style="text-align: left;">Codificación.</li>
+                                    <li style="text-align: left;">Descodificación.</li>
+                                    <li style="text-align: left;">Contexto.
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="texto-margen-tabla">
+                                <ul>
+                                    <li>Emisor.</li>
+                                    <li>Receptor.</li>
+                                    <li>Mensaje.</li>
+                                    <li>Canal.</li>
+                                    <li>Código.</li>
+                                    <li>Retroalimentación.</li>
+                                    <li>Codificación.</li>
+                                    <li>Descodificación.</li>
+                                    <li>Contexto.</li>
+                                    <li>Estructura.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="tabla-filaColores-par">
+                            <td class="texto-margen-tabla texto-centrado">Características</td>
+                            <td class="texto-margen-tabla texto-centrado">
+                                <ul>
+                                    <li style="text-align: left;">Efímera.</li>
+                                    <li style="text-align: left;">Instantánea.</li>
+                                    <li style="text-align: left;">Depende de la capacidad de habla y el conocimiento de la lengua.</li>
+                                </ul>
+                            </td>
+                            <td class="texto-margen-tabla">
+                                <ul>
+                                    <li>Permanente.</li>
+                                    <li>Diferida.</li>
+                                    <li>Depende de habilidades de lectura y escritura.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="tabla-filaColores-inpar">
+                            <td class="texto-margen-tabla texto-centrado">Tipos</td>
+                            <td class="texto-margen-tabla texto-centrado">
+                                <ul>
+                                    <li style="text-align: left;">Espontánea.</li>
+                                    <li style="text-align: left;">Planificada.</li>
+                                </ul>
+                            </td>
+                            <td class="texto-margen-tabla">
+                                <ul>
+                                    <li>Mensajes instantáneos.</li>
+                                    <li>Correo electrónico.</li>
+                                    <li>Páginas web.</li>
+                                    <li>Diarios, libros impresos y digitales.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <p></p>
+                <p style="margin-right: 10px; margin-left: 20px"><span style="color: rgb(1, 6, 20); font-size: large;"><span><span style=""><span><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></span>
+                    </span>
+                    </span>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176083"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176083/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 20px 8px 20px ; margin-left:-1.1%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Elementos de la oralidad</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>La comunicación oral es efímera. Si no quedan registros (grabaciones de audio, por ejemplo), el mensaje puede perderse o tergiversarse. La comunicación termina cuando los sonidos emitidos por la voz en forma de palabras dejan de escucharse.</p>
+
+
+        <p><br></p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176083/Captura%20de%20Pantalla%202023-09-25%20a%20la%28s%29%2015.52.17.png" alt="sd" width="540" height="353" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);"><br></p>
+
+        <!-- Fin imagen -->
+        <span style=" color:#1345CD; font-weight: 600">¿Cómo se caracteriza la comunicación oral?</span>
+
+        <p>Depende del lenguaje oral: por lo tanto, el aparato fonador, responsable de la voz, debe funcionar de manera óptima en términos de tono, volumen, velocidad, pausas, etc. Lo mismo ocurre con el sistema auditivo, ya que es el responsable de recibir
+            el mensaje.</p>
+        <p>El proceso comunicacional ocurre en tiempo real: el emisor puede obtener una respuesta inmediata de su receptor, lo cual incluye la retroalimentación o <i>feedback</i>. Puede apoyarse en otros recursos para complementar la comunicación. El lenguaje corporal,
+            los gestos, muecas, sonidos onomatopéyicos e incluso la apariencia del emisor pueden servir para darle mayor énfasis al mensaje.
+        </p>
+        <br>
+        <span style=" color:#1345CD; font-weight: 600">Tipos de comunicación oral</span>
+        <p>Esta puede ser espontánea o más bien planificada.</p>
+        <p></p>
+        <ul>
+            <li><span class="" style="color: rgb(0, 61, 245);">Espontánea:</span> es el tipo de comunicación que tenemos la mayor parte del tiempo. Ocurre cuando el emisor envía un mensaje de manera no deliberada a un receptor y este le responde. Generalmente,
+                se utiliza para comunicar ideas, reflexiones o estados de ánimo.</li>
+            <li><span class="" style="color: rgb(0, 61, 245);">Planificada</span>: es el tipo de comunicación que, por su naturaleza, requiere una estructura previa. La planificación del mensaje y del proceso comunicacional puede tener objetivos informativos,
+                de entretenimiento, e incluso personales, pero siempre tendrán una pauta con un inicio y un fin determinado.
+            </li>
+        </ul>
+        <p></p>
+        <br>
+        <p>A su vez, la comunicación oral planificada puede ser:</p>
+        <p></p>
+        <ul>
+            <li><span class="" style="color: rgb(0, 61, 245);">Unidireccional:</span> cuando un emisor se dirige a un receptor o grupo de receptores. Un ejemplo de comunicación oral planificada de tipo unidireccional es cuando un/a profesor/a da una clase.</li>
+            <li><span class="" style="color: rgb(0, 61, 245);">Multidireccional</span>: cuando los roles de emisores y receptores no son estáticos, sino que se van intercambiando continuamente.
+            </li>
+        </ul>
+        <p></p>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176084"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176084/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 20px 8px 20px ; margin-left:-1.1%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Qué es la comunicación escrita?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20);">Es una forma de comunicación que permite la expresión de ideas, pensamientos, informaciones u opiniones a través del lenguaje escrito. Esto quiere decir que la comunicación escrita se expresa en palabras, oraciones o párrafos que deben ser codificados
+            en un lenguaje común para todos los involucrados. Si el emisor o el receptor desconocen las reglas de la escritura, la comunicación habrá fallado. Esto supone también tener habilidades de lectura, para poder recibir e interpretar el mensaje.</p>
+
+
+        <p style="color: rgb(1, 6, 20);"><br></p>
+        <div style="color: rgb(1, 6, 20); text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176084/Frame%20127.png" alt="sdyty" width="750" height="438" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="color: rgb(1, 6, 20); text-align: center; font-size: medium;"><br></p>
+
+        <!-- Fin imagen -->
+        <span style="color: rgb(19, 69, 205); font-weight: 600;">¿Cuáles son los elementos de la comunicación escrita?</span>
+
+        <p style="color: rgb(1, 6, 20);">Si bien el emisor, el receptor, el mensaje, el código, etc. son elementos esenciales de todo proceso comunicacional, la comunicación escrita tiene otros factores adicionales que son necesarios para que el proceso de intercambio de información
+            pueda darse:</p>
+        <li style="color: rgb(1, 6, 20);"><span class="" style="color: rgb(0, 61, 245);">Estructura:</span> se refiere a la planificación del contenido, es decir, a qué se quiere comunicar.</li>
+        <li style="color: rgb(1, 6, 20);"><span class="" style="color: rgb(0, 61, 245);">Estilo</span>: es la forma en la que el mensaje será comunicado, es decir, cómo se va a comunicar.</li>
+        <br>
+        <span style="color: rgb(19, 69, 205); font-weight: 600;">¿Existen distintos tipos de comunicación escrita?</span>
+        <p style="color: rgb(1, 6, 20);">La comunicación escrita tiene tantos tipos como soportes físicos existen. Por eso, lo natural es que a medida que avance la tecnología, se creen nuevos soportes y formatos que sustituyan a antiguas formas de comunicarse.</p>
+        <p style="color: rgb(1, 6, 20);">Actualmente, estos son algunos de los tipos de comunicación escrita más comunes:
+        </p>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <ul style="">
+            <li style=""><span class="" style="color: rgb(51, 51, 51);">Correo electrónico.</span></li>
+            <li style=""><span class="" style="color: rgb(51, 51, 51);">Libros (impresos y electrónicos).</span></li>
+            <li style=""><span class="" style="color: rgb(51, 51, 51);">Documentos legales.</span></li>
+            <li style=""><span class="" style="color: rgb(51, 51, 51);">Diarios (impresos y digitales).</span></li>
+            <li style=""><span class="" style="color: rgb(51, 51, 51);">Páginas web (informativas, de entretenimiento, personales, etc.)</span></li>
+        </ul>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"><span style="color: rgb(19, 69, 205); font-weight: 600;">Características de la comunicación escrita</span><br></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <ul style="color: rgb(1, 6, 20);">
+            <li><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(0, 61, 245);">Requiere de habilidades de lecto-escritura:</span> los participantes del proceso comunicacional tienen que saber leer y escribir en la lengua (idioma) en la que se transmite el mensaje para poder emitirlo, recibirlo y responderlo, si fuera el caso.</span></li><li><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(0, 61, 245);">La retroalimentación no es inmediata:</span> a diferencia de la comunicación oral, en la comunicación escrita el proceso no ocurre en tiempo real, por lo que la respuesta del receptor puede tardarse, y en ocasiones ni siquiera hay respuesta.</span></li><li><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(0, 61, 245);">Es permanente:</span> la comunicación escrita permanece en el tiempo, ya que es un registro en sí misma y durará tanto como el soporte físico que la contiene. Un libro, una carta, un correo, un mensaje instantáneo permanecerán allí mientras no sean destruidos, borrados, alterados, etc.</span></li><li><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(0, 61, 245);">Además, requiere planificación.</span> La comunicación escrita implica una organización y jerarquización de ideas para que el mensaje pueda transmitirse correctamente (Delgado, 2006).</span>
+            </li>
+        </ul>
+        <p style="color: rgb(1, 6, 20);"></p>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176085"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176085/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 30px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Los requerimientos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Suzanne Robertson (2022) señala: “Bueno, pensé que querías decir...” “No, eso no es lo que dije...” suena familiar para cualquier ingeniero de requerimientos. Chris Rupp decidió tomar prestadas algunas ideas de la disciplina de la psicoterapia
+            para ayudar a precisar lo que la gente realmente quiere decir. Aquí hay un buen ejemplo de cómo podemos usar ideas bien desarrolladas de otras disciplinas para ayudar a mejorar la nuestra.</p>
+        <p>Satisfacer los intereses de sus clientes determina su éxito en el mercado, pero <span class="sub_negrita">¿cómo encuentra estos requerimientos de manera efectiva y eficiente?</span> Tan simple como suena esta pregunta, responderla
+            en la práctica diaria es difícil. A menudo, se entrevista a las partes interesadas acerca de sus requerimientos o se les pide que los escriban, pero este enfoque rara vez descubre los requisitos reales que reflejan los verdaderos intereses
+            o necesidades de un/a cliente.</p>
+        <p>Necesitamos una forma de obtener información sobre los deseos fundamentales de los/las clientes: conscientes, inconscientes e incluso subconscientes. Los más vendidos son productos que cumplen estos deseos.</p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176086"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176086/_%20%2814%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">La programación neurolingüística</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p> </p>
+        <p><span style=" color:#1345CD; font-weight: 600">
+¿Por qué el desarrollo y la comunicación deben ir de la mano?</span></p> La comunicación entre personas nunca es fácil, especialmente cuando se trata de requisitos para sistemas o productos complejos. Para ayudar a superar los problemas de comunicación,
+        recomiendo un método del área de <span class="sub_negrita">programación neurolingüística</span> (PNL), que pertenece al campo de la psicoterapia.</div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;">Este método conversacional trata de decodificar lo que una persona quiere decir cuando habla. De acuerdo con la PNL, los errores en las declaraciones pueden ocurrir en dos lugares: <span class="sub_negrita">percepción de hechos</span>        (realidad) y <span class="sub_negrita">representación lingüística de una de estas percepciones </span>(realidad personal). El objetivo del análisis semántico del lenguaje es descubrir formulaciones nacidas de la experiencia
+        subjetiva y reemplazarlas por formulaciones claras y objetivas.</div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;">Usando estas reglas adaptables, podemos revisar sistemáticamente los requisitos formulados en lenguaje natural para que los errores o ambigüedades nunca vean la luz del día.&nbsp;</div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><b>El RE-Metamodelo&nbsp;</b></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;">El RE-Metamodelo, resume el fenómeno lingüístico observado con mayor frecuencia desde el punto de vista lingüístico. Cada uno de estos fenómenos indica defectos lingüísticos. Todos usamos el proceso de eliminación para reducir el mundo a dimensiones
+        que podamos manejar. En la ingeniería de requisitos, sin embargo, debemos saber exactamente qué información hemos perdido, o corremos el riesgo de que se produzca un error.&nbsp;</div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;">Una forma de encontrar información eliminada es examinar las palabras de proceso o verbos de una oración. Para estar completa, una palabra de proceso generalmente requiere un argumento o una frase nominal. En este caso, se debe considerar lo siguiente:
+        “El sistema deberá informar la pérdida de datos”. La palabra de proceso <b>informe</b> se define completamente sólo si se responde a las siguientes preguntas: ¿Quién informa qué a quién? ¿Qué se informa? ¿Cuándo? ¿Cómo?</div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176090"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176090/_%20%2814%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">La supresión</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p> </p>
+        <p>Todos utilizamos el proceso de eliminación para reducir el mundo a dimensiones que podamos manejar. En la ingeniería de requisitos, sin embargo, debemos saber exactamente qué información hemos perdido, o corremos
+        el riesgo de que se produzca un error.<br></p></div>
+    <div style="margin-left: 3%; margin-right: 3%;">Una forma de encontrar información eliminada es examinar las palabras de proceso o verbos de una oración. Para estar completa, una palabra de proceso generalmente requiere un argumento o una frase nominal. Considere lo siguiente: “El sistema deberá
+        informar la pérdida de datos”.</div>
+    <div style="margin-left: 3%; margin-right: 3%;">La palabra de proceso <span><b>informe</b></span> se define completamente sólo si se responde a las siguientes preguntas:</div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <ul>
+            <ul>
+                <li>¿Quién informa qué a quién?<br></li>
+                <li>¿Qué se informa?<br></li>
+                <li>¿Cuándo?<br></li>
+                <li>¿Cómo?&nbsp;<br></li>
+            </ul>
+        </ul>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">Identificar y especificar aproximadamente los procesos que debe llevar a cabo el sistema te guiará para hacer preguntas que aclaren el significado. Si la dinámica y las reglas de procesamiento complejas juegan un papel decisivo en su sistema, prestá especial atención al procesamiento de palabras. Pueden llevarlo a una definición clara de cuándo y en qué condiciones su sistema realiza sus procesos.
+        <p></p>
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176087"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176087/_%20%2814%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Proceso de generalización</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p> </p>
+        <p>En el proceso de generalización, los requisitos parecen aplicarse al sistema como un todo, pero en realidad generalmente se aplican sólo a una pequeña parte de este. Los indicadores típicos de generalización son los <span class="sub_negrita">cuantificadores universales</span>:
+            partes de enunciados que se aplican ampliamente a todas las incidencias de un suceso.</p>
+        <p>Los representantes de los cuantificadores lingüísticos incluyen conceptos como “nunca”, “siempre”, “no”, “todo” y “todos”. El peligro de usarlos es que el comportamiento especificado no siempre se aplica a todos los objetos a los que se hace referencia
+            en un grupo o conjunto. Consideren lo siguiente: “Cada señal se etiquetará con una marca de tiempo”. Sobre la base de la palabra clave “cada uno”, inmediatamente surge una pregunta: ¿hay uno o más casos especiales en los que no se requiere
+            la marca de tiempo?</p>
+        <p>Probablemente, no encontrarán muchos cuantificadores universales cuando busquen en sus textos, lo que no es necesariamente una buena señal. Inspeccionen oraciones que no contengan declaraciones explícitas sobre la cantidad de objetos para los
+            que ocurre la reacción especificada.</p>
+        <p>A menudo contienen una <span class="sub_negrita">suposición implícita </span>de que la reacción especificada es válida para todos los objetos relevantes. Algunas veces es difícil saber cuánto tiempo y esfuerzo gastar en casos
+            especiales y excepciones. Todo se reduce a evaluar el riesgo de no hacer las preguntas. En los casos en los que está involucrada la seguridad de la vida y las extremidades, no puede permitirse pasar por alto las excepciones.</p>
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176088"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176088/_%20%2814%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">El concepto de distorsión</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+        <div style="margin-left: 3%; margin-right: 3%;">
+            <p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;"><span id="docs-internal-guid-53a6028a-7fff-fada-58b2-9b335706b22a"></span></p>
+            <p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span id="docs-internal-guid-2ceb0346-7fff-d2e3-df0f-5ef071e8cceb"></span></span>
+            </p>
+            <p>El problema de la distorsión aparece casi exclusivamente en la forma de nominalización, que ocurre cuando un proceso se reformula en un evento.</p>
+            <p>Una nominalización puede cambiar el significado de una declaración y hacer que se pierda información importante sobre un proceso. Lingüísticamente, la nominalización es una palabra de proceso (verbo o predicado) moldeada en una palabra de
+                evento (sustantivo o argumento).</p>
+            <p>Consideren lo siguiente: “Después de una avería del sistema, se iniciará automáticamente un reinicio”. Los procesos detrás de los sustantivos "sistema", "descomponer" y "reiniciar" en realidad consisten en un sistema que se descompone y un
+                sistema que se reinicia. Pero, ¿cómo se está realizando el reinicio? ¿Quién lo inicializa? ¿Qué lo termina?</p>
+            <p>Usar términos nominalizados para un proceso complejo está bien, si el proceso está claramente definido. Esta definición no debe dejar ningún margen para la interpretación del proceso y debe aclarar su progresión, así como todos los parámetros
+                de entrada y salida.</p>
+            <!--Inicio caja Conclusión-->
+            <div class="row row-cols-auto">
+                <div>
+                    <p style="margin-right: 10px;  margin-left: 16px; color: #7746E2; font-size: large; font-weight: 600">En conclusión:</p>
+                </div>
+                <div class="col" style="border-left: solid  #7746E2 2px;">
+                    <p style=" color: #7746E2"><span class=" " style="font-size: large; ">El objetivo no es necesariamente evitar las nominalizaciones, sino emplearlas sólo si el proceso subyacente es claro. Las nominalizaciones a menudo aparecen en dominios con un extenso lenguaje técnico, así que verifiquen la terminología de su campo. Seguramente identificarán la mayoría de los términos especializados como nominalizaciones que ocultan una gran cantidad de conocimientos especializados.</span></p>
+                </div>
+            </div>
+            <!--Fin Caja Conclusión-->
+            <p><br></p></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176089"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176089/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Aplicando el metamodelo</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Muchas empresas han utilizado con éxito el RE-Metamodelo en varias áreas de proyectos: Deutsche Flugsicherung, Swisscontrol y Eurocontrol (sistemas de control de tráfico aéreo); Deutsche Post (sistemas logísticos); Kreditwerk y Bausparkasse Schwäbisch
+            Hall (sistemas sociales); y Stoll GmbH (máquinas de tejer).</p>
+        <p>En todas estas áreas diferentes, el RE-Metamodelo ayudó a sistematizar la ingeniería de las necesidades de las partes interesadas. Las partes interesadas utilizaron plantillas adicionales para formular los requisitos, que a su vez definieron claramente
+            cómo finalizarlos. La combinación de condiciones previas claras sobre cómo obtener y documentar con precisión los requisitos es especialmente útil en los casos en que no se indican en el idioma principal de las partes interesadas.</p>
+        <p>A la mayoría de los/las analistas y partes interesadas les encanta recibir instrucciones de trabajo precisas porque especificar un nuevo sistema puede ser un proceso complejo y poco intuitivo.</p>
+
+
+        <p style=" color:#1345CD; font-weight: 600"><b id="docs-internal-guid-f579a99b-7fff-4d27-79aa-e5f66570b2c2">Tres diferentes formas de aplicar el RE-Metamodelo</b> </p>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Diálogo:</span> el/la analista verifica inmediatamente cada declaración de los interesados en busca de efectos lingüísticos y estudia los hechos faltantes que parecen ser importantes. Por lo tanto, las entrevistas
+                    llegan rápidamente al meollo del asunto, obteniendo de manera eficiente el conocimiento requerido y revelando rápidamente las lagunas de conocimiento. Esta técnica requiere un/a analista experimentado/a. El/la entrevistado/a no debe
+                    notar que el/la analista está inspeccionando sistemáticamente todos los enunciados en busca de efectos lingüísticos. Para hacer esto, el/la analista debe tener suficiente experiencia para identificar y hacer preguntas esenciales</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Inspección:</span> de requerimientos escritos, utilizando reglas lingüísticas, el/la analista inspecciona los requisitos ya existentes en busca de omisiones, falta de claridad, etc., de acuerdo con las reglas
+                    del RE-Metamodelo.</p>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Combinación:</span> pueden tomar ambos conceptos y mezclarlos.</p>
+            </div>
+        </div>
+
+
+
+
+
+        <br>
+
+        <p>En última instancia, el analista decide cómo emplear el RE-Metamodelo, adaptándolo a cada situación particular caso por caso. Con algunas concesiones, el RE-Metamodelo puede ayudar a representar un conjunto de requisitos completo y sin errores
+            usando la notación formal del lenguaje natural. Saber que las comunicaciones perfectas son casi imposibles, lo libera de tratar de lograr una perfección que nunca podría alcanzar. Manejar lo incompleto de la comunicación es fundamental para
+            dominar el proceso de ER. Por lo tanto, se abre la puerta para que el/la analista y la parte interesada trabajen juntos para revisar y criticar la descripción funcional del problema.</p>
+        <p>Generalmente, el enfoque de PNL se imparte en un curso de capacitación de dos o tres días. Luego, puede aplicarlo con éxito de inmediato porque no tiene que aprender una nueva forma de pensar, sólo tiene que explorar su conocimiento del idioma.
+            Está aprendiendo un modelo para hacer que ese conocimiento sea más accesible y algunas mejoras para ayudarlo/a a aplicarlo a RE.</p>
+        <p>Para la primera aplicación del método después de la capacitación, recomendamos usarlo para analizar documentos ya existentes. Sobre la base de los requisitos existentes, puede probar los efectos lingüísticos de cada declaración y examinarla antes
+            de entrevistar a las partes interesadas. Unos días de práctica integrarán el RE-Metamodelo en su pensamiento lo suficiente como para que pueda examinar y escudriñar las declaraciones de sus clientes en tiempo real.</p>
+        <div class="row row-cols-auto">
+            <div class="col" style="border-left: solid  #7746E2 2px;">
+            </div>
+        </div>
+        <!--Fin Caja Conclusión-->
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176091"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2657848/mod_book/chapter/176091/_%20%2814%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Qué hace un buen analista en sistemas?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p> </p>
+        <p>Tal como lo venimos viendo, pensar que las comunicaciones perfectas son casi imposibles, te liberará de tratar de lograr una perfección que nunca podrías alcanzar. Manejar lo incompleto de la comunicación es fundamental para dominar el proceso
+            de desarrollo. Por lo tanto, se abre la puerta para que el/la analista y la parte interesada trabajen juntos para revisar y criticar la descripción funcional del problema. El objetivo de desarrollar enfoques como RE-Metamodelo es ayudar a
+            los/las analistas de sistemas a ser <span class="sub_negrita">más efectivos/as&nbsp;</span>al realizar un trabajo complejo.</p>
+        <p>Los/as buenos/as analistas median entre mundos. Investigan las necesidades de las partes interesadas mientras descubren, formulan e inventan requisitos. Luego traducen y transmiten esta información al mundo del desarrollo de sistemas y la informática.</p>
+        <p>Sin embargo, los/las analistas hacen mucho más que traducir los deseos de las partes interesadas en requisitos. Se esperan altas <span class="sub_negrita">habilidades comunicativas</span> y terapéuticas. En casos de opiniones divergentes entre
+            las partes interesadas, los/las analistas deben encontrar una esencia común y desarrollar soluciones aceptables para todas las personas involucradas. Deben superar los obstáculos y temores de las partes interesadas; cada nuevo sistema conlleva
+            el potencial de crear miedo al escudriñar posiciones y hábitos anteriores. Los/las analistas deben tener experiencia en dinámica de grupos, manejo de conflictos y trabajo en equipo.</p><ul>
+        </ul>
+        <p></p>
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[647985]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2657848, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1744470143); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random67fa83c931e5d2'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random67fa83c931e5d2'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

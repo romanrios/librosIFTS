@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S5. Software de red | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1744219673/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S5. Software de red | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1744219673_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"urtOajjkP7","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1744219673","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21039,"courseContextId":2643474,"contextid":2659478,"contextInstanceId":649478,"langrev":1743837844,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21039 context-2659478 cmid-649478 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1744219673/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S5. Software de red</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Tecnologías de la Información y Comunicación 2° A 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S5. Software de red
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        sábado, 12 de abril de 2025, 12:15
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+    <!-- Oulto  <p class="titulo_principal">Tu itinerario</p> -->
+
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21039&amp;section=6" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649477" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"></path>
+                            </svg>
+                        </div>
+                        <p>Recorré</p>
+                    </section>
+                </a>
+
+
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-option" viewBox="0 0 16 16">
+                                <path d="M1 2.5a.5.5 0 0 1 .5-.5h3.797a.5.5 0 0 1 .439.26L11 13h3.5a.5.5 0 0 1 0 1h-3.797a.5.5 0 0 1-.439-.26L5 3H1.5a.5.5 0 0 1-.5-.5zm10 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"></path>
+                                </svg>
+                    </div>
+                    <p>Conectá</p>
+
+                </section>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649480" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="m10 10.414 4 4 5.707-5.707L22 11V5h-6l2.293 2.293L14 11.586l-4-4-7.707 7.707 1.414 1.414z"></path></svg>
+                        </div>
+
+                        <p>Proyectá</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Saberes técnicos" class="font-weight-bold text-decoration-none" href="#ch179818">1. Saberes técnicos</a></li><li><a title="2. Software de red" class="font-weight-bold text-decoration-none" href="#ch179814">2. Software de red</a></li><li><a title="3. Jerarquías de protocolos" class="font-weight-bold text-decoration-none" href="#ch179815">3. Jerarquías de protocolos</a><ul><li><a title="3.1. Transferencias de datos" class="text-decoration-none" href="#ch179820">3.1. Transferencias de datos</a></li><li><a title="3.2. Comunicación entre múltiples capas" class="text-decoration-none" href="#ch179821">3.2. Comunicación entre múltiples capas</a></li><li><a title="3.3. Comunicación a la capa superior" class="text-decoration-none" href="#ch179822">3.3. Comunicación a la capa superior</a></li><li><a title="3.4. Relación entre la comunicación virtual y real" class="text-decoration-none" href="#ch179823">3.4. Relación entre la comunicación virtual y real</a></li></ul></li><li><a title="4. Analogías de protocolos de red" class="font-weight-bold text-decoration-none" href="#ch179816">4. Analogías de protocolos de red</a><ul><li><a title="4.1. Definición de protocolos" class="text-decoration-none" href="#ch179824">4.1. Definición de protocolos</a></li></ul></li><li><a title="5. ¿Qué es Internet?" class="font-weight-bold text-decoration-none" href="#ch179817">5. ¿Qué es Internet?</a><ul><li><a title="5.1. Componentes" class="text-decoration-none" href="#ch179825">5.1. Componentes</a></li><li><a title="5.2. Redes de comunicación de paquetes" class="text-decoration-none" href="#ch179826">5.2. Redes de comunicación de paquetes</a></li><li><a title="5.3. Sistemas terminales (ISP)" class="text-decoration-none" href="#ch179827">5.3. Sistemas terminales (ISP)</a></li></ul></li><li><a title="6. Checkpoint" class="font-weight-bold text-decoration-none" href="#ch179819">6. Checkpoint</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179818"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179818/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Conectá los saberes técnicos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p>
+        <p>Los saberes técnicos de un/a desarrollador/a de software son esenciales para comprender y potenciar las funciones del software de red y abordar la importancia crucial de los protocolos en la gestión de redes. Este software desempeña un papel vital
+            al facilitar la comunicación eficiente entre dispositivos, y los protocolos establecen las normas para la transmisión segura de datos.&nbsp;</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Conceptualización de nuevo protocolo</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> guiada por conocimientos avanzados, podría abordar problemas específicos no resueltos por los actuales, mejorando la eficiencia y la adaptabilidad a las demandas emergentes en un entorno tecnológico dinámico. </p>
+            </div>
+        </div>
+        <p><br></p>
+        <div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Y..., ¿para qué estos saberes técnicos?</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li></li>
+                <li><b><strong>Eficiencia de la comunicación:</strong></b> La comprensión de las funciones del software de red permite a los/as desarrolladores/as optimizar la eficiencia de la comunicación entre dispositivos. Esto es esencial para garantizar
+                    una transferencia de datos rápida y confiable, mejorando el rendimiento general de la red.<br></li>
+                <li><b><strong>Seguridad y coherencia:</strong></b> Potenciar las funciones del software de red implica implementar medidas de seguridad efectivas y mantener la coherencia en la transmisión de datos. Los protocolos desempeñan un papel crucial
+                    al establecer normas que aseguran la integridad y seguridad de las comunicaciones, protegiendo la red contra amenazas y fallos.<br></li>
+                <li><b><strong>Adaptabilidad y evolución continua:</strong></b> La gestión de redes requiere adaptabilidad constante. Comprender y potenciar las funciones del software, así como la importancia de los protocolos, capacita a los/as desarrolladores/as
+                    para adaptarse a las cambiantes demandas tecnológicas y mejorar continuamente la eficiencia y seguridad de las redes en un entorno dinámico.<br></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div style="margin-left: 3%; margin-right: 3%;"><br></div><b><strong>¡Comencemos!</strong></b><br>
+        <!--Fin Caja violeta-->
+        <p></p><br>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179814"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179814/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Software de red</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+       <!--Inicio caja Conclusión-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #9a3282; font-size: large; font-weight: 600">Definición:</p>
+            </div>
+            <div class="col" style="border-left: solid  #9a3282 2px;">
+                <p style=" color: #7746E2"><span class=" " style="font-size: large; color: #010614">Es el conjunto de programas y aplicaciones diseñadas para gestionar y controlar el funcionamiento de una red de computadoras.&nbsp;</span></p>
+            </div>
+        </div>
+        <!--Fin Caja Conclusión-->
+      <p><br>Este tipo de software:<br></p>
+        <p></p>
+        <ul>
+            <li>implementa protocolos que permiten que la red funcione de manera efectiva.</li>
+            <li>facilita la comunicación,&nbsp;</li>
+            <li>facilita la administración de dispositivos,</li>
+            <li>garantiza la seguridad en una red.</li>
+        </ul>
+        <p></p>
+
+
+
+        <!-- nada acá abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179815"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179815/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Jerarquías de protocolos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;"><p>En este sentido, los protocolos se disponen en una estructura jerárquica que garantiza la interoperabilidad y la comunicación efectiva entre dispositivos y sistemas de diferentes fabricantes y plataformas.
+        </p>
+        <p><span class="" style="color: rgb(0, 61, 245);"><b><strong><span class="" style="font-size: x-large;">Red de capas</span></strong></b>
+            </span><br></p>
+        <p>Para reducir la complejidad de su diseño, la mayoría de las redes se organizan como una pila de <span class="sub_negrita">capas</span> o <span class="sub_negrita">niveles</span>, cada una construida a partir de la que está abajo. Cada capa
+            se encarga de tareas específicas relacionadas con la comunicación y la transmisión de datos. Esto permite que cada una se centre en un aspecto particular de la comunicación y que los cambios en una capa no afecten directamente a las demás.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12" style="margin: 0% auto">
+                    <div class="box ">
+                        <div class="container-sm" ;="" style="text-align: left">
+                            <div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">El número de capas, su nombre, el contenido de cada una y su función difieren de una red a otra. <b><strong>El propósito de cada capa es ofrecer ciertos servicios a las capas superiores,&nbsp;</strong></b>mientras les oculta
+                                los detalles relacionados con la forma en que se implementan los servicios ofrecidos. Es decir, cada capa ofrece ciertos servicios a la capa que está encima de ella.
+                                <br></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><br>En realidad, este concepto es familiar y se utiliza en muchas áreas de las ciencias computacionales, en donde se le conoce de muchas formas: ocultamiento de información, tipos de datos abstractos, encapsulamiento de datos y programación
+            orientada a objetos. La idea fundamental es que una pieza particular de software (o hardware) provee un servicio a sus usuarios pero mantiene ocultos los detalles de su estado interno y los algoritmos que utiliza.
+        </p>
+        <p><span class="" style="font-size: x-large;"><b><strong><span class="" style="color: rgb(0, 61, 245);">Protocolo de capa</span></strong></b>
+            </span>
+        </p>
+        <p>Cuando la capa n en una máquina lleva a cabo una conversación con la capa n en otra máquina, a las reglas y convenciones utilizadas en esta conversación, se les conoce como el <span class="sub_negrita">protocolo de la capa</span>.&nbsp;</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12" style="margin: 0% auto">
+                    <div class="box ">
+                        <div class="container-sm" ;="" style="text-align: left">
+                            <div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">En esencia, un <b><strong>protocolo&nbsp;</strong></b>es un acuerdo entre las partes que se comunican para establecer la forma en que se llevará a cabo esa comunicación.
+                                <br></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><br></p>
+        <p>En la figura 1 se ilustra una red de cinco capas. Las entidades que conforman las correspondientes capas en diferentes máquinas se llaman <span class="sub_negrita">iguales</span> (<i>peers</i>). Los iguales pueden ser procesos de software, dispositivos
+            de hardware o incluso seres humanos. En otras palabras, los iguales son los que se comunican a través del protocolo.
+        </p>
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179815/Captura%20de%20pantalla%202023-09-11%20a%20la%28s%29%2022.02.02.png" alt="sd" width="600" height="618" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 1: Red de 5 capas.</p>
+
+        <br></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179820"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179820/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Transferencias de datos</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><br>
+        <p>En realidad, no se transfieren datos de manera directa desde la capa <i>n</i> de una máquina a la capa <i>n</i> de otra máquina, sino que <span class="sub_negrita">cada capa pasa los datos y la información de control a la capa inmediatamente inferior, hasta que se alcanza a la capa
+          más baja</span>. Debajo de la capa 1, se encuentra el <span class="sub_negrita">medio físico</span> a través del cual ocurre la comunicación real.&nbsp;</p>
+        <p>En la figura 1 -disponible en el inicio del capítulo 3 , se muestra la comunicación virtual con líneas punteadas y la comunicación física con líneas sólidas. Como se muestra en la imagen, entre cada par de capas adyacentes hay una interfaz.
+            Ésta define las operaciones y servicios primitivos (las operaciones básicas) que pone la capa más baja a disposición de la capa superior inmediata para permitir la comunicación.&nbsp;</p>
+        <p>Cuando los diseñadores de redes deciden cuántas capas incluir en una red y qué debe hacer cada una, la consideración más importante es <span class="sub_negrita">definir interfaces limpias</span> entre las capas. Es decir, establecer las reglas
+            y acuerdos entre las capas simples, consistentes y no ambiguos. Al hacer esto, es necesario que la capa desempeñe un conjunto específico de funciones bien entendidas. Además de minimizar la cantidad de información que se debe pasar entre
+            las capas, las interfaces bien definidas también simplifican el reemplazo de una capa con un protocolo o implementación totalmente diferente.&nbsp;</p>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Por ejemplo</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; ">Reemplazar todas las líneas telefónicas por canales de satélite, ya que todo lo que se requiere del nuevo protocolo o implementación, es que ofrezca exactamente el mismo conjunto de servicios a su vecino de arriba, como lo hacía el protocolo o la implementación anterior. Es común que distintos hosts utilicen diferentes implementaciones del mismo protocolo (a menudo escrito por otras compañías). De hecho, el protocolo en sí puede cambiar en cierta capa sin que las capas superior e inferior lo noten.</span></p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p><span style="color: rgb(19, 69, 205); font-size: x-large; font-weight: 600;"><br><span class="" style="color: rgb(0, 61, 245);">Arquitectura de red</span></span><br></p>
+        <p>Por lo tanto, en el contexto de las redes de computadoras, a un conjunto de capas y protocolos se lo conoce como <span class="sub_negrita">arquitectura de red</span>. La especificación de una arquitectura debe contener suficiente información
+            como para permitir que un programador escriba el programa o construya el <span class="sub_negrita">hardware para cada capa</span>, de manera que se cumpla correctamente el protocolo apropiado.</p><div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-12" style="margin: 0% auto">
+<div class="box ">
+<div class="container-sm" ;="" style="text-align: left">
+<div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">Ni los detalles de la implementación ni la especificación de las interfaces forman parte de la arquitectura, ya que están ocultas dentro de las máquinas y no se pueden ver desde el exterior. Ni siquiera es necesario que las interfaces en todas las máquinas de una red sean iguales, siempre y cuando cada máquina pueda utilizar todos los protocolos correctamente.
+<br></div>
+</div>
+</div>
+</div>
+</div>
+</div> 
+          <br>La lista de los protocolos utilizados por cierto sistema, un protocolo por capa, se le conoce como <span class="sub_negrita">pila de protocolos.<br><br></span><p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179821"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179821/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Comunicación entre múltiples capas</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><br>
+        <p>Una analogía, podría ayudar a explicar la idea de la comunicación entre múltiples capas (Figura 2).&nbsp;</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM8 .989c.127 0 .253.049.35.145l6.516 6.516a.495.495 0 0 1 0 .7L8.35 14.866a.5.5 0 0 1-.35.145z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Imaginate a dos filósofos</span>&nbsp;(procesos de iguales en la capa 3), uno de los cuales habla urdú e inglés, mientras que el otro habla chino y francés.&nbsp;<br></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+<path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM8 .989c.127 0 .253.049.35.145l6.516 6.516a.495.495 0 0 1 0 .7L8.35 14.866a.5.5 0 0 1-.35.145z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Como no tienen un lenguaje comúm,</span>&nbsp;cada uno contrata a un traductor (procesos de iguales en la capa 2) y cada uno de los traductores a su vez contacta a una secretaria (procesos de iguales
+                            en la capa 1).</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM8 .989c.127 0 .253.049.35.145l6.516 6.516a.495.495 0 0 1 0 .7L8.35 14.866a.5.5 0 0 1-.35.145z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">El filósofo 1, desde comunicar su afición</span>&nbsp;por el<i>&nbsp;oryctolagus cuniculus</i>&nbsp;a su igual. Para ello, pasa un mensaje (en español) a través de la interfaz de las capas 2-3 a
+                            su traductor para decirle: “Me gustan los conejos”, como se muestra en la figura.&nbsp;</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM8 .989c.127 0 .253.049.35.145l6.516 6.516a.495.495 0 0 1 0 .7L8.35 14.866a.5.5 0 0 1-.35.145z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Los traductores</span>&nbsp;han acordado un idioma neutral conocido por ambos, el holandés, así el mensaje es convertido a “Ik vind konijnen leuk”. La elección del idioma, es el protocolo de la
+                            capa 2 y depende de los procesos de iguales de dicha capa. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM8 .989c.127 0 .253.049.35.145l6.516 6.516a.495.495 0 0 1 0 .7L8.35 14.866a.5.5 0 0 1-.35.145z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Después, el traductor pasa el mensaje a una secretaria</span>&nbsp;para que lo transmita, por ejemplo, mediante correo electrónico (el protocolo de la capa 1). </p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM8 .989c.127 0 .253.049.35.145l6.516 6.516a.495.495 0 0 1 0 .7L8.35 14.866a.5.5 0 0 1-.35.145z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Cuando el mensaje llega a la otra secretaria</span>, ésta lo pasa al traductor local, quien lo traduce al francés y lo pasa a través de la interfaz de las capas 2-3 al segundo filósofo 2.&nbsp;
+                        </p>
+                    </div>
+                </div>
+                <div style="background-color: #FAFAFA; font-size: large; color: #3D7A15 ; margin-left: 3%; margin-right: 3%;">
+                    <div class="row" style="margin-left: 32px">
+                        <p><span class="" style="color: rgb(51, 51, 51);">Como se puede observar, cada protocolo es totalmente independiente de los demás siempre y cuando no cambien las interfaces.&nbsp;</span><br></p>
+                    </div>
+                    <div>
+                        <div style="margin-left: 3%; margin-right: 3%;">
+                            <!--Inicio caja ejemplo-->
+                            <div class="row row-cols-auto">
+                                <div>
+                                    <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Por ejemplo</p>
+                                </div>
+                                <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                                    <p style=" color: #4E7CFA"><span class=" " style="font-size: large; "></span></p>
+                                    <div><span class="" style="color: rgb(51, 51, 51);">Los traductores pueden cambiar de holandés al finlandés siempre y cuando ambos estén de acuerdo y ninguno cambie su interfaz con las capas 1 o 3. De manera similar, las secretarias pueden cambiar del correo electrónico
+                                        al teléfono sin molestar (o incluso informar) a las demás capas.</span><span class="" style="color: rgb(51, 51, 51);">&nbsp;</span></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <!--Fin Caja ejemplo--><br><span class="sub_negrita" style="color: rgb(51, 51, 51);">Cada proceso puede agregar algo de información destinada sólo a su igual</span><span class="" style="color: rgb(51, 51, 51);">. Esta información no se pasa a la capa superior.</span></div>
+                        <div style="margin-left: 3%; margin-right: 3%;">
+                            <p></p>
+
+                            <!-- inicio imagen -->
+                            <br>
+                            <div style="text-align: center;">
+                                <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179821/df.png" alt="ef" width="600" height="688" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                                </p>
+                            </div>
+
+                            <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 2: Analogía con 2 filósofos.</p>
+                            <span style=" color:#1345CD; font-weight: 600; font-size: x-large"><br></span></div>
+                        <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179822"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179822/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Comunicación a la capa superior de la red de cinco capas</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="color: rgb(1, 6, 20); font-size: large; margin-left: 3%; margin-right: 3%;"><br>Ahora consideremos un ejemplo más técnico: cómo proveer comunicación a la capa superior de la red de cinco capas de la figura 3.&nbsp;<br></div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Un proceso de aplicación</span>&nbsp;que se ejecuta en la capa 5 produce un mensaje, M, y lo pasa a la capa 4 para que lo transmita.</p>
+                    </div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+
+                </svg></div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">La capa 4 coloca un encabezado&nbsp;</span>al frente del mensaje para identificarlo y pasa el resultado a la capa 3. El encabezado incluye información de control, como direcciones, para permitir
+                            que la capa 4 en la máquina de destino entregue el mensaje. Otros ejemplos de la información de control que se utiliza en algunas capas, son los números de secuencia (en caso de que la capa inferior no preserve el orden
+                            del mensaje), los tamaños y los tiempos.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">En muchas redes no se impone un límite</span>&nbsp;en cuanto al tamaño de los mensajes que se transmiten en el protocolo de la capa 4, pero casi siempre hay un límite impuesto por el protocolo de
+                            la capa 3. En consecuencia, la capa 3 debe descomponer los mensajes entrantes en unidades más pequeñas llamadas paquetes, y colocar un encabezado al frente de cada paquete. En este ejemplo, M se divide en dos partes: M1 y
+                            M2, los cuales se transmitirán por separado.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">La capa 3 decide&nbsp;</span>cuál de las líneas salientes usar y pasa los paquetes a la capa 2;&nbsp;</p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Esta última agrega a cada pieza</span>&nbsp;no sólo un encabezado, sino también un terminador, y pasa la unidad restante a la capa 1 para su transmisión física.&nbsp;</p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">En la máquina receptora</span>&nbsp;el mensaje pasa hacia arriba, de capa en capa, y los encabezados se van eliminando a medida que progresa. Ninguno de los encabezados para las capas inferiores a
+                            n se pasa a la capa n.</p>
+                    </div>
+                </div>
+
+                <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+                <ul style="color: rgb(1, 6, 20); font-size: large;">
+                </ul>
+            </div>
+        </div>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179823"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179823/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Relación entre la comunicación virtual y real</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><br><br><p style="color: rgb(1, 6, 20); font-size: large;">¿Cómo es la&nbsp;<span class="sub_negrita">relación entre la comunicación virtual y real? <span style="font-weight: normal;">Ese vínculo se grafica en la figura 3;&nbsp;</span></span>&nbsp;además de la <span class="sub_negrita">diferencia entre los protocolos y las interfaces</span>. Por ejemplo, los
+            procesos de iguales en la capa 4 piensan conceptualmente en su comunicación como si fuera <b>horizontal </b>y utilizan el protocolo de la capa 4. Es probable que cada uno tenga procedimientos llamados EnviarAlOtroLado y RecibirDelOtroLado,
+            aun cuando en realidad estos procedimientos se comunican con las capas inferiores a través de la interfaz de las capas 3-4, no con el otro lado. </p>
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="color: rgb(1, 6, 20); font-size: large; text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179823/unnamed.png" alt="56" width="600" height="365" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="color: rgb(1, 6, 20); font-size: medium; text-align: center;">Figura 3: Clasificación de los sistemas multiprocesadores con base en su tamaño físico.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="sub_negrita">La abstracción de los procesos de iguales es imprescindible para todo diseño de red</span>. Al usarla, la inmanejable tarea de diseñar toda la red se puede fragmentar en varios problemas de diseño más pequeños y
+            manejables, es decir, el diseño de las <span class="sub_negrita">capas individuales.</span></p><p style="color: rgb(1, 6, 20); font-size: large;"><br></p></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179816"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179816/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Analogías de protocolos de red</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Probablemente, sea más sencillo comprender el concepto de <span class="sub_negrita">protocolo de red</span> considerando en primer lugar algunas analogías humanas, ya que las personas llevamos a cabo protocolos casi constantemente.&nbsp;</p>
+        <span style="font-weight: 600;"><span class="" style="font-size: x-large; color: rgb(0, 61, 245);">Analogía 1: protocolo entre personas (Saludar)</span><br></span><span style=""><br><span class="" style="font-size: large;"><span class="" style="color: rgb(51, 51, 51);">Pensemos en lo que se hace cuando se necesita preguntar a alguien qué hora es.</span><br><br></span>
+        </span>
+        <div style="background-color: rgb(250, 250, 250);">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+           <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"></path>
+  <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><b><strong>Saludo inicial y respuesta:&nbsp;</strong></b></p>
+                        <ul>
+                            <li>Iniciar un proceso de comunicación con un saludo apropiado, como "Hola, ¿qué hora es?"<br></li>
+                            <li>La respuesta "Hola" como indicación de disposición para la comunicación.</li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+   <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"></path>
+  <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Interacción basada en el protocolo humano:</span> </p>
+                        <ul>
+                            <li>Una respuesta diferente al “hola” inicial (como por ejemplo, "¡No me moleste” o “No hablo su idioma”, o cualquier otra respuesta) indicará una indisposición o incapacidad para comunicarse.<br></li>
+                            <li>Implicaciones de respuestas negativas o falta de respuesta en la continuación de la comunicación indica imposibilidad de preguntar la hora.<br></li>
+                            <li>En ocasiones, no se obtiene ninguna respuesta, en cuyo caso habrá que renunciar a preguntar a esa persona la hora que es.</li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"></path>
+  <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Importancia del protocolo en la comunicación humana:</span> </p>
+                        <ul>
+                            <li>Aquí, se tiene que tener en cuenta que, en el protocolo entre personas, existen mensajes específicos que enviamos y acciones específicas que tomamos como respuesta a los mensajes de contestación recibidos o a otros sucesos
+                                (como, por ejemplo, no recibir una respuesta en un periodo de tiempo determinado).</li>
+                            <li>Evidentemente, los mensajes transmitidos y recibidos y las acciones tomadas al enviar o recibir estos mensajes u otros sucesos desempeñan un papel principal en el protocolo humano.&nbsp;</li>
+                            <li>Si las personas adoptan protocolos diferentes (por ejemplo, si una persona guarda las formas pero la otra no lo hace, o si uno comprende el concepto de tiempo y el otro no), los protocolos no interoperarán y la comunicación
+                                no podrá tener lugar.</li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+   <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"></path>
+  <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Analogía con las redes de comunicación:</span> </p>
+                        <ul>
+                            <li>Esta misma idea también es aplicable a las redes:<span>&nbsp;es necesario que las entidades (dos o más) que deseen comunicarse ejecuten el mismo protocolo para poder llevar a cabo la tarea.</span></li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+                <p style="color: rgb(1, 6, 20); font-size: large;"><span style="color: rgb(0, 61, 245); font-size: x-large; font-weight: 600;" class="">Analogía 2: protocolo entre personas (Preguntar)</span><br></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;">Consideremos ahora una segunda analogía humana. Supongamos que estás asistiendo a una clase (por ejemplo, sobre redes).&nbsp;<br><br></p>
+                <div style="background-color: rgb(250, 250, 250);">
+                    <div style="margin-left: 3%; margin-right: 3%;">
+                        <!-- 1 -->
+                        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+        <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"></path>
+  <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+        </svg>
+                            </div>
+                            <div class="col">
+                                <p>El profesor está hablando acerca de los protocolos y no le entendés.&nbsp;</p>
+                            </div>
+                        </div>
+
+
+
+                        <!-- 2 -->
+                        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"></path>
+  <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p>El profesor detiene su explicación y dice: “¿Alguna pregunta?” (un mensaje dirigido a todos/as los/las estudiantes, que no están dormidos/as, y que todos/as ellos/ellas reciben).&nbsp;
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"></path>
+  <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p>Levantás la mano (transmitiendo un mensaje implícito al profesor).&nbsp;</p>
+                            </div>
+                        </div>
+
+
+                        <!-- 4 -->
+                        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"></path>
+  <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p>El profesor te dirige una sonrisa y dice “¿Si...?” (mensaje que te anima a plantear su pregunta, ya que a los profesores nos encanta que plantees cuestiones).&nbsp;</p>
+                            </div>
+                        </div>
+
+
+                        <!-- 5 -->
+                        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"></path>
+  <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p>A continuación, hacés la pregunta (es decir, transmitís tu mensaje al profesor).&nbsp;</p>
+                            </div>
+                        </div>
+
+                        <!-- 6 -->
+                        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"></path>
+  <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p>El profesor escucha la pregunta (recibe tu mensaje) y responde (transmite una respuesta).&nbsp;</p>
+                            </div>
+                        </div>
+                        <ul style="color: rgb(1, 6, 20); font-size: large;">
+                        </ul><span class="" style="color: rgb(1, 6, 20); font-size: large;">De nuevo, vemos que</span> <span class="sub_negrita" style="color: rgb(1, 6, 20); font-size: large;">la transmisión y la recepción de mensajes y el conjunto de acciones convencionales tomadas cuando se envían y reciben estos mensajes, constituyen el núcleo de este protocolo de pregunta-respuesta.</span><br>
+                        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179824"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179824/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Definición de protocolo de red</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <!--Inicio caja Definición morada-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #9a3282; font-size: large; font-weight: 600">Definición:</p>
+            </div>
+            <div class="col" style="border-left: solid  #9a3282 2px;">
+                <p style=" color: #7746E2"><span class=" " style="font-size: large; color: #010614">Un <b><span class="" style="color: #9a3282;">protocolo de red</span></b> es similar a un protocolo humano, excepto en que las entidades que intercambian mensajes y llevan a cabo
+                    las acciones son los componentes hardware o software de cierto dispositivo (por ejemplo, una computadora, una PDA, un teléfono celular, un&nbsp;<i>router&nbsp;</i>u otro dispositivo de red).&nbsp;</span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja Definición morada-->
+
+        <p><br></p>
+        <p><span class="sub_negrita">Cualquier actividad de Internet que implique dos o más entidades remotas que se comunican está gobernada por un protocolo</span>.
+            <!--Inicio caja ejemplo-->
+        </p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Por ejemplo</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; ">Los protocolos implementados por hardware en las tarjetas de interfaz de red de dos computadoras conectadas físicamente controlan el flujo de bits a través del&nbsp;<b><strong>cable&nbsp;</strong></b>conectado entre las dos tarjetas de interfaz de red; los protocolos de control de congestión de los sistemas terminales controlan la velocidad a la que se transmiten los paquetes entre el emisor y el receptor; los protocolos de los&nbsp;<i>routers&nbsp;</i>determinan la ruta que seguirá un paquete desde el origen al destino. Los protocolos se ejecutan por todas partes en Internet.</span></p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <br>
+        <p><b><strong><span class="" style="font-size: x-large; color: rgb(0, 61, 245);">Solicitud en base a un protocolo</span><span class="" style="color: rgb(0, 61, 245); font-size: x-large;">&nbsp;</span></strong></b></p>
+        <p>Por lo tanto, basándonos en un protocolo de red con el que probablemente estarás familiarizado, vamos a ver lo que ocurre cuando se hace una solicitud a un servidor web, es decir, cuando se escribe el URL de una página web en un navegador. Este
+            escenario se ilustra en la mitad derecha de la Figura 4.&nbsp;</p>
+        <p></p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><b><strong>La computadora enviará un mensaje de solicitud de conexión&nbsp;</strong></b>al servidor web y esperará una respuesta.&nbsp;</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600;">El servidor web recibirá el mensaje de solicitud</span> y devolverá un mensaje de respuesta de conexión.&nbsp;</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Sabiendo ahora que es posible solicitar el documento web, <b><strong>la computadora envía el nombre de la página web</strong></b> que desea extraer del servidor web mediante un mensaje GET.&nbsp;</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Por último, el servidor web envía la página web (archivo) a la computadora.</span></p>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179824/vcb.png" alt="sdv" width="600" height="396" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                    </p>
+                </div>
+
+                <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 4: Protocolo humano y de red.</p>
+
+                <p>Tomando en cuenta los ejemplos anteriores de protocolos humanos y de red, el <span class="sub_negrita">intercambio de mensajes y las acciones tomadas cuando se envían y reciben estos mensajes constituyen los elementos claves para la definición de un protocolo.</span>&nbsp;Un
+                    <span class="sub_negrita">protocolo</span> define el <span class="sub_negrita">formato</span> y el <span class="sub_negrita">orden de los mensajes</span> intercambiados entre dos o más entidades que se comunican, así como las
+                    <span class="sub_negrita">acciones</span> tomadas en la transmisión y/o la recepción de un mensaje u otro suceso.</p>
+
+                <!-- Fin imagen -->
+
+
+
+
+                <!-- nada acá abajo -->
+                <br>
+            </div>
+        </div>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179817"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179817/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Qué es Internet?</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p>Vamos a adentrarnos ahora en una de las redes más populares, la red pública Internet, una red de computadoras específica, que utilizaremos como principal vehículo para explicar las redes de computadoras y sus protocolos.&nbsp;</p>
+        <p>Pero, preguntémonos primero ¿qué es Internet? Hay dos formas de responder a esta pregunta. La primera de ellas es <b><strong>describiendo los componentes hardware y software básicos</strong></b> que forman Internet. La segunda es <b><strong>describiéndola en términos de la infraestructura de
+            red</strong></b> que proporciona servicios a aplicaciones distribuidas. </p>
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179817/unnamed%20%282%29.png" alt="fg" width="600" height="791" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 1: Internet.</p>
+
+        <br><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179825"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179825/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Componentes</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+
+        <!-- inicio imagen -->
+        Comenzaremos por la descripción de los componentes esenciales, utilizando la Figura 5. Internet es una red de computadoras que interconecta cientos de millones de dispositivos informáticos a lo largo de todo el mundo.&nbsp;</div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><b><strong><span class="" style="font-size: x-large; color: rgb(0, 61, 245);">Evolución histórica</span><span class="" style="color: rgb(0, 61, 245); font-size: x-large;">&nbsp;</span></strong></b></div>
+    <div style="margin-left: 3%; margin-right: 3%;">No hace demasiado tiempo, estos dispositivos eran fundamentalmente computadoras PC de escritorio tradicionales, estaciones de trabajo Linux y los llamados servidores que almacenaban y transmitían información tal como páginas web y mensajes de correo
+        electrónico. Sin embargo, cada vez más sistemas terminales no tradicionales&nbsp;están conectados como: televisiones, computadoras portátiles, consolas de juegos, teléfonos celulares, cámaras web, sistemas de detección medioambientales,
+        de automóviles, dispositivos de seguridad y electrodomésticos.<br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179825/unnamed%20%282%29.png" alt="fg" width="600" height="791" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 5: Internet.</p>
+
+        <p>Por lo tanto, el término red de computadoras, está comenzando a quedar algo desactualizado a causa de la gran cantidad de dispositivos no tradicionales que están conectados a Internet. En la jerga de Internet, todos estos dispositivos se denominan
+            <span class="sub_negrita">hosts</span> o <span class="sub_negrita">sistemas terminales</span>.<br></p>
+        <p><b><strong><span class="" style="color: rgb(0, 61, 245); font-size: x-large;">Comunicación entre sistema</span></strong></b></p>
+        <p>Los sistemas terminales se conectan entre sí mediante una red de <span class="sub_negrita">enlaces de comunicaciones</span> y dispositivos de <span class="sub_negrita">conmutación de paquetes</span>.
+        </p>
+        <p>Los distintos enlaces pueden transmitir los datos a distintas velocidades y la <span class="sub_negrita">velocidad de transmisión</span> de un enlace se mide en <span class="sub_negrita">bits/segundo</span>. Cuando un sistema terminal tiene que
+            enviar datos a otro sistema terminal, el emisor segmenta los datos y añade bits de cabecera a cada segmento. Los paquetes de información resultantes, conocidos como <span class="sub_negrita">paquetes</span> en la jerga informática, se envían
+            entonces a través de la red hasta el sistema terminal receptor, donde vuelven a ser ensamblados para obtener los datos originales. </p>
+        <p><br></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179826"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179826/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Redes de comunicación de paquetes</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+        <p>Un conmutador de paquetes toma el paquete que llega de uno de sus enlaces de comunicaciones de entrada y lo reenvía a uno de sus enlaces de comunicaciones de salida. Los dispositivos de conmutación de paquetes se suministran en muchas formas
+            y modelos, pero los dos tipos más utilizados actualmente en Internet son los <span class="sub_negrita">routers</span> y los <span class="sub_negrita">switches de la capa de enlace</span>.&nbsp;</p>
+        <p>Ambos tipos reenvían los paquetes hacia sus destinos finales. Los <i>switches </i>de la capa de enlace normalmente se emplean en las redes de acceso, mientras que los <i>routers </i>suelen utilizarse en el núcleo de la red. La secuencia de enlaces
+            de comunicaciones y conmutadores de paquetes que atraviesa un paquete desde el sistema terminal emisor hasta el sistema terminal receptor se conoce como <span class="sub_negrita">ruta</span> a través de la red.
+        </p>
+        <p>Las redes de conmutación de paquetes (que transportan paquetes) son similares en muchos aspectos a las redes de transporte formadas por autopistas, carreteras
+            e intersecciones (que transportan vehículos). 
+
+<!--Inicio caja ejemplo-->
+</p><div class="row row-cols-auto">
+    <div>
+        <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Por ejemplo</p>
+    </div>
+    <div class="col" style="border-left: solid  #4E7CFA 2px;">
+        <p style=" color: #4E7CFA"><span class=" " style="font-size: large; ">Imaginemos que una fábrica necesita trasladar un enorme cargamento a un cierto almacén de destino que se encuentra a miles de kilómetros. En la fábrica, el cargamento se reparte y se carga en una flota de camiones. Cada camión hace el viaje hasta el almacén de destino de forma independiente a través de la red de autopistas, carreteras e intersecciones.&nbsp;</span></p><p style=" color: #4E7CFA"><span class=" " style="font-size: large; ">En el almacén de destino, la carga de cada camión se descarga y se agrupa con el resto del cargamento a medida que va llegando. Luego, en cierto sentido, los paquetes son como los camiones, los enlaces de comunicaciones como las autopistas y carreteras, los dispositivos de conmutación de paquetes como las intersecciones y los sistemas terminales son como los edificios (la fábrica y el almacén).&nbsp;</span></p><p style=" color: #4E7CFA"><span class=" " style="font-size: large; ">Al igual que un camión sigue una ruta a través de la red de transporte por carretera, un paquete sigue una ruta a través de una red de computadoras.</span></p></div></div><p></p>
+        <p><br></p>
+    </div>
+</div>
+<p><br></p>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179827"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179827/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Sistemas terminales (ISP)</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+        <p>Los sistemas terminales acceden a Internet a través de los <span class="sub_negrita">ISP (Internet Service Provider, Proveedor de servicios de Internet</span>), incluyendo los ISP residenciales como son las compañías telefónicas o de cable
+            locales; los ISP corporativos; los ISP universitarios y los ISP que proporcionan acceso inalámbrico (WiFi) en aeropuertos, hoteles, cafés y otros lugares públicos.&nbsp;</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12" style="margin: 0% auto">
+                    <div class="box ">
+                        <div class="container-sm" ;="" style="text-align: left">
+                            <div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%"><b><strong><span>Cada ISP es en sí mismo una red de conmutadores de paquetes y enlaces de comunicaciones</span>. </strong></b>Los ISP proporcionan una amplia variedad de tipos de acceso a red a los sistemas terminales, entre
+                                los que se incluyen el acceso a través de módem de acceso telefónico a 56 kbps, el acceso de banda ancha residencial, mediante módem por cable o DSL, el acceso LAN (Local Area Network, Red de área local) de alta velocidad
+                                y el acceso inalámbrico.
+                                <br></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>&nbsp;<br></p>
+        <p>Los ISP también proporcionan acceso a Internet a los proveedores de contenido, conectando sitios web directamente a Internet. Internet es todo lo que conecta a los sistemas terminales entre sí, por lo que los ISP que proporcionan el acceso a
+            los sistemas terminales también tienen que estar interconectados entre ellos.
+        </p>
+        <p><span class="" style="color: rgb(0, 61, 245); font-size: x-large;"><b><strong>Jerarquía de ISP&nbsp;</strong></b></span></p>
+        <p>Estos ISP de nivel inferior se interconectan a través de los ISP de nivel superior nacionales e internacionales, como AT&amp;T y Sprint. Un ISP de nivel superior consiste en <i>routers </i>de alta velocidad interconectados a través de enlaces
+            de fibra óptica de alta velocidad. La red de cada ISP, sea de nivel inferior o superior, se administra de forma independiente, ejecuta el protocolo IP y se ajusta a determinados convenios de denominación y de asignación de direcciones.
+        </p>
+        <p><span class="" style="color: rgb(0, 61, 245); font-size: x-large;"><b><strong>Protocolos de envío y recepción de información</strong></b></span></p>
+        <p>Los sistemas terminales, los conmutadores de paquetes y otros dispositivos de Internet ejecutan protocolos que controlan el envío y la recepción de la información dentro de Internet. El protocolo <span class="sub_negrita">TCP (Transmission Control Protocol, Protocolo de control de transmisión)</span>            y el protocolo <span class="sub_negrita">IP (Internet Protocol, Protocolo de Internet)</span> son dos de los protocolos más importantes de Internet. El <span class="sub_negrita">protocolo IP</span> especifica el <span class="sub_negrita">formato de los paquetes que se envían y reciben entre los routers y los sistemas terminales</span>.
+            Los principales protocolos de Internet se conocen colectivamente como protocolos TCP/IP. </p>
+
+
+        <!-- nada acá abajo -->
+        <br>
+    </div>
+</div>
+<p><br></p>
+<p><br></p>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179819"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659478/mod_book/chapter/179819/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-2.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Checkpoint</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+
+
+
+        <p>Luego de la lectura de esta semana, te invitamos a que revises los contenidos pasando por el <a href="https://aulasvirtuales.bue.edu.ar/mod/quiz/view.php?id=649479"><span class="" style="color: rgb(0, 46, 184);"><u>Check Point.</u></span></a></p>
+        <p>De esta forma, podrás verificar si has comprendido las ideas principales.</p>
+        <p>¡No dudes en volver a este libro en caso que necesites repasar algún concepto!</p>
+
+
+        <!-- nada abajo -->
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[649458,649459,649461,649462,649463,649465,649466,649467,649469,649471,649473,649476,649477,649480,676491,680812,680813,681319]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2659478, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1744470143); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random67fa839c7ef572'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random67fa839c7ef572'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

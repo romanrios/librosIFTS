@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S5-ML-Armado del Sprint | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1744219673/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S5-ML-Armado del Sprint | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1744219673_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"urtOajjkP7","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1744219673","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21031,"courseContextId":2643147,"contextid":2658360,"contextInstanceId":648463,"langrev":1743837844,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21031 context-2658360 cmid-648463 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1744219673/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S5-ML-Armado del Sprint</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Desarrollo de Sistemas de Información orientados a la gestión y apoyo a las decisiones 2° A 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S5-ML-Armado del Sprint
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        sábado, 12 de abril de 2025, 12:15
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21031&amp;section=8" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=648462" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=648464" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Oficina</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=648466" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción" class="font-weight-bold text-decoration-none" href="#ch176732">1. Introducción</a></li><li><a title="2. Sprint con el sistema de hospedaje" class="font-weight-bold text-decoration-none" href="#ch176733">2. Sprint con el sistema de hospedaje</a><ul><li><a title="2.1. Tareas: Product backlog" class="text-decoration-none" href="#ch176734">2.1. Tareas: Product backlog</a></li><li><a title="2.2. Velocidad del equipo" class="text-decoration-none" href="#ch176735">2.2. Velocidad del equipo</a></li><li><a title="2.3. Horas" class="text-decoration-none" href="#ch176736">2.3. Horas</a></li></ul></li><li><a title="3. Tips - Scrum" class="font-weight-bold text-decoration-none" href="#ch176737">3. Tips - Scrum</a></li><li><a title="4. Revisión y retrospectiva del sprint" class="font-weight-bold text-decoration-none" href="#ch176738">4. Revisión y retrospectiva del sprint</a></li><li><a title="5. Autoevaluación" class="font-weight-bold text-decoration-none" href="#ch176739">5. Autoevaluación</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176732"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container" style="font-size: large; color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658360/mod_book/chapter/176732/_%20%2814%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><span id="docs-internal-guid-d619cb2f-7fff-bdab-0f08-35b7ec8e295f" style=""><p dir="ltr" style="font-size: large; color: rgb(1, 6, 20);">Desde la semana anterior se viene trabajando en las metodologías ágiles, fundamentalmente en SCRUM. En esta oportunidad el foco estará puesto en e<span id="docs-internal-guid-3acbf77b-7fff-06d2-b4d2-5e78506aeb05">l <span class="" style="color: rgb(0, 46, 184);">Sprint</span>&nbsp;y
+        cómo estos se encuentran en el corazón de las metodologías scrum y ágil. Antes de iniciar es importante considerar que cuando comienza el Sprint, cada miembro cumple su rol garantizando las siguientes condiciones:<br>
+
+        </span>
+        </p>
+        <li class="texto-principal texto-separado-margen" style="font-size: large;"><b><strong><span class="" style="color: rgb(0, 46, 184);">Evitar&nbsp;</span></strong></b>cambios que pongan en peligro el objetivo.</li>
+        <li class="texto-principal texto-separado-margen" style="font-size: large;"><b><strong><span class="" style="color: rgb(0, 46, 184);">Disminuir&nbsp;</span></strong></b><span style="color: rgb(1, 6, 20);">los estándares de calidad.</span></li>
+        <li class="texto-principal texto-separado-margen" style="font-size: large;"><b><strong><span class="" style="color: rgb(0, 46, 184);">Trabajar&nbsp;</span></strong></b><span style="color: rgb(1, 6, 20);">conjuntamente (dueño/a del producto y equipo de desarrollo) ajustando el detalle de las funcionalidades planificadas para el Sprint.&nbsp;</span></li>
+        <li class="texto-principal texto-separado-margen" style="font-size: large;"><b><strong><span class="" style="color: rgb(0, 46, 184);">Redefinir </span></strong></b><span style="color: rgb(1, 6, 20);"><span id="docs-internal-guid-66667ff5-7fff-d053-7053-9eb1dbd1eede">el proyecto. El dueño del producto y los miembros del equipo aclaran y negocian entre ellos a medida que se aprende más.</span></span>
+        </li><br>
+        <p dir="ltr" style="font-size: large; color: rgb(1, 6, 20);">Recorré los capítulos y subcapítulos a la derecha todas las veces que necesites para registrar, tomar nota, revisar las actividades propuestas y profundizar en el tema de esta semana.<br></p>
+        </span>
+        <br></div>
+    <div style="font-size: large; color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">¡Comenzamos!<br><br></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176733"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container" style="font-size: large; color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658360/mod_book/chapter/176733/_%20%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Creación del Sprint<span style="color: rgb(45, 45, 45); font-family: chaletnewyorknineteeneighty, Arial, Helvetica, sans-serif; font-size: 1.64062rem; font-weight: 700;">&nbsp;</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br><span id="docs-internal-guid-032f1720-7fff-71c6-cf9d-74a51de33163" style="font-size: large;"><p dir="ltr" style="color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span><span id="docs-internal-guid-1dbb6f5e-7fff-d0b4-5d33-fe842f759c30"></span></p>
+        <p dir="ltr" style=""><span class="" style="color: rgb(51, 51, 51);"></span></p>
+        </span><span id="docs-internal-guid-460f0402-7fff-e350-f8db-a3122ebd7010" style="font-size: large;"><p dir="ltr" style=""></p></span><span><span id="docs-internal-guid-da65a936-7fff-875a-70fb-b9e8ecb85e47" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Como se viene trabajando, necesitamos definir cómo es posible armar un sprint. Para ello se deben seguir los siguientes pasos:</span></span>
+        </span>
+    </div>
+
+    <div style="background-color: rgb(250, 250, 250); font-size: large;">
+
+        <div style="margin-left: 3%; margin-right: 3%;">
+
+            <br>
+            <!-- 1 -->
+            <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600">Reunión de planificación:&nbsp;</span>El primer paso es la reunión de planificación de Sprint, que se divide en dos partes. En esta reunión, todo el equipo Scrum se reúne para definir la dirección del
+                        proyecto y responder a las preguntas fundamentales: <span class="" style="color: rgb(0, 46, 184);">¿Qué se va a entregar? </span>y <span class="" style="color: rgb(0, 46, 184);">¿Cómo se va a realizar el trabajo?</span> Esta reunión
+                        establece el alcance del Sprint y crea una hoja de ruta para el equipo.</p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600">Inicio del Sprint:&nbsp;</span>Una vez que se ha completado la reunión de planificación de Sprint y se ha establecido el alcance, el Sprint comienza oficialmente. Durante el Sprint, <span class="" style="color: rgb(0, 46, 184);">se trabaja en la implementación de las tareas y actividades</span>                        definidas en la planificación.</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600">Duración del Sprint:&nbsp;</span>Es importante tener en cuenta que la duración máxima recomendada de un Sprint es de <span class="" style="color: rgb(0, 46, 184);">un mes</span>. Esta limitación temporal
+                        se debe a que, con el tiempo, es más probable que cambien los requisitos del proyecto o que la complejidad del producto aumente. Una duración más larga del Sprint aumenta el riesgo de no cumplir con las expectativas del cliente.</p>
+                </div>
+            </div>
+
+
+            <!-- 4 -->
+            <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600">Cancelación del Sprint:&nbsp;</span>es una acción que sólo puede ser tomada por el Dueño de producto. Sin embargo, el Dueño de producto puede tomar esta decisión bajo la influencia de los interesados,
+                        el Equipo de desarrollo o el Scrum Master. Un Sprint se cancelaría si el objetivo del Sprint se vuelve obsoleto, lo que significa que ya no es relevante o viable en el contexto actual del proyecto. La cancelación permite mantener
+                        el enfoque en objetivos actualizados y alcanzables.</p>
+                </div>
+            </div>
+
+            <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;"><span><span style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></span>
+                </span>
+            </div>
+            <div style="margin-left: 3%; margin-right: 3%;"><span class="" style="color: rgb(51, 51, 51);">A continuación vas a volver al caso del </span><span class="" style="color: rgb(0, 61, 245);">Hotel Newton Palace</span><span class="" style="color: rgb(51, 51, 51);"> para tomarlo de ejemplo y presentar el análisis del Sprint de la historia de usuario N° 1. Aquí podrás observar, además, cuáles&nbsp;</span>
+                <span style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(51, 51, 51);">son las tareas que se deben realizar.</span><br></span>
+            </div>
+            <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;"><span><span id="docs-internal-guid-00d95b6e-7fff-e4c8-6dee-ba7326d131e6" style="font-weight: bold;">
+              <div style="position: relative; width: 100%; height: 0; padding-top: 70.7071%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAF0DXE83zg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe><br></div>
+</span></span>
+                <h4><span><span style="font-weight: normal;"><span class="" style="font-size: large;">Descargá la plantilla haciendo clic </span><span class="" style="font-size: large;"><a href="https://drive.google.com/file/d/1O9uv2zWYvUKUyuBib1XNKJkwe6945IXM/view?usp=drive_link" target="_blank">aquí</a></span>.</span>
+                    </span>
+                </h4><span><span style="font-weight: bold;"><p dir="ltr" style=""><br></p>
+                        </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176734"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658360/mod_book/chapter/176734/_%20%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Ordenamos las tareas?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+
+        <!-- nada puede haber abajo -->
+        <span id="docs-internal-guid-a9194f28-7fff-df0d-8cea-cd1dd2f7e435" style=""><p dir="ltr" style="color: rgb(1, 6, 20);"><span class="" style="font-size: large;"><span id="docs-internal-guid-9b0d3244-7fff-06c2-edcc-4b8becdd02df"></span></span>
+        </p>
+        <p dir="ltr" style="color: rgb(1, 6, 20);"><span style=""></span></p><span id="docs-internal-guid-689ab943-7fff-50bf-5e57-8d149d842af1" style=""><p dir="ltr" style="color: rgb(1, 6, 20);">Vamos a estimar al <span class="" style="color: rgb(0, 46, 184);">Product backlog</span>, y para ello
+        debemos estimar la duración de las tareas.&nbsp;
+        <!--Inicio Caja definición-->
+        </p>
+        <div class="row row-cols-auto" style="">
+            <div style="color: rgb(1, 6, 20);">
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #4E7CFA;"><b>Definición</b></span> </p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: 2px solid rgb(78, 124, 250);">
+                <p style=""><span class="" style="font-size: large;"><span class="" style="">El </span><span class="" style="color: #4E7CFA;">Planning poker </span><span class="" style="color: rgb(51, 51, 51);">es una técnica que utiliza la <span class="" style="color: rgb(0, 46, 184);">serie de Fibonacci (0,1,2,3,5,8,13,?)</span>                    y se le asigna un puntaje a cada una de las actividades. Lo primero que hacemos es darle el valor a la actividad que consideramos que necesita menos tiempo. El valor asignado no tiene nada que ver con la cantidad de horas que necesita
+                    la actividad para su desarrollo <span class="" style="color: rgb(0, 46, 184);">es una proporción del esfuerzo</span> que puede requerir esa actividad.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <p dir="ltr" style="color: rgb(1, 6, 20);"><br></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p dir="ltr" style="color: rgb(1, 6, 20);">Pasemos entonces a darle esa valoración a las actividades:</p>
+        </span>
+        <div style="color: rgb(1, 6, 20); position: relative; width: 100%; height: 0px; padding-top: 75%; padding-bottom: 0px; box-shadow: rgba(63, 69, 81, 0.16) 0px 2px 8px 0px; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAF0DdfV2lo/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+        </div>
+        </span><br>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176735"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658360/mod_book/chapter/176735/_%20%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Cómo determinar la velocidad del equipo?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="color: rgb(1, 6, 20); font-size: large; margin-left: 3%; margin-right: 3%;"><span style="">Lo siguiente es definir la <span class="" style="color: rgb(0, 46, 184);">velocidad del equipo</span> para la resolución de las tareas, teniendo en cuenta la experiencia y capacidades de los/las integrantes. <br><br>Supongamos que a nuestro equipo le asignamos una velocidad de 50 puntos; vemos si con la valoración que le dimos a las tareas llegamos a los puntos asignados al equipo.</span></div><div style="color: rgb(1, 6, 20); font-size: large; margin-left: 3%; margin-right: 3%;"><span style=""><div style="position: relative; width: 100%; height: 0; padding-top: 75.0000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAF0Ds8qUF8/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<br></span></div>
+<div style="margin-left: 3%; margin-right: 3%;"><span id="docs-internal-guid-d08f38e3-7fff-31fd-e971-7d634f9d2b2c"><p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Observamos que la valoración de las tareas es menor que los puntos asignados al equipo, por lo tanto, todas las tareas pueden estar en el mismo Sprint.</span></p></span><br></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176736"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658360/mod_book/chapter/176736/_%20%2813%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><span id="docs-internal-guid-4e563d27-7fff-f372-ca36-00626d8d4d9f">¿Cuántas horas requiere?</span><i></i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+
+        <!-- nada puede haber abajo -->
+        <span id="docs-internal-guid-cac0cd82-7fff-4fec-8fbc-333027ca5381"><p dir="ltr" style=""></p><span id="docs-internal-guid-0107319a-7fff-97ee-a31b-3c2e3fdd16af"><p dir="ltr" style=""></p><span id="docs-internal-guid-ced862f4-7fff-33e6-b270-2581c79feb9e"><p dir="ltr" style=""></p><span id="docs-internal-guid-f1bb0ef7-7fff-06c5-1d96-6782ab9a1fda"><p dir="ltr" style=""><span id="docs-internal-guid-4f8dba6f-7fff-0bf3-f1c9-60125eddce59"></span></p>
+        <p dir="ltr" style="">Pasemos ahora a estimar en horas la cantidad que necesita cada tarea para su desarrollo recordando que el tiempo estimado en horas debe ser alguno de los siguientes valores 🡪 2,4,6,8; si superan las 8 horas, esa tarea debe ser dividida en subtareas.</p>
+        </span>
+        <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAF0Dmek5CA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+        </div>
+        <p dir="ltr" style="">Debemos determinar <span class="" style="color: rgb(0, 46, 184);">cuántas horas de recursos humanos tenemos para el desarrollo.<br></span><br>Si la historia de usuario tiene destinada 2 semanas, y la jornada es de 8 horas: tenemos 80 horas de
+            trabajo para 10 días.</p>
+        <p dir="ltr" style="">Un método rápido para determinar el tiempo real, es tomar a cada uno/a de los/las integrantes del equipo y hacer el siguiente cálculo:</p>
+       <div style="position: relative; width: 100%; height: 0; padding-top: 75.0000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAF0DqE9S0c/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Analizamos el cuadro anterior:</p>
+                <ul><li>Este esquema muestra 3 integrantes que dedican, en las 2 semanas destinadas al sprint, 12 horas para las actividades propias de Scrum, y horas a otras actividades; quedándole a cada uno 38, 40 y 46 horas, respectivamente, para el desarrollo del módulo del proyecto.</li><li>Restamos un porcentaje de horas como precaución de desvíos en las actividades, en el presente desarrollo es del 20 %. Tomando en cuenta lo mencionado, contamos con 98 horas disponibles para este <i>sprint</i>.</li><li>Si consideramos los cálculos de horas de nuestras tareas, vemos que es menor a 98 y, por ende, podemos desarrollarlo sin inconvenientes.<br><br></li></ul></div></div></span>
+        <p></p>
+        </span>
+    </span></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176737"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658360/mod_book/chapter/176737/_%20%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><span id="docs-internal-guid-219d15ee-7fff-4396-1d2e-9fc6cbceb15b"><span id="docs-internal-guid-b92de356-7fff-ef22-c4de-b2f562b1f06a">Tips para que el Scrum diario sea efectivo</span></span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+
+        <!-- nada puede haber abajo -->
+        <span id="docs-internal-guid-38c23f5f-7fff-351d-1904-e63d281ba9ba" style=""><p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;"></p><span id="docs-internal-guid-e3b95938-7fff-cabe-98c1-a3cfbc99b4ad" style=""><p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;"></p><span id="docs-internal-guid-c5b1070c-7fff-9799-8a5e-221de3eac09f" style="color: rgb(1, 6, 20); font-size: large;"><p dir="ltr" style=""></p></span>
+        <span id="docs-internal-guid-35e3bae9-7fff-77d0-b407-b418d496962f" style="">
+          <div style="color: rgb(1, 6, 20); font-size: large; width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="PP2-S6- tips para scrum" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/6552374c3742440011168f52" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>  
+          </span><br>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            </span>
+            </span>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176738"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658360/mod_book/chapter/176738/_%20%2813%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Revisión y retrospectiva del sprint&nbsp;<i></i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+
+        <!-- nada puede haber abajo -->
+        <span id="docs-internal-guid-cac0cd82-7fff-4fec-8fbc-333027ca5381" style=""><p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;"></p><span id="docs-internal-guid-0107319a-7fff-97ee-a31b-3c2e3fdd16af" style=""><p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;"></p></span></span>
+        <span style=""><span style=""><span id="docs-internal-guid-3b84d0d2-7fff-dcb0-118f-0af30232f6dc" style="color: rgb(1, 6, 20); font-size: large;"><p dir="ltr" style=""></p><span id="docs-internal-guid-591100f1-7fff-93a2-bc16-d6afde7836e4"><p dir="ltr" style="">Al finalizar el tiempo de construcción del módulo, sólo se tendrá en cuenta aquello que cumpla con la definición de <span class="" style="color: rgb(0, 46, 184);">terminado</span>,
+        el resto pasa al Product Backlog.&nbsp;</p>
+        <p dir="ltr" style="">Se hace una presentación a los involucrados de aquello que se terminó del producto, con que se continúa y lo que falta.</p>
+        </span>
+        <div style="position: relative; width: 100%; height: 0; padding-top: 75.0000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAF0D5yEsWU/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+        </div>
+        </span><b><br></b></span>
+        </span>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span style=""><span style=""><span><span id="docs-internal-guid-2fb16925-7fff-e03e-2e45-b121fbca9b4f" style=""><p dir="ltr" style=""><span class="" style="font-size: large;"><span class="" style="color: rgb(51, 51, 51);">Una vez aclarado los puntos anteriores, pasamos a la </span><span class="" style="color: rgb(0, 46, 184);">presentación del software desarrollado</span>,
+        f<span class="" style="color: rgb(51, 51, 51);">uncionando de tal manera que los/las asistentes a la reunión puedan visualizar la interacción del/la usuario/a con el software y puedan hacer comentarios al respecto.</span></span>
+        </p>
+        <!--Inicio caja borde azul-->
+        <div class="container">
+            <div class="caja-azul">
+                <p style="padding: 1% 2%; word-wrap: break-word;"><span class="" style="font-size: large; color: rgb(51, 51, 51);">La ventaja que cuenta esta fase es que el/la dueño/a del producto ha revisado, en las ejecuciones del <i>sprint</i>, el desarrollo, por lo que los desvíos fueron supuestamente solucionados.</span></p>
+            </div>
+        </div>
+        <!--Fin caja borde azul--><span class="" style="color: rgb(51, 51, 51);">
+
+        </span><span style="color: rgb(19, 69, 205); font-weight: 600; font-size: large;" class="">Etapa Retrospectiva</span>
+        <p dir="ltr" style=""><span style="font-size: large;"><br><span class="" style="color: rgb(51, 51, 51);">Después de la revisión, pasamos a la </span><span><span class="" style="color: rgb(51, 51, 51);">etapa de la retrospectiva</span></span><span class="" style="color: rgb(51, 51, 51);">, que consiste en</span> <span class="" style="color: rgb(0, 46, 184);">evaluar el proceso</span>,
+            <span class="" style="color: rgb(51, 51, 51);">es decir, qué hicimos bien, qué podemos mejorar y qué debemos dejar de hacer.</span></span><br></p>
+        <p dir="ltr" style=""><span class="" style="font-size: large;"><span class="" style="color: rgb(51, 51, 51);">Por ejemplo, podemos decir que una acción que hicimos bien fue</span> <b><span class="" style="color: rgb(0, 46, 184);">priorizar las tareas</span></b>, <span class="" style="color: rgb(51, 51, 51);">en función de una lógica o secuencia de acciones.</span></span>
+        </p>
+        <p dir="ltr" style=""><span class="" style="font-size: large;"><span class="" style="color: rgb(0, 46, 184);"><b>¿Qué podemos mejorar? </b></span><span class="" style="color: rgb(51, 51, 51);">Una respuesta puede ser, por ejemplo, “las <i>dailys </i>no destinarlas a resolver problemas”, si esto sucede no pueden, todos/as
+            los/las integrantes, exponer sus progresos en el tiempo acotado de la reunión.</span></span>
+        </p>
+        <p dir="ltr" style=""><span class="" style="font-size: large;">Por último, <span class="" style="color: rgb(0, 46, 184);"><b>¿qué debemos dejar de hacer? </b></span><span class="" style="color: rgb(51, 51, 51);">Si los/las desarrolladores/ras se autoevalúan, pueden detectar acciones que no aportan mejoras al desarrollo.</span></span><span class="" style="color: rgb(51, 51, 51);">
+        </span></p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Estas preguntas deben ser contestadas por cada integrante del equipo de desarrollo, incluyendo al Scrum Master.</span></p>
+      <span style="color: rgb(19, 69, 205); font-weight: 600; font-size: large;" class="">Refinamiento</span><p dir="ltr" style=""><span class="" style="font-size: large;"><br><span class="" style="color: rgb(51, 51, 51);">Por último, tenemos el refinamiento que lo que busca es</span> <b><span class="" style="color: rgb(0, 46, 184);">actualizar el Product Backlog.&nbsp;</span></b></span><span style="font-size: large; color: rgb(51, 51, 51);" class="">La actualización está referida a los cambios en las prioridades de alguna historia de usuario, por lo cual cambia el orden, a la aparición de nuevas características del producto o a la eliminación de alguna funcionalidad.&nbsp;</span></p>
+        </span><br></span>
+        </span>
+        </span>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176739"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658360/mod_book/chapter/176739/_%20%2813%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><span id="docs-internal-guid-4e563d27-7fff-f372-ca36-00626d8d4d9f">¡Me pongo a prueba! (opcional)</span><i></i></p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><span id="docs-internal-guid-cac0cd82-7fff-4fec-8fbc-333027ca5381"><span id="docs-internal-guid-0107319a-7fff-97ee-a31b-3c2e3fdd16af"><span id="docs-internal-guid-ced862f4-7fff-33e6-b270-2581c79feb9e"><span id="docs-internal-guid-f1bb0ef7-7fff-06c5-1d96-6782ab9a1fda"><div style="margin-left: 3%; margin-right: 3%;"><span><br>A continuación podrás hacer clic en el siguiente botón:<br><br></span></div>
+    <div style="text-align: center; margin-left: 3%; margin-right: 3%;"><span><a href="https://aulasvirtuales.bue.edu.ar/mod/quiz/view.php?id=648465"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658360/mod_book/chapter/176739/Copia%20de%20Novedades%20%284%29.gif" alt="" width="240" height="60" role="presentation" class="img-responsive atto_image_button_text-bottom"></a><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span>Luego acceder a un cuestionario para poner a prueba tu comprensión de los temas trabajados.</span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <h3><span class="" style="font-size: large; color: rgb(0, 46, 184);">¡Muchos éxitos!</span></h3><span><p></p></span>
+
+    </div>
+    </span>
+    </span>
+    </span>
+    </span>
+</div>
+
+
+
+<span><br><p></p></span>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[648413,648414,648415,648416,648417,648419,648420,648421,648422,648436,648440,648441,648445,648446,648450,648451,648455,648456,648460,648462,648466]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2658360, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1744470143); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random67fa838512b672'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random67fa838512b672'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
