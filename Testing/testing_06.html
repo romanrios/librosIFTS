@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S6. Frameworks para automatizar pruebas unitarias | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1744219673/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S6. Frameworks para automatizar pruebas unitarias | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1744219673_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"4igTAtWNdh","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1744219673","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21046,"courseContextId":2643972,"contextid":2658989,"contextInstanceId":649025,"langrev":1745306645,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21046 context-2658989 cmid-649025 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1744219673/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S6. Frameworks para automatizar pruebas unitarias</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Metodología de Pruebas de Sistemas 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S6. Frameworks para automatizar pruebas unitarias
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        miércoles, 23 de abril de 2025, 17:36
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21046&amp;section=9" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649024" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=649026" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649027" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción" class="font-weight-bold text-decoration-none" href="#ch178261">1. Introducción</a></li><li><a title="2. Definición de pruebas unitarias" class="font-weight-bold text-decoration-none" href="#ch178262">2. Definición de pruebas unitarias</a><ul><li><a title="2.1. Criterios para una buena prueba unitaria" class="text-decoration-none" href="#ch178263">2.1. Criterios para una buena prueba unitaria</a></li><li><a title="2.2. Ampliando la definición de pruebas unitarias" class="text-decoration-none" href="#ch178277">2.2. Ampliando la definición de pruebas unitarias</a></li><li><a title="2.3. Ejemplo de pruebas unitarias sin utilizar un framework" class="text-decoration-none" href="#ch178264">2.3. Ejemplo de pruebas unitarias sin utilizar un framework</a></li></ul></li><li><a title="3. ¿Qué es un framework de pruebas?" class="font-weight-bold text-decoration-none" href="#ch178266">3. ¿Qué es un framework de pruebas?</a><ul><li><a title="3.1. Un framework : escribir, ejecutar y revisar resultados" class="text-decoration-none" href="#ch178278">3.1. Un framework : escribir, ejecutar y revisar resultados</a></li></ul></li><li><a title="4. Herramienta Nunit para Framework" class="font-weight-bold text-decoration-none" href="#ch178265">4. Herramienta Nunit para Framework</a></li><li><a title="5. Primeros pasos con NUnit" class="font-weight-bold text-decoration-none" href="#ch178268">5. Primeros pasos con NUnit</a></li><li><a title="6. Usar un framework: LogAn" class="font-weight-bold text-decoration-none" href="#ch178267">6. Usar un framework: LogAn</a><ul><li><a title="6.1. Parte 1: Probar la clase &amp;quot;LogAn&amp;quot;" class="text-decoration-none" href="#ch178269">6.1. Parte 1: Probar la clase "LogAn"</a></li><li><a title="6.2. Parte 2: Primera prueba automatizada" class="text-decoration-none" href="#ch178279">6.2. Parte 2: Primera prueba automatizada</a></li><li><a title="6.3. Parte 3: Primeros atributos en NUnit" class="text-decoration-none" href="#ch178270">6.3. Parte 3: Primeros atributos en NUnit</a></li><li><a title="6.4. Parte 4: Probar el código" class="text-decoration-none" href="#ch178271">6.4. Parte 4: Probar el código</a></li><li><a title="6.5. Parte 4.1: La clase Assert. Un puente entre el código y el framework" class="text-decoration-none" href="#ch178272">6.5. Parte 4.1: La clase Assert. Un puente entre el código y el framework</a></li><li><a title="6.6. Parte 5: Pruebas que fallan" class="text-decoration-none" href="#ch178273">6.6. Parte 5: Pruebas que fallan</a></li><li><a title="6.7. Parte 6: Pruebas positivas" class="text-decoration-none" href="#ch178274">6.7. Parte 6: Pruebas positivas</a></li><li><a title="6.8. Parte 7: Pasos para parametrizar las pruebas" class="text-decoration-none" href="#ch178275">6.8. Parte 7: Pasos para parametrizar las pruebas</a></li><li><a title="6.9. Parte 7.1 Pasos para pruebas positivas" class="text-decoration-none" href="#ch178280">6.9. Parte 7.1 Pasos para pruebas positivas</a></li><li><a title="6.10. Parte 7.2 Pasos para pruebas negativas" class="text-decoration-none" href="#ch178281">6.10. Parte 7.2 Pasos para pruebas negativas</a></li></ul></li><li><a title="7. Bibliografía" class="font-weight-bold text-decoration-none" href="#ch178276">7. Bibliografía</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178261"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <div class="container" style="color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178261/_%20%2814%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20);">En la semana 1 aprendimos que los niveles de pruebas están asociados al “qué” se prueba, pero considerando el sistema como un conjunto de partes. Cada nivel de pruebas se enfoca en un nivel de composición de partes del sistema. Vimos que existen 4
+            niveles de pruebas:<span class="" style="font-size: large;"> </span><span style=" color:#1345CD; font-weight: 600"><b><span class="" style="font-size: large;">unitaria</span></b><span class="" style="font-size: large;">, </span><b><span class="" style="font-size: large;">integración</span></b><span class="" style="font-size: large;">, </span><b><span class="" style="font-size: large;">sistema</span></b><span class="" style="font-size: large;">, </span><b><span class="" style="font-size: large;">aceptación</span></b></span><span class="" style="font-size: large;">.</span>
+        </p>
+        <p style="color: rgb(1, 6, 20);">Las pruebas que se enfocan al nivel de componentes son:</p>
+        <p style=""></p>
+        <ul>
+            <li><span style="color: rgb(19, 69, 205); font-weight: 600;">Pruebas unitarias o <i>unit testing</i></span> <span class="" style="color: rgb(51, 51, 51);">se enfocan en los</span><span class="" style="color: rgb(0, 46, 184);"> componentes de forma aislada</span>.
+                <span class="" style="color: rgb(1, 6, 20);">Es decir, la prueba se hace para métodos o funciones individuales. No requieren tener la totalidad del sistema
+            terminado porque se prueba sólo el método bajo análisis.</span></li>
+            <li><b><span class="" style="color: rgb(0, 46, 184);">Pruebas de integración</span></b> <span class="" style="color: rgb(51, 51, 51);">se enfocan en la</span><span class="" style="color: rgb(0, 46, 184);"> combinación de diferentes componentes</span>.
+                <span class="" style="color: rgb(51, 51, 51);">Se centra en la interacción de los componentes
+                del software y en buscar errores cuando unimos las partes que hemos desarrollado.</span></li>
+        </ul>
+        <p></p>
+        <p style="color: rgb(1, 6, 20);">Las pruebas que se enfocan al nivel del sistema son:</p>
+        <p style=""></p>
+        <ul>
+            <li><span style="color: rgb(19, 69, 205); font-weight: 600;">Pruebas de sistemas</span>:&nbsp;<span class="" style="color: rgb(1, 6, 20);">ven el sistema como un todo.&nbsp;</span></li>
+            <ul>
+                <li><span class="" style="color: rgb(1, 6, 20);">se pueden hacer de forma granular, es decir casos de uso/funcionalidades individuales, o combinando flujos completos de inicio a fin.&nbsp;</span></li>
+                <li><span class="" style="color: rgb(1, 6, 20);">Este nivel debería hacerlo alguien diferente a quien desarrolló el software.</span></li>
+                <li><span class="" style="color: rgb(1, 6, 20);">Se intenta determinar si el sistema en su globalidad opera satisfactoriamente desde la:</span></li>
+                <ul>
+                    <li><span class="" style="color: rgb(1, 6, 20);">funcionalidad,</span></li>
+                    <li><span class="" style="color: rgb(1, 6, 20);">recuperación de fallas,&nbsp;</span></li>
+                    <li><span class="" style="color: rgb(1, 6, 20);">seguridad,&nbsp;</span></li>
+                    <li><span class="" style="color: rgb(1, 6, 20);">pruebas de estrés,</span></li>
+                    <li><span class="" style="color: rgb(1, 6, 20);">pruebas de </span><i><span class="" style="color: rgb(1, 6, 20);">performance</span></i>.</li>
+                </ul>
+            </ul>
+        </ul>
+        <ul>
+            <li><span style="color: rgb(19, 69, 205); font-weight: 600;">Pruebas de aceptación</span>:&nbsp;<span class="" style="color: rgb(1, 6, 20);">sirven para el sistema como un todo, pero en condiciones reales de uso.&nbsp;</span></li>
+            <ul>
+                <li><span class="" style="color: rgb(1, 6, 20);">Son las más costosas de realizar.</span></li>
+                <li><span class="" style="color: rgb(1, 6, 20);">Es más difícil encontrar el lugar exacto del código donde se generó
+            el error.&nbsp;</span></li>
+                <li><span class="" style="color: rgb(1, 6, 20);">En la mayoría de los casos estas pruebas son realizadas por el cliente o los usuarios del software para que determinen si el software se ajusta a sus necesidades.</span></li>
+            </ul>
+        </ul>
+        <p></p>
+
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178262"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178262/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas unitarias</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">El concepto de <span class="" style="color: rgb(0, 61, 245);">pruebas unitarias</span> en el software no es nuevo. Ha estado dando vueltas por la comunidad desde los primeros días de <i>Smalltalk </i>en los 70s. Este método es una de las mejores formas en las que un/a desarrollador/a puede mejorar la
+            calidad del código mientras se gana un entendimiento aun más profundo de los requerimientos funcionales de una clase o método.&nbsp;Lo que estamos probando es&nbsp;<span><i>system under test</i>&nbsp;(SUT) o sistema bajo prueba.</span></p>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto" style="color: rgb(1, 6, 20); font-size: large;">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición incompleta</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; "><span class="" style="color: rgb(1, 6, 20);">La definición mas común refiere que es</span><span class="" style="color: rgb(1, 6, 20);">&nbsp;una pieza de código (usualmente un método) que invoca a otra pieza de código y controla que tan correctas son las asunciones
+                    y resultados finales. Si las asunciones y resultados son incorrectos, la prueba unitaria falla. <span class="" style="color: rgb(0, 46, 184);">Una unidad es un método o una función.</span></span></span></p></div></div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Esta definición de pruebas unitarias es la mas común que podemos encontrar, pero es una definición incompleta, que iremos completando a lo largo del contenido de esta semana. El problema de esta definición es que no contempla una edición mas completa
+            y amplia de lo que es una unidad. Varios expertos en el tema, como <span style=" color:#1345CD; font-weight: 600">Roy Osherove</span>, consideran que una unidad de trabajo puede ser tan pequeña como un solo método o tan grande como múltiples
+            clases y funciones que cumplen su propósito.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Es importante que no minimicemos el tamaño de la unidad de trabajo que estamos probando. Si creamos una unidad de trabajo que sea un poco más grande, donde su resultado final sea más notorio para el usuario final de la API, estaremos creando pruebas
+            que son más mantenibles.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Teniendo esto en cuenta podemos actualizar la definición de una prueba unitaria a la siguiente:&nbsp;</p>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto" style="color: rgb(1, 6, 20); font-size: large;">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición completa</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Una <span class="" style="color: rgb(0, 46, 184);">prueba unitaria</span> es una pieza de código que invoca a una unidad de trabajo y controla un resultado final especifico
+                    de una unidad de trabajo. Si las asunciones del resultado final resultan estar mal, entonces la prueba falla. El alcance de una prueba unitaria puede ser tan pequeña como un método o tan grande como múltiples clases.</span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178263"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178263/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Criterios para una buena prueba unitaria</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">El aspecto más difícil de definir una prueba unitaria, es definir qué es una <span class="" style="color: rgb(0, 46, 184);">buena</span>&nbsp;prueba unitaria. Es por eso que comprender la definición de prueba unitaria no es suficiente.
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">La mayoría de las personas que intentan probar su propio código se dan por vencidos en algún punto o no realizan ninguna prueba unitaria. En vez de eso, confían en las pruebas de integración y las pruebas de sistema que se realizan más tarde en el ciclo de
+            vida del producto en el que están trabajando. O pueden recurrir a los métodos de prueba estática del código que vimos la semana 5: inspección de código ó <i>Walkthoughs</i> ó pruebas de escritorio</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Los criterios para&nbsp;<span style="color: rgb(19, 69, 205); font-weight: 600;">una buena prueba unitaria</span> son los siguientes:<br></p>
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div class="col">
+            </div>
+        </div>
+
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">Ser automatizada y repetible.</span></p>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col" style="">
+                <p style="color: rgb(1, 6, 20); font-size: large;">Ser fácil de implementar.</p>
+            </div>
+        </div>
+
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">Ser relevante el día de mañana.</span></p>
+            </div>
+        </div>
+
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">Cualquier persona puede hacerla correr con solo apretar un botón.</span></p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">Correr rápidamente.</span></p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">Obtener resultados consistentes (siempre debería tener el mismo resultado si no cambiamos nada entre ejecuciones).</span></p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">Tener control total sobre la unidad que está probando.</span></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span class="" style="color: rgb(1, 6, 20); font-size: large;">Estar completamente aislada (corre independientemente de otras pruebas).</span><br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d" class="" style="color: rgb(1, 6, 20); font-size: large;">Cuando falla, debería ser fácil detectar que es lo que se esperaba y cómo determinar el problema con exactitud.&nbsp;</span></p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p><p style="color: rgb(1, 6, 20); font-size: large;">Teniendo en cuenta los criterios mencionados anteriormente es importante destacar que <span class="" style="color: rgb(0, 46, 184);">no hay que confundir el acto de probar software con el concepto de prueba unitaria</span><span class="" style="color: rgb(51, 51, 51);">.&nbsp;</span></p><p style="color: rgb(1, 6, 20); font-size: large;">Desde la semana 2 hasta la semana 5, las técnicas y métodos que hemos visto hasta el momento<b> no</b> son pruebas unitarias ya que no son pruebas automáticas y no son pruebas a una pequeña parte del software,
+            sino a funcionalidades completas.&nbsp;</p><p style="color: rgb(1, 6, 20); font-size: large;">Esas pruebas son parte de lo que conocemos como pruebas de integración. Hablaremos sobre pruebas de integración más adelante en la materia, no esta semana. Lo importante es que a mayor diferencia es que las
+            pruebas de integración funcionan sin tener control completo de la unidad de trabajo a probar (ya deja de ser una unidad) y entran en juego dependencias que no dependen al 100% de la prueba (como el tiempo, la red, base de datos, hilos de procesamiento,
+            generadores de números automáticos, llamadas a APIs externas, uso de librerías externas, etc.)</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p></div><b>
+</b></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178277"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178277/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Ampliando la definición de prueba unitaria</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Retomemos la ultima definición<span class="" style="color: rgb(255, 51, 102);"><b> </b></span>podemos cambiar entonces una vez más la definición de prueba unitaria a la siguiente:&nbsp;<br></p>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto" style="color: rgb(1, 6, 20); font-size: large;">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición completa</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Una <span class="" style="color: rgb(0, 46, 184);">prueba unitaria</span> es un fragmento de código automatizado que llama a la unidad de trabajo en evaluación, y verifica
+                    las suposiciones que establece acerca del resultado final de esa unidad. Normalmente se redacta empleando un <i>framework </i>de pruebas unitarias. Estas pruebas se caracterizan por ser de fácil escritura y ejecución veloz, además de ser
+                    confiables, legibles y fáciles de mantener. Mantienen su coherencia en sus resultados siempre que el código en producción se mantenga inalterado.</span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p style=""><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(0, 46, 184);"><b>¿En qué se diferencian y se complementan ambas definiciones?</b></span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">La <span class="" style="color: rgb(0, 46, 184);">definición inicial</span> se centra principalmente en los aspectos técnicos y funcionales de una prueba unitaria.&nbsp;</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">La <span class="" style="color: rgb(0, 46, 184);">definición ampliada</span>: incluye elementos adicionales que resaltan la importancia de la legibilidad, mantenibilidad y la consistencia en los resultados con respecto al código en producción. Además, menciona que una prueba unitaria puede escribirse
+            fácilmente y ejecutarse rápidamente, lo que enfatiza su eficiencia en el proceso de desarrollo de software.&nbsp;</p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Ambas definiciones son válidas y complementarias, y la elección de cuál usar dependerá del contexto y de los aspectos que desees destacar en tu explicación. </p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178264"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178264/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Ejemplo de pruebas unitarias sin utilizar un <i>framework</i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Es posible escribir una prueba unitaria automatizada sin utilizar ningún <i>framework </i>externo de desarrollo. De hecho, esta es la práctica más común entre los desarrolladores hasta que descubren la existencia de los <i>frameworks </i>de pruebas
+            unitarias.&nbsp;
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Analicemos un ejemplo de pruebas en <span class="" style="color: rgb(0, 46, 184);">C# </span>(lenguaje visto en primer año) sin utilizar ningún <i>framework.</i></p>
+        <!--Inicio caja borde azul-->
+        <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+            <div class="caja-azul">
+                <p style="padding: 1% 2%; word-wrap: break-word;">Vamos a asumir que tenemos una clase llamada <span class="" style="color: rgb(0, 61, 245);">SimpleParser</span>&nbsp;y que queremos probarla. Esta clase tiene un método <span class="" style="color: rgb(0, 61, 245);">ParseAndSum</span>&nbsp;que
+                    toma un<i> string </i>de números separados por coma.&nbsp;</p>
+                <ul>
+                    <li>Si el<i> string</i> no tiene ningún número, entonces el método retorna 0.&nbsp;</li>
+                    <li>Si el <i>string</i> tiene un solo número, el método retorna ese número como un entero.&nbsp;</li>
+                    <li>Si el <i>string </i>tiene múltiples números, entonces los suma a todos y retorna el valor de la suma.</li>
+                </ul>
+                <p></p>
+            </div>
+        </div>
+        <!--Fin caja borde azul-->
+        <p style="color: rgb(1, 6, 20); font-size: large;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178264/codigo.png" alt="" width="70" height="62" role="presentation" class="img-responsive atto_image_button_middle">A continuación, el código de la clase <span class="" style="color: rgb(0, 61, 245);">SimpleParser <span class="" style="color: rgb(1, 6, 20);">queda así</span></span>:
+        </p>
+        <p style="text-align: center; color: rgb(1, 6, 20); font-size: large;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178264/codigoejemplo1.png" alt="" width="85%" height="85%" role="presentation" class="img-responsive atto_image_button_middle"><br></p><br>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Con este código podemos:</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <ul>
+            <li><span class="" style="font-size: large;"><span class="" style="color: rgb(1, 6, 20);">Crear una simple aplicación de consola que haga referencia a esta clase </span></span><span class="" style="color: rgb(0, 61, 245); font-size: large;">SimpleParserTest</span>
+<span class="" style="font-size: large;"><span class="" style="color: rgb(1, 6, 20);">que se pruebe con el método</span> </span><span class="" style="color: rgb(0, 61, 245); font-size: large;">ParseAndSum</span><span class="" style="font-size: large;">. <span class="" style="color: rgb(1, 6, 20);">Nótese que la clase que de prueba tiene una notación especial, que es el nombre de la clase a probar seguido de la palabra</span> </span><span class="" style="color: rgb(0, 61, 245); font-size: large;">test</span><span class="" style="font-size: large;">,<span class="" style="color: rgb(1, 6, 20);"> para indicar que esta es la prueba y no la clase real. Utilizaremos esta notación para escribir las pruebas unitarias. El método de prueba que escribiremos, invocará a la clase </span></span><span class="" style="color: rgb(0, 61, 245); font-size: large;">real</span><span class="" style="font-size: large;">&nbsp;</span><span class="" style="font-size: large;"><span class="" style="color: rgb(1, 6, 20);">(la clase a ser probada) y hará una revisión del valor retornado. Si no es lo que esperamos, esta prueba lo imprime por consola.
+            Esta prueba también atrapa cualquier excepción que pueda saltar y lo indica por consola.&nbsp;</span></span>
+            </li>
+        </ul><span class="" style="font-size: large;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178264/codigo%20%281%29.png" alt="" width="70" height="62" role="presentation" class="img-responsive atto_image_button_middle">&nbsp;</span>
+        <span class="" style="font-size: large; color: rgb(1, 6, 20);">A continuación, la clase de prueba escrita en código quedaría así:&nbsp;</span><br>
+        <p></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span id="docs-internal-guid-6240f821-7fff-4cfd-1871-a42710ecf741"></span></p>
+        <p dir="ltr" style="text-align: center; "><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178264/codigo%20ejemplo%202.png" alt="" width="85%" height="85%" role="presentation" class="img-responsive atto_image_button_middle"><br></p>
+        <p></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p><span class="" style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="color: rgb(0, 46, 184);">¿Cómo funciona la prueba?</span></span>
+        </p>
+        <p><span class="" style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="color: rgb(0, 46, 184);">La función de una prueba unitaria consiste en proporcionar un valor de cadena vacía al método </span><span class="" style="color: rgb(255, 51, 102);">ParseAndSum</span>,&nbsp;<span class="" style="color: rgb(1, 6, 20);">utilizando el comando</span> <span class="" style="color: rgb(255, 51, 102);">string.Empty</span>.&nbsp;<span class="" style="color: rgb(1, 6, 20);">A continuación, se efectúa una comparación utilizando una declaración </span><span class="" style="color: rgb(255, 51, 102);">if</span>&nbsp;<span class="" style="color: rgb(1, 6, 20);">para determinar si el resultado es igual a cero o no. En caso de que el resultado sea distinto de cero y la prueba falle, se genera una impresión en la consola indicando que el método debería haber devuelto cero.</span></span>
+        </p>
+        <p><span class="" style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="color: rgb(0, 46, 184);">Cuando creamos múltiples pruebas unitarias para la misma clase, es fundamental identificar de manera precisa cuál prueba ha fallado antes de abordar el problema.</span>            <span class="" style="color: rgb(1, 6, 20);">Para lograrlo, incorporamos el nombre del método de prueba en los mensajes de consola que se generan (por ejemplo,</span> <span class="" style="color: rgb(255, 51, 102);">TestReturnSezoWhenEmptyString</span>)<span class="" style="color: rgb(1, 6, 20);">. Importante destacar que el nombre del método de prueba refleja el escenario que estamos evaluando, es decir, que el método debe retornar cero cuando se le proporciona una cadena vacía.</span>
+            </span>
+        </p>
+        <p><span class="" style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="color: rgb(1, 6, 20);">Si el resultado concuerda con lo esperado, la prueba no generará ningún mensaje en la consola.</span><span class="" style="color: rgb(1, 6, 20);">&nbsp;</span></span>
+        </p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">En resumen</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Este enfoque permite que, cuando se ejecutan numerosas pruebas, se obtengan mensajes solamente para las pruebas que no cumplen con los requisitos. No obstante, si el/la desarrollador/a prefiere visualizar mensajes de consola cuando una prueba
+                    tiene éxito, puede incluirlos sin inconvenientes.</p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(1, 6, 20);">Ahora que tenemos escrita nuestra prueba, y comprendemos su funcionamiento, podemos:</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <ul>
+            <li><span class="" style="font-size: large;"><span class="" style="color: rgb(1, 6, 20);">escribir un simple</span> </span><span class="" style="color: rgb(255, 51, 102); font-size: large;">Main</span><span class="" style="font-size: large;"> <span class="" style="color: rgb(1, 6, 20);">en nuestro proyecto de pruebas y hacer correr nuestra aplicación.&nbsp;</span></span>
+            </li>
+        </ul><span class="" style="font-size: large;"><span class="" style="color: rgb(1, 6, 20);">En la siguiente imagen, el</span>
+        </span><span class="" style="color: rgb(255, 51, 102); font-size: large;">Main</span><span class="" style="font-size: large;"> <span class="" style="color: rgb(1, 6, 20);">que tenemos es sólo un ejecutor de pruebas, es decir que invocará todas las pruebas que hayamos escrito una por una, permitiendo que escriban sus resultados en la consola. Como este </span></span>
+        <span class="" style="color: rgb(0, 46, 184);"><span class="" style="color: rgb(255, 51, 102); font-size: large;">Main </span><span class="" style="font-size: large;">es un ejecutable</span></span><span class="" style="font-size: large;">, <span class="" style="color: rgb(1, 6, 20);">todas las pruebas unitarias pueden
+            correr sin intervención humana (asumiendo que no agregamos ningún diálogo interactivo entre pruebas).</span></span><br>
+        <p></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span id="docs-internal-guid-ff0f4e50-7fff-a7fc-13b2-edfba8584bc7" class="" style="font-size: large;"></span></p>
+        <p dir="ltr" style="text-align: center; "><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178264/codigo%20ejemplo%203.png" alt="" width="85%" height="85%" role="presentation" class="img-responsive atto_image_button_middle"><br></p>
+        <p></p>
+        <p style=""><span style="color: rgb(1, 6, 20); font-size: large;">De estos ejemplos verificamos lo siguiente: Si analizamos el código, descubrimos que tenemos una sola variable y que estamos usando más código para probar el valor de esa variable.&nbsp;</span></p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Dónde hemos visto algo similar? ¿Acaso esto trae recuerdos de algo?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Pues si, esto trae recuerdos de las <span class="" style="color: rgb(0, 46, 184);">pruebas de caja blanca</span> estudiadas en la semana 3. Así como utilizamos las pruebas de caja en semanas anteriores para probar de forma manual nuestro
+                    código y reportando errores utilizando <span class="" style="color: rgb(0, 46, 184);">Bug Advocacy</span>, ahora utilizaremos las técnicas de caja blanca para armar nuestras pruebas unitarias. Antes de hacer pruebas unitarias, lo mejor
+                    es utilizar una técnica de caja blanca para saber qué pruebas hacer.</p>
+            </div>
+        </div>
+        <p style=""><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">
+
+        </p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178266"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178266/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Qué es un<i> framework</i> de pruebas?</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br>Realizar pruebas manuales puede ser un proceso necesario pero laborioso, y la verificación de nuevas funcionalidades puede consumir mucho tiempo, especialmente las pruebas de regresión. Además, este enfoque manual es propenso a errores debido
+            a su repetitividad y aburrimiento, lo que puede resultar en la introducción de valores incorrectos y fallos en las pruebas.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Entonces, nos preguntamos: ¿Cómo pueden las herramientas y los <i>frameworks </i>de pruebas unitarias ayudar a abordar estos problemas? </p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Para abordar esta problemática, es posible recurrir a herramientas y <i>frameworks </i>de pruebas unitarias que <span class="" style="color: rgb(0, 46, 184);">automatizan el proceso de prueba</span>. Estas herramientas no solo simplifican
+                    la creación de pruebas, sino que también permiten ejecutarlas de manera automática y obtener retroalimentación de los resultados de manera eficiente.</p>
+            </div>
+        </div>
+        <p>Para seguir pensando:&nbsp;</p>
+        <p></p>
+        <ul>
+            <li>¿Cuál será el beneficio de automatizar las pruebas unitarias en comparación con las pruebas manuales?&nbsp;</li>
+            <li>¿Cómo pueden las herramientas y los <i>frameworks</i> de pruebas unitarias agilizar el proceso de desarrollo de software?&nbsp;</li>
+            <li>¿Qué ventajas específicas ofrecen las APIs de estos <i>frameworks</i> para escribir pruebas de manera más eficiente?</li>
+        </ul>
+        <p></p>
+        <p></p>
+        <p>Hasta el momento, las pruebas unitarias<span class="" style="color: rgb(255, 51, 102);">&nbsp;</span>que hemos estudiado esta semana son algo limitadas:</p>
+        <p></p>
+        <!--bulleteado-->
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">No son estructuradas.</span>&nbsp;<span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">Si queremos escribir múltiples pruebas, tendremos que reinventar la rueda cada vez que intentemos probar una unidad de trabajo.&nbsp;Tenemos que preocuparnos por cómo vamos a interactuar y mostrar los resultados, fallando en la parte de la definición de ”fácil de implementar”. Una prueba puede ser:&nbsp;</span></p>
+                <p></p>
+                <ul>
+                    <ul>
+                        <li><span>Una aplicación de consola.</span></li>
+                        <li><span>Una aplicación para identificarse con una GUI para mostrar los resultados.</span></li>
+                        <li><span>Un formulario web.&nbsp;</span></li>
+                    </ul>
+                </ul>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">No son repetibles.</span>&nbsp;<span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">Ni nosotros ni nuestro equipo podríamos correr las pruebas tan fácilmente, ya que necesitamos varias instalaciones para conectar las 2 aplicaciones que estamos utilizando. Esto rompe la parte de la definición que especifica sobre la repetición de las pruebas. <span class="" style="color: rgb(0, 46, 184);">Con un </span><i><span class="" style="color: rgb(0, 46, 184);">framework </span></i>
+                    <span class="" style="color: rgb(0, 46, 184);">se pueden escribir pruebas repetibles con mayor facilidad.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">No cubren todas las partes importantes del código.</span> <span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">Las pruebas que realizamos no abarcan siempre todo el código crítico, es decir, el código que involucra lógica, que suele ser la parte más susceptible a errores.&nbsp;</span></p>
+                <p></p>
+                <ul>
+                    <ul>
+                        <li><span>Por ejemplo, los métodos <span class="" style="color: rgb(255, 51, 102);">getters</span>&nbsp;y <span class="" style="color: rgb(255, 51, 102);">setters&nbsp;</span>generalmente carecen de lógica propia, por lo que no necesitamos
+                            efectuar pruebas individuales para estos métodos; en su lugar, se evalúan automáticamente al probar otros métodos que los utilizan. Si el proceso de escritura de pruebas fuese más sencillo, estaríamos más inclinados a crear
+                            un mayor número de pruebas y, como resultado, lograr una cobertura más exhaustiva.</span>
+                        </li>
+                    </ul>
+                </ul>
+                <p></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div class="col">
+            </div>
+        </div>
+      <!-- Cuadro amarillo borde violeta -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;"><div style="margin:16px"><p style="color: #5811BB; font-size: large; font-weight: 600">En definitiva</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> necesitamos un <i>framework </i>para escribir, correr y revisar las pruebas unitarias y sus resultados. </p>
+            </div>
+        </div>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178278"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178278/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><span>Un&nbsp;</span><i>framework</i>:&nbsp;<span><span style="">escribir, ejecutar y revisar resultados</span></span></p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br>En la siguiente figura identificamos las áreas del desarrollo de software donde un <i>framework </i>de pruebas unitarias tiene influencia y representa el funcionamiento de las pruebas unitarias.</p><p>Los <i>frameworks </i>son librerías de código y módulos que ayudan a los/as desarrollares/as a probar su código utilizando
+            pruebas unitarias. Además, nos permiten correr los códigos de forma automática cada vez que compilemos el código.</p>
+        <p></p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178278/Figura%206.png" alt="sd" width="100%" height="100%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);"></p>
+
+        <p>Siguiendo con la figura, las pruebas unitarias:</p><p></p><ul><li>se escriben como código utilizando librerías del <i>framework </i>de pruebas unitarias.&nbsp;</li><li>son ejecutadas en otra herramienta de pruebas
+            o dentro del mismo IDE que estemos utilizando.&nbsp;</li><li>los resultados son revisados por el/la desarrollador/a, ya sea mediante un texto en consola, utilizando el IDE o la UI del <i>framework </i>de pruebas.
+        </li></ul><p></p>
+        <p><b><span class="" style="font-size: large; color: rgb(0, 46, 184);">Escribir, ejecutar y revisar resultados</span></b></p><p>En la tabla a continuación, presentamos cómo los <i>frameworks </i>de pruebas unitarias ayudan a los/as desarrolladores/as a escribir y ejecutar pruebas, como así también a revisar sus resultados.</p>
+        <p></p>
+
+        <!--Tabla-->
+        <table style="border: 3px solid #f7f7f7; border-radius: 5px; background-color: #f5f5f5; margin-left: 3%; margin-right: 3%;" border="2" cellspacing="2" width="80%">
+            <tbody>
+                <tr>
+                    <th style="background-color: #415985; width: 36.1562%;"><span style="color: #ffffff; font-family: tahoma, arial, helvetica, sans-serif;"><strong>Práctica asociada con las pruebas unitarias</strong>&nbsp;</span></th>
+                    <th style="background-color: #415985; width: 59.8438%;"><span style="color: #ffffff; font-family: tahoma, arial, helvetica, sans-serif; margin-left: 3%; margin-right: 3%;"><strong>Cómo el </strong><strong><i>framework </i></strong><strong>ayuda con la práctica</strong>&nbsp;</span></th>
+                </tr>
+                <tr>
+                    <td style="background-color: #e6e6e6;"><span style="font-family: tahoma, arial, helvetica, sans-serif;"><strong>Escribir pruebas fácilmente y de manera estructurada</strong></span></td>
+                    <td style="background-color: #e6e6e6;">
+                        <p><span style="font-family: tahoma, arial, helvetica, sans-serif;"><span style="font-weight: 400;">El </span><i><span style="font-weight: 400;">framework </span></i><span style="font-weight: 400;"><span class="" style="color: rgb(0, 46, 184);">provee al desarrollador con una librería</span> que contiene:</span></span>
+                        </p>
+                        <ul>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">Clases base para heredar o interfaces para implementar.</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">Atributos y palabras claves para marcar que métodos de los que estamos usando son pruebas.&nbsp;</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-family: tahoma, arial, helvetica, sans-serif;">Clases de Afirmación o <i style="font-size: 1rem;">Assertion</i><span style="font-weight: 400;"> (m</span><span style="font-weight: 400;">ás</span><span style="font-weight: 400;"> adelante aprenderemos qué son) que tienen métodos especiales de afirmación que invocamos para verificar nuestro código.</span></span>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #e6e6e6;"><span style="font-family: tahoma, arial, helvetica, sans-serif;"><strong>Ejecutar una o todas las pruebas</strong></span></td>
+                    <td style="background-color: #e6e6e6;">
+                        <p><span style="font-family: tahoma, arial, helvetica, sans-serif;"><span style="font-weight: 400;">El </span><i><span style="font-weight: 400;">framework </span></i><span style="font-weight: 400; color: rgb(0, 46, 184);" class="">provee un ejecutor de pruebas o </span><i><span style="font-weight: 400; color: rgb(0, 46, 184);" class="">runner </span></i>
+                            <span style="font-weight: 400;">(por consola o con una GUI) que:</span>
+                                </span>
+                        </p>
+                        <ul>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">Identifica pruebas en el código.</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">Corre las pruebas de manera automática.</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">Indica el estado de las pruebas mientras se están ejecutando.</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">Puede ser automatizado utilizando líneas de comando y la consola.</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #e6e6e6;"><span style="font-family: tahoma, arial, helvetica, sans-serif;"><strong>Revisar los resultados de las pruebas ejecutadas</strong></span></td>
+                    <td style="background-color: #e6e6e6;"><span style="font-family: tahoma, arial, helvetica, sans-serif;">Los <i style="font-size: 1rem;">runners o ejecutor de pruebas&nbsp;</i><span style="font-weight: 400;">proveerán información como, por ejemplo:</span></span>
+                        <ul>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">Cuántas pruebas se han corrido.</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">Cuántas pruebas no se han corrido.</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">Cuántas pruebas han fallado.</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">Cuáles pruebas han fallado.</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">El motivo de la falla de las pruebas.</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">El mensaje de ASSERT que hemos escrito.</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;">La ubicación del código que ha fallado.</span></li>
+                        </ul>
+                        <p><span style="font-family: tahoma, arial, helvetica, sans-serif;"><span style="font-weight: 400;">Probablemente un </span><i><span style="font-weight: 400;">full stack trace </span></i><span style="font-weight: 400;">(es toda la información referente a la ejecución de un método, los pasos que se ejecutan y los valores de sus variables) de cualquier excepción que haya causado que la prueba falle. Probablemente permitirá revisar todas las invocaciones a los distintos métodos dentro del </span><i><span style="font-weight: 400;">call stack </span></i>
+                            <span style="font-weight: 400;">(pila de llamadas e invocaciones).</span>
+                                </span>&nbsp;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&nbsp;</p></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178265"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178265/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Framework de pruebas de .NET con C#</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Cada lenguaje de programación tiene su propio <i>framework </i>de pruebas unitarias, e incluso para algunos lenguajes existen más de uno.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Durante la semana 6 aprenderemos cómo escribir pruebas y cómo debemos comenzar a hacerlo. Analizaremos ejemplos utilizando <b>NUnit</b>, un <i>framework </i>de pruebas
+            de .NET con C#, lenguaje de programación aprendido en el primer año de la tecnicatura.</p>
+            </div>
+        </div>
+        <p>Es importante saber que existen muchos otros <i>frameworks </i>de pruebas para .NET con los que podríamos trabajar, pero empezamos con <b>NUnit</b> por su facilidad para aprenderlo. Una vez que aprendamos las bases de pruebas unitarias con un
+            <i>framework</i>, los/las estudiantes podrán buscar nuevos <i>frameworks </i>y utilizarlos si así lo desean.</p>
+        <p>Existe un <i>framework </i>de pruebas que viene integrado con el IDE Visual Studio, llamado <b>MSTest</b>. No utilizaremos este <i>framework </i>por 2 motivos principales:</p>
+        <p></p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><b>NUnit</b> tiene mejores funcionalidades que el <b>MSTest</b> en cuanto a la escritura de las pruebas para lograr que sean más mantenibles y legibles.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>El <b>Visual Studio 2012</b> permite correr, sin ningún problema, otros <i>f<span>rameworks</span> </i>de trabajo, incluyendo el <b>NUnit.</b> Para esto sólo tendremos que instalar el paquete de <b>NUnit</b>. Esto último lo aprenderemos más
+                            adelante.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178268"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178268/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Primeros pasos con NUnit</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Como con cualquier herramienta nueva, debemos primero instalarla. NUnit es de naturaleza Open Source y es gratuita para descargar, por lo que esta será una tarea fácil. Luego de la instalación aprenderemos cómo escribir nuestras primeras
+            pruebas.
+
+        </p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Instalando NUnit</p>
+            </div>
+        </div>
+        <br>
+        <p><span class="" style="color: rgb(0, 46, 184);">VSCode es un IDE</span> que nos permite buscar y explorar paquetes de una forma muy rápida y simple. Si vamos al explorador de extensiones y buscamos <span class="" style="color: rgb(0, 46, 184);">NUnit</span>, la primera opción de extensión que identificaremos será la siguiente:
+        </p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178268/Core%20Test%20Explorer.png" alt="sd" width="100%" height="100%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><span style="font-size: large;">Instalaremos esta extensión y con esto ya habremos instalado el paquete de <b>NUnit.</b> En la pagina oficial de NUnit (<a href="https://nunit.org/" target="_blank"><span class="" style="color: rgb(0, 61, 245);"><u>NUnit.org</u></span></a>) encontramos un archivo descargable y ejecutable que también trae una UI para ver los resultados de los casos de prueba. Sabremos cómo es esa UI más adelante.</span><br></p>
+        <p>La forma “manual” de instalación de NUnit es ir a la pagina oficial (<a href="https://nunit.org/" target="_blank"><span class="" style="color: rgb(0, 61, 245);"><u>Nunit.org</u></span></a>) y descargar el ejecutable desde la pagina. Cuando corremos el ejecutable, observaremos cómo se realiza la configuración del programa.
+        </p>
+        <p>Al finalizar la instalación veremos un acceso directo en nuestro escritorio a la <span class="" style="color: rgb(0, 46, 184);">GUI </span>de <span class="" style="color: rgb(0, 46, 184);">NUnit</span>, que tendrá la siguiente apariencia:&nbsp;</p>
+        <p></p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178268/GUI%20NUnit.png" alt="sd" width="100%" height="100%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><span style="font-size: large;">La <span class="" style="color: rgb(0, 46, 184);">GUI </span>de <span class="" style="color: rgb(0, 46, 184);">NUnit </span>esta dividida en 3 componentes principales: El listado de todos los casos de prueba a la izquierda, los mensajes de error arriba a la derecha y el <i>stack </i><i>trace </i>abajo a la izquierda.</span><br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178267"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="color: rgb(1, 6, 20); font-size: 20px; width: 90px; height: 90px; border-radius: 50%; border: 8px solid rgb(215, 227, 254); display: flex; align-items: center; justify-content: center;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178267/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Usar un framework: LogAn</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Comprender el funcionamiento de un <i>framework </i>de pruebas es relativamente simple, siempre y cuando tengamos un ejemplo que nos guíe a lo largo de nuestro recorrido. Es por eso que vamos a conocer ahora el ejemplo que utilizaremos para aprender
+            a utilizar el <i>framework</i>. Este ejemplo es una simple aplicación en <span class="" style="color: rgb(0, 46, 184);">C#</span> y <span class="" style="color: rgb(0, 46, 184);">.NET</span> llamada <span><span class="" style="color: rgb(0, 46, 184);">LogAn</span></span>,
+            su nombre viene del inglés “<i><span class="" style="color: rgb(0, 46, 184);">Log and Notification</span></i>”. </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Imaginemos un escenario ficticio:&nbsp;</p>
+
+        <div style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(255, 254, 235); border-top: 2px solid rgb(70, 14, 149); width: 96%; margin: 0px auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Trabajamos en una organización que tiene muchos productos internos que utiliza para monitorear aplicaciones de sus clientes.</p>
+                <ul>
+                    <li>Todos estos productos escriben archivos de&nbsp;<i>logs</i>&nbsp;y los ubican en un directorio especial de su servidor correspondiente.&nbsp;</li>
+                    <li>Los archivos de&nbsp;<i>log&nbsp;</i>están escritos en un formato propietario de la organización donde trabajamos, por lo que no puede ser parseado por ninguna aplicación de terceros que ya exista.&nbsp;</li>
+                </ul>
+                <p></p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Nosotros tenemos la tarea de construir el producto <span class="" style="color: rgb(0, 46, 184);">LogAn</span> para analizar estos archivos de <i>log </i>y encontrar casos y eventos especiales en ellos. Cuando encuentra estos casos y eventos debe
+            alertar a quien corresponda.<br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Esta aplicación podría ser extremadamente grande, pero vamos a comenzar con algo simple y pequeño de una sola clase para ilustrar cómo utilizar el <i>framework</i>.&nbsp;</p>
+        <p style="font-size: large;"><b><span class="" style="color: rgb(0, 46, 184);">Importante:&nbsp;</span></b><span style="color: rgb(1, 6, 20);">En el primer año se ha aprendido a trabajar con <span class="" style="color: rgb(0, 46, 184);">VSCode</span>, por lo que los ejemplos
+            dados aquí serán utilizando ese IDE. Si preferís utilizar otro IDE podés hacerlo, pero deberás buscar las cuestiones específicas al que estés utilizando en internet.<b><span class="" style="color: rgb(255, 51, 102);">&nbsp;</span></b></span>
+        </p>
+
+        <!-- Caja Violeta de descarga-->
+        <br>
+        <div class="" style="width: 80%;  margin: 0 auto; ">
+
+            <div class="row">
+
+                <div class="col-1" style="background-color: #460E95; border-radius: 4px 0px 0px 4px;">
+
+                    <div class="d-flex justify-content-center" style="margin-top: 20px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-download" style=" color: #FFFFFF" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path>
+</svg>
+                    </div>
+                </div>
+
+                <div class="col-8" style="background-color: #FFFEEB;border: 1px solid #460E95; border-radius: 0px 4px 4px 0px;">
+
+                    <p style="margin-top: 16px;"><span style="font-size: 0.9375rem;"><span class="" style="font-size: large;"><span class="" style="color: rgb(1, 6, 20);">Encontrás el código para este ejemplo en el archivo</span> </span><span class="" style="color: rgb(0, 61, 245);"><u><span class="" style="font-size: large;"><a href="https://drive.google.com/file/d/1wSb3nEi0QRFZN5h-K4GkQvweceH6-GKN/view?usp=drive_link" target="_blank">S6. Código LogAn.pdf</a></span></u>
+                        </span>
+                        </span><br></p>
+                </div>
+                <br>
+                <!-- Fin Caja violeta de descarga-->
+
+
+
+            </div>
+            <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178269"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178269/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Parte 1: Probar la clase "LogAn"</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">La primera unidad de código es la clase "LogAn" que vamos a probar. Prestá atención porque este código tiene errores para hacer pruebas. La idea de utilizar este código que no funciona, a diferencia del que se encuentra en el anexo que <b>sí </b>funciona
+            es ver <span class="" style="color: rgb(0, 46, 184);">qué ocurre cuando hacemos una prueba para algo que no funciona.</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><b id="docs-internal-guid-72f99cce-7fff-f0cc-c74a-6f50a0c8bb17"></b></p>
+        <p dir="ltr" style="text-align: center; color: rgb(1, 6, 20); font-size: large;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178269/codigo%20ejemplo%204.png" alt="" width="60%" height="60%" role="presentation" class="img-responsive atto_image_button_middle"><br></p><br>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(0, 46, 184);"><b>Lectura del código:</b></span></p>
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>En esta clase queremos saber si el tipo de archivo es correcto, para eso necesitamos que el tipo sea <span class="" style="color: rgb(0, 61, 245);">.SLF</span>, pero en nuestra condición falta el <span class="" style="color: rgb(0, 61, 245);">!</span>                            que negará la condición y así retornará <i>true</i>.&nbsp;</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Queremos que nuestro método sólo retorne <i>true </i>cuando el archivo <b>no</b>&nbsp;es de extensión <span class="" style="color: rgb(0, 61, 245);">.SLF</span>.&nbsp;</p>
+                    </div>
+                </div>
+
+                <p style="color: rgb(1, 6, 20); font-size: large;">Este método no parece complicado a primera vista, pero lo probaremos para asegurarnos de que funciona correctamente. En la vida real, queremos probar todos los métodos que contengan algo de lógica, incluso si es una lógica simple. La lógica
+                    puede fallar, y tenemos que saber exactamente cuándo lo hace.</p>
+              <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> La primera prueba que haremos será enviarle un archivo válido con la extensión correspondiente, y queremos que el retorno sea <i>true</i>. </p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">¡Avancemos!</p>
+                <div style="background-color: rgb(250, 250, 250);"><div style="margin-left: 3%; margin-right: 3%;"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div style="margin-left: 3%; margin-right: 3%;"><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178279"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178279/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Parte 2: Primera prueba automatizada</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">La primera prueba que haremos será enviarle un archivo válido con la extensión correspondiente, y queremos que el retorno sea&nbsp;<i>true</i>.<span class="" style="color: rgb(0, 46, 184);"></span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><b id="docs-internal-guid-72f99cce-7fff-f0cc-c74a-6f50a0c8bb17"></b></p>
+        <p dir="ltr" style="text-align: center; color: rgb(1, 6, 20); font-size: large;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178279/codigo%20ejemplo%204.png" alt="" width="60%" height="60%" role="presentation" class="img-responsive atto_image_button_middle"><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(0, 46, 184);">Pasos de una prueba automatizada:</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Para el método&nbsp;<span><span class="" style="color: rgb(255, 51, 102);">I</span><span class="" style="font-size: large; color: rgb(255, 51, 102);">sValidLogFileName</span></span>:</p>
+        <div style="background-color: rgb(250, 250, 250);">
+            <div style="margin-left: 3%; margin-right: 3%;"><br>
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p>Creá un nuevo proyecto a la par que el que ya tenemos, que contiene todas nuestras clases de prueba. A este proyecto le pondremos el nombre <span class="" style="color: rgb(255, 51, 102);">LogAn.UnitTest</span>&nbsp;(asumiendo
+                            que el proyecto original se llama “LogAn”).</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Agregá al proyecto <span class="" style="color: rgb(0, 46, 184);">una nueva clase en un nuevo archivo</span>.&nbsp;</p>
+                        <p></p>
+                        <ul>
+                            <li>Esta clase se utilizará para contener los métodos de prueba. A la clase la llamaremos <span class="" style="color: rgb(255, 51, 102);">LogAnalyzerTests</span> (asumiendo que nuestra clase original se llama <span class="" style="color: rgb(255, 51, 102);">LogAnalyzer</span>).
+                                La idea de este nombre es mostrar que tenemos aquí las pruebas de la clase <span class="" style="color: rgb(255, 51, 102);">LogAnalyzer</span>.&nbsp;</li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Agregá un nuevo método a la clase anterior, que se llame “<span class="" style="color: rgb(255, 51, 102);">IsValidLogFileName_BadExtension_ReturnsFalse()</span>”. Le damos este nombre ya que:</p>
+                        <p></p>
+                        <ul>
+                            <li>primero tenemos la unidad de trabajo a probar,</li>
+                            <li>después el escenario a probar y,</li>
+                            <li>finalmente el resultado esperado.</li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+
+                <p style="color: rgb(1, 6, 20); font-size: large;"><b><span class="" style="color: rgb(0, 46, 184);">¿Cuáles son las partes para el nombre del método?</span>&nbsp;&nbsp;</b></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <!--bulleteado-->
+
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Nombre de la unidad de trabajo:</span>&nbsp;e<span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">l nombre del método o grupo de métodos o clases que estamos probando. En nuestro caso se llama<span class="" style="color: rgb(255, 51, 102);"> </span>
+                            <span class="" style="color: rgb(255, 51, 102);">IsValidLogFileName</span>&nbsp;ya que ese es el método de la clase que estamos probando.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Escenario de prueba:</span>&nbsp;e<span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">sta parte es representativa de las condiciones bajo las cuales se prueba la unidad de trabajo. Debemos describir lo mejor posible los parámetros que estamos enviando o el estado inicial del sistema cuando se invoca la unidad de memoria. Algunos ejemplos son “usuario inexistente”, “sistema sin memoria” o “nombre de usuario ya existe”. En este caso utilizamos <span class="" style="color: rgb(255, 51, 102);">BadExtension</span>&nbsp;ya
+                            que enviaremos un archivo con una extensión que no corresponde. Es importante notar que el escenario debe ser lo más breve posible.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-left: 32px;">
+                    <div style="color: rgb(1, 6, 20); font-size: large;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col" style="">
+                        <p style="color: rgb(1, 6, 20); font-size: large;"><span style="font-weight: 600">Comportamiento esperado:</span>&nbsp;q<span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">ue es lo que esperamos de la unidad de trabajo probada bajo las condiciones especificas definidas antes. Puede ser una de 3 posibilidades:</span></p>
+                        <p style=""><span class="" style="font-size: large; color: rgb(1, 6, 20);">- Retornar un valor como resultado (un valor real o una excepción).</span></p>
+                        <p style=""><span class="" style="font-size: large; color: rgb(1, 6, 20);">- Que ocurra un cambio al estado del sistema (como agregar un nuevo usuario).</span></p>
+                        <p style=""><span class="" style="font-size: large; color: rgb(1, 6, 20);"></span></p>
+                        <p style=""><span class="" style="font-size: large; color: rgb(1, 6, 20);">- O una llamada a un tercero (como una llamada a una web API).</span></p>
+                    </div>
+                </div>
+                <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(0, 46, 184);"><b>Ubicación de las pruebas unitarias</b></span></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;">Con respecto a la ubicación de las pruebas unitarias, existen dos posturas respecto al tema:</p>
+                <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                    <div style="margin-left: 3%; margin-right: 3%;">
+                        <!-- 1 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                            </div>
+                            <div class="col">
+                                <p>Las pruebas deben estar en otro proyecto.</p>
+                            </div>
+                        </div>
+
+
+
+                        <!-- 2 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p>Las pruebas deben estar en el mismo proyecto en una carpeta separada.</p></div></div>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">En esta semana utilizaremos<span class="" style="color: rgb(0, 46, 184);"> la postura 1</span>, ya que permite que tengamos las pruebas todas juntas en su propio proyecto, haciendo que sea más organizado. Además,
+                            así nos ahorramos de enviar pruebas a producción cuando debamos actualizar el software. Si las pruebas no son código de producción, no deberían estar junto con el código de producción. </p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(0, 46, 184);">Ambos proyectos, el de código de producción y el de las pruebas, deben ser contenidos en la misma carpeta.</span> De esta manera podremos referenciar al proyecto de producción en las
+                            pruebas. Debemos agregar la referencia al código de producción en el proyecto de pruebas. Esto ya se ha aprendido en el primer año de la tecnicatura.</p>
+                        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+                        <!-- nada puede haber abajo -->
+                        </div></div></div></div></div></div><p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178270"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><br><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178270/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Parte 3: Primeros atributos en NUnit</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p><b>NUnit </b>utiliza una serie de atributos o palabras claves para reconocer y cargar las pruebas en memoria. Como si fueran marcadores en un libro, estos atributos ayudan al <i>framework </i>a identificar las partes importantes en el armado de las pruebas que esta cargando, así como también las pruebas que no debe cargar.
+</p>
+				<p><b>NUnit&nbsp;</b>provee las librerías correspondientes para utilizar estos atributos especiales. Sólo debemos agregar la referencia en el proyecto de prueba (<b>no</b> en el código de producción) al <span class="" style="color: rgb(0, 46, 184);">NUnit.Framework.</span> Esto podemos hacerlo utilizando la línea de código:&nbsp;<span style="color: rgb(255, 51, 102);">using NUnit.Framework;&nbsp;</span>Con esta línea ya podremos utilizar todas las palabras claves sin ningún problema.</p>
+        <p>El <span class="" style="color: rgb(0, 46, 184);">c</span><span class="" style="color: rgb(0, 46, 184);">ompilador</span><span class="" style="color: rgb(0, 46, 184);"> de NUnit</span> necesita al menos 2 atributos para saber qué es lo que debe correr:
+</p>
+      <!--bulleteado-->
+
+<div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">El atributo [<span class="" style="color: rgb(255, 51, 102);">TestFixture</span>] denota que la clase tiene una prueba automatizada de NUnit. Este atributo debe estar por encima del nombre de la clase de prueba.</span></p>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">El atributo [<span class="" style="color: rgb(255, 51, 102);">Test</span>] denota que un método es un método automático para ser invocado. Este atributo debe agregarse justo arriba del método que estamos definiendo.</span></p>
+            </div>
+        </div>
+        <p>Teniendo esto en cuenta, si comenzamos con un primer esbozo de nuestra <span class="" style="color: rgb(0, 46, 184);">clase de prueba</span>, tendríamos algo así:
+</p><p><span id="docs-internal-guid-2a67c61c-7fff-d20f-ea3e-24edb663d8a1"></span></p><p dir="ltr" style="text-align: center; "><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178270/codigo%20ejemplo%205.png" alt="" width="70%" height="70%" role="presentation" class="img-responsive atto_image_button_middle"><br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+			<!-- nada puede haber abajo -->
+		<br>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178271"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178271/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Parte 4: Probar el código</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Ya hemos visto una configuración básica de NUnit y cómo comenzar un proyecto de pruebas. Ahora la pregunta es, <span class="" style="color: rgb(0, 46, 184);">¿Cómo probamos nuestro código? </span>Una prueba unitaria suele realizar 3 acciones principales:</p><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p>Hacer la <b>configuración </b>y organizar los objetos que necesitamos. Aquí creamos y hacemos el <i>set up</i> de lo que necesitamos.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Actuar con el objeto con el que estamos trabajando.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Realizar el <i>Assert </i>de algo que esperamos. Es decir, confirmar que el resultado es exactamente el que necesitamos.&nbsp;</p>
+                    </div>
+                </div>
+                <p>Entonces escribimos, de forma muy simple, el método que nos permite hacer las 3 cosas de la siguiente manera:</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <span id="docs-internal-guid-469b2339-7fff-54d7-44ea-4a476945bbf5"><p dir="ltr" style="text-align: center; "><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178271/codigo%20ejemplo%206.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_middle"><br></p></span></div><div style="margin-left: 3%; margin-right: 3%;"><br></div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178272"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178272/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Parte 4.1: La clase Assert. Un puente entre el código y el <i>framework</i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Aprendamos un poco mas sobre la clase <span class="" style="color: rgb(0, 46, 184);">Assert</span>, ya que es una parte importante de escribir pruebas unitarias.&nbsp;La clase Assert es simple para aprender, usar y recordar.&nbsp;</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;">Esta clase es un puente entre nuestro código y el </span><i style="color: rgb(1, 6, 20); font-weight: 400;">framework </i><span style="color: rgb(1, 6, 20); font-weight: 400;">de
+                    </span><span class="" style="font-weight: 400; color: rgb(0, 46, 184);">NUnit</span><span style="color: rgb(1, 6, 20); font-weight: 400;">, su propósito es declarar que un resultado en particular es el esperado. Si los resultados que le enviamos a la clase </span><span class="" style="font-weight: 400; color: rgb(0, 46, 184);">Assert </span><span style="color: rgb(1, 6, 20); font-weight: 400;">resultan
+                    ser diferentes a lo que estamos esperando, entonces </span><span class="" style="font-weight: 400; color: rgb(0, 46, 184);">NUnit </span><span style="color: rgb(1, 6, 20); font-weight: 400;">se dará cuenta que la prueba ha fallado y nos alertara al respecto. Podemos agregar, de forma opcional, que la clase
+                    </span><span class="" style="font-weight: 400; color: rgb(0, 46, 184);">Assert </span><span style="color: rgb(1, 6, 20); font-weight: 400;">nos de un mensaje particular cuando la prueba falla.</span><br></p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Para la clase <span class="" style="color: rgb(0, 46, 184);">Assert&nbsp;</span>hay muchos métodos:&nbsp;</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+        <!--bulleteado-->
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span class="" style="font-size: large; color: rgb(1, 6, 20);">El principal método es</span> <span style="font-weight: 600;"><span class="" style="font-size: large; color: rgb(0, 46, 184);">Assert.True</span><span class="" style="color: rgb(1, 6, 20); font-size: large;">&nbsp;</span></span><span class="" style="font-size: large; color: rgb(1, 6, 20);">(</span><i><span class="" style="font-size: large; color: rgb(1, 6, 20);">Boolean </span></i><span class="" style="font-size: large;"><span class="" style="color: rgb(1, 6, 20);">expresión) que verifica si una expresión booleana es Verdadera</span>.&nbsp;</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600; color: rgb(0, 46, 184);" class="">Assert.AreEqual</span><span style="color: rgb(73, 80, 87); font-size: 0.9375rem;"><span class="" style="color: rgb(0, 46, 184);">&nbsp;</span></span><span class="">(objetoEsperado, objetoReal, mensajeDeFalla): Revisa que 2 objetos sean iguales. Aquí nosotros utilizaríamos el resultado que obtenemos
+                    del método para compararlo con el resultado que estamos esperando. Podemos agregar un mensaje de falla.</span><br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div class="col" style="">
+                <p style=""><span id="docs-internal-guid-e72bc7bc-7fff-b9db-53d4-255417151abb" class="" style="color: rgb(255, 51, 102); font-size: large;">Assert.AreEqual (2, 1+1, “No suma bien”)</span><br></p>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 32px;">
+            <div style="color: rgb(1, 6, 20); font-size: large;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col" style="">
+                <p style="color: rgb(1, 6, 20); font-size: large;"><span style="font-weight: 600; color: rgb(0, 46, 184);" class="">Assert.AreSame</span>&nbsp;<span id="docs-internal-guid-2610aae6-7fff-9a24-3f20-fd076e418e7d">(objetoEsperado, objetoReal, mensaje): Este método compara la referencia de los objetos. Revisa si dos objetos tienen la misma referencia o no.</span></p>
+                <p style=""><span style=""><span class="" style="color: rgb(255, 51, 102); font-size: large;">Assert.AreSame(int.Parse(“1”), int.Parse(“1”), “Esta prueba debería fallar”)</span><br></span>
+                </p>
+            </div>
+        </div>
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div class="col">
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">En la documentación de NUnit encontramos todos los métodos que tenemos a nuestra disposición. Es importante recordar que si vamos a utilizar el mensaje de todos los métodos de la clase <span class="" style="color: rgb(0, 46, 184);">Assert</span>, debe ser algo representativo, <span class="" style="color: rgb(0, 46, 184);">solo escribir “Esta prueba falló” no ayuda a que sepamos más del problema.</span><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178273"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178273/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Parte 5: Pruebas que fallan</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Ahora que tenemos nuestra primera prueba escrita, es hora de correrla y descubrir si nuestro método pasa la prueba. Para esto utilizaremos la <span class="" style="color: rgb(0, 46, 184);">GUI </span>de <span class="" style="color: rgb(0, 46, 184);">NUnit</span>.
+            </p>
+        <p><span class="" style="color: rgb(0, 46, 184);"><b>Seguí los siguientes pasos:&nbsp;</b></span></p><p></p><ul><li>Abrir la GUI de NUnit que instalamos antes.&nbsp;</li><li>Buscar el nombre del proyecto de prueba que mostrará el Path del proyecto. Mostrará, también, en el árbol de pruebas, que hay una sola prueba, las mismas se agrupan por <i>namespace,</i>&nbsp;así que se puede elegir usar algunas pruebas en particular o todas las que tengamos disponibles.</li></ul><p></p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178273/NUnit%20Pruebas%20fallidas%20%281%29.png" alt="sd" width="100%" height="100%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><span style="font-size: large;">Observamos en la imagen que NUnit <span class="" style="color: rgb(0, 46, 184);">muestra la falla de las pruebas</span> en 3 lugares distintos.&nbsp;</span></p><p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"></p><ul><li><span style="font-size: large;">Primero<span class="" style="color: rgb(0, 46, 184);"> la jerarquía</span> se marca con puntos rojos. Si tuviéramos más pruebas que pasan, estas tendrían un punto verde.&nbsp;</span></li><li><span style="font-size: large;">Segundo, la <span class="" style="color: rgb(0, 46, 184);">barra de progreso</span> que muestra arriba a la derecha se vuelve roja.&nbsp;</span></li><li><span style="font-size: large;">Finalmente, cada error encontrado se muestra en la <span class="" style="color: rgb(0, 46, 184);">caja de diálogo</span> abajo a la derecha.</span></li></ul><p></p>
+        <p>Corroboramos que la prueba falla, por lo que deberíamos ir a nuestro código y arreglarlo para que, al correr la prueba, no tenga fallas.&nbsp;</p>
+        
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178274"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178274/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas positivas</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Ya probamos que cuando le mandamos un archivo con una mala extensión no lo abre, pero no sabemos qué ocurrirá si enviamos pruebas con el archivo correcto.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Es por eso que las “pruebas positivas” o las pruebas que corroboran qué ocurre cuando todo va por el “camino feliz” son tan importantes como las pruebas negativas. Queremos saber que estamos cubriendo todos los caminos posibles. </p>
+            </div>
+        </div>
+        <p style="text-align: left;">¿Qué método podemos usar? Para esto, utilizaremos la <span class="" style="color: rgb(0, 46, 184);">estrategia de caja blanca </span>para confeccionar las pruebas. Teniendo esto en cuenta, podemos agregar las siguientes pruebas:</p>
+        <p></p>
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178274/codigo%20ejemplo%207.png" alt="" width="85%" height="85%" role="presentation" class="img-responsive atto_image_button_middle"></p>
+        <p>Estas pruebas revisan qué ocurre cuando tenemos archivos con la extensión correcta, pero uno con la <span style="font-weight: 600">extensión toda en mayúsculas</span> y la otra con <span style="font-weight: 600">la extensión toda en minúsculas</span>.<br></p><p><br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178275"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178275/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Parte 7: Parametrizar las pruebas</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Hasta ahora hemos escrito pruebas que tendrán problemas de mantenibilidad.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Imaginemos que queremos agregar un parámetro al constructor de la clase <span class="" style="color: rgb(0, 46, 184);">LogAnalyzer</span>. Ahora tendríamos 3 pruebas que no compilan y que debemos cambiar. Imaginemos ahora si tenemos 30
+                    pruebas, o 100. Tendríamos que cambiar todas las pruebas, una por una. Por lo general, cuando muchas pruebas se rompen, tendemos a borrarlas, en vez de arreglarlas.</p>
+            </div>
+        </div>
+        <p>Lo que vamos a hacer es <span class="" style="color: rgb(0, 46, 184);">refactorizar las pruebas para evitar tener este problema.</span>&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> NUnit tiene una funcionalidad llamada <span style=" color:#1345CD; font-weight: 600">pruebas parametrizadas</span>&nbsp;que nos ayudará con eso. Para usarla sólo hay que modificar un par de cosas de los métodos que teníamos antes:</p>
+            </div>
+        </div>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p>Reemplazar el atributo [Test] con el atributo [TestCase].</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Cambiar todos los valores hardcodeados, que la prueba está usando, a parámetros para ese método.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Mover los valores que teníamos antes, a los corchetes del atributo [TestCase(..)].</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Renombrar el método con un nombre más genérico. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Agregar el atributo [TestCase(..)] arriba del método por cada uso de las pruebas que queramos unificar. </p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Eliminar cualquier prueba que quede que se haya cubierto con la prueba refactorizada. </p>
+                    </div>
+                </div>
+                
+                        <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178280"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178280/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Parte 7.1 Pasos para pruebas positivas</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p><span class="" style="color: rgb(0, 46, 184);"><b>Explicamos ahora el paso a paso para parametrizar las pruebas positivas</b></span></p>
+                <p>Comenzaremos con la primera prueba positiva:<br></p>
+                <div style="text-align: center;">
+                    <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178280/codigo%20ejemplo8.jpg" alt="sd" width="98%" height="98%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p>
+                </div>
+                <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+                    <!-- 1 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                        </div>
+                        <div class="col">
+                            <p>En color verde reemplazamos el atributo [<span class="" style="color: rgb(0, 46, 184);">Test</span>] con el atributo [<span class="" style="color: rgb(0, 46, 184);">TestCase</span>]</p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 2 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>En resaltado amarillo. Utilizamos el archivo con la extensión correspondiente hardcodeado como parámetro del método para eliminar ese parámetro hardcodeado cambiándolo por una variable, y cómo esa variable es un parámetro del
+                                método validador.&nbsp;</p>
+                        </div>
+                    </div>
+                    <p>Marcado en verde vemos también el resultado del paso 3. El valor hardcodeado lo pasamos como parámetro en el atributo [<span class="" style="color: rgb(0, 46, 184);">TestCase</span>].&nbsp;<br></p>
+                    <p>Finalmente, marcado con resaltador turquesa vemos el resultado del paso 4, cambiamos el nombre del método a algo más genérico.<br></p>
+                    <p>En este caso, el parámetro enviado al atributo <span class="" style="color: rgb(0, 46, 184);">TestCase</span> es mapeado por el compilador de las pruebas como el primer parámetro del método mismo durante su ejecución. Podemos agregar
+                        tantos parámetros como queramos al método de prueba y luego agregar sus valores como parámetros del atributo <span class="" style="color: rgb(0, 46, 184);">TestCase.</span><br></p>
+                    <p><span style="font-weight: 600">Hasta aquí hicimos un <i>refactoring </i>hasta el paso numero 4</span>. Si consideramos las pruebas positivas, veremos que tenemos 2 pruebas positivas similares. Podemos utilizar los pasos 5 y 6 para
+                        eliminar un método de prueba y agregarlo como parámetro al que ya hicimos. A continuación, observamos cómo queda el método luego de esos pasos y agregando distintos parámetros de distintas pruebas:</p>
+                    <div style="text-align: center;">
+                        <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                            <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178280/codigo%20ejemplo9.jpg" alt="sd" width="95%" height="95%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                        </p>
+                    </div>
+
+
+
+                    <p>Marcado con resaltador verde podemos ver el parámetro hardcodeado del segundo método positivo que habíamos escrito. Podemos agregar múltiples atributos <span class="" style="color: rgb(0, 46, 184);">TestCase</span> con distintos parámetros
+                        al mismo método para marcar que esa prueba debe correrse varias veces bajo distintas condiciones. </p>
+                    <p>Con esto ya pudimos refactorizar las pruebas positivas para eliminar un método completo. Sin embargo, este método puede cambiarse aún más para hacerlo más genérico y eliminar la prueba negativa que tenemos.&nbsp;</p>
+                    <p><br></p>
+</div></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178281"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178281/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Parte 7.1 Pasos para pruebas negativas</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p><span class="" style="color: rgb(0, 46, 184);"><b>Explicamos ahora el paso a paso para eliminar las pruebas negativas</b></span></p>
+        <p><span style="font-weight: 600;">Para empezar:</span> Podemos agregar un nuevo parámetro al atributo TestCase que marque cuál es el resultado esperado. Así podemos hacer que este método pruebe tanto caminos verdaderos como
+                falsos:<br></p><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="text-align: center;">
+                <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178281/codigo%20ejemplo10.jpg" alt="" width="98%" height="98%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p>
+            </div>
+            <p>En <b>negrita </b>se marcan los cambios realizados para reflejar esto.&nbsp;</p>
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                <div style="margin-left: 3%; margin-right: 3%;">
+                    <!-- 1 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                        </div>
+                        <div class="col">
+                            <p>Agregamos el resultado esperado como parámetro del atributo <span class="" style="color: rgb(0, 46, 184);">TestCase</span> y como parámetro del método de prueba.</p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 2 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Cambiamos el nombre del método de prueba para reflejar que estamos probando y;</p>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Cambiamos el método de la clase <span class="" style="color: rgb(0, 46, 184);">Assert </span>que utilizamos para la comparación.</p>
+                        </div>
+                    </div>
+
+                    <p></p>
+                </div>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178276"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658989/mod_book/chapter/178276/ICONOS-NUEVOS.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Bibliografía</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando-->
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Bibliografía obligatoria</p>
+            </div>
+        </div>
+        <br>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Myers, Glenford (1983). El arte de Probar el Software. Editorial El Ateneo. Capítulo 5.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Vargas, J. R. (2020, December 18). .Net 5: Creando una prueba unitaria NUnit con Visual Code. Jorge Reyes Vargas. Retrieved July 17, 2022, from&nbsp;<a href="https://jarvars.github.io/Creando-una-prueba-unitaria-con-Visual-Code/"><span class="" style="color: rgb(0, 46, 184);"><u>https://jarvars.github.io/Creando-una-prueba-unitaria-con-Visual-Code/</u></span></a><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Bibliografía optativa</p>
+            </div>
+        </div>
+        <br>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Myers, Glenford (2011). The art of software testing- 3rd Edition. Editorial Wiley.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Osherove, R. (2014). The Art of Unit Testing (2nd ed.). Manning Publications Co.<br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Material multimedia</p>
+            </div>
+        </div>
+        <span style="NUNIT https://docs.nunit.org/articles/nunit/intro.html"><div style="margin-left: 3%; margin-right: 3%;"><span style="NUNIT https://docs.nunit.org/articles/nunit/intro.html"><br></span></div><span class="" style="font-size: large; color: rgb(1, 6, 20);">NUNIT <a href="https://docs.nunit.org/articles/nunit/intro.html" target="_blank"><span class="" style="color: rgb(0, 46, 184);"><u>https://docs.nunit.org/articles/nunit/intro.html</u></span></a>
+    </span>
+    </span>
+    <p style=""></p></div></div><br>
+<p></p>
+
+
+<p></p>
+<p></p></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[648989,648991,648992,648993,648994,648995,648996,648997,649000,649001,649004,649005,649009,649010,649013,649014,649018,649024,649027]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2658989, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1745437619); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random68094f656cd862'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random68094f656cd862'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
