@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S7. Herramientas de pruebas unitarias | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1744219673/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S7. Herramientas de pruebas unitarias | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1744219673_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"WUUpPS1E5D","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1744219673","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21046,"courseContextId":2643972,"contextid":2658993,"contextInstanceId":649029,"langrev":1745738645,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21046 context-2658993 cmid-649029 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1744219673/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S7. Herramientas de pruebas unitarias</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Metodología de Pruebas de Sistemas 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S7. Herramientas de pruebas unitarias
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        domingo, 27 de abril de 2025, 10:09
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21046&amp;section=10" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649028" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=649030" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649031" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción" class="font-weight-bold text-decoration-none" href="#ch178301">1. Introducción</a></li><li><a title="2. Uso de stubs" class="font-weight-bold text-decoration-none" href="#ch178302">2. Uso de stubs</a><ul><li><a title="2.1. Cómo probar fácilmente LogAnalyzer" class="text-decoration-none" href="#ch178303">2.1. Cómo probar fácilmente LogAnalyzer</a></li></ul></li><li><a title="3. Refactorizar el diseño para que sea testeable" class="font-weight-bold text-decoration-none" href="#ch178304">3. Refactorizar el diseño para que sea testeable</a></li><li><a title="4. Interacción utilizando mock objects" class="font-weight-bold text-decoration-none" href="#ch178305">4. Interacción utilizando mock objects</a><ul><li><a title="4.1. Diferencia entre los mocks y los stubs" class="text-decoration-none" href="#ch178306">4.1. Diferencia entre los mocks y los stubs</a></li><li><a title="4.2. Primer ejemplo de mock object" class="text-decoration-none" href="#ch178307">4.2. Primer ejemplo de mock object</a></li><li><a title="4.3. Prueba con mock object" class="text-decoration-none" href="#ch178308">4.3. Prueba con mock object</a></li></ul></li><li><a title="5. El problema con los fakes manuales" class="font-weight-bold text-decoration-none" href="#ch178309">5. El problema con los fakes manuales</a><ul><li><a title="5.1. ¿Por qué usamos mocking frameworks?" class="text-decoration-none" href="#ch178310">5.1. ¿Por qué usamos mocking frameworks?</a></li><li><a title="5.2. Creando fakes de forma dinámica" class="text-decoration-none" href="#ch178311">5.2. Creando fakes de forma dinámica</a></li><li><a title="5.3. Prueba con fake dinámico" class="text-decoration-none" href="#ch178312">5.3. Prueba con fake dinámico</a></li><li><a title="5.4. Simulando valores falsos o stubs" class="text-decoration-none" href="#ch178313">5.4. Simulando valores falsos o stubs</a></li></ul></li><li><a title="6. Combinando stubs y mocks" class="font-weight-bold text-decoration-none" href="#ch178314">6. Combinando stubs y mocks</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178301"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178301/_%20%2814%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>La semana pasada escribimos nuestras primeras pruebas unitarias utilizando NUnit y exploramos algunos atributos de pruebas.&nbsp;</p>
+        <p>Estas primeras pruebas eran para un sistema simple donde teníamos que revisar el resultado de algunos valores de retorno del software. Sin embargo, en nuestra vida laboral muchas veces nos encontraremos con <span style=" color:#1345CD; font-weight: 600">conexiones a sistemas externos</span>.&nbsp;</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;">Esto quiere decir que, en ocasiones, el resultado de nuestras pruebas dependerá de un objeto sobre el cual no tenemos control o incluso, que aún no funciona. Este objeto puede ser un <i>web service</i>, una API externa, la hora del día, un servicio de
+            nuestro mismo software que está desarrollando alguien más, etc. Lo importante, es que no tenemos ningún tipo de control sobre lo que nos retornará esta dependencia. Para esto, utilizamos </span><b style="color: rgb(1, 6, 20);"><i>stubs</i></b>
+                    <span style="color: rgb(1, 6, 20); font-weight: 400;">.</span><br></p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+
+        <p>Continuaremos usando el ejemplo del <span style=" color:#1345CD; font-weight: 600">programa LogAn</span>, que estudiamos la semana anterior, para comprender cómo funcionan los <span><i style="font-weight: bold;">stubs</i>, así que te invitamos a que tengas a mano<a href="https://drive.google.com/file/d/1wSb3nEi0QRFZN5h-K4GkQvweceH6-GKN/view?usp=drive_link" target="_blank"><u><b><span class="" style="color: rgb(0, 46, 184);"> el </span><span><span class="" style="color: rgb(0, 46, 184);">archivo con el código del programa</span></span></b></u></a>, para revisarlo a medida que avancemos con las explicaciones.</span>
+        </p>
+        <p><br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <h5><span class="" style="color: rgb(0, 46, 184);"><b><span class="" style="color: rgb(0, 61, 245);">Comencemos...</span></b></span></h5></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178302"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178302/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Uso de <i>stubs</i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Antes de avanzar, pongamos en común algunas definiciones. </p>
+        <p></p>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición 1</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class="" style="font-size: large; color: rgb(1, 6, 20);">Una <span class="" style="color: rgb(184, 138, 0);"><b>dependencia externa</b></span> es un objeto de nuestro sistema con el que nuestra unidad de prueba interactúa, pero sobre
+                    el cual no tiene control alguno. </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p>Controlar estas dependencias externas es lo que analizaremos esta semana. Para esto, utilizamos <b><i>stubs</i></b>.</p>
+        <p></p>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición 2</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class="" style="font-size: large; color: rgb(1, 6, 20);">Un <b><i><span class="" style="color: rgb(184, 138, 0);">stub </span></i>
+                    </b>es un reemplazo controlable para una dependencia existente en el sistema. Cuando utilizamos un <i>stub </i>podemos probar nuestro código sin tener que lidiar con las dependencias de una manera directa.</span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p>Los <i><b>stubs </b></i>son una herramienta valiosa para mejorar la calidad de las pruebas unitarias. Más adelante estaremos hablando sobre <span style=" color:#1345CD; font-weight: 600"><i>mocks</i></span>, que son similares a los <i><b>stubs</b></i>,
+            pero con la principal diferencia que realizamos los <span style=" color:#1345CD; font-weight: 600">asserts </span> contra los <i><b>mocks</b></i>, pero no así con los <i>stubs</i>.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;">Continuaremos utilizando el ejemplo del <a href="https://drive.google.com/file/d/1wSb3nEi0QRFZN5h-K4GkQvweceH6-GKN/view" target="_blank">programa LogAn</a>, que conocimos la semana anterior, para comprender cómo funcionan los </span><i style="color: rgb(1, 6, 20); font-weight: 400;">stubs</i><span style="color: rgb(1, 6, 20); font-weight: 400;">. Utilizaremos un </span><i style="color: rgb(1, 6, 20); font-weight: 400;">stub </i><span style="color: rgb(1, 6, 20); font-weight: 400;">para librarnos
+            de una dependencia del sistema de archivos. Recordemos que el programa LogAn lee archivos del </span><i style="color: rgb(1, 6, 20); font-weight: 400;">Logs </i><span style="color: rgb(1, 6, 20); font-weight: 400;">del sistema de archivos y los revisa buscando ciertas anomalías.</span><br></p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+ 
+      
+        <h5><span class="" style="color: rgb(0, 61, 245);"><b>A modo de ejemplo</b></span></h5>
+        <p>Imaginemos que la aplicación <b><span class="" style="color: rgb(0, 46, 184);">LogAnalyzer</span></b> puede ser configurada para recibir múltiples archivos de <i>log </i>con múltiples extensiones diferentes, utilizando adaptadores distintos para
+            cada tipo de archivo. Para simplificar las cosas, vamos a asumir que los archivos se guardan en algún lugar del disco y tenemos una configuración que nos indica a donde. Podríamos decir entonces que una versión simplificada del método se ve
+            de la siguiente manera:</p>
+        <p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178302/imagenS7.png" alt="" width="85%" height="85%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p>El problema con el que nos encontramos es que una vez que la prueba depende del sistema de archivos, estamos haciendo una prueba de integración, y por tanto nos encontramos con todos los problemas asociados con pruebas de integración: Son más
+            lentos de correr, necesitan una configuración extra, prueban múltiples cosas, puede haber fallas no relacionadas al código que queremos probar.
+        </p>
+        <!--Inicio caja borde azul-->
+        <div class="container">
+            <div class="caja-azul">
+                <p style="padding: 1% 2%; word-wrap: break-word;">Aquí identificamos la esencia del “<b>diseño que inhibe pruebas</b>”: El código a probar tiene una dependencia a un recurso externo, que puede romper la prueba incluso si la lógica del código es perfecta y sin defectos.&nbsp;</p>
+            </div>
+        </div>
+        <!--Fin caja borde azul-->
+        <p></p>
+        <p>En sistemas <i>legacy </i>(sistemas viejos que heredamos y sobre los que debemos trabajar) es común que cada unidad de trabajo tenga muchas dependencias a recursos externos sobre los que el código a probar tiene poco o nada de control. </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <h5><span class="" style="color: rgb(0, 61, 245);">A continuación, veamos cómo probar y escribir fácilmente la prueba.</span></h5>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178303"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178303/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Cómo probar fácilmente LogAnalyzer</p>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style=" color: #1345CD; font-weight: 600; padding-left: 88px; padding-right: 88px"><br></p>
+        <p>Aquí es donde vemos la parte del <b>arte</b> de las pruebas unitarias. Este <b>arte</b> se trata de encontrar el lugar adecuado para agregar o utilizar una capa de abstracción para probar mejor el código.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Si hay algo que no logremos probar, entonces podemos agregar una capa que contenga las llamadas a ese algo, y luego imitamos esta capa en las pruebas. El arte de probar también involucra descubrir cuándo una capa de abstracción ya existe en vez
+            de tener que inventarla, y también incluye el saber cuándo <b>no</b> agregar una porque complica demasiado el código.</p>
+            </div>
+        </div>
+        <p>Volviendo al <span class="" style="color: rgb(0, 46, 184);">LogAnalyzer</span>, la única forma como podemos escribir una prueba para este código, es tener un archivo de configuración en el sistema de archivos. Como queremos que nuestro código
+            sea testeable sin tener que recurrir a pruebas de integración, estamos intentando evitar este tipo de dependencias.</p>
+        <p>Si lo miramos con cuidado, notamos que hay un patrón para descomponer la dependencia:</p><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p>Encontrar la interfaz o la API con la cual trabaja el objeto que estamos probando. En este caso no usamos la palabra <b>interfaz</b> en el sentido más puro de la programación orientada a objetos, sino que hablamos de la clase u
+                            objeto con el cual estamos trabajando.&nbsp;</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Reemplazar la implementación subyacente de esa interfaz con algo sobre lo que <b>sí</b> tenemos control.</p>
+                    </div>
+                </div>
+
+                <p>Transferir este patrón al código con el que estamos trabajando requiere unos pasos extra:</p><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                    <!-- 1 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                        </div>
+                        <div class="col">
+                            <p>Primero vamos a encontrar la interfaz. En nuestro caso particular del proyecto LogAn, estamos hablando del archivo de configuración que tenemos en el sistema de archivos.</p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 2 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Si la interfaz está conectada de forma directa a la unidad de trabajo bajo prueba (como es nuestro caso, ya que estamos ingresando directamente al sistema de archivos), podemos hacer el código testeable, agregando una capa de
+                                abstracción y <span><b style="">escondiendo</b></span> la interfaz. La figura 7.1 muestra como quedará el diseño luego de este paso.</p>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Por último, reemplazar la implementación subyacente de esa interfaz interactiva con algo sobre lo que tengamos control. En nuestro caso, reemplazamos la instancia de la clase que nuestro método llama (<span class="" style="color: rgb(0, 46, 184);">FileExtensionManager</span>)
+                                con una clase <i>stub </i>que <b>sí</b> podemos controlar (<span class="" style="color: rgb(0, 46, 184);">StubExtensionManager</span>), dándonos control sobre las dependencias externas.</p>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                            <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178303/s7Imagen1.png" alt="sd" width="80%" height="80%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p>
+                    </div>
+
+                    <!-- Fin imagen -->
+
+                    <p>Nuestro reemplazo<b> no</b> se comunicará con el sistema de archivos en absoluto, lo que rompe la dependencia con el sistema de archivos. Como no estamos probando la clase que si se comunica con el sistema de archivos (eso lo haremos
+                        cuando hagamos pruebas de integración) sino el código que llama a esa clase; está bien que la clase <i>stub </i>no haga nada realmente, sino que responda felizmente cuando estamos corriendo una prueba. La figura siguiente muestra el cambio
+                        al diseño.</p>
+                    <p>En esta figura <span class="" style="color: rgb(0, 46, 184);">agregamos una clase de tipo interfaz de C#</span>, lo que nos permitirá abstraer sin problema el manejo de extensiones. Esta forma utiliza interfaces para que el código sea más testeable.&nbsp;</p>
+                    <div style="text-align: center;">
+                        <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                            <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178303/s7Imagen2.png" alt="sd" width="80%" height="80%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                        </p>
+                    </div>
+
+                    <p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><br><span class="" style="font-size: large;">A continuación, hablaremos sobre </span><b><span class="" style="text-align: left; font-size: large; color: rgb(1, 6, 20);"><i>refactoring </i></span></b><span class="" style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><span class="" style="font-size: large;">y </span>
+                        <span class="" style="font-size: large;">sobre la idea de utilizar costuras o </span><b><span class="" style="font-size: large;"><i>seams </i></span></b><span class="" style="font-size: large;">en nuestro código.</span></span>
+                    </p>
+                    <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);"><br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178304"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178304/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Refactorizar el diseño para que sea testeable</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Volvemos a las definiciones para introducir dos conceptos que continuaremos utilizando a lo largo de la semana: <i>refactoring </i>y <i>seams.</i></p>
+        <p></p>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición 1</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class="" style="font-size: large; color: rgb(1, 6, 20);"><b><span class="" style="color: rgb(184, 138, 0);">Refactoring </span></b>es el acto de cambiar el código sin cambiar su funcionalidad. Es decir que hace exactamente lo mismo
+                    que hacía antes. Ni más, ni menos. Simplemente se ve diferente. Un ejemplo de <i>refactoring </i>puede ser cambiar el nombre de un método por otro más representativo, o dividir un método muy largo en otros más pequeños para que sea
+                    más legible. El código puede refactorizarse por muchos motivos, para optimizar el código, hacerlo más legible, más testeable (como develaremos en esta semana), etc.</span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p></p>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición 2</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class="" style="font-size: large; color: rgb(1, 6, 20);">Las <b><span class="" style="color: rgb(184, 138, 0);">seams </span></b>son lugares en nuestro código donde podemos <b>enchufar</b> una funcionalidad diferente. Como, por ejemplo,
+                    las clases de <i>stub</i>, agregar un parámetro a un constructor, agregar una propiedad de tipo <i>public</i>, hacer un método sin implementación para que se le pueda realizar un <i>override</i>. Las <i>seams </i>son lo que obtenemos
+                    al implementar el principio “Abierto Cerrado”, donde la funcionalidad de una clase está abierta para extensión, pero su código está cerrado para modificaciones directas.</span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p>Podemos refactorizar nuestro código agregando una nueva <i>seam </i>sin cambiar la funcionalidad original del código. Esto es exactamente lo que hicimos en el apartado anterior, agregando la interfaz <span style=" color:#1345CD; font-weight: 600">IExtensionManager</span>.
+        </p>
+        <p>Antes de comenzar a refactorizar, es muy importante recordar que es una acción muy peligrosa si no tenemos ningún tipo de pruebas automatizadas que verifiquen sus funcionalidades. Siempre debemos tener algún tipo de pruebas de interacción cuidando
+            nuestra espalda antes de hacerle algo al código existente que tenemos. Si no tenemos esas pruebas de integración, al menos debemos poseer un <span class="" style="color: rgb(0, 46, 184);">plan de escape</span>, es decir, una copia del código
+            intacta. De esa manera, si todo sale mal, podemos tirar a la basura el código refactorizado y quedarnos con el código sin cambiar. Hablaremos sobre las pruebas de integración más adelante en la materia, así que por ahora se recomienda tener
+            el plan de escape listo mientras aprendemos cómo refactorizar un código y hacerlo más testeable. </p>
+        <p>Para romper la dependencia entre nuestro código y la dependencia que tenemos con el sistema de archivos, utilizaremos <i>seams </i>en nuestro código. Lo único que debemos hacer, es asegurarnos de que el código resultante haga exactamente lo que
+            debe hacer una vez que terminamos. Existen 2 tipos de <i>refactories </i>que rompen dependencias:
+        </p>
+        <p></p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Tipo A:</span> Abstracción de objetos concretos a interfaces o <b>delegados</b>.</p>
+                        <p>- Técnica común de este tipo: Extraer una interfaz para reemplazar la implementación subyacente.
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Tipo B:</span> Refactorizar para permitir una inyección de implementaciones falsas en esas interfaces o delegados. Algunas técnicas comunes de este tipo:&nbsp;</p>
+                        <p>- Inyectar un <i>stub </i>en la clase de prueba.</p>
+                        <p>- Inyectar un objeto falso (o <i>fake</i>) a nivel de constructor.</p>
+                        <p>- Inyectar un objeto falso (o <i>fake</i>) como propiedad de <i>get </i>o <i>set</i>.&nbsp;</p>
+                        <p>- Inyectar un objeto falso (o <i>fake</i>) justo antes de la llamada a un método.</p>
+                    </div>
+                </div>
+                <div class="" style="width: 80%;  margin: 0 auto; ">
+
+                    <div class="row">
+
+                        <div class="col-1" style="background-color: #460E95; border-radius: 4px 0px 0px 4px;">
+
+                            <div class="d-flex justify-content-center" style="margin-top: 20px">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-download" style=" color: #FFFFFF" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path>
+</svg>
+                            </div>
+                        </div>
+
+                        <div class="col-8" style="background-color: #FFFEEB;border: 1px solid #460E95; border-radius: 0px 4px 4px 0px;">
+
+                            <p style="margin-top: 16px;"><span style="font-size: 0.9375rem;"><span class="" style="font-size: large;">Te invitamos a profundizar en estas técnicas de <i>refactoring </i>en el documento </span><span class="" style="color: rgb(0, 61, 245);"><span class="" style="color: rgb(0, 61, 245);"><u><span class="" style="font-size: large;"><a href="https://drive.google.com/file/d/1VSiK0B0TMLrirsNeEh8S5PoRNIkr5sUY/view?usp=drive_link" target="_blank">S7. Tipos de refactories que rompen dependencias</a></span>
+                                <a href="https://aulasvirtuales.bue.edu.ar/mod/resource/view.php?id=439808" target="_blank"><br></a>
+                                    </u><a href="https://aulasvirtuales.bue.edu.ar/mod/resource/view.php?id=439808" target="_blank">
+                                </a></span><a href="https://aulasvirtuales.bue.edu.ar/mod/resource/view.php?id=439808" target="_blank">
+                                </a>
+                                    </span>
+                                    </span>
+                            </p><a href="https://aulasvirtuales.bue.edu.ar/mod/resource/view.php?id=439808" target="_blank"><u>
+                </u></a></div><a href="https://aulasvirtuales.bue.edu.ar/mod/resource/view.php?id=439808" target="_blank"><u>
+                <br>
+                <!-- Fin Caja violeta de descarga-->
+               
+                    
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<!-- nada puede haber abajo --></u></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178305"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178305/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Interacción utilizando <i>mock objects</i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Hasta ahora hemos estudiado cómo resolver el problema de probar el código que depende de otros objetos para ser probado correctamente. Hemos usado <i>stubs</i> para asegurarnos que el código bajo prueba recibe las entradas necesarias para probar
+            su lógica de forma independiente.</p>
+
+        <div style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(255, 254, 235); border-top: 2px solid rgb(70, 14, 149); width: 96%; margin: 0px auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Ahora analizaremos el funcionamiento de los <b><i>mock objects</i></b>. Estos objetos nos permitirán revisar si un objeto está haciendo llamadas correctas a otro objeto. Es posible que el método que queremos probar no tenga un valor de retorno,
+            pero sí tenga algún tipo de lógica compleja que queremos revisar y que está retornando correctamente.</p>
+            </div>
+        </div>
+        <h5 style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(0, 61, 245);"><b>La comunicación entre objetos</b></span></h5><p style="color: rgb(1, 6, 20); font-size: large;">Los <i>mocks </i>son interacciones entre objetos, ¿Qué significa que haya interacciones entre objetos?&nbsp; En pocas palabras: un objeto envía un mensaje a otro. Es importante destacar que esta práctica no se trata de pruebas de integración en sí misma; más bien, se enfoca en examinar estas interacciones cuando constituyen el objetivo o resultado específico de la unidad de trabajo bajo prueba.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto" style="color: rgb(1, 6, 20); font-size: large;">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class="" style="font-size: large; color: rgb(1, 6, 20);">Un <b><span class="" style="color: rgb(184, 138, 0);">mock object</span></b> es un<i> fake</i> u objeto falso en el sistema que decide si una prueba unitaria se ha pasado o
+                    no. Lo hace verificando si el objeto bajo prueba hizo una llamada al objeto falso como se esperaba. No suele haber más de un <i>mock</i> por prueba.</span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Podríamos decir que un <i>mock</i> no suena muy diferente a un <i>stub</i>, pero la diferencia es lo suficientemente grande como para distinguirla.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Ahora que sabemos lo que son los <i>mocks</i> y los <i>stubs</i> podemos definir lo que es un <i>fake</i>. Es un término que ya utilizamos bastante, y podemos imaginar qué quiere decir.&nbsp;</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Pero ahora observemos una definición formal:</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">
+            <!--Inicio caja ejemplo-->
+        </p>
+        <div class="row row-cols-auto" style="color: rgb(1, 6, 20); font-size: large;">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; "> <span class="" style="color: rgb(1, 6, 20);">Un <span><span class="" style="color: rgb(184, 138, 0);"><b style="">fake </b></span></span>es un término genérico que puede utilizarse para describir
+                    a un<i> stub</i> o a un <i>mock</i>, porque ambos parecen (pero no son) el objeto real</span>.&nbsp;</span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Si un <i>fake</i> es un <i>stub</i> o un <i>mock</i> <span class="" style="color: rgb(0, 46, 184);">depende de cómo está siendo usado en la prueba actual</span>. Si es usado para revisar una interacción (es decir, hacemos un <i>assert </i>contra ese <i>fake</i>) entonces es un <i>mock</i>. Si no,
+            es un <i>stub</i>.</p><p style="color: rgb(1, 6, 20); font-size: large;"><br></p><h5 style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(0, 61, 245);">A continuación, profundicemos las <b>diferencias entre los objetos.</b></span></h5>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178306"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178306/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Diferencia entre los <i>mocks</i> y los <i>stubs</i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando --->
+        <p>Los <i>stubs </i>reemplazan a un objeto para que podamos probar otro objeto sin problemas. La figura muestra la interacción entre los objetos:</p>
+		 <div style="text-align: center;">
+		        <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+		            <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178306/S7%20imagen%207.png" alt="sd" width="80%" height="80%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p></div>
+
+    <br>
+
+<!-- Fin imagen -->
+
+        <p>A primera vista, la diferencia entre los <b><i>mocks </i></b>y los <i><b>stubs </b></i>puede parecer minúscula o incluso inexistente. La distinción es sutil pero importante, porque muchos de los <i>frameworks </i>de <i>mocks </i>que existen usan estos términos para describir los comportamientos
+            diferentes del <i>framework</i>. La diferencia básica es que un <i>stub </i>no puede fallar una prueba. Los <i>mocks </i>si. </p>
+        <p>La forma más fácil de darnos cuenta que estamos trabajando con un <i>stub </i>es notar que un <i>stub </i>nunca puede fallar una prueba. El <i>assert </i>que hacemos al final de la prueba siempre se dará contra la unidad de trabajo a probar. Por otro lado, una prueba
+            está utilizando un <i>mock </i>para verificar si la prueba fallará o no. En la figura siguiente se muestra la interacción entre la prueba y el objeto <i>mock</i>. Es muy importante notar que el <i>assert </i>se hace sobre el <i>mock</i>.</p>
+        <p></p>
+          <!-- inicio imagen -->
+ <br>
+		 <div style="text-align: center;">
+		        <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+		            <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178306/S7%20imagen%207_2.png" alt="sd" width="80%" height="80%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+		        </p>
+		    </div>
+
+    <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178307"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178307/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Primer ejemplo de <i>mock object</i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Crear y usar un <b><i>mock </i></b>es bastante similar a utilizar un <b><i>stub</i></b>, excepto que el <b><i>mock </i></b>hará un poco más de cosas: guardará su historial de comunicación para luego verificarlo contra sus expectativas. </p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Vamos a agregar un nuevo requerimiento a nuestro <span class="" style="color: rgb(0, 46, 184);">LogAnalyzer.</span> Ahora debe interactuar con un web service externo que recibirá un mensaje de error cada vez que <span class="" style="color: rgb(0, 46, 184);">LogAnalyzer</span> encuentre un nombre
+            de archivo que sea demasiado corto.</p>
+            </div>
+        </div>
+        <p>Desafortunadamente, el <i>web service</i> con el que queremos trabajar aun no esta 100% funcional, y aun si lo estuviera, tomaría mucho tiempo utilizarlo como parte de las pruebas. Debido a eso, vamos a refactorizar nuestro diseño y crear una nueva interfaz
+            para la que podemos crear un <i>mock </i>después. La interfaz tendrá métodos que necesitaremos llamar para acceder al <i>web service</i>.</p>
+        <p><span class="" style="color: rgb(0, 46, 184);">En primer lugar</span>, vamos a extraer una interfaz simple para utilizar en el código bajo prueba en vez de comunicarnos directamente con el <i>web service</i>:</p>
+        <p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178307/IMAGENs7.2.png" alt="" width="65%" height="65%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p><br>Esta interfaz nos servirá para crear <b><i>mocks</i></b>, pero también <b><i>stubs</i></b>. Nos permitirá evitar la dependencia externa sobre la que no tenemos control.
+        </p>
+        <p><span class="" style="color: rgb(0, 46, 184);">A continuación</span>, crearemos el <b><i>mock object </i></b>que vamos a utilizar. Puede parecer un <b><i>stub</i></b>, pero contiene una porción extra de código que hace que sea un <b><i>mock object.</i></b></p>
+        <p><b><i><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178307/ImagenS7.3.png" alt="" width="65%" height="65%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></i></b></p>
+        <p>Esta clase implementa la interfaz que definimos anteriormente, de la misma manera que lo hace un <b><i>stub</i></b>. Pero además de eso guarda el estado resultante para después. De esta manera nuestra prueba puede realizar un <b><i>assert </i></b>directamente
+            contra este <b><i>mock</i></b> para ver si fue llamado correctamente. <span class="" style="color: rgb(0, 46, 184);">Esto aún no es un </span><i><b><span class="" style="color: rgb(0, 46, 184);">mock object</span></b></i><span class="" style="color: rgb(0, 46, 184);">.</span> Se convertirá en uno cuando efectivamente lo usemos para probar, tal como analizaremos a continuación.<br></p>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178308"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178308/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Prueba con <i>mock object</i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Observemos en detalle el código:</p>
+
+
+        <p><span id="docs-internal-guid-ab1a26ed-7fff-2613-b2ad-a2093ff657f2"></span></p>
+        <pre style=""><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">[Test]</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">public void Analyze_TooShortFileName_CallsWebService()</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">{</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">FakeWebService mockService = new FakeWebService();&nbsp;</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">LogAnalyzer log = new LogAnalyzer(mockService);&nbsp;</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">string tooShortFileName="abc.ext";&nbsp;</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">log.Analyze(tooShortFileName);</span>&nbsp;<br><span style="font-weight: 400; background-color: #00ff00;">StringAssert.Contains("Filename too short:abc.ext", mockService.LastError);&nbsp;<br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">}</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">public class LogAnalyzer</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">{</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">private IWebService service;</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">public LogAnalyzer(IWebService service)</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">{</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">this.service = service;</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">}&nbsp;</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">public void Analyze(string fileName)</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">{</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">if(fileName.Length&lt;8)</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">{</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">service.LogError("Filename too short:" + fileName);&nbsp;</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">}</span><br></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(184, 138, 0);">}&nbsp;</span><br></span><span class="" style="color: rgb(184, 138, 0);">}&nbsp;</span></span></pre>
+
+
+
+        <p>Marcado en
+            <span style="font-weight: 400; background-color: #00ff00;">verde</span> podemos observar cómo estamos comparando el <i>mock object</i> con el resultado que esperamos en vez de hacerlo contra la clase que estamos probando.&nbsp;</p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Esto es porque estamos probando la interacción entre el <span class=" " style="color: rgb(0, 46, 184);">LogAnalyzer</span> y el <i>web service</i>. Utilizamos las mismas técnicas de inversión de dependencia y <i>refactoring </i>que aprendimos
+                    cuando hablamos de los <i>stubs</i>, pero esta vez el <i>mock </i>también puede fallar la prueba. </p>
+            </div>
+        </div>
+        <p>También es importante notar que<b> no</b> estamos escribiendo la prueba contra el <i>mock</i>. Hay un par de razones para esto:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ; ">
+            <div style="margin-left: 3%; margin-right: 3%; ">
+                <!-- 1 -->
+                <div class="row " style="margin-left: 32px ">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg " width="24 " height="24 " fill="currentColor " class="bi bi-check2-circle " viewBox="0 0 16 16 ">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z "></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z "></path>
+</svg>
+                    </div>
+                    <div class="col ">
+                        <p>Queremos reutilizar el <i>mock </i>en otras pruebas con otros mensajes de <i>assert</i>.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row " style="margin-left: 32px ">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg " width="24 " height="24 " fill="currentColor " class="bi bi-check2-circle " viewBox="0 0 16 16 ">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z "></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z "></path>
+</svg>
+                    </div>
+                    <div class="col ">
+                        <p>Si dejamos el <i>assert </i>dentro del <i>mock</i>, quien lea la prueba no tendrá idea de que estamos comparando. Estaríamos ocultando información esencial de la prueba, disminuyendo la legibilidad y mantenibilidad.</p>
+                    </div>
+                </div>
+                <p>Es posible que necesitemos reemplazar más de un solo objeto en una prueba, es por eso que podemos combinar <i>stubs</i> y <i>mocks</i> para armar pruebas. Esta perfecto utilizar múltiples <i>stubs </i>en una prueba, pero es incorrecto
+                    utilizar más de un <i>mock</i> por prueba. Esto se debe a que estaríamos probando más de una cosa, y una prueba unitaria debe probar una sola cosa.</p>
+                <p></p>
+                <p></p>
+                <!-- Caja Violeta de descarga-->
+                <br>
+                <div class="" style="width: 80%;  margin: 0 auto; ">
+
+                    <div class="row">
+
+                        <div class="col-1" style="background-color: #460E95; border-radius: 4px 0px 0px 4px;">
+
+                            <div class="d-flex justify-content-center" style="margin-top: 20px">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-download" style=" color: #FFFFFF" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path>
+</svg>
+                            </div>
+                        </div>
+
+                        <div class="col-8" style="background-color: #FFFEEB;border: 1px solid #460E95; border-radius: 0px 4px 4px 0px;">
+
+                            <p style="margin-top: 16px;">Te invitamos a profundizar en ésta posibilidad, en el documento <span class=" " style="color: rgb(0, 61, 245); "><span class="" style="color: rgb(0, 61, 245);"><u><a href="https://drive.google.com/file/d/1LlkFHII4Fb0xHCcahYkamE2KiZp0bnVM/view?usp=drive_link" target="_blank">S7. Utilizando <i>mocks </i>y <i>stubs </i>juntos</a></u></span>
+                                </span>.</p>
+                        </div>
+                        <br>
+                        <!-- Fin Caja violeta de descarga-->
+
+
+
+                        <p><br></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+
+                        <!-- nada puede haber abajo -->
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178309"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178309/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">El problema con los <i>fakes </i>manuales</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Hay muchos problemas que vienen de escribir de forma manual <i>mocks </i>y <i>stubs </i>en nuestro código:</p>
+        <p></p>
+      <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Toma mucho tiempo escribir los <i>mocks </i>y <i>stubs</i>.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Es difícil escribir <i>mocks </i>y <i>stubs </i>para clases e interfaces con muchos métodos, propiedades y eventos.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Para guardar el estado de múltiples llamadas a un método de un <i>mock</i>, debemos escribir mucho código duplicado en el <i>fake</i>.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Si queremos verificar que todos los parámetros en una llamada a un método se enviaron correctamente, necesitamos escribir múltiples <i>asserts.</i></p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Es difícil rehusar un <i>mock </i>o un <i>stub </i>manual para otras pruebas. Con <i>fakes </i>básicos funciona, pero cuando son más complejos con más de 3 métodos, todo se vuelve tedioso de mantener. </p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>¿Realmente tendremos espacio para que un <i>fake </i>sea un <i>stub </i>a veces y un <i>mock </i>otras? Eso será algo muy raro. Eso será una o dos veces por proyecto, si es que el proyecto es lo suficientemente grande.</p></div></div>
+    </div>
+</div></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178310"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178310/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Por qué usamos <i>mocking </i><i>frameworks</i>?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Definición</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p>Un <span style=" color:#1345CD; font-weight: 600">mocking framework</span><span class="" style="color: rgb(184, 138, 0);"> </span>es un conjunto de APIs programables que hace que crear <i>fakes</i> sea mucho más simple, rápido en menos
+                    líneas de código que hacerlo de forma manual.</p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p>
+        </p>
+        <p>Cuando estos <i>frameworks </i>se diseñan bien, pueden ahorrarle mucho tiempo al/la desarrollador/a de escribir código repetitivo para realizar validaciones y comparaciones. Y si están muy bien hechos, pueden hacer que las pruebas unitarias de
+            nuestro código duren muchos años sin que el/la desarrollador/a tenga que volver a arreglarlos por cada cambio al código de producción.</p>
+        <p>Estos <i>frameworks </i>existen para la mayoría de los lenguajes que tienen <i>frameworks </i>de pruebas unitarias. Por ejemplo, <span style=" color:#1345CD; font-weight: 600">para Java tenemos Mockito o jMock</span>. Es importante estudiar que
+            tan nuevo o viejo es <i>framework </i>antes de usarlo, ya que algunos <i>frameworks
+</i> viejos pueden carecer de funcionalidades interesantes que los más nuevos sí tendrán. </p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Estos <i><b>mocking frameworks</b></i> nos permiten escribir <i>mocks </i>y <i>stubs </i>de forma más elegante y permite hacer que pruebas más complejas sean más simples. También hace que nuestras pruebas sean menos propensas a errores.</p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178311"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178311/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Creando <i>fakes </i>de forma dinámica</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Un <span style=" color:#1345CD; font-weight: 600"><i>fake </i>dinámico</span> es un <i>stub </i>o <i>mock </i>que se ha creado en tiempo de ejecución sin la necesidad de haber sido escrito a mano. Estudiaremos cómo implementar estos <i>fakes</i> utilizando
+            <b>NSubstitute</b>.&nbsp;</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">NSubstitute&nbsp;<span style="color: rgb(1, 6, 20); font-weight: 400;">es un software <i>open source</i> y puede descargarse gratuitamente. Puede hacerse fácilmente utilizando </span><b style="color: rgb(1, 6, 20);">NuGet</b><span style="color: rgb(1, 6, 20); font-weight: 400;">, el manejador de paquetes de .NET.&nbsp;</span></p>
+                <p>Analizaremos este <i>framework </i>ya que tiene una excelente documentación, pero otro <i>framework </i>que puede aprenderse, y es muy bueno, es <b>FakeItEasy.</b></p>
+                <p>A partir de ahora nos referiremos a&nbsp;<i><b>NSubstitute</b></i> como <b>NSub
+                </b></p>
+            </div>
+        </div>
+        <p>Debemos descargar <span style=" color:#1345CD; font-weight: 600">NSub</span> con <span style=" color:#1345CD; font-weight: 600">NuGet</span> de la misma forma que lo hicimos con <span style=" color:#1345CD; font-weight: 600">NUnit</span> y lo importamos del mismo modo como importamos cualquier otra librería o API.<br></p>
+        <p>NSub soporta el modelo <span class="" style="color: rgb(0, 46, 184);">arrange-act-assert</span> con el que venimos trabajando. La idea es crear los <i>fakes </i>y configurarlos en la porción de <i>arrange</i>, utilizarlos para probar en la parte de <i>act </i>y realizar los <i>asserts </i>en la parte de <i>assert</i></p>
+        <p>NSub tiene una clase llamada <span class="" style="color: rgb(0, 46, 184);">Substitute</span> que utilizaremos para crear los <i>fakes </i>en tiempo de ejecución. Esta clase tiene un método genérico, y es la forma principal de crear <i>fakes </i>en nuestra aplicación. Llamaremos a este método <span class="" style="color: rgb(0, 46, 184);">For(type)</span>&nbsp;siendo el tipo de objeto del cual queremos crear un <i>fake</i>.</p>
+        <p>Este método crea y retorna dinámicamente un <i>fake</i> que se adhiere a ese tipo o interfaz en tiempo de ejecución. No necesitamos implementar ese objeto a nivel código.</p>
+        <p>A continuación, se muestra entonces una prueba que utiliza su respectivo <i>fake </i>escrito a mano, como veníamos haciendo hasta ahora.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178312"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178312/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Prueba con <i>fake </i>dinámico</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Analicemos la prueba a continuación:</p>
+        <pre><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">[TestFixture]</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">class LogAnalyzerTests</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">{</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">[Test]</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">public void Analyze_TooShortFileName_CallLogger()</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">{</span><br></span><span style="font-weight: 400; background-color: #00ff00;">FakeLogger logger = new FakeLogger();<br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">LogAnalyzer analyzer = new LogAnalyzer(logger);</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">analyzer.MinNameLength= 6;&nbsp;</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">analyzer.Analyze("a.txt");&nbsp;</span><br></span><span style="font-weight: 400; background-color: #ffff00;">StringAssert.Contains("too short",logger.LastError);</span><span style="font-weight: 400;">&nbsp;<br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">}</span><br></span><span style="font-weight: 400; color: rgb(184, 138, 0);" class="">}</span><br><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">class FakeLogger: ILogger</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">{</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">public string LastError;</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">public void LogError(string message)</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">{</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">LastError = message;</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">}</span><br></span><span style="font-weight: 400; color: rgb(184, 138, 0);" class="">}&nbsp;</span></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p>Resaltado en <span style="font-weight: 400; background-color: #00ff00;">verde</span>&nbsp;creamos nuestro <i>fake </i>para ser usado. Resaltado en <span style="font-weight: 400; background-color: #ffff00;">amarillo</span>&nbsp;vemos cómo usamos ese
+            <i>fake </i>como un <i>mock </i>para realizar un <i>assert</i>. Las partes resaltadas son las que cambiarán una vez que comencemos a utilizar <b>NSub</b>. Ahora empezaremos a crear <i>fakes</i> de forma dinámica.
+        </p>
+        <pre><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">[Test]</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">public void Analyze_TooShortFileName_CallLogger()</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">{</span><br></span><span style="background-color: #00ff00;"><span style="font-weight: 400;">ILogger logger = Substitute.For&lt;ILogger&gt;();</span><span style="font-weight: 400;">&nbsp;<br></span></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">LogAnalyzer analyzer = new LogAnalyzer(logger);&nbsp;</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">analyzer.MinNameLength = 6;&nbsp;</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">analyzer.Analyze("a.txt");</span>&nbsp;<br></span><span style="font-weight: 400; background-color: #ffff00;">logger.Received().LogError("Filename too short: a.txt");</span></pre>
+
+
+
+
+
+
+
+        <p>Verificamos en este código que con un par de líneas de código nos libramos enteramente de los <i><span class="" style="color: rgb(0, 46, 184);">stubs </span></i>o <i><span class="" style="color: rgb(0, 46, 184);">mocks </span></i>escritos a mano, esto se debe a que se generan de forma dinámica. Podemos apreciar, resaltado en <span style="font-weight: 400; background-color: #00ff00;">verde</span>,
+            que el objeto <i>logge</i>r es generado dinámicamente implementando la interfaz <span class="" style="color: rgb(0, 46, 184);">ILogger</span>, pero no hay ninguna implementación de los métodos de <span class="" style="color: rgb(0, 46, 184);">ILogger</span>.
+        </p>
+        <p>Desde este momento hasta la ultima línea de la prueba, todas las llamadas al <i><span class="" style="color: rgb(0, 46, 184);">fake</span></i><span class="" style="color: rgb(0, 46, 184);"> </span>son registradas de forma automática, es decir, guarda para su uso después. Esto ocurre en la ultima línea (la resaltada con <span style="font-weight: 400; background-color: #ffff00;">amarillo</span>).</p>
+        <p>En la última línea, en vez de una llamada tradicional de <span class="" style="color: rgb(0, 46, 184);">assert</span>, podemos notar que usamos un método especial de NSub. La interfaz <span class="" style="color: rgb(0, 46, 184);">ILogger </span>no tiene ningún método especial llamado <span class="" style="color: rgb(0, 46, 184);">Recieved()</span> sino que esa es una extensión especial que realiza <span class="" style="color: rgb(0, 46, 184);">NSub</span>.
+            Este método es nuestra forma de revisar que un método ha sido invocado en nuestro <i><span class="" style="color: rgb(0, 46, 184);">fake</span></i>.</p>
+        <p><span class="" style="color: rgb(0, 46, 184);">Recieved()</span> pareciera funcionar por arte de magia. Retorna el mismo tipo de objeto que lo invocó. Llamando al método <span class="" style="color: rgb(0, 46, 184);">Recieved() </span>antes del método <span class="" style="color: rgb(0, 46, 184);">L</span><span class="" style="color: rgb(0, 46, 184);">ogError(),</span> le hacemos saber a NSub que estamos preguntándole al <i>fake</i> si ese método se llamó o no.
+            Hablando en términos de legibilidad, le estamos diciendo al lector “Algo recibió (<i>recived</i>) una llamada al método, o esta prueba fallará”. </p>
+        <p>Si nunca se le hubiera enviado ese mensaje al<i> fake</i>, entonces, los <i>logs </i>de prueba nos mostrarían un mensaje como este:</p>
+        <p><span class="" style="color: rgb(184, 138, 0);">NSubstitute.Exceptions.ReceivedCallsException : Expected to receive a call matching: LogError("Filename too short: a.txt") Actually received no matching calls.</span>        </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178313"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178313/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Simulando valores falsos o <i>stubs</i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>A continuación, comprobamos cómo retornar un valor de un <i>fake</i> cuando la interfaz tiene un retorno no nulo. Para nuestro ejemplo, agregaremos una interfaz que busca reglas de los archivos permitidos en el sistema de archivos.</p>
+        <p></p>
+        <pre><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">[Test]</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">public void Returns_ByDefault_WorksForHardCodedArgument()</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">{</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">IFileNameRules fakeRules = Substitute.For&lt;IFileNameRules&gt;();&nbsp;</span><br></span><span style="font-weight: 400; background-color: #00ff00;">fakeRules.IsValidLogFileName(Arg.Any&lt;String&gt;()).Returns(true);</span><span style="font-weight: 400;">&nbsp;<br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">Assert.IsTrue(fakeRules.IsValidLogFileName("strict.txt"));&nbsp;</span><br></span><span style="font-weight: 400;"><span class="" style="color: rgb(184, 138, 0);">}</span>&nbsp;</span></pre>
+
+
+
+
+
+
+        <p>En este código apreciamos resaltado con verde, que estamos forzando al método del sustituto a retornar <span class="" style="color: rgb(0, 46, 184);">true</span>. Esta línea resaltada en verde muestra que, sin importar cuál sea el parámetro que
+            se le envía al método que estamos simulando, siempre retornará <i>true</i>. Esto nos permite tener una alta mantenibilidad, ya que si el código en producción cambia y hace múltiples llamados al método, no importa cuál sea ese parámetro, su respuesta
+            siempre será <i>true</i>. También ayuda a la legibilidad del código, ya que resta importancia al nombre del archivo a enviar. Si utilizamos un <span class="" style="color: rgb(0, 46, 184);">String </span>específico para ese parámetro, alguien que
+            lea el código podría pensar que ese <span class="" style="color: rgb(0, 46, 184);">String </span>en particular es importante.</p>
+        <p>La clase <span class="" style="color: rgb(0, 46, 184);">Arg </span>que utilizamos en esa misma línea indica que no nos importa la entrada que se requiere para que este <i>fake </i>haga valer <i>true </i>el retorno de su método. Esto se llama un
+            <i>argument matcher</i> y se utiliza en los <i>frameworks </i>de <i>mocking </i>para mejorar la legibilidad.
+        </p>
+        <p>También podemos simular el lanzado de excepciones de la siguiente manera:</p>
+        <p><span id="docs-internal-guid-b43a2e56-7fff-ba5c-84f8-d188e00a1409"></span></p><pre style=""><span class="" style="color: rgb(184, 138, 0);">[ Test]</span><br><span class="" style="color: rgb(184, 138, 0);">public void Returns_ArgAny_Throws()</span><br><span class="" style="color: rgb(184, 138, 0);">{</span><br><span class="" style="color: rgb(184, 138, 0);">IFileNameRules fakeRules = Substitute.For&lt;IFileNameRules&gt;();&nbsp;</span><br><span class="" style="color: rgb(184, 138, 0);">fakeRules.When(x =&gt; x.IsValidLogFileName(Arg.Any&lt;string&gt;())).Do(context =&gt;{ throw new Exception("fake exception"); });&nbsp;</span><br><span class="" style="color: rgb(184, 138, 0);">Assert.Throws&lt;Exception&gt;(() =&gt; fakeRules.IsValidLogFileName("anything"));&nbsp;</span><br><span class="" style="color: rgb(184, 138, 0);">}</span></pre><br><p>Podemos notar que en la última línea utilizamos <i>Assert.Throws </i>para revisar que efectivamente se lance la excepción que deseamos probar. La sintaxis de <b><span class="" style="color: rgb(0, 46, 184);">NSub </span></b>en este caso no es excelente, de hecho otros <i>frameworks</i> como <span class="" style="color: rgb(0, 46, 184);">FakeItEasy</span> tienen una sintaxis más simple para este tipo de casos. 
+</p><p><br></p><h5><span class="" style="color: rgb(0, 61, 245);">A continuación, observemos un <b>caso práctico</b>.</span></h5>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178314"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178314/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Combinando <i>stubs</i> y <i>mocks </i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <h5><span class="" style="color: rgb(0, 46, 184);"><b>Un caso práctico</b></span></h5><p>Te invitamos a revisar un caso más real, donde utilizamos una combinación de varias de las herramientas que hemos aprendido. ¿Qué haremos? En principio,&nbsp;<b>c</b><span style="font-weight: 600">ombinaremos los <i>stubs</i> con los <i>mocks</i></span>. Para lograrlo, utilizaremos el siguiente código
+            de producción para trabajar.</p><p>Este código es similar al que ya probamos en el apartado anterior sobre los<i> Mocks</i>.
+        </p>
+        <p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178314/imagen%207.4.png" alt="" width="85%" height="85%" role="presentation" class="img-responsive atto_image_button_middle"><br></p>
+        <p>Ahora podemos corroborar cómo haríamos las pruebas sin utilizar el <i><span class="" style="color: rgb(0, 46, 184);">framework</span></i><span class="" style="color: rgb(0, 46, 184);"> de </span><i><span class="" style="color: rgb(0, 46, 184);">mocking</span></i>.<br></p>
+        <p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178314/imagen%20S7.5.png" alt="" width="85%" height="85%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p>Verificamos, arriba del código, la prueba, y, abajo de ella, el <i>web service </i>falso que usaremos como un <i>mock</i>. Abajo del <i>web service</i> falso observamos un <i>logger</i> falso que utilizaremos como un <i>Stub</i>. Vemos que es un código
+            bastante extenso.<br></p>
+        <p>Si utilizamos la herramienta <span class="" style="color: rgb(0, 46, 184);">NSub </span>para re escribir nuestra prueba, seria así:</p>
+        <p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658993/mod_book/chapter/178314/imagen%20s7.6.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">En resumen</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Nos damos cuenta que no nos toma más que unas pocas líneas de código replicar la prueba. No necesitamos ningún <i>fake</i> escrito a mano.&nbsp;</p>
+        <p>Sí es necesario notar que debido a las expresiones regulares que <span class="" style="color: rgb(0, 46, 184);">NSub</span> utiliza, se vuelve un poco más complejo de leer.</p>
+            </div>
+        </div>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[648989,648991,648992,648993,648994,648995,648996,648997,649000,649001,649004,649005,649009,649010,649013,649014,649018,649024,649027,649028,649031]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2658993, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1745753596); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random680e2c862738a2'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random680e2c862738a2'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

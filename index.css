@@ -22,6 +22,7 @@ h1 {
   color: #333;
 }
 ul {
+  text-align: left;
   list-style: none;
   padding: 0;
 }
@@ -39,5 +40,5 @@ a:hover {
 }
 
 h2 {
-  margin-top: 4rem;
+  margin-top: 1.5rem;
 }

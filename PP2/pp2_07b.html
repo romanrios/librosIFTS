@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S7-ML-Herramienta para armar un Caso de Uso | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1744219673/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S7-ML-Herramienta para armar un Caso de Uso | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1744219673_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"WUUpPS1E5D","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1744219673","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21031,"courseContextId":2643147,"contextid":2658375,"contextInstanceId":648478,"langrev":1745738645,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21031 context-2658375 cmid-648478 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1744219673/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S7-ML-Herramienta para armar un Caso de Uso</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Desarrollo de Sistemas de Información orientados a la gestión y apoyo a las decisiones 2° A 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S7-ML-Herramienta para armar un Caso de Uso
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        domingo, 27 de abril de 2025, 09:47
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21031&amp;section=11" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=648477" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/assign/view.php?id=648479" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Oficina</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=648481" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_bullets"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="Introducción" class="font-weight-bold text-decoration-none" href="#ch176865">Introducción</a></li><li><a title="¿Cómo se diseña una plantilla de CdU?" class="font-weight-bold text-decoration-none" href="#ch176866">¿Cómo se diseña una plantilla de CdU?</a><ul><li><a title="Elementos de una plantilla" class="text-decoration-none" href="#ch176867">Elementos de una plantilla</a></li><li><a title="Otros elementos de la plantilla" class="text-decoration-none" href="#ch176868">Otros elementos de la plantilla</a></li><li><a title="Ejemplo de CdU del sistema de hospedaje" class="text-decoration-none" href="#ch176869">Ejemplo de CdU del sistema de hospedaje</a></li></ul></li><li><a title="Autoevaluación" class="font-weight-bold text-decoration-none" href="#ch176870">Autoevaluación</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176865"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658375/mod_book/chapter/176865/_%20%2814%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><span id="docs-internal-guid-d619cb2f-7fff-bdab-0f08-35b7ec8e295f"><p dir="ltr">Ahora vas a profundizar en cómo armar las plantillas de caso de uso.&nbsp;<span id="docs-internal-guid-f3573f6c-7fff-ecd9-5d67-17e9c9300fdd">En general, los diagramas de Caso de uso no contienen mucho detalle. Sólo incorporan la información esencial que ayuda a esbozar lo siguiente:&nbsp;</span></p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+            <div style="margin-left: 3%; margin-right: 3%;"><br>
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-diamond" viewBox="0 0 16 16">
+  <path d="M7.987 16a1.526 1.526 0 0 1-1.07-.448L.45 9.082a1.531 1.531 0 0 1 0-2.165L6.917.45a1.531 1.531 0 0 1 2.166 0l6.469 6.468A1.526 1.526 0 0 1 16 8.013a1.526 1.526 0 0 1-.448 1.07l-6.47 6.469A1.526 1.526 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0zM8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873L8.722 8zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873L8 8.722zM7.278 8 4.044 4.766 1.17 7.639a.511.511 0 0 0 0 .722l2.874 2.873L7.278 8z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style=""></span><span class="" style="color: rgb(0, 46, 184);"><b>representar </b></span>los objetivos de las interacciones entre sistema y usuario,</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px;">
+                    <div style="color: rgb(1, 6, 20); font-size: large;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-diamond" viewBox="0 0 16 16">
+  <path d="M7.987 16a1.526 1.526 0 0 1-1.07-.448L.45 9.082a1.531 1.531 0 0 1 0-2.165L6.917.45a1.531 1.531 0 0 1 2.166 0l6.469 6.468A1.526 1.526 0 0 1 16 8.013a1.526 1.526 0 0 1-.448 1.07l-6.47 6.469A1.526 1.526 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0zM8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873L8.722 8zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873L8 8.722zM7.278 8 4.044 4.766 1.17 7.639a.511.511 0 0 0 0 .722l2.874 2.873L7.278 8z"></path>
+</svg>
+                    </div>
+                    <div class="col" style="">
+                        <p style="color: rgb(1, 6, 20); font-size: large;"><span style=""></span><span class="" style="color: rgb(0, 46, 184);"><b>definir y organizar </b></span>los requisitos funcionales de un sistema,&nbsp;</p>
+                        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-diamond" viewBox="0 0 16 16">
+  <path d="M7.987 16a1.526 1.526 0 0 1-1.07-.448L.45 9.082a1.531 1.531 0 0 1 0-2.165L6.917.45a1.531 1.531 0 0 1 2.166 0l6.469 6.468A1.526 1.526 0 0 1 16 8.013a1.526 1.526 0 0 1-.448 1.07l-6.47 6.469A1.526 1.526 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0zM8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873L8.722 8zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873L8 8.722zM7.278 8 4.044 4.766 1.17 7.639a.511.511 0 0 0 0 .722l2.874 2.873L7.278 8z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style=""></span><span class="" style="color: rgb(0, 46, 184);"><b>especificar</b></span>&nbsp;el contexto y los requerimientos de un sistema, y&nbsp;</p></div></div>
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px;">
+                    <div style="color: rgb(1, 6, 20); font-size: large;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-diamond" viewBox="0 0 16 16">
+  <path d="M7.987 16a1.526 1.526 0 0 1-1.07-.448L.45 9.082a1.531 1.531 0 0 1 0-2.165L6.917.45a1.531 1.531 0 0 1 2.166 0l6.469 6.468A1.526 1.526 0 0 1 16 8.013a1.526 1.526 0 0 1-.448 1.07l-6.47 6.469A1.526 1.526 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0zM8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873L8.722 8zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873L8 8.722zM7.278 8 4.044 4.766 1.17 7.639a.511.511 0 0 0 0 .722l2.874 2.873L7.278 8z"></path>
+</svg>
+                    </div>
+                    <div class="col" style="">
+                        <p style="color: rgb(1, 6, 20); font-size: large;"><span style=""></span><span class="" style="color: rgb(0, 46, 184);"><b>dar forma&nbsp;</b></span>al flujo básico de eventos en un Caso de uso.</p></div></div></div><ul>
+            </ul><span><p dir="ltr" style="">Por ello se sugiere realizar un diagrama de Caso de uso cuando debas especificar el contexto y los requisitos para que un sistema funcione, o dar forma al flujo de eventos en un Caso de uso determinado. Y, para ampliar el detalle, se usan plantillas de Caso de uso.</p></span>
+            <p></p>
+            <p dir="ltr">Recorré los capítulos y subcapítulos a la derecha todas las veces que necesites para registrar, tomar nota, revisar las actividades propuestas.</p>
+            <br></div>
+        <div style="margin-left: 3%; margin-right: 3%;">¡Comenzamos!<br><br></div>
+        </span>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176866"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container" style="font-size: large; color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658375/mod_book/chapter/176866/_%20%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Cómo se diseña una plantilla de CdU?<span style="color: rgb(45, 45, 45); font-family: chaletnewyorknineteeneighty, Arial, Helvetica, sans-serif; font-size: 1.64062rem; font-weight: 700;">&nbsp;</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div><div style="margin-left: 3%; margin-right: 3%;"><span><span style=""><span id="docs-internal-guid-00d95b6e-7fff-e4c8-6dee-ba7326d131e6" style="">
+        <!--Inicio Caja definición-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #4E7CFA;"><b>Definición</b></span> </p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: solid  #4E7CFA 2px">
+                <p><span class="" style="font-size: large;"><span class="" style="color: rgb(51, 51, 51);">Una </span><span class="" style="">plantilla&nbsp;</span><span class="" style="color: rgb(51, 51, 51);">es un documento prediseñado que puedes usar para crear nuevos documentos con el mismo formato. Las plantillas facilitan la creación de documentos porque el diseño ya está listo y te orienta a saber cuál es la información que debe contener.&nbsp;</span></span>
+                </p>
+            </div>
+            <span class="" style="font-size: large; color: rgb(51, 51, 51);">
+            </span>
+            <span class="" style="font-size: large; color: rgb(51, 51, 51);">
+        </span><span class="" style="font-size: large; color: rgb(51, 51, 51);">
+    </span>
+        </div>
+        <div style="margin-left: 3%; margin-right: 3%;"><span><br></span></div>
+        <div style="margin-left: 3%; margin-right: 3%;"><span><span class="" style="font-size: large; color: rgb(51, 51, 51);">A continuación, dejamos una de ejemplo para que observes cómo se compone:</span></span>
+
+            <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+                <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAFxcyMEjXM/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+            </div>
+            <h4><span style="font-weight: normal;"><span class="" style="font-size: large;">Descargá esta plantilla haciendo clic&nbsp;</span><span class="" style="color: rgb(0, 61, 245); font-size: large;"><a href="https://drive.google.com/file/d/1Afni6zYroI7WTXG-mUag5XZVLdpmlxHJ/view?usp=drive_link" target="_blank">aquí</a></span></span>.</h4><br></div>
+        <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+        </span>
+        </span>
+        </span>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176867"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658375/mod_book/chapter/176867/_%20%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Elementos de una plantilla</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><span id="docs-internal-guid-a9194f28-7fff-df0d-8cea-cd1dd2f7e435"><span id="docs-internal-guid-689ab943-7fff-50bf-5e57-8d149d842af1"><p dir="ltr" style=""><br></p></span></span>
+        <div style="width: 100%;"><div style="position: relative; padding-bottom: 141.4%; padding-top: 0; height: 0;"><iframe title="PP2-E2S9- Elementos de Plantillas de Caso de Uso -  Elementos" frameborder="0" width="1000" height="1414" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/652d964ed3d95b00118397ea" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+        <p></p>
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176868"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658375/mod_book/chapter/176868/_%20%2813%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><span id="docs-internal-guid-4e563d27-7fff-f372-ca36-00626d8d4d9f">¿Qué otros elementos la componen?</span><i></i></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <span id="docs-internal-guid-cac0cd82-7fff-4fec-8fbc-333027ca5381"><p dir="ltr" style=""></p><span id="docs-internal-guid-0107319a-7fff-97ee-a31b-3c2e3fdd16af"><p dir="ltr" style=""></p><span id="docs-internal-guid-ced862f4-7fff-33e6-b270-2581c79feb9e"><p dir="ltr" style=""></p><span id="docs-internal-guid-f1bb0ef7-7fff-06c5-1d96-6782ab9a1fda"><p dir="ltr" style=""><span id="docs-internal-guid-4f8dba6f-7fff-0bf3-f1c9-60125eddce59"></span></p>
+        <p dir="ltr" style=""><span id="docs-internal-guid-71552f5e-7fff-bceb-28c6-b906d610007f"></span></p>
+        <p dir="ltr" style=""></p>
+        </span>
+        </span>
+        </span>
+        </span>
+        <p dir="ltr"><span>Cuando hablamos de plantillas de casos de uso, hay diferentes y posibles modelos a utilizar.&nbsp;</span></p>
+        <p dir="ltr"><span>Forma parte de la decisión del equipo de desarrollo cuál es la adecuada para ser utilizada. En general, todas tienen elementos en común y la forma de redacción del Caso de uso depende del equipo.</span></p>
+        <p dir="ltr"><span>En el punto anterior se describen los ítems o elementos que contiene, en general, las plantillas que describen el Caso de uso, sin embargo, pueden contener también:</span></p><span><span id="docs-internal-guid-1ac3c553-7fff-7c28-c6b7-4c4ea138a36f"><p dir="ltr" style=""></p></span>
+      
+   <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="Copia - MDS-S5- Ejemplo de redacción de caso" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/652d9bd99bf7ce0011fae8ff" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+        <p></p>
+        </span>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span>A continuación, te compartimos una plantilla para que puedas descargar y emplear.</span></div>
+   
+  
+  <div style="margin-left: 3%; margin-right: 3%;">
+    
+    <span><div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAFxdPgFYfk/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+</span><h4><span><span style="font-weight: normal;"><span class="" style="font-size: large;">Descargá la plantilla haciendo clic </span><span class="" style="color: rgb(0, 61, 245); font-size: large;"><a href="https://drive.google.com/file/d/174ikWv2O10WQX_Uq4poxcQlLVCiFHGkW/view?usp=drive_link" target="_blank">aquí</a></span></span>.</span></h4></div>
+</div>
+<!-- nada puede haber abajo --></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176869"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658375/mod_book/chapter/176869/_%20%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><span id="docs-internal-guid-219d15ee-7fff-4396-1d2e-9fc6cbceb15b"><span id="docs-internal-guid-b92de356-7fff-ef22-c4de-b2f562b1f06a">Template del caso de uso "check-in" del hotel</span></span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando <p></p> -->
+        <span id="docs-internal-guid-38c23f5f-7fff-351d-1904-e63d281ba9ba" style=""><p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;"></p><span id="docs-internal-guid-e3b95938-7fff-cabe-98c1-a3cfbc99b4ad" style=""><p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;"></p><span id="docs-internal-guid-c5b1070c-7fff-9799-8a5e-221de3eac09f" style="color: rgb(1, 6, 20); font-size: large;"><p dir="ltr" style=""></p></span>
+        <span id="docs-internal-guid-35e3bae9-7fff-77d0-b407-b418d496962f" style="">
+            <p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;"><span style=""></span></p>
+        <p dir="ltr"><span></span></p><span id="docs-internal-guid-09855ee9-7fff-ddc6-f067-ca92361ff9c6"><p dir="ltr" style=""><span><span class="" style="font-size: large; color: rgb(51, 51, 51);">A modo de ejemplo, desarrollamos uno de los Casos de uso del sistema para el Hotel “Newton Palace”, en este caso el<i> c</i><i>heck in</i>:<br>
+      
+          </span></span>
+        </p>
+       <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAFxdDbJfV4/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+</span></span></span></span><h4><span style=""><span style=""><span style=""><span><span class="" style="font-size: large; font-weight: normal;">Decargá la plantilla haciendo&nbsp;</span><span class="" style="font-size: large;"><span style="font-weight: normal;"><span class="" style="font-size: large;">clic </span><span class="" style="color: rgb(0, 61, 245); font-size: large;"><a href="https://drive.google.com/file/d/19wz6IyjFyt0XMVchApXIuCHmyMND_5CG/view?usp=drive_link" target="_blank">aqui</a></span><span class="" style="font-size: large;">.</span></span>&nbsp;</span></span></span></span></span></h4></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch176870"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658375/mod_book/chapter/176870/_%20%2813%29.png" alt="" width="79" height="70" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><span id="docs-internal-guid-4e563d27-7fff-f372-ca36-00626d8d4d9f">¡Me pongo a prueba! (opcional)</span><i></i></p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><span id="docs-internal-guid-cac0cd82-7fff-4fec-8fbc-333027ca5381"><span id="docs-internal-guid-0107319a-7fff-97ee-a31b-3c2e3fdd16af"><span id="docs-internal-guid-ced862f4-7fff-33e6-b270-2581c79feb9e"><span id="docs-internal-guid-f1bb0ef7-7fff-06c5-1d96-6782ab9a1fda"><div style="margin-left: 3%; margin-right: 3%;"><span><br>A continuación podrás hacer clic en el siguiente botón:<br><br></span></div>
+    <div style="text-align: center; margin-left: 3%; margin-right: 3%;"><span><a href="https://aulasvirtuales.bue.edu.ar/mod/quiz/view.php?id=648480"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2658375/mod_book/chapter/176870/Copia%20de%20Novedades%20%284%29.gif" alt="" width="240" height="60" role="presentation" class="img-responsive atto_image_button_text-bottom"></a><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span>Luego acceder a un cuestionario para poner a prueba tu comprensión de los temas trabajados.</span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <h3><span class="" style="font-size: large; color: rgb(0, 46, 184);">¡Muchos éxitos!</span></h3><span><p></p></span>
+
+    </div>
+    </span>
+    </span>
+    </span>
+    </span>
+</div>
+
+
+
+<span><br><p></p></span>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[648413,648414,648415,648416,648417,648419,648420,648421,648422,648436,648440,648441,648445,648446,648450,648451,648455,648456,648460,648462,648466,648467,648471,648472,648476,648477,648481]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2658375, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1745753596); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random680e276d8db9b2'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random680e276d8db9b2'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

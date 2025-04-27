@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S7. Protocolos de red libres de colisiones  | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1744219673/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S7. Protocolos de red libres de colisiones  | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1744219673_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"WUUpPS1E5D","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1744219673","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21039,"courseContextId":2643474,"contextid":2659486,"contextInstanceId":649486,"langrev":1745738645,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21039 context-2659486 cmid-649486 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1744219673/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S7. Protocolos de red libres de colisiones </h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Tecnologías de la Información y Comunicación 2° A 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S7. Protocolos de red libres de colisiones 
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        domingo, 27 de abril de 2025, 09:52
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+    <!-- Oulto   <p class="titulo_principal">Tu itinerario</p> -->
+
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+
+            <article class="touch_point">
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21039&amp;section=8" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649485" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"></path>
+                            </svg>
+                        </div>
+                        <p>Recorré</p>
+                    </section>
+                </a>
+
+
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-option" viewBox="0 0 16 16">
+                                <path d="M1 2.5a.5.5 0 0 1 .5-.5h3.797a.5.5 0 0 1 .439.26L11 13h3.5a.5.5 0 0 1 0 1h-3.797a.5.5 0 0 1-.439-.26L5 3H1.5a.5.5 0 0 1-.5-.5zm10 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"></path>
+                                </svg>
+                    </div>
+                    <p>Conectá</p>
+
+                </section>
+
+                
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649488" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="m10 10.414 4 4 5.707-5.707L22 11V5h-6l2.293 2.293L14 11.586l-4-4-7.707 7.707 1.414 1.414z"></path></svg>
+                        </div>
+
+                        <p>Proyectá</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Portada" class="font-weight-bold text-decoration-none" href="#ch179854">1. Portada</a></li><li><a title="2. Protocolos de red libres de colisiones" class="font-weight-bold text-decoration-none" href="#ch179846">2. Protocolos de red libres de colisiones</a></li><li><a title="3. Un protocolo de mapa de bits" class="font-weight-bold text-decoration-none" href="#ch179847">3. Un protocolo de mapa de bits</a><ul><li><a title="3.1. Protocolos de reservación" class="text-decoration-none" href="#ch179856">3.1. Protocolos de reservación</a></li></ul></li><li><a title="4. Paso de token" class="font-weight-bold text-decoration-none" href="#ch179848">4. Paso de token</a><ul><li><a title="4.1. Protocolo token ring" class="text-decoration-none" href="#ch179857">4.1. Protocolo token ring</a></li></ul></li><li><a title="5. Protocolo: conteo descendente binario" class="font-weight-bold text-decoration-none" href="#ch179849">5. Protocolo: conteo descendente binario</a></li><li><a title="6. Protocolos de Internet" class="font-weight-bold text-decoration-none" href="#ch179850">6. Protocolos de Internet</a><ul><li><a title="6.1. Capa de red" class="text-decoration-none" href="#ch179858">6.1. Capa de red</a></li></ul></li><li><a title="7. El protocolo IP versión 4" class="font-weight-bold text-decoration-none" href="#ch179851">7. El protocolo IP versión 4</a><ul><li><a title="7.1. Campos del protocolo IP. V4" class="text-decoration-none" href="#ch179859">7.1. Campos del protocolo IP. V4</a></li><li><a title="7.2. Campo de  opciones" class="text-decoration-none" href="#ch179860">7.2. Campo de  opciones</a></li></ul></li><li><a title="8. El protocolo IP versión 6" class="font-weight-bold text-decoration-none" href="#ch179852">8. El protocolo IP versión 6</a><ul><li><a title="8.1. Principales características de IPv6" class="text-decoration-none" href="#ch179861">8.1. Principales características de IPv6</a></li><li><a title="8.2. El encabezado principal de IPv6" class="text-decoration-none" href="#ch179853">8.2. El encabezado principal de IPv6</a></li><li><a title="8.3. Campos" class="text-decoration-none" href="#ch179862">8.3. Campos</a></li></ul></li><li><a title="9. Checkpoint" class="font-weight-bold text-decoration-none" href="#ch179855">9. Checkpoint</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179854"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179854/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Conectá los saberes técnicos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p>
+        <p></p>
+        <p>La competencia técnica de un/a desarrollador/a de software es esencial para abordar preguntas críticas sobre protocolos de red, especialmente aquellos libres de colisiones. La importancia radica en su capacidad para gestionar el tráfico eficientemente,
+            evitando conflictos en la transmisión de datos.&nbsp;</p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Qué necesitan comprender los/as desarrolladores/as?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Los desarrolladores deben comprender cómo estos protocolos, como CSMA/CD, funcionan para prevenir colisiones, y cómo escalan en redes con múltiples estaciones, donde la cantidad de estaciones puede impactar la eficiencia y el rendimiento. La elección y funcionamiento de estos protocolos también se ven influenciados por la topología de la red.</p></div></div>
+        <p>En el caso de IPv6, los desafíos de seguridad requieren una atención especial, y los desarrolladores deben abordarlos para garantizar la protección de dispositivos y redes. La administración y simplificación de protocolos son clave para facilitar
+            la gestión en redes extensas. Finalmente, el crecimiento continuo de usuarios y dispositivos conectados demanda la continua evolución de los protocolos, una tarea que recae en la competencia técnica del desarrollador para asegurar la efectividad
+            de Internet en este entorno dinámico.</p>
+        <p></p>
+        <!--Inicio Caja violeta-->
+        <br>
+        <div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Y..., ¿para qué estos saberes técnicos?</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li></li>
+                <li><strong>Funcionamiento y prevención de colisiones:</strong> Comprender cómo operan los protocolos libres de colisiones, como por ejemplo, CSMA/CD (<i>Carrier Sense Multiple Access with Collision Detection</i>), es esencial. Los/as desarrolladores/as
+                    deben conocer los mecanismos que utilizan para detectar y evitar colisiones en la transmisión de datos, garantizando una comunicación eficiente y sin conflictos.<br></li>
+                <li><strong>Escalabilidad y rendimiento en redes extensas:</strong> Un aspecto crítico es entender cómo estos protocolos escalan en redes con un gran número de estaciones. Los/as desarrolladores/as deben evaluar cómo la cantidad de estaciones
+                    afecta la eficiencia y el rendimiento de la red, considerando estrategias para mantener un funcionamiento óptimo a medida que la red crece en tamaño y complejidad.<br></li>
+                <li><strong>Adaptabilidad a topologías y requisitos específicos:</strong> La topología de la red influye en la elección y funcionamiento de los protocolos libres de colisiones. Los/as desarrolladores/as deben comprender cómo estos protocolos
+                    se adaptan a diferentes configuraciones de red y cómo satisfacen los requisitos específicos de cada entorno. La elección adecuada de protocolos según la topología garantiza un rendimiento eficiente y una gestión efectiva del tráfico.<br></li>
+                <li></li>
+            </ul>
+        </div>
+
+        ¡Comencemos!</div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br><br>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179846"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179846/_%20%2814%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Protocolos de red libres de colisiones </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+      <!--Inicio caja Definición morada-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #9a3282; font-size: large; font-weight: 600">Definición</p>
+            </div>
+            <div class="col" style="border-left: solid  #9a3282 2px;">
+                <p style=" color: #7746E2"><span class=" " style="font-size: large; color: #010614">Son sistemas de comunicación diseñados para evitar colisiones en la transmisión de datos cuando múltiples dispositivos intentan enviar información simultáneamente en una red compartida. Las colisiones ocurren cuando dos o más dispositivos transmiten datos al mismo tiempo en una red y las señales se superponen, lo que puede resultar en pérdida de datos y retransmisiones.</span></p>
+            </div>
+        </div>
+        <!--Fin Caja Definición morada-->
+  
+      <p><br>Estos protocolos son especialmente relevantes en redes de acceso múltiple, donde varios dispositivos comparten un medio de transmisión, como cables o canales inalámbricos. Operan en capas inferiores, como la de enlace de datos -que estudiamos
+            la semana anterior-, centrándose, como dijimos, en evitar colisiones en la transmisión de datos en el nivel físico o de enlace de datos.<br></p>
+        <p><b><span class="" style="color: rgb(51, 51, 51);">Analicemos algunos ejemplos.</span></b></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179847"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179847/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.6%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Un protocolo de mapa de bits </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Uno de los protocolos libre de coaliciones, es el método básico de <b class="sub_negrita">mapa de bits</b> que se utiliza para coordinar el acceso a un medio compartido. Este protocolo opera en ciclos llamados <b class="sub_negrita">periodos de contención</b>, que se dividen en una
+            serie de <b class="sub_negrita">ranuras</b>.&nbsp;</p>
+        <p>Cada periodo de contención consiste exactamente de N ranuras. Donde N es el número total de estaciones en la red. Si la estación 0 tiene una trama por enviar, transmite un bit 1 durante la ranura 0. No está permitido a ninguna otra estación
+            transmitir durante esta ranura. Sin importar lo que haga la estación 0, la estación 1 tiene la oportunidad de transmitir un bit 1 durante la ranura 1, pero sólo si tiene una trama puesta en la cola. En general, la estación j puede anunciar
+            que tiene una trama por enviar, para lo cual inserta un bit 1 en la ranura j. Una vez que han pasado las N ranuras, cada estación tiene un completo conocimiento acerca de cuáles son las estaciones que quieren transmitir. En ese punto, las
+            estaciones empiezan a transmitir en orden numérico. </p>
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179847/ranuras.png" alt="ranuras" width="800" height="172" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 1: Protocolo de mapa de bits.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+
+        <p>Como todos están de acuerdo en quién sigue a continuación, nunca habrá colisiones. Una vez que la última estación lista haya transmitido su trama, un evento que pueden detectar fácilmente todas las estaciones, comienza otro periodo de contención
+            de N bits. Si una estación está lista justo después de que ha pasado su ranura de bit, ha tenido mala suerte y deberá permanecer inactiva hasta que cada una de las demás estaciones haya tenido su oportunidad y el mapa de bits haya comenzado
+            de nuevo. <br></p>
+        <p><br></p>
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179856"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179856/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.6%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Protocolos de reservación</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Este tipo de protocolos, en los que el interés de transmitir se difunde antes de la transmisión, se llaman protocolos de reservación, debido a que reservan la propiedad del canal por anticipado y evitan colisiones.&nbsp;<br></p>
+        <p><b><strong><span class="" style="color: rgb(0, 61, 245); font-size: x-large;">Desempeño del protocolo</span></strong></b></p>
+        <p>Analicemos brevemente el desempeño de este protocolo. Por conveniencia, mediremos el tiempo en unidades de la ranura de bit de contención (cantidad fija de tiempo durante la cual un dispositivo puede transmitir un bit en el medio compartido),
+            con tramas de datos consistentes en d unidades de tiempo.</p>
+
+        <p>En condiciones de carga baja, el mapa de bits simplemente se repetirá una y otra vez, debido a la falta de tramas de datos. Consideremos la situación desde el punto de vista de una estación de menor numeración, como 0 o 1. Esto significa que
+            la estación está ubicada al principio del mapa de bits.&nbsp;</p>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-12" style="margin: 0% auto">
+<div class="box ">
+<div class="container-sm" ;="" style="text-align: left">
+<div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">Por lo general, cuando la estación está lista para transmitir, la ranura&nbsp; <b><strong><b>actual</b>&nbsp;</strong></b>estará en algún lugar a la mitad del mapa de bits. Esto implica que en promedio, la estación tendrá que esperar N/2 ranuras para que el escaneo actual termine, además de otras N ranuras para que el siguiente escaneo se ejecute hasta su terminación, antes de que pueda empezar a transmitir.
+<br></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+        <p><br>Las posibilidades para las estaciones de mayor numeración son mejores. En general, éstas sólo tendrán que esperar la mitad de un escaneo (N/2 ranuras de bits) antes de comenzar a transmitir. Las estaciones de mayor numeración pocas veces
+            tienen que esperar el siguiente escaneo. Dado que las estaciones de menor numeración deben esperar en promedio 1.5N ranuras y las estaciones de mayor numeración esperar en promedio 0.5N ranuras, la media de todas las estaciones es de N ranuras.</p>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-12" style="margin: 0% auto">
+<div class="box ">
+<div class="container-sm" ;="" style="text-align: left">
+<div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">La eficiencia del canal cuando la carga es baja es fácil de calcular. La sobrecarga por trama es de N bits y la cantidad de datos es de d bits, lo cual nos da una eficiencia de d/(d 1 N).
+<br></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+        <p><br>Si la carga es alta y todas las estaciones tienen algo que enviar todo el tiempo, el periodo de contención de N bits se prorratea entre N tramas, lo cual produce una sobrecarga de sólo 1 bit por trama, o una eficiencia de d/(d 1 1). El retardo
+            promedio de una trama es igual a la suma del tiempo que está en cola en su estación, más un (N 2 1)d + N adicional una vez que llega a la cabeza de su cola interna. Este intervalo indica cuánto tiempo hay que esperar a que las demás estaciones
+            tomen su turno para enviar una trama y otro mapa de bits. </p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179848"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179848/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Paso de token </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>La esencia del protocolo de mapa de bits es que permite que cada estación transmita una trama por turno, en un orden predefinido. Otra forma de lograr lo mismo es pasar un pequeño mensaje conocido como <b><i>token</i> </b>de una estación a
+            otra, en el mismo orden predefinido. El <i>token </i>representa el permiso para enviar. Si una estación tiene una trama puesta en cola para transmitirla cuando recibe el <i class="sub_negrita">token</i>, puede enviar esa trama antes de pasar el <i class="sub_negrita">token </i>a
+            la siguiente estación. Si no tiene una trama puesta en cola, simplemente pasa el <i class="sub_negrita">token</i>. </p>
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179848/unnamed%20%289%29.png" alt="sd" width="600" height="399" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 2: Paso de <i>token</i>.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179857"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179857/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Protocolo<b><i>&nbsp;<span>token&nbsp;</span>ring</i></b> </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><br>
+        <p>En un protocolo<b><i> <span>token </span>ring</i></b>, la topología de la red se utiliza para definir el orden en el que las estaciones envían información. Las estaciones están conectadas una con otra en un solo anillo.&nbsp;</p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Así, el proceso de pasar el&nbsp;<i>token&nbsp;</i>a la siguiente estación consiste en recibir el&nbsp;<i>token</i>&nbsp;proveniente de una dirección y transmitirlo hacia la otra dirección.<br><br></p></div></div>
+        <p>Las tramas también se transmiten en la dirección del
+            <i>token</i>. De esta forma, circularán alrededor del anillo y llegarán a la estación de destino. Sin embargo, para evitar que la trama circule en forma indefinida (como el <i>token</i>), una estación necesita quitarla del anillo. Esta
+            estación puede ser la que envió originalmente la trama, después de que haya pasado por un ciclo completo, o la estación destinada a recibir la trama.</p>
+<!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Cabe mencionar que no necesitamos un anillo físico para implementar el paso del&nbsp;<i>token</i>. El canal que conecta a las estaciones podría ser también un solo bus extenso. Así, cada estación puede usar el bus para enviar el&nbsp;<i>token&nbsp;</i>a la siguiente estación en la secuencia predefinida.&nbsp;<br><br></p>
+            </div>
+        </div>
+        <br>
+ <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p>Al poseer el <i>token</i>, una estación puede usar el bus para enviar una trama, como antes. A este protocolo se le conoce como <i>token bus</i>.</p>
+        <p><span class="" style="font-size: large;"><b><strong><span class="" style="color: rgb(0, 61, 245); font-size: x-large;">Desempeño del protocolo</span></strong>
+            </b>
+            </span>
+        </p>
+
+        <p>El desempeño del protocolo de paso de <i>token </i>es similar al del protocolo de mapa de bits, aunque las ranuras de contención (donde las estaciones pueden transmitir) y las tramas de un ciclo están ahora entremezcladas. 
+          <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        </p><div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Después de enviar una trama, cada estación debe esperar a que las N estaciones (incluyéndose a sí misma) envíen el&nbsp;<i>token&nbsp;</i>a sus estaciones vecinas y que las otras N – 1 estaciones envíen una trama, si es que la tienen.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p></div></div>Una sutil diferencia es que,
+            como todas las posiciones en el ciclo son equivalentes, no hay parcialidad por las estaciones de menor o de mayor numeración. Para <i>token ring</i>, cada estación también envía el <i>token </i>sólo hasta su estación vecina antes de
+            que el protocolo lleve a cabo el siguiente paso. No es necesario propagar cada <i>token </i>a todas las estaciones antes de que el protocolo avance al siguiente paso. <p></p>
+        <p></p>
+        <p></p>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179849"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179849/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Protocolo: conteo descendente binario</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Un problema con el protocolo básico de mapa de bits, y en consecuencia con el paso de <i>token</i>, es que la sobrecarga es de 1 bit por estación, por lo que no se escala bien en redes con miles de estaciones. Por esta razón, podemos tener mejores
+            resultados si usamos direcciones de estación binarias con un canal que combine las transmisiones.&nbsp;</p>
+        <p>Una estación que quiere utilizar el canal en un momento dado difunde su dirección como una cadena binaria de bits, comenzando por el bit de mayor orden. Se supone que todas las direcciones tienen la misma longitud.&nbsp;</p>
+        <p>A todos los bits en cada posición de dirección de las diferentes estaciones se les aplica un OR BOOLEANO (operación lógica que produce un resultado de "1" si al menos uno de los bits de entrada es "1") por el canal cuando se envían al mismo
+            tiempo. En este contexto, se aplica un OR booleano a los bits de dirección de todas las estaciones que desean transmitir simultáneamente. A este protocolo lo llamaremos
+            <b><strong>conteo descendente binario</strong></b> que se utiliza para manejar el acceso y la transmisión de datos entre diferentes estaciones.</p>
+        <p><b><strong><span class="" style="font-size: x-large; color: rgb(0, 61, 245);">Reglas de arbitraje y eficiencia del protocolo de conteo descendente binario</span><span class="" style="color: rgb(0, 61, 245); font-size: x-large;">&nbsp;</span></strong></b><br></p>
+
+        Para evitar conflictos, es necesario aplicar una regla de arbitraje:</div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <ol>
+            <li>Se establece una regla de arbitraje para evitar conflictos.</li>
+            <li>Cuando una estación detecta que el bit más significativo de su dirección (orden alto) cambia de 0 a 1 debido a otra estación, se retira de la contienda.</li>
+            <li>Se consideran cuatro estaciones con direcciones binarias: 0010, 0100, 1001 y 1010.</li>
+            <li>Cada estación transmite su bit más significativo: 0, 0, 1 y 1 respectivamente.</li>
+            <li>Estos bits se combinan utilizando la operación lógica OR, resultando en un 1.</li>
+            <li>Las estaciones 0010 y 0100 reconocen que estaciones con direcciones más altas (1001 y 1010) están compitiendo.</li>
+            <li>Según la regla de arbitraje, las estaciones 0010 y 0100 se retiran de la contienda.</li>
+            <li>Se observa el siguiente bit, que es 0, permitiendo que las estaciones 0010 y 0100 continúen participando.</li>
+            <li>El siguiente bit es 1, lo que hace que la estación 1001 se retire.</li>
+            <li>La estación 1010 resulta ganadora debido a tener la dirección más alta.</li>
+            <li>Después de ganar, la estación 1010 puede transmitir su trama.</li>
+            <li>Se inicia un nuevo ciclo de contienda.</li>
+            <li>El protocolo proporciona prioridad a las estaciones con direcciones más altas.</li>
+            <li>Esto puede tener ventajas o desventajas dependiendo del contexto.</li>
+            <li>La eficiencia del canal se calcula como d/(d + 1 log2 N).</li>
+            <li>Si el formato de la trama prioriza la dirección del emisor, la eficiencia puede alcanzar el 100% al no desperdiciar bits adicionales.</li>
+        </ol>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179849/tiempo.png" alt="tiempo" width="600" height="525" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 3: Conteo descendiente binario.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+
+        <p>En resumen, el conteo descendente binario es un ejemplo de un protocolo sencillo, elegante y eficiente que está esperando a ser redescubierto.
+        </p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179850"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179850/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Protocolos de Internet</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Como aprendimos antes, los protocolos de red libres de colisiones, operan en capas inferiores, como la capa de enlace de datos y se centran en evitar colisiones en la transmisión de datos a nivel físico o de enlace de datos. En tanto que, los
+            protocolos de Internet (IP) se ejecutan en la capa de red de modelos de referencia de red como el modelo OSI y el modelo TCP/IP que trabajamos la semana anterior.</p>
+        <p><span class="" style="font-size: x-large; color: rgb(0, 61, 245);"><b><strong>Principios fundamentales</strong></b></span></p>
+
+        <p> Pero antes de entrar en los detalles de la capa de red de internet, vale la pena explorar los principios que guiaron su diseño en el pasado y que hicieron posible el éxito que tiene hoy en día. Ahora sintetizaremos los que consideramos como
+            los 10 mejores principios (del más al menos importante).
+        </p>
+
+
+
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Asegurarse de que funciona:</span> Antes de terminar el diseño o establecer un estándar es necesario realizar pruebas con múltiples prototipos para garantizar que puedan comunicarse exitosamente entre
+                    sí. La interoperabilidad es esencial.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Mantener la simplicidad:</span> Cuando se tiene duda, se utiliza la solución más simple. Dicho en otros términos, si una característica no es absolutamente esencial, es preferible descartarla, especialmente
+                    si el mismo efecto se puede alcanzar mediante la combinación de otras características.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Elegir opciones claras:</span> Si hay varias maneras de realizar la misma tarea, se elige sólo una. Tener dos o más formas de hacer lo mismo es complejizarlo.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Explotar la modularidad:</span> Este principio lleva directamente a la idea de tener pilas de protocolos, cuyas capas sean independientes entre sí. De esta forma, si las circunstancias requieren que un módulo
+                    o capa cambie, los otros no se verán afectados.</p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Prevenir la heterogeneidad:</span> En cualquier red grande habrán diferentes tipos de hardware, facilidades de transmisión y aplicaciones. Para manejarlos, el diseño de la red debe ser simple, general
+                    y flexible.</p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Evitar las opciones y parámetros estáticos:</span> Si los parámetros son inevitables (por ejemplo, el tamaño máximo del paquete), es mejor hacer que el emisor y el receptor negocien un valor que definir
+                    opciones fijas.</p>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.37 5.11h3.972v.07L6.025 12H7.42l3.258-6.85V4.002H5.369v1.107Z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Buscar un buen diseño, no es necesario que sea perfecto:</span> Con frecuencia, los/las diseñadores/as tienen un buen diseño. Pero puede haber situaciones o casos especiales que no pueda manejar de manera
+                    óptima. Es necesario optar por un diseño sólido y funcional en lugar de buscar la perfección y dejar que situaciones excepcionales las manejen personas con requisitos específicos.</p>
+            </div>
+        </div>
+
+
+        <!-- 8 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-5.03 1.803c0-1.248-.943-1.84-1.646-1.992v-.065c.598-.187 1.336-.72 1.336-1.781 0-1.225-1.084-2.121-2.654-2.121-1.57 0-2.66.896-2.66 2.12 0 1.044.709 1.589 1.33 1.782v.065c-.697.152-1.647.732-1.647 2.003 0 1.39 1.19 2.344 2.953 2.344 1.77 0 2.989-.96 2.989-2.355Zm-4.347-3.71c0 .739.586 1.255 1.383 1.255s1.377-.516 1.377-1.254c0-.733-.58-1.23-1.377-1.23s-1.383.497-1.383 1.23Zm-.281 3.645c0 .838.72 1.412 1.664 1.412.943 0 1.658-.574 1.658-1.412 0-.843-.715-1.424-1.658-1.424-.944 0-1.664.58-1.664 1.424Z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Ser estricto/a cuando se envía y tolerante cuando se recibe:</span> En otras palabras, es necesario enviar paquetes que cumplan rigurosamente con los estándares y al mismo tiempo ser capaz de recibir paquetes
+                    que tal vez no cumplan del todos los requisitos. </p>
+            </div>
+        </div>
+
+
+
+        <!-- 9 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.223 4.146c2.104 0 3.123-1.464 3.123-4.3 0-3.147-1.459-4.014-2.97-4.014-1.63 0-2.871 1.02-2.871 2.73 0 1.706 1.171 2.667 2.566 2.667 1.06 0 1.7-.557 1.934-1.184h.076c.047 1.67-.475 3.023-1.834 3.023-.71 0-1.149-.363-1.248-.72H5.258c.094.908.926 1.798 2.52 1.798Zm.118-3.972c.808 0 1.535-.528 1.535-1.594s-.668-1.676-1.56-1.676c-.838 0-1.517.616-1.517 1.659 0 1.072.708 1.61 1.54 1.61Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Pensar en la escalabilidad:</span> Si el sistema debe manejar de manera efectiva millones de hosts y miles de millones de usuarios/as, es necesario evitar bases de datos centralizadas y dispersar la carga
+                    de la manera más equitativa posible entre los recursos disponibles.</p>
+            </div>
+        </div>
+
+
+        <!-- 10 -->
+        <div class="row" style="margin-left: 32px">
+            <div style="margin-left: -10px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179850/diez%202.png" alt="10" width="28" height="28" role="presentation" class="img-responsive atto_image_button_text-bottom">
+            </div>
+            <div class="col" style="margin-left: -8px">
+                <p><span style="font-weight: 600">Considerar el desempeño y el costo:</span> Si una red tiene un desempeño pobre o un costo exagerado, nadie la utilizará.</p>
+            </div>
+        </div>
+
+
+
+
+        <p>En definitiva, estos principios han contribuido al diseño y éxito de la capa de red de Internet, permitiendo la creación de una infraestructura global de comunicación eficiente y confiable.</p>
+
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179858"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179858/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Capa de red</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Estudiemos ahora más en detalle la capa de red.&nbsp;<br></p>
+       <!--Inicio caja Definición morada-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #9a3282; font-size: large; font-weight: 600">Definición:</p>
+            </div>
+            <div class="col" style="border-left: solid  #9a3282 2px;">
+                <p style=" color: #7746E2"><span class=" " style="font-size: large; color: #010614">En la capa de red, la Internet puede verse como un conjunto de redes, o Sistemas Autónomos (AS) interconectados. No hay una estructura real, pero existen varias redes troncales (<i>backbones</i>) principales.&nbsp;</span></p><p style=" color: #7746E2"><span class=" " style="font-size: large; color: #010614">Éstas se construyen a partir de líneas de mucho ancho de banda y enrutadores rápidos. Las más grandes de estas redes troncales, a la que se conectan todos los demás para llegar al resto de Internet, se llaman redes de Nivel 1.&nbsp;</span></p><p style=" color: #7746E2"><span class=" " style="font-size: large; color: #010614">Conectadas a las redes troncales hay ISP (Proveedores de Servicio de Internet) que proporcionan acceso a Internet para los hogares y negocios, centros de datos e instalaciones llenas de máquinas servidores y redes regionales (de nivel medio). Los centros de datos sirven gran parte del contenido que se envía a través de Internet. A las redes regionales están conectados más ISP, LAN de muchas universidades y empresas, y otras redes de punta.</span></p>
+            </div>
+        </div>
+        <!--Fin Caja Definición morada-->
+
+      <p style="color: rgb(1, 6, 20); font-size: large;">&nbsp;<br>En la figura 4 se presenta un dibujo de esta organización cuasi jerárquica.</p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="color: rgb(1, 6, 20); font-size: large; text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179858/eu.png" alt="eu" width="600" height="411" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="color: rgb(1, 6, 20); font-size: medium; text-align: center;">Figura 4: Organización cuasi jerárquica de Internet.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">El pegamento que mantiene unida a Internet es el protocolo de capa de red, IP (Protocolo de Internet, del inglés Internet Protocol). A diferencia de la mayoría de los protocolos de capa de red, IP se diseñó desde el principio con la interconexión
+            de redes en mente. Una buena manera de visualizar la capa de red es la siguiente: su trabajo es proporcionar un medio de mejor esfuerzo (es decir, sin garantía) para transportar paquetes de la fuente al destino, sin importar si estas máquinas
+            están en la misma red o si hay otras redes entre ellas.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><b><span class="" style="color: rgb(0, 61, 245); font-size: x-large;">Proceso de comunicación en internet</span></b></p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">La comunicación en Internet funciona de la siguiente manera:&nbsp;</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        A continuación, este datagrama se entrega a la capa de transporte.<br>
+        <ul style="color: rgb(1, 6, 20); font-size: large;">
+        </ul>
+        <div style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(250, 250, 250);">
+
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>La capa de transporte toma flujos de datos y los divide para poder enviarlos como paquetes IP. En teoría, los paquetes pueden ser de hasta 64 Kbytes cada uno, pero en la práctica por lo general
+                            no sobrepasan los 1500 bytes (ya que son colocados en una trama de Ethernet).&nbsp;<br></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>Los enrutadores IP (<i>router</i>) reenvían cada paquete a través de Internet, a lo largo de una ruta de un enrutador a otro, hasta llegar al destino.&nbsp;</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>En el destino, la capa de red entrega los datos a la capa de transporte, que a su vez los entrega al proceso receptor.&nbsp;</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>Cuando todas las piezas llegan finalmente a la máquina de destino, la capa de red las vuelve a ensamblar para formar el datagrama original. Es decir, el paquete de información.<br></p>
+                    </div>
+                </div>
+                <div class="row" style="margin-left: 32px">
+                    <div class="col">
+                    </div>
+                </div>
+                <p></p>
+                <p></p>
+
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179851"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179851/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">El protocolo IP versión 4
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">Un datagrama IPv4 sigue el protocolo IPv4 (Internet Protocol versión 4), que es uno de los protocolos fundamentales que permite la comunicación en Internet y otras redes basadas en IP. Este <b class="sub_negrita">datagrama consiste en dos partes</b>:&nbsp;</p>
+        <div style="background-color: rgb(250, 250, 250);">
+
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">el encabezado y,&nbsp;</span></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">el cuerpo o carga útil.</span>&nbsp;</p>
+                    </div>
+                </div>
+                <p style="color: rgb(1, 6, 20); font-size: large;">El encabezado tiene una parte fija de 20 bytes y una parte opcional de longitud variable. El formato del encabezado, como se muestra en la figura 5, se organiza en campos de bits que se transmiten en un orden específico.&nbsp;</p>
+                <!-- Cuadro amarillo borde violeta -->
+                <br>
+
+                <div style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(255, 254, 235); border-top: 2px solid rgb(70, 14, 149); width: 96%; margin: 0px auto;">
+                    <div style="margin:16px">
+                        <p style="color: #5811BB; font-size: large; font-weight: 600">Los bits se transmiten en orden de izquierda a derecha y de arriba hacia abajo, comenzando por el bit de mayor orden del<span>&nbsp;</span><span>campo Versión</span><b>&nbsp;</b>(componente específico que se encuentra en el encabezado
+                            de un mensaje o paquete de datos).&nbsp;</p>
+                        <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+                    </div>
+                </div>
+                <br>
+                <!-- Fin Cuadro amarillo borde violeta -->
+
+                <p style="color: rgb(1, 6, 20); font-size: large;">Este campo lleva el registro de la versión del protocolo al que pertenece el datagrama. Al incluir la versión al inicio de cada datagrama, es posible tener una transición entre versiones a través de un largo periodo.
+                </p>
+                <!-- inicio imagen -->
+                <br>
+                <div style="color: rgb(1, 6, 20); font-size: large; text-align: center;">
+                    <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179851/lon.png" alt="lon" width="600" height="307" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                    </p>
+                </div>
+
+                <p style="color: rgb(1, 6, 20); font-size: medium; text-align: center;">Figura 5: Protocolo IPv4.</p>
+
+                <br>
+
+                <!-- Fin imagen -->
+
+                <p style="color: rgb(1, 6, 20); font-size: large;">Dado que la longitud del encabezado no es constante, se incluye un campo en el encabezado (IHL) para indicar su longitud en palabras de 32 bits. El valor mínimo es de 5, cifra que se aplica cuando no hay opciones. El valor máximo de
+                    este campo de 4 bits es 15, lo que limita el encabezado a 60 bytes y por lo tanto, el campo Opciones a 40 bytes.&nbsp;</p>
+
+                <div style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(255, 254, 235); border-top: 2px solid rgb(70, 14, 149); width: 96%; margin: 0px auto;">
+                    <div style="margin:16px">
+                        <p style="color: #5811BB; font-size: large; font-weight: 600">Para algunas opciones, por ejemplo una que registre la ruta que ha seguido un paquete, 40 bytes es muy poco, lo que hace inútiles estas opciones.<br><br></p></div></div>
+                <!-- Fin Cuadro amarillo borde violeta -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179859"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179859/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Campos del protocolo IP versión 4
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Volvamos al esquema del protocolo:<br></p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179859/lon.png" alt="lon" width="600" height="307" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 5: Protocolo IPv4.</p>
+
+        ¿Qué campos podemos identificar?<br><br><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">El campo de servicio diferenciado:</span> es uno de los pocos campos que ha cambiado ligeramente su significado con el transcurso de los años. En un principio el nombre de este&nbsp;<b>campo era Tipo de servicio</b>.
+                            Su propósito es distinguir entre las diferentes clases de servicios. Son posibles varias combinaciones de confiabilidad y velocidad.<br></p>
+                        <ul>
+                            <li>Para voz digitalizada, la entrega rápida le gana a la entrega precisa.&nbsp;</li>
+                            <li>Para la transferencia de archivos, es más importante la transmisión libre de errores que la transmisión rápida. </li>
+                        </ul>El campo Tipo de servicio contaba con 3 bits para indicar la prioridad y 3 bits para indicar si a un&nbsp;<i>host&nbsp;</i>le preocupaba más el retardo, la velocidad de transmisión real o la confiabilidad. Ahora, los 6 bits superiores
+                        se utilizan para marcar el paquete con su clase de servicio. Los 2 bits inferiores se utilizan para transportar información sobre la notificación de congestión; por ejemplo, si el paquete ha experimentado congestión o no. Asimismo,
+                        también describimos la notificación explícita de congestión como parte del control de la congestión.<br>
+                        <p></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">El campo longitud total:</span> <b>&nbsp;</b>incluye todo en el datagrama: tanto el encabezado como los datos. La longitud máxima es de 65 535 bytes. En la actualidad este límite es tolerable, pero
+                            con las redes futuras tal vez se requieran datagramas más grandes.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">El campo identificación:</span> es necesario para que el&nbsp;<i>host&nbsp;</i>de destino determine a qué paquete pertenece un fragmento recién llegado. Todos los fragmentos de un paquete contienen
+                            el mismo valor de identificación.</p>
+                    </div>
+                </div>
+                <p><b><strong><span class="" style="color: rgb(0, 61, 245); font-size: x-large;">Fragmentos</span></strong></b><br></p>
+                <p></p>
+                <p>A continuación viene un bit sin uso, lo cual es sorprendente, ya que el espacio en el encabezado IP es muy escaso.</p>
+                <p>Después vienen dos campos de 1 bit relacionados con la fragmentación.&nbsp;</p>
+                <!--Tabla simple dos columnas-->
+                <table class="tabla-simple texto-principal" style="margin: 0 auto;">
+                    <!--Cantidad de columnas-->
+                    <colgroup span="1" width="44%"></colgroup>
+                    <colgroup span="1" width="2%"></colgroup>
+                    <colgroup span="1" width="44%"></colgroup>
+
+                    <!--Categorías-->
+                    <tbody>
+                        <tr>
+                            <td class="tabla-simple-categoria texto-centrado">DF significa no fragmentar (Don’t Fragment)</td>
+                            <td></td>
+                            <td class="tabla-simple-categoria texto-centrado">MF significa más fragmentos (More Fragments).&nbsp;</td>
+                        </tr>
+
+                        <!--filas-->
+                        <tr>
+                            <td class="tabla-simple-fila1" valign="top">
+                                <ul>
+                                    <li>&nbsp;Es una orden para que los enrutadores no fragmenten el paquete.&nbsp;</li>
+                                    <li>En un principio estaban destinados para soportar a los hosts incapaces de reunir las piezas otra vez.&nbsp;</li>
+                                    <li>Ahora se utiliza como parte del proceso para descubrir la MTU de la ruta: el paquete más grande que puede viajar a través de una ruta sin necesidad de fragmentarse.&nbsp;</li>
+                                    <li>Al marcar el datagrama con el bit DF, el emisor sabe que llegará en una pieza o recibirá de vuelta un mensaje de error.</li>
+
+                                </ul>
+                            </td>
+                            <td></td>
+
+                            <td class="tabla-simple-fila1" valign="top">
+                                <ul>
+                                    <li>Todos los fragmentos excepto el último tienen establecido este bit, que es necesario para saber cuándo han llegado todos los fragmentos de un datagrama.</li>
+
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><br></p>
+                <p></p>
+                <p>El <b class="sub_negrita">Desplazamiento del fragmento</b> indica a qué parte del paquete actual pertenece este fragmento. Todos los fragmentos excepto el último del datagrama deben ser un múltiplo de 8 bytes, que es la unidad de fragmentos
+                    elemental. Dado que se proporcionan 13 bits, puede haber un máximo de 8 192 fragmentos por datagrama, para soportar una longitud máxima de paquete de hasta el límite del campo Longitud total. En conjunto, los campos Identificación,
+                    MF y Desplazamiento del fragmento se utilizan para implementar la fragmentación.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">El campo TtL (Tiempo de vida)</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> es un contador que se utiliza para limitar el tiempo de vida de un paquete. En un principio se suponía que iba a contar el tiempo en segundos, lo cual permitía un periodo de vida máximo de 255 seg. Hay que decrementarlo en cada salto y se supone que se decrementa muchas veces cuando un paquete se pone en cola durante un largo tiempo en un enrutador. En la práctica, simplemente cuenta los saltos. Cuando el contador llega a cero, el paquete se descarta y se envía de regreso un paquete de aviso al&nbsp;<i>host&nbsp;</i>de origen. Esta característica evita que los paquetes anden vagando eternamente, algo que de otra manera podría ocurrir si se llegaran a corromper las tablas de enrutamiento. </p>
+            </div>
+        </div>
+        <br><p>Una vez que la capa de red ha ensamblado un paquete completo, necesita saber qué hacer con él.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">El campo Protocolo</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Le indica a cuál proceso de transporte debe entregar el paquete. TCP es una posibilidad, pero también están UDP y otros más. La numeración de los protocolos es global en toda la Internet. Anteriormente los protocolos y otros números asignados se listaban en el RFC 1700, pero en la actualidad están contenidos en una base de datos en línea localizada en www.iana.org.</p></div></div><ul>
+                </ul>
+                <p></p>
+                <p>Puesto que el encabezado transporta información vital, como las direcciones, estima su propia suma de verificación por protección, la suma de verificación del encabezado. El algoritmo suma todas las medias palabras de 16 bits del encabezado
+                    a medida que vayan llegando, mediante el uso de la aritmética de complemento a uno, y después obtiene el complemento a uno del resultado. Para los fines de este algoritmo, se supone que la suma de verificación del encabezado es
+                    cero al momento de la llegada. Dicha suma de verificación es útil para detectar errores mientras el paquete viaja por la red. Es necesario tener en cuenta que se debe recalcular en cada salto, ya que por lo menos hay un campo que
+                    siempre cambia (el campo Tiempo de vida), aunque se pueden usar trucos para agilizar ese cálculo.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Los campos Dirección de origen y Dirección de destino</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><span>I</span>ndican la dirección IP de las interfaces de red de la fuente y del destino.</p></div></div>
+                <p></p>
+                <p><br></p>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179860"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179860/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="89" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><span>El campo opciones</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <span><br>
+
+    </span><div style="margin-left: 3%; margin-right: 3%;">
+
+        <p><span>¿De qué se trata el campo opciones?</span></p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179860/lon.png" alt="lon" width="600" height="307" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 5: Protocolo IPv4.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+        <p><b class="sub_negrita">El campo Opciones</b> se diseñó para proporcionar un recurso que permitiera que las versiones subsiguientes del protocolo incluyeran información que no estuviera presente en el diseño original, para que los experimentadores
+            puedan probar ideas nuevas y evitar la asignación de bits de encabezado a la información que se necesite muy poco. Las opciones son de longitud variable. Cada una empieza con un código de 1 byte que identifica la opción. Algunas opciones
+            van seguidas de un campo de longitud de la opción de 1 byte, y luego de uno o más bytes de datos. El campo Opciones se rellena para completar múltiplos de 4 bytes. En un principio se definieron las <b class="sub_negrita">cinco opciones</b>            que se listan en la figura 6.<br></p>
+
+
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">La opción Seguridad</span> indica qué tan secreta es la información. En teoría, un enrutador militar podría usar este campo para especificar que no se enruten paquetes a través de ciertos países que
+                    los militares consideren <span style="font-weight: 600">malos</span>. En la práctica todos los routers lo ignoran, por lo que su única función real es la de ayudar a los espías a encontrar la información importante con mayor facilidad.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">La opción de Enrutamiento estricto desde el origen </span> proporciona la ruta completa desde el origen hasta el destino como una secuencia de direcciones IP. Se requiere que el datagrama siga esa ruta exacta.
+                    Esta opción se usa sobre todo cuando los administradores de sistemas necesitan enviar paquetes de emergencia cuando se corrompen las tablas de enrutamiento, o para hacer mediciones de sincronización. </p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">La opción de Enrutamiento libre desde el origen</span> requiere que el paquete pase por los enrutadores indicados en la lista, y en el orden especificado, pero se le permite pasar a través de otros enrutadores
+                    en el camino. Por lo general, esta opción sólo indicará unos cuantos enrutadores para forzar una ruta específica. Esta opción es de mucha utilidad cuando las consideraciones políticas o económicas obligan a pasar a través de,
+                    o evitar, ciertos países.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">La opción de Registrar</span> ruta indica a cada enrutador a lo largo de la ruta que adjunte su dirección IP al campo Opciones. Esto permite a los administradores del sistema buscar fallas en los algoritmos
+                    de enrutamiento (“¿Por qué todos los paquetes de Houston a Dallas pasan primero por Tokio?”). Cuando se estableció ARPANET (Advanced Research Projects Agency Network) precursora de internet, en un principio, ningún paquete pasaba
+                    nunca por más de nueve enrutadores, por lo que 40 bytes de opciones eran más que suficientes. Pero como dijimos antes, ahora son muy pocos.</p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p> Por último, la <span style="font-weight: 600">opción Estampa de tiempo</span> es como la opción Registrar ruta, excepto que además de registrar su dirección IP de 32 bits, cada enrutador también registra una estampa de tiempo de
+                    32 bits. Esta opción también es principalmente útil para la medición en las redes.</p>
+            </div>
+        </div>
+
+
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179860/sef.png" alt="sef" width="600" height="200" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 6: Protocolo IPv4 – Campo Opciones.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+        <p><br></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179852"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179852/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">El protocolo IP versión 6 </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p><b><strong><span class="" style="font-size: x-large; color: rgb(0, 61, 245);">Desafíos de IPv4 y la necesidad de IPv6</span></strong></b><br></p>
+        <p>IP se ha utilizado intensivamente durante décadas. Ha trabajado muy bien, como lo demuestra el crecimiento exponencial de Internet.&nbsp;</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Por desgracia, IP se ha convertido en una víctima de su propia popularidad: está cerca de quedarse sin direcciones, por ello se diseñó IPv6 (IP versión 6) que utiliza direcciones de 128 bits, por lo que es muy poco probable que se vayan
+                    a agotar en un futuro previsible.<br><br></p>
+            </div>
+        </div>
+        <p>&nbsp;Sin embargo, IPv6 ha demostrado ser muy difícil de implementar. Es un protocolo de capa de red diferente que en realidad no congenia internamente con IPv4, a pesar de tantas similitudes. Las empresas y los usuarios en realidad no están
+            seguros por qué querrían IPv6 en cualquier caso.&nbsp;</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">El resultado es que IPv6 se implementa y utiliza sólo en una pequeña fracción de Internet, a pesar de haber sido un estándar de Internet desde 1998.<br><br></p>
+            </div>
+        </div>
+        <p>Además de los problemas de las direcciones, hay otras cuestiones que amenazan en segundo plano. En sus primeros años, Internet era utilizado por universidades, industrias de alta tecnología y el gobierno de Estados Unidos (en especial, el Departamento
+            de Defensa). Con la explosión de interés sobre Internet que empezó a mediados de la década de 1990, un grupo distinto de personas empezó a utilizarla, a menudo con distintos requerimientos.
+        </p>
+        <p><b><strong><span class="" style="color: rgb(0, 61, 245); font-size: x-large;">Objetivos y diseño de IPv6</span></strong></b><br></p>
+        <p>Al ver estos problemas en el horizonte, en 1990 la IETF (Internet Engineering Task Force) empezó a trabajar sobre una nueva versión de IP, una que nunca se quedara sin direcciones, que resolviera una variedad de problemas adicionales y también
+            fuera más flexible y eficiente. Sus principales objetivos eran:
+        </p>
+
+
+
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p>Soportar miles de millones de hosts, incluso con una asignación de direcciones ineficiente.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Reducir el tamaño de las tablas de enrutamiento.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Simplificar el protocolo para permitir a los enrutadores procesar los paquetes con más rapidez.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Proporcionar mayor seguridad (autentificación y privacidad).</p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Poner más atención en cuanto al tipo de servicio, en especial para los datos en tiempo real.</p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Ayudar a la multidifusión al permitir la especificación de alcances.</p>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.37 5.11h3.972v.07L6.025 12H7.42l3.258-6.85V4.002H5.369v1.107Z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p>Permitir que un host deambule libremente sin tener que cambiar su dirección.</p>
+            </div>
+        </div>
+
+
+        <!-- 8 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-5.03 1.803c0-1.248-.943-1.84-1.646-1.992v-.065c.598-.187 1.336-.72 1.336-1.781 0-1.225-1.084-2.121-2.654-2.121-1.57 0-2.66.896-2.66 2.12 0 1.044.709 1.589 1.33 1.782v.065c-.697.152-1.647.732-1.647 2.003 0 1.39 1.19 2.344 2.953 2.344 1.77 0 2.989-.96 2.989-2.355Zm-4.347-3.71c0 .739.586 1.255 1.383 1.255s1.377-.516 1.377-1.254c0-.733-.58-1.23-1.377-1.23s-1.383.497-1.383 1.23Zm-.281 3.645c0 .838.72 1.412 1.664 1.412.943 0 1.658-.574 1.658-1.412 0-.843-.715-1.424-1.658-1.424-.944 0-1.664.58-1.664 1.424Z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p>Permitir que el protocolo evolucione en el futuro.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 9 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.223 4.146c2.104 0 3.123-1.464 3.123-4.3 0-3.147-1.459-4.014-2.97-4.014-1.63 0-2.871 1.02-2.871 2.73 0 1.706 1.171 2.667 2.566 2.667 1.06 0 1.7-.557 1.934-1.184h.076c.047 1.67-.475 3.023-1.834 3.023-.71 0-1.149-.363-1.248-.72H5.258c.094.908.926 1.798 2.52 1.798Zm.118-3.972c.808 0 1.535-.528 1.535-1.594s-.668-1.676-1.56-1.676c-.838 0-1.517.616-1.517 1.659 0 1.072.708 1.61 1.54 1.61Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Permitir que el protocolo viejo y el nuevo coexistan durante años.
+                </p>
+            </div>
+        </div>
+
+
+
+
+        <p>El diseño de IPv6 presentaba una gran oportunidad para mejorar todas las características en IPv4 que estaban muy lejos de cumplir con lo que ahora se necesitaba. Para desarrollar un protocolo que cumpliera con todos esos requerimientos, la IETF
+            emitió una llamada para propuestas y discusión en el documento RFC 1550 (Request for Comments). Al principio se recibieron 21 respuestas. Para diciembre de 1992, había siete propuestas serias en la mesa, que variaban desde hacer pequeñas
+            correcciones a IP, hasta descartarlo por completo y reemplazarlo con un protocolo por completo distinto.
+        </p>
+        <p><b><strong><span class="" style="font-size: x-large; color: rgb(0, 61, 245);">Selección y desarrollo de IPv6: del RFC 1550 a SIPP</span></strong></b><br></p>
+        <p>Tres de las mejores propuestas se publicaron en IEEE Network, revista publicada por el Institute of Electrical and Electronics Engineers (Deering, 1993; Francis, 1993; Katz y Ford, 1993). Después de mucha discusión, revisión y competencia por
+            posición, se seleccionó una versión combinada modificada de las propuestas de Deering y Francis, ahora conocida como SIPP (Protocolo Simple de Internet Mejorado, del inglés Simple Internet Protocol Plus), designado también como IPv6.</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">IPv6 cumple bastante bien con los objetivos de la IETF. Mantiene las buenas características de IP, descarta o desenfatiza las malas y agrega nuevas en donde se requiere.&nbsp;<br><br></p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p>En general, IPv6 no es compatible con IPv4, pero es compatible con los otros protocolos auxiliares de Internet, incluyendo TCP, UDP, ICMP, IGMP, OSPF, BGP y DNS, con pequeñas modificaciones requeridas para lidiar con las direcciones más largas.</p>
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179861"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179861/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Principales características de IPv6</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><p><br></p><p>A continuación, describiremos las principales características de IPv6.
+        </p>
+
+
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Primero</span> que nada, IPv6 tiene direcciones más largas que IPv4. Son de 128 bits, lo cual resuelve el problema deseado: proporcionar un suministro efectivamente ilimitado de direcciones de Internet.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>La <span style="font-weight: 600">segunda</span> mejora importante de IPv6 es la simplificación del encabezado. Sólo contiene siete campos (en comparación con los 13 de IPv4). Este cambio permite a los enrutadores procesar los paquetes
+                    con más rapidez y, por ende, mejora la velocidad de transmisión real y el retardo.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>La <span style="font-weight: 600">tercera</span> mejora importante es un soporte mejorado para las opciones. Este cambio era esencial con el nuevo encabezado, ya que los campos que antes eran requeridos ahora son opcionales (debido a que
+                    no se utilizan con tanta frecuencia). Además, la forma en que se representan las opciones es distinta y así es más fácil para los enrutadores omitir las porciones que no están destinadas para ellos. Esta característica agiliza
+                    el tiempo de procesamiento de los paquetes.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Una <span style="font-weight: 600">cuarta</span> área en la que IPv6 representa un gran avance es la seguridad. La IETF tuvo suficiente con las historias en los periódicos sobre los niños precoces de 12 años que usaban sus computadoras
+                    personales para irrumpir en los bancos y las bases militares a través de Internet. Hubo una fuerte sensación de tener que hacer algo para mejorar la seguridad. La autenticación y la privacidad son características clave del nuevo
+                    IP. Sin embargo, después se modernizaron para el IPv4, por lo que en el área de la seguridad las diferencias ya no son tan grandes.</p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Por <span style="font-weight: 600">último</span>, se puso más énfasis en la calidad del servicio (QoS). Se han hecho varios esfuerzos carentes de entusiasmo para mejorar la QoS en el pasado, pero ahora con el crecimiento de la multimedia
+                    en Internet, la sensación de urgencia es mayor.</p>
+            </div>
+        </div>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div><p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179853"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179853/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.6%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">El encabezado principal de IPv6</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>El encabezado principal de IPv6 es una parte fundamental de los datagramas IPv6 y contiene información esencial para el enrutamiento y la entrega de paquetes en dicha red.</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179853/23.png" alt="32" width="600" height="455" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 7: Protocolo IPv6.</p>
+
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179862"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179862/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.6%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Campos</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;"><br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">El campo Versión:</span>&nbsp;siempre es 6 para IPv6 (y 4 para IPv4). Durante el periodo de transición de IPv4, los enrutadores podrán examinar este campo para saber qué tipo de paquete tienen.
+                            Como observación adicional, para hacer esta prueba se desperdician unas cuantas instrucciones en la ruta crítica, dado que el encabezado de enlace de datos indica por lo general el protocolo de red para demultiplexar, por
+                            lo que tal vez algunos enrutadores omitan la verificación. Por ejemplo, el campo Tipo de Ethernet tiene distintos valores para indicar una carga útil de IPv4 o IPv6. Las discusiones entre los campos “Hacerlo bien” y “Hacerlo
+                            rápido” sin duda serán extensas y vigorosas.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">El campo Servicios diferenciados</span><b>&nbsp;</b>(originalmente conocido como Clase de tráfico) se utiliza para distinguir la clase de servicio para los paquetes con distintos requerimientos de
+                            entrega en tiempo real. Se utiliza con la arquitectura de servicio diferenciado para la calidad del servicio, de la misma forma que el campo con el mismo nombre en el paquete IPv4. Además, los 2 bits de menor orden se usan
+                            para señalar las indicaciones explícitas de congestión, de nuevo en la misma forma que IPv4.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">El campo Etiqueta de flujo</span>&nbsp;proporciona el medio para que un origen y un destino marquen grupos de paquetes que tengan los mismos requerimientos y que la red deba tratar de la misma forma,
+                            para formar una seudoconexión. 
+<!--Inicio caja ejemplo-->
+</p><div class="row row-cols-auto">
+    <div>
+        <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Por ejemplo</p>
+    </div>
+    <div class="col" style="border-left: solid  #4E7CFA 2px;">
+        <p style=" color: #4E7CFA"><span class=" " style="font-size: large; ">Un flujo de paquetes de un proceso en cierto&nbsp;<i>host&nbsp;</i>de origen dirigido a cierto proceso en un&nbsp;<i>host&nbsp;</i>de destino puede tener requisitos muy estrictos de retardo y, por lo tanto, necesitar un ancho de banda reservado. El flujo se puede establecer por adelantado, dándole un identificador. Cuando aparece un paquete con una Etiqueta de flujo diferente de cero, todos los&nbsp;<i>routers&nbsp;</i>pueden buscarla en sus tablas internas para ver el tipo de tratamiento especial que requiere. En efecto, los flujos son un intento de tener lo mejor de ambos mundos: la flexibilidad de una red de datagramas y las garantías de una red de circuitos virtuales.</span></p></div></div><p></p>
+                    </div>
+                </div>
+
+                <!-- inicio imagen -->
+                <br>
+                <div style="text-align: center;">
+                    <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179862/23.png" alt="32" width="600" height="455" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                    </p>
+                </div>
+
+                <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 7: Protocolo IPv6.</p>
+
+                <br>
+
+                <!-- Fin imagen -->
+
+                <p>Para fines de la calidad del servicio, cada flujo está designado con base en la dirección de origen, la dirección de destino y el número de flujo. Este diseño significa que pueden estar activos hasta 220 flujos al mismo tiempo entre
+                    un par dado de direcciones IP. También significa que, incluso si dos flujos provenientes de hosts diferentes pero con la misma etiqueta de flujo pasan por el mismo enrutador, éste será capaz de distinguirlos mediante las direcciones
+                    de origen y de destino. Lo ideal es que las etiquetas de flujo se escojan al azar, en vez de asignarlas de manera secuencial comenzando por el 1, de modo que los enrutadores tengan que usar <i>hashing</i>. </p>
+                <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+                    <div style="margin-left: 3%; margin-right: 3%;">
+
+                        <br>
+                        <!-- 1 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+        </svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">El campo Longitud de carga útil</span>&nbsp;indica cuántos bytes van después del encabezado de 40 bytes de la figura. El nombre se cambió de Longitud total en el IPv4 porque el significado
+                                    cambió ligeramente: los 40 bytes del encabezado ya no se cuentan como parte de la longitud (como antes). Este cambio significa que ahora la carga útil puede ser de 65 535 bytes en vez de sólo 65 515 bytes.</p>
+                            </div>
+                        </div>
+
+
+
+                        <!-- 2 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">El campo Siguiente encabezado</span>&nbsp;revela el secreto. La razón por la que pudo simplificarse el encabezado es que puede haber encabezados adicionales (opcionales) de extensión. Este
+                                    campo indica cuál de los seis encabezados de extensión (en la actualidad), siguen de éste, en caso de que los haya. Si este encabezado es el último encabezado de IP, el campo Siguiente encabezado indica el protocolo
+                                    de transporte (por ejemplo, TCP, UDP) al que se entregará el paquete.</p>
+                            </div>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">El campo Límite de saltos</span><b>&nbsp;</b>se usa para evitar que los paquetes vivan eternamente. En la práctica es igual al campo Tiempo de vida del IPv4; esto es, un campo que se disminuye
+                                    en cada salto. En teoría, en el IPv4 era un tiempo en segundos, pero ningún enrutador lo usaba de esa manera, por lo que se cambió el nombre para reflejar la manera en que se usa realmente.</p>
+                            </div>
+                        </div>
+
+
+                        <!-- 4 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">Luego vienen </span><b>los campos Dirección de origen y Dirección de destino</b>. La propuesta original de Susan Estrada Deering, SIP (Simple Internet Protocol), usaba direcciones de 8 bytes
+                                    pero durante el periodo de revisión muchas personas sintieron que, con direcciones de 8 bytes, en unas cuantas décadas el IPv6 se quedaría sin direcciones, mientras que con direcciones de 16 bytes nunca se agotarían.
+                                    Otros argumentaban que 16 bytes era demasiado, mientras que unos más estaban a favor de usar direcciones de 20 bytes para hacerlas compatibles con el protocolo de datagramas de OSI. Además, otro grupo quería direcciones
+                                    de tamaño variable. Tras mucho debate, se decidió que la mejor medida sería una dirección de 16 bytes de longitud fija.</p></div></div>
+
+                        <!-- nada puede haber abajo -->
+                        <br>
+                    </div>
+                </div>
+                <p><br></p>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179855"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659486/mod_book/chapter/179855/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-2.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Checkpoint</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+
+
+
+        <p>Luego de la lectura de esta semana, te invitamos a que revises los contenidos pasando por el <a href="https://aulasvirtuales.bue.edu.ar/mod/quiz/view.php?id=649487"><span class="" style="color: rgb(0, 46, 184);"><u>Check Point</u></span>.</a></p>
+        <p>De esta forma, podrás verificar si has comprendido las ideas principales.</p>
+        <p>¡No dudes en volver a este libro en caso que necesites repasar algún concepto!</p>
+<br>
+
+        <!-- nada abajo -->
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[649458,649459,649461,649462,649463,649465,649466,649467,649469,649471,649473,649476,649477,649480,649481,649484,649485,649488,676491,680812,680813,681319,683403]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2659486, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1745753596); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random680e2895154fd2'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random680e2895154fd2'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
