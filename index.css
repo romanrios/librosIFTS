@@ -5,6 +5,9 @@ body {
   justify-content: center;
   min-height: 100vh;
   background-color: #f4f4f4;
+  padding-top: 2rem;
+
+  padding-bottom: 5rem;
 }
 .container {
   text-align: center;
@@ -41,4 +44,8 @@ a:hover {
 
 h2 {
   margin-top: 1.5rem;
+}
+
+hr {
+  margin-top: 2rem;
 }
