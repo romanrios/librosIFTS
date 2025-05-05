@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>Etapa 5 [Opcional - no evaluable]. Despliegue y Distribución de la aplicación | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1744219673/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, Etapa 5 [Opcional - no evaluable]. Despliegue y Distribución de la aplicación | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1744219673_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"orJjJ0GCti","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1744219673","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21042,"courseContextId":2643742,"contextid":2665743,"contextInstanceId":655231,"langrev":1746084245,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21042 context-2665743 cmid-655231 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1744219673/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>Etapa 5 [Opcional - no evaluable]. Despliegue y Distribución de la aplicación</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Desarrollo de Aplicaciones para Dispositivos 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        Etapa 5 [Opcional - no evaluable]. Despliegue y Distribución de la aplicación
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        lunes, 5 de mayo de 2025, 10:53
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21042&amp;section=6" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=450143" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+                
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Bonus: Distribución y despliegue" class="font-weight-bold text-decoration-none" href="#ch186618">1. Bonus: Distribución y despliegue</a></li><li><a title="2. Implementación de Android Play Store" class="font-weight-bold text-decoration-none" href="#ch186613">2. Implementación de Android Play Store</a><ul><li><a title="2.1. Alojar el código de la aplicación en un repositorio GIT" class="text-decoration-none" href="#ch186604">2.1. Alojar el código de la aplicación en un repositorio GIT</a></li><li><a title="2.2. Control de versiones" class="text-decoration-none" href="#ch186605">2.2. Control de versiones</a></li><li><a title="2.3. Diferencia entre control de versiones y repositorio" class="text-decoration-none" href="#ch186606">2.3. Diferencia entre control de versiones y repositorio</a></li><li><a title="2.4. Control de versiones GIT" class="text-decoration-none" href="#ch186607">2.4. Control de versiones GIT</a></li><li><a title="2.5. Repositorio GIT" class="text-decoration-none" href="#ch186608">2.5. Repositorio GIT</a></li><li><a title="2.6. Fundamentos GIT" class="text-decoration-none" href="#ch186609">2.6. Fundamentos GIT</a></li><li><a title="2.7. Crear cuenta de desarrollador de Google Play" class="text-decoration-none" href="#ch186614">2.7. Crear cuenta de desarrollador de Google Play</a></li><li><a title="2.8. Crear un archivo APK" class="text-decoration-none" href="#ch186615">2.8. Crear un archivo APK</a></li><li><a title="2.9. Instalar APK en un dispositivo Android" class="text-decoration-none" href="#ch186616">2.9. Instalar APK en un dispositivo Android</a></li><li><a title="2.10. Subir APK firmado a Play Store" class="text-decoration-none" href="#ch186617">2.10. Subir APK firmado a Play Store</a></li></ul></li><li><a title="3. Despliegue de la aplicación" class="font-weight-bold text-decoration-none" href="#ch186603">3. Despliegue de la aplicación</a><ul><li><a title="3.1. Comandos básicos de GIT" class="text-decoration-none" href="#ch186610">3.1. Comandos básicos de GIT</a></li><li><a title="3.2. Sistema de Ramas y Gitflow" class="text-decoration-none" href="#ch186611">3.2. Sistema de Ramas y Gitflow</a></li><li><a title="3.3. Plataformas de almacenamiento más conocidas" class="text-decoration-none" href="#ch186612">3.3. Plataformas de almacenamiento más conocidas</a></li></ul></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186618"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186618/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Distribución y despliegue</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%; font-size: large">
+        <p></p>
+        <p>Nos adentraremos en los complejos procesos de llevar una aplicación desde la fase de desarrollo hasta su pleno funcionamiento en el entorno de producción. Desde la compilación y empaquetado
+            hasta la publicación en las tiendas de aplicaciones, exploraremos cada paso crucial del <span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">despliegue de aplicaciones.</b></span></p>
+        <p>No nos detendremos ahí; nos sumergiremos en el poderoso mundo de <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">Git y el control de versiones</span></b>. Descubriremos la importancia de mantener un historial preciso de los cambios, exploraremos
+            comandos fundamentales de Git y entenderemos la gestión efectiva de ramas con Gitflow.</p>
+        <p>Además, <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">exploraremos plataformas de almacenamiento</span></b> clave como GitHub, GitLab y Bitbucket, comprendiendo cómo estas herramientas transforman la colaboración en el desarrollo de software.</p>
+        <!-- Cuadro amarillo borde celeste-->
+        <br>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">
+                    </p><p>¡Preparate para desentrañar los secretos de la implementación en la Play Store de Android, desde la creación de cuentas de desarrollador hasta la generación de archivos APK!<br><br></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="col" style="border-left: solid  #0c76f0 3px; background-color: #edf5fd; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #0c76f0; font-size: large; padding: 14px; font-weight: 600">Preguntas clave de este tema:</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>- ¿Qué implica el despliegue de una aplicación?<br>- ¿Cuál es la importancia del control de versiones en el desarrollo de software?<br>- ¿Cómo se realiza el control de versiones en Git?<br>- ¿Cuáles son los comandos básicos de Git y cómo
+                    se utilizan?<br>- ¿Cuáles son las diferencias entre un sistema de control de versiones y un servicio de alojamiento de repositorios?</li>
+                <li></li>
+            </ul>
+        </div>
+
+        <p><br></p>
+        <ul>
+        </ul><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186613"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186613/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Implementación de Android Play Store</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES">Para implementar una
+aplicación en la tienda de aplicaciones de Android (Play Store), debemos
+cumplir previamente con ciertos requisitos:<br></span></p>
+        <ul style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Tener una cuenta de desarrollador de Google Play, </span><span lang="ES">para crear una cuenta, es necesario pagar una tarifa anual de $... (a determinar).</span></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Tener un certificado de firma de aplicaciones válido. </span>Este certificado se utiliza para firmar la aplicación y garantizar su autenticidad.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Tener activo un archivo APK de la aplicación. </span>El archivo APK es el paquete de instalación de la aplicación, que contiene todos los recursos y código necesarios para ejecutarla en un dispositivo
+                            Android.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Proporcionar una descripción detallada y una imagen de portada para la aplicación. </span>Estos elementos se mostrarán en la tienda de aplicaciones y ayudarán a los usuarios a entender qué hace la
+                            aplicación y por qué deberían descargarla. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Elegir una categoría y una serie de etiquetas para la aplicación.</span>&nbsp;Esto ayudará a Play Store a organizar la aplicación en la tienda de aplicaciones y a que los usuarios la encuentren fácilmente.</p>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #00BF63; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #00BF63; font-size: large; font-weight: 600">¿Qué hacer una vez que se cumplen con estos requisitos?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Se puede seguir el proceso de publicación de Google Play para desplegar la aplicación en la tienda de aplicaciones, debemos tener en cuenta que la aprobación de la aplicación puede llevar algún tiempo, por lo que debemos tener paciencia
+                    y asegurarnos de proporcionar toda la información necesaria para que sea aprobada. </p>
+            </div>
+        </div>
+        <p align="left" style="color: rgb(1, 6, 20); font-size: large;">A continuación, veremos cómo cumplir con estos requisitos y subir la aplicación en caso de que queramos hacerlo.<br></p><br>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186604"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186604/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Alojar el código de la aplicación en un repositorio GIT</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <!--Inicio Caja definición ciruela-->
+        <p></p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #ae11a0;"><b class="sub_negrita">Definición</b></span> </p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: solid  #ae11a0 2px;">
+                <p><span class="" style="font-size: large; color: #ae11a0;"><span class="" style="color: #ae11a0;"><span class="" style="color: rgb(51, 51, 51);">Un </span>servicio de alojamiento de repositorio&nbsp;</span><span class="" style="color: rgb(51, 51, 51);">es una herramienta de gestión organizativa que ofrece una visión transparente en el proceso de flujo de trabajo (que suele ser opaco) del desarrollo de software, el servicio ofrecerá herramientas para medir, monitorizar, debatir y gestionar la eficiencia y la precisión del desarrollo de software.<span></span></span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja definición-->
+
+        <p><br></p>
+
+        <p><span lang="ES">El objetivo
+principal de estas herramientas es almacenar <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">conjuntos de archivos de datos y realizar un seguimiento de los
+cambios, revisiones y control de versiones</span>
+            </b>que se han producido en ellos.</span>
+        </p>
+        <p><span lang="ES"></span></p>
+        <p align="left"><span lang="ES"><b class="sub_negrita">¿Cómo se realiza el
+control de versiones?</b></span></p><br>
+        <p></p>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186605"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186605/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Control de versiones</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <!--Inicio Caja definición ciruela-->
+        <p></p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #ae11a0;"><b class="sub_negrita">Definición</b></span> </p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: solid  #ae11a0 2px;">
+                <p><span class="" style="font-size: large; color: #ae11a0;"><span class="" style="color: #ae11a0;"><span class="" style="color: rgb(51, 51, 51);">El </span>control de versiones,&nbsp;</span><span class="" style="color: rgb(51, 51, 51);">también conocido como "control de código fuente", es la práctica de rastrear y gestionar los cambios en el código de software y gestiona los cambios en el código fuente a lo largo del tiempo.</span></span>
+                </p>
+            </div>
+        </div>
+
+        <p><span lang="ES"><br>Cuando
+varias personas colaboran en un proyecto, es difícil mantener el seguimiento de
+las revisiones: quién cambió qué, cuándo, y dónde están almacenados esos
+archivos. <br>
+              </span></p><div style="background-color: #FFFEEB; border-top: 2px solid #00BF63; width: 96%; margin: 0 auto;">
+        <div style="margin:16px">
+            <p style="color: #00BF63; font-size: large; font-weight: 600">Los sistemas de control de versiones</p>
+            <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> se ocupan de este problema manteniendo un seguimiento de todos los cambios que se han enviado al repositorio, al igual que los documentos de Google Drive, podemos tener un historial de las versiones del código, de manera que las versiones previas no se pierden con cada iteración permitiendo regresar a una versión previa del código. </p>
+        </div>
+    </div>
+    <p><span lang="ES">Pero te preguntarás, ¿cuál es la diferencia entre el repositorio y el control de versiones?</span></p><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186606"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186606/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Diferencia entre control de versiones y repositorio</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p><span lang="ES">Es esencial
+comprender que los servicios de alojamiento de repositorios y los sistemas de
+control de versiones son dos entidades separadas.</span></p>
+        <ul>
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Los sistemas de control de versiones&nbsp;</span>son herramientas de línea de comandos de bajo nivel que se usan para administrar los cambios en el ciclo de vida de desarrollo de software en un conjunto
+                            de archivos de código fuente.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+<path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Los servicios de alojamiento de repositorios</span>&nbsp;son aplicaciones de terceros que encapsulan y mejoran un sistema de control de versiones. No se puede utilizar por completo un servicio de
+                            alojamiento de repositorios sin tener que usar un sistema de control de versiones subyacente.</p>
+                    </div>
+                </div>
+
+            </div>
+        </ul><b class="sub_negrita"><span style="color: rgb(51, 51, 51);">Y ¿qué es GIT?</span>
+        </b><br><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186607"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186607/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><span class="" style="font-size: x-large;">Control de versiones GIT</span></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="color: rgb(1, 6, 20);"></p>
+        <!--Inicio Caja definición ciruela-->
+        <p style="color: rgb(1, 6, 20);"></p>
+        <div class="row row-cols-auto" style="">
+            <div style="color: rgb(1, 6, 20);">
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #ae11a0;"><b class="sub_negrita">Git</b></span></p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: 2px solid rgb(174, 17, 160);">
+                <p style=""><span class="" style="font-size: large;"><span class="" style=""><span class="" style="color: rgb(51, 51, 51);">E</span></span><span class="" style="color: rgb(51, 51, 51);">s un sistema de control de versiones de código de forma distribuida, esto significa que Git te ayuda a gestionar los archivos de un proyecto y mantiene un registro de todo el historial de las cosas en las que vamos trabajando<span></span></span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja definición-->
+        <!--Inicio Caja celeste-->
+        <br>
+        <div class="col" style="color: rgb(1, 6, 20); border-left: 3px solid rgb(12, 118, 240); background-color: rgb(237, 245, 253); width: 92%; margin: 0px auto; border-radius: 8px;">
+
+            <p style="color: #0c76f0; font-size: large; padding: 14px; font-weight: 600">Características&nbsp;</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>- Es software libre.</li>
+                <li>- Nos permite mantener un historial completo de versiones.</li>
+                <li>- <span lang="ES">Nos ofrece un sistema de trabajo con ramas, las cuales nos permiten crear proyectos divergentes de un proyecto principal, para hacer experimentos o para probar nuevas funcionalidades.</span></li>
+                <li>- Es el sistema de control de versiones más utilizado actualmente y uno de los más modernos.</li>
+                <li></li>
+            </ul>
+        </div>
+
+        <p style="color: rgb(1, 6, 20);"><br></p>
+
+        <p style="color: rgb(1, 6, 20);"><span lang="ES"><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">Una de las grandes
+ventajas</span></b> de Git, que lo convierten en un factor diferencial en cuanto a la competencia, es <span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">su arquitectura distribuida o DVCS</b></span> (Sistema de control de versiones distribuido), la cual
+            permite que haya una copia del trabajo del código de cada desarrollador y, al mismo tiempo, <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">es un repositorio local</span></b> que almacena el historial completo de todos
+            los cambios hechos dentro del código, sin importar que un desarrollador tenga una versión de código más avanzada o atrasada que otro.
+            </span>
+        </p>
+
+        <p style="color: rgb(1, 6, 20);"><span lang="ES">Esto resulta una
+ventaja muy grande en comparación a la arquitectura centralizada, como CVS, la
+cual depende completamente del servidor central que maneja todo el sistema de
+control de versiones, ya que, en caso de que esta fallara o los servidores se
+cayeran, no habría forma de recuperar los avances en el código hasta que todo
+el sistema centralizado sea reparado.</span></p>
+        <!-- Caja Verde-->
+        <br>
+        <div class="" style="width: 80%;  margin: 0 auto; ">
+
+            <div class="row">
+
+                <div class="col-1" style="background-color: #00BF63; border-radius: 4px 0px 0px 4px;">
+
+                    <div class="d-flex justify-content-center" style="margin-top: 20px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="color: white;">
+						                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"></path>
+  <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"></path>
+</svg>
+
+                    </div>
+                </div>
+
+                <div class="col-11" style="background-color: #F2FFF9;border: 1px solid #00BF63; border-radius: 0px 4px 4px 0px;">
+
+                    <p style="margin-top: 16px;"><b class="sub_negrita"><span class="" style="color: rgb(51, 51, 51);">En conclusión</span></b></p>
+                    <p><span class="" style="color: rgb(51, 51, 51);"> Git es una herramienta poderosa que nos permite rastrear y gestionar cambios en un proyecto de forma segura y eficiente.</span></p>
+                </div>
+                <br>
+                <!-- Fin Caja Verde-->
+                <p style="color: rgb(1, 6, 20);"><span lang="ES">&nbsp;</span></p>
+
+                <p align="left" style="color: rgb(1, 6, 20);"><span lang="ES">&nbsp;</span></p>
+                <p style="color: rgb(1, 6, 20);"></p>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186608"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186608/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Repositorio GIT</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <div>
+
+            <p><span lang="ES">Un
+repositorio de Git es un almacenamiento virtual de nuestro proyecto. Nos
+permite guardar versiones del código a las que podemos acceder cuando lo
+necesitemos.</span></p>
+        </div>
+        <!--Inicio Caja celeste-->
+        <br>
+        <div class="col" style="border-left: solid  #0c76f0 3px; background-color: #edf5fd; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #0c76f0; font-size: large; padding: 14px; font-weight: 600">Características</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>- Los repositorios pueden ser públicos o privados. <br>- La elección de uno u otro dependerá del tamaño del equipo de trabajo y del grado de privacidad requerido por los desarrolladores u organización en función de sus objetivos de negocio.<br></li>
+                <li>
+                    <p><span lang="ES">- En un repositorio podemos guardar los archivos necesarios para nuestros proyectos, pudiéndose encontrar en servidores que proveen este tipo de servicios (como son Github, Bitbucket, Gitlab, etc.), siendo un tipo de repositorio&nbsp;<b><span class="" style="color: #0c76f0;">los repositorios remotos</span></b>
+                        <span class="" style="color: rgb(0, 61, 245);">.</span></span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <p><span style=""><span lang="ES" class="" style="font-size: large; color: rgb(0, 61, 245);"><b class="sub_negrita"><span class=""><br>Repositorios remotos</span></b>
+            </span>
+            </span>
+        </p>
+
+        <p><span lang="ES">Los
+repositorios remotos de Git<b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);"> son copias del repositorio de un proyecto que se
+encuentran almacenadas en un servidor en línea</span></b>, en lugar de una computadora local, se utilizan para compartir los cambios en un proyecto con otros colaboradores y para mantener una copia de seguridad en línea del mismo.</span>
+        </p>
+
+        <p><span lang="ES">Cuando
+trabajamos en un proyecto en Git, podemos enviar nuestros cambios a un
+repositorio remoto con el comando <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">git
+push</span></b>, y podemos obtener los cambios que otros colaboradores han realizado con el comando
+            <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">git pull</span></b>, esto nos trabajar con otros desarrolladores en un proyecto colaborativo, ya que Git maneja la fusión de cambios de manera automática y permite revertir cualquier cambio
+            que no deseemos.</span>
+        </p><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186609"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186609/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Fundamentos GIT</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p><span lang="ES">Cuando
+trabajamos en un proyecto en Git, podemos realizar cambios en los archivos del
+proyecto en nuestra computadora local, y luego guardar esos cambios en el
+repositorio local de Git de nuestra computadora. <br>
+<!-- Cuadro amarillo borde celeste-->
+<br>      
+  </span></p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">Cada vez que guardamos un conjunto de cambios en el repositorio local de Git, lo llamamos&nbsp;<b class="sub_negrita">commit</b>.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+            </div>
+        </div>
+
+        <p><span lang="ES">Al
+hacer un <i>commit</i>, estamos guardando una "foto" de los archivos del
+proyecto en su estado actual, junto con un mensaje que describe los cambios que
+hayamos realizado, los commits nos permiten revertir cualquier cambio que
+hayamos realizado en el proyecto en cualquier momento, ya que Git almacena un
+historial completo de todos los commits que hemos realizado en el repositorio, y
+podemos compartir nuestros cambios con otros colaboradores a través de
+repositorios remotos, como GitHub o GitLab.</span></p>
+
+        <p><span style=""><span lang="ES" class="" style="font-size: large; color: rgb(0, 61, 245);"><b class="sub_negrita">El estado de los archivos
+de un proyecto en GIT</b></span></span>
+        </p>
+
+        <p><span lang="ES">Cada
+archivo de un repositorio puede tener dos estados: <span><b class="sub_negrita"><span style="color: rgb(0, 61, 245);" class="">rastreado y sin rastrear</span></b><span class="" style="color: rgb(0, 61, 245);">.</span> </span>
+            </span>
+        </p>
+
+        <p>
+        </p>
+        <ul>
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Los archivos rastreados (<i>tracked files</i>):</span>son todos aquellos archivos que estaban en la última instantánea del proyecto; pueden ser archivos sin modificar, modificados o preparados.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+<path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Los archivos sin rastrear:</span> son todos los demás, es decir, cualquier otro archivo de nuestro directorio de trabajo que no estaba en la última instantánea y que no está en el área de preparación
+                            (
+                            <i>staging area</i>).</p>
+                    </div>
+                </div>
+
+            </div>
+        </ul>
+        <p><span lang="ES">Cuando clonamos por primera vez un repositorio,
+todos nuestros archivos estarán rastreados y sin modificar ya que aún no han
+sido editados.</span></p>
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186609/DAPM_S13_1.png" alt="" width="800" height="330" role="presentation" class="img-responsive atto_image_button_text-bottom"></p><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186614"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186614/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Crear cuenta de desarrollador de Google Play</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p><span lang="ES">Podemos registrarnos
+en Google Play en el siguiente link: <a href="https://play.google.com/console/u/0/signup"><span class="" style="color: rgb(0, 61, 245);">https://play.google.com/console/u/0/signup</span></a>. Además, podremos utilizar una cuenta de Google que ya utilicemos
+            o crear una nueva. Para ello podrás seguir los siguientes pasos:<br></span></p><ul><div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p>Utilizar una cuenta de Google existente o crear una nueva para el registro en Google Play.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Proporcionar la información solicitada por Google, que incluye:<br>
+                            </p><li>Experiencia previa con Play Console y Android.<br></li><li>Otras cuentas de Google utilizadas.<br></li><li>URL de un sitio web propio o perfil de una red social utilizada.<br></li><li>Datos personales para la creación de la Cuenta de desarrollador, como nombre, correo electrónico, idioma, dirección y número de teléfono.</li><p></p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Verificar el número de teléfono proporcionado a través de un código enviado por mensaje de texto.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Proporcionar información sobre las aplicaciones aproximadas que se planea subir en los próximos 12 meses y las ganancias esperadas de las mismas. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Leer y aceptar los términos y condiciones de Google relacionados con el registro en Google Play. </p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Pagar una tarifa de registro única de USD25 utilizando una tarjeta de crédito o débito.</p>
+                    </div>
+                </div>
+            </div>
+        </ul><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186615"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186615/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Crear un archivo APK</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p><span lang="ES">Las
+siglas APK corresponden a los términos Android Application Package. </span></p>
+        <!--Inicio Caja definición ciruela-->
+        <p></p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #ae11a0;"><b class="sub_negrita">Archivo APK</b></span></p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: solid  #ae11a0 2px;">
+                <p><span class="" style="font-size: large; color: #ae11a0;"><span class="" style="color: rgb(51, 51, 51);">Es el</span> paquete de instalación de una aplicación para dispositivos Android, <span class="" style="color: rgb(51, 51, 51);">contiene todos los recursos y código necesarios para instalar y ejecutar la aplicación en un dispositivo Android, así como información adicional como el nombre de la aplicación, el icono y las autorizaciones necesarias para acceder a diferentes funcionalidades del dispositivo, estos archivo se usan para distribuir e instalar aplicaciones en dispositivos Android, y pueden descargarse desde la tienda de aplicaciones de Google Play o desde otras fuentes en línea.</span>
+                    <span class="" style="color: rgb(51, 51, 51);"><span></span></span>
+                        </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja definición-->
+
+        <p><br></p>
+
+        <p><a name="Crear_compilación_para_Android_en_Appflo"></a><b class="sub_negrita"><span lang="ES" class="" style="color: rgb(0, 61, 245);">Crear compilación para Android en Appflow</span></b></p>
+
+        <p align="left"><span lang="ES">Para crear un archivo APK de la aplicación, primero
+debemos crear una compilación para Android, dentro de Appflow.<br>
+          </span></p>
+        <ul>
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span lang="ES">Vamos a Build &gt; Builds y hacemos click en el botón “New Build”.</span><span>&nbsp;</span></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>A continuación debemos seleccionar el&nbsp;<i>commit&nbsp;</i>del repositorio de&nbsp;<i>github&nbsp;</i>del cual queramos obtener los archivos para crear la compilación. En este caso elegimos el último&nbsp;<i>commit&nbsp;</i>realizado.</p>
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Luego debemos seleccionar para qué tipo de plataforma realizaremos la compilación. En este caso, seleccionaremos Android.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span lang="ES">&nbsp;</span><span lang="ES">A continuación, debemos elegir el tipo de compilación. Hay algunos tipos diferentes de compilaciones que podemos elegir para cada plataforma (iOS, Android) que tienen diferentes características y requisitos. En Android, tenemos 2 tipos de compilaciones principales:<br></span></p>
+                        <p><span lang="ES"><span><span style="">&nbsp; &nbsp; &nbsp;a)&nbsp;<b class="sub_negrita">debug</b></span><b>:</b></span> las compilaciones de Android de tipo&nbsp;<span>debug&nbsp;</span>o depuración no requieren ningún certificado de firma y se pueden
+                            descargar e instalar directamente en dispositivos Android.</span>
+                        </p>
+                        <p><span lang="ES">&nbsp; &nbsp; &nbsp;b)&nbsp;<b></b></span><span lang="ES"><b class="sub_negrita"><span>release</span>:</b> para aplicaciones que se quieren subir a la Play Store, requieren crear certificados de firma de Android y cargarlos en un certificado
+                            de firma de tipo “Production”.</span>
+                        </p>
+                        <p><span lang="ES">En caso de que queramos subir la aplicación a la Play Store, debemos elegir “Release”, si simplemente queremos generar el archivo APK para instalarlo en un celular Android, entonces podemos simplemente elegir “debug” y no será necesario el certificado de firma.</span></p>
+                        <p><span lang="ES">Finalmente, hacemos click en el botón “Build” para generar la compilación de nuestra app.</span></p>
+                        <p></p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span lang="ES">Se abrirá una consola dónde podremos ver&nbsp;<i>logs&nbsp;</i>mientras se realiza la compilación.</span><span>&nbsp;</span>&nbsp; &nbsp;&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <!-- Cuadro amarillo borde celeste-->
+        <br>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">Una vez finalizado este proceso, podremos descargar el archivo APK correspondiente haciendo click en el botón “Download APK” que nos saldrá a la derecha de la consola.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+            </div>
+        </div>
+
+        <p><br></p>
+
+        <p align="left"><br></p>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186616"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186616/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Instalar APK en un dispositivo Android</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p><span lang="ES"><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">Una
+de las principales ventajas de Android </span></b>respecto a otros sistemas operativos móviles <span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">es la libertad</b></span>, ya que podemos, por ejemplo, instalar aplicaciones de cualquier
+            sitio más allá de la tienda oficial de Google, por supuesto <span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">esto
+conlleva ciertos riesgos de seguridad</b></span>, por lo que no se recomienda instalar aplicaciones fuera de la Play Store, sin embargo, como esta aplicación la hemos desarrollado y compilado nosotros mismos, podemos instalarla para probarla en nuestros
+            dispositivos Android.</span>
+        </p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #00BF63; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #00BF63; font-size: large; font-weight: 600">¿Qué tener en cuenta antes de instalar aplicaciones fuera de la Play Store?</p>
+                <p><span lang="ES">En la mayoría de los casos Android tiene deshabilitada la opción de instalar aplicaciones de orígenes desconocidos, que son todas las que no se instalan a través de Google Play.</span></p>
+                <p><span lang="ES">Para poder instalar aplicaciones fuera de la Play Store, debemos ir a los Ajustes de Android, y una vez en ellos buscar la opción de “Seguridad”, activamos la opción “Orígenes desconocidos”.<br><br></span></p>
+                <p></p>
+            </div>
+        </div>
+        <br>
+
+        <p><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">¿Cómo instalar nuestra app?</span></b></p>
+
+        <p>Para instalar nuestra app, vamos a enviar el archivo APK que descargamos anteriormente al dispositivo dónde queramos instalar la aplicación (puede ser vía email o utilizando algún sistema de transferencia de archivos), una vez allí, seleccionamos
+            el archivo APK y Android lo abrirá con su instalador de paquetes. <br><br></p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">Es probable que Google nos advierta al realizar la instalación, ya que es una app con autor (desarrollador) desconocido.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+            </div>
+        </div>
+
+        <p><span lang="ES">Una vez instalada
+la app, podremos abrirla y utilizarla como cualquier otra app de nuestro teléfono.</span></p><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186617"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186617/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Subir APK firmado a Play Store</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p></p>
+        <p><span lang="ES">Android
+requiere que todos los APK que se suben a la Play Store estén firmados de
+manera digital con un certificado para poder instalarse o actualizarse en un
+dispositivo.</span></p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #00BF63; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #00BF63; font-size: large; font-weight: 600">¿Qué es un APK firmado?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">
+                </p>
+                <p><span lang="ES">Un archivo APK firmado es un APK que ha sido firmado con un certificado digital válido, la firma digital se usa para garantizar la autenticidad y la integridad del archivo APK.&nbsp;</span></p>
+                <p><span lang="ES">Cuando una aplicación se firma digitalmente, se genera un hash único del archivo APK que se incluye en la firma de esta forma, cuando un dispositivo Android intenta instalar la aplicación, comprueba la firma y calcula el hash del archivo APK para verificar que no se ha modificado con el fin de asegurarse de que la aplicación que se está instalando es la misma que se ha firmado y que no ha sido alterada de alguna manera.</span></p>
+                <p><span lang="ES"></span></p><br>
+                <p></p>
+            </div>
+        </div>
+        <p><span style="color: rgb(0, 61, 245);"><b class="sub_negrita">Generación de certificado Android</b></span><br></p>
+        <!-- Cuadro amarillo borde celeste-->
+        <br>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">El almacén de claves de Android, que se utiliza para firmar aplicaciones, se puede generar mediante keytool, una herramienta que se incluye al instalar Android Studio.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+            </div>
+        </div>
+
+        <p><span lang="ES">Keytool
+se usa comúnmente para generar certificados de seguridad, importar y exportar
+claves y certificados, y para gestionar las entradas del almacén de claves
+(<i>keystore</i>).<br><br><!-- COMIENZO BLOQUE RECUADRO -->
+</span></p>
+        <div class="card card-outline-primary">
+            <div class="card-block" style="text-align: center;">
+                <span><span lang="ES" style=""></span>keytool -genkey -v -keystore MY-RELEASE-KEY.keystore -alias MY_ALIAS_NAME -keyalg RSA -keysize 2048 -validity 10000 -storetype jks<span lang="ES" style=""></span></span>
+            </div>
+        </div>
+        <p></p>
+        <p></p>
+        <p><span lang="ES"></span></p>
+        <p><span lang="ES">Debemos cambiar
+<b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">“MY-RELEASE-KEY” y “MY_ALIAS_NAME” </span></b>por el nombre que deseemos, la herramienta nos pedirá que ingresemos una contraseña de almacén de claves y una contraseña de clave, además,
+            nos solicitará que completemos otros datos como nuestro nombre, organización y ciudad.</span>
+        </p>
+
+        <p><span lang="ES">Una vez finalizado,
+podremos encontrar un archivo MY-RELEASE-KEY.keystore en la carpeta dónde
+ejecutamos el comando.</span></p>
+        <!--Inicio Caja celeste-->
+        <br>
+        <div class="col" style="border-left: solid  #0c76f0 3px; background-color: #edf5fd; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #0c76f0; font-size: large; padding: 14px; font-weight: 600">Nota</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>Es sumamente importante almacenar de forma segura una copia de seguridad de la contraseña del almacén de claves, la contraseña de la clave, el alias y el archivo del almacén de claves ya que estos no son recuperables y pueden evitar que
+                    podamos actualizar una aplicación en Play Store.</li>
+            </ul>
+        </div>
+
+        <p align="left"><span><span style="font-size: 0.9375rem;"><span lang="ES" style="font-size: large; color: rgb(0, 61, 245);" class=""><b class="sub_negrita">Subir el certificado a Appflow</b></span></span>
+            </span>
+        </p>
+
+        <p><span lang="ES">Una vez que
+generamos el <i><span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">keystore </b></span></i>o almacén de claves, vamos a subirlo a Appflow, para eso, vamos a la pantalla Build &gt; Signing Certificate, y hacemos clic en el botón “Add
+            certificate”. </span>
+        </p>
+
+        <p><span style="font-size: large;" class="">Agregamos un nombre
+para el certificado, y elegimos la
+plataforma, en este caso Android, se nos solicitará que adjuntemos el archivo
+<i>keystore </i>que generamos en el paso anterior, y completemos con el alias de la
+clave y las contraseñas, tanto del archivo como de la clave. Hacemos clic en
+“Add certificate” y podremos ver el certificado agregado en nuestra aplicación
+de Appflow.</span></p>
+        <p><span style="font-size: 0.9375rem;"></span></p>
+        <p><span><span lang="ES" style="color: rgb(0, 61, 245);" class=""><b class="sub_negrita">Generar APK firmado en Appflow</b></span></span>
+        </p>
+
+        <p><span lang="ES" class="" style="font-size: large;">&nbsp;</span><span style="font-size: large;" class="">Para crear un
+archivo APK firmado, debemos crear una compilación para Android dentro de
+Appflow, como hicimos anteriormente, sólo que en lugar de hacer una compilación
+del tipo “debug” elegiremos “release”.<br></span></p>
+        <ul>
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span><span lang="ES">&nbsp;</span><span lang="ES">Vamos a<span class="" style="color: rgb(0, 61, 245);"> Build &gt; Builds</span> y hacemos click en el botón “<span class="" style="color: rgb(0, 61, 245);">New Build</span>”.</span></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span><span lang="ES">&nbsp;</span><span lang="ES">A continuación, debemos seleccionar el commit del repositorio de github del cual queramos obtener los archivos para crear la compilación. En este caso elegimos el último&nbsp;<i>commit&nbsp;</i>realizado.</span></p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>Seleccionamos la plataforma Android.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span><span lang="ES">&nbsp;</span><span lang="ES">A continuación, debemos elegir el tipo de compilación “<span class="" style="color: rgb(0, 61, 245);">release</span>”, ya que nuestro objetivo es obtener un APK firmado para subir a la Play Store.</span>                            </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>Como elegimos la compilación “release”, debemos elegir un “<span class="" style="color: rgb(0, 61, 245);">Signing certificate</span>”. Elegimos el certificado que cargamos previamente. </p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>Además, debemos elegir la opción “Google Play Store”, esto nos solicitará que agreguemos un “<span class="" style="color: rgb(0, 61, 245);">destino</span>” en Appflow.</p>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.37 5.11h3.972v.07L6.025 12H7.42l3.258-6.85V4.002H5.369v1.107Z"></path>
+</svg>
+
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>Hacemos click en el botón “Set up your first destination to store”. Se abrirá un cuadro de diálogo.&nbsp;Debemos completar las siguientes opciones:<br>a)&nbsp; &nbsp;<span class="" style="color: rgb(0, 61, 245);">Nombre</span> de destino.&nbsp;<br>b)&nbsp;
+                            &nbsp;<span class="" style="color: rgb(0, 61, 245);">Tipo</span>: elegimos Google Play.<br>c)&nbsp; &nbsp;<span class="" style="color: rgb(0, 61, 245);">Track</span>: Google Play Developer nos permite subir APK nuevos para nuestras apps y publicarlos en diferentes segmentos, permite implementar versiones alfa y beta de una app, las
+                            cuales estarán disponibles sólo para usuarios aprobados e implementar una versión de lanzamiento en etapas, que estará disponible automáticamente para una pequeña cantidad de usuarios de la app. Tenemos varias opciones:<br>&nbsp;
+                            &nbsp; &nbsp; i)&nbsp; &nbsp;Segmentos de pruebas, como "alpha" y "beta". Las versiones alfa y beta de la app se implementan para los usuarios que asignamos a los grupos de prueba alfa y beta, podemos asignar usuarios a estos
+                            grupos mediante Google Play Console.<br>&nbsp; &nbsp; &nbsp;ii)&nbsp; &nbsp;Segmento de pruebas internas: "internal": para pruebas internas. Elegiremos esta opción.<br>&nbsp; &nbsp; iii)&nbsp; &nbsp;Segmento de producción:
+                            "production": se implementa para todos los usuarios.<br></p>
+                        <p>d)&nbsp; &nbsp;<span lang="ES"><span class="" style="color: rgb(0, 61, 245);">Nombre del paquete</span> (<i>package name</i>): en formato de nombre de dominio inverso, por ejemplo, com.tudominio.tunombredeaplicación.<br></span><span lang="ES">e)&nbsp; &nbsp;</span><span lang="ES">Formato de publicación: el tipo de artefacto de compilación.</span></p>&nbsp;
+                        &nbsp; &nbsp; i)&nbsp; &nbsp;<b><span class="" style="color: rgb(0, 61, 245);">APK</span>:</b>&nbsp;el formato que ya hemos visto anteriormente.<br>&nbsp; &nbsp; &nbsp;ii)&nbsp; &nbsp;<b><span class="" style="color: rgb(0, 61, 245);">Paquetes de aplicaciones de Android (AAB)</span></b>: Google exige que las aplicaciones que se suban
+                        a Google Play deben hacerlo con formato ABB (Android App Bundle) en lugar de APK.
+                        <p><span lang="ES">Un AAB es un archivo de paquete de Android, similar a un archivo APK pero es más eficiente que un APK ya que permite a los/las desarrolladores/as distribuir aplicaciones más grandes y mejor optimizadas.</span></p>
+                        <p><span lang="ES">La ventaja de ABB es que el tamaño de las aplicaciones se reducen un 15% frente a un APK universal, ya que cuando el usuario va a descargar una aplicación en formato ABB se genera un APKM con únicamente los recursos necesarios para ese dispositivo tales como: la versión optimizada para su procesador, su idioma y recursos gráficos adaptados a la resolución de su pantalla, evitando así instalar recursos que el usuario no va a usar.&nbsp;<span><u>Por lo tanto, debemos elegir esta opción en lugar de APK.</u><br>e)&nbsp; &nbsp;<span class="" style="color: rgb(0, 61, 245);">Clave JSON</span>: para cargar la app en Google Play Store, debemos crear una cuenta de servicio y descargar el archivo JSON que contiene información de seguridad para la cuenta de servicio, podemos generarlo siguiendo las instrucciones de&nbsp; la&nbsp; siguiente página:</span></span>
+                        </p>
+                        <p><span lang="ES"><a href="https://ionic.io/docs/appflow/destinations/google">https://ionic.io/docs/appflow/destinations/google</a></span></p>
+
+
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+
+
+                <!-- 8 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-5.03 1.803c0-1.248-.943-1.84-1.646-1.992v-.065c.598-.187 1.336-.72 1.336-1.781 0-1.225-1.084-2.121-2.654-2.121-1.57 0-2.66.896-2.66 2.12 0 1.044.709 1.589 1.33 1.782v.065c-.697.152-1.647.732-1.647 2.003 0 1.39 1.19 2.344 2.953 2.344 1.77 0 2.989-.96 2.989-2.355Zm-4.347-3.71c0 .739.586 1.255 1.383 1.255s1.377-.516 1.377-1.254c0-.733-.58-1.23-1.377-1.23s-1.383.497-1.383 1.23Zm-.281 3.645c0 .838.72 1.412 1.664 1.412.943 0 1.658-.574 1.658-1.412 0-.843-.715-1.424-1.658-1.424-.944 0-1.664.58-1.664 1.424Z"></path>
+</svg>
+
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>Una vez que creamos un “destino” en Appflow, podemos seleccionarlo y crear la compilación para Google Play. </p>
+                    </div>
+                </div>
+
+
+
+                <!-- 9 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.223 4.146c2.104 0 3.123-1.464 3.123-4.3 0-3.147-1.459-4.014-2.97-4.014-1.63 0-2.871 1.02-2.871 2.73 0 1.706 1.171 2.667 2.566 2.667 1.06 0 1.7-.557 1.934-1.184h.076c.047 1.67-.475 3.023-1.834 3.023-.71 0-1.149-.363-1.248-.72H5.258c.094.908.926 1.798 2.52 1.798Zm.118-3.972c.808 0 1.535-.528 1.535-1.594s-.668-1.676-1.56-1.676c-.838 0-1.517.616-1.517 1.659 0 1.072.708 1.61 1.54 1.61Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span><span lang="ES">Finalmente, hacemos click en el botón “Build” para generar la compilación de nuestra app.</span> </p>
+                    </div>
+                </div>
+                <!-- 10 -->
+                <div class="row" style="margin-left: 32px">
+                    <div style="margin-left: -10px">
+                        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186617/10%20lila.png" alt="10" width="27" height="27" role="presentation" class="img-responsive atto_image_button_middle">
+                    </div>
+                    <div class="col" style="margin-left: -8px">
+                        <p><span style="font-weight: 600"></span>
+                            </p><p align="left"><span lang="ES">Se abrirá una consola dónde podremos ver logs mientras se realiza la compilación.</span></p>
+                            <p align="left"><span>Una vez finalizado este proceso, podremos descargar el archivo AAB correspondiente haciendo click en el botón “Download AAB” que nos saldrá a la derecha de la consola.</span></p>
+                            <p><span lang="ES">Finalmente, este archivo AAB que descarguemos podemos subirlo a la Play Console para publicar la aplicación en la Play Store, luego debemos esperar a la revisión de la app para que esté disponible en la tienda.</span></p>
+                            <span lang="ES">Si es la primera aplicación que subimos, la validación puede tardar un par de días<br><br></span></div></div></div></ul>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186603"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186603/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Despliegue de la aplicación</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES">El
+<b class="sub_negrita"><span style="color: rgb(0, 61, 245);">despliegue</span></b>, se refiere al proceso de poner en producción una aplicación, esto puede incluir tareas como:</span>
+        </p>
+        <ul style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>La compilación y empaquetado de la aplicación.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+<path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>La creación de un perfil de distribución..</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+<path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>La publicación en la tienda de aplicaciones correspondiente.</p>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES">Implica
+<b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">preparar la aplicación para su funcionamiento en un entorno de producción y
+hacerlo accesible a los usuarios finales</span></b>, además de las tareas de instalación de la aplicación en un servidor, la configuración de la base de datos y otros componentes necesarios, así como la realización de pruebas para asegurarse de que el
+            sistema esté funcionando correctamente.</span>
+        </p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES">&nbsp;</span></p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #00BF63; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #00BF63; font-size: large; font-weight: 600">¿Qué relevancia tiene el despliegue?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> El despliegue es una parte importante del ciclo de vida de desarrollo de una aplicación, ya que asegura que la aplicación esté lista para su uso en un entorno real y permite que los usuarios finales puedan acceder a ella y utilizarla,
+                    también puede incluir la actualización de la aplicación con nuevas funcionalidades y correcciones de errores, lo que permite mantenerla en buen estado y mejorar su calidad y rendimiento.</p>
+            </div>
+        </div>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES">Conlleva
+la subida del código de la aplicación a un repositorio de control de versiones
+como Git, lo que permite tener un historial de cambios y facilitar el
+seguimiento y la gestión del código.</span></p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES"><b class="sub_negrita">Te preguntarás, ¿cómo se aloja el código de la aplicación? Te lo contamos a continuación.</b></span></p><br>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186610"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186610/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Comandos básicos de GIT</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <!--Inicio Caja definición ciruela-->
+        <p></p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #ae11a0;"><b class="sub_negrita">Comandos Git</b></span></p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: solid  #ae11a0 2px;">
+                <p><span class="" style="font-size: large; color: #ae11a0;"><span class="" style="color: #ae11a0;"></span><span class="" style="color: rgb(51, 51, 51);">Conjunto de instrucciones que se utilizan para interactuar con un repositorio de Git, con estos comandos, podemos administrar y hacer seguimiento de los cambios en los archivos de nuestra aplicación, podemos realizar tareas como hacer commit de cambios, crear ramas, fusionar cambios, entre otras tareas.</span>
+                    <span class="" style="color: rgb(51, 51, 51);"><span></span></span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja definición-->
+
+        <p><br></p>
+        <p style="text-align: center;"><span lang="ES"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186610/DAPM_S13_2.png" alt="" width="799" height="418" role="presentation" class="img-responsive atto_image_button_text-bottom"><br><br></span></p>
+        <p><span lang="ES"></span></p>
+        <p></p>
+        <!--Tabla 2 columnas varias filas de colore-->
+        <table class="tabla-filaColores texto-principal" style="width: 90%; margin: 0 auto;">
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="80%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado">Comando</td>
+                    <td class="tabla-filaColores-categoria texto-centrado"> Descripción</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado"><b><span lang="ES">git init</span></b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <ul>
+                            <li style="text-align: left;">Con este comando le indicaremos a Git que queremos crear un nuevo repositorio para utilizar su sistema de control de versiones, sólo debemos posicionarnos en la carpeta raíz de nuestro proyecto y ejecutar el comando.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado"><b><span lang="ES">git config</span></b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                        <p>
+                        </p>
+                        <ul>
+                            <li><span lang="ES">Este comando se utiliza para establecer o cambiar la configuración de Git en nuestra computadora, podemos definir nuestro nombre y dirección de correo electrónico, que se utilizarán como identidad en los&nbsp;<i>commits&nbsp;</i>que realicemos. <br><br>Por ejemplo, para configurar nuestro nombre y email, podemos ejecutar:&nbsp;<br></span><b><span lang="ES">git config&nbsp;</span><span lang="ES">--</span><span lang="ES">global&nbsp;</span><span lang="ES">user</span><span lang="ES">.</span><span lang="ES">email&nbsp;</span><span lang="ES">"</span><span lang="ES"><a href="mailto:tu@email.com">tu@email.com</a></span><span lang="ES">"&nbsp;<br></span></b><span><span lang="ES" style="font-weight: bold;">git config&nbsp;</span>
+                                <span lang="ES" style="font-weight: bold;">--</span><span lang="ES" style="font-weight: bold;">global&nbsp;</span><span lang="ES" style="font-weight: bold;">user</span><span lang="ES" style="font-weight: bold;">.</span>
+                                <span lang="ES" style="font-weight: bold;">name&nbsp;</span>
+                                <span lang="ES" style="font-weight: bold;">"</span><span lang="ES" style="font-weight: bold;">Tu Nombre</span><span lang="ES" style=""><b>"<br></b></span></span><b><br></b>Existen muchas otras configuraciones de Git que
+                                podemos encontrar ejecutando el comando git config --list (o sólo&nbsp;<i>git config</i>&nbsp;para ver una explicación más detallada).</li>
+                        </ul>
+                        <p></p>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado"><b><span lang="ES">git add</span></b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <p style="text-align: left;">
+                        </p>
+                        <ul>
+                            <li style="text-align: left;"><span lang="ES">Este comando se usa para agregar archivos a la "zona de preparación" (<i>staging area</i>) en nuestro repositorio local, los archivos en la zona de preparación están listos para ser incluidos en un&nbsp;<i>commit</i>.</span></li>
+                            <li style="text-align: left;"><span lang="ES">El comando git add puede recibir tanto la ruta de un archivo como la de una carpeta; si es de una carpeta, el comando añade recursivamente todos los archivos que están dentro de la misma.</span></li>
+                            <li>
+                                <p style="text-align: left;">Por ejemplo, para agregar un único archivo:</p><b><p style="text-align: left;"><b><span lang="ES">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;git add&nbsp;&nbsp;</span><span lang="ES">nombre_archivo</span><span lang="ES">.</span><span lang="ES">js</span></b>
+                                <span style="font-weight: 400;">&nbsp;</span><span style="font-weight: 400;"></span><span style="font-weight: 400;">
+                                </span><span lang="ES" style="font-weight: 400;">&nbsp;</span></p>
+                                    </b>
+                                    <p style="text-align: left;">Para agregar una carpeta “pages”.</p><span><p style="text-align: left;"><b><b><span lang="ES">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></b>git add pages&nbsp;</b>
+                                    </p>
+                                    </span>
+                                    <p style="text-align: left;">Para incluir todos los archivos modificados:</p><b><p style="text-align: left;"><b><b><b><span lang="ES">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></b></b>git add</b><span style="font-weight: 400;">.</span></p>
+                                    </b>
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p><span lang="ES"></span></p>
+                        <p align="left"><span lang="ES"><span lang="ES"><span></span></span>
+                            </span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado"><b><span lang="ES">git commit</span></b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <p style="text-align: left;"></p>
+                        <ul>
+                            <li style="text-align: left;">Una vez que hayamos agregado los archivos que queremos incluir en el&nbsp;<i style="text-align: left;">commit&nbsp;</i><span style="text-align: left;">(con “git add”), podemos ejecutar el comando “git commit” para guardar los cambios en el repositorio local de Git. Cuando ejecutamos git commit, estamos creando un punto en el historial del repositorio que incluye los cambios que hayamos agregado a la zona de preparación (</span>
+                                <i style="text-align: left;">staging</i><span style="text-align: left;">) previamente con “git add”, al hacer un commit, debemos proporcionar un mensaje que describa los cambios que hayamos realizado en el proyecto, utilizando el siguiente formato:</span></li>
+                        </ul>
+                        <p></p>
+                        <p style="text-align: left;"><b><span lang="ES">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; git commit&nbsp;</span><span lang="ES">-</span><span lang="ES">m&nbsp;</span><span lang="ES">"</span><span lang="ES">Mensaje del commit</span><span lang="ES">"</span></b><span>&nbsp;</span>
+                            <span lang="ES">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+                        </p>
+                        <p style="text-align: left;"></p>
+                        <ul>
+                            <li style="text-align: left;">El mensaje del commit debe ser conciso y descriptivo, y debe indicar de manera clara qué cambios se han realizado en el proyecto, una vez que hayamos ejecutado git commit, los cambios se habrán guardado de forma permanente
+                                en el repositorio local de Git y estarán listos para ser compartidos con otros colaboradores o para ser respaldados en un repositorio remoto.</li>
+                        </ul>
+                        <p></p>
+                        <p>
+                        </p>
+                        <p></p>
+                        <p></p>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado"><b><span lang="ES">git pull</span></b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                        <ul>
+                            <li>Se utiliza para descargar y fusionar cambios del repositorio remoto en nuestro repositorio local, cuando ejecutamos git pull, Git descarga los cambios del repositorio remoto y los fusiona automáticamente en el repositorio local,
+                                esto nos permite obtener los cambios que hayan realizado otros colaboradores en el proyecto y fusionarlos con los nuestros.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado"><b><span lang="ES">git clone</span></b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                        <ul>
+                            <li>Se utiliza para crear una copia local de un repositorio remoto, cuando ejecutamos “git clone”, Git descarga todos los archivos del repositorio remoto y los guarda en una nueva carpeta en nuestra computadora y crea una conexión
+                                entre el repositorio local y el repositorio remoto, lo que te permite enviar nuestros cambios al repositorio remoto con el comando “git push” y obtener los cambios de otros colaboradores con el comando “git pull”.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><br></p>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186611"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186611/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Sistema de Ramas y Gitflow</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES">Todo
+repositorio va a contener una línea de tiempo sobre la cual se marcarán los cambios que se
+hagan sobre los archivos, ésta sería una rama. </span></p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES">Los
+repositorios traen consigo una rama llamada “master” o “main” y es la principal
+en todos los proyectos, a partir de esta rama se pueden crear otras ramas y,
+por lo tanto, otras líneas de tiempo. </span></p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES">Cualquier sistema de
+control de versiones moderno tiene algún mecanismo para soportar distintas
+ramas (<i>branches</i>). Cuando hablamos de <i>branching </i>o trabajo con ramas, significa
+que un usuario ha tomado la rama principal de desarrollo “master” o “main” y a
+partir de ahí ha continuado trabajando sin seguir la rama principal de
+desarrollo.</span></p><b style="color: rgb(1, 6, 20); font-size: large;"><p style="text-align: center;"><b><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186611/DAPM_S13_3.png" alt="" width="559" height="187" role="presentation" class="img-responsive atto_image_button_text-bottom"></b></p>
+        </b>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span></span></p>
+        <h2 style="color: rgb(1, 6, 20); font-size: large;"><span style=""><span lang="ES" style="font-size: medium; font-weight: normal; color: rgb(0, 61, 245);" class="">¿Para qué crear y configurar nuevas
+ramas?</span><span lang="ES"></span></span>
+        </h2>
+
+        <p align="left" style="color: rgb(1, 6, 20); font-size: large;">
+        </p>
+        <ul>
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span lang="ES"><span class="" style="color: rgb(51, 51, 51); font-size: large;">Para solucionar&nbsp;</span><i><span class="" style="color: rgb(51, 51, 51); font-size: large;">bugs&nbsp;</span></i>
+                            <span class="" style="color: rgb(51, 51, 51); font-size: large;">o errores en nuestra aplicación, creando una rama a partir del momento en que estos surgen, y para poder resolverlos más rápidamente.</span>
+                            </span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span lang="ES"><span class="" style="color: rgb(51, 51, 51); font-size: large;">Para desarrollar y probar nuevas funcionalidades en la aplicación antes de integrarlas a la rama principal, para una posterior entrega de valor.</span>
+                            <span class="" style="font-size: large; color: rgb(51, 51, 51);"></span>
+                            </span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #8b82d7">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span lang="ES"><span class="" style="color: rgb(51, 51, 51); font-size: large;">Para experimentar nuevas ideas en nuestras aplicaciones de forma segura, ya que podremos tener siempre la rama principal inalterada.</span></span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <ul>
+            <div style="margin-left: 3%; margin-right: 3%;">
+            </div>
+        </ul>
+        <p></p>
+
+
+
+
+
+        <p align="left" style="color: rgb(1, 6, 20); font-size: large;"><span><span><span style="font-size: large; color: rgb(0, 61, 245); font-family: chaletnewyorknineteeneighty, Arial, Helvetica, sans-serif;" class="">Flujo de trabajo con ramas</span></span>
+            </span>
+        </p>
+
+        <p align="left" style="color: rgb(1, 6, 20); font-size: large;"><span style="font-size: large;" class="">Para
+establecer un manejo adecuado de las ramas dentro de los repositorios de Git
+existen diferentes flujos de trabajo a seguir para generar menos conflictos
+entre cambios según las mejores prácticas y la lógica de trabajo del equipo del
+proyecto.</span></p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES">Gitflow es uno de
+esos flujos de trabajo y se basa en cinco palabras clave durante la
+construcción de una aplicación y sus respectivas entregas de valor.</span></p>
+        <!--Inicio tag azul-->
+        <div class="row caja-título-marcador" style="display: inline-flex; background-color: #8b82d7">
+            <p style="padding-left: 10%; padding-top: 8px; padding-right: 36px;"><span class="" style="font-size: large;">Master</span></p>
+        </div>
+
+        <p align="left" style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES"><br>Es la rama principal de proyecto, donde va el código para generar la
+aplicación en entornos de producción.
+Sobre ella no se debería desarrollar.</span></p>
+        <!--Inicio tag azul-->
+        <div class="row caja-título-marcador" style="display: inline-flex; background-color: #8b82d7">
+            <p style="padding-left: 10%; padding-top: 8px; padding-right: 36px;"><span class="" style="font-size: large;">Hotfix</span></p>
+        </div>
+        <!--Fin taga azul-->
+        <p align="left" style="color: rgb(1, 6, 20); font-size: large;"><br>Este tipo de rama se crea para la solución de un incidente o error. Debe ser generada a partir de Master. Hotfix se utiliza en ambientes en producción para resolver errores.<br></p>
+        <!--Inicio tag azul-->
+        <div class="row caja-título-marcador" style="display: inline-flex; background-color: #8b82d7">
+            <p style="padding-left: 10%; padding-top: 8px; padding-right: 36px;"><span class="" style="font-size: large;">Develop</span></p>
+        </div>
+        <!--Fin taga azul-->
+        <p align="left" style="color: rgb(1, 6, 20); font-size: large;"><br>En esta rama se tienen las nuevas funcionalidades de la aplicación. No es aconsejable hacer
+            <i>commit </i>(guardar cambios) directamente sobre ella, excepto si son cambios pequeños y que no afecten la lógica; por ejemplo, cambiar un texto.<br></p>
+        <!--Inicio tag azul-->
+        <div class="row caja-título-marcador" style="display: inline-flex; background-color: #8b82d7">
+            <p style="padding-left: 10%; padding-top: 8px; padding-right: 36px;"><span class="" style="font-size: large;">Feature</span></p>
+        </div>
+        <!--Fin taga azul-->
+        <p align="left" style="color: rgb(1, 6, 20); font-size: large;"><br>Rama generada a partir de la rama <i>develop</i>. Sobre ella se harán los desarrollos de nuevas funcionalidades, una vez que esté desarrollada la funcionalidad, la rama
+            <i>feature </i>podrá ser mezclada con Develop para que los cambios queden allí sincronizados, y finalmente se procede a borrar la rama
+            <i>feature</i>. Es aconsejable tener esta rama sincronizada con los cambios que se agreguen a la rama <i>develop
+</i>para evitar conflictos.<br></p>
+        <!--Inicio tag azul-->
+        <div class="row caja-título-marcador" style="display: inline-flex; background-color: #8b82d7">
+            <p style="padding-left: 10%; padding-top: 8px; padding-right: 36px;"><span class="" style="font-size: large;">Release</span></p>
+        </div>
+        <!--Fin taga azul-->
+        <h3 style="color: rgb(1, 6, 20); font-size: large;"><span style="font-weight: 400; font-family: Roboto, Arial, Helvetica, sans-serif;"><br>Esta rama se
+utiliza para las entregas a producción o ambiente real. Su propósito es
+habilitar que en ella se hagan las pruebas del cliente, una vez que se termine
+con las pruebas y sean exitosas se mezcla
+con la rama </span><i style="font-weight: 400; font-family: Roboto, Arial, Helvetica, sans-serif;">master </i><span style="font-weight: 400; font-family: Roboto, Arial, Helvetica, sans-serif;">y se sale a producción.</span><br></h3><span style=""><p style="color: rgb(1, 6, 20); font-size: large; font-weight: bold; text-align: center;"><b><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186611/DAPM_S13_4.png" alt="" width="959" height="594" role="presentation" class="img-responsive atto_image_button_text-bottom"></b></p><p style="text-align: center;"><span style="color: rgb(1, 6, 20); font-size: large; font-weight: 700;"><br></span></p>
+        <p style="text-align: center;"><br></p>
+        </span>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186612"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186612/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Plataformas de almacenamiento más conocidas</p>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <h2 align="left" style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES" class="" style="font-size: large;"></span></h2>
+        <!--Inicio tag azul-->
+        <div class="row caja-título-marcador" style="display: inline-flex; background-color: #8b82d7">
+            <p style="padding-left: 10%; padding-top: 8px; padding-right: 36px;"><span class="" style="font-size: large;">Github</span></p>
+        </div>
+        <!--Fin taga azul-->
+
+        <p align="left" style="color: rgb(1, 6, 20); font-size: large;"><span style="font-size: large;" class=""><br>Es una de las plataformas de alojamiento de código fuente más conocidas.
+Propiedad de Microsoft, ofrece a los/las desarrolladores/as la posibilidad de crear
+repositorios de código y guardarlos en la nube de forma segura usando el
+sistema de control de versiones Git.</span></p>
+        <p align="left" style="color: rgb(1, 6, 20); font-size: large; text-align: center;"><span style="font-size: large;" class=""><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186612/DAPM_S13_5.jpg" alt="" width="851" height="526" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p><h2 align="left" style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES" class="" style="font-size: large;"></span></h2>
+<!--Inicio tag azul-->
+<div class="row caja-título-marcador" style="display: inline-flex; background-color: #8b82d7">
+    <p style="padding-left: 10%; padding-top: 8px; padding-right: 36px;"><span class="" style="font-size: large;">Gitlab</span></p>
+ </div>
+<!--Fin taga azul-->
+        <p align="left" style="color: rgb(1, 6, 20); font-size: large;"><span style="font-size: large;" class=""><br>Es otra plataforma popular de hospedaje de código
+fuente que ofrece muchas funciones similares a Github, ya que ambas controlan la versión
+de los proyectos hospedados usando Git.</span></p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES" class="" style="font-size: large;">Gitlab proporciona
+de forma nativa herramientas de integración y entrega continua o CI/CD, así
+como métricas para el seguimiento de la calidad, el rendimiento y el
+rendimiento del código así como Pruebas
+de usabilidad.</span></p><span class="" style="color: rgb(1, 6, 20); font-size: large;"><p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186612/DAPM_S13_6.jpg" alt="" width="754" height="500" role="presentation" class="img-responsive atto_image_button_text-bottom"></p></span>
+        <h2 align="left" style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES" class="" style="font-size: large;"></span></h2>
+<!--Inicio tag azul-->
+<div class="row caja-título-marcador" style="display: inline-flex; background-color: #8b82d7">
+    <p style="padding-left: 10%; padding-top: 8px; padding-right: 36px;">Bitbucket</p>
+ </div>
+<!--Fin taga azul-->
+        <p align="left" style="color: rgb(1, 6, 20); font-size: large;"><span style="font-size: large;" class=""><br>Es una
+plataforma para alojar y administrar código fuente para proyectos escritos en Python. Se integra con Jira y Trello
+permitiendo gestionar repositorios desde estas herramientas. BitBucket admite
+la integración continua mediante Pipelines.</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large; text-align: center;"><span class="" style="font-size: large;"></span></p>
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665743/mod_book/chapter/186612/DAPM_S13_7.jpg" alt="" width="850" height="498" role="presentation" class="img-responsive atto_image_button_text-bottom" style="font-size: 0.9375rem;"></p>
+        <p style="text-align: center;"><span style="color: rgb(1, 6, 20); font-size: large;"><br></span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[655204,655205,655206,655207,655209,655211,655213,655216,655217,655220,655221,655225,655226,655229,673166,675942,680349,682965,682966]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2665743, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1746451472); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random6818c2dfab69e2'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6818c2dfab69e2'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
