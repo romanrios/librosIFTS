@@ -1,0 +1,2129 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>E4: Gestión integral en la app del club deportivo | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1744219673/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, E4: Gestión integral en la app del club deportivo | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1744219673_1732130878/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"orJjJ0GCti","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1744219673","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1734017170","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21042,"courseContextId":2643742,"contextid":2665739,"contextInstanceId":655227,"langrev":1746084245,"templaterev":"1734017170"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1734017170\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1734017170\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1734017170\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1734017170\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21042 context-2665739 cmid-655227 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1744219673/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>E4: Gestión integral en la app del club deportivo</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Desarrollo de Aplicaciones para Dispositivos 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        E4: Gestión integral en la app del club deportivo
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        lunes, 5 de mayo de 2025, 10:36
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21042&amp;section=5" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=655226" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=655228" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=655229" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción al libro" class="font-weight-bold text-decoration-none" href="#ch186563">1. Introducción al libro</a></li><li><a title="2. TEMA I. Registro de socios" class="font-weight-bold text-decoration-none" href="#ch186581">2. TEMA I. Registro de socios</a></li><li><a title="3. Introducción" class="font-weight-bold text-decoration-none" href="#ch186556">3. Introducción</a></li><li><a title="4. Tips para el registro de socio" class="font-weight-bold text-decoration-none" href="#ch186557">4. Tips para el registro de socio</a><ul><li><a title="4.1. Alias único" class="text-decoration-none" href="#ch186558">4.1. Alias único</a></li><li><a title="4.2. Código de ejemplo" class="text-decoration-none" href="#ch186559">4.2. Código de ejemplo</a></li><li><a title="4.3. Uso de fechas" class="text-decoration-none" href="#ch186560">4.3. Uso de fechas</a></li></ul></li><li><a title="5. Tips para el diseño y movilidad entre las Activity’s" class="font-weight-bold text-decoration-none" href="#ch186561">5. Tips para el diseño y movilidad entre las Activity’s</a><ul><li><a title="5.1. Sugerencia de movilidad" class="text-decoration-none" href="#ch186562">5.1. Sugerencia de movilidad</a></li></ul></li><li><a title="6. TEMA II. Cobro de cuota" class="font-weight-bold text-decoration-none" href="#ch186564">6. TEMA II. Cobro de cuota</a></li><li><a title="7. Introducción." class="font-weight-bold text-decoration-none" href="#ch186565">7. Introducción.</a></li><li><a title="8. Tips para el Cobro de cuota" class="font-weight-bold text-decoration-none" href="#ch186566">8. Tips para el Cobro de cuota</a><ul><li><a title="8.1. Lógica para el cobro" class="text-decoration-none" href="#ch186567">8.1. Lógica para el cobro</a></li><li><a title="8.2. Cobro en el registro de socio" class="text-decoration-none" href="#ch186568">8.2. Cobro en el registro de socio</a></li><li><a title="8.3. Cobro de la cuota mensual" class="text-decoration-none" href="#ch186569">8.3. Cobro de la cuota mensual</a></li><li><a title="8.4. Documento de pago" class="text-decoration-none" href="#ch186570">8.4. Documento de pago</a></li><li><a title="8.5. Código del documento" class="text-decoration-none" href="#ch186571">8.5. Código del documento</a></li><li><a title="8.6. Código del button" class="text-decoration-none" href="#ch186572">8.6. Código del button</a></li></ul></li><li><a title="9. Tips para el diseño del carnet de socio" class="font-weight-bold text-decoration-none" href="#ch186573">9. Tips para el diseño del carnet de socio</a></li><li><a title="10. TEMA III. Listado de socios" class="font-weight-bold text-decoration-none" href="#ch186574">10. TEMA III. Listado de socios</a></li><li><a title="11. Introducción" class="font-weight-bold text-decoration-none" href="#ch186575">11. Introducción</a></li><li><a title="12. Tips para el listado diario" class="font-weight-bold text-decoration-none" href="#ch186576">12. Tips para el listado diario</a><ul><li><a title="12.1. Lógica para obtener el listado" class="text-decoration-none" href="#ch186577">12.1. Lógica para obtener el listado</a></li><li><a title="12.2. Diseño del listado" class="text-decoration-none" href="#ch186578">12.2. Diseño del listado</a></li><li><a title="12.3. Código para el listado en la clase de la base de datos" class="text-decoration-none" href="#ch186579">12.3. Código para el listado en la clase de la base de datos</a></li><li><a title="12.4. Código para el listado en la activity que tiene el GridLayout" class="text-decoration-none" href="#ch186580">12.4. Código para el listado en la activity que tiene el GridLayout</a></li></ul></li><li><a title="13. Etapa 5:Despliegue y distribución de la aplicación" class="font-weight-bold text-decoration-none" href="#ch186582">13. Etapa 5:Despliegue y distribución de la aplicación</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186563"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186563/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%; font-size: large">
+        <p>¡Comenzamos con otra etapa de aprendizaje! Llegó el momento de comenzar a aplicar todo lo aprendido al desarrollo de la app para nuestro cliente,<span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita"> el Club Deportivo.</b></span>&nbsp;</p>
+        <p>Para ayudarte con el desarrollo, presentaremos tres temas que te orientarán en la tarea:</p>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186563/UNO%20R%202.png" alt="" width="28" height="28" role="presentation" class="img-responsive atto_image_button_middle">&nbsp;Registro de socio</p>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186563/DOS%20R2.png" alt="" width="28" height="28" role="presentation" class="img-responsive atto_image_button_text-bottom">Cobro de cuota</p>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186563/TRES%20R2.png" alt="" width="28" height="28" role="presentation" class="img-responsive atto_image_button_middle">Listado diario</p>
+        <!-- Cuadro amarillo borde celeste-->
+        <br>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">Como siempre, es importante prestar atención al contenido, pero también ir aplicando estos temas a tu propio desarrollo.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+            </div>
+        </div>
+        <p><b class="sub_negrita">¡Empezamos!</b><br><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186581"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186581/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Registro de socios</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%; font-size: large">
+        <p></p>
+        <p><span class="" style="font-size: large;">Es momento de empezar a <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">aplicar nuestros conocimientos en el desarrollo de la aplicación móvil para el Club Deportivo.</span></b> <br><br>
+            </span>
+        </p>
+        <ul>
+            <li><span class="" style="font-size: large;"><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">Algo fundamental
+            en toda institución es</span></b> conocer el número de socios: para eso, nos sumergimos en el "Registro de socio".&nbsp;</span>
+            </li>
+            <li><span class="" style="font-size: large;"><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">Optamos por que el empleado gestione el registro</span></b>, capturando datos específicos como alias y contraseña para convertir
+                al socio en un usuario de la app.</span>
+            </li>
+        </ul>
+
+        <p></p>
+        <!-- Cuadro amarillo borde celeste-->
+        <br>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">En cuanto a fechas, en Kotlin, utilizamos java.time para jugar con ellas: abono de cuotas, fecha de vencimiento, ¡todo resuelto!&nbsp;</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+            </div>
+        </div>
+
+        <p><span class="" style="font-size: large;">También te dejamos un consejo sobre movilidad y diseño, con dos tipos de usuarios: el empleado con acceso a módulos específicos y el socio solo visualizando su carnet.</span></p>
+        <p><span class="" style="font-size: large;">En la actividad obligatoria vamos a codificar la pantalla inicial y el&nbsp;</span><i><span class="" style="font-size: large;"><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">login&nbsp;</span></b></span></i>
+            <span class="" style="font-size: large;">para el empleado.&nbsp;</span>
+        </p>
+        <!--Inicio Caja celeste-->
+        <br>
+        <div class="col" style="border-left: solid  #0c76f0 3px; background-color: #edf5fd; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #0c76f0; font-size: large; padding: 14px; font-weight: 600"><span><span>Preguntas clave de esta semana</span></span><span>:</span></p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>- ¿Cómo podemos garantizar la unicidad de los alias en el registro de socios y qué método se sugiere para implementarlo?<br>- ¿Cuál es la importancia de trabajar con fechas en Kotlin para el desarrollo de la app del Club Deportivo?<br>-
+                    ¿Cómo se sugiere manejar la movilidad entre actividades y qué componente visual se destaca en el diseño de pantallas?<br>- ¿Cuáles son los pasos propuestos para codificar la pantalla inicial y el&nbsp;<i><span><b class="sub_negrita">login&nbsp;</b></span></i><span>del empleado en Android Studio?</span></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <br>
+        <!--Fin Caja celeste-->
+
+        <p><b class="sub_negrita">¿Listo/a para empezar? ¡Adelante, el mundo del desarrollo te espera!</b><br></p><br><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186556"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186556/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>A partir de ahora, <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">presentaremos ayudas para desarrollar los distintos módulos del Club deportivo.</span></b> ¡Es momento de pasar a la acción!</p>
+
+        <div style="margin-left: 3%; margin-right: 3%;">
+
+            <br>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Estos <b class="sub_negrita"><span style="color: rgb(0, 61, 245);">tips </span></b>se pueden aplicar en su totalidad en la codificación o simplemente actuar como disparador de lógicas propias de
+                        los programadores del equipo.</p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+<path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>El módulo que trataremos es el <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">registro de socio</span></b>.</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+<path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Te mostraremos <span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">cómo lo pensamos desde el punto de vista lógico</b></span> con los correspondientes controles, vos y tu equipo
+                        pueden pensarlo diferente pero estamos seguros que estos tips te ayudaran para la resolución.</p>
+                </div>
+            </div>
+
+            <p><br></p><br>
+            <p></p>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186557"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186557/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Tips para el registro de socio</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <!--Tabla 2 columnas varias filas de colore-->
+        <table class="tabla-filaColores texto-principal" style="width: 90%; margin: 0 auto;">
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="80%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado" style="background-color: #3d80b3;">Tips</td>
+                    <td class="tabla-filaColores-categoria texto-centrado"> Descripción</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado">Registro de socios</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                        <ul>
+                            <li>Considera que el registro de socios en la aplicación del Club Deportivo se realice internamente en el gimnasio, en lugar de permitir que los propios socios se registren. Esto garantiza la recopilación de datos específicos y
+                                precisos requeridos por el club.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado">Datos mínimos vs datos específicos</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                        <ul>
+                            <li>A diferencia de otros sitios web donde los registros solicitan datos mínimos, como correo electrónico y contraseña, en el caso del club deportivo, pueden ser necesarios datos específicos adicionales sobre los socios.&nbsp;</li>
+                            <li>Esto justifica que el registro sea realizado por un empleado del gimnasio.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado">Migración del desarrollo</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                        <ul>
+                            <li>Ten presente que estás migrando el desarrollo del Club Deportivo codificado en C#, lo que implica que el registro de socios se integrará en el sistema existente del gimnasio.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado">Diseño de pantalla personalizada</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                        <ul>
+                            <li>El diseño de la pantalla de registro de socios dependerá de los datos específicos que se consideren almacenar en la base de datos del club deportivo. Asegúrate de diseñar la pantalla de manera intuitiva y eficiente, teniendo
+                                en cuenta los campos necesarios para el registro.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado">Validación de alias único</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                        <ul>
+                            <li>Implementa un control para verificar que el alias elegido por un socio durante el registro sea único entre los demás socios. Esto garantiza la identificación única de cada socio en la plataforma.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><br></p>
+
+        <p>Entre los datos solicitados debemos tener una contraseña y un alias.</p>
+
+        <p><b class="sub_negrita">Pasemos a ver cómo controlar que el alias sea único entre los socios.</b></p><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186558"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186558/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Alias único</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Lógicamente lo que debemos hacer es lo siguiente. Antes de enviar los datos ingresados a la clase <b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">socio</span></i></b><span class="" style="color: rgb(0, 61, 245);"> </span>para
+            insertarlos en la tabla se debe verificar que el dato considerado como alias no exista.</p>
+
+        <p>Para ello podemos escribir una <i><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">query </span></b></i>que tenga en su <i><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">where </span></b></i>el dominio
+            del atributo alias, si esa <i>query </i>arroja resultado es decir, tiene una fila nos indica que <span><b class="sub_negrita"><span style="color: rgb(0, 61, 245);" class="">existe</span></b><span class="" style="color: rgb(0, 61, 245);"> </span></span>ese
+            dominio. <br><br>
+        </p>
+        <div class="" style="width: 80%;  margin: 0 auto; ">
+
+            <div class="row">
+
+                <div class="col-1" style="background-color: #00BF63; border-radius: 4px 0px 0px 4px;">
+
+                    <div class="d-flex justify-content-center" style="margin-top: 20px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="color: white;">
+						                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"></path>
+  <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"></path>
+</svg>
+
+                    </div>
+                </div>
+
+                <div class="col-11" style="background-color: #F2FFF9;border: 1px solid #00BF63; border-radius: 0px 4px 4px 0px;">
+
+                    <p style="margin-top: 16px;"><b class="sub_negrita">En conclusión</b></p>
+                    <p>
+                    </p>
+                    <ul>
+                        <li> Debemos obtener el número de filas del resultado de la<i>query</i>.&nbsp;</li>
+                        <li>SQL cuenta con la función count(nombre_atributo) para contar las filas resultantes.&nbsp;</li>
+                        <li>Este tipo de consulta devuelve un solo valor, que es el recuento de filas en la tabla especificada.&nbsp;</li>
+                        <li>Podés asignar el resultado a una variable en tu aplicación o utilizarlo como parte de una condición en una consulta más compleja.</li>
+                        <li>Si es 0, procedemos a insertar todos los datos ingresados, caso contrario podemos mostrar un aviso indicando que debe elegir otro alias y dejar el foco del cursor en el ediText de ingreso de ese dato.</li>
+                    </ul>
+                    <p></p>
+                </div>
+                <br><br><br>&nbsp; &nbsp;
+                <p><br></p><br>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186559"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186559/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Código de ejemplo</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Tomamos un ejemplo que vimos anteriormente donde la base de datos tiene una tabla llamada <span style="color: rgb(0, 61, 245);"><b class="sub_negrita">curso</b></span>.
+        </p>
+
+        <p>En la clase que hace referencia a la base de datos creamos una función para buscar en este caso el nombre del curso (se llama <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">buscaCurso</span></b>) y en el MainActivity donde programamos lo referido
+            al <i>insert </i>de la tabla curso invocamos a la función de búsqueda.</p>
+
+        <p><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">Veamos entonces cómo queda la sintaxis.</span></b></p>
+        <p>
+            </p><ul>
+                <li>En la clase de la base de datos:</li>
+            </ul>
+        <p></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186559/DAPM_S10_1.png" alt="" width="750" height="555" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX"></span></p>
+        <p>
+            </p><ul>
+                <li>En el MainActivity del ingreso de datos de curso:</li>
+            </ul>
+        <p></p>
+        <p></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186559/DAPM_S10_2.png" alt="" width="937" height="592" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX"></span></p>
+        <p><span lang="ES-MX">De esta manera evitamos que aparezca, en la tabla curso, el mismo nombre de curso con número de curso diferente (recordar que el número
+de curso es auto incrementable).</span></p>
+<!-- Cuadro amarillo borde celeste-->
+<br>      
+  <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">Como verás, es sencillo la búsqueda de un dominio en particular dentro de un atributo de una tabla.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+            </div>
+        </div>
+
+        <p><br></p><br>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186560"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186560/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Uso de fechas</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>En Kotlin, podés trabajar con fechas utilizando las clases proporcionadas por el paquete<span class="" style="color: rgb(0, 61, 245);"> </span><b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">java.time</span></i></b>
+            <span class="" style="color: rgb(0, 61, 245);">,</span> que forma parte de las API de fecha y hora introducidas en Java 8.</p>
+
+        <p>Por ejemplo, si queremos obtener la fecha y hora actuales, el código es el siguiente:</p>
+        <p></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186560/DAPM_S10_3.png" alt="" width="901" height="124" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX"></span></p>
+        <p><span lang="ES-MX">La
+<i>activity </i>tiene un <i>button </i>cuyo id es <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">btnFecha</span></b> y en el evento <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">setOnClickListener</span>
+</b>instanciamos una variable como <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">LocalDateTime</span> </b>y tomamos en valor actual con <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">now( )</span></b></span>
+        </p>
+
+        <p><span lang="ES-MX">Luego
+con el <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">Toast</span></b><span class="" style="color: rgb(0, 61, 245);"> </span>le dimos salida al valor obtenido. </span>
+        </p>
+        <!--Inicio Caja celeste-->
+        <br>
+        <div class="col" style="border-left: solid  #0c76f0 3px; background-color: #edf5fd; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #0c76f0; font-size: large; padding: 14px; font-weight: 600">Nota</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li><span lang="ES-MX">- No olvides colocar</span><span><span lang="ES-MX"><b>&nbsp;import java.time.LocalDateTime</b></span></span>
+                </li>
+                <li>- Este código te lo presentamos en un botón para que lo puedas probar, pero seguramente el uso se lo darás dentro de la lógica de tu App.</li>
+                <li>- Si lo que necesitás es solamente la fecha la clase a instanciar, es LocalDate.<br><br></li>
+                <li></li>
+            </ul>
+        </div>
+        <p><br></p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #00BF63; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #00BF63; font-size: large; font-weight: 600">En el proyecto del Club deportivo</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> la fecha se usa cuando el socio abona la cuota, ya que se debe indicar la fecha de vencimiento del pase que adquiere. También se usa si este tipo de dato corresponde a algún atributos de las tablas del modelo de datos. </p>
+            </div>
+        </div>
+        <p><span lang="ES-MX"><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">Otro tip que te damos con respecto a la fecha,</span></b> es a sumarle meses o días, ¿para que te sirve? Pues bien, cuando el socio paga, se debe tomar del
+            sistema la fecha actual y a ella sumarle <b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">un mes</span></i>
+            </b>
+            </span><span lang="ES-MX" class="" style="color: rgb(0, 61, 245);"> </span>para conocer el vencimiento. Te imaginarás que no es un cálculo manual; la App debe calcularlo por si sola.<br></p>
+
+        <p>Para sumarle un mes a una fecha, usamos el método <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">plusMonths()</span></b>&nbsp;de la clase LocalDate; se utiliza para devolver una copia de esta fecha con los meses especificados
+            agregados. La clase tiene los métodos para que en lugar de meses sumes días o años.</p>
+
+        <p><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">Veamos cómo es la sintaxis:</span></b></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186560/DAPM_S10_4.png" alt="" width="840" height="356" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX"><br></span></p><br>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186561"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186561/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Tips para el diseño y movilidad entre las Activity’s</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Cuando nos referimos a la movilidad entre actividades en el contexto de desarrollo de aplicaciones móviles, generalmente estamos hablando sobre la transición o navegación entre pantallas o secciones diferentes de la aplicación.</p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #00BF63; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #00BF63; font-size: large; font-weight: 600">¿Qué vamos a hacer entonces?&nbsp;Tal vez quieras que en el diseño de las pantallas se visualice alguna imagen, veamos cómo hacerlo:</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> </p>
+                <p></p>
+                <ul>
+                    <li>Se usa el componente&nbsp;<b class="sub_negrita"><i><span class="" style="color: #00BF63;">ImageView</span></i></b>&nbsp;en el diseño (<i>layout</i>) de la actividad y la imagen elegida se carga en ese ImageView o mediante recursos.</li>
+                    <li>Para cargar la imagen desde recursos, se debe utilizar&nbsp;<b class="sub_negrita"><span class="" style="color: #00BF63;">setImageResource</span>,</b>&nbsp;la imagen debe estar en la carpeta&nbsp;<b class="sub_negrita"><i><span><span class="" style="color: #00BF63;">res/drawable</span></span></i></b>,
+                        pero si preferís cargar imágenes desde una URL, se puede utilizar bibliotecas como Picasso o Glide, teniendo en cuenta que al cargar imágenes desde una URL, se deben manejar las operaciones en segundo plano para evitar bloquear
+                        el hilo principal.<br><br></li>
+                </ul>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <p><span class="" style="color: rgb(0, 61, 245);">¿Cómo encontramos la carpeta </span><b class="sub_negrita"><i><span style="color: rgb(0, 61, 245);">res/drawable</span></i></b><span class="" style="color: rgb(0, 61, 245);">?&nbsp;</span><br></p>
+        <p>Localizamos el directorio del proyecto Android, seleccionamos la carpeta <b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">app</span></i></b>, luego <span><span style=""><b class="sub_negrita" style="font-style: italic;"><span class="" style="color: rgb(0, 61, 245);">msrc, main, res</span></b><i><span class="" style="color: rgb(0, 61, 245);">.</span></i></span>
+                </span><span><span><i> </i></span></span>Dentro de esta está la carpeta <span><i style="font-weight: bold;"><span class="" style="color: rgb(0, 61, 245);">drawable</span>, </i>¡</span>atención!<b><i> </i></b>si no existe, debés crearla.
+        </p>
+
+        <p>Copiamos el archivo en esa carpeta teniendo en cuenta que la extensión debe ser png o jpg, y su nombre comenzar en minúscula y sin espacios.</p><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186562"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186562/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Sugerencia de movilidad</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p><span lang="ES-MX">La App del Club deportivo puede tener dos tipos de usuarios, que
+son el empleado del club y el socio.</span></p>
+
+        <p><span lang="ES-MX" class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">Te mostramos nuestra sugerencia de resolución.</b></span></p>
+
+        <p>
+        </p>
+        <ol>
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p>La pantalla de inicio la imaginamos con una imagen / logo / color de fondo (acorde a cada desarrollador) con 1 botón&nbsp;<b class="sub_negrita"><i><span>Ingreso a la App</span>&nbsp;</i></b>que nos permite iniciarla.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>A continuación ingresamos el nombre de usuario y contraseña, indicando además el perfil del usuario.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Suponemos que en <b class="sub_negrita">el modelo existe una tabla llamada usuario</b>, que tiene como usuario modelo, un nombre y contraseña genérico. Este ingreso no pertenece a ningún módulo de esta App, por lo que deberá ser
+                            incorporado por fuera o considerar como información confidencial un nombre y contraseña fijas, que estarán integradas en la líneas de código. <b class="sub_negrita">Si el perfil es de un socio</b>, podrá acceder después de
+                            que el empleado realice el registro e incluya, entre sus datos, lo sugerido con respecto al alias.</p>
+                    </div>
+                </div>
+            </div>
+        </ol>
+        <ol>
+            <div style="margin-left: 3%; margin-right: 3%;">
+            </div>
+        </ol>
+        <p></p>
+
+
+
+
+
+        <p><span lang="ES-MX">Una vez dentro de la App, la interacción es diferente:</span></p>
+        <p><span lang="ES-MX"></span></p>
+        <p></p>
+        <ul>
+            <ul>
+                <ul>
+                    <li><span lang="ES-MX">Si es el <span><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">empleado</span></b>,</span><span> </span>tiene acceso a los módulos de Registro de socio, Cobro de cuota, Visualización de los
+                        vencimientos (módulos identificados en el análisis realizado en la materia Desarrollo de sistemas orientado a objetos).</span>
+                    </li>
+                    <li><span lang="ES-MX">Si es el <span><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">socio</span></b><span style="">,</span></span><span><span> </span></span>tiene acceso solamente a la visualización de su carnet
+                        (que se genera cuando se abona la primera cuota, es decir cuando se registra por primera vez). El diseño queda a criterio de los/las desarrolladores/as.</span>
+                    </li>
+                </ul>
+            </ul>
+        </ul>
+        <p></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186562/DAPM_S10_5.png" alt="" width="940" height="592" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p><br>
+        <p></p>
+        <p></p>
+
+
+        <p></p>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186564"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186564/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Cobro de cuota</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%; font-size: large">
+        <p></p>
+        <p>En esta ocasión, nos sumergimos en los módulos del Club Deportivo, proporcionando una experiencia práctica fundamental para comprender los conceptos de codificación en dispositivos móviles.&nbsp;</p>
+        <p>Enfocándonos en el módulo de<b class="sub_negrita"><span style="color: rgb(0, 61, 245);"> "Cobro de cuota"</span></b>, estudiaremos que este no solo integra los conocimientos adquiridos hasta ahora, sino que también presenta particularidades al incluir la
+            emisión del carnet del socio y el documento de cobro de la cuota.&nbsp;
+        </p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #00BF63; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #00BF63; font-size: large; font-weight: 600">Novedad clave</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Al tratarse de una aplicación, los socios tienen acceso exclusivamente para visualizar su carnet, marcando una diferencia significativa respecto al desarrollo anterior en Desarrollo de sistemas orientado a objetos.&nbsp;</p>
+            </div>
+        </div>
+        <p>Este enfoque estratégico resalta la importancia de la <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">practicidad </span></b>y la <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">adaptación a las necesidades específicas </span></b>de una aplicación
+            para dispositivos móviles.<br></p>
+        <!--Inicio Caja celeste-->
+        <br>
+        <div class="col" style="border-left: solid  #0c76f0 3px; background-color: #edf5fd; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #0c76f0; font-size: large; padding: 14px; font-weight: 600"><span>Preguntas clave de este tema</span>:</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>- ¿Cuándo se activa el módulo de Cobro de cuota y qué particularidades tiene?&nbsp;</li>
+                <li>- ¿Por qué es esencial contar con un registro de precios al tratar el cobro de servicios en la aplicación? <br>- ¿Cómo se maneja el proceso de cobro si se genera inmediatamente después del registro del socio?</li>
+                <li>- ¿Cuáles son las consideraciones y la lógica detrás del diseño del carnet de socio?<br></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <p><br></p>
+        <ul>
+        </ul>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p dir="ltr"></p>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186565"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186565/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+
+
+        <p>En esta oportunidad pasaremos&nbsp; a analizar el módulo de
+            <span><span><span style=""><span style="color: rgb(0, 61, 245);" class=""><b class="sub_negrita">Cobro de cuota.</b> </span></span>
+            </span>
+            </span>Este módulo, además de incorporar lo visto hasta este momento, tendrá sus particularidades ya que contamos con la <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">emisión del carnet del socio y del documento</span></b> que nos avala el cobro
+            de la cuota</p>
+        <!-- Cuadro amarillo borde celeste-->
+        <br>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">La novedad que incorporamos con respecto al desarrollo anterior (en la materia Desarrollo de sistemas orientado a objetos) es que al ser una App el socio puede acceder solamente para visualizar su carnet.<br></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+            </div>
+        </div>
+
+        <p><br></p>
+        <p></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186566"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186566/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Tips para el Cobro de la cuota</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Pasamos a contar lógicamente de que se trata este módulo.</p>
+
+        <p>Este módulo es llamado o activado desde dos situaciones:</p><ul><div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><b class="sub_negrita">El socio se registra por primera vez en el Club deportivo&nbsp;</b>y paga su primera cuota dando origen al&nbsp;<span><b>carnet de socio</b></span>,&nbsp;</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Se encuentra al día siguiente del vencimiento de su cuota </span>y para acceder al club deportivo debe pagar el mes entrante.</p>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <ul>
+            <div style="margin-left: 3%; margin-right: 3%;">
+            </div>
+        </ul>
+        <p></p>
+
+        <p><b class="sub_negrita"><span style="color: rgb(0, 61, 245);">En ejemplos anteriores se propuso el siguiente diseño:</span></b></p>
+        <p></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186566/DAPM_S11_1.png" alt="" width="318" height="582" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX"></span></p>
+        <!-- Caja Verde-->
+        <br>
+        <div class="" style="width: 80%;  margin: 0 auto; ">
+
+            <div class="row">
+
+                <div class="col-1" style="background-color: #00BF63; border-radius: 4px 0px 0px 4px;">
+
+                    <div class="d-flex justify-content-center" style="margin-top: 20px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="color: white;">
+						                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"></path>
+  <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"></path>
+</svg>
+
+                    </div>
+                </div>
+
+                <div class="col-11" style="background-color: #F2FFF9;border: 1px solid #00BF63; border-radius: 0px 4px 4px 0px;">
+
+                    <p style="margin-top: 16px;"><b class="sub_negrita">Como podemos observar</b></p>
+                    <p>
+                    </p>
+                    <ul>
+                        <li>Cuenta con un<b class="sub_negrita"> botón </b>que hace referencia al cobro de la cuota que se usa en cada vencimiento de la misma.&nbsp;</li>
+                        <li><b class="sub_negrita">Cuando se trata del registro del socio</b> una vez confirmados los datos e ingresados a la base de datos, la App, debe enviarnos automáticamente a la pantalla de cobro de cuota sin pasar por el click del
+                            botón que lo invoca.</li>
+                    </ul>
+                    <p></p>
+                </div>
+                <br>
+                <!-- Fin Caja Verde-->
+                <p><br></p>
+                <p><br></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186567"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186567/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Lógica para el cobro</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Cuando estamos frente al cobro de un servicio, como es este caso, contamos con un <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">registro de precios ya sea una escala o un precio único.</span> </b></p>
+
+        <p>Tal vez te preguntes ¿por qué y para qué tener un registro de precios? Analicemos juntos la situación.&nbsp;</p>
+      <!--Inicio caja ejemplo-->
+<div class="row row-cols-auto">
+    <div>
+        <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Ejemplo</p>
+    </div>
+    <div class="col" style="border-left: solid  #4E7CFA 2px;">
+        <p style=" color: #4E7CFA"><span class=" " style="font-size: large; ">Si contamos con un registro de precios el código de forma automática calcula el monto final y nos aseguramos que mientras ese registro este actualizado no incurrimos en errores a la hora de cobrar el servicio. Por el contrario si no contamos con el registro de precios el empleado responsable de cobro de la cuota debe ingresarlo manualmente, pudiendo incurrir en errores intencionales o no intencionales.</span></p></div></div>
+<!-- Cuadro amarillo borde celeste-->
+<br>      
+  <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">Recordá que estos son tips para la codificación y tal vez tu modelo de datos no cuenta con una tabla que tenga los precios que cobra el club deportivo.&nbsp;</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+            </div>
+        </div>
+
+        <p>Tal vez en el relevamiento inicial no se consideró la posibilidad de que el socio quiera concurrir
+            15 días en lugar de un mes entero y no siempre el valor de los 15 días es la mitad del valor del mes entero.</p>
+
+        <p><b class="sub_negrita">Como son sugerencias tendrás que amoldarte a tu modelo de datos.</b></p>
+        <p><br></p>
+        <p></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186568"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186568/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Cobro en el registro de socio</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Si el cobro se genera inmediatamente después del registro del socio, ya contamos con el <span><b style=""><span style=""><span class="" style="color: rgb(0, 61, 245);">id</span> </span>
+            </b>
+            </span>o <b class="sub_negrita"><span style="color: rgb(0, 61, 245);">dato
+clave</span></b> asignado al nuevo socio que permite identificarlo entre todos ellos.
+        </p>
+
+        <p></p>
+        <ul>
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Si consideramos la posibilidad de pagar 1 mes o 15 días, el diseño debe mostrar un&nbsp;<b class="sub_negrita"><span>Editas&nbsp;</span></b>para ingresar esa información o contar con opciones ya que puede ser un periodo de tiempo o el otro (nunca
+                            ambos juntos) o el componente que más te guste que permite tomar información desde el teclado</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+  <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Si contamos con un registro de precios, consultamos con la tabla de la base de datos correspondiente, caso contrario con un <b class="sub_negrita">ediText</b> ingresamos el monto.</p></div></div></div></ul>
+        <ul>
+            <div style="margin-left: 3%; margin-right: 3%;">
+            </div>
+        </ul>
+        <p></p>
+
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #00BF63; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #00BF63; font-size: large; font-weight: 600">El id o dato clave</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> lo usaremos para almacenar en la tabla que registre la operación&nbsp; de cobro y a su vez nos permite recuperar los datos significativos del socio como ser, su nombre y apellido, de la tabla socio en caso de no traerlos desde la pantalla
+                    anterior.
+                </p>
+            </div>
+        </div>
+
+        <p>Una vez registrado el cobro de la cuota podemos pasar a mostrar el documento de pago.
+        </p><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186569"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186569/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Cobro de la cuota mensual</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Si el cobro hace referencia a la mensualidad que abona el socio para ingresar al club debemos determinar cuál o cuáles son los datos que se solicitan para proceder con el circuito.</p><ul><div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">¿Podemos solicitar el nro. o id del socio? ¡</span>Sí!</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+<path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Pero, el socio ¿recuerda ese número?</span>&nbsp;Puede ocurrir que alguno no lo recuerde, entonces, si solicitamos ese dato debe existir otras opciones de filtro para la búsqueda del socio.</p></div></div></div></ul>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">La opción que nunca falla es el tipo y número de documentos, no incluimos el nombre y apellido ya que la combinación de ellos puede repetirse en más de un socio.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+            </div>
+        </div>
+
+        <p>Ese datos nos permite verificar si esta vencido el plazo de la cuota y quién es el socio para usar los datos significativos en el documento de pago.</p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">Una vez registrado el cobro de la cuota podemos pasar a mostrar el documento de pago.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p></div></div>
+        <p><br></p>
+        <p></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186570"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186570/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Documento de pago</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">El <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">documento de pago</span></b> puede tener el diseño que determine el equipo de desarrollo (ticket, recibo, etc.)
+            <!--Tabla fila columna-->
+            <br>
+        </p>
+        <table class="tabla-simple texto-principal" style="color: rgb(1, 6, 20); font-size: large; width: 80%; margin: 0px auto;">
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="80%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado">Sus datos son:</td>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>el número del documento,&nbsp;<br></li>
+                            <li>nombre del documento,&nbsp;<br></li>
+                            <li>fecha,&nbsp;<br></li>
+                            <li>datos del emisor del documento,&nbsp;<br></li>
+                            <li>datos del receptor del documento,&nbsp;<br></li>
+                            <li>detalle y,<br></li>
+                            <li>monto.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+        <ol style="color: rgb(1, 6, 20); font-size: large;">
+        </ol>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">
+        </p>
+        <ul>
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" class="">Pasemos ahora a analizar este documento desde Kotlin</span><span class="" style="font-size: large;"><br></span></p>
+                        <ul>
+                            <div></div>
+                        </ul>
+                        <p></p>
+                        <p><span class="" style="font-size: large; color: rgb(51, 51, 51);">Si consideramos lo explicado en las páginas anteriores vemos que el documento se visualiza en la pantalla siguiente de la que manipulamos los datos.</span></p>
+                        <p><span class="" style="font-size: large; color: rgb(51, 51, 51);">Cuando queremos pasar de una&nbsp;</span><i><span class="" style="font-size: large; color: rgb(51, 51, 51);">activity&nbsp;</span></i><span class="" style="font-size: large; color: rgb(51, 51, 51);">a otra usamos el&nbsp;</span><span><span><i><span class="" style="font-size: large; color: rgb(51, 51, 51);">intent</span></i>
+                            </span><span class="" style="font-size: large; color: rgb(51, 51, 51);">&nbsp;</span></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">para invocar a la activity que queremos pasar, ¿te acordas? Vamos a usar dentro del intent al método&nbsp;</span><b class="sub_negrita"><span><span class="" style="font-size: large; color: rgb(51, 51, 51);">putExtra</span><span class="" style="font-size: large; color: rgb(51, 51, 51);">&nbsp;</span></span></b>
+                            <span class="" style="font-size: large; color: rgb(51, 51, 51);">para llevar los datos que deben aparecer en el diseño del documento.</span>
+                        </p>
+                        <p></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" class="">Veamos de qué manera usamos las líneas de código:</span><span class="" style="font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);"> </span><br>
+                            <span class="" style="font-size: large; color: rgb(51, 51, 51);">En la semana 8 cuando tratamos la creación de la base de datos y en el modelo que usamos de ejemplo tenemos las tablas&nbsp;</span><b class="sub_negrita"><span class="" style="font-size: large; color: rgb(51, 51, 51);">alumno</span></b>
+                            <span class="" style="font-size: large; color: rgb(51, 51, 51);">,</span><b class="sub_negrita"><span class="" style="font-size: large; color: rgb(51, 51, 51);">&nbsp;</span><span class="" style="font-size: large; color: rgb(51, 51, 51);">curso</span></b>
+                            <span class="" style="font-size: large; color: rgb(51, 51, 51);">&nbsp;</span><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">y la relación entre ellos.</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" class="">Vamos a analizar la siguiente lógica:</span><span class="" style="font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);"> </span><br>
+                            <span class="" style="font-size: large; color: rgb(51, 51, 51);">En una&nbsp;</span><i><span class="" style="font-size: large; color: rgb(51, 51, 51);">activity&nbsp;</span></i><span class="" style="font-size: large; color: rgb(51, 51, 51);">se pide ingreso de un número de matrícula para mostrar en otra&nbsp;</span><i><span class="" style="font-size: large; color: rgb(51, 51, 51);">activity&nbsp;</span></i>
+                            <span class="" style="font-size: large; color: rgb(51, 51, 51);">(pantalla), con un determinado diseño, el nombre apellido del alumno y nombre del curso al que se anotó.</span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186571"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186571/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Código del documento</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>La <i>query </i>que debemos armar involucra las tres tablas, la tabla relación para conocer cómo se vincula el alumno con el curso y las otras para traer los datos significativos.</p>
+
+        <p>Ya con esos datos veamos lo que en realidad nos convoca en esta explicación que es como pasar datos que por cálculos, resultados de <i>querys </i>o ingresados desde el teclado en una <i>activity </i>pasan a la <i>activity </i>que invocamos.</p>
+
+        <p>La <i>activity </i>que vamos invocar se llama <span><span style=""><b class="sub_negrita"><span style="color: rgb(0, 61, 245);">MainDocu</span></b>.</span>
+            </span>
+        </p>
+        <!-- Cuadro amarillo borde celeste-->
+        <br>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">Parte del código se escribe en la clase de la base de datos y otra parte en la&nbsp;<i>activity&nbsp;</i>origen de la invocación.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">&nbsp;</p>
+            </div>
+        </div>
+
+        <p><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">Veamos entonces:</span></b></p>
+
+        <p>
+        </p>
+        <ul>
+            <li>En la clase de la base de datos, que tiene el onCreate, el OnUpgrade y el código que usamos para otros eventos, vamos a crear una función.</li>
+            <li>Esta función tiene un parámetro de entrada que para nuestro ejemplo será una matrícula de alumno. La salida de la función es un <span><b class="sub_negrita"><span style="color: rgb(0, 61, 245);" class="">cursor</span></b><span class="" style="color: rgb(0, 61, 245);">
+</span> </span>que nos traerá el resultado de la <i>query</i>. La base de datos será de lectura y al <span><b style=""><span style="color: rgb(0, 61, 245);" class="">rawQuery</span></b>
+                </span> le pasamos la <i>query </i>y el parámetro.</li>
+        </ul>
+        <p></p>
+
+
+        <p></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186571/DAPM_S11_2.png" alt="" width="898" height="228" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX"></span></p>
+        <p>Como verás,<b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);"> la consulta involucra 3 tablas</span></b> y el lugar del parámetro colocamos un signo de pregunta.</p>
+
+        <p>
+        </p>
+        <ul>
+            <li>Luego en la <i>activity </i>origen de la invocación el resto del código. En este ejemplo lo colocamos en un Button en el evento OnClickListener()</li>
+            <li>La proyección de la consulta la guardamos en variables para llevarlas a la <i>activity </i>que tiene el diseño del documento (MainDocu).</li>
+        </ul>
+        <p></p>
+
+
+
+        <!-- Cuadro amarillo borde celeste-->
+        <br>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">Primero declaramos las variables: el botón, el EdiText que recibe el ingreso desde teclado y la que nos permite invocar a la&nbsp;<i>activity&nbsp;</i>del diseño del documento.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+            </div>
+        </div>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186571/DAPM_S11_3.png" alt="" width="682" height="91" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX"></span></p>
+        <p><b class="sub_negrita">Veamos el código del <i>button</i>.</b></p>
+        <p></p><br>
+        <p></p><br>
+        <p></p>
+        <p></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186572"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186572/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Código del button</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186572/DAPM_S11_4.png" alt="" width="901" height="679" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p></p>
+        <p>Observa que el código está dentro del evento del botón, instanciamos a la base, ejecutamos la función <span><b class="sub_negrita"><span style="color: rgb(0, 61, 245);" class="">realizarConsulta</span></b>
+            </span>con el parámetro. Posicionamos el cursor en la primera fila. En este ejemplo sabemos que arroja una única fila, no obstante dejamos el ciclo <i>do </i>… <i>while </i>para que veas como realizalo.</p>
+
+        <p>Las variables llamadas <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">uno, dos, tres</span></b> almacenan los 3 atributos que proyecto la consulta que son <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">nombre, apellido, nombreCur</span></b>            respectivamente. Estos nombres son exactos a los declarados en la creación de las tablas.</p>
+
+        <p>Para tomar los valores usamos el <b class="sub_negrita"><span><span class="" style="color: rgb(0, 61, 245);">putExtra()</span>, </span></b>este tiene dos parámetros, el primero que se escribe entre comillas, es el que contiene el dato que usamos
+            en la otra <i>activity </i>y el segundo a la variable que guarda el resultado del cursor.</p>
+
+        <p><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">Veamos cómo queda el código en MainDocu.</span></b></p>
+        <p></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186572/DAPM_S11_5.png" alt="" width="705" height="660" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX"></span></p>
+        <p>Por último en MainDocu, usamos esas variables en el lugar que seleccionamos. Para que nos muestre su valor debemos anteponer el signo $ al nombre que le asignamos en el putExtra() y las recuperamos con el método <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">getStringExtra()</span></b></p>
+        <p></p>
+        <p></p><br>
+        <p></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186573"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186573/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Tips para el diseño del carnet de socio</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>
+        </p>
+        <ul>
+            <div style="margin-left: 3%; margin-right: 3%;">A continuación te presentamos una serie de tips para que tengas en cuenta al momento de diseñar un carnet de socio:<br><br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+          <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"></path>
+  <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>El carnet del socio lo visualiza el empleado y el socio.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+<path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"></path>
+  <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>El diseño del carnet del socio puede tener un formato igual para todos y lo que cambia es el nombre y apellido del socio. Esos son los datos básicos, como dato extra se puede incluir la fecha
+                            de vencimiento de la cuota.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+<path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"></path>
+  <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>Todos estos datos están almacenados por lo tanto para obtenerlos debés realizar la consulta que proyecte lo que necesitás en el diseño.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+ <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"></path>
+  <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"></path>
+  <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>Si la visualización la hace el empleado, podés guardar en variables los datos mientras se ejecuta el ingreso del nuevo socio. Para transportar los datos al diseño del carnet usás lo mismo que
+                            explicamos en el diseño del documento. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+<path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"></path>
+  <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>Si la visualización la hace el socio tendrás un poco más de trabajo, analicemos por qué. </p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+<path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"></path>
+  <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>El socio ingresa su alias y contraseña en la App, entonces debés hacer una consulta para ver si existe esa combinación.</p>
+                    </div>
+                </div>
+            </div>
+        </ul><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">¿Cómo?</span> <br></b><br>De la misma forma que vimos en la semana 10 como buscar el curso proyectando el contador<span> <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">count(*)</span></b>
+        </span> que nos indica cuantas filas tiene la consulta.<br><br>
+        <ul>
+            <!-- 7 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+<path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"></path>
+  <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"></path>
+</svg>
+
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Si es distinta a 0 quiere decir que hay coincidencia, entonces buscá los datos que deben estar en el diseño del carnet del socio.</p>
+                </div>
+            </div>
+
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- Cuadro amarillo borde celeste-->
+                <br>
+                <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+                    <div style="margin:16px">
+                        <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">Usamos entonces lo que vimos en la explicación de esta semana en el diseño del documento.<br>Crearás muchas funciones, esto permite tener ordenado el código.</p>
+                        <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+                    </div>
+                </div><br></div>
+        </ul>
+    </div>
+</div>
+
+<br><br>
+<ul>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div class="row" style="margin-left: 32px">
+        </div>
+    </div>
+</ul>
+<p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><br></p>
+<p></p>
+
+
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186574"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186574/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Listado de socios</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%; font-size: large">
+        <p></p>
+        <p>Nos encontramos ante el último módulo del Club Deportivo: <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">el listado diario de socios a vencer. </span></b>Este componente es fundamental para identificar rápidamente a los
+            socios cuyas cuotas están pendientes, impidiéndoles el acceso a las instalaciones. <br>
+        </p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #00BF63; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #00BF63; font-size: large; font-weight: 600">Flexibilidad</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">En el criterio "a vencer" permite ajustarse a la lógica deseada. El listado puede incluir socios cuya fecha de vencimiento es el día en curso o aquellos cuya fecha corresponde al día anterior, considerando que hasta este último día aún
+                    pueden disfrutar de las instalaciones y servicios del club. </p>
+            </div>
+        </div>
+        <br>
+        <p>Siguiendo la tradición de compartir consejos, ofrecemos sugerencias valiosas para la creación del código correspondiente a este módulo. <br>
+            <!-- Cuadro amarillo borde celeste-->
+            <br>
+        </p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #0c76f0; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="text-align: center; color: rgb(12, 118, 240); font-size: large; font-weight: 600;">Este enfoque estratégico no solo resalta la importancia de mantener al día los registros de los socios, sino que también subraya la flexibilidad y adaptabilidad requerida para el desarrollo de la aplicación del Club Deportivo.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><br></p>
+            </div>
+        </div>
+
+        <br>Con este último módulo, cerramos un ciclo de aprendizaje enfocado en la aplicación práctica de conceptos para ofrecer una experiencia sólida y eficiente en la gestión de socios.<br>
+        <p></p>
+        <!--Inicio Caja celeste-->
+        <br>
+        <div class="col" style="border-left: solid  #0c76f0 3px; background-color: #edf5fd; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #0c76f0; font-size: large; padding: 14px; font-weight: 600"><span>Preguntas clave de este tema</span>:</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>- ¿Cuál es la relevancia del listado diario de socios a vencer en el contexto del Club Deportivo?<br>- ¿Cómo se puede ajustar el criterio "a vencer" según la lógica deseada para obtener información específica en el listado? <br>- ¿Qué
+                    componentes pueden utilizarse para mostrar eficientemente el listado y cómo difieren entre sí, especialmente en el caso de GridLayout y GridView? <br>- ¿Cuál es la importancia de incluir la cláusula "order by" en la consulta SQL para
+                    garantizar un orden adecuado en el listado? <br>¿Cuál es la experiencia del usuario al interactuar con el módulo del listado diario?</li>
+                <li></li>
+            </ul>
+        </div>
+
+        <p><br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p dir="ltr"></p>
+        <p></p>
+        <p dir="ltr"><b class="sub_negrita">¿Listo/a para empezar? ¡Adelante, el mundo del desarrollo te espera!</b></p><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186575"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186575/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Tenemos frente a nosotros el último módulo del Club Deportivo.</p>
+
+        <p>El<b class="sub_negrita">
+            <span><span style="color: rgb(0, 61, 245);" class="">listado diario de socios a vencer</span></span> </b>es una información muy importante para conocer rápidamente a los socios que no pueden ingresar por no tener su cuota al día.</p>
+
+        <p>Como nos dice <span><span style=""><span style=""><span style="color: rgb(0, 61, 245);" class=""><b class="sub_negrita">a vencer,</b></span></span><span class="" style="color: rgb(0, 61, 245);">&nbsp;</span></span>
+            </span>el criterio utilizado para la búsqueda puede ser de acuerdo a la lógica deseada. </p>
+        <!--Inicio Caja celeste-->
+        <br>
+        <div class="col" style="border-left: solid  #0c76f0 3px; background-color: #edf5fd; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #0c76f0; font-size: large; padding: 14px; font-weight: 600">Para tener en cuenta:</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>- El listado puede contener los que tiene como fecha de vencimiento los del día propiamente dicho, o aquellos que tengan la fecha del día anterior considerando que hasta ese día pueden hacer uso de las instalaciones y servicios del club.</li>
+            </ul>
+        </div>
+
+        <p><b>Como en otras oportunidades, te dejamos algunos tips para la creación del código.</b></p><br>
+        <p></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186576"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186576/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Tips para el Listado diario</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Cuando hablamos de listado, la información tiene una determinada estructura, ya que debe estar ordenada por algún criterio.</p>
+
+        <p>
+        </p>
+        <ul>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+          <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"></path>
+  <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Esta estructura suele tener columnas y filas y entre las columnas los datos se ordenan por jerarquía de importancia que disminuye a medida que nos acercamos al margen derecho, esto se debe al sentido
+                        de escritura (izquierda a derecha).</p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+<path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"></path>
+  <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Los datos a mostrar son los resultantes de la proyección de la consulta SQL que ejecutamos en la base de datos involucrando las tablas que sean necesarias en función del modelo de datos; además
+                        cuenta con la condición de filtro que en este caso es la&nbsp;<span><span>fecha<span>.</span></span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3d80b3">
+<path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"></path>
+  <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>No hay que olvidar incluir en la consulta el&nbsp;<b class="sub_negrita"><i>order by</i></b>&nbsp;de esta manera nos aseguramos que las filas resultantes ya estén ordenadas según el criterio adoptado. Este criterio
+                        puede ser apellido y nombre de los socios o que estén ordenados por el número de socio asignado entre otros.</p>
+                </div>
+            </div>
+        </ul>
+
+        <p><b class="sub_negrita">Veamos un ejemplo y el componente que podemos usar para mostrar los datos...</b></p><br>
+        <p></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186577"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186577/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Lógica para obtener el listado</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Repasemos la experiencia del usuario para este módulo.</p>
+
+        <p>
+        </p>
+        <ul>
+            <li>El usuario es el <span><span><b class="sub_negrita"><span style=""><span style="color: rgb(0, 61, 245);" class="">empleado</span></span><span class="" style="color: rgb(0, 61, 245);"> </span></b>
+                </span>
+                </span>y accede cuando hace click en el botón que da origen al módulo.</li>
+            <li>Entonces se debe pasar a otra <i>activity</i>, lo que usamos es el <span><i style="font-weight: bold;"><span class="" style="color: rgb(0, 61, 245);">intent</span></i>.</span>
+            </li>
+            <li>Podemos en el evento OnClikListener() del botón ejecutar la consulta (como hicimos en la semana 11) que se encuentra almacenada en un <span><i style="font-weight: bold;"><span style="color: rgb(0, 61, 245);">cursor</span></i>.</span>
+            </li>
+            <li>En esta instancia de codificación imaginamos que la consulta la colocaste en la clase de la base de datos y que la función tiene como salida al cursor.</li>
+        </ul>
+        <p></p>
+
+
+
+
+
+
+
+        <p>La diferencia que tenemos con lo implementado en la semana 11 es que el cursor puede tener <span><span style="color: rgb(0, 61, 245);" class=""><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">una o varias filas</span>
+            <span class="" style="color: rgb(0, 61, 245);">.</span>
+                </b>
+                </span>
+                </span>
+        </p>
+
+        <p>El componente que podemos usar para visualizar el listado puede ser un&nbsp;<b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">GridLayout</span>
+</i></b>o un <span><span style=""><b class="sub_negrita" style="font-style: italic;"><span class="" style="color: rgb(0, 61, 245);">GridView</span></b>.</span>
+            </span>
+        </p>
+
+        <p>Veamos en que difieren:</p>
+
+        <p>
+        </p>
+        <ul>
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">El GridLayout</span>&nbsp;es un contenedor que organiza sus hijos en una cuadrícula rectangular. Se puede especificar el número de columnas y filas, y cada elemento puede ocupar una o más celdas en
+                            la cuadrícula. Es más flexible y permite tener más control sobre la disposición de los elementos en la cuadrícula.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+<path d="M7.987 16a1.53 1.53 0 0 1-1.07-.448L.45 9.082a1.53 1.53 0 0 1 0-2.165L6.917.45a1.53 1.53 0 0 1 2.166 0l6.469 6.468A1.53 1.53 0 0 1 16 8.013a1.53 1.53 0 0 1-.448 1.07l-6.47 6.469A1.53 1.53 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0M8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873zM7.278 8 4.044 4.766 1.17 7.639a.51.51 0 0 0 0 .722l2.874 2.873z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">El GridView&nbsp;</span>es un componente específico de Android que hereda de&nbsp;<b class="sub_negrita"><i>AbsListView</i></b>&nbsp;y se utiliza para mostrar datos en una cuadrícula bidimensional.
+                            Es más adecuado cuando se trabaja con conjuntos de datos grandes y se necesita una vista de lista que se organice en varias columnas.</p>
+                    </div>
+                </div>
+            </div>
+        </ul><b class="sub_negrita">En nuestro caso vamos a utilizar un GridLayout.</b><br>
+        <p></p>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186578"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186578/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Diseño del listado</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Lo primero que debemos hacer es el diseño del contenedor; vamos a la <i>activity </i>correspondiente (en este ejemplo se llama <b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">activity_main_listado.xml</span><span class="" style="color: rgb(0, 61, 245);"> </span></i></b>)
+            e introducimos el <span><i style="font-weight: bold;"><span class="" style="color: rgb(0, 61, 245);">GridLayout</span></i><span class="" style="color: rgb(0, 61, 245);">.</span></span>
+        </p>
+
+        <p>En este caso es conveniente agregar al archivo el código del componente.</p>
+
+        <p><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">Te mostramos como hacerlo:</span></b></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186578/DAPM_S12_1.png" alt="" width="900" height="317" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX">La imagen te muestra el archivo XML de la <i>activity </i>con 2 TextView, para
+mostrar el título y la fecha actual, para agregar el GridLayout vamos a la
+solapa de código (resaltada con un cuadro en rojo en la imagen) y agregamos lo
+referido al componente que está resaltado en la imagen.<br></span></p>
+        <p><span lang="ES-MX"></span></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186578/DAPM_S12_2.png" alt="" width="900" height="480" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX"></span></p>
+        <p>Asignamos su id y es fundamental determinar la cantidad de columnas, esto lo podemos hacer buscando <b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">columnCount</span></i></b>; en este caso la cantidad es tres porque el ejemplo cuenta con
+            3 columnas.</p>
+
+        Ya con el diseño preparado pasemos al código.
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186579"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186579/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Código para el listado en la clase de la base de datos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Como venimos razonando, lo primero es construir la consulta a la base de datos con la información que deseamos visualizar en el listado, es obvio que esa función debe estar en la clase de la base de datos.</p>
+        <p></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186579/DAPM_S12_3.png" alt="" width="900" height="243" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX"></span></p>
+        <p>El siguiente código muestra la consulta:</p>
+        <p></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186579/DAPM_S12_4.png" alt="" width="900" height="640" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX"></span></p>
+        <p>Observamos que tenemos variables declaradas de tipo <b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">SQliteDatabase Cursor MutableList&lt;List&lt;String&gt;&gt;</span></i></b></p>
+
+        <p>También en otra variable declaramos nuestra consulta (observá que en este caso<b class="sub_negrita"><i>&nbsp;</i><span class="" style="color: rgb(0, 61, 245);">no </span></b>cuenta con condición de filtro en el <i>where</i>) que ya tiene el<span class="" style="color: rgb(0, 61, 245);"> </span>
+            <b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">order by</span></i></b>&nbsp;para que los datos estén ordenados.</p>
+
+        <p>El resultado proyectado se encuentra en la variable de tipo Cursor y nos movemos en cada una de las filas con el <span><i style="font-weight: bold;"><span class="" style="color: rgb(0, 61, 245);">While</span></i>.</span>
+        </p>
+
+        <p>La variable de nombre <span><b class="sub_negrita"><span style="color: rgb(0, 61, 245);" class="">fila</span></b><span class="" style="color: rgb(0, 61, 245);">
+</span> </span>arma cada columna de la grilla y coloca el contenido del atributo que mostramos en el <i>select </i>de la consulta.</p>
+
+        <p>Finalmente retornamos la lista en<b> </b><span><span style=""><span><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">return datos</span></b><span class="" style="color: rgb(0, 61, 245);">.</span></span>
+            </span>
+            </span>
+        </p>
+        <p><span><span style=""><span><br></span></span>
+            </span>
+        </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186580"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186580/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Código para el listado en la activity que tiene el GridLayout</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p>
+        <p>Al comenzar el código se debe controlar que figuren los <i><span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita">import&nbsp;</b></span></i>correspondientes a los componentes y clases que manejamos en la <i>activity</i>, por lo tanto <b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">debés tener el GridLayout, el de la fecha (si la manipulás), etc.</span></b></p>
+
+        <p>Pasemos al código.</p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186580/DAPM_S12_5.png" alt="" width="882" height="851" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span lang="ES-MX"></span></p>
+        <p>Como mi diseño, muestra la fecha comienzo con la declaración de las variables correspondientes.
+        </p>
+
+        <p><ul><li>Luego tenemos un bucle <span><b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">f</span><span style=""><span style="color: rgb(0, 61, 245);" class="">or </span></span>
+            </i>
+            </b>
+            </span>que se utiliza para iterar sobre cada fila de esa lista de listas.</li><li>En la variable resultadosConsulta, declarada como List&lt;List&lt;String&gt;&gt;, se guarda el resultado de la ejecución de la función que arma la lista con los datos de la base de datos, es decir lo que retorna el código explicado en la página
+            anterior de este libro; resultadosConsulta representa entonces los resultados de una consulta, donde cada elemento de la lista exterior (fila) es otra lista que contiene los valores de una fila de la consulta.</li><li>Como es una lista bidimensional el bucle externo <b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">(for (fila in
+resultadosConsulta))</span></i></b> itera sobre cada elemento de la lista exterior, que es otra lista. La variable fila ahora representa una fila completa de la consulta.
+        </li><li>El bucle interno <b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">(for (dato in fila))</span></i></b><span class="" style="color: rgb(0, 61, 245);"> </span>itera sobre cada elemento dentro de esa fila (que son String en este caso), permitiendo
+            acceder a los valores individuales de cada fila.</li><li>Finalmente con el <b class="sub_negrita"><i><span class="" style="color: rgb(0, 61, 245);">addView(textView)</span> </i></b>visualizamos los datos.</li></ul></p>
+
+        
+
+        
+
+        
+
+        
+
+        <p>Nuestro ejemplo muestra la lista de alumnos ordenada por apellido, mostrando apellido, nombre y nombre de curso.</p>
+        <p></p>
+        <p style="text-align: center;"><span lang="ES-MX"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186580/DAPM_S12_6.png" alt="" width="452" height="916" role="presentation" class="img-responsive atto_image_button_text-bottom"><br><br></span></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch186582"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2665739/mod_book/chapter/186582/_%20%2814%29.png" alt="dsdsd" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Etapa 5&nbsp;</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES">Dado el limitado tiempo de cursada, la práctica y revisión de los contenidos de la etapa 5 se ofrece de manera opcional, sin impacto en las evaluaciones. No obstante, reconocemos su valor para comprender integralmente el ciclo de vida de una aplicación y lo ponemos a disposición como recurso adicional.</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span lang="ES">La etapa despliegue y distribución de la aplicación es crucial tras el desarrollo de una aplicación, ya que se implementa la aplicación en entornos de producción, asegurando su funcionalidad y rendimiento. Se lleva a cabo la distribución a usuarios finales a través de plataformas como tiendas de aplicaciones. Se realizan pruebas exhaustivas para garantizar la estabilidad y se gestionan actualizaciones y correcciones. Además, se establecen estrategias de promoción y marketing para aumentar la visibilidad. Esta etapa asegura una transición eficiente del desarrollo a la disponibilidad pública, maximizando la accesibilidad y la satisfacción del usuario.</span></p>
+        <p></p>
+        <!-- Caja Violeta de descarga-->
+        <br>
+        <div class="" style="width: 80%;  margin: 0 auto; ">
+
+            <div class="row">
+
+                <div class="col-1" style="background-color: #460E95; border-radius: 4px 0px 0px 4px;">
+
+                    <div class="d-flex justify-content-center" style="margin-top: 20px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-link-45deg" style=" color: #FFFFFF" viewBox="0 0 16 16">
+  <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"></path>
+  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"></path>
+</svg>
+                    </div>
+                </div>
+
+                <div class="col-8" style="background-color: #FFFEEB;border: 1px solid #460E95; border-radius: 0px 4px 4px 0px;">
+
+                    <p style="text-align: center; margin-top: 16px;"><span style="font-size: large;" class=""><br></span></p><p style="text-align: center; margin-top: 16px;"><span style="font-size: large;" class="">Hacé clic&nbsp;<a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=655231" target="_blank"><span><b><u>aquí</u></b></span></a>&nbsp;para recorrer los contenidos de la etapa 5.</span><br></p>
+                    <p style="margin-top: 16px;"><span style="font-size: large;" class=""><br></span></p>
+                </div>
+                <br>
+                <!-- Fin Caja violeta de descarga-->
+                <p></p>
+                <p style="text-align: center; color: rgb(1, 6, 20); font-size: large;"><br></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[655204,655205,655206,655207,655209,655211,655213,655216,655217,655220,655221,655225,655226,655229,673166,675942,680349,682965,682966]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1734017170/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2665739, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1746451472); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1734017170/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random6818bec3ae58d2'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6818bec3ae58d2'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
