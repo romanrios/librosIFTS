@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S11. Firmas digitales | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1747420295/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S11. Firmas digitales | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1747420295_1747421455/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"96pw7gX2SP","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1747420295","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1747420296","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21039,"courseContextId":2643474,"contextid":2659503,"contextInstanceId":649503,"langrev":1748071445,"templaterev":"1747420296"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1747420296\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1747420296\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1747420296\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1747420296\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1747420296\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21039 context-2659503 cmid-649503 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1747420295/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S11. Firmas digitales</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Tecnologías de la Información y Comunicación 2° A 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S11. Firmas digitales
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        sábado, 24 de mayo de 2025, 12:06
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <!-- <article class="flex_titulo_botonera">
+    <p class="titulo_principal">Tu itinerario</p> -->
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+
+            <article class="touch_point">
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21039&amp;section=13" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649502" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"></path>
+                            </svg>
+                        </div>
+                        <p>Recorré</p>
+                    </section>
+                </a>
+
+
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-option" viewBox="0 0 16 16">
+                                <path d="M1 2.5a.5.5 0 0 1 .5-.5h3.797a.5.5 0 0 1 .439.26L11 13h3.5a.5.5 0 0 1 0 1h-3.797a.5.5 0 0 1-.439-.26L5 3H1.5a.5.5 0 0 1-.5-.5zm10 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"></path>
+                                </svg>
+                    </div>
+                    <p>Conectá<a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=472633" class="link" style="background-color: rgb(255, 255, 255); font-size: 0.9375rem; display: inline !important;"></a></p><section class="boton_texto_centrado" style="display: inline !important;"><br></section></section>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649504" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="m10 10.414 4 4 5.707-5.707L22 11V5h-6l2.293 2.293L14 11.586l-4-4-7.707 7.707 1.414 1.414z"></path></svg>
+                        </div>
+
+                        <p>Proyectá</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+<script>
+            document.addEventListener("DOMContentLoaded", function() {
+
+                let pantallaDesktop = window.innerWidth;
+                let pantallaCelular = 700;
+
+                if (pantallaDesktop < pantallaCelular) {
+                    document.getElementById("botonera").style.display = "none"
+                }
+            });
+        </script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Saberes técnicos" class="font-weight-bold text-decoration-none" href="#ch179912">1. Saberes técnicos</a></li><li><a title="2. Firmas digitales" class="font-weight-bold text-decoration-none" href="#ch179899">2. Firmas digitales</a></li><li><a title="3. Firmas de clave simétrica: En el caso de Alice, Bob y Trudy" class="font-weight-bold text-decoration-none" href="#ch179900">3. Firmas de clave simétrica: En el caso de Alice, Bob y Trudy</a></li><li><a title="4. Firmas de clave pública: El caso de Alice, Bob y Trudy" class="font-weight-bold text-decoration-none" href="#ch179901">4. Firmas de clave pública: El caso de Alice, Bob y Trudy</a><ul><li><a title="4.1. Algunos problemas de firmas de clave pública" class="text-decoration-none" href="#ch179913">4.1. Algunos problemas de firmas de clave pública</a></li></ul></li><li><a title="5. Críticas a los métodos de firma: autentificación y confidencialidad." class="font-weight-bold text-decoration-none" href="#ch179902">5. Críticas a los métodos de firma: autentificación y confidencialidad.</a></li><li><a title="6. Firma digital mediante el uso de resúmenes de mensaje: En el caso de Alice y Bob" class="font-weight-bold text-decoration-none" href="#ch179914">6. Firma digital mediante el uso de resúmenes de mensaje: En el caso de Alice y Bob</a><ul><li><a title="6.1. Funcionamiento de SHA-1. En el caso de Alice y Bob" class="text-decoration-none" href="#ch179903">6.1. Funcionamiento de SHA-1. En el caso de Alice y Bob</a></li><li><a title="6.2. Función para el resumen de mensajes: SHA-2" class="text-decoration-none" href="#ch179915">6.2. Función para el resumen de mensajes: SHA-2</a></li></ul></li><li><a title="7. Administración de claves públicas" class="font-weight-bold text-decoration-none" href="#ch179904">7. Administración de claves públicas</a><ul><li><a title="7.1. Certificados. En el caso de Alice y Bob" class="text-decoration-none" href="#ch179905">7.1. Certificados. En el caso de Alice y Bob</a></li><li><a title="7.2. Tipo de certificado: X.509" class="text-decoration-none" href="#ch179906">7.2. Tipo de certificado: X.509</a></li></ul></li><li><a title="8. Seguridad en la comunicación" class="font-weight-bold text-decoration-none" href="#ch179907">8. Seguridad en la comunicación</a><ul><li><a title="8.1. Seguridad IP (Ipsec)" class="text-decoration-none" href="#ch179908">8.1. Seguridad IP (Ipsec)</a></li><li><a title="8.2. Características" class="text-decoration-none" href="#ch179916">8.2. Características</a></li><li><a title="8.3. Modos" class="text-decoration-none" href="#ch179917">8.3. Modos</a></li><li><a title="8.4. Encabezado de autenticación" class="text-decoration-none" href="#ch179918">8.4. Encabezado de autenticación</a></li></ul></li><li><a title="9. Firewalls" class="font-weight-bold text-decoration-none" href="#ch179909">9. Firewalls</a><ul><li><a title="9.1. Sofisticación" class="text-decoration-none" href="#ch179919">9.1. Sofisticación</a></li><li><a title="9.2. Algunas consideraciones acerca de firewall" class="text-decoration-none" href="#ch179920">9.2. Algunas consideraciones acerca de firewall</a></li></ul></li><li><a title="10. Redes privadas virtuales (VPN)" class="font-weight-bold text-decoration-none" href="#ch179910">10. Redes privadas virtuales (VPN)</a><ul><li><a title="10.1. Construir VPN" class="text-decoration-none" href="#ch179921">10.1. Construir VPN</a></li></ul></li><li><a title="11. Checkpoint" class="font-weight-bold text-decoration-none" href="#ch179911">11. Checkpoint</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179912"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179912/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Conectá saberes técnicos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p>
+        <p></p>
+        <p>La competencia técnica de un/a desarrollador/a de software es vital al abordar cuestiones cruciales de seguridad digital. La firma digital, una técnica criptográfica, autentica y verifica documentos electrónicos, asegurando la integridad de la
+            información en entornos digitales. Su relevancia se evidencia en la confianza que aporta a la autenticidad de los documentos en línea.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Las firmas digitales</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Desempeñan un papel clave en la autenticación y verificación de documentos electrónicos, proporcionando confiabilidad en entornos digitales. La certificación en claves de seguridad implica la validación de claves públicas, fortaleciendo
+                    la protección de datos y garantizando la legitimidad de las comunicaciones digitales. </p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p>La comprensión de firewalls, como guardianes digitales, es esencial para los desarrolladores al entender su función en la seguridad de redes, controlando el tráfico y previniendo accesos no autorizados. Por último, la familiaridad con VPNs permite
+            a los desarrolladores entender su utilidad crucial al cifrar las comunicaciones, salvaguardando la privacidad y seguridad de la información en línea.<br></p>
+        <p></p>
+        <!--Inicio Caja violeta-->
+        <br>
+        <div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Y..., ¿para qué estos saberes técnicos?</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li></li>
+                <ol>
+                    <li>
+                        <p><b><strong>Entendimiento del proceso criptográfico:</strong></b> Un/a desarrollador/a debe tener un conocimiento exhaustivo del proceso criptográfico detrás de la firma digital. Esto incluye la comprensión de algoritmos criptográficos
+                            asimétricos, como RSA, utilizados para generar pares de claves y firmar documentos digitalmente.</p>
+                    </li>
+                    <li>
+                        <p><b><strong>Integración efectiva en aplicaciones y plataformas:</strong></b> La capacidad para integrar de manera efectiva la firma digital en aplicaciones y plataformas es esencial. Los/as desarrolladores/as deben asegurarse de que la
+                            implementación sea robusta, garantizando la autenticación y verificación adecuadas de documentos electrónicos dentro de los sistemas que construyen.</p>
+                    </li>
+                    <li>
+                        <p><b><strong>Conciencia de prácticas de seguridad y normativas:</strong></b> La firma digital a menudo está sujeta a normativas y estándares de seguridad. Los/as desarrolladores/as deben estar al tanto de estas prácticas de seguridad, como
+                            la gestión segura de claves y certificados, para garantizar el cumplimiento de regulaciones y la protección adecuada de la información.</p>
+                    </li>
+                </ol>
+                <li></li>
+            </ul>
+        </div>
+
+        <b><strong>¡Comencemos!</strong></b>
+        <!--Fin Caja violeta-->
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179899"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179899/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Firmas digitales</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>La autenticidad de muchos documentos legales, financieros y de otros tipos se determina mediante la presencia o ausencia de una firma manuscrita autorizada. Las fotocopias no cuentan. Para que los sistemas de mensajes computarizados reemplacen
+            el transporte físico de papel y tinta, hay que encontrar un método que permita firmar documentos de una manera imposible de falsificar.
+        </p>
+        <p>El problema de idear un reemplazo para las firmas manuscritas es difícil. En esencia, lo que se requiere es un sistema mediante el cual una parte pueda enviar un mensaje firmado a otra parte de modo que se cumplan las siguientes condiciones:
+        </p>
+
+        <br>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Que el receptor pueda verificar la identidad del transmisor:</span> <b><span>El primer requerimiento</span>&nbsp;</b>es necesario, por ejemplo, en los sistemas financieros. Cuando la computadora de un cliente
+                    ordena a la computadora de un banco que compre una tonelada de oro, ésta necesita asegurarse de que la computadora que da la orden realmente pertenece al cliente a cuya cuenta se le aplicará el cargo. En otras palabras, el banco
+                    tiene que autentificar la identidad del cliente (y éste a su vez tiene que autentificar al banco).</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Que el emisor no pueda repudiar más tarde el contenido del mensaje:</span> <b><span>El segundo requerimiento</span></b><span>&nbsp;</span>es necesario para proteger al banco contra los fraudes. Suponga que
+                    el banco compra la tonelada de oro y justo después, el precio del oro cae drásticamente. Un cliente deshonesto podría entonces proceder a demandar al banco, alegando que nunca emitió una orden para comprar el oro. Cuando el banco
+                    presente el mensaje en la corte, el cliente puede negar haberlo enviado. La propiedad de que ninguna parte de un contrato pueda más tarde negar haber firmado se conoce como no repudio.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Que el receptor no haya podido elaborar el mensaje él mismo:</span> <b><span>El tercer requerimiento</span>&nbsp;</b>es necesario para proteger al cliente en el caso de que el precio del oro se dispare y
+                    que el banco trate de construir un mensaje firmado en el que el cliente haya solicitado un lingote de oro en lugar de una tonelada. En este escenario fraudulento, el banco simplemente se queda con el resto del oro.</p>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179900"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179900/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Firmas de clave simétrica</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>Una metodología para las firmas digitales es tener una autoridad central que sepa todo y en quien todos confíen; digamos el Gran Hermano (Big Brother, o BB). Así, cada usuario escoge una clave secreta y la lleva personalmente a las oficinas
+            del BB.&nbsp;</p>
+        <p><span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita"><span class="" style="font-size: x-large;">Volviendo al caso de Alice, Bob y Trudy</span></b>
+            </span>
+        </p>
+        <p>En función de lo anterior, y teniendo en cuenta el caso de Alice y sus mensajes secretos con Bob, su banquero, sólo Alice y el BB conocen la clave secreta de Alice.</p>
+        <p>Cuando Alice desea enviar un mensaje de texto plano firmado (P) a su banquero Bob, genera KA(B, RA, t, P), en donde:&nbsp;</p>
+        <p></p>
+        <ul>
+
+            <br>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>B es la identidad de Bob&nbsp;</p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>RA es un número aleatorio elegido por Alice</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>t es una estampa de tiempo para asegurar que el mensaje sea reciente</p>
+                </div>
+            </div>
+
+
+            <!-- 4 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>KA(B, RA, t, P) es el mensaje encriptado con su clave, KA.&nbsp; </p>
+                </div>
+            </div>
+        </ul>&nbsp;¿Cuáles son los pasos?&nbsp;<br>
+
+        <br>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600"></span>Alice lo envía como se muestra en la figura 1.&nbsp;</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600"></span>El BB ve que el mensaje proviene de Alice, lo desencripta y envía un mensaje a Bob como se muestra.&nbsp;</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600"></span>El mensaje para Bob contiene el texto plano del mensaje de Alice y también el mensaje firmado KBB(A, t, P).&nbsp;</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600"></span>Ahora, Bob se encarga de la solicitud de Alice. </p>
+            </div>
+        </div>
+        <p><br></p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179900/zxv.png" alt="zxv" width="600" height="145" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 1.: Firma digital con el Gran Hermano (Big Brother).
+        </p>
+
+        <div style="margin-left: 3%; margin-right: 3%;"><br></div><span class="" style="font-size: x-large;"><b class="sub_negrita"><span class="" style="color: rgb(0, 61, 245);">El caso en la corte</span></b>
+        </span><br>
+
+        <!-- Fin imagen -->
+
+
+        <p>¿Qué ocurre si más tarde Alice niega haber enviado el mensaje?&nbsp;</p>
+        <p>
+        </p>
+        <ul>
+            <li>Todos los involucrados inician procesos legales unos contra otros (al menos en Estados Unidos).</li>
+            <li>La disputa se traslada al ámbito judicial.</li>
+            <li>Alice contradice la afirmación de haber enviado el mensaje a Bob.</li>
+            <li>El juez pregunta a Bob por qué está tan seguro de que el mensaje en disputa vino de Alice y no de Trudy (la intrusa que quería interceptar los mensajes).&nbsp;<br></li>
+            <li>El juez busca evidencia que respalde la afirmación de Bob.</li>
+            <li>Bob primero indica que el BB no aceptaría un mensaje de Alice a menos que estuviera encriptado con KA, por lo que no hay posibilidad de que Trudy enviara al BB un mensaje falso de Alice sin que el BB lo detectara de inmediato.<br></li>
+            <li>Bob muestra una prueba que supuestamente verifica el mensaje de Alice: "KBB (A, t, P)".</li>
+            <li>El juez busca confirmación independiente de la autenticidad del mensaje.</li>
+            <li>El BB, entidad confiable, confirma la autenticidad del mensaje mediante desencriptación.</li>
+            <li>Basado en la evidencia presentada, el juez dictamina en favor de Bob. Caso Cerrado</li>
+        </ul>
+        <p></p>
+        <p>Un problema potencial con el protocolo de firma de la figura 1 es que Trudy reproduzca cualquiera de los dos mensajes.&nbsp;</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12" style="margin: 0% auto">
+                    <div class="box ">
+                        <div class="container-sm" ;="" style="text-align: left">
+                            <div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">Para minimizar este problema, en todos los intercambios se usan estampas de tiempo. Además, Bob puede revisar todos los mensajes recientes para ver si se utilizó RA en cualquiera de ellos. De ser así, el mensaje se descarta
+                                como repetición. Observemos que con base en la estampa de tiempo, Bob rechazará los mensajes muy viejos.
+                                <br></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><br></p>
+
+        <p>Para protegerse contra ataques de repetición instantánea, simplemente examina el RA de cada mensaje entrante para ver si se ha recibido dicho mensaje de Alice durante la hora pasada. Si no, Bob puede suponer con seguridad que ésta es una solicitud
+            nueva.
+        </p>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179901"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179901/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Firmas de clave pública
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>Un problema estructural con el uso de la criptografía de clave simétrica para las firmas digitales, es que todos tienen que estar de acuerdo en confiar en el Gran Hermano. Es más, el Gran Hermano puede leer todos los mensajes firmados. Los
+            candidatos más lógicos para operar el servidor del Gran Hermano son: el gobierno, los bancos, los contadores y los abogados. Teniendo en cuenta que muchos ciudadanos no confían en alguna de estas instituciones, la criptografía de clave
+            pública puede hacer una contribución importante en este sentido.&nbsp;</p>
+        <p><b class="sub_negrita"><span class="" style="font-size: x-large; color: rgb(0, 61, 245);">El caso de los mensajes secretos de Alice y Bob</span></b></p>
+        <p>Vamos a suponer que los algoritmos de encriptación y desencriptación de clave pública tienen la propiedad de que E(D (P)) 5 P, además (desde luego) de la propiedad normal de que D (E(P)) 5 P, (RSA (Rivest, Shamir y Adleman) sistema criptográfico
+            de clave pública, tiene esta propiedad, por lo que el supuesto es razonable.)&nbsp;</p>
+        <p>Suponiendo que éste sea el caso, ¿cómo es la secuencia de pasos?<span class="" style="color: rgb(255, 51, 204);">&nbsp;</span></p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+
+            <br>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Alice puede enviar un mensaje de texto plano firmado (P) a Bob al transmitir EB(DA(P)).&nbsp;</p>
+                </div>
+            </div>
+
+            <p><b><span class="" style="color: rgb(0, 61, 245);">Nota</span></b>. Observa bien que Alice conoce su propia clave (privada), DA, así como la clave pública de Bob, EB, por lo que Alice puede elaborar este mensaje.<br></p>
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Cuando Bob recibe el mensaje, lo transforma mediante su clave privada de la manera usual, para producir DA(P) como se muestra en la figura 2.&nbsp;</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Bob almacena este texto en un lugar seguro y después aplica EA para obtener el texto plano original.</p>
+                </div>
+            </div>
+            <p><br></p>
+            <div style="text-align: center;">
+                <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179901/xv%20x.png" alt="xzv" width="800" height="231" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                </p>
+            </div>
+
+            <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 2: Firma digital mediante el uso de la criptografía de clave pública.</p>
+
+            <br>
+
+            <!-- Fin imagen -->
+
+            <p><span class="" style="color: rgb(0, 61, 245); font-size: x-large;"><b class="sub_negrita">El caso en la corte</b></span></p>
+            <p>
+            </p>
+            <ol>
+                <li>Para ver cómo funciona la propiedad de firma, supongamos que más tarde Alice niega haber enviado el mensaje P a Bob.</li>
+                <li>Cuando el caso llega a la corte, Bob puede presentar tanto P como DA(P).</li>
+                <li>El juez puede comprobar fácilmente que Bob tiene un mensaje válido encriptado por DA con sólo aplicarle EA.</li>
+                <li>Puesto que Bob no conoce la clave privada de Alice, la única forma en que Bob pudo haber adquirido un mensaje encriptado por esa clave sería que Alice en efecto lo hubiera enviado.</li>
+                <li>Mientras esté en la cárcel por perjurio y fraude, Alice tendrá tiempo suficiente para diseñar algoritmos de clave pública nuevos e interesantes.</li>
+            </ol> <br>
+            <p></p>
+            <br>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179913"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179913/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Algunos problemas de firmas de clave pública
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><div style="margin-left: 3%; margin-right: 3%;"><br>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Dependencia de la confidencialidad de la clave privada (DA):</span> </p><ul><li>Bob puede demostrar que Alice envió un mensaje siempre y cuando DA permanezca en secreto.</li><li>Si Alice divulga su clave secreta, cualquier persona podría haber enviado el mensaje, incluido Bob mismo.</li></ul><p></p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Riesgo de repudio en situaciones financieras:</span> </p><ul><li>Ejemplo: Alice le da instrucciones financieras a Bob (su corredor de Bolsa).</li><li>Si el precio de las acciones o bonos cae después de las instrucciones de Alice, ella podría repudiar el mensaje, alegando robo de su clave privada.</li><li>Dependiendo de las leyes locales, Alice podría no ser legalmente responsable, especialmente si demuestra que descubrió el robo más tarde.</li></ul><p></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Cambio de claves y problemas legales:</span> </p><ul><li>Si Alice decide cambiar su clave, puede hacerlo legalmente y por conveniencia.</li><li>Sin embargo, en un caso legal, si se utiliza una clave diferente, el juez aplicará la EA actual a DA(P) y descubrirá que no produce el mensaje original P.</li><li>Esto podría resultar en que Bob quede en una posición desfavorecida o ridiculizada en la corte.</li></ul><p></p>
+            </div>
+        </div>
+        <p><br></p></div></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179902"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179902/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Una crítica:&nbsp;se requiere autentificación, pero no confidencialidad.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>Una crítica a los métodos de firma, es que con frecuencia combinan dos funciones distintas: <b class="sub_negrita">autentificación</b> y <b class="sub_negrita">confidencialidad.&nbsp; </b>A menudo se requiere autentificación, pero no confidencialidad.
+            <br></p>
+        <p>Asimismo, con frecuencia es más fácil obtener una licencia de exportación si el sistema en cuestión sólo proporciona autentificación pero no confidencialidad. Veamos un esquema de autentificación que no requiere la encriptación del mensaje
+            completo.
+
+        </p>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p>Este esquema se basa en la idea de una función de <b class="sub_negrita">hash unidireccional </b>que toma una parte arbitrariamente grande de texto plano y, a partir de ella, calcula una cadena de bits de longitud fija. Esta función de hash,
+            MD, que se conoce comúnmente como resumen de mensaje <i>(message digest</i>), tiene<b class="sub_negrita"> cuatro propiedades importantes: 
+</b></p>
+
+      
+      <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p>Dado P, es fácil calcular MD (P).</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Dado MD (P), es en efecto imposible encontrar P.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Dado P, nadie puede encontrar P′ de tal manera que MD (P′ ) = MD (P).</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Un cambio en la entrada de incluso 1 bit produce una salida muy diferente. </p>
+            </div>
+        </div>
+      
+      
+
+        <p>Para cumplir con el criterio 3, la función de hash debe tener al menos 128 bits de longitud, y de preferencia más. Para cumplir con el criterio 4, la función de hash debe truncar los bits en forma minuciosa, no como los algoritmos de encriptación
+            de clave simétrica que hemos visto.
+        </p>
+        <p>Es mucho más rápido calcular el compendio de mensaje a partir de una pieza de texto plano que encriptar ese texto plano con un algoritmo de clave pública, por lo que es posible utilizar los resúmenes de mensaje para acelerar los algoritmos
+            de firma digital.&nbsp;</p><p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179914"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179914/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Firma digital mediante el uso de resúmenes de mensaje.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>¿Qué pasa con estas propiedades en el caso de Alice, Bob y Trudy? Para ver cómo funciona esto, considera una vez más el protocolo de firma de la figura 3.<br></p></div><div style="margin-left: 3%; margin-right: 3%;">
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600"></span>En lugar de firmar P con KBB (A, t, P), el BB ahora calcula el resumen de mensaje mediante la aplicación de MD a P para producir MD(P).&nbsp;</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600"></span>A continuación, el BB incluye KBB(A, t, MD(P)) como quinto elemento de la lista encriptada con KB que se envía a Bob, en vez de KBB (A, t, P).</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600"></span>Si surge una disputa, Bob puede presentar tanto P como KBB (A, t, MD(P)). Una vez que el Gran Hermano (Big Brother) desencripta el mensaje para el juez, Bob tiene MD(P), el cual se garantiza que es genuino, junto con el supuesto P. Dado que es prácticamente imposible que Bob encuentre otro mensaje que dé este resultado de la función de hash, el juez se convencerá fácilmente de que dice la verdad.&nbsp;</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600"></span>Al usar los resúmenes de mensaje de esta manera, obtenemos un ahorro tanto en el tiempo de encriptación como en los costos de transporte de los mensajes. </p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600"></span>Los resúmenes de mensaje funcionan también en los criptosistemas de clave pública, como se muestra en la figura 3. Aquí, Alice primero calcula el resumen del mensaje de su texto plano. Después firma el resumen del mensaje y lo envía a Bob junto con el texto plano. Si Trudy reemplaza P en el camino, Bob verá esto cuando él mismo calcule MD(P).</p></div></div><div style="margin-left: 3%; margin-right: 3%;">
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179914/vcb.png" alt="vbsd" width="600" height="220" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 3. Firma digital mediante el uso de resúmenes de mensaje.</p>
+    </div>
+</div>
+<p><br></p></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179903"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179903/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Función para el resumen de mensajes: SHA-1</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>Se han propuesto una variedad de funciones para el resumen de mensajes. Una de las más utilizada es<b class="sub_negrita"> SHA-1</b> (Algoritmo de Hash seguro 1, del inglés Secure Hash Algorithm 1) (NIST, 1993). Al igual que todos los resúmenes
+            de mensaje, opera truncando los bits de una manera lo bastante complicada como para que cada bit de salida se vea afectado por cada bit de entrada. La NSA desarrolló el algoritmo SHA-1; el NIST lo bendijo en el FIPS 180-1. Procesa datos de
+            entrada en bloques de 512 bits y genera un resumen de mensaje de 160 bits.&nbsp;</p>
+        <p><b class="sub_negrita"><span class="" style="font-size: x-large; color: rgb(0, 61, 245);">SHA-1 en el caso de Alice y Bob</span></b></p>
+        <p>En la figura 4 se ilustra una forma típica para que Alice envíe a Bob un mensaje no secreto, pero firmado. Veamos los pasos:&nbsp;</p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+
+            <br>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Aquí su mensaje de texto plano se alimenta en el algoritmo SHA-1 para obtener un hash SHA-1 de 160 bits.&nbsp;</p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>A continuación, Alice firma el hash con su clave privada RSA y lo envía a Bob junto con el mensaje de texto plano.</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Después de recibir el mensaje, Bob calcula el hash SHA-1 por su cuenta y también aplica la clave pública de Alice al hash firmado para obtener el hash original, H.&nbsp;</p>
+                </div>
+            </div>
+
+
+            <!-- 4 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Si los dos concuerdan, el mensaje se considera válido.&nbsp; </p>
+                </div>
+            </div>
+
+
+            <!-- 5 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Puesto que no hay forma de que Trudy modifique el mensaje (texto plano) mientras está en tránsito y produzca uno nuevo que haga hash a H, Bob puede detectar con facilidad cualquier cambio que
+                        Trudy haya hecho al mensaje.&nbsp;</p>
+                </div>
+            </div>
+            <p>Para los mensajes cuya integridad es importante pero cuyo contenido no es secreto, el esquema de la figura 4 se utiliza mucho. Por un costo de cómputo relativamente bajo, garantiza que cualquier modificación hecha al mensaje de texto plano
+                en tránsito pueda detectarse con una probabilidad muy alta.</p>
+            <!-- inicio imagen -->
+            <br>
+            <div style="text-align: center;">
+                <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179903/bvnvbn.png" alt="bvn" width="600" height="193" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                </p>
+            </div>
+
+            <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 4: Uso de SHA-1 y RSA para firmar mensajes no secretos.
+            </p>
+
+            <br>
+
+            <!-- Fin imagen -->
+
+
+            <span style="color: rgb(0, 61, 245); font-weight: 600; font-size: x-large;" class="">Funcionamiento de SHA-1</span>
+            <p>Ahora veamos de manera breve cómo funciona SHA-1. Se empieza por rellenar el mensaje al agregar 1 bit al final, seguido de tantos bits 0 como sean necesarios (pero como mínimo 64) para que la longitud sea un múltiplo de 512 bits. A continuación,
+                al número de 64 bits que contiene la longitud del mensaje antes del relleno se le aplica un OR en los 64 bits de menor orden. En la figura 5, el mensaje se muestra con un relleno a la derecha debido a que el texto y las figuras van de
+                izquierda a derecha (es decir, por lo general el extremo inferior derecho se percibe como el final de la figura). En las computadoras esta orientación corresponde a máquinas big-endian como la SPARC, la IBM 360 y sus sucesores, pero
+                SHA-1 siempre rellena el final del mensaje, sin importar cuál máquina endian se utilice.
+            </p>
+
+            <!-- inicio imagen -->
+            <br>
+            <div style="text-align: center;">
+                <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179903/fdg.png" alt="ghj" width="600" height="213" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                </p>
+            </div>
+
+            <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 5: (a) Relleno de un mensaje a un múltiplo de 512 bits. (b) Las variables de salida. (c) El arreglo de palabras.</p>
+
+            <br>
+
+            <!-- Fin imagen -->
+            <p>Durante el cálculo, SHA-1 mantiene cinco variables de 32 bits, H0 a H4, donde se acumula el hash. Dichas variables se muestran en la figura 5(b). Se inicializan con constantes especificadas en el estándar. </p>
+            <p>Ahora se procesa cada uno de los bloques M0 a Mn−1. Para el bloque actual, las 16 palabras primero se copian al inicio de un arreglo auxiliar de 80 palabras, W, como se muestra en la figura 5(c). Después las otras 64 palabras de W se rellenan
+                mediante la fórmula
+            </p>
+            <!--Caja lila centrada-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12" style="background-color: #F3ECFD; margin: 0% auto">
+                        <div class="box ">
+                            <div class="container-sm">
+                                <div class="caja-lila texto-margen-caja-lila">
+
+
+                                    <!--ACÁ VA EL CONTENIDO-->
+                                    <p></p>
+                                    <p style="text-align: center;"><b><strong>Wi 5 S1 (Wi23 XOR Wi28 XOR Wi214 XOR Wi216) (16  i  79)</strong></b></p>
+                                    <p></p>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p><br></p>
+            <p>en donde Sb(W) representa la rotación circular izquierda de la palabra de 32 bits, W, por b bits. Ahora cinco variables de trabajo A a E se inicializan desde H0 hasta H4, respectivamente. </p>
+            <p>Podemos expresar el cálculo real en pseudo-C de la siguiente forma: </p>
+
+            <!-- inicio imagen -->
+            <br>
+            <div style="text-align: center;">
+                <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179903/xczx.png?time=1709039415406" alt="ghj" width="601" height="198" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                </p>
+            </div>
+            <br>
+
+            <!-- Fin imagen -->
+            <p>en donde las constantes Ki se definen en el estándar. Las funciones de mezcla fi se definen como
+            </p>
+
+            <!-- inicio imagen -->
+            <br>
+            <div style="text-align: center;">
+                <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179903/xcxc.png?time=1709039560745" alt="xzc" width="599" height="156" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                </p>
+            </div>
+            <br>
+
+            <!-- Fin imagen -->
+            <p>Cuando se completan las 80 iteraciones del ciclo, las variables A a E se agregan a las variables H0 a H4, respectivamente. </p>
+            <p>Ahora que se ha procesado el primer bloque de 512 bits, se inicia el siguiente. El arreglo W se reinicia desde el nuevo bloque, pero H se deja como estaba. Al terminar este bloque se inicia el siguiente, y así sucesivamente hasta que todos
+                los bloques de mensajes de 512 bits se hayan procesado por completo. Al terminar el último bloque, las cinco palabras de 32 bits en el arreglo H se envían a la salida como el hash criptográfico de 160 bits. El código de C completo
+                para SHA-1 se proporciona en el RFC 3174.
+            </p>
+            <br>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179915"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179915/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Función para el resumen de mensajes: SHA-2</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><p><br></p>
+        <p>Se han desarrollado nuevas versiones de SHA-1 que producen hashes de 224, 256, 384 y 512 bits. En conjunto, a estas versiones se les conoce como SHA-2. No sólo son estos hashes más largos que los hashes del SHA-1, sino que también se modificó
+            la función de resumen para combatir ciertas debilidades potenciales del SHA-1. El SHA-2 aún no se utiliza mucho, pero es probable que sea muy utilizado en el futuro.
+        </p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div><p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179904"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179904/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Administración de claves públicas
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        
+				<p>Mediante la criptografía de clave pública, las personas que no comparten una clave común de todos modos se pueden comunicar en forma segura. También es posible firmar mensajes sin la presencia de un tercero de confianza. Por último, gracias a los resúmenes de mensajes firmados el receptor puede verificar de una manera fácil y segura la integridad de los mensajes recibidos. 
+</p>
+				
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179905"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179905/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Certificados</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>En este sentido, se desarrolló una solución que no requiere que el centro de distribución de claves esté en línea todo el tiempo. De hecho, ni siquiera tiene que estar en línea. En su lugar, lo que hace es certificar las claves públicas
+            que pertenecen a las personas, empresas y otras organizaciones.
+        </p>
+        <p>En efecto, a una organización que certifica claves públicas se le conoce como <b class="sub_negrita">CA</b> (<i>Autoridad de Certificación, del inglés Certification Authority)</i>.
+        </p>
+        <p><span class="" style="color: rgb(0, 61, 245);"><b class="sub_negrita"><span class="" style="font-size: x-large;">Uso de certificados en el caso de Alice y Bob</span></b>
+            </span>
+        </p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+
+            <br>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Él puede ir con la CA con su clave pública, junto con su pasaporte o licencia de conducir para pedir su certificación.&nbsp;</p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>A continuación, la CA emite un certificado similar al que se muestra en la figura 1.6 y firma su hash SHA-1 con la clave privada de la CA.</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Luego, Bob paga la cuota de la CA y obtiene un CD-ROM que contiene el certificado con su hash firmado.</p>
+                </div>
+            </div>
+            <p>Supongamos que Bob desea permitir que Alice y otras personas que no conoce se comuniquen con él de manera segura. ¿Qué debería hacer?&nbsp;&nbsp;</p>
+            <!-- inicio imagen -->
+            <br>
+            <div style="text-align: center;">
+                <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179905/v%20xcdv.png" alt="xcvxcv" width="700" height="204" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                </p>
+            </div>
+
+            <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 6: Un posible certificado y su hash firmado.</p>
+
+            <br>
+
+            <!-- Fin imagen -->
+
+            <p>El trabajo fundamental de un certificado es enlazar una clave pública con el nombre de un personaje principal (individuo, empresa, etc.). Los certificados no son secretos ni están protegidos.&nbsp;</p>
+            <!--Inicio caja ejemplo-->
+            <div class="row row-cols-auto">
+                <div>
+                    <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Por ejemplo</p>
+                </div>
+                <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                    <p style=" color: #4E7CFA"><span class=" " style="font-size: large; "></span></p><p>Bob podría tomar la decisión de colocar su nuevo certificado en su sitio web, con un vínculo en la página de inicio que diga “Haga clic aquí para obtener mi certificado de clave pública”. El clic resultante podría regresar el certificado y el bloque de la firma (el hash SHA-1 firmado del certificado).</p><p></p>
+                </div>
+            </div>
+            <!--Fin Caja ejemplo-->
+            <p><br></p>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179906"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179906/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Tipo de certificado: X.509</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>Si todas las personas que quisieran algo firmado fueran a la CA con un tipo diferente de certificado, la administración de todos los distintos formatos pronto se volvería un problema.</p>
+        <!-- Cuadro amarillo borde violeta -->
+        &nbsp;Para resolverlo se ha diseñado un estándar para certificados, aprobado por la ITU (Unión Internacional de Telecomunicaciones) . Dicho estándar se conoce como X.509 y se utiliza mucho en Internet. Ha pasado por tres versiones desde su estandarización
+        inicial en 1988. Aquí analizaremos la versión V3.<br><br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Estándar X509</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Es una forma de describir certificados. Los campos principales en un certificado se listan en la figura 7. Las descripciones que se establecen en esa figura deben proporcionar una idea general de lo que hacen los campos. (Para tener información
+                    adicional, se puede consultar el estándar mismo o el RFC 2459)<span style="background-color: rgb(250, 250, 250);">&nbsp;</span></p>
+            </div>
+        </div>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Por ejemplo</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; "></span></p>
+                <p><span class="" style="color: #4E7CFA;">Si Bob trabaja en el Departamento de Préstamos del Banco Monetario, su dirección X.500 podría ser:</span></p>
+                <p style="text-align: center;"><b><span class="" style="color: #4E7CFA;">/C=MX/O=BancoMonetario/OU=Prestamo/CN=Bob/</span></b></p>
+                <p><span class="" style="color:#4E7CFA;">donde C corresponde al país, O a la organización, OU a la unidad organizacional y CN a un nombre común.</span></p>
+                <p></p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p><br></p>
+        <p>Las CA y otras entidades se nombran de forma similar. Un problema considerable con los nombres X.500 es que, si Alice está tratando de contactar a bob@bancomonetario.com y se le asigna un certificado con un nombre X.500, tal vez no sea obvio
+            para ella que el certificado se refiera al Bob que ella busca. Por fortuna, a partir de la versión 3 se permiten los nombres DNS en lugar de los nombres X.500, por lo que este problema se desvanecerá en un momento dado.
+        </p>
+        <p>Los certificados están codificados mediante la ASN.1 (Notación de Sintaxis Abstracta 1, del inglés Abstract Syntax Notation 1) de la OSI, que puede considerarse como si fuera una estructura de C, pero con una notación muy peculiar y prolija.
+            Es posible encontrar información acerca de X.509 en Ford y Baum (2000).
+        </p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179906/vcb.png" alt="cvb" width="600" height="308" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 7: Los campos básicos de un certificado X.509.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179907"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179907/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Seguridad en la comunicación </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>Luego de analizar cómo funciona la autenticidad, integridad y confidencialidad de la información en entornos digitales, a través de las firmas y certificaciones digitales, ahora nos enfocaremos en la seguridad en la comunicación. Es decir, <b class="sub_negrita">cómo llevar los bits de manera secreta y sin modificación desde el origen hasta el destino y cómo mantener fuera a los bits no deseados.</b>            Éstos no son de ningún modo los únicos aspectos de seguridad en las redes, pero sin duda están entre los más importantes, lo que hace de éste un buen lugar para comenzar nuestro análisis.
+        </p>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179908"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179908/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Seguridad IP (Ipsec)</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>La IETF (Internet Engineering Task Force) ha sabido por años que hay una escasez de seguridad en Internet. Agregarla no era fácil puesto que surgió una controversia acerca de dónde colocarla. La mayoría de los expertos en seguridad creían
+            que para ofrecer una verdadera seguridad, el sistema de cifrado y las verificaciones de integridad tenían que llevarse a cabo de extremo a extremo (en la capa de aplicación).&nbsp;</p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Esto es, el proceso de origen encripta o protege la integridad de los datos y los envía al proceso de destino, en donde se desencriptan o verifican.&nbsp;<br><br></p></div></div>
+        <p>Por lo tanto, es posible detectar cualquier alteración que se realice entre estos dos procesos, o en cualquier sistema operativo. El problema con este enfoque es que requiere cambiar todas las aplicaciones para que estén conscientes de la seguridad.&nbsp;</p><p>Desde esta perspectiva, el siguiente enfoque más conveniente es colocar el encriptado en la capa de transporte o en una nueva capa entre la capa de aplicación y la de transporte, con lo que se conserva el enfoque de extremo a extremo pero no hay que cambiar las aplicaciones.<br></p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Perspectiva opuesta:</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Considera que los usuarios no entiendan la seguridad y no son capaces de utilizarla de manera correcta, así como que nadie desee modificar los programas existentes de ninguna forma, por lo que la capa de red debe autentificar o encriptar paquetes sin que los usuarios estén involucrados. Después de años de batallas, esta perspectiva ganó suficiente soporte como para definir un estándar de seguridad de capa de red. En parte, el argumento era que al tener el encriptado en la capa de red no se evitaba que los usuarios conscientes de la seguridad hicieran lo correcto, además de que en cierto punto ayuda a los usuarios no conscientes de la seguridad.</p></div></div>
+        <p>El resultado de esta guerra fue un diseño llamado<b class="sub_negrita"> IPsec</b> <b class="sub_negrita">(Seguridad IP, del inglés IP security)</b>, el cual se describe en los RFC 2401, 2402 y 2406, entre otros. No todos los usuarios desean
+            encriptado (ya que exige muchos recursos computacionales); por esta razón, en lugar de hacerlo opcional, se decidió requerir siempre pero permitir el uso de un algoritmo nulo. Este algoritmo nulo se describe y alaba por su simplicidad, facilidad
+            de implementación y gran velocidad en el RFC 2410.
+        </p>
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179916"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179916/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Características. Seguridad IP (Ipsec)</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+        <p>El diseño IPsec completo es un <b class="sub_negrita">marco de trabajo para múltiples servicios, algoritmos y niveles de granularidad.</b> La razón de los servicios múltiples es que no todas las personas quieren pagar el precio por tener todos
+            los servicios todo el tiempo, por lo que están disponibles en todo momento.&nbsp;<br></p>
+        <p>Los servicios principales son:</p>
+        <ul>
+            <li>confidencialidad, <br></li>
+            <li>integridad de datos y <br></li>
+            <li>protección contra ataques de repetición (en donde un intruso repite una conversación).&nbsp;</li>
+        </ul>
+        <p>Todos estos servicios se basan en criptografía de clave simétrica debido a que es imprescindible un alto desempeño.
+        </p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+
+            <br>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>La razón de tener<b>&nbsp;múltiples algoritmos</b>&nbsp;es que un algoritmo que en estos momentos se considera seguro, se puede quebrantar en el futuro. Al hacer que el algoritmo IPsec sea independiente,
+                        el marco de trabajo puede sobrevivir incluso si alguno específico se quebranta más tarde.</p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>La razón de tener&nbsp;<b>múltiples niveles de granularidad</b>&nbsp;es para que sea posible proteger una sola conexión TCP (Transmission Control Protocol), todo el tráfico entre un par de
+                        hosts o todo el tráfico entre un par de enrutadores seguros, entre otras posibilidades.</p>
+                </div>
+            </div>
+            <p>Un aspecto de IPsec es que, aun cuando se encuentra en la capa IP, es orientado a conexión. En la actualidad, eso no es tan sorprendente porque para tener seguridad, se debe establecer y utilizar una clave durante cierto periodo (en esencia,
+                un tipo de conexión mediante un nombre distinto). Además, las conexiones amortizan los costos de configuración sobre muchos paquetes. Una “conexión” en el contexto de IPsec se conoce como SA (Asociación de Seguridad, del inglés Security
+                Association).&nbsp;
+            </p>
+            <p><br></p>
+          <!--Inicio caja Definición morada-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #9a3282; font-size: large; font-weight: 600">SA</p>
+            </div>
+            <div class="col" style="border-left: solid  #9a3282 2px;">
+                <p style=" color: #7746E2"><span class=" " style="font-size: large; color: #010614">Es una conexión simple entre dos puntos finales y tiene un identificador de seguridad asociado con ella. Si se necesita tráfico seguro en ambas direcciones, se requieren dos asociaciones de seguridad. Los identificadores de seguridad se transportan en paquetes que viajan en estas conexiones seguras, y se utilizan para buscar claves además de otra información relevante cuando llega un paquete seguro.</span></p>
+            </div>
+        </div>
+        <!--Fin Caja Definición morada-->
+
+            <p><br></p>
+            <p>Técnicamente, IPsec tiene dos partes principales.&nbsp;</p>
+            <ul>
+                <div style="margin-left: 3%; margin-right: 3%;">
+                    <!-- 1 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p><span style="font-weight: 600"></span>La primera describe dos encabezados nuevos que se pueden agregar a los paquetes para transportar el identificador de seguridad, los datos de control de integridad y demás información.&nbsp;</p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 2 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p><span style="font-weight: 600"></span>La otra parte, ISAKMP (Asociación para Seguridad en Internet y Protocolo de Administración de Claves, del inglés Internet Security Association and Key Management Protocol ), se encarga
+                                de establecer las claves. ISAKMP es un marco de trabajo.&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <ul>
+            </ul>
+            <p>El protocolo principal que realiza el trabajo es IKE (Intercambio de Claves de Internet, del inglés Internet Key Exchange). Hay que usar la versión 2 de IKE según lo descrito en el RFC 4306, ya que la versión anterior estaba plagada de
+                fallas, como se indica en Perlman y Kaufman (2000).
+            </p>
+            <p><br></p></div></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179917"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179917/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Modos. Seguridad IP (Ipsec)</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+        <p>IPsec puede utilizarse en uno de dos modos.&nbsp;</p><ul><div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>En el&nbsp;<b>modo de transporte</b>, el encabezado IPsec se inserta justo después del encabezado IP. El campo Protocolo del encabezado IP se modifica para indicar que sigue un encabezado
+                            IPsec después del encabezado IP normal (antes del encabezado TCP). El encabezado IPsec contiene información de seguridad, principalmente el identificador SA, un nuevo número de secuencia y tal vez una verificación de integridad
+                            del campo de carga.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span>En el <b class="sub_negrita">modo de túnel</b>, todo el paquete IP, con encabezado y demás información, se encapsula en el cuerpo de un paquete IP nuevo con un encabezado IP totalmente nuevo.
+                            El modo de túnel es útil cuando termina en una ubicación que no sea el destino final. En algunos casos, el final del túnel es una máquina de puerta de enlace de seguridad; por ejemplo, el firewall de una empresa. Éste
+                            es el caso común para una VPN (Red Privada Virtual). En este modo, la puerta de enlace de seguridad encapsula y desencapsula paquetes conforme pasan a través de ella. Al terminar el túnel en esta máquina segura, las máquinas
+                            en la LAN de la empresa no tienen que estar al tanto de IPsec. Sólo la puerta de enlace de seguridad tiene que saber acerca de ello.<br>El modo de túnel también es útil cuando se agrega un conjunto de conexiones TCP y se
+                            maneja como un solo flujo cifrado, porque así se evita que un intruso vea quién está enviando cuántos paquetes a quién. Algunas veces el simple hecho de saber cuánto tráfico está pasando y hacia dónde se dirige es
+                            información valiosa.</p>
+                        <!--Inicio caja ejemplo-->
+                        <div class="row row-cols-auto">
+                            <div>
+                                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Ejemplo</p>
+                            </div>
+                            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; ">Si durante una crisis militar, la cantidad de tráfico que fluye entre el Pentágono y la Casa Blanca se reduce de manera considerable, pero la cantidad de tráfico entre el Pentágono y alguna instalación militar oculta entre las Montañas Rocosas de Colorado se incrementa en la misma proporción, un intruso podría ser capaz de deducir alguna información útil a partir de estos datos.</span></p>
+                            </div>
+                        </div>
+                        <!--Fin Caja ejemplo-->
+                      El estudio de los patrones de flujo de los paquetes, aunque estén encriptados, se conoce como análisis de tráfico. El modo de túnel proporciona una forma de frustrarlo hasta cierto punto. La desventaja del modo de túnel es que agrega un encabezado IP adicional, por lo que se incrementa el tamaño del paquete en forma considerable. En contraste, el modo de transporte no afecta tanto al tamaño del paquete.</div></div></div></ul><br>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179918"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179918/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Encabezado AH&nbsp;</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br>El primer nuevo encabezado es <b class="sub_negrita">AH</b> (Encabezado de Autentificación, del inglés Authentication Hea- der), el cual <b>proporciona la verificación de integridad y la seguridad antirrepetición,</b> pero no la confidencialidad (es decir,
+            no hay encriptación de datos). En la figura 8 se ilustra el uso de AH en el modo de transporte.&nbsp;</p>
+        <p>En el IPv4 se interpone entre los encabezados IP (incluyendo todas las opciones) y TCP. En IPv6 es sólo otro encabezado de extensión y se trata como tal. De hecho, el formato es parecido al de un encabezado de extensión IPv6 estándar. Tal
+            vez haya que rellenar la carga útil hasta cierta longitud específica para el algoritmo de autentificación, como se muestra a continuación.&nbsp;</p>
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179918/xzcxzc.png" alt="xczxc" width="600" height="215" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 8: El encabezado de autentificación de IPsec en el modo de transporte para IPv4.</p>
+
+        <p dir="ltr" id="docs-internal-guid-36651976-7fff-b7bb-bd8a-4020d795c9d9">En muchos casos, aquí irá el código para TCP (6). La Longitud de carga útil es el número de palabras de 32 bits en el encabezado AH menos 2.<br></p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+
+            <br>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>El&nbsp;<b class="sub_negrita">Índice de parámetros de seguridad&nbsp;</b>es el identificador de la conexión. El emisor lo inserta para indicar un registro específico en la base de datos del receptor. Este registro
+                        contiene la clave compartida que se utiliza en esta conexión y demás información sobre ella. Si la ITU hubiera inventado este protocolo en vez de la IETF, este campo se hubiera llamado Número de circuitos virtuales.</p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>El&nbsp;<b class="sub_negrita">campo Número de secuencia&nbsp;</b>se utiliza para numerar todos los paquetes enviados en una SA. Cada paquete recibe un número único, incluso las retransmisiones. En otras palabras,
+                        la retransmisión de un paquete obtiene aquí un número diferente al del paquete original (aunque su número de secuencia TCP sea el mismo). El propósito de este campo es detectar ataques de repetición. Tal vez estos números
+                        de secuencia no se ajusten. Si se agotan todos los 232 números, es necesario establecer una nueva SA para continuar la comunicación.</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p><span style="font-weight: 600"></span>Por último, tenemos&nbsp;<b class="sub_negrita">el campo Datos de autentificación</b>, que es de longitud variable y contiene la firma digital de la carga útil. Cuando se establece la SA, los dos lados negocian
+                        cuál algoritmo de firmas van a utilizar. Por lo general, aquí no se utiliza la criptografía de clave pública porque los paquetes se deben procesar con extrema rapidez y todos los algoritmos de clave pública conocidos son muy
+                        lentos. Puesto que IPsec se basa en la criptografía de clave simétrica y el emisor negocia con el receptor una clave compartida antes de establecer una SA, dicha clave compartida se utiliza en el cálculo de la firma. Una forma
+                        simple es calcular el hash sobre el paquete más la clave compartida. Desde luego que esta clave no se transmite. Un esquema como éste se conoce como HMAC (Código de Autentificación de Mensajes Basado en Hash, del inglés Hashed
+                        Message Authentication Code). Es mucho más rápido realizar el cálculo que primero ejecutar el SHA-1 y luego el RSA sobre el resultado.</p>
+                </div>
+            </div>
+            <p><b class="sub_negrita">El encabezado AH no permite la encriptación de los datos</b>, por lo que es más útil cuando se necesita la verificación de la integridad pero no la confidencialidad. Una característica de AH que vale la pena mencionar es que la verificación
+                de integridad abarca algunos de los campos en el encabezado IP; es decir, aquellos que no cambian conforme el paquete se mueve de un enrutador a otro.&nbsp;</p>
+            <!--Inicio caja ejemplo-->
+            <div class="row row-cols-auto">
+                <div>
+                    <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Por ejemplo:</p>
+                </div>
+                <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                    <p style=" color: #4E7CFA"><span class=" " style="font-size: large; ">El campo Tiempo de vida cambia en cada salto, de manera que no se puede incluir en la verificación de integridad. Sin embargo, la dirección IP de origen se incluye en la verificación, lo que hace imposible que un intruso falsifique el origen de un paquete.</span></p>
+                </div>
+            </div>
+            <!--Fin Caja ejemplo-->
+            <p>El encabezado IPsec alternativo es <b class="sub_negrita">ESP </b>(Carga útil de Encapsulamiento de Seguridad, del inglés Encapsulating Security Payload). En la figura 9 se muestra su uso para modo de transporte y para modo de túnel.<br></p>
+            <!-- inicio imagen -->
+            <br>
+            <div style="text-align: center;">
+                <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179918/xzc.png" alt="xcxzc" width="600" height="172" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                </p>
+            </div>
+
+            <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 9: (a) ESP en modo de transporte. (b) ESP en modo de túnel.</p>
+
+            <br>
+
+            <!-- Fin imagen -->
+
+
+            <p>El encabezado ESP está constituido por dos palabras de 32 bits. <b class="sub_negrita">Éstas son los campos Índice de parámetros de seguridad y Número de secuencia que vimos en AH.</b> Una tercera palabra que por lo general va después de ellos (pero que
+                técnicamente no es parte del encabezado) es el Vector de inicialización que se utiliza para la encriptación de datos, a menos que se utilice la encriptación nula, en cuyo caso se omite.
+            </p>
+
+            <!-- nada puede haber abajo -->
+            </div></div><p><br></p>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179909"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179909/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Firewalls</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>La capacidad de conectar una computadora en cualquier lugar, con cualquier otra computadora de cualquier lugar, es una ventaja a medias. Para los usuarios domésticos, navegar en Internet representa mucha diversión. Para los gerentes de seguridad
+            empresarial es una pesadilla. Muchas empresas tienen grandes cantidades de información confidencial en línea secretos comerciales, planes de desarrollo de productos, estrategias de marketing, análisis financieros, etc. Si esta información
+            cayera en manos de un competidor, las consecuencias podrían ser devastadoras.
+        </p>
+        <p>Además del peligro de la<b class="sub_negrita"> fuga de información</b>, también existe el peligro de la <b class="sub_negrita">infiltración de información</b>. En particular, los<b class="sub_negrita"> virus, gusanos y otras pestes digitales</b>            pueden abrir brechas de seguridad, destruir datos valiosos y hacer que los administradores pierdan mucho tiempo tratando de arreglar el daño que hayan hecho. Por lo general, se importan debido a los empleados descuidados que desean ejecutar
+            algún nuevo juego ingenioso.
+        </p>
+        <p>Sin embargo, IPsec no hace nada por proteger a la LAN de la compañía contra las pestes digitales y los intrusos. Para saber cómo alcanzar ese objetivo, necesitamos dar un vistazo a los firewalls. <br></p>
+        <span style=" color:#1345CD; font-weight: 600; font-size: x-large"><span class="" style="color: rgb(0, 61, 245);">¿Qué son los firewalls?</span> </span>
+        <!--Inicio caja Definición morada-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #9a3282; font-size: large; font-weight: 600">Definición:</p>
+            </div>
+            <div class="col" style="border-left: solid  #9a3282 2px;">
+                <p style=" color: #7746E2"><span class=" " style="font-size: large; color: #010614"><span><span>Los</span></span><span><span>&nbsp;</span>firewalls&nbsp;</span>(servidores de seguridad) son simplemente una adaptación moderna de la vieja estrategia medieval de seguridad:
+                    excavar un foso defensivo profundo alrededor de su castillo. Este diseño obligaba a que todos los que entraran o salieran del castillo pasaran a través de un único puente levadizo, en donde los encargados de la E/S los pudieran
+                    inspeccionar. En las redes es posible el mismo truco: una compañía puede tener muchas redes LAN conectadas de forma arbitraria, pero todo el tráfico que entra y sale de la compañía debe pasar a través de un puente levadizo electrónico
+                    (firewall), como se muestra en la figura 10. No existe ninguna otra ruta.</span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja Definición morada-->
+
+        <p><br></p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Modo de actuación</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> El firewall actúa como un filtro de paquetes. Inspecciona todos y cada uno de los paquetes entrantes y salientes. Los paquetes que cumplen cierto criterio descrito en reglas formuladas por el administrador de la red se reenvían en forma normal. Los que fallan la prueba simplemente se descartan. </p>
+            </div>
+        </div>
+        <p>Por lo general, los <b class="sub_negrita">criterios de filtrado</b> se proporcionan como reglas o tablas que listan los orígenes y destinos aceptables, los orígenes y destinos bloqueados y las reglas predeterminadas acerca de lo que se debe
+            hacer con los paquetes que entran y salen a otras máquinas. En el caso común de una configuración TCP/IP, un origen o destino podría consistir en una dirección IP y un puerto. Los puertos indican el servicio deseado. Por ejemplo, el puerto
+            TCP 25 es para el correo y el puerto TCP 80 es para HTTP. Algunos puertos simplemente pueden estar bloqueados. Por ejemplo, una empresa podría bloquear los paquetes entrantes para todas las direcciones IP combinadas con el puerto TCP 79.
+            Una vez fue popular para el servicio Finger, el cual buscaba las direcciones de correo electrónico de las personas, pero se utiliza muy poco en la actualidad.<br></p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Otros puertos no se bloquean tan fácilmente.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">La dificultad es que los administradores de red desean seguridad, pero no pueden cortar la comunicación con el mundo exterior. </p>
+            </div>
+        </div>
+        <p>&nbsp;Ese arreglo sería mucho más simple y eficiente para la seguridad, pero
+            las quejas de los usuarios finales no terminarían nunca. Aquí es donde pueden ser útiles los arreglos como la <b>DMZ </b>(Zona Desmilitarizada, del inglés DeMilitarized Zone), que se muestra en la figura 10. La DMZ es la parte de la red
+            de la empresa que se encuentra fuera del perímetro de seguridad. Cualquier cosa puede pasar aquí. Al colocar una máquina tal como un servidor web en la DMZ, las computadoras en Internet se pueden comunicar con ella para navegar por el sitio
+            web de la empresa. Ahora el firewall se puede configurar para bloquear el tráfico TCP entrante al puerto 80, de modo que las computadoras en Internet no puedan usar este puerto para atacar a las computadoras en la red interna.&nbsp;</p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Para poder administrar el servidor web, el firewall puede tener una regla que permita conexiones entre las máquinas internas y el servidor web.<br><br></p>
+            </div>
+        </div>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179919"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179919/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Sofisticación del firewall</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>Con el tiempo, los firewall se han vuelto mucho más sofisticados en una carrera armamentista contra los atacantes.&nbsp;</p>
+        <p>En un principio, los firewall aplicaban una regla que se establecía de manera independiente para cada paquete, pero se dificultaba el proceso de escribir reglas que permitieran una funcionalidad útil y bloquearan a la vez todo el tráfico no
+            deseado.&nbsp;
+        </p>
+        <p>Los firewall con estado asocian paquetes a las conexiones y usan campos del encabezado TCP/IP para mantener un registro de las conexiones.&nbsp;</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12" style="margin: 0% auto">
+                    <div class="box ">
+                        <div class="container-sm" ;="" style="text-align: left">
+                            <div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">Esto permite usar reglas que, por ejemplo, permitan a un servidor web externo enviar paquetes a un host interno, pero sólo si ese host interno establece primero una conexión con el servidor web externo.&nbsp;
+                                <br></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><br>Dicha regla no es posible con diseños sin estado, en los que se deben pasar o descartar todos los paquetes del servidor web externo.<br></p>
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179919/cxv.png" alt="xcv" width="600" height="267" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 10. Un firewall que protege a una red interna.</p>
+
+        <!-- Fin imagen -->
+
+        <p>Otro nivel de sofisticación superior al procesamiento con estado es que el firewall implemente <b class="sub_negrita">puertas de enlace a nivel de aplicación.&nbsp;</b></p>
+        <p>Este procesamiento implica que el firewall analice el interior de los paquetes, todavía más allá del encabezado TCP, para ver lo que está haciendo la aplicación. Con esta capacidad es posible diferenciar el tráfico HTTP que se utiliza para
+            navegar por la web del tráfico HTTP utilizado para compartir archivos entre iguales.&nbsp;</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12" style="margin: 0% auto">
+                    <div class="box ">
+                        <div class="container-sm" ;="" style="text-align: left">
+                            <div class="caja-amarilla texto-margen-caja-amarilla" ;="" style="background-color: #FFF5DB; padding-left: 2%">Los administradores pueden escribir reglas para evitar la compartición de archivos de igual a igual dentro de la empresa, pero permitir la navegación web que es vital para los negocios.&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><br>En todos estos métodos se puede inspeccionar tanto el tráfico de salida como el de entrada; por ejemplo, para evitar que documentos confidenciales se envíen por correo electrónico fuera de la empresa. <br><br></p>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179920"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179920/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-2.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Algunas consideraciones acerca de firewall</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!--Tabla 3 columnas varias filas de colore-->
+        <table class="tabla-filaColores texto-principal" style="width: 90%; margin: 0 auto;">
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="55%"></colgroup>
+            <colgroup span="1" width="45%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado">Problemas con los Firewalls</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">Descripción</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">Ejemplos</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado">Violación de la distribución estándar en capas de protocolos</td>
+                    <td class="texto-margen-tabla texto-centrado">Los firewalls, aunque operan en la capa de red, inspeccionan también las capas de transporte y aplicación para filtrar el tráfico, lo cual los hace frágiles.</td>
+                    <td class="texto-margen-tabla">Encriptación mediante IPSEC u otros esquemas que ocultan información a capas superiores del firewall.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado">Dependencia de convenciones de numeración de puertos</td>
+                    <td class="texto-margen-tabla texto-centrado">Los firewalls suelen depender de la numeración estándar de puertos para determinar el tipo de tráfico en un paquete, lo que puede ser evadido por aplicaciones que seleccionan puertos dinámicamente.</td>
+                    <td class="texto-margen-tabla">Algunas aplicaciones de igual a igual seleccionan puertos dinámicamente para evitar ser detectadas y bloqueadas por el firewall.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado">Limitaciones de comunicación</td>
+                    <td class="texto-margen-tabla texto-centrado">Los firewalls no pueden comunicarse fácilmente con las computadoras que protegen para informarles sobre las políticas aplicadas y la razón de una conexión cortada.</td>
+                    <td class="texto-margen-tabla">Un firewall no puede informar a las computadoras sobre las políticas aplicadas y simplemente simula ser un cable roto en caso de bloqueo.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado">Problemas de seguridad a pesar de la configuración perfecta</td>
+                    <td class="texto-margen-tabla texto-centrado">Incluso con una configuración perfecta, los firewalls enfrentan problemas de seguridad, como intrusos que falsifican direcciones de origen para evadir restricciones y filtrados de correo.</td>
+                    <td class="texto-margen-tabla">Intrusos que falsifican direcciones de origen para evadir restricciones configuradas en el firewall.</td>
+                </tr>
+              <tr class="tabla-filaColores-par">
+            <td class="texto-margen-tabla texto-centrado">Proporciona un solo perímetro de defensa</td>
+            <td class="texto-margen-tabla texto-centrado">Los firewalls ofrecen una única defensa perimetral, lo que significa que si se viola esta defensa, toda la red queda comprometida, por lo que se recomienda una defensa por capas.</td>
+            <td class="texto-margen-tabla">Configuración de firewalls en defensa perimetral sin capas adicionales de protección en las computadoras internas.</td>
+        </tr>
+        <tr class="tabla-filaColores-inpar">
+            <td class="texto-margen-tabla texto-centrado">Incapacidad para manejar ataques DoS/DDoS</td>
+            <td class="texto-margen-tabla texto-centrado">Los firewalls no pueden defenderse eficazmente contra ataques de denegación de servicio (DoS) o ataques distribuidos de denegación de servicio (DDoS) que buscan colapsar el sistema objetivo.</td>
+            <td class="texto-margen-tabla">Ataque DoS/DDoS donde un intruso envía miles de solicitudes de conexión para saturar las capacidades del firewall y la red objetivo.</td>
+        </tr>
+            </tbody>
+        </table>
+        <p><br></p>
+        <p><br></p></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179910"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179910/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Redes privadas virtuales</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p>Muchas empresas tienen oficinas y plantas esparcidas en muchas ciudades, algunas veces hasta en varios países. En el pasado, antes de que existieran las redes de datos públicas, era común que algunas empresas alquilaran líneas a las compañías
+            telefónicas para todas o sólo algunas ubicaciones. Algunas empresas aún hacen esto. Una red constituida por computadoras de la empresa y líneas telefónicas alquiladas se conoce como red privada.
+        </p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Las redes privadas funcionan bien y son muy seguras.</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Si las únicas líneas disponibles son las alquiladas, el tráfico no puede fugarse de las ubicaciones de la empresa y los intrusos tienen que intervenir físicamente las líneas para infiltrarse, lo cual no es fácil de hacer. El problema con las redes privadas es que alquilar una sola línea T1 entre dos puntos cuesta miles de dólares mensuales, y las líneas T3 son mucho más costosas.&nbsp; </p>
+            </div>
+        </div>
+        <p>Cuando aparecieron las redes de datos públicas
+            y después Internet, muchas empresas quisieron trasladar su tráfico de datos (y posiblemente de voz) a la red pública, aunque sin renunciar a la seguridad de la red privada. <br></p>
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179921"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179921/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Construir VPN</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p><br>Esta demanda pronto llevó a la invención de las redes VPN (Redes Privadas Virtuales, del inglés Virtual Private Networks), que son redes superpuestas sobre redes públicas, pero con muchas propiedades de las redes privadas. Se llaman “virtuales”
+            porque son sólo una ilusión, al igual que los circuitos virtuales no son reales ni la memoria virtual es real.<br></p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">VPN</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Un método popular es construir redes VPN directamente sobre Internet. Un diseño común es equipar cada oficina con un firewall y crear túneles a través de Internet entre todos los pares de oficinas, como se ilustra en la figura 11(a).&nbsp;
+                    <br>Una ventaja adicional de usar Internet para la conectividad es que los túneles se pueden establecer bajo demanda para incluir, por ejemplo, la computadora de un empleado que se encuentra en su hogar o de viaje, siempre y cuando
+                    tenga conexión a Internet.<br></p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p>Esta flexibilidad es mucho mayor de la que proveen las líneas alquiladas sin embargo, desde la perspectiva de las computadoras en la VPN, la topología es igual a la del caso de la red privada, como se muestra en la figura 11(b). Cuando se inicia
+            el sistema, cada par de firewall tiene que negociar los parámetros de su SA, incluyendo los servicios, modos, algoritmos y claves. Si se utiliza IPsec para los túneles, es posible agregar todo el tráfico entre cualquier par de oficinas
+            en una sola SA autentificada y encriptada, con lo cual se obtiene el control de la integridad, la confidencialidad e incluso una inmunidad considerable al análisis de tráfico. Muchos firewall tienen capacidades VPN integradas.
+          <!--Inicio Caja violeta-->
+<br>
+    </p><div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 92%; margin: 0 auto; border-radius: 8px">
+
+        <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Para tener en cuenta</p>
+        <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+            <li></li>Algunos enrutadores ordinarios también pueden hacer esto, pero debido a que los firewalls están principalmente en el negocio de la seguridad, es natural que los túneles empiecen y terminen en los firewall, con lo cual se establece una clara separación entre la empresa e Internet.&nbsp;</ul></div><br>Por lo tanto, los firewall, las redes VPN e IPsec con ESP en modo de túnel son una combinación natural y se utilizan mucho en la práctica.
+        <p></p>
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179921/xFigura%2011%20%28a%29%20Una%20red%20privada%20virtual.%20%28b%29%20La%20topologi%CC%81a%20vista%20desde%20el%20interior..png" alt="Figura 11: (a) Una red privada virtual. (b) La topología vista desde el interior." width="600" height="237" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 11: (a) Una red privada virtual. (b) La topología vista desde el interior.</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+        <p>Una vez que se han establecido las asociaciones SA, el tráfico puede comenzar a fluir. Para un enrutador en Internet, un paquete que viaja a través de un túnel VPN es sólo un paquete ordinario. Lo único extraño es la presencia del encabezado
+            IPsec después del encabezado IP, pero debido a que estos encabezados adicionales no tienen efecto en el proceso de reenvío, los enrutadores no se preocupan por ellos.
+        </p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">ISP</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Otro método que está ganando popularidad es hacer que el ISP (Proveedor de Servicios de Internet) establezca la VPN. Mediante el uso de MPLS (Multiprotocol Label Switching), se pueden establecer las rutas para el tráfico de la VPN a
+                    través de la red del ISP entre las oficinas de la empresa. Estas rutas mantienen separado el tráfico de la VPN del resto del tráfico de Internet y se puede garantizar cierta cantidad de ancho de banda u otro tipo de calidad del servicio.
+                </p>
+            </div>
+        </div>
+        <p>Una ventaja principal de una VPN es la de ser completamente transparente para todo el software de usuario. Los firewall configuran y manejan las asociaciones SA. La única persona que está consciente de esta configuración es el administrador
+            del sistema, quien tiene que configurar y gestionar las puertas de enlace de seguridad, o el administrador del ISP que tiene que configurar las rutas de MPLS. Para todos los demás, es como tener de nuevo una red privada mediante una línea
+            alquilada. Para mayor información acerca de las redes VPN, consulte a Lewis (2006).<br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179911"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659503/mod_book/chapter/179911/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-2.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Checkpoint</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+
+
+
+        <p>Luego de la lectura de esta semana, te invitamos a que revises los contenidos pasando por el <a href="https://aulasvirtuales.bue.edu.ar/mod/quiz/view.php?id=649505"><span class="" style="color: rgb(0, 46, 184);"><u>Check Point</u></span>.</a></p>
+        <p>De esta forma, podrás verificar si has comprendido las ideas principales.</p>
+        <p>¡No dudes en volver a este libro en caso que necesites repasar algún concepto!</p>
+        <br>
+
+        <!-- nada abajo -->
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[649458,649459,649461,649462,649463,649465,649466,649467,649469,649471,649473,649476,649477,649480,649481,649484,649485,649488,649494,649497,649498,649500,649502,649504,676491,680812,680813,681319,683403,686431,689333,692066]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1747420296/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2659503, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1748092072); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random6831e0598668f2'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6831e0598668f2'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

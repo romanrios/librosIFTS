@@ -1,0 +1,2213 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S10. Seguridad en redes | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1747420295/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S10. Seguridad en redes | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1747420295_1747421455/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"96pw7gX2SP","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1747420295","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1747420296","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21039,"courseContextId":2643474,"contextid":2659501,"contextInstanceId":649501,"langrev":1748071445,"templaterev":"1747420296"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1747420296\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1747420296\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1747420296\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1747420296\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1747420296\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21039 context-2659501 cmid-649501 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1747420295/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S10. Seguridad en redes</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Tecnologías de la Información y Comunicación 2° A 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S10. Seguridad en redes
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        sábado, 24 de mayo de 2025, 12:05
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+    <!-- Oulto <article class="flex_titulo_botonera">
+    <p class="titulo_principal">Tu itinerario</p> -->
+
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+
+            <article class="touch_point">
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21039&amp;section=11" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649498" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"></path>
+                            </svg>
+                        </div>
+                        <p>Recorré</p>
+                    </section>
+                </a>
+
+
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-option" viewBox="0 0 16 16">
+                                <path d="M1 2.5a.5.5 0 0 1 .5-.5h3.797a.5.5 0 0 1 .439.26L11 13h3.5a.5.5 0 0 1 0 1h-3.797a.5.5 0 0 1-.439-.26L5 3H1.5a.5.5 0 0 1-.5-.5zm10 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"></path>
+                                </svg>
+                    </div>
+                    <p>Conectá</p></section>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649500" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="m10 10.414 4 4 5.707-5.707L22 11V5h-6l2.293 2.293L14 11.586l-4-4-7.707 7.707 1.414 1.414z"></path></svg>
+                        </div>
+
+                        <p>Proyectá</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Saberes técnicos" class="font-weight-bold text-decoration-none" href="#ch179886">1. Saberes técnicos</a></li><li><a title="2. Seguridad en redes" class="font-weight-bold text-decoration-none" href="#ch179877">2. Seguridad en redes</a><ul><li><a title="2.1. Problemas" class="text-decoration-none" href="#ch179889">2.1. Problemas</a></li><li><a title="2.2. Capas" class="text-decoration-none" href="#ch179890">2.2. Capas</a></li></ul></li><li><a title="3. Criptografía" class="font-weight-bold text-decoration-none" href="#ch179878">3. Criptografía</a><ul><li><a title="3.1. Encriptación" class="text-decoration-none" href="#ch179879">3.1. Encriptación</a></li><li><a title="3.2. Clave secreta" class="text-decoration-none" href="#ch179891">3.2. Clave secreta</a></li><li><a title="3.3. Sistema de cifrado por sustitución" class="text-decoration-none" href="#ch179880">3.3. Sistema de cifrado por sustitución</a></li><li><a title="3.4. Cifrado monoalfabético" class="text-decoration-none" href="#ch179892">3.4. Cifrado monoalfabético</a></li><li><a title="3.5. Sistemas de cifrado por transposición" class="text-decoration-none" href="#ch179881">3.5. Sistemas de cifrado por transposición</a></li><li><a title="3.6. Cifrado por transposición" class="text-decoration-none" href="#ch179893">3.6. Cifrado por transposición</a></li></ul></li><li><a title="4. Cifrado inquebrantable" class="font-weight-bold text-decoration-none" href="#ch179882">4. Cifrado inquebrantable</a><ul><li><a title="4.1. Desventajas" class="text-decoration-none" href="#ch179894">4.1. Desventajas</a></li></ul></li><li><a title="5. Criptografía cuántica" class="font-weight-bold text-decoration-none" href="#ch179883">5. Criptografía cuántica</a><ul><li><a title="5.1. El problema" class="text-decoration-none" href="#ch179895">5.1. El problema</a></li><li><a title="5.2. Solución posible" class="text-decoration-none" href="#ch179896">5.2. Solución posible</a></li><li><a title="5.3. Intruso a la vista" class="text-decoration-none" href="#ch179897">5.3. Intruso a la vista</a></li></ul></li><li><a title="6. Dos principios criptográficos fundamentales" class="font-weight-bold text-decoration-none" href="#ch179884">6. Dos principios criptográficos fundamentales</a><ul><li><a title="6.1. Redundancia" class="text-decoration-none" href="#ch179887">6.1. Redundancia</a></li><li><a title="6.2. Importancia de la redundancia" class="text-decoration-none" href="#ch179898">6.2. Importancia de la redundancia</a></li><li><a title="6.3. Actualización" class="text-decoration-none" href="#ch179888">6.3. Actualización</a></li></ul></li><li><a title="7. Checkpoint" class="font-weight-bold text-decoration-none" href="#ch179885">7. Checkpoint</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179886"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179886/_%20%2814%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Conectá saberes técnicos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="color: rgb(1, 6, 20); font-size: large; margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p>
+        <p></p>La <b><strong>competencia técnica</strong></b> de un/a desarrollador/a de software es crucial al abordar cuestiones fundamentales sobre:.&nbsp;</div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div style="background-color: rgb(250, 250, 250);">
+
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">La seguridad en redes</span>&nbsp;para proteger la integridad y confidencialidad de la información transmitida.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">La criptografía:</span> herramienta fundamental en seguridad, se utiliza para cifrar datos y garantizar la privacidad. La diversidad de tipos de criptografía, desde simétrica hasta asimétrica, requiere
+                            conocimientos precisos para elegir la mejor opción según el contexto. Los criptoanalistas enfrentan retos al intentar descifrar códigos, exigiendo habilidades técnicas avanzadas.&nbsp;</p>
+                    </div>
+                </div>
+                <ul>
+                </ul>
+            </div>
+            <br>
+
+            <div>
+                <div><span class="" style="font-size: large; color: rgb(51, 51, 51);">Para prevenir </span><b><strong><span class="" style="font-size: large; color: rgb(51, 51, 51);">fugas de información</span></strong></b><span class="" style="font-size: large; color: rgb(51, 51, 51);">, se deben abordar errores de configuración y exposición de datos, destacando la importancia de la competencia técnica para implementar medidas de seguridad efectivas.&nbsp;</span><br>
+                    <span style="color: rgb(51, 51, 51); font-size: large;" class="">En última instancia, el equilibrio entre privacidad y seguridad es un desafío clave que requiere habilidades técnicas para diseñar sistemas que protejan la información sin comprometer la privacidad.</span>
+                </div>
+                <div><br>
+                    <div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 92%; margin: 0 auto; border-radius: 8px">
+
+                        <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Y..., ¿para qué estos saberes técnicos?</p>
+                        <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                            <li></li><strong><strong>Implementación efectiva de protocolos de seguridad:</strong></strong> La competencia técnica del/la desarrollador/a se refleja en su capacidad para implementar protocolos de seguridad robustos en redes.
+                            Esto incluye el uso adecuado de firewalls, sistemas de detección de intrusiones (IDS), y la aplicación de medidas de cifrado para salvaguardar la integridad y confidencialidad de la información.
+                            <li></li>
+                        </ul>
+                        <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;"><b><strong>Gestión de amenazas y actualización continua:</strong></b> La seguridad en redes es un campo dinámico, y los/as desarrolladores/as deben mantenerse actualizados sobre las últimas amenazas y vulnerabilidades. La competencia
+                            técnica implica la capacidad de gestionar proactivamente posibles amenazas, aplicar parches de seguridad y mantener actualizados los sistemas para mitigar riesgos a lo largo del tiempo.<br></ul>
+                    </div>
+
+                    <b><strong> <span class="" style="color: rgb(51, 51, 51); font-size: large;">¡Comencemos!</span></strong></b><br><br>
+                    <p></p>
+
+                    <!-- nada puede haber abajo -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179877"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179877/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Seguridad en redes</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Durante las primeras décadas de su existencia, las redes de computadoras fueron usadas principalmente por investigadores/as universitarios/as para el envío de correo electrónico, así como por empleados/as corporativos/as para compartir impresoras.
+            En estas condiciones, la seguridad no recibió mucha atención. Pero ahora, cuando millones de ciudadanos/as comunes usan redes para sus transacciones bancarias, compras y declaraciones de impuestos, y que se ha encontrado una debilidad tras
+            otra, la seguridad de las redes se ha convertido en un problema de proporciones masivas. </p>
+
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">La seguridad es un tema amplio.&nbsp;</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> En su forma más simple, se ocupa de garantizar que los curiosos no puedan leer, o peor aún, modificar en secreto mensajes dirigidos a otros destinatarios. Es decir, evitar que personas no autorizadas accedan o lean la información privada
+                    o manipularla sin permiso. También se encarga de mecanismos para verificar que un mensaje enviado, por ejemplo, la autoridad fiscal que le recuerda que tiene que pagar sus impuestos, en realidad venga de ella y no de un&nbsp;<i>hacker</i>.
+                    La seguridad también se hace cargo del problema de la captura y reproducción de mensajes legítimos, y de las personas que intentan negar que enviaron ciertos mensajes.. </p>
+            </div>
+        </div>
+        <p>La mayoría de los <b><strong>problemas de seguridad</strong></b> son <b><strong>causados intencionalmente</strong></b> por personas que intentan ganar algo o hacerle daño a alguien.</p><p>En la figura 1 se muestran algunos de los tipos de
+            transgresores más comunes.&nbsp;</p>
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179877/f.png" alt="df" width="600" height="337" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 1. Algunas personas que podrían causar problemas de seguridad y el por qué de ello.</p>
+
+        Como se puede ver, hacer segura una red comprende mucho más que simplemente mantenerla libre de errores de programación.<br>Es un <b><strong>desafío</strong></b> que requiere <b><strong>enfrentar adversarios/as</strong></b> inteligentes, comprometidos/as y en ocasiones
+        respaldados/as por recursos financieros que buscan explotar vulnerabilidades en la red para obtener acceso no autorizado o dañarla.<br>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179889"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179889/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Seguridad en problemas</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Los problemas de seguridad de las redes se pueden dividir en términos generales en cuatro áreas interrelacionadas: confidencialidad, autentificación, no repudio y control de integridad.<br></p>
+
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">La confidencialidad</span> , también conocida como secrecía, consiste en mantener la información fuera del alcance de usuarios no autorizados. Esto es lo que normalmente viene a la mente cuando la gente
+                    piensa en la seguridad de las redes.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">La autentificación</span> se encarga de determinar con quién se está hablando antes de revelar información delicada o hacer un trato de negocios.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">El no repudio</span> aborda el problema de probar la autenticidad y la integridad de una acción o comunicación realizada, de manera que ninguna de las partes involucradas pueda negar su participación o la
+                    veracidad de lo sucedido. Es decir, comprobar que un/a cliente hizo un pedido electrónico por la compra de utensilios para zurdos a 89 centavos cada uno, para evitar que luego diga que el precio era de 69 centavos, o niegue el pedido.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Por último, <span style="font-weight: 600">el control de integridad</span> iene que ver con la forma en que podemos estar seguros de que un mensaje recibido realmente fue el que se envió, y no algo que un hacker modificó en el camino
+                    o ideó por su propia cuenta.</p>
+            </div>
+        </div>
+
+        <p>Todos estos temas (confidencialidad, autentificación, no repudio y control de integridad) son pertinentes también en los sistemas tradicionales, pero con algunas diferencias importantes. La confidencialidad y la integridad se logran mediante
+            el uso de correo certificado y al poner los documentos bajo llave. Además, la gente puede por lo general distinguir entre un documento original en papel y una fotocopia, y con frecuencia esto es importante.&nbsp;</p>
+        <p><br></p>
+        <!--Inicio caja ejemplo-->
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px;  margin-left: 16px; color: #4E7CFA; font-size: large; font-weight: 600">Ejemplo</p>
+            </div>
+            <div class="col" style="border-left: solid  #4E7CFA 2px;">
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; "><span class="" style="color: #4E7CFA;">Si alguien va al banco a cobrar un cheque fotocopiado no podrá hacerlo por las notables diferencias con uno original. En cambio, en los cheques electrónicos, el original y la copia son idénticos.&nbsp;</span><br>
+                    <span class="" style="color: #4E7CFA;">La gente autentifica la identidad de otras personas por varios medios; por ejemplo, al reconocer sus caras, voces y letra.&nbsp;</span>
+                    </span>
+                </p>
+                <p style=" color: #4E7CFA"><span class=" " style="font-size: large; "><span class="" style="color: #4E7CFA;">Las pruebas de firmas se manejan mediante rúbricas en papel, sellos, etc. Generalmente es posible detectar la alteración de documentos con el auxilio de expertos en escritura, papel y tinta. Ninguna de estas opciones está disponible de forma electrónica. Esto significa que se requieren otras soluciones.</span><br></span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja ejemplo-->
+        <p><br><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179890"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179890/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">La seguridad de las redes en las capas</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Antes de adentrarnos en las soluciones, vale la pena dedicar un instante a considerar el lugar que corresponde a la seguridad de las redes en la pila de protocolos. Probablemente no haya un solo lugar. Cada capa tiene algo que contribuir.<br></p>
+        <div class="container">
+            <table class="table table-bordered" style="border: 1px solid black;">
+                <colgroup>
+                    <col span="1" style="width: 10%">
+                    <col span="1" style="width: 90%;">
+                </colgroup>
+                <thead>
+                    <!-- 
+                    <tr>
+                        <th scope="col" style="border: 1px solid black; text-align: center">Título 1</th>
+                        <th scope="col" style="border: 1px solid black">Título 2</th>
+
+                    </tr> -->
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #f4eefc">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); display: block; margin: 0 auto;">
+  <path d="M1 6a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm11.5 1a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1m2 0a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1M1 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5M1.25 9h5.5a.25.25 0 0 1 0 .5h-5.5a.25.25 0 0 1 0-.5"></path>
+</svg>
+
+
+
+                        </td>
+                        <td style="border: 1px solid black"><b><strong>En la capa física&nbsp;</strong></b>podemos protegernos contra la intervención de las líneas de transmisión (o mejor aún, las fibras ópticas) si las encerramos en tubos sellados que contengan un gas inerte a alta
+                            presión. Cualquier intento de hacer un agujero en el tubo liberará un poco de gas, con lo cual la presión disminuirá y se disparará una alarma. Algunos sistemas militares usan esta técnica.</td>
+
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #eadef8">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); display: block; margin: 0 auto;">
+  <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"></path>
+  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"></path>
+</svg>
+                        </td>
+                        <td style="border: 1px solid black"><b><strong>En la capa de enlace de datos</strong></b>, los paquetes de una línea punto a punto se pueden encriptar cuando se envían desde una máquina y desencriptarse cuando llegan a otra. Todos los detalles se pueden manejar
+                            en la capa de enlace de datos, sin necesidad de que las capas superiores se enteren de ello. Sin embargo, esta solución no es conveniente cuando los paquetes tienen que atravesar varios enrutadores, puesto que se tienen que
+                            desencriptar en cada enrutador, dentro del cual son vulnerables a posibles ataques. Además, no se contempla que algunas sesiones estén protegidas (por ejemplo, aquellas que involucren compras en línea mediante tarjeta de
+                            crédito) y otras no. Sin embargo, la encriptación de enlace (link encryption), como se llama a este método, se puede agregar fácilmente a cualquier red y con frecuencia es útil.</td>
+
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #dfcdf5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); display: block; margin: 0 auto;">
+  <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z"></path></svg>
+
+                        </td>
+                        <td style="border: 1px solid black"><b><strong>En la capa de red&nbsp;</strong></b>se pueden instalar&nbsp;<i>firewalls</i>&nbsp;para mantener los paquetes buenos e impedir que entren los paquetes malos. La seguridad de IP también funciona en esta capa.</td>
+
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #d4bdf1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); display: block; margin: 0 auto;">
+  <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"></path>
+  <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"></path>
+</svg>
+                        </td>
+                        <td style="border: 1px solid black"><b><strong>En la capa de transporte</strong></b>&nbsp;se pueden encriptar conexiones enteras de un extremo a otro; es decir, de proceso a proceso. Para lograr una máxima seguridad, se requiere que ésta sea de extremo a extremo.</td>
+
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #c9adee">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); display: block; margin: 0 auto;">
+  <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z"></path>
+</svg>
+                        </td>
+                        <td style="border: 1px solid black">Por último, los asuntos como la autentificación de usuario y el no repudio sólo se pueden manejar en la<b><strong>&nbsp;capa de aplicación</strong></b>.</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <p><br></p>
+
+        <p>Casi toda la seguridad de la red se basa en principios de criptografía, a excepción de la seguridad en la capa física. Veamos de qué se trata.<br></p>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179878"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179878/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Criptografía
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>La palabra <b><strong>criptografía </strong></b>viene del griego y significa “escritura secreta”. Tiene una larga y colorida historia que se remonta a miles de años. Los profesionales hacen una distinción entre:</p>
+        <p>
+        </p>
+        <ul>
+            <li>Un <b><strong>sistema
+            de cifrado </strong></b>es una transformación carácter por carácter o bit por bit, sin importar la estructura lingüística del mensaje.&nbsp;</li>
+            <li>Un <b><strong>sistema de código</strong></b> reemplaza una palabra con otra palabra o símbolo. Los sistemas de código ya no se utilizan, aunque tienen una historia gloriosa. El código con mayor éxito fue el de las fuerzas armadas de Estados
+                Unidos, durante la Segunda Guerra Mundial en el Pacífico. El código navajo, empleado por nativos norte-americanos e&nbsp;ininteligible para Japón, contribuyó a victorias estadounidenses en la Segunda Guerra Mundial.</li>
+        </ul>
+        <p></p>
+        <!--Tabla fila columna-->En la siguiente tabla encontrarás algunas características históricas de la criptografía:<br><br>
+        <table class="tabla-simple texto-principal" style="width: 100%; margin: 0 auto;">
+            <colgroup span="1" width="50%"></colgroup>
+            <colgroup span="1" width="50%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado"><strong>Grupos históricos involucrados en la criptografía:</strong> </td>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>Militares</li>
+                            <li>Cuerpo diplomático</li>
+                            <li>Redactores de periódicos.&nbsp;</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+        <table class="tabla-simple texto-principal" style="width: 100%; margin: 0 auto;">
+            <colgroup span="1" width="50%"></colgroup>
+            <colgroup span="1" width="50%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado"><strong>Contribuciones de la milicia al campo de la criptografía:</strong> </td>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>
+                                Se ha destacado en el desarrollo y evolución del campo de la criptografía a lo largo de la criptografía a lo largo de la historia."</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+        <table class="tabla-simple texto-principal" style="width: 100%; margin: 0 auto;">
+            <colgroup span="1" width="50%"></colgroup>
+            <colgroup span="1" width="50%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado"><span><span style="">Restricciones previas a la era de las computadoras en la criptografía:</span></span>
+                    </td>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>Las principales limitaciones de la criptografía&nbsp; se centraban en la capacidad manual de los criptógrafos y las condiciones adversas en el campo de batalla.<br></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+        <table class="tabla-simple texto-principal" style="width: 100%; margin: 0 auto;">
+            <colgroup span="1" width="50%"></colgroup>
+            <colgroup span="1" width="50%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado"><span><span style="">Dificultades para cambiar métodos criptográficos rápidamente:</span></span>
+                    </td>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>Antes de la era de las computadoras, la transición entre métodos criptográficos era difícil y requería una extensa capacitación del personal.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+        <table class="tabla-simple texto-principal" style="width: 100%; margin: 0 auto;">
+            <colgroup span="1" width="50%"></colgroup>
+            <colgroup span="1" width="50%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado"><span><span style="">Importancia de la capacidad de cambiar métodos criptográficos instantáneamente:</span></span>
+                    </td>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>
+                                La necesidad de cambiar los métodos criptográficos de manera instantánea se volvió esencial para evitar la captura del personal por parte del enemigo.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>Estos requerimientos en conflicto han dado lugar al modelo de la figura 2. El arte de quebrantar los sistemas de cifrado, es conocido como criptoanálisis, y en conjunto con el arte de idearlos (criptografía) se conocen como criptología.<br>Como
+        puede observarse los pasos del modelo de encriptación son los siguientes:</div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div style="margin-left: 3%; margin-right: 3%;">
+            <div style="margin-left: 0%; margin-right: 0%;">
+                <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+                    <div style="margin-left: 3%; margin-right: 3%;">
+
+                        <br>
+                        <!-- 1 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600"></span>El texto plano se transforma con una clave en texto cifrado.</p>
+                            </div>
+                        </div>
+
+
+
+                        <!-- 2 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600"></span>El texto cifrado se transmite por mensajero o radio.</p>
+                            </div>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600"></span>El enemigo escucha y copia el texto cifrado, pero desconoce la clave.</p>
+                            </div>
+                        </div>
+
+
+                        <!-- 4 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600"></span>El intruso puede ser pasivo o activo en la interceptación de mensajes.</p>
+                            </div>
+                        </div>
+                        <div style="margin-left: 3%; margin-right: 3%;">
+                            <!-- inicio imagen -->
+                            <br>
+                            <div style="text-align: center;">
+                                <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179878/rdrg.png" alt="dsg" width="600" height="273" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                                </p>
+                            </div>
+
+                            <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 2. Modelo de encriptación (para un sistema de cifrado de clave simétrica).</p>
+                            <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);"><br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179879"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179879/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Hacia mensajes seguros: encriptación</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>A menudo resulta útil tener una notación para relacionar el texto plano, el texto cifrado y las claves.</p>
+        <p>Utilizaremos <b><strong>C 5 EK(P)</strong></b> para indicar que la encriptación del texto plano <b><strong>P</strong></b> mediante el uso de la clave <b><strong>K</strong></b> produce el texto cifrado <b><strong>C</strong></b>. Del mismo modo,<b><strong> P 5 DK(C )</strong></b>            representa la desencriptación de <b><strong>C</strong></b> para obtener el texto plano una vez más. Por lo tanto,&nbsp;
+        </p>
+        <!--Caja lila centrada-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12" style="background-color: #F3ECFD; margin: 0% auto">
+                    <div class="box ">
+                        <div class="container-sm">
+                            <div class="caja-lila texto-margen-caja-lila">
+
+
+                                <!--ACÁ VA EL CONTENIDO-->
+                                <p></p>
+                                <p style="text-align: center;"><b><strong>DK(EK(P)) 5 P</strong></b></p>
+                                <p></p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><br></p>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Esta notación sugiere que <b><strong>E</strong></b> y <b><strong>D</strong></b> son sólo funciones matemáticas, lo cual es cierto. El único truco es que ambas son funciones de dos parámetros, y hemos escrito uno de los parámetros (la clave)
+            como subíndice, en lugar de como argumento, para distinguirlo del mensaje. </p>
+
+        <!--Inicio Caja definición-->
+        <div class="row row-cols-auto" style="margin-left: 3%; margin-right: 3%;">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #9a3282 ;"><b><strong>Definición</strong></b></span> </p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: solid #9a3282  2px">
+                <p><span class="" style="font-size: large; color: #9a3282 ;"><span class="" style="color: rgb(51, 51, 51);">La</span> <span class="" style="color: #9a3282 ;">&nbsp;<b><strong>seguridad en redes</strong></b></span><span class="" style="color: rgb(51, 51, 51);"> es esencial para proteger la integridad y confidencialidad de la información transmitida.</span></span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja definición-->
+        <p><span class="" style="color: rgb(0, 61, 245);"><b><br></b></span></p>
+        <p><span class="" style="color: rgb(0, 61, 245);"><b><strong>Regla de la criptografía</strong></b></span></p>
+        <p>Se debe suponer que el criptoanalista conoce los métodos utilizados para encriptar y desencriptar. En otras palabras, el criptoanalista sabe con detalle cómo funciona el método de encriptación,
+            <b><strong>E</strong></b>, y el de desencriptación, <b><strong>D</strong></b>, de la figura 1.2; la cantidad de esfuerzo necesario para inventar, probar e instalar un nuevo algoritmo cada vez que el método antiguo está en peligro (o se
+            piensa que lo está) siempre ha hecho poco práctico mantener en secreto el algoritmo de encriptación.</p>
+        <ol>
+        </ol>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179891"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179891/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Garantizar la seguridad en redes: claves</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="color: rgb(1, 6, 20); font-size: large; margin-left: 3%; margin-right: 3%;">
+
+        <p>Nuestro modelo básico es un método general estable y conocido públicamente, pero parametrizado por una clave secreta y que puede cambiarse con facilidad.<br>&nbsp;<br>
+            <!--Inicio Caja definición-->
+        </p>
+        <div class="row row-cols-auto" style="margin-left: 3%; margin-right: 3%;">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #9a3282 ;"><b><strong>Definición</strong></b></span> </p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: solid #9a3282  2px">
+                <p><span class="" style="font-size: large; color: #9a3282 ;"><span class="" style="color: rgb(51, 51, 51);">La</span> <span class="" style="color: #9a3282 ;">&nbsp;<b><strong>clave</strong></b></span><span class="" style="color: rgb(51, 51, 51);"> consiste en una cadena corta (relativamente) que selecciona uno de muchos encriptados potenciales. En contraste con el método general, que tal vez sólo se cambie cada cierto número de años, la clave se puede cambiar con la frecuencia requerida.</span></span>
+                </p>
+            </div>
+        </div>
+        <p><br>La idea de que el criptoanalista conozca los algoritmos y que la naturaleza secreta se base principalmente en las claves se conoce como Principio de Kerckhoff. Este debe su nombre al criptógrafo militar holandés Auguste Kerckhoff, quien
+            lo estableció por primera vez en 1883 y establece que:<br></p>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+        <!--Caja + título + imagen + texto-->
+
+        <p style="color: white; font-size: large; background-color: rgb(154, 50, 130); padding: 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px;"><span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Principio de Kerckhoff (1883)</span></b>
+            </span>
+        </p>
+
+
+
+        <div style="color: rgb(1, 6, 20); font-size: large; border: 1px solid rgb(154, 50, 130); border-radius: 0px 8px 8px; background-color: white;">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179891/descarga%20%281%29.jpg?time=1708377980638" alt="Castells" width="143" height="179" role="presentation" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_middle">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">Todos los algoritmos deben ser públicos; sólo las claves deben ser secretas.</span></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;">La naturaleza no secreta del algoritmo no puede enfatizarse lo suficiente. Tratar de mantener oculto el algoritmo, lo que se conoce como <b>seguridad por desconocimiento</b>, nunca funciona. Además, al hacer público el algoritmo, el criptógrafo
+            recibe asesoría gratuita de una gran cantidad de criptólogos académicos ansiosos por descifrar el sistema, con el propósito de publicar trabajos que demuestren su inteligencia.&nbsp;Si muchos expertos han tratado de descifrar el algoritmo
+            durante mucho tiempo después de su publicación y nadie lo ha logrado, probablemente sea bastante sólido.</p>
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><b><strong><span class="" style="color: rgb(0, 61, 245); font-size: large;">La importancia de la longitud y el tipo de clave en la criptografía</span><br></strong></b><br>A continuación vamos a considerar a modo de ejemplo una simple <b><strong>cerradura de combinación. </strong></b>&nbsp;Sus
+            dígitos se introducen en secuencia, presenta una secreta (pero todo el mundo la sabe). Esto, determina el nivel de seguridad del sistema.&nbsp;<br>A partir de esta situación, podemos identificar las siguientes características:<br></p>
+        <div style="background-color: rgb(250, 250, 250);">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"><strong>Relevancia de la longitud de la clave:</strong></span> </p>
+                        <ul>
+                            <li>Claves de dos dígitos ofrecen 100 posibilidades, mientras que claves de seis dígitos ofrecen un millón.</li>
+                            <li>Cuanto más grande sea la clave, mayor será el factor de trabajo que tendrá que enfrentar el criptoanalista.&nbsp;<br></li>
+                            <li>Un algoritmo público y una clave larga son fundamentales para garantizar la seguridad.</li>
+                            <li>Para diferentes niveles de seguridad se requieren diferentes longitudes de clave, desde 64 bits hasta 256 bits o más. Por ejemplo: para evitar que tu hermano menor lea tu correo electrónico, las claves de 64 bits son suficientes.
+                                Para el uso comercial común, se requieren por lo menos 128 bits. Para mantener a raya a gobiernos poderosos se requieren claves de al menos 256 bits, y de preferencia mayores.</li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"><strong>Variantes del problema de criptoanálisis</strong>:</span></p>
+                        <ul>
+                            <li><b><strong>Solo texto cifrado:</strong></b> Criptoanalista tiene texto cifrado pero no el texto plano correspondiente. Los criptogramas que aparecen en la sección de acertijos de los diarios presentan este tipo de problema.&nbsp;</li><span>
+                            <li style=""><b><strong>Texto plano conocido:</strong></b> Criptoanalista tiene acceso tanto al texto cifrado como al texto plano correspondiente.&nbsp;Ejemplo: sistemas de encriptación donde el criptoanalista tiene texto cifrado y texto plano
+                                correspondiente.</li>
+                            <li style=""><b><strong>Texto plano seleccionado:</strong></b> Criptoanalista tiene la capacidad de encriptar piezas de texto plano de su elección.&nbsp;Ejemplo: criptogramas de periódicos donde el criptoanalista puede formular preguntas específicas:&nbsp;“¿cuál
+                                es el encriptado de ABCDEFGHIJKL?”</li>
+                        </span></ul><b>
+                        <p></p>
+                    </b></div><b>
+                </b></div><span>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px;">
+                    <div style="font-weight: bold; color: rgb(1, 6, 20); font-size: large;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col" style="">
+                        <p style="font-weight: bold; color: rgb(1, 6, 20); font-size: large;"><span style="font-weight: 600"><strong>Suposiciones ingenuas y realidades de la seguridad:</strong></span></p>
+                <ul style="color: rgb(1, 6, 20); font-size: large;">
+                    <li style="">Suponer que un sistema de cifrado seguro resiste ataques solo con texto cifrado es ingenuo. Por ejemplo, las computadoras suelen responder con mensajes predeterminados como "login:" o "Iniciar sesión".<br></li>
+                    <li style="">Conocimiento parcial del texto plano puede facilitar el trabajo del criptoanalista. Por ejemplo, algunos sistemas de encriptación muestran patrones predecibles en sus respuestas.<br></li>
+                    <li style="">La seguridad requiere conservadurismo y resistencia incluso ante encriptación de texto plano seleccionado. Por ejemplo, para lograr seguridad, el sistema debe ser invulnerable incluso si el adversario puede encriptar texto plano seleccionado.</li>
+                </ul>
+            </div>
+        </div>
+        </span>
+    </div><span>
+            <div style="color: rgb(1, 6, 20); font-size: large; margin-left: 3%; margin-right: 3%;">
+
+                <p style="">A continuación, podrás profundizar en las dos categorías en las que, históricamente se dividen los métodos de encriptación:</p>
+                <ol style="font-weight: bold;">
+                    <li>Sistema de cifrado por sustitución.<br></li>
+                    <li>Sistema de cifrado por transposición. </li>
+                </ol>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+    </span></div><b>
+</b></div><b>
+</b></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179880"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179880/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Sistema de cifrado por sustitución</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>En un sistema de cifrado por sustitución, cada letra o grupo de letras se reemplazan por otra letra o grupo de letras para disfrazarla. Uno de los sistemas de cifrado más viejos es el sistema de cifrado de César, atribuido a Julio César. <br>
+            <!--Caja + título + imagen + texto-->
+
+        </p>
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Sistema de cifrado de César</span></b>
+            </span>
+        </p>
+        <div style="border: 1px solid #9A3282; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179880/descarga%20%282%29.jpg?time=1708388093379" alt="Castells" width="167" height="196" role="presentation" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_middle">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);">Este es uno de los sistemas de cifrado más viejos conocido, también como cifrado de desplazamiento. Debe su denominación al político y militar romano Julio César&nbsp;quien lo usaba para enviar instrucciones a sus generales en campaña.&nbsp;En este método, <b><strong><i>a</i></strong></b> se vuelve <span><b><strong>D</strong></b></span>,
+                        <i><b><strong>b</strong></b></i> se vuelve <b><strong>E</strong></b>, <i><b><strong>c </strong></b></i>se vuelve <b><strong>F</strong></b>, ... , y <b><i><strong>z</strong></i></b> se vuelve <b><strong>C</strong></b>.<br>Por ejemplo,<br><i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<b><strong>ataque</strong></b></i>                        se vuelve <b><strong>DWDTXH</strong></b>.&nbsp;</span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div><br>En nuestros ejemplos, el texto plano se presentará en minúsculas y el texto cifrado en mayúsculas.<br>
+        <p></p>
+
+        <p>Una ligera generalización del sistema de cifrado de César permite que el alfabeto de texto cifrado se desplace <i><b><strong>k</strong></b></i> letras, en lugar de siempre tres. En este caso, <i><b><strong>k</strong></b></i> se convierte en
+            una clave del método general de alfabetos desplazados circularmente.&nbsp;</p>
+
+        <p>La siguiente mejora es hacer que cada uno de los símbolos del texto plano, digamos las 26 letras del abecedario inglés (no incluimos la ñ), se asocien con alguna otra letra. Por ejemplo, </p>
+
+        <ul>
+            <li><b class="sub_negrita">texto plano</b>: a b c d e f g h i j k l m n o p q r s t u v w x y z </li>
+        </ul>
+
+        <ul>
+            <li><b class="sub_negrita">texto cifrado</b>: Q W E R T Y U I O P A S D F G H J K L Z X C V B N M </li>
+        </ul>
+
+        <p>El sistema general de sustitución de símbolo por símbolo se llama <b><strong>sistema de cifrado por sustitución monoalfabética, </strong></b>siendo la clave la cadena de 26 letras correspondiente al alfabeto completo.&nbsp;</p>
+        <p>Para la clave anterior, <b class="sub_negrita">el texto plano ataque</b> se transformaría en el <b class="sub_negrita">texto cifrado QZQJXT. </b></p>
+
+        <!--Inicio Caja violeta-->
+        <br>
+        <div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Para tener en cuenta:</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>- Aunque el sistema de sustitución letra por letra puede parecer seguro, hay 26! ≈ 4.3 x 10^26 claves posibles, lo que dificulta el descifrado.</li>
+                <li>- El sistema de cifrado de César es menos seguro, ya que probar todas las claves es factible.</li>
+                <li>- Un millón de computadoras tardarían 10,000 años en probar todas las claves.&nbsp;</li>
+                <li>- Sin embargo, con una pequeña cantidad de texto cifrado, el descifrado es más fácil.&nbsp;</li>
+                <li>- Los ataques básicos aprovechan las propiedades estadísticas de los lenguajes naturales.</li>
+                <li>- Por ejemplo: En inglés, las letras más comunes son "e", "t", "o", "a", "n", "i", etc. Los digramas más comunes son "th", "in", "er", "re", "an". Los trigramas más comunes son "the", "ing", "and", "ion".</li>
+                <li></li>
+            </ul>
+        </div>
+
+        ¿Cómo es posible comprender un cifrado monoalfabético? Encontrá la respuesta en al subcapítulo siguiente.<br>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179892"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179892/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Descodificar un sistema de cifrado monoalfabético</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Un criptoanalista que intentara descifrar un sistema de cifrado monoalfabético comenzaría por contar las frecuencias relativas de todas las letras en el texto cifrado. Entonces podría asignar tentativamente la más común a la letra <b><strong><i>e</i></strong></b>            y la siguiente más común a la letra <i><b><strong>t</strong></b></i>. Vería entonces los trigramas para encontrar uno común de la forma <b><strong><i>t</i>X<i>e</i></strong></b>, lo que sugerirá fuertemente que <b><strong>X</strong></b>            es <i><b><strong>h</strong></b></i>. De la misma manera, si el patrón <i><b><strong>th</strong></b></i><b><strong>Y</strong></b><i><b><strong>t</strong></b></i> ocurre con frecuencia, <b><strong>Y</strong></b> quizá representa la letra
+            <b><strong><i>a</i></strong></b>. Con esta información el criptoanalista puede buscar un trigrama frecuente de la forma <i><b><strong>a</strong></b></i><b><strong>ZW</strong></b>, y lo más probable es que sea <i><b><strong>and</strong></b></i>.&nbsp;<br></p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;">Al adivinar las palabras comunes, digramas y trigramas, y al conocer los patrones probables de las vocales y consonantes, el/la criptoanalista construye un texto plano tentativo, letra por letra.<br></span><br></p>
+            </div>
+        </div>
+        <p>Otra estrategia, es adivinar una palabra o frase probable. Por ejemplo, consideremos el siguiente texto cifrado de un despacho contable (en bloques de cinco caracteres):<br></p>
+
+
+        <div class="row" style="center: 0 auto">
+            <div class="col-auto">
+                <p><b><strong>CTBMN</strong></b></p>
+                <p><b><strong>QJSGS</strong></b></p>
+                <p><b><strong>DSKSU</strong></b></p>
+            </div>
+
+            <div class="col-auto">
+                <p><b><strong>BYCTC</strong></b></p>
+                <p><b><strong>TJQZZ</strong></b></p>
+                <p><b><strong>TJQZZ</strong></b></p>
+            </div>
+
+            <div class="col-auto">
+                <p><b><strong>BTJDS</strong></b></p>
+                <p><b><strong>MNQJS</strong></b></p>
+                <p><b><strong>BGAQJ</strong></b></p>
+            </div>
+
+            <div class="col-auto">
+                <p><b><strong>QXBNS</strong></b></p>
+                <p><b><strong>VLNSX</strong></b></p>
+                <p><b><strong>VLNSX</strong></b></p>
+            </div>
+
+            <div class="col-auto">
+                <p><b><strong>GSTJC</strong></b></p>
+                <p><b><strong>VSZJU</strong></b></p>
+                <p><b><strong>TLCTZ</strong></b></p>
+            </div>
+
+            <div class="col-auto">
+                <p><b><strong>BTSWX</strong></b></p>
+                <p><b><strong>JDSTS</strong></b></p>
+                <p><b><strong>BNYBN</strong></b></p>
+            </div>
+
+            <div class="col-auto">
+                <p><b><strong>CTQTZ</strong></b></p>
+                <p><b><strong>JQUUS</strong></b></p>
+                <p><b><strong>QJSW</strong></b></p>
+            </div>
+
+            <div class="col-auto">
+                <p><b><strong>CQVUJ</strong></b></p>
+                <p><b><strong>JUBXJ</strong></b></p>
+                <p></p>
+            </div>
+
+        </div>
+
+
+        <p>Una palabra muy probable en un mensaje de un despacho contable de un país de habla inglesa es <i><b><strong>financial</strong></b></i>. Puesto que sabemos que <i><b><strong>financial </strong></b></i>tiene una letra repetida <i><b><strong>(i)</strong></b></i>,
+            con otras cuatro letras entre sus ocurrencias, buscamos letras repetidas en el texto cifrado con este espaciado.&nbsp;</p>
+        <p>Encontramos 12 casos, en las posiciones 6, 15, 27, 31, 42, 48, 56, 66, 70, 71, 76 y 82. Sin embargo, sólo dos de éstos, el 31 y 42, tienen la siguiente letra (correspondiente a <i><b><strong>n</strong></b></i> en el texto plano) repetida en
+            el lugar adecuado. De estos dos, sólo el 31 tiene también la <b><strong><i>a</i></strong></b> en la posición correcta, por lo que sabemos que <i><b><strong>financial</strong></b></i> comienza en la posición 30.
+        </p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;">&nbsp;A partir de aquí, es fácil deducir la clave mediante el uso de las estadísticas de frecuencia del texto en inglés y al buscar palabras casi completas para terminarlas.</span><br></p>
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;"><br></span></p>
+            </div>
+        </div>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179881"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179881/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Sistemas de cifrado por transposición</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p>Los sistemas de cifrado por sustitución conservan el orden de los símbolos de texto plano, pero los disfrazan. Mientras que los sistemas de cifrado por transposición, reordenan las letras.&nbsp;</p>
+        <p>Te invitamos a ver la figura 3 y analizar un sistema de cifrado por transposición común, la transposición columnar. Para ello es necesario considerar los siguientes ítems que describen este ejemplo:<br></p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Clave del sistema de cifrado:</span> </p>
+                        <ul>
+                            <li>La clave es una palabra o frase sin letras repetidas.</li>
+                            <li>Ejemplo: En este caso, la clave es "MEGABUCK".</li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Propósito de la clave:</span> </p>
+                        <ul>
+                            <li>Ordenar las columnas del texto cifrado.</li>
+                            <li>La columna 1 se corresponde con la letra clave más cercana al inicio del alfabeto, y así sucesivamente.</li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span><b><strong>Organización del texto plano:&nbsp;</strong></b></span>
+                        </p>
+                        <ul>
+                            <li>Se escribe horizontalmente en filas.</li>
+                            <li>Las filas se llenan para completar la matriz si es necesario.</li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Lectura del texto cifrado</span>:</p>
+                        <ul>
+                            <li>Se realiza por columnas.</li>
+                            <li>Comienza por la columna cuya letra clave es la más baja.</li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179881/cvb.png" alt="cbb" width="700" height="221" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                    </p>
+                </div>
+
+                <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 3. Un sistema de cifrado por transposición.</p>
+                <div style="margin-left: 3%; margin-right: 3%;">
+                    <p style="font-size: medium; color: rgb(1, 6, 20);">
+
+                        <!-- nada puede haber abajo -->
+                        <br>
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179893"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179893/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Interpretar el cifrado por transposición</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p>Para continuar con el subcapítulo anterior, imaginemos que un criptoanalista debe descifrar un sistema de cifrado por transposición. En tal caso, deberá seguir los siguientes pasos:</p>
+        <table class="tabla-simple texto-principal" style="width: 100%; margin: 0 auto;">
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="80%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado">1- Descifrar</td>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>El criptoanalista debe identificar el tipo de sistema de cifrado, observando si las frecuencias de las letras se ajustan al patrón usual del texto plano. Por ejemplo:&nbsp;E, T, A, O, I, N, etc. Aquí,&nbsp;cada letra se representa
+                                a sí misma y la distribución de frecuencia permanece intacta.<br></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+        <table class="tabla-simple texto-principal" style="width: 100%; margin: 0 auto;">
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="80%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado"><strong>2- Adivinar la cantidad de columnas</strong></td>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>Este análisis puede ayudar a determinar la longitud de la clave.<br></li>
+                            <li>En ocasiones, es posible inferir una palabra o frase probable del contexto del mensaje.&nbsp;</li>
+                            <li>Por ejemplo, si sospecha que la frase <i><b><strong>"milliondollars"</strong></b></i> está presente, los digramas <b><strong>MO, IL, LL, LA, IR y OS</strong></b> se manifestarán en el texto cifrado como resultado de la disposición
+                                de la frase. La letra de texto cifrado <b><strong>O</strong></b> sigue a la letra de texto cifrado <b><strong>M</strong></b> (es decir, son verticalmente adyacentes en la columna 4) puesto que están separados en la frase
+                                probable por una distancia igual a la longitud de la clave. Si se hubiera usado una clave de longitud siete, habrían aparecido los digramas <b><strong>MD, IO, LL, LL, IA, OR y NS.</strong></b> De hecho, para cada longitud
+                                de clave, se produce un grupo diferente de digramas en el texto cifrado.&nbsp;</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+        <table class="tabla-simple texto-principal" style="width: 100%; margin: 0 auto;">
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="80%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado"><strong>3- Ordenar</strong></td>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>El criptoanalista debe adivinar la cantidad de columnas en el texto cifrado.</li>
+                            <li>Examinando pares de columnas y comparando las frecuencias de sus digramas con las del texto plano en inglés, se puede deducir la cantidad de columnas utilizadas en el cifrado.</li>
+                            <li>Por ejemplo: cuando la cantidad de columnas <i><b><strong>k</strong></b></i> es pequeña, puede examinarse cada uno de los pares de columnas <i><b><strong>k (k − 1)</strong></b></i> para ver si las frecuencias de sus digramas
+                                coinciden con las del texto plano en inglés. Se asume que el par con la mejor coincidencia está ubicado de manera correcta. Ahora cada una de las columnas restantes se prueba tentativamente como sucesora de este par.
+                                La columna cuyas frecuencias de digramas y trigramas producen la mejor coincidencia se toma tentativamente como correcta. La siguiente columna se encuentra de la misma manera. El proceso completo se repite hasta encontrar
+                                un orden potencial. Es probable que en este punto se pueda reconocer texto plano (por ejemplo, si aparece milloin, quedará claro en dónde está el error).</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><span class="" style="font-size: large;"><b><strong><span class="" style="color: rgb(0, 61, 245);"><br>Sistemas de cifrado por transposición de bloque</span></strong></b>
+            </span>
+        </p>
+        <p></p>
+
+        <p>Algunos sistemas de cifrado por transposición aceptan un <b><strong>bloque de longitud fija</strong></b> como <b><strong>entrada </strong></b>y producen un bloque de longitud fija como <b><strong>salida</strong></b>. Para describir estos sistemas
+            de cifrado por completo hay que proporcionar una lista que indique el orden en el que deben salir los caracteres.&nbsp;</p>
+        <p>Por ejemplo, el sistema de cifrado de la figura 1.3 se puede ver como un sistema de cifrado de bloque de 64 caracteres. Su salida es 4, 12, 20, 28, 36, 44, 52, 60, 5, 13, . . . , 62. En otras palabras, el cuarto carácter de entrada, <i><b><strong>a</strong></b></i>,
+            es el primero en salir, seguido del decimosegundo,<i><b><strong> f</strong></b></i>, y así en lo sucesivo. </p>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179882"><div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div class="container" style="font-size: large; color: rgb(1, 6, 20);">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179882/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Rellenos de una sola vez</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="font-size: large; color: rgb(1, 6, 20);">En realidad, es bastante sencillo construir un sistema de cifrado inquebrantable; la técnica se conoce desde hace décadas.&nbsp;</p>
+        <!--Inicio Caja violeta-->
+        <br>
+        <div class="col" style="font-size: large; border-left: 3px solid rgb(70, 14, 149); background-color: rgb(243, 236, 253); width: 92%; margin: 0px auto; border-radius: 8px;">
+
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li><span style="color: rgb(1, 6, 20);"><br>- <b><strong>Primero </strong></b>se escoge una cadena de bits al azar como clave.&nbsp;</span></li>
+                <li>- <b><strong>Luego,&nbsp;</strong></b>se convierte el texto plano en una cadena de bits; por ejemplo, mediante el uso de su representación ASCII.&nbsp;</li>
+                <li>- <b><strong>Por último</strong></b>, se calcula el XOR (OR exclusivo) de estas dos cadenas, bit por bit.</li>
+                <li></li>
+            </ul>
+        </div>
+
+        <br>
+        <p style="font-size: large; color: rgb(1, 6, 20);">El<b> <strong>texto cifrado resultante no se puede descifrar</strong></b>, porque en una muestra suficientemente grande de texto cifrado cada letra aparecerá con la misma frecuencia, lo mismo que cada diagrama, trigrama, y así sucesivamente.&nbsp;</p>
+        <p style="font-size: large; color: rgb(1, 6, 20);"><br></p>
+            <!--Inicio Caja definición-->
+            <div class="row row-cols-auto" style="font-size: large; margin-left: 3%; margin-right: 3%;">
+                <div style="color: rgb(1, 6, 20);">
+                    <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #9a3282 ;"><b><strong>Definición</strong></b></span> </p>
+                </div>
+                <div class="col caja-definiciones" style="border-left: 2px solid #9a3282 ;">
+                    <p style=""><span class="" style="font-size: large;"><span class="" style="color: rgb(51, 51, 51);">El</span><span class="" style="color: rgb(51, 51, 51);">&nbsp;</span><span class="" style="color: #9a3282 ;">&nbsp;<b><strong>relleno de una sola vez</strong></b></span><span class="" style="">&nbsp;&nbsp;es inmune a todos los ataques actuales y futuros sin importar cuánta potencia computacional tenga el intruso. La razón se deriva de la teoría de la información: simplemente no hay información en el mensaje debido a que todos los textos planos posibles de una longitud dada son parecidos.</span></span>
+                    </p>
+                </div>
+            </div>
+            <p style="font-size: large; color: rgb(1, 6, 20);"><br></p>
+            <p style="font-size: large; color: rgb(1, 6, 20);">En la figura 4 se muestra un ejemplo de cómo se utilizan los rellenos de una sola vez.&nbsp;</p>
+            <!--Inicio Caja violeta-->
+            <br>
+            <div class="col" style="font-size: large; border-left: 3px solid rgb(70, 14, 149); background-color: rgb(243, 236, 253); width: 92%; margin: 0px auto; border-radius: 8px;">
+
+                <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                    <li><br>- <b><strong>Primero</strong></b>, el mensaje 1, “I love you.” se convierte en código ASCII de 7 bits.</li>
+                    <li>- <b><strong>A continuación,</strong></b> se elige el relleno de una sola vez, relleno 1, y se le aplica un XOR con el mensaje para obtener el texto cifrado.&nbsp;<br></li>
+                </ul>
+            </div>
+
+            <span style="color: rgb(1, 6, 20); font-size: large;">Un criptoanalista podría probar todos los posibles rellenos de una sola vez para ver qué texto plano proviene de cada uno. Por ejemplo, podría probarse el relleno 2 de la figura, lo que resultaría en el texto plano 2, “<i>Elvis lives</i>”, lo cual podría
+        ser o no verosímil. De hecho, para cada texto plano ASCII de 11 caracteres hay un relleno de una sola vez que lo genera.&nbsp;</span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span style="color: rgb(1, 6, 20); font-size: large;"><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span style="color: rgb(1, 6, 20); font-size: large;">Eso es lo que queremos dar a entender cuando decimos que no hay información en el texto cifrado: es posible obtener cualquier
+        mensaje con la longitud correcta a partir de él.</span><br></div>
+    <div style="font-size: large; color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179882/sdf.png" alt="cb" width="800" height="144" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 4. El uso de un relleno de una sola vez para encriptación y la posibilidad de obtener cualquier texto plano posible a partir del texto cifrado mediante el uso de un relleno diferente.</p>
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179894"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179894/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Limitaciones y obstáculos en su uso</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>En teoría, los rellenos de una sola vez son excelentes, pero en la práctica tienen varias desventajas.&nbsp;Estas limitaciones pueden afectar significativamente su viabilidad y utilidad en aplicaciones reales:</p>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span><b><strong>Claves no memorizables:</strong></b> La necesidad de transportar físicamente la clave escrita aumenta el riesgo de captura. Por ejemplo, si un emisor o receptor son interceptados,
+                            las claves escritas se vuelven vulnerables a la exposición.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span><b><strong>Limitación en la cantidad de datos:</strong></b> La cantidad de datos que se pueden transmitir está directamente relacionada con la disponibilidad de claves. Por ejemplo, si un espía
+                            descubre una gran cantidad de datos, puede enfrentarse a la imposibilidad de transmitirlos debido a la limitación de claves disponibles.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span><b><strong>Sensibilidad a la sincronización:</strong></b> La pérdida o inserción de caracteres puede distorsionar los datos si el emisor y el receptor pierden la sincronización. Por ejemplo,
+                            si hay una desincronización en la transmisión, los datos pueden interpretarse de manera incorrecta.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span><b><strong>Necesidad de medios físicos especiales:</strong></b> Aunque se pueden usar DVD especiales como origen de la clave, su logística puede volverse tediosa y poco práctica en situaciones
+                            cotidianas. Por ejemplo, tener que insertar un nuevo DVD cada 30 segundos en redes de alta velocidad puede resultar poco práctico. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600"></span><b><strong>Logística de transporte:</strong></b> El transporte físico de los DVD desde el emisor hasta el receptor puede reducir significativamente la utilidad práctica del método en aplicaciones
+                            cotidianas. Por ejemplo, la necesidad de llevar personalmente los DVD puede restringir su uso en entornos donde la conveniencia y la eficiencia son críticas.</p>
+                    </div>
+                </div>
+
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179883"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179883/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Seguridad a la vista: el caso de Alice y Bob</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Curiosamente, podría haber una solución al problema de cómo transmitir el relleno de una sola vez a través de la red, y proviene de un origen muy inverosímil: <b class="sub_negrita">la mecánica cuántica. </b>Esta área aún es experimental,
+            pero las pruebas iniciales son alentadoras. Si pudiera perfeccionarse y fuera eficiente, con el tiempo casi toda la criptografía se realizaría utilizando rellenos de una sola vez debido a su seguridad comprobada. A continuación, explicaremos
+            brevemente cómo funciona el método de la criptografía cuántica, a través de un ejemplo.<br></p>
+        <p><span style="color: rgb(0, 61, 245); font-size: large; font-weight: 600;" class="">Protocolo llamado BB84: Alice y Bob</span><br></p>
+        <p>Describiremos un protocolo llamado BB84, que debe su nombre a sus autores y a su año de publicación (Bennet y Brassard, 1984). </p>
+        <!--Caja + título + imagen + texto-->
+
+        <p style="background-color: #9A3282; color: white; padding: 4px 16px 4px 16px; border-radius: 8px 8px 0px 0px; display: inline-block; margin-bottom: -1px"><span class="" style="font-size: large;"><b><span class="" style="font-size: large;"><strong>Bennett&nbsp;</strong>(2020)</span></b>
+            </span>
+        </p>
+
+
+
+        <div style="border: 1px solid #9A3282; border-radius: 0px 8px 8px 8px; background-color: white">
+            <div class="row" style="margin: 16px 8px; display: flex; align-items: center;">
+                <div class=" col-auto">
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179883/charles-bennett-456x520-1.jpg" alt="Castells" width="987" height="1126" role="presentation" style="width: 80px; height: 80px; border-radius: 9999px" class="img-responsive atto_image_button_middle">
+                </div>
+
+                <div class="col">
+                    <p><span class="" style="font-size: large; color: #010614"><span class="" style="color: rgb(51, 51, 51);"></span></span>
+                    </p>
+                    <div>
+                        <p>La criptografía cuántica permite enviar mensajes secretos con la seguridad de que nadie esté escuchando clandestinamente.</p>
+                    </div>
+                    <p></p>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + título + imagen + texto-->
+        <p><span class="" style="color: rgb(255, 51, 204);"><span><span class="" style="color: rgb(51, 51, 51);"><br></span></span>
+            </span>
+        </p><p><span class="" style="color: rgb(255, 51, 204);"><span><span class="" style="color: rgb(51, 51, 51);">El protocolo BB84 se utiliza para realizar comunicaciones seguras mediante el uso de propiedades cuánticas para garantizar la seguridad de la información transmitida. En este protocolo, Alice y Bob son dos partes que desean comunicarse de forma segura. Este es un protocolo que sentó las bases de otros cuyo pilar es la criptografía cuántica.<br></span></span></span></p><p><span class="" style="color: rgb(255, 51, 204);"><span><span class="" style="color: rgb(51, 51, 51);">A continuación explorá el caso y acompañá a Alice y Bob en la identificación de su problema, la posible solución y nuevos desafíos que deberán enfrentar.</span></span></span></p>
+        <p><br></p></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179895"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179895/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Alice y Bob: su historia</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Bob es un banquero muy importante, con quien Alice quiere hacer negocios, para lo cual necesitan intercambiar información de manera segura. Para eso, Alice, desea establecer un relleno de una sola vez con Bob.<br></p>
+
+        <p>Establecer un <b><strong>relleno de una sola vez</strong></b> permitiría a nuestros protagonistas tener la seguridad de que su comunicación es segura. Como ya vimos, podrían utilizar un DVD especial que contenga varios&nbsp;<i>gigabytes</i>&nbsp;de
+            información... pero esta opción no es posible para ellos, ya que residen a mucha distancia.</p>
+        <p></p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><b>La pregunta, entonces, es:&nbsp;</b></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> ¿Cómo pueden establecer un relleno de única vez sin intercambiar antes algunos DVD? </p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p><b><strong>Alice y Bob se encuentran en extremos opuestos de un cable de fibra óptica</strong></b> a través del cual pueden enviar y recibir pulsos de luz, ¡esta sería una solución posible!&nbsp;</p>
+        <p>Sin embargo, <b><strong>tenemos un tercer protagonista en esta historia: un intruso intrépido, Trudy</strong></b>, que puede cortar la fibra para establecer una derivación activa. Trudy puede leer todos los bits en ambas direcciones. También
+            puede enviar mensajes falsos en ambas direcciones.&nbsp;<br></p>
+        <p>Para Alice y Bob <b><strong>la situación podría parecer irremediable</strong></b>, pero la criptografía cuántica puede arrojarle un poco de luz al tema en cuestión.</p>
+        <div class="" style="width: 96%;  margin: 0 auto; ">
+
+            <div class="row">
+
+                <div class="col-1" style="background-color: #460E95; border-radius: 4px 0px 0px 4px;">
+
+                    <div class="d-flex justify-content-center" style="margin-top: 20px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="color: white;">
+						                <path fill-rule="evenodd" d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 1 1 .707.707m9.9-.707a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.314.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707M6 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m5-6.5a.5.5 0 0 0-1 0v2.117L8.257 5.57a.5.5 0 0 0-.514.858L9.528 7.5 7.743 8.571a.5.5 0 1 0 .514.858L10 8.383V10.5a.5.5 0 1 0 1 0V8.383l1.743 1.046a.5.5 0 0 0 .514-.858L11.472 7.5l1.785-1.071a.5.5 0 1 0-.514-.858L11 6.617z"></path> 
+					            </svg>
+                    </div>
+                </div>
+
+                <div class="col-11" style="background-color: #F3ECFD;border: 1px solid #460E95; border-radius: 0px 4px 4px 0px;">
+
+                    <p style="margin-top: 16px;">
+                    </p>
+                    <p>
+                    </p>
+                    <ul>
+                        <li>La <b><strong>criptografía cuántica</strong></b> se basa en el hecho de que la luz viene en pequeños paquetes llamados fotones, los cuales tienen algunas propiedades peculiares.</li>
+                        <li>Además, <b>la luz se puede polarizar </b>al pasarla a través de un filtro de polarización, un hecho bien conocido por quienes utilizan anteojos oscuros y por los fotógrafos. <br>- Si se pasa un haz de luz (es decir, un flujo
+                            de fotones) a través de un filtro polarizador, todos los fotones que emerjan de él se polarizarán en la dirección del eje del filtro (por ejemplo, el vertical). <br>- Si a continuación el haz se pasa a través de un segundo
+                            filtro polarizador, la intensidad de la luz que emerja del segundo filtro es proporcional al cuadrado del coseno del ángulo entre los ejes. <br>- Si los dos ejes son perpendiculares, no pasa ningún fotón.
+                            <br>- La orientación absoluta de los dos filtros no importa; sólo cuenta el ángulo entre sus ejes.</li>
+                    </ul>
+                    <p></p>
+                    <p></p>
+                </div>
+                <br>
+                <!-- Fin Caja Violeta-->
+
+
+                <div style="margin-left: 3%; margin-right: 3%;">
+
+                    <p><br></p>
+                    <p><br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179896"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179896/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pasos para llegar a una resolución</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Solucionar este problema de comunicación segura utilizando la criptografía cuántica supone una serie de pasos. ¡Vamos a verlos!<br></p>
+        <div class="container">
+            <table class="table table-bordered" style="border: 1px solid black;">
+                <colgroup>
+                    <col span="1" style="width: 10%">
+                    <col span="1" style="width: 90%;">
+                </colgroup>
+                <thead>
+                    <!-- 
+                    <tr>
+                        <th scope="col" style="border: 1px solid black; text-align: center">Título 1</th>
+                        <th scope="col" style="border: 1px solid black">Título 2</th>
+
+                    </tr> -->
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #f4eefc">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); display: block; margin: 0 auto;">
+     <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm7.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z"></path>
+</svg>
+
+
+
+
+
+                        </td>
+                        <td style="border: 1px solid black">
+                            <p>Para generar un relleno de una sola vez y poder hacer negocios de forma segura con Bob, Alice necesita dos conjuntos de filtros polarizadores.&nbsp;</p>
+                            <p></p>
+                            <ul>
+                                <li>El <b><strong>primer conjunto</strong></b> consiste en un filtro vertical y en uno horizontal. Esta opción se conoce como base rectilínea. Una base es en esencia un sistema de coordenadas.&nbsp;</li>
+                                <li>El <b><strong>segundo conjunto</strong></b> de filtros consiste en lo mismo, excepto que se rotan 45 grados, de forma que un filtro va del extremo inferior izquierdo al extremo superior derecho y el otro va del extremo superior izquierdo
+                                    al extremo inferior derecho. Esta opción se conoce como base diagonal.&nbsp;</li>
+                            </ul>Por lo tanto, Alice tiene dos bases, las cuales puede insertar a voluntad y rápidamente en su haz. En realidad, Alice no tiene cuatro filtros separados, sino un cristal cuya polarización se puede cambiar de manera eléctrica
+                            y a gran velocidad a cualquiera de las cuatro direcciones permitidas. Bob tiene el mismo equipo que Alice. <b><strong>El hecho de que Alice y Bob dispongan de dos bases cada uno es esencial para la criptografía cuántica.</strong></b></td>
+
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; background-color:  #eadef8">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); display: block; margin: 0 auto;">
+    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm4.646 6.24v.07H5.375v-.064c0-1.213.879-2.402 2.637-2.402 1.582 0 2.613.949 2.613 2.215 0 1.002-.6 1.667-1.287 2.43l-.096.107-1.974 2.22v.077h3.498V12H5.422v-.832l2.97-3.293c.434-.475.903-1.008.903-1.705 0-.744-.557-1.236-1.313-1.236-.843 0-1.336.615-1.336 1.306"></path>
+</svg>
+                        </td>
+                        <td style="border: 1px solid black">
+                            <ul>
+                                <li>Ahora, Alice asigna una dirección como 0 y la otra como 1 para cada base. Supongamos que elige 0 para vertical y 1 para horizontal. </li>
+                                <li>De manera independiente, también elige 0 para la dirección del extremo inferior izquierdo al superior derecho y 1 para la dirección del extremo superior izquierdo al inferior derecho. Alice envía estas opciones a Bob
+                                    como texto plano.</li>
+                            </ul>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #dfcdf5"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); display: block; margin: 0 auto;">
+     <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm5.918 8.414h-.879V7.342h.838c.78 0 1.348-.522 1.342-1.237 0-.709-.563-1.195-1.348-1.195-.79 0-1.312.498-1.348 1.055H5.275c.036-1.137.95-2.115 2.625-2.121 1.594-.012 2.608.885 2.637 2.062.023 1.137-.885 1.776-1.482 1.875v.07c.703.07 1.71.64 1.734 1.917.024 1.459-1.277 2.396-2.93 2.396-1.705 0-2.707-.967-2.754-2.144H6.33c.059.597.68 1.06 1.541 1.066.973.006 1.6-.563 1.588-1.354-.006-.779-.621-1.318-1.541-1.318"></path>
+</svg>
+                        </td>
+                        <td style="border: 1px solid black">
+                            <ul>
+                                <li>A continuación, Alice elige un relleno de una sola vez; por ejemplo, con base en un generador de números aleatorios (un tema complejo por sí solo). Lo transmite bit por bit a Bob y elige de manera aleatoria una de sus
+                                    dos bases para cada bit. </li>
+                                <li>Para enviar un bit, su pistola de fotones emite un fotón polarizado de manera apropiada para la base que está utilizando para ese bit. </li>
+                                <li>Por ejemplo, podría elegir bases diagonal, rectilínea, rectilínea, diagonal, rectilínea, etc. Para enviarle un relleno de una sola vez de 1001110010100110 con estas bases, Alice debería enviar los fotones que se muestran
+                                    en la figura 5(a). Dados el relleno de una sola vez y la secuencia de bases, la polarización por utilizar para cada bit se determina de manera única. Los bits enviados en un fotón a la vez se conocen como&nbsp;<i>qubits</i>.</li>
+                            </ul>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #d4bdf1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); display: block; margin: 0 auto;">
+    <path d="M6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218"></path>
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm5.519 5.057q.33-.527.657-1.055h1.933v5.332h1.008v1.107H10.11V12H8.85v-1.559H4.978V9.322c.77-1.427 1.656-2.847 2.542-4.265Z"></path>
+</svg>
+                        </td>
+                        <td style="border: 1px solid black">
+                            <p>
+                                </p><ul>
+                                    <li>Bob no sabe cuáles bases utilizar, por lo que elige una al azar para cada fotón entrante y simplemente la usa, como se muestra en la figura 5(b). <br>- <b><strong>Si elige la base correcta</strong></b>, obtiene el bit correcto. <br>-
+                                        <b><strong>Si elige la base incorrecta</strong></b>, obtiene un bit aleatorio debido a que si un fotón choca con un filtro que está polarizado a 45 grados de su propia polarización, salta de manera aleatoria a la polarización
+                                        del filtro o a una polarización perpendicular al filtro con igual probabilidad.</li>
+                                </ul>
+                            <p></p>
+                            <p>Esta propiedad de los fotones es fundamental para la mecánica cuántica. Por lo tanto, algunos de los bits son correctos y algunos son aleatorios, pero Bob no sabe cuál es cuál. Los resultados de Bob se muestran en la figura
+                                5(c).</p>
+                            <div style="text-align: center;">
+                                <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179896/sdcxcsdcs.png?time=1708435841955" alt="sd" width="600" height="419" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                                </p>
+                            </div>
+
+                            <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 5: Ejemplo de criptografía cuántica.</p>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #c9adee"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); display: block; margin: 0 auto;">
+    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm5.994 12.158c-1.57 0-2.654-.902-2.719-2.115h1.237c.14.72.832 1.031 1.529 1.031.791 0 1.57-.597 1.57-1.681 0-.967-.732-1.57-1.582-1.57-.767 0-1.242.45-1.435.808H5.445L5.791 4h4.705v1.103H6.875l-.193 2.343h.064c.17-.258.715-.68 1.611-.68 1.383 0 2.561.944 2.561 2.585 0 1.687-1.184 2.806-2.924 2.806Z"></path>
+</svg>
+                        </td>
+                        <td style="border: 1px solid black"><b><strong>¿Cómo sabe Bob cuáles de las bases que obtuvo son correctas y cuáles erróneas?</strong></b><br>Simplemente indica a Alice, mediante texto plano, cuál base utilizó para cada bit y ella le indica a él, también en texto plano, cuáles
+                            son correctas y cuáles erróneas, como se muestra en la figura 5(d).&nbsp;</td>
+
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #bda1e1"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); display: block; margin: 0 auto;">
+    <path d="M8.111 7.863c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582"></path>
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.21 3.855c1.612 0 2.515.99 2.573 1.899H9.494c-.1-.358-.51-.815-1.312-.815-1.078 0-1.817 1.09-1.805 3.036h.082c.229-.545.855-1.155 1.98-1.155 1.254 0 2.508.88 2.508 2.555 0 1.77-1.218 2.783-2.847 2.783-.932 0-1.84-.328-2.409-1.254-.369-.603-.597-1.459-.597-2.642 0-3.012 1.248-4.407 3.117-4.407Z"></path>
+</svg></td>
+                        <td style="border: 1px solid black">
+                            <p>A partir de esta información los dos pueden construir una cadena de bits tomando en cuenta los aciertos, como se muestra en la figura 5(e).&nbsp;</p>
+                            <p>En promedio, esta cadena de bits tendrá la mitad de la longitud de la cadena de bits original, pero debido a que las dos partes lo saben, ambas pueden utilizarla como un relleno de una sola vez. Todo lo que Alice tiene que
+                                hacer es transmitir una cadena de bits un poco mayor que el doble de la longitud deseada, y tanto ella como Bob tendrán un relleno de una sola vez con la longitud deseada. <b><strong>¡Problema resuelto!</strong></b></p>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <p><br></p>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179897"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179897/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">La curiosidad de Trudy</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Todo parece resuelto pero... ¡no nos olvidemos de la otra protagonista de la historia! <b>¿Qué pasa con Trudy?&nbsp;</b></p>
+        <div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 96%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Supongamos que ella tiene curiosidad por saber lo que dirá Alice, ¿qué haría?&nbsp;</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>- <b>Corta la fibra</b> e inserta sus propios detector y transmisor.&nbsp;</li>
+                <p>- Por desgracia para ella, tampoco sabe cuál base utilizar para cada fotón. Lo mejor que puede hacer es <b>elegir una al azar para cada fotón</b>, tal como lo hizo Bob. En la figura 5(f) se muestra un ejemplo de sus elecciones. <br>-<b>Cuando más tarde Bob informó</b>                    (en texto plano) cuáles bases utilizó y Alice le indica (en texto plano) cuáles fueron correctas, <b>Trudy sabe cuándo acertó y cuándo no</b>.<br>&nbsp; &nbsp; &nbsp; * En la figura 5 acertó en los bits 0, 1, 2, 3, 4, 6, 8,
+                    12 y 13. Pero sabe a partir de la respuesta de Alice en la figura 5(d) que sólo los bits 1, 3, 7, 8, 10, 11, 12 y 14 son parte del relleno de una sola vez. Acertó y capturó el bit correcto en cuatro de estos bits (1, 3, 8 y 12).<br>&nbsp;
+                    &nbsp; &nbsp;* En los otros cuatro (7, 10, 11 y 14) no adivinó y no conoce el bit transmitido. <br>- Por lo tanto, a partir de la figura 5(e), Bob sabe que el relleno de una sola vez inicia con 01011001, pero todo lo que Trudy tiene
+                    es 01?1??0?, tomando en cuenta la figura 5(g).</p>
+                <li></li>
+            </ul>
+        </div>
+
+        <p><b><strong><span class="" style="color: rgb(0, 61, 245);">Minimizando el riesgo</span><span class="" style="color: rgb(255, 51, 204);"><span><span class="" style="color: rgb(0, 61, 245);">&nbsp;</span></span></span></strong></b><br></p>
+
+        <p>Por supuesto que Alice y Bob están conscientes de que tal vez Trudy haya capturado parte de su relleno de una sola vez, por lo que les gustaría reducir la información que ésta tiene. Para ello pueden realizar una transformación sobre el relleno.
+            ¿Cómo lo pueden hacer? Veamos los pasos:&nbsp; &nbsp; &nbsp;&nbsp;</p>
+        <p>
+        </p>
+        <ul>
+            <li>Pueden dividir el relleno de una sola vez en bloques de 1024 bits.&nbsp;</li>
+            <li>Elevar al cuadrado cada uno de ellos para formar un número de 2048 bits.&nbsp;</li>
+            <li>Utilizar la concatenación de estos números de 2 048 bits como el relleno de una sola vez.&nbsp;</li>
+        </ul>
+        <p></p>
+        <p>Con su conocimiento parcial de la cadena de bits transmitida, Trudy no tiene forma de elevar al cuadrado y, por lo tanto, no tiene nada. La transformación del relleno original de una sola vez a uno diferente que reduce el conocimiento de Trudy
+            se conoce como amplificación de privacidad.&nbsp;</p>
+        <p>En la práctica, en lugar de las elevaciones al cuadrado se utilizan transformaciones complejas en las que cada bit de salida depende de cada bit de entrada.</p>
+        <p>De este modo, no sólo Trudy no tiene idea de cuál es el relleno de una sola vez, sino que su presencia tampoco es un secreto. ¿Por qué?&nbsp;</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <div style="margin-left: 3%; margin-right: 3%;">
+                    <div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 96%; margin: 0 auto; border-radius: 8px">
+
+                        <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Veamos que pasaría si Trudy intercepta la comunicación:</p>
+                        <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                            <li>-<b> </b>Después de todo, debe retransmitir a Bob cada bit recibido para hacerle creer que está hablando con Alice. El problema es que lo mejor que puede hacer es transmitir el <i>qubit </i>que recibió, utilizando la polarización
+                                que utilizó para recibirlo, y casi la mitad del tiempo estará mal, lo cual provocaría muchos errores en el relleno de una sola vez de Bob.&nbsp;</li>
+                            <li><span style="">- Cuando Alice finalmente comienza a enviar datos, los codifica mediante un pesado código de corrección de errores hacia adelante. Desde el punto de vista de Bob, un error de un 1 bit en el relleno de una sola vez es lo mismo que un error de transmisión de 1 bit. De cualquier forma, obtiene el bit incorrecto. Si hay suficiente corrección de errores hacia adelante, puede recuperar el mensaje original a pesar de todos los errores, y puede contar fácilmente cuántos errores fueron corregidos. Si este número es mayor que la tasa de errores esperada del equipo, él sabe que Trudy ha intervenido la línea y puede actuar en consecuencia (por ejemplo, decirle a Alice que cambie a un canal de radio, que llame a la policía, etc.).&nbsp;</span></li>
+                            <li><span style="">- Si Trudy tuviera alguna forma de clonar un fotón con el fin de contar con un fotón para inspeccionar y uno idéntico para enviar a Bob, podría evitar la detección, pero en la actualidad no se conoce ninguna forma de clonar perfectamente un fotón. E incluso aunque Trudy pudiera clonar fotones, no se podría reducir el valor de la criptografía cuántica para establecer rellenos de una sola vez.&nbsp;</span><br></li>
+                            <p style="text-align: right;"><br></p>
+                                <p style="text-align: right;"><i>Aunque se ha mostrado que la criptografía cuántica puede operar a través de distancias de 60 km de fibra, el equipo es complejo y costoso.</i></p>
+                                <p style="text-align: right;"><i>Por lo tanto... ¡el método usado por Alice y Bob es seguro y pueden intercambiar la información para su negocio con tranquilidad!</i></p>
+                                <p></p>
+                                <li></li>
+                        </ul>
+                    </div>
+                    <div style="margin-left: 3%; margin-right: 3%;">
+                        <p><br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179884"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179884/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Dos principios criptográficos fundamentales </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>En este apartado veremos dos principios criptográficos:</p>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><b><strong>Principio criptográfico 1: Redundancia en criptografía<br></strong></b></p><span>
+                <ul style="">
+                    <li style="">Todos los mensajes encriptados deben contener información no esencial para comprender el mensaje.</li>
+                    <li style="">Por ejemplo, una compañía de compras por correo que utiliza mensajes de pedido de solo 3 bytes, lo que resulta en un problema de seguridad. Para evitar ataques de intrusos activos, se agrega redundancia a los mensajes, por ejemplo,
+                        extendiéndolos a 12 bytes con 9 bytes iniciales de ceros.</li>
+                    <li style="">La redundancia permite que el destinatario determine si un mensaje es válido, pero también facilita la violación del sistema por parte de intrusos pasivos.</li>
+                    <li style="">La redundancia no debe consistir en una serie de ceros al principio o al final del mensaje.</li>
+                </ul>
+                <p style="font-weight: bold;"></p>
+            </span></div><strong>
+        </strong></div><span>
+
+
+
+
+        <div class="row" style="margin-left: 32px;">
+            <div style="font-weight: bold;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3D7A15">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col" style="">
+                <p><b><strong>Principio criptográfico 2: Verificación de la actualización del mensaje<br></strong></b></p>
+                <div data-testid="conversation-turn-61" style="">
+                    <div style="">
+                        <div style="">
+                            <div style="">
+                                <div style="">
+                                    <div style="">
+                                        <div data-message-author-role="assistant" data-message-id="211e39b4-b6e6-48f0-bf66-e54fe193e353" style="">
+                                            <div style="">
+                                                <ul style="">
+                                                    <li style="">Se enfoca en la necesidad de implementar medidas que permitan verificar la actualidad de cada mensaje recibido, evitando la reproducción de mensajes antiguos por parte de intrusos activos.</li>
+                                                    <li style="">Sin estas salvaguardias, existe el riesgo de que un atacante, una ex empleada telefónica, por ejemplo, puede intervenir la línea telefónica y continuar retransmitiendo mensajes válidos previamente enviados.</li>
+                                                    <li style="">Se establece el principio criptográfico 2, que exige la implementación de métodos para frustrar los ataques de repetición.</li>
+                                                    <li style="">Una medida sugerida es incluir en cada mensaje una marca de tiempo válida por un período corto, como 10 segundos, para asegurar la autenticidad y frescura de los mensajes.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-weight: bold;"></p>
+            </div>
+        </div>
+
+
+
+
+
+
+        <br>
+    </span></div><strong>
+</strong></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179887"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179887/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Principio 1: Redundancia</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>El primer principio es que todos los mensajes encriptados deben contener redundancia; es decir, información no necesaria para entender el mensaje.&nbsp;</p>
+        <!--Inicio Caja definición-->
+        <div class="row row-cols-auto" style="margin-left: 3%; margin-right: 3%;">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="font-size: large; color: #4E7CFA;"><b><strong>Ejemplo</strong></b></span></p>
+            </div>
+            <div class="col caja-definiciones" style="border-left: solid #4E7CFA 2px">
+                <p><span class="" style="font-size: large; color: #4E7CFA;"><span class="" style="color: #4E7CFA;">La</span> <span class="" style="color: #4E7CFA;">&nbsp;<b><strong>compañía de compras por correo</strong></b></span><span class="" style="color: #4E7CFA;">, El Perezoso (EP), tiene 60 000 productos. Pensando que son muy eficientes, los programadores de EP deciden que los mensajes de pedidos deben consistir en un nombre de cliente de 16 bytes seguido de un campo de datos de 3 bytes (1 byte para la cantidad y 2 para el número de producto). Los últimos 3 bytes se deben encriptar mediante el uso de una clave muy extensa, conocida sólo por el cliente y EP.&nbsp;</span></span>
+                </p>
+            </div>
+        </div>
+        <!--Fin Caja definición-->
+        <p><br>En un principio, esto podría parecer seguro, y en cierto sentido lo es, puesto que los intrusos pasivos no pueden desencriptar los mensajes. Por desgracia, el sistema también tiene una falla que lo vuelve inútil.<br></p>
+
+        <span style=" color:#1345CD; font-weight: 600; font-size: x-large"><span class="" style="font-size: large; color: rgb(0, 61, 245);">Continuamos con el ejemplo:</span></span>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;">Supongamos que una empleada recientemente despedida quiere vengarse de EP. Antes de irse, se lleva con ella la lista de clientes. Después, trabaja toda la noche escribiendo un programa para generar pedidos ficticios usando nombres reales de los clientes. Dado que no tiene la lista de claves, sólo pone números aleatorios en los últimos 3 bytes y envía cientos de pedidos a EP.&nbsp;</span><br></p>
+            </div>
+        </div>
+        <p dir="ltr">Al llegar estos mensajes, la computadora de EP usa el nombre del cliente para localizar la clave y desencriptar el mensaje. Por desgracia para EP, casi todos los mensajes de 3 bytes son válidos, por lo que la computadora comienza a imprimir instrucciones
+            de envío.&nbsp;</p>
+        <p dir="ltr">Aunque podría parecer extraño que un cliente ordene 837 juegos de columpios para niños o 540 cajas de arena, en lo que a la computadora concierne, el cliente bien podría estar planeando abrir una cadena de franquicias con juegos infantiles.
+            De esta manera, un intruso activo (la ex empleada) puede causar muchísimos problemas, aun cuando no pueda entender los mensajes que genera su computadora.&nbsp;<br></p>
+        <div class="" style="width: 96%;  margin: 0 auto; "><br>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179898"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179898/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Importancia</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>Podemos resolver este problema si agregamos redundancia a todos los mensajes siguindo los siguientes pasos:<br></p>
+        <p dir="ltr">
+        </p>
+        <ol>
+            <li>Extender los mensajes de pedido a 12 bytes, con los primeros 9 bytes siendo ceros, impide que un ex empleado genere una cadena larga de mensajes válidos, evitando así el ataque.</li>
+            <li>La <b>moraleja </b>es que todos los mensajes deben contener una cantidad considerable de redundancia para evitar que los intrusos activos envíen basura al azar y logren que se interprete como mensajes válidos.</li>
+            <li>Sin embargo, agregar redundancia facilita el descifrado de los mensajes por parte de los criptoanalistas.</li>
+            <li>En un escenario altamente competitivo, como el negocio de pedidos por correo, la <b><strong>competencia podría intervenir la línea telefónica</strong></b> para obtener información sobre las ventas de la empresa.</li>
+            <li>En el <b><strong>esquema origina</strong></b>l con mensajes de 3 bytes, el criptoanálisis era casi imposible debido a la falta de diferenciación entre mensajes válidos y no válidos.</li>
+            <li>Con el <b><strong>nuevo esquema</strong></b> de 12 bytes, es fácil para el criptoanalista distinguir entre mensajes válidos y no válidos, lo que simplifica el proceso de descifrado.</li>
+        </ol>
+        <p></p>
+        <p dir="ltr">&nbsp;Por lo tanto, tenemos el:</p>
+
+        <p style=" color: #9A3282; font-weight: 600; padding-left: 88px; padding-right: 88px">Principio criptográfico 1: Los mensajes deben contener alguna redundancia. </p>
+
+        <p dir="ltr" id="docs-internal-guid-14efc709-7fff-5ec1-53b2-c469db2db553">En otras palabras, al desencriptar un mensaje, el destinatario debe tener la capacidad de saber si es válido con sólo inspeccionarlo y tal vez mediante un cálculo simple. Esta redundancia es necesaria para evitar que intrusos activos envíen
+            basura y engañen al receptor para que desencripte la basura y realice algo con el “texto plano”.&nbsp;</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;">Sin embargo, esta misma redundancia simplifica en gran medida la violación del sistema por parte de los intrusos pasivos, por lo que aquí hay un poco de preocupación. Además, la redundancia nunca debe estar en la forma de&nbsp;</span>
+                    <i style="color: rgb(1, 6, 20); font-weight: 400;"><b><strong>n&nbsp;</strong></b></i><span style="color: rgb(1, 6, 20); font-weight: 400;">ceros al principio o al final de un mensaje, debido a que al ejecutar tales mensajes a través de algunos algoritmos criptográficos los resultados son más predecibles, lo que facilita el trabajo del criptoanalista.&nbsp;</span></p>
+            </div>
+        </div>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p dir="ltr" id="docs-internal-guid-14efc709-7fff-5ec1-53b2-c469db2db553">Un <b><strong>polinomio</strong></b> CRC (Cyclic Redundancy Check, en inglés-técnica utilizada en la detección de errores en la transmisión de datos.), es mucho mejor que una serie de ceros, puesto que el receptor puede verificarlo fácilmente,
+            pero implica más trabajo para el criptoanalista.&nbsp;<br></p>
+        <div class="" style="width: 96%;  margin: 0 auto; ">
+
+            <div class="row">
+
+                <div class="col-1" style="background-color: #460E95; border-radius: 4px 0px 0px 4px;">
+
+                    <div class="d-flex justify-content-center" style="margin-top: 20px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="color: white;">
+						                <path fill-rule="evenodd" d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 1 1 .707.707m9.9-.707a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.314.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707M6 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m5-6.5a.5.5 0 0 0-1 0v2.117L8.257 5.57a.5.5 0 0 0-.514.858L9.528 7.5 7.743 8.571a.5.5 0 1 0 .514.858L10 8.383V10.5a.5.5 0 1 0 1 0V8.383l1.743 1.046a.5.5 0 0 0 .514-.858L11.472 7.5l1.785-1.071a.5.5 0 1 0-.514-.858L11 6.617z"></path> 
+					            </svg>
+                    </div>
+                </div>
+
+                <div class="col-11" style="background-color: #F3ECFD;border: 1px solid #460E95; border-radius: 0px 4px 4px 0px;">
+
+                    <p style="margin-top: 16px;">
+                    </p>
+                    <p>
+                    </p>
+                    <ul>
+                        <li>Si regresamos a la <b><strong>criptografía cuántica</strong></b> por un momento, también podemos ver que la redundancia juega un papel ahí:<br>- Debido a que Trudy interceptó los fotones, algunos bits en el relleno de una
+                            sola vez de Bob serán incorrectos. <br>- Bob necesita algo de redundancia en los mensajes entrantes para determinar que hay errores presentes. <br>- Una forma muy burda de redundancia es repetir dos veces el mensaje. Si ambas
+                            copias no son idénticas, Bob sabe que o la fibra tiene mucho ruido o que alguien está interviniendo la transmisión. <br>- Por supuesto que enviar todo el mensaje dos veces es excesivo; los códigos de Hamming o de Reed-Solomon
+                            constituyen formas más eficientes para realizar la detección y corrección de errores.&nbsp;<br></li>
+                        <li>Pero debe quedar claro que para distinguir un mensaje válido de uno inválido, en especial en el caso de que haya un intruso activo, es necesaria cierta cantidad de redundancia.&nbsp;</li>
+                    </ul>
+                    <p></p>
+                    <p></p>
+                </div>
+                <br>
+                <!-- Fin Caja Violeta--><br></div>
+            <br>
+            <br>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179888"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179888/_%20zoom%2813%29%20%281%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Principio 2: actualización <br></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p>El segundo principio criptográfico es que se deben tomar medidas para asegurar que cada mensaje recibido se verifique con el fin de saber si está actualizado; es decir, que se haya enviado muy recientemente.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p><p>Esta medida es necesaria para evitar que intrusos activos reproduzcan mensajes antiguos.&nbsp;</p><p>Si no se tomaran tales medidas, nuestra ex empleada podría intervenir la línea telefónica de EP y simplemente continuar repitiendo los mensajes válidos enviados con anterioridad.&nbsp;</p></div></div>
+ <!-- Fin Cuadro amarillo borde violeta -->
+ 
+      <p>En otras palabras, tenemos:&nbsp;<br></p>
+        <p style=" color: #9A3282; font-weight: 600; padding-left: 88px; padding-right: 88px">Principio criptográfico 2: Es necesario algún método para frustrar los ataques de repetición. </p>
+
+        <p><span id="docs-internal-guid-e2ac8839-7fff-d46a-f287-eaea62669e8e">Una de tales medidas es incluir en cada mensaje una estampa de tiempo válida durante, digamos, 10 segundos. El receptor puede entonces guardar los mensajes unos 10 segundos y comparar los mensajes recién llegados con los anteriores para filtrar los duplicados. Los mensajes con una antigu</span>̈edad
+            mayor a 10 segundos pueden descartarse, dado que todas las repeticiones enviadas más de 10 segundos después también se rechazarán por ser demasiado viejas.<br></p>
+        <p><br></p>
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch179885"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659501/mod_book/chapter/179885/_%20zoom%2813%29%20%281%29.png" alt="" width="100" height="100" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 80px 8px 30px ; margin-left:-2.4%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Checkpoint</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+
+
+
+        <p>Luego de la lectura de esta semana, te invitamos a que revises los contenidos pasando por el<a href="https://aulasvirtuales.bue.edu.ar/mod/quiz/view.php?id=649499&amp;forceview=1"> </a><a href="https://aulasvirtuales.bue.edu.ar/mod/quiz/view.php?id=649499&amp;forceview=1"><span class="" style="color: rgb(0, 46, 184);"><u>Checkpoint</u></span>.</a></p>
+        <p>De esta forma, podrás verificar si has comprendido las ideas principales.</p>
+        <p><span class="" style="color: rgb(0, 61, 245);"><b><strong>¡No dudes en volver a este libro en caso que necesites repasar algún concepto!</strong></b></span></p>
+        <br>
+
+        <!-- nada abajo -->
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[649458,649459,649461,649462,649463,649465,649466,649467,649469,649471,649473,649476,649477,649480,649481,649484,649485,649488,649494,649497,649498,649500,649502,649504,676491,680812,680813,681319,683403,686431,689333,692066]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1747420296/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2659501, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1748092072); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random6831e043bf0482'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6831e043bf0482'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

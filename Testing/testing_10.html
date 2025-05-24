@@ -1,0 +1,2694 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S10. Niveles superiores de Testing | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1747420295/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S10. Niveles superiores de Testing | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1747420295_1747421455/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"96pw7gX2SP","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1747420295","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1747420296","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21046,"courseContextId":2643972,"contextid":2659004,"contextInstanceId":649040,"langrev":1748071445,"templaterev":"1747420296"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1747420296\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1747420296\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1747420296\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1747420296\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1747420296\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21046 context-2659004 cmid-649040 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1747420295/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S10. Niveles superiores de Testing</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Metodología de Pruebas de Sistemas 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S10. Niveles superiores de Testing
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        sábado, 24 de mayo de 2025, 11:30
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21046&amp;section=14" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649039" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>&nbsp;Apertura&nbsp;&nbsp;</p>
+                    </section>
+                </a>
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>&nbsp;Desarrollo</p>
+
+                </section>
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/assign/view.php?id=649041" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cloud-arrow-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708z"></path>
+  <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383m.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"></path>
+</svg>
+                        </div>
+                        <p>&nbsp;Entrega TP 1&nbsp;</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649042" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción" class="font-weight-bold text-decoration-none" href="#ch178386">1. Introducción</a></li><li><a title="2. Pruebas de Integración" class="font-weight-bold text-decoration-none" href="#ch178375">2. Pruebas de Integración</a><ul><li><a title="2.1. ¿Por qué hacemos pruebas de integración?" class="text-decoration-none" href="#ch178376">2.1. ¿Por qué hacemos pruebas de integración?</a></li><li><a title="2.2. Objetivos de las pruebas de integración" class="text-decoration-none" href="#ch178377">2.2. Objetivos de las pruebas de integración</a></li><li><a title="2.3. Desafíos de las pruebas de integración" class="text-decoration-none" href="#ch178378">2.3. Desafíos de las pruebas de integración</a></li><li><a title="2.4. Ejemplo de Casos de prueba de integración" class="text-decoration-none" href="#ch178379">2.4. Ejemplo de Casos de prueba de integración</a></li><li><a title="2.5. Estrategias de pruebas de integración" class="text-decoration-none" href="#ch178380">2.5. Estrategias de pruebas de integración</a></li><li><a title="2.6. Top-down" class="text-decoration-none" href="#ch178381">2.6. Top-down</a></li><li><a title="2.7. Bottom-up" class="text-decoration-none" href="#ch178382">2.7. Bottom-up</a></li><li><a title="2.8. Sándwich testing" class="text-decoration-none" href="#ch178383">2.8. Sándwich testing</a></li><li><a title="2.9. Estrategias de pruebas de integración no incrementales" class="text-decoration-none" href="#ch178384">2.9. Estrategias de pruebas de integración no incrementales</a></li><li><a title="2.10. Ejemplo de Big bang testing" class="text-decoration-none" href="#ch178385">2.10. Ejemplo de Big bang testing</a></li></ul></li><li><a title="3. Pruebas de sistema" class="font-weight-bold text-decoration-none" href="#ch178388">3. Pruebas de sistema</a><ul><li><a title="3.1. Tipos de pruebas de sistema" class="text-decoration-none" href="#ch178389">3.1. Tipos de pruebas de sistema</a></li><li><a title="3.2. Pruebas funcionales" class="text-decoration-none" href="#ch178390">3.2. Pruebas funcionales</a></li><li><a title="3.3. Pruebas de regresión" class="text-decoration-none" href="#ch178391">3.3. Pruebas de regresión</a></li><li><a title="3.4. Herramientas de prueba de regresión automatizadas" class="text-decoration-none" href="#ch178392">3.4. Herramientas de prueba de regresión automatizadas</a></li><li><a title="3.5. ¿Por qué la prueba de regresión?" class="text-decoration-none" href="#ch178393">3.5. ¿Por qué la prueba de regresión?</a></li><li><a title="3.6. Técnicas de prueba de regresión" class="text-decoration-none" href="#ch178394">3.6. Técnicas de prueba de regresión</a></li><li><a title="3.7. Pruebas de carga" class="text-decoration-none" href="#ch178395">3.7. Pruebas de carga</a></li><li><a title="3.8. Pruebas de recuperación" class="text-decoration-none" href="#ch178396">3.8. Pruebas de recuperación</a></li><li><a title="3.9. Pruebas de migración" class="text-decoration-none" href="#ch178397">3.9. Pruebas de migración</a></li><li><a title="3.10. ¿Cuándo se requiere esta prueba?" class="text-decoration-none" href="#ch178398">3.10. ¿Cuándo se requiere esta prueba?</a></li><li><a title="3.11. Fase 1 de la migración" class="text-decoration-none" href="#ch178399">3.11. Fase 1 de la migración</a></li><li><a title="3.12. Fase 2: Prueba de migración" class="text-decoration-none" href="#ch178400">3.12. Fase 2: Prueba de migración</a></li><li><a title="3.13. Fase 3: Pruebas posteriores a la migración" class="text-decoration-none" href="#ch178401">3.13. Fase 3: Pruebas posteriores a la migración</a></li><li><a title="3.14. Pruebas de usabilidad" class="text-decoration-none" href="#ch178402">3.14. Pruebas de usabilidad</a></li><li><a title="3.15. Métodos de prueba de usabilidad" class="text-decoration-none" href="#ch178403">3.15. Métodos de prueba de usabilidad</a></li><li><a title="3.16. Pruebas de hardware/software" class="text-decoration-none" href="#ch178404">3.16. Pruebas de hardware/software</a></li></ul></li><li><a title="4. Pruebas de aceptación" class="font-weight-bold text-decoration-none" href="#ch178405">4. Pruebas de aceptación</a></li><li><a title="5. Bibliografía" class="font-weight-bold text-decoration-none" href="#ch178387">5. Bibliografía</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178386"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178386/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p>En la semana 1 vimos que los niveles de pruebas están asociados al <b>qué</b> se prueba, pero considerando el sistema como un conjunto de partes. Cada nivel de pruebas se enfoca en un nivel de composición de partes del sistema. Vimos que existen cuatro niveles de pruebas: <span style=" color:#1345CD; font-weight: 600">unitaria, integración, sistema, aceptación</span>.</p>
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178386/proceso%20testing_1.jpg" alt="" width="85%" height="85%" role="presentation" class="img-responsive atto_image_button_middle"></p>
+        <p>Recorré los contenidos de la semana para saber más sobre los niveles superiores de <i>testing</i>.<br></p>
+        <p><br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178375"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178375/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas de Integración</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Este nivel se enfoca en la combinación de diferentes componentes. Se centra en la interacción de los componentes del software y en buscar errores cuando unimos las partes que hemos desarrollado. Estas pruebas no son tan rápidas como las pruebas
+            de unidad porque requiere construir una versión del sistema que incluye todos los componentes a probar.</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178375/Figura%2010.png" alt="sd" width="95%" height="95%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: left; font-size: medium; color: rgb(1, 6, 20);"><span style="font-size: large;">Estas pruebas también pueden ser realizadas por los/las desarrolladores/as que están escribiendo el código y también pueden ser automatizadas. Aunque, en equipos de trabajo más grandes suele haber un equipo especializado en pruebas encargado de estas pruebas de integración.</span></p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Las pruebas de integración son tan imprescindibles como las unitarias. El hecho de haber comprobado todos los componentes con resultado satisfactorio, no asegura el correcto funcionamiento entre ellos. </p>
+            </div>
+        </div>
+        <p>Para realizar este tipo de pruebas, se hace uso de objetos que simulen en muchos casos los datos que contenga la aplicación, como por ejemplo:<i> Stubs</i>, <i>drivers</i>, subsistemas, bases de datos, API’s y microservicios.</p>
+        <p>Es importante también destacar, en este tipo de pruebas, la importancia de la descripción del error detectado, ya que estos defectos se localizan sobre elementos creados por varios/as desarrolladores/as, quienes únicamente conocerán a fondo la
+            parte del código desarrollada por ellos/as mismos/as.
+        </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178376"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178376/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Por qué hacemos pruebas de integración?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>A pesar de haber probado mediante Unit Tests cada componente del software, los defectos y errores continuarán existiendo por múltiples motivos:</p><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div style="margin-left: 3%; margin-right: 3%;">
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Un módulo o componente, por lo general está diseñado por un/a desarrollador/a de software en particular, cuyo entendimiento del dominio y lógica de programación puede ser distinta a la de otros/as programadores/as. Con las pruebas de integración nos aseguramos que los módulos de software funcionen al ser unidos a pesar de contener lógica diferente.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>A la hora de desarrollar un módulo o un componente, es altamente probable encontrarnos con cambios a los requerimientos por parte de nuestros/as clientes o aquellos/as que nos han pedido el desarrollo. Estos nuevos requerimientos puede que no sean probados con Unit Tests por lo que la integración (y por tanto pruebas de integración) se vuelven necesarias.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Las interfaces que el software tiene con la base de datos pueden ser erróneas. Es posible que la conexión en sí o el manejo de las tablas de base de datos esté mal programado y contenga errores. Si no se realizan pruebas de integración nunca se encontrarán estos errores.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Las interfaces con hardware externo podrían estar mal programadas.</p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Un manejo inadecuado de las excepciones puede traer muchos problemas en la integración. Es normal que un/a desarrollador/a no maneje adecuadamente una excepción porque el problema de no manejarla excede su trabajo o sus tareas, esto quiere decir que el software puede darnos un error mortal en tiempo de ejecución. Con las pruebas de integración podemos encontrar estas excepciones mal manejadas y ver cómo afectan al resto del software. </p>
+            </div>
+        </div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178377"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178377/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Objetivos de las pruebas de integración</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>El objetivo principal de las pruebas de integración es el de encontrar errores en la unión de componentes de software que han sido desarrollados por diferentes programadores/as. Sin embargo, podemos desglosar este gran objetivo en varios objetivos
+            más pequeños:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style=" color:#1345CD; font-weight: 600">Encontrar errores en la seguridad de la aplicación</span>, ayudando a reducir el riesgo de seguridad de la misma.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style=" color:#1345CD; font-weight: 600">Encontrar errores en las interfaces del software</span>, ayudándonos a verificar que el comportamiento del software entre las distintas interfaces sea el esperado.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style=" color:#1345CD; font-weight: 600">Asegurar la confianza en la calidad de las interfaces</span>. Hemos establecido al comenzar la materia que todo software tiene defectos y errores. Muchas veces, lo que decide si un software es usado o no, es la confianza que sus usuarios/as
+                            (o posibles usuarios/as) le tienen al software. Si el software se presenta como algo con muchos errores, entonces habrá desconfianza y no será usado. Las pruebas de unidad nos ayudan a elevar esa confianza, mostrando que no
+                            tenemos tantos errores visibles en la integración.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                      <p><span style=" color:#1345CD; font-weight: 600">Encontrar defectos</span> en las comunicaciones entre servicios y componentes del mismo software.</p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style=" color:#1345CD; font-weight: 600">Prevenir la aparición de defectos</span> en fases posteriores de pruebas. </p>
+                    </div>
+                </div>
+                
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178378"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178378/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Desafíos de las pruebas de integración</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Existen muchos desafíos en cuanto a las pruebas de integración que harán que nuestra tarea sea más difícil. Es importante considerarlos y ver cómo aplican a cada proyecto de software en el que trabajamos para elegir la estrategia de integración y de pruebas adecuada.</p><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div style="margin-left: 3%; margin-right: 3%;">
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p>Hacer pruebas de integración quiere decir probar dos o más sistemas o subsistemas integrados para asegurarnos de que el mismo funcione correctamente. No sólo deben probarse las uniones de la integración, sino que también se debe hacer pruebas exhaustivas considerando el entorno, para asegurarnos de que el sistema puede funcionar correctamente. Existen muchos caminos y permutaciones posibles.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Manejar las pruebas de integración se vuelve algo complejo debido a factores involucrados como la base de datos, plataforma de trabajo, entorno de trabajo, etc.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Cuando integramos un nuevo sistema con un sistema de tipo <i>legacy </i>(un sistema viejo que lleva siendo usado por muchos años) se requieren muchos cambios y esfuerzos de pruebas. Lo mismo aplica cuando integramos 2 sistemas de tipo <i>legacy </i>entre sí.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Integrar dos sistemas diferentes de dos organizaciones diferentes es un gran desafío en cuanto al impacto que tendrán entre ellos si algún cambio debe ser realizado y afecta el funcionamiento interno del sistema. </p>
+            </div>
+        </div>
+
+				<p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo -->
+		<br>
+		</div>
+</div></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178379"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178379/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Ejemplo de Casos de prueba de integración</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Los <span class="" style="color: rgb(0, 61, 245);">Casos de prueba de integración</span> difieren con otros casos de pruebas vistos en semanas anteriores ya que se enfocan, mayormente, en las interfaces entre componentes y el flujo de la información entre módulos. La prioridad se les da a las uniones entre módulos más que a las funciones unitarias que ya han sido probadas.</p>
+
+        
+      <!--Inicio caja borde azul-->
+<div class="container">
+   <div class="caja-azul">
+     <p style="padding: 1% 2%; word-wrap: break-word;">Consideremos, por ejemplo, un software con 3 módulos: una página de Inicio de sesión, un módulo de Casilla de correos y un módulo para borrar E-mails. Imaginemos que cada uno de estos 3 módulos está integrado de manera lógica, es decir que los
+            han desarrollado 3 programadores por separado y luego han sido integrados.</p>
+   </div>
+</div>
+<!--Fin caja borde azul-->
+        <p> </p>
+        <p>Para realizar pruebas de integración no nos concentraremos en la página de Inicio de sesión en sí misma, ya que ha sido cubierta anteriormente con las pruebas unitarias. Sino que nos concentraremos en cómo se enlaza con el módulo de Casilla de correos. De la misma forma, nos interesa ver cómo la Casilla de correos se integra con el módulo de borrado de E-mails.</p>
+        <p>A partir de este software y de saber en que queremos enfocarnos podríamos armar los siguientes casos de prueba:</p>
+        <!--tabla-->
+        <table style="border-color: #ffffff; background-color: #cccccc;" border="3">
+            <tbody>
+                <tr>
+                    <th style="border-color: #ffffff; background-color: #415985;">
+                        <p><span style="color: #ffffff;"><strong>ID del Caso de prueba</strong></span></p>
+                    </th>
+                    <th style="border-color: #ffffff; background-color: #415985;">
+                        <p><span style="color: #ffffff;"><strong>Objetivo del Caso de prueba</strong></span></p>
+                    </th>
+                    <th style="border-color: #ffffff; background-color: #415985;">
+                        <p><span style="color: #ffffff;"><strong>Descripción del Caso de prueba</strong></span></p>
+                    </th>
+                    <th style="border-color: #ffffff; background-color: #415985;">
+                        <p><span style="color: #ffffff;"><strong>Resultado esperado</strong></span></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>1</strong></p>
+                    </td>
+                    <td>
+                        <p><span style="font-weight: 400;">Revisar la interfaz que enlaza el Inicio de sesión con la Casilla de correos</span></p>
+                    </td>
+                    <td>
+                        <ol>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Ingresar las credenciales de Inicio de sesión correctas</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Hacer clic en el botón “Iniciar sesión”</span></li>
+                        </ol>
+                    </td>
+                    <td>
+                        <p><span style="font-weight: 400;">Ser redireccionado a la Casilla de correos</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>2</strong></p>
+                    </td>
+                    <td>
+                        <p><span style="font-weight: 400;">Revisar la interfaz que enlaza la Casilla de correos y el modulo de Borrado de E-mails</span></p>
+                    </td>
+                    <td>
+                        <ol>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Desde la Casilla de correos, seleccionar un E-mail</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Hacer clic en el botón “Borrar E-mail”</span></li>
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Hacer clic en el botón “Ver E-mails borrados”</span></li>
+                        </ol>
+                    </td>
+                    <td>
+                        <p><span style="font-weight: 400;">El E-mail seleccionado debe aparecer en la carpeta de E-mails borrados</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178380"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178380/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Estrategias de pruebas de integración</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Las pruebas de integración están divididas en 2 tipos de estrategias de pruebas de integración:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Pruebas de integración incrementales.</span></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Pruebas de integración no incrementales</span>.</p>
+                    </div>
+                </div>
+
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                    <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Estrategias de pruebas de integración incrementales</p>
+                </div>
+            </div>
+            <br>
+            <p style="color: rgb(1, 6, 20); font-size: large;">En el enfoque de pruebas incrementales, los módulos se van agregando o integrando uno por uno según la necesidad de pruebas. Los módulos seleccionados deben estar relacionados entre sí de alguna manera lógica. Generalmente, dos o más módulos
+                son integrados para determinar qué tan correcto es su funcionamiento en conjunto. Este proceso se continúa de a poco hasta que se han integrado todos los módulos o componentes y se han encontrado todos los errores aparentes.<br></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;">Esto quiere decir que tenemos una fuerte relación entre módulos dependientes que debemos probar. </p>
+            <p style="color: rgb(1, 6, 20); font-size: large;">Este enfoque tiene 3 estrategias:</p><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div style="margin-left: 3%; margin-right: 3%;">
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>De arriba hacia abajo o <i>top-down</i>.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>De abajo hacia arriba o <i>bottom-up</i>.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p> Híbrido o sándwich.</p>
+            </div>
+        </div>
+            <p style="color: rgb(1, 6, 20); font-size: large;">Analizaremos cada una a continuación.</p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+            <!-- nada puede haber abajo -->
+            <br>
+        </div>
+    </div>
+</div></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178381"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178381/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Top-down</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>En esta estrategia probamos primero los componentes de más alto nivel y vamos avanzando hacia los de más bajo nivel a medida que el código va pasando las pruebas. Esto significa que primero desarrollamos las interfaces entre subsistemas, las que
+            retornan valores que son controlados y posteriormente se reemplaza con el código real, esto permite probar el flujo completo en niveles superiores antes y luego ir a niveles inferiores. </p>
+        <p>Fallas graves en el diseño y desarrollo pueden ser detectadas y arregladas de manera temprana ya que los módulos críticos se prueban primero. En este método agregaremos los módulos de manera incremental uno a uno y controlaremos el flujo de datos
+            en el mismo orden en que los vamos agregando.</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178381/Figura%2010.2.png" alt="sd" width="98%" height="98%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p>
+        </div>
+
+        <!-- Fin imagen -->
+
+        <p>Con esta estrategia debemos asegurarnos de ir agregando, uno a uno, el módulo hijo (o Child) del anterior de la misma forma como en la figura 10.3 Child C es un hijo de Child B y así sucesivamente. La idea de esto es probar la integración entre
+            módulos dependientes entre sí.</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178381/Figura%2010.3.png" alt="sd" width="98%" height="98%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p></div>
+
+        <!-- Fin imagen -->
+
+        <p>Esta estrategia tiene ventajas y desventajas que listamos a continuación:</p>
+        <p></p>
+      <!--Tabla simple dos columnas-->
+<table class="tabla-simple texto-principal" style="margin: 0 auto;">
+	  <!--Cantidad de columnas-->
+        <colgroup span="1" width="44%"></colgroup>
+         <colgroup span="1" width="2%"></colgroup>
+         <colgroup span="1" width="44%"></colgroup>
+
+							<!--Categorías-->
+              <tbody><tr>
+                   <td class="tabla-simple-categoria texto-centrado">Ventajas</td>
+                   <td></td>
+                   <td class="tabla-simple-categoria texto-centrado">Desventajas</td>
+               </tr>
+
+                 <!--filas-->
+               <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+	                     <ul>
+                           <li>La localización de errores y problemas se hace más fácil.</li>
+                           <li>Tenemos la posibilidad de obtener prototipos tempranos del software.</li>
+                           <li>Los módulos críticos se prueban de manera prioritaria. Es decir que las fallas más graves del desarrollo se arreglan primero.</li>
+
+                        </ul>
+                     </td>
+                     <td></td>
+
+                     <td class="tabla-simple-fila1" valign="top">
+                         <ul>
+                            <li>Se requiere una gran cantidad de <i>stubs </i>para simular los componentes hijo que no poseemos, haciendo que las pruebas sean bastante complicadas.</li>
+                             <li>Los módulos de más bajo nivel se prueban de manera inadecuada ya que puede haber un acarreo de errores de integraciones previas.</li>
+
+                         </ul>
+                       </td>
+                   </tr>
+                </tbody></table>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178382"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178382/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Bottom-up</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>En esta estrategia probamos primero los componentes de más bajo nivel y vamos avanzando hacia los de más alto nivel a medida que el código va pasando las pruebas. Los módulos críticos de alto nivel se prueban al final, por lo que podemos causar
+            algún defecto. También podemos decir que vamos integrando los módulos desde abajo hacia arriba para revisar y probar el flujo de información en ese mismo orden.</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178382/Figura%2010.4.png" alt="sd" width="98%" height="98%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p>
+        </div>
+
+        <!-- Fin imagen -->
+
+        <p>Con esta estrategia debemos asegurarnos de ir agregando, uno a uno, el módulo padre (o Parent) del anterior de la misma forma como en la figura 10.5 donde Child A es un hijo de Child B y así sucesivamente. La idea de esto es probar la integración
+            entre módulos dependientes entre sí.</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178382/Figura%2010.5.png" alt="sd" width="98%" height="98%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p></div>
+
+        <!-- Fin imagen -->
+
+        <p>Esta estrategia también tiene ventajas y desventajas:</p>
+        <p></p>
+      <!--Tabla simple dos columnas-->
+<table class="tabla-simple texto-principal" style="margin: 0 auto;">
+	  <!--Cantidad de columnas-->
+        <colgroup span="1" width="44%"></colgroup>
+         <colgroup span="1" width="2%"></colgroup>
+         <colgroup span="1" width="44%"></colgroup>
+
+							<!--Categorías-->
+              <tbody><tr>
+                   <td class="tabla-simple-categoria texto-centrado">Ventajas</td>
+                   <td></td>
+                   <td class="tabla-simple-categoria texto-centrado">Desventajas</td>
+               </tr>
+
+                 <!--filas-->
+               <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+	                     <ul>
+                           <li>La localización de errores y problemas se hace más fácil.</li>
+                           <li>No debemos esperar a que se desarrollen todos los módulos, ahorrándonos tiempo.</li>
+
+                        </ul>
+                     </td>
+                     <td></td>
+
+                     <td class="tabla-simple-fila1" valign="top">
+                         <ul>
+                            <li>Los módulos críticos (los de alto nivel) que controlan el flujo de la aplicación se integran y prueban al final, lo que hace que sean propenso a tener más errores.</li>
+                             <li>No es posible tener un prototipo temprano en caso de necesitarlo.</li>
+
+                         </ul>
+                       </td>
+                   </tr>
+                </tbody></table>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178383"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178383/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Sándwich testing</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>En esta estrategia combinamos las estrategias Top-Down y Bottom-Up para realizar la integración y las pruebas. Utilizamos ambas estrategias al mismo tiempo para probar los módulos de alto nivel con los módulos de bajo nivel y para probar los módulos
+            de bajo nivel con los módulos de alto nivel de manera simultánea. Con esta estrategia hay menos probabilidad de ocasionar errores porque se prueba cada una de las interfaces de cada módulo.</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178383/Figura%2010_6.png" alt="sd" width="100%" height="100%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p></div>
+
+        <!-- Fin imagen -->
+
+        <p>Las ventajas y desventajas de esta estrategia son:</p>
+        <p></p>
+      <!--Tabla simple dos columnas-->
+<table class="tabla-simple texto-principal" style="margin: 0 auto;">
+	  <!--Cantidad de columnas-->
+        <colgroup span="1" width="44%"></colgroup>
+         <colgroup span="1" width="2%"></colgroup>
+         <colgroup span="1" width="44%"></colgroup>
+
+							<!--Categorías-->
+              <tbody><tr>
+                   <td class="tabla-simple-categoria texto-centrado">Ventajas</td>
+                   <td></td>
+                   <td class="tabla-simple-categoria texto-centrado">Desventajas</td>
+               </tr>
+
+                 <!--filas-->
+               <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+	                     <ul>
+                           <li>Es la estrategia más rápida.</li>
+                           <li>Permite realizar pruebas completas a todos los módulos.</li>
+                           <li>Provee ventajas de los métodos Top-Down y Bottom-Up.</li>
+
+                        </ul>
+                     </td>
+                     <td></td>
+
+                     <td class="tabla-simple-fila1" valign="top">
+                         <ul>
+                            <li>Es un método complicado de usar.</li>
+                             <li>Requiere un mayor grado de concentración y atención ya que requiere realizar una integración en ambas direcciones en simultáneo.</li>
+
+                         </ul>
+                       </td>
+                   </tr>
+                </tbody></table>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178384"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178384/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Estrategias de pruebas de integración no incrementales</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>En la estrategia de pruebas no incrementales probamos todo el software junto una vez que ya se la ha integrado. Este enfoque se utiliza cuando tenemos un flujo de datos muy complejo en el cual es difícil ver cuál es el padre y cuál es el hijo.
+            En estos casos crearemos la información en cualquiera de los módulos y vamos probando la integración en todos los otros módulos. La estrategia típicamente usada con el enfoque no incremental es la de <span style=" color:#1345CD; font-weight: 600">Big Bang</span>.</p>
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Estrategia Big Bang</p>
+            </div>
+        </div>
+        <br>
+
+        <p>En esta estrategia integramos todos los módulos al comienzo de una sola vez. Luego probamos los flujos de información e integraciones de todo el software. Es ideal para softwares pequeños, si lo utilizamos para softwares más grandes la identificación
+            exacta del origen de un problema o defecto puede ser muy difícil y compleja.</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178384/Figura%2010_7.png?time=1698004193917" alt="sd" width="98%" height="98%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p></div>
+
+        <!-- Fin imagen -->
+
+        <p>Las ventajas y desventajas son:</p>
+        <p></p>
+      <!--Tabla simple dos columnas-->
+<table class="tabla-simple texto-principal" style="margin: 0 auto;">
+	  <!--Cantidad de columnas-->
+        <colgroup span="1" width="44%"></colgroup>
+         <colgroup span="1" width="2%"></colgroup>
+         <colgroup span="1" width="44%"></colgroup>
+
+							<!--Categorías-->
+              <tbody><tr>
+                   <td class="tabla-simple-categoria texto-centrado">Ventajas</td>
+                   <td></td>
+                   <td class="tabla-simple-categoria texto-centrado">Desventajas</td>
+               </tr>
+
+                 <!--filas-->
+               <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+	                     <ul>
+                           <li>Es extremadamente conveniente para sistemas pequeños.</li>
+
+                        </ul>
+                     </td>
+                     <td></td>
+
+                     <td class="tabla-simple-fila1" valign="top">
+                         <ul>
+                            <li>Identificar el origen de los defectos que encontramos es difícil ya que no sabemos exactamente qué integración lo causó.</li>
+                             <li>Problemas en módulos e integraciones pequeñas son fáciles de ignorar.</li>
+                             <li>Se tiene menos tiempo para probar la integración ya que se debe esperar a que todo el software esté completado para comenzar.</li><li>Es probable que olvidemos probar.<br></li>
+
+                         </ul>
+                       </td>
+                   </tr>
+                </tbody></table>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178385"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178385/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Ejemplo de Big bang testing</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Podríamos considerar como ejemplo un software de E-mails, similar a Gmail, en donde hacemos clic en el <i>Inbox </i>o Casilla de correos y la aplicación nos muestra la Casilla de correos. Si consideramos la pantalla de inicio del software como la que vemos en la figura siguiente, notamos que necesitamos hacer pruebas de integración no incrementales ya que no tenemos módulos padres ni módulos hijos.</p>
+		 <div style="text-align: center;">
+		        <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+		            <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178385/Figura%2010.8.png" alt="sd" width="90%" height="90%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+		        </p>
+		    </div>
+
+    <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);"><br></p>
+
+<!-- Fin imagen -->
+
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo -->
+		
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178388"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178388/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas de sistema</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>En este nivel se prueba el sistema como un todo. Las pruebas de sistema se pueden hacer de forma granular, es decir casos de uso/funcionalidades individuales, o combinando flujos completos de inicio a fin. <span style=" color:#1345CD; font-weight: 600">Si seguimos los principios de las pruebas, este nivel debería hacerlo alguien diferente a quien desarrolló el software</span>.
+            El propósito de estas pruebas es encontrar errores evaluando las especificaciones del sistema de punta a punta. Algunas de estas pruebas pueden ser automatizadas y otras de ellas no.
+        </p>
+        <p>También se intenta determinar si el sistema en su globalidad opera satisfactoriamente. Con esto no nos referimos solo a la funcionalidad sino también a cuestiones de recuperación de fallas, seguridad, pruebas de estrés y pruebas de performance.</p>
+        <p>El <span style=" color:#1345CD; font-weight: 600">entorno de pre-producción</span>, en el que se hacen las pruebas de sistema, debe ser lo más parecido posible al entorno en el cual se usará el software en el día a día. Si los entornos son muy
+            diferentes es posible que se encuentren errores que en su uso normal no existirían, o aun peor, que no se encuentren errores que si se encontraran en su entorno normal de uso. Si bien se aspira a esta similitud, muchas veces no es posible
+            anticipar las necesidades ni condiciones de uso reales.&nbsp;</p>
+        <!--Inicio caja borde azul-->
+<div class="container">
+   <div class="caja-azul">
+     <p style="padding: 1% 2%; word-wrap: break-word;">Es posible hacer un software de ventas online que considere que miles de personas accederán al sitio, pero si el negocio tiene un Hot Sale o descuento por fiestas, el tráfico crecerá de una manera que no se puede anticipar y colapsara el sistema.</p>
+   </div>
+</div>
+<!--Fin caja borde azul-->
+        <p>Estos casos no necesitan ser tan extremos como el caso de un Hot Sale, muchas veces ocurrirá que no encontraremos defectos que sí o sí encontraremos en producción.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178389"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178389/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Tipos de pruebas de sistema</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Existen más de 50 tipos de pruebas de sistemas. Sin embargo, hoy en día las organizaciones se concentran en realizar 7 tipos puntuales:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p>Pruebas funcionales.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Pruebas de regresión.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Pruebas de carga.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Pruebas de recuperación </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Pruebas de migración.</p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Pruebas de usabilidad.</p>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.37 5.11h3.972v.07L6.025 12H7.42l3.258-6.85V4.002H5.369v1.107Z"></path>
+</svg>
+
+                    </div>
+                    <div class="col">
+                        <p>Pruebas de hardware/software.</p>
+                    </div>
+                </div>
+
+
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178390"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178390/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas funcionales</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>La prueba funcional es un tipo de prueba que se realiza para encontrar todos los errores de un software a nivel de funcionalidad, teniendo en cuenta desde la interfaz de usuario hasta el impacto en la base de datos.&nbsp;</p>
+        <p>Ya hemos explorado la importancia de las pruebas funcionales y las diferentes estrategias y métodos de la misma en las semanas 2 y 3. Debido a que ya se ha explorado la importancia de estas pruebas y su funcionamiento no se repetirán los contenidos
+            esta semana.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178391"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178391/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas de regresión</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>La prueba de regresión es un tipo de prueba que se realiza para <span style=" color:#1345CD; font-weight: 600">verificar que un cambio de código en el software no afecta la funcionalidad existente del producto</span>. Esto es para asegurarse de
+            que el producto funcione bien con nuevas funciones, correcciones de errores o cualquier cambio en la función existente. Los casos de prueba ejecutados previamente se vuelven a ejecutar para verificar el impacto del cambio. Queremos verificar
+            si nuevos errores han sido introducidos ante estos cambios.
+        </p>
+        <p>Esta prueba se puede realizar en una nueva compilación cuando hay un cambio significativo en la funcionalidad original, incluso en una sola corrección de error.</p>
+        <p>Regresión significa <span style=" color:#1345CD; font-weight: 600">volver a probar</span> las partes sin cambios de la aplicación.</p>
+        <p>La mayoría de las organizaciones hoy en día intentan que estos casos de prueba estén <span style=" color:#1345CD; font-weight: 600">automatizados</span> ya que se requiere que los casos de prueba se ejecuten una y otra vez, y ejecutar los mismos
+            casos de prueba una y otra vez de forma manual, también requiere mucho tiempo y es tedioso.</p>
+        <!--Inicio caja borde azul-->
+        <div class="container">
+            <div class="caja-azul">
+                <p style="padding: 1% 2%; word-wrap: break-word;"><b><span class="" style="color: rgb(0, 46, 184);">Por ejemplo</span></b>, consideremos un producto X, en el que una de las funciones es activar la confirmación, la aceptación y los E-Mails enviados cuando se hace clic en los botones Confirmar,
+                    Aceptar y Despachar.
+                </p>
+                <p style="padding: 1% 2%; word-wrap: break-word;">Se produce algún problema en el E-mail de confirmación y, para solucionarlo, se realizan algunos cambios de código. En este caso, no sólo se deben probar los E-mails de confirmación, sino que también se deben probar los E-mails de aceptación
+                    y envío para asegurarse de que el cambio en el código no los haya afectado.</p>
+            </div>
+        </div>
+        <!--Fin caja borde azul-->
+        <p>La prueba de regresión no depende de ningún lenguaje de programación como Java, C ++, C #, etc. Es un método de prueba que se utiliza para probar el producto en busca de modificaciones o actualizaciones. Verifica que cualquier modificación en
+            un producto no afecta los módulos existentes del producto. Verifica que los errores se hayan solucionado y que las funciones recién agregadas no hayan creado ningún problema en la versión de trabajo anterior del software.</p>
+        <p>Los <i>testers </i>realizan pruebas funcionales cuando hay una nueva construcción disponible para verificación. La intención de esta prueba es verificar los cambios realizados en la funcionalidad existente y también en la funcionalidad recién
+            agregada.
+        </p>
+        <p>Se listan, a continuación, las ventajas y desventajas de las pruebas de regresión:</p>
+        <!--Tabla simple dos columnas-->
+        <table class="tabla-simple texto-principal" style="margin: 0 auto;">
+            <!--Cantidad de columnas-->
+            <colgroup span="1" width="44%"></colgroup>
+            <colgroup span="1" width="2%"></colgroup>
+            <colgroup span="1" width="44%"></colgroup>
+
+            <!--Categorías-->
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado">Ventajas</td>
+                    <td></td>
+                    <td class="tabla-simple-categoria texto-centrado">Desventajas</td>
+                </tr>
+
+                <!--filas-->
+                <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>Mejora la calidad del Producto.</li>
+                            <li>Garantiza que cualquier corrección de error o mejora que se realice no afecte la funcionalidad existente del Producto.</li>
+                            <li>Se pueden utilizar herramientas de automatización para esta prueba.</li>
+                            <li>Se asegura de que los problemas que ya están solucionados no vuelvan a ocurrir.</li>
+
+                        </ul>
+                    </td>
+                    <td></td>
+
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>También debe hacerse para un pequeño cambio en el código porque incluso un pequeño cambio en el código puede crear problemas en la funcionalidad existente.</li>
+                            <li>Si, en caso de que no se utilice la automatización en el Proyecto para esta prueba, será una tarea tediosa y que llevará mucho tiempo ejecutar los casos de prueba una y otra vez.</li>
+
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178392"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178392/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Herramientas de prueba de regresión automatizadas</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>La prueba de regresión automatizada es el área de prueba donde podemos automatizar la mayoría de los esfuerzos de prueba. Ejecutamos todos los casos de prueba ejecutados previamente en una nueva compilación.
+        </p>
+        <p>Esto significa que tenemos un conjunto de casos de prueba disponibles y ejecutar estos casos de prueba manualmente consume mucho tiempo. Conocemos los resultados esperados, por lo que la automatización de estos casos de prueba ahorra tiempo y
+            es un método de prueba de regresión eficiente. El grado de automatización depende del número de casos de prueba que seguirán siendo aplicables con el tiempo.</p>
+        <p>Si los casos de prueba varían de vez en cuando, el alcance de la aplicación sigue aumentando y la automatización del procedimiento de regresión será una pérdida de tiempo.
+        </p>
+        <p>La mayoría de las herramientas de prueba de regresión son de tipo grabación y reproducción. Registrará los casos de prueba navegando a través de la interfaz de usuario verificará si los resultados esperados están llegando o no.</p>
+        <div class="col" style="border-left: solid  #460E95 3px; background-color: #F3ECFD; width: 92%; margin: 0 auto; border-radius: 8px">
+
+            <p style="color: #460E95; font-size: large; padding: 14px; font-weight: 600">Algunas de las herramientas más usadas son:</p>
+            <ul style="color: #010614 ; font-size: large; padding-left: 16px; padding-bottom:16px; margin-top: -24px; list-style-type: none;">
+                <li>- Selenium</li>
+                <li>- AdventNet QEngine</li>
+                <li>- vTest</li>
+                <li>- agua
+                </li>
+                <li>- actiWate</li>
+                <li>-&nbsp;SilkTest</li>
+                <li>- TimeShiftX</li>
+            </ul>
+        </div>
+
+        <p>Agregar y actualizar casos de prueba de regresión en un conjunto de pruebas de automatización es una tarea engorrosa. Al seleccionar una herramienta de automatización para las pruebas de regresión, debe verificar si la herramienta le permite agregar
+            o actualizar los casos de prueba fácilmente.
+        </p>
+        <p>En la mayoría de los casos, necesitamos actualizar los casos de prueba de regresión automatizados con frecuencia debido a los cambios frecuentes en el sistema.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178393"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178393/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Por qué la prueba de regresión?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>La regresión se inicia cuando un/a programador/a corrige cualquier error o agrega un nuevo código para una nueva funcionalidad al sistema. Puede haber muchas dependencias en la funcionalidad recién agregada y existente.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Es una medida de calidad comprobar si el nuevo código cumple con el antiguo para que el código no modificado no se vea afectado. </p>
+            </div>
+        </div>
+        <p>La mayoría de las veces, el equipo de pruebas tiene la tarea de verificar los cambios de última hora en el sistema. En tal situación, es necesario probar sólo el área de aplicación afectada para completar el proceso de prueba a tiempo cubriendo
+            todos los aspectos principales del sistema.
+        </p>
+        <p>Esta prueba es muy importante cuando se agrega un cambio o mejora en la aplicación. La nueva funcionalidad no debería afectar negativamente al código probado existente. Se requiere una regresión para encontrar los errores que ocurrieron debido
+            a un cambio en el código.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Si no se realiza esta prueba, el producto puede tener problemas críticos en producción y eso puede causar problemas a los/las usuarios/as. </p>
+            </div>
+        </div>
+        <br>
+ <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p>
+        </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+
+        <!-- nada puede haber abajo -->
+        
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178394"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178394/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Técnicas de prueba de regresión</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Existen 4 técnicas principales de pruebas de regresión:</p>
+        <div style="background-color: rgb(250, 250, 250);">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Vuelva a probar todo:</span> Como sugiere el propio nombre, todos los casos de prueba en el conjunto de pruebas se vuelven a ejecutar para garantizar que no haya errores que hayan ocurrido debido
+                            a un cambio en el código. Este es un método costoso ya que requiere más tiempo y recursos en comparación con las otras técnicas.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Selección de prueba de regresión:</span> En este método, los casos de prueba se seleccionan del conjunto de pruebas para volver a ejecutarlos. No se vuelve a ejecutar toda la suite. La selección de
+                            casos de prueba se realiza sobre la base del cambio de código en el módulo. Los casos de prueba se dividen en dos categorías, uno es casos de prueba reutilizables y otro es casos de prueba obsoletos. Los casos de prueba reutilizables
+                            se pueden usar en futuros ciclos de regresión, mientras que los obsoletos no se usan en los próximos ciclos de regresión.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Priorización de casos de prueba:</span> Los casos de prueba con prioridad alta se ejecutan primero que los de prioridad media y baja. La prioridad del caso de prueba depende de su criticidad y su
+                            impacto en el producto y también de la funcionalidad del producto que se utiliza con más frecuencia.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Híbrido:&nbsp;</span>La técnica híbrida es una combinación de selección de prueba de regresión y priorización de casos de prueba. En lugar de seleccionar todo el conjunto de pruebas, seleccione sólo
+                            los casos de prueba que se vuelven a ejecutar según su prioridad.&nbsp;</p>
+                    </div>
+                </div>
+
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+               
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178395"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178395/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas de carga</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Las <span style=" color:#1345CD; font-weight: 600">pruebas de carga y rendimiento</span> son los procesos en los cuales introducimos cargas de trabajo a un sistema para determinar su comportamiento en condiciones de carga normal o carga máxima.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Estas pruebas ayudan a identificar la capacidad máxima de operaciones de una solicitud, detectar cualquier cuello de botella y determinar qué elementos están causando la degradación del sistema. También pueden servir para investigar, medir,
+                    validar o verificar otros <span style="color: rgb(19, 69, 205); font-weight: 600;">atributos de calidad</span> del sistema, como la escalabilidad, la confiabilidad y el uso de los recursos. </p>
+            </div>
+        </div>
+        <p>Se realizan normalmente como una <span style=" color:#1345CD; font-weight: 600">serie de pasos</span> en los que el sistema de pruebas inicia una cantidad de usuarios/as simultáneos/as que se sabe que son compatibles con la infraestructura. Esto
+            establece un conjunto de líneas base de datos de rendimiento a los que hacer referencia a medida que aumenta el número de usuarios/as simultáneos/as a lo largo de la prueba. La prueba de rendimiento puede ayudar a determinar varias líneas
+            de base diferentes, como la velocidad de conexión promedio, la latencia promedio y el tiempo promedio para descargar un archivo de tamaño fijo y más.</p>
+        <p>Una vez que se conocen los valores de rendimiento de línea base, el número de usuarios/as aumenta a un número que se espera de forma realista para visitar el software durante un período de muestra. La prueba a menudo se ejecutará en ese número
+            estático de usuarios/as durante varios minutos para verificar la estabilidad del software después que el sistema se estabilice en el nuevo nivel de carga.
+        </p>
+        <p>Si al hacer las <span style=" color:#1345CD; font-weight: 600">pruebas de carga</span> se está generando carga esperada dentro de la capacidad del sistema, los tiempos de respuesta de la aplicación deben permanecer dentro de las directrices generadas.
+            Si empuja el sistema más allá de estos límites, se mueve al ámbito de las <span style=" color:#1345CD; font-weight: 600">pruebas de estrés</span>, causando presión deliberada en el sistema para identificar los componentes que fallan.</p>
+        <p></p>
+       
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178396"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178396/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas de recuperación</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Las pruebas de recuperación de un sistema se realizan para <span style="color: rgb(19, 69, 205); font-weight: 600;">confirmar la fiabilidad, confianza y responsabilidad</span> del software así como también la capacidad para confiar en las medidas
+            de recuperación del sistema. </p>
+        <p>El software debería poder recuperarse sin problemas de los posibles errores o problemas que puedan surgir.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+       
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178397"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178397/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas de migración</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>La prueba de migración es un <span style=" color:#1345CD; font-weight: 600">proceso de verificación de la migración del sistema heredado al nuevo sistema</span> con un mínimo de interrupción/tiempo de inactividad, con integridad de los datos y
+            sin pérdida de datos, al tiempo que garantiza que todos los aspectos funcionales y no funcionales especificados de la aplicación se cumplan después de migración.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> La migración de la aplicación a un nuevo sistema puede ser por diversas razones, consolidación del sistema, tecnología obsoleta, optimización o cualquier otra razón.</p>
+            </div>
+        </div>
+        <p>Por lo tanto, si bien el sistema en uso debe migrar a un nuevo sistema, es esencial garantizar los siguientes puntos:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p>Cualquier tipo de interrupción/inconveniente causado al/la usuario/a debido a la migración debe evitarse/minimizarse. Por ejemplo: tiempo de inactividad, pérdida de datos.</p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p>Es necesario asegurarse de que el/la usuario/a pueda seguir utilizando todas las funciones del software causando un daño mínimo o nulo durante la migración. Por ejemplo: cambio en la funcionalidad, eliminación de una funcionalidad
+                        en particular.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p>También es importante anticipar y descartar todos los posibles fallos / obstáculos que puedan ocurrir durante la migración real del sistema en producción.</p>
+                </div>
+            </div>
+            <p></p>
+
+            <p>Para garantizar una migración fluida del sistema en producción mediante la eliminación de esos defectos, es esencial realizar pruebas de migración de forma previa a la misma.</p>
+            <p></p>
+            <p></p>
+            
+
+            <!-- nada puede haber abajo -->
+            <br>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178398"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178398/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Cuándo se requiere esta prueba?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Las pruebas deben realizarse antes y después de la migración. Podemos decir que hay 3 fases en cualquier migración de datos:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p>Pruebas previas a la migración.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Prueba de migración.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Pruebas posteriores a la migración.</p>
+                    </div>
+                </div>
+                <p>Además de lo anterior, también se ejecutan las siguientes pruebas como parte de toda la actividad de migración.<br></p>
+                <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+                    <!-- 1 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                        </div>
+                        <div class="col">
+                            <p>Verificación de compatibilidad con versiones anteriores.</p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 2 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Prueba de reversión.</p>
+                        </div>
+                    </div>
+                    <p></p>
+                    <p>Antes de realizar esta prueba, es esencial que cualquier <i>tester </i>comprenda claramente los siguientes puntos:</p>
+                    <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+                        <!-- 1 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                            </div>
+                            <div class="col">
+                                <p>Los cambios que ocurren como parte del nuevo sistema (servidor, interfaz, base de datos, esquema, flujo de datos, funcionalidad, etc.)</p>
+                            </div>
+                        </div>
+
+
+
+                        <!-- 2 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p>Comprender la estrategia de migración real establecida por el equipo. Cómo ocurre la migración, los cambios paso a paso que ocurren en el <i>backend </i>del sistema y los scripts responsables de estos cambios.</p>
+                            </div>
+                        </div>
+                        <!-- Cuadro amarillo borde violeta -->
+                        <br>
+
+                        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+                            <div style="margin:16px">
+                                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Por lo tanto, es esencial hacer un estudio exhaustivo del sistema antiguo y el nuevo y, en consecuencia, planificar y diseñar los casos de prueba y los escenarios de prueba que se cubrirán como parte de las fases de prueba
+                                    anteriores y preparar la estrategia de prueba. </p>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178399"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178399/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Fase 1 de la migración</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Analicemos las 3 fases de migración de datos, mencionadas en el título anterior.</p>
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Fase 1: Pruebas previas a la migración</p>
+            </div>
+        </div>
+        <br>
+        <p>Antes de migrar los datos, se realiza un conjunto de actividades de prueba como parte de la fase de prueba previa a la migración. Esto puede ignorarse en aplicaciones más simples. Pero cuando se van a migrar aplicaciones complejas, las actividades
+            previas a la migración son imprescindibles.
+        </p>
+        <p>Algunas de las acciones más comunes a realizar durante esta fase (pero no las únicas) son:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Establecer un alcance claro de los datos: qué datos deben incluirse, qué datos deben excluirse, qué datos necesitan transformaciones / conversiones, etc.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Realizar el mapeo de datos entre la aplicación heredada y la nueva; para cada tipo de datos en la aplicación heredada, compare su tipo relevante en la nueva aplicación y luego asignarlos: mapeo de nivel superior.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Si la nueva aplicación tiene el campo que es obligatorio en ella, pero no es el caso en el legado, asegurarse que el software viejo no tenga ese campo como nulo. - Mapeo de nivel inferior.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Estudiar el esquema de datos de la nueva aplicación: nombres de campo, tipos, valores mínimos y máximos, longitud, campos obligatorios, validaciones de nivel de campo, etc., claramente. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Estudiar las interfaces en la nueva aplicación y sus conexiones. Los datos que fluyen en la interfaz deben estar altamente protegidos y no romperse.</p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Preparar casos de prueba, escenarios de prueba y casos de uso para nuevas condiciones en las nuevas aplicaciones.</p>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+
+                    </div>
+                    <div class="col">
+                        <p>Ejecutar un conjunto de casos de prueba, escenarios con un conjunto de usuarios/as y mantener los resultados almacenados. Lo mismo debe verificarse después de la migración para garantizar que los datos y la funcionalidad heredados
+                            estén intactos. </p>
+                    </div>
+                </div>
+
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178400"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178400/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Fase 2: Prueba de migración</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>La Guía de migración que es elaborada por el equipo de Migración debe seguirse estrictamente para llevar a cabo la actividad de migración. </p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Idealmente, la actividad de migración comienza con la copia de seguridad de los datos en la cinta, de modo que, en cualquier momento, se pueda restaurar el sistema heredado.</p>
+            </div>
+        </div>
+        <p>Los <i>scripts</i> de migración, la guía y otra información relacionada con la migración real deben recopilarse del repositorio de control de versiones para su ejecución.</p>
+        <p>Anotar el tiempo real necesario para la migración desde el punto de inicio de la migración hasta la restauración exitosa del sistema, es uno de los casos de prueba a ejecutar y, por lo tanto, el 'Tiempo necesario para migrar el sistema' debe registrarse
+            en el informe de prueba final que se entregará como parte de los resultados de la prueba de migración y esta información será útil durante el lanzamiento de la producción. El tiempo de inactividad registrado en el entorno de prueba se extrapola
+            para calcular el tiempo de inactividad aproximado en el sistema activo.
+        </p>
+        <p>Durante esta prueba, todos los componentes del entorno normalmente serán desactivados y eliminados de la red para llevar a cabo las actividades de migración. Por tanto, es necesario señalar la 'Falta del tiempo' requerido para la prueba de migración.
+            Idealmente, será el mismo que el del tiempo de Migración.
+        </p>
+        <p></p>
+        <p></p>
+        
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178401"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178401/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Fase 3: Pruebas posteriores a la migración</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Una vez que la aplicación se ha migrado correctamente, las pruebas posteriores a la migración entran en escena.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Aquí, la prueba del sistema de un extremo a otro se realiza en el entorno de prueba. Los <i>testers </i>ejecutan casos de prueba identificados, escenarios de prueba, casos de uso con datos heredados, así como un nuevo conjunto de datos.</p>
+            </div>
+        </div>
+        <p>Dado que el alcance de las pruebas posteriores a la migración se vuelve muy grande, es ideal segregar las pruebas importantes que deben realizarse primero para calificar que la migración es exitosa y luego realizar las restantes más tarde.</p>
+        <p>También es aconsejable automatizar los casos de prueba funcionales de extremo a extremo y otros posibles casos de prueba para que el tiempo de prueba pueda reducirse y los resultados estén disponibles rápidamente.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+       
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178402"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178402/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas de usabilidad</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Las pruebas de usabilidad son un tipo de prueba no funcional que intenta evaluar la comprensibilidad, capacidad de aprendizaje, operabilidad, atractivo y cumplimiento del software.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Las pruebas de usabilidad son para determinar hasta qué punto entendemos el producto de software, es fácil de aprender, fácil de operar y atractivo para los usuarios bajo condiciones y requisitos específicos.</p>
+            </div>
+        </div>
+        <p>Este tipo de pruebas generalmente lo ejecutan usuarios/as reales y no el equipo de desarrollo. El equipo de desarrollo es quien ha creado el producto y, por lo tanto, no logra encontrar menos defectos relacionados con la experiencia del/la usuario/a.</p>
+        <p>Las ventajas y desventajas de las pruebas de usabilidad son las siguientes:</p>
+        <p></p>
+        <!--Tabla simple dos columnas-->
+        <table class="tabla-simple texto-principal" style="margin: 0 auto;">
+            <!--Cantidad de columnas-->
+            <colgroup span="1" width="44%"></colgroup>
+            <colgroup span="1" width="2%"></colgroup>
+            <colgroup span="1" width="44%"></colgroup>
+
+            <!--Categorías-->
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado">Ventajas</td>
+                    <td></td>
+                    <td class="tabla-simple-categoria texto-centrado">Desventajas</td>
+                </tr>
+
+                <!--filas-->
+                <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>Al ejecutar una prueba de usabilidad, podemos mejorar las fallas del producto, si las encontramos, y rectificarlas antes del lanzamiento del producto. Por lo tanto, la ejecución de pruebas ayudará a mejorar la calidad del producto.</li>
+                            <li>Muchas veces las discusiones internas se dirigen hacia debates que pueden resolverse después de realizar pruebas de usabilidad, lo que ayuda a comprender mejor la experiencia del/la usuario/a.</li>
+                            <li>A veces se observa que el equipo de desarrollo no detecta algunos defectos que se pueden encontrar ejecutando pruebas de usabilidad.</li>
+                            <li>Dado que la retroalimentación proviene directamente del lado del/la usuario/a, resulta beneficioso para la organización para mejorar el producto de acuerdo con el público objetivo.</li>
+
+                        </ul>
+                    </td>
+                    <td></td>
+
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>Las pruebas de usabilidad pueden resultar costosas para la organización o equipo que desea implementarlas.<br></li>
+
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p></p>
+        <p></p>
+        <p></p>
+       
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178403"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178403/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Métodos de prueba de usabilidad</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Existen 5 métodos para probar la usabilidad:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Pruebas de pasillo:</span> Este método es uno de los métodos disponibles más eficaces y rentables en comparación con otros. En este método, pocas personas al azar reciben el sitio web o el producto
+                            para probar en lugar de profesionales capacitados/as. A medida que personas al azar prueban el servicio sin conocimiento previo del producto, lo prueban de manera más efectiva y brindan resultados más precisos y comentarios
+                            honestos para mejorar, si corresponde.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Prueba de usabilidad remota:</span> Como su nombre indica, las pruebas de usabilidad remota las llevan a cabo personas que se encuentran en ubicaciones remotas, es decir, que se encuentran en varias
+                            provincias o, a veces, en varios países con fines de prueba. Este tipo de prueba se realiza de forma remota y los problemas se pueden informar si se encuentran. Los comentarios pueden ser registrados y enviados por personas
+                            al azar y no por un/a experto/a en tecnología. A veces, las pruebas remotas se ejecutan mediante videoconferencia.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Revisión de expertos:</span> Se le pide al/la experto/a en el campo que pruebe el producto o servicio y proporcione comentarios y luego envíe los resultados. Este tipo de pruebas suele ser caro, ya
+                            que la organización necesita contratar a un/a experto/a en tecnología. También se puede realizar una revisión de expertos de forma remota para enviar los resultados. Este tipo de prueba de usabilidad se ejecuta rápidamente
+                            y lleva menos tiempo. El/la experto/a encuentra rápidamente las lagunas y detecta las fallas en el producto o servicio. Esta prueba es confiable debido a la experiencia que posee el/la experto/a. La revisión de un/a experto/a
+                            vale la pena cuando el producto tiene una característica crítica.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Prueba de prototipos de papel:</span> Este método implica un ensayo de ejecución de la prueba, un boceto a mano, un dibujo de los modelos o prototipos. Discutir el flujo, dibujarlos en papel y considerar
+                            todas las posibles entradas, escenarios y condiciones, es el objetivo de este tipo de pruebas. Este es uno de los tipos principales de pruebas que se observa en los proyectos de desarrollo para eliminar los problemas principales.
+                            Al realizar pruebas de prototipos en papel, se puede tener más claridad sobre el proceso de ejecución. La prueba del prototipo en papel generalmente se realiza dentro del equipo de trabajo. Por lo tanto, se considera en las
+                            primeras etapas del proceso de prueba. Este es un método relativamente más económico de prueba de usabilidad, pero no es la forma más eficaz de probar, ya que a veces lleva más tiempo y existe una mayor posibilidad de que incluso
+                            después de la prueba, perdamos algunos problemas.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Pruebas de usabilidad automatizadas:</span> Este método consiste en escribir <i>scripts </i>para la automatización y cuando se activan los <i>scripts</i>, se ejecutan los casos de prueba. Después
+                            de la ejecución de la prueba, los resultados se registran y se envían. Para este método de prueba, una organización necesita contratar un recurso que esté familiarizado con la escritura de <i>scripts</i> y la construcción de
+                            un marco de automatización. Este es uno de los métodos de prueba más utilizados, ya que no es tan caro como el tipo de prueba de revisión de expertos y no es tan básico como el método de prueba de prototipo de papel. </p>
+                    </div>
+                </div>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178404"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178404/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas de hardware/software</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Estas pruebas se refieren a probar tanto el hardware como el software. Las configuraciones de hardware deben ser compatibles con el software que debe ejecutar para evitar problemas en un entorno de producción.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178405"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178405/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas de aceptación</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Una vez el proceso de prueba del sistema es completado por el equipo de prueba, todo el software se entrega a los/las clientes y/o usuarios/as para probar su aceptabilidad, es decir, el software debe ser impecable para cumplir con los requisitos
+            funcionales. Además, los flujos de negocios de un extremo a otro se verifican de manera similar a los escenarios en tiempo real. En estas pruebas los/las clientes y usuarios/as nos dirán si están dispuestos a utilizar el software.
+        </p>
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Tipos de pruebas de aceptación</p>
+            </div>
+        </div>
+        <br>
+        <p>Hay varios tipos distintos de pruebas de aceptación:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Prueba de aceptación del usuario (UAT):</span> Quiere evaluar si el Producto está funcionando correctamente para su uso según el/la usuario/a. Los requisitos específicos que los/las usuarios/as finales
+                            utilizan con bastante frecuencia se seleccionan principalmente con fines de prueba. Esto también se denomina prueba de usuario final. El término 'Usuario' aquí significa los/las usuarios/as finales a los/las que está destinado
+                            el software y, por lo tanto, las pruebas se realizan desde la perspectiva del/la usuario/a final y desde su punto de vista.
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Prueba de aceptación comercial (BAT):</span> Esto es para evaluar si el Producto cumple con los objetivos y propósitos comerciales o no. BAT se enfoca principalmente en los beneficios comerciales
+                            (finanzas) que son bastante desafiantes debido a las condiciones cambiantes del mercado y tecnologías avanzadas, por lo que la implementación actual puede tener que sufrir cambios que resultan en presupuestos adicionales. Incluso
+                            el Producto que pasa los requisitos técnicos puede fallar BAT debido a estas razones.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Prueba de aceptación de contrato (CAT): </span>Este es un contrato que especifica que una vez que el Producto entre en funcionamiento, dentro de un período predeterminado, se debe realizar la prueba
+                            de aceptación y debe pasar todos los casos de uso de aceptación. El contrato firmado aquí se denomina Acuerdo de Nivel de Servicio (SLA), que incluye los términos en los que se realizará el pago solo si los servicios del Producto
+                            cumplen con todos los requisitos, lo que significa que se cumple el contrato. A veces, este contrato puede suceder antes de que el Producto entre en funcionamiento.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Regulaciones/pruebas de cumplimiento de regulaciones (RAT):</span> Esto es para evaluar si el Producto viola las reglas y regulaciones definidas por el gobierno del país donde se lanza. Esto puede
+                            no ser intencional, pero tendrá un impacto negativo en el negocio. Por lo general, el software desarrollado que está destinado a ser lanzado en todo el mundo, tiene que someterse a RAT, ya que diferentes países o regiones tienen
+                            diferentes reglas y regulaciones definidas por sus órganos de gobierno. Si se viola alguna de las reglas y regulaciones de cualquier país, entonces ese país o la región específica de ese país no podrá usar el Producto y se
+                            considerará una falla. Los/las proveedores/as del producto serán directamente responsables si el producto se libera aunque haya una infracción. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Prueba de aceptación operativa (OAT): </span>Esto es para evaluar la disponibilidad operativa del Producto y es una prueba no funcional. Incluye principalmente pruebas de recuperación, compatibilidad,
+                            mantenibilidad, disponibilidad de soporte técnico, confiabilidad, conmutación por error, localización, etc. OAT principalmente asegura la estabilidad del Producto antes de lanzarlo a producción. </p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Prueba alfa:</span> Esto es para evaluar el Producto en el entorno de prueba por un equipo de <i>testers</i> especializados, generalmente llamados <i>alfa</i><i> testers</i>. Aquí, los comentarios
+                            de los/las&nbsp;<i>testers</i> y sus sugerencias ayudan a mejorar el uso del Producto y también a corregir ciertos errores. Las pruebas se hacen en un entorno controlado. </p>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Prueba beta / Prueba de campo:</span> Esto es para evaluar el Producto exponiéndose a los/las usuarios/as finales reales, generalmente llamados/as <i>beta</i> <i>testers</i> o usuarios/as beta, en
+                            su entorno. Se recopilan comentarios continuos de los/las usuarios/as y se solucionan los problemas. Además, esto ayuda a mejorar el Producto para brindar una experiencia de usuario/a más rica. Las pruebas se realizan de manera
+                            no controlada, lo que significa que un/a usuario/a no tiene restricciones sobre la forma en que se utiliza el Producto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178387"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659004/mod_book/chapter/178387/ICONOS-NUEVOS.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Bibliografía</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando-->
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Bibliografía obligatoria</p>
+            </div>
+        </div>
+        <br>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Myers, Glenford (1983). El arte de Probar el Software. Editorial El Ateneo. Capítulo 5.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Bibliografía optativa</p>
+            </div>
+        </div>
+        <br>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Myers, Glenford (2011). The art of software testing- 3rd Edition. Editorial Wiley.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Material multimedia</p>
+            </div>
+        </div>
+        <p style=""><span style="color: rgb(1, 6, 20); font-size: large;"></span></p>
+        <p dir="ltr"><span style="font-size: large; color: rgb(1, 6, 20);" class="">Integration Testing - javatpoint. (n.d.). www.javatpoint.com. Retrieved October 23, 2022, from </span><a href="https://www.javatpoint.com/integration-testing" target="_blank" style="background-color: rgb(250, 250, 250); font-size: 0.9375rem;"><span class="" style="color: rgb(0, 46, 184);"><span><span class="" style="font-size: large; color: rgb(0, 46, 184);"><u>https://www.javatpoint.com/integration-testing</u></span></span></span></a><br></p>
+        <p dir="ltr"><span class="" style="font-size: large; color: rgb(1, 6, 20);">Hamilton, T. (2022, August 27). Integration Testing: What is, Types with Example. Guru99. Retrieved October 23, 2022, from </span><a href="https://www.guru99.com/integration-testing.html" target="_blank"><span class="" style="color: rgb(0, 46, 184);"><span><span class="" style="font-size: large; color: rgb(0, 46, 184);"><u>https://www.guru99.com/integration-testing.html</u></span></span></span></a></p>
+            <p dir="ltr"><span class="" style="font-size: large; color: rgb(1, 6, 20);">System Testing - javatpoint. (n.d.). www.javatpoint.com. Retrieved October 23, 2022, from </span><a href="https://www.javatpoint.com/system-testing" target="_blank"><span class="" style="color: rgb(0, 46, 184);"><span><span class="" style="font-size: large; color: rgb(0, 46, 184);"><u>https://www.javatpoint.com/system-testing</u></span></span></span></a></p>
+            <p dir="ltr"><span class="" style="font-size: large; color: rgb(1, 6, 20);">¿Qué es la prueba de regresión? Definición, herramientas, método y ejemplo. (n.d.). Pruebas De Automatización. Retrieved October 23, 2022, from </span><a href="https://spa.myservername.com/what-is-regression-testing" target="_blank"><span class="" style="color: rgb(0, 46, 184);"><u><span class="" style="font-size: large; color: rgb(0, 46, 184);">https://spa.myservername.com/what-is-regression-testing</span></u></span></a></p><br>
+                <p></p>
+    </div>
+</div><br>
+<p></p></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[648989,648991,648992,648993,648994,648995,648996,648997,649000,649001,649004,649005,649009,649010,649013,649014,649018,649024,649027,649028,649031,649035,649038,649039,649042,649054]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1747420296/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2659004, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1748092072); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random6831d7ec5a1402'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6831d7ec5a1402'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

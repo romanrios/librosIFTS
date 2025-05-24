@@ -1,0 +1,2589 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S9. Test-Driven Development | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1747420295/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S8. Test-Driven Development | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1747420295_1747421455/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"96pw7gX2SP","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1747420295","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1747420296","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21046,"courseContextId":2643972,"contextid":2659000,"contextInstanceId":649036,"langrev":1748071445,"templaterev":"1747420296"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1747420296\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1747420296\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1747420296\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1747420296\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1747420296\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21046 context-2659000 cmid-649036 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1747420295/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S8. Test-Driven Development</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Metodología de Pruebas de Sistemas 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S8. Test-Driven Development
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        sábado, 24 de mayo de 2025, 11:32
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21046&amp;section=11" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649035" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=649037" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649038" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción a TDD" class="font-weight-bold text-decoration-none" href="#ch178334">1. Introducción a TDD</a><ul><li><a title="1.1. Ventajas de TDD" class="text-decoration-none" href="#ch178335">1.1. Ventajas de TDD</a></li><li><a title="1.2. La aparición de los frameworks y el corrimiento de TDD a UTDD" class="text-decoration-none" href="#ch178336">1.2. La aparición de los frameworks y el corrimiento de TDD a UTDD</a></li><li><a title="1.3. Ciclo parcial UTDD" class="text-decoration-none" href="#ch178337">1.3. Ciclo parcial UTDD</a></li><li><a title="1.4. Los primeros intentos de pruebas de integración" class="text-decoration-none" href="#ch178338">1.4. Los primeros intentos de pruebas de integración</a></li><li><a title="1.5. La visión de las pruebas de cliente de XP" class="text-decoration-none" href="#ch178339">1.5. La visión de las pruebas de cliente de XP</a></li></ul></li><li><a title="2. El punto de vista de los requerimientos y del comportamiento" class="font-weight-bold text-decoration-none" href="#ch178340">2. El punto de vista de los requerimientos y del comportamiento</a><ul><li><a title="2.1. BDD: TDD mejorado" class="text-decoration-none" href="#ch178341">2.1. BDD: TDD mejorado</a></li><li><a title="2.2. Críticas y avances de BDD" class="text-decoration-none" href="#ch178342">2.2. Críticas y avances de BDD</a></li><li><a title="2.3. BDD vs. ATDD" class="text-decoration-none" href="#ch178343">2.3. BDD vs. ATDD</a></li><li><a title="2.4. STDD: ejemplos como pruebas y pruebas como ejemplos" class="text-decoration-none" href="#ch178344">2.4. STDD: ejemplos como pruebas y pruebas como ejemplos</a></li><li><a title="2.5. Aspectos metodológicos en STDD" class="text-decoration-none" href="#ch178345">2.5. Aspectos metodológicos en STDD</a></li><li><a title="2.6. Limitaciones de la práctica de especificar con ejemplos" class="text-decoration-none" href="#ch178346">2.6. Limitaciones de la práctica de especificar con ejemplos</a></li><li><a title="2.7. Formatos de las especificaciones" class="text-decoration-none" href="#ch178347">2.7. Formatos de las especificaciones</a></li><li><a title="2.8. El foco en el diseño orientado a objetos: NDD" class="text-decoration-none" href="#ch178348">2.8. El foco en el diseño orientado a objetos: NDD</a></li><li><a title="2.9. Una propuesta de solución: NDD" class="text-decoration-none" href="#ch178349">2.9. Una propuesta de solución: NDD</a></li><li><a title="2.10. Procedimiento NDD" class="text-decoration-none" href="#ch178350">2.10. Procedimiento NDD</a></li><li><a title="2.11. Discusión sobre pros y contras" class="text-decoration-none" href="#ch178351">2.11. Discusión sobre pros y contras</a></li></ul></li><li><a title="3. Pruebas de interacción y TDD Pruebas e interfaz de usuario" class="font-weight-bold text-decoration-none" href="#ch178352">3. Pruebas de interacción y TDD Pruebas e interfaz de usuario</a><ul><li><a title="3.1. La falta de una visión integral" class="text-decoration-none" href="#ch178353">3.1. La falta de una visión integral</a></li><li><a title="3.2. Limitaciones de las pruebas de interacción" class="text-decoration-none" href="#ch178354">3.2. Limitaciones de las pruebas de interacción</a></li></ul></li><li><a title="4. Limitaciones de TDD y prácticas afines" class="font-weight-bold text-decoration-none" href="#ch178355">4. Limitaciones de TDD y prácticas afines</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178334"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178334/_%20%2814%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción a TDD</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p><span style=" color:#1345CD; font-weight: 600">Test-Driven Development (TDD)</span> es una práctica iterativa de diseño de software orientado a objetos, que fue presentada por Kent Beck y Ward Cunningham como parte de Extreme Programming (XP)
+            en su libro “Extreme Programming Explained: Embrace Change”. Básicamente, incluye tres sub-prácticas: </p>
+        <p></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Automatización</span> las pruebas del programa deben ser hechas en código, y con la sola corrida del código de pruebas debemos saber si lo que estamos probando funciona bien o mal.
+                </p>
+
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Test-First</span> las pruebas se escriben antes del propio código a probar. &nbsp;</p>
+
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Refactorización posterior</span> para mantener la calidad del diseño, se cambia el diseño sin cambiar la funcionalidad, manteniendo las pruebas como reaseguro. Esto se hace siguiendo los lineamientos vistos
+                    la semana pasada.
+
+                </p>
+
+            </div>
+        </div>
+
+
+        <p>El siguiente diagrama de actividades muestra el ciclo de TDD:</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178334/Figura-8.1.png" alt="sd" width="80%" height="80%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 1: Ciclo simple TDD</p>
+
+        <br>
+
+        <!-- Fin imagen -->
+
+        <p>Cada una de estas tres sub-prácticas acarrea ventajas que detallaremos a continuación.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178335"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178335/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Ventajas de TDD</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Las ventajas de cada una de las sub-prácticas son:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p> La automatización permite independizarse del factor humano, con su carga de subjetividad y variabilidad en el tiempo.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>La automatización también facilita la repetición de las mismas pruebas, con un costo ínfimo comparado con las pruebas realizadas por una persona. Esto es aplicable a regresiones, <i>debugging</i> y errores provenientes del
+                            sistema ya en producción.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Escribir las pruebas antes del código a probar minimiza el condicionamiento del autor por lo ya construido. También da más confianza al/a desarrollador/a sobre el hecho de que el código que escribe siempre funciona. </p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Escribir las pruebas antes del código a probar permite especificar el comportamiento sin restringirse a una única implementación. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>La refactorización constante facilita el mantenimiento de un buen diseño a pesar de los cambios que, en caso de no hacerla, lo degradarían. </p>
+                    </div>
+                </div>
+                <p>Hay una regla de oro de TDD, que conviene destacar, y es la que dice: “<span class="" style="color: rgb(0, 46, 184);">Nunca escribas nueva funcionalidad sin una prueba que falle antes</span>”. Otra dice: “<span class="" style="color: rgb(0, 46, 184);">Si no puedes escribir una prueba para lo que estás por codificar, entonces no deberías estar pensando en codificar</span>”.
+                    El corolario obvio es que ninguna funcionalidad futura debería escribirse por adelantado, si no tiene el conjunto de pruebas que permita verificar su corrección. Si a eso se le suma que sólo se debería escribir de a una prueba
+                    por vez, tenemos un desarrollo incremental extremo, definido por pequeños incrementos que se corresponden con funcionalidades muy acotadas.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Notemos que la hemos definido como una práctica de diseño, no de pruebas (o al menos no principalmente), ya que al escribir las pruebas antes del propio código estamos derivando código a partir de las mismas, que a su vez nos sirven
+                    para probar el sistema. En definitiva, las pruebas explicitan los requerimientos del sistema en forma de diseño. Beck dice que si una prueba resulta difícil de llevar a código, probablemente estemos ante un problema de diseño,
+                    y sostiene además que el código altamente cohesivo y escasamente acoplado es fácil de probar en forma automática.</p>
+            </div>
+        </div>
+        <p>Sin embargo, mucha gente ha destacado su doble finalidad, enfatizando que presta un servicio importante a las pruebas, lo cual no es necesariamente malo, sobre todo teniendo en cuenta que hay muchas ocasiones en que las tareas de pruebas
+                    y correcciones implican el 50% del esfuerzo del proyecto de desarrollo.</p>
+                <p>A pesar de que pareciera estar bien definida, la práctica de TDD fue variando a lo largo del tiempo, y también lo que se pretendió obtener a partir de ella. También fue creciente su independencia respecto de XP, pudiendo usarse en
+                    el marco de otra metodología de desarrollo, ágil o no. </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178336"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178336/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">La aparición de los <i>frameworks</i> y el corrimiento de TDD a UTDD </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>En los primeros años, TDD se vio como sinónimo de pruebas unitarias automatizadas realizadas antes de escribir el código.
+        </p>
+        <p>Simultáneamente, se escribieron los primeros <i><span class="" style="color: rgb(0, 46, 184);">frameworks</span></i><span class="" style="color: rgb(0, 46, 184);"> </span>de pruebas automatizadas: <span class="" style="color: rgb(0, 46, 184);">SUnit</span>            para <span class="" style="color: rgb(0, 46, 184);">Smalltalk </span>y <span class="" style="color: rgb(0, 46, 184);">JUnit</span> para <span class="" style="color: rgb(0, 46, 184);">Java</span>. Los mismos fueron las bases para la construcción
+            de las demás herramientas, a las que no sorprendentemente se las llamó genéricamente <span class="" style="color: rgb(0, 46, 184);">xUnit</span>. Las 2 semanas anteriores trabajamos con <span class="" style="color: rgb(0, 46, 184);">NUnit</span>.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Hay dos problemas con esta definición simplificada de TDD: el hecho de que se hable solamente de pruebas, y el hecho de que se hable de que las mismas sean unitarias.</p>
+            </div>
+        </div>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">El primer problema:</span> proviene del propio nombre de TDD, que incluye la palabra <i>test</i>. En efecto, mientras por un lado se afirma que es una técnica de diseño y no de pruebas, por otro
+                            el nombre invita a pensar otra cosa. Incluso las herramientas que fueron surgiendo a partir de TDD, desarrolladas incluso por los mentores de la práctica, requerían que el código de pruebas tuviese métodos cuyos nombres
+                            empezasen con test y las clases fueran descendientes de algo como TestCase (si bien NUnit y la versión 4 de JUnit mejoraron esto, sigue estando presente la palabra Test en las anotaciones que utilizan). Nadie niega que TDD
+                            genera un buen conjunto de pruebas de regresión, pero ese no pretende ser su objetivo principal, sino más bien un efecto lateral positivo.</p>
+                    </div>
+                </div>
+                <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                    
+                       
+                      <!-- 2 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600">El segundo problema:</span> se produce porque en todos los ejemplos que plantean sus creadores, se trabaja sobre pequeñas porciones de código, e incluso ellos mismos hablan de pruebas unitarias.
+                                    Asimismo, las herramientas reflejan esto en sus nombres: JUnit, SUnit, NUnit, etc. Y cuando Beck escribe su libro de TDD se basa primordialmente en ejemplos de pruebas unitarias. Pero notemos que el propio esquema de
+                                    TDD y sus ventajas exceden en mucho las pruebas unitarias.</p>
+                            </div>
+                        </div>
+                        <p><span class="" style="color: rgb(0, 46, 184);"> </span></p>
+                        <p>Con estos equívocos de origen, sin embargo, UTDD (Unit Test-Driven Development) se ha aplicado con creciente éxito. Sin embargo, con el tiempo también se evidenciaron algunas contras de la práctica.
+                        </p>
+                        <p></p>
+                        <!---inicio Tabla -->
+                        <!--Tabla simple dos columnas-->
+                        <table class="tabla-simple texto-principal" style="margin: 0 auto;">
+                            <!--Cantidad de columnas-->
+                            <colgroup span="1" width="44%"></colgroup>
+                            <colgroup span="1" width="2%"></colgroup>
+                            <colgroup span="1" width="44%"></colgroup>
+
+                            <!--Categorías-->
+                            <tbody>
+                                <tr>
+                                    <td class="tabla-simple-categoria texto-centrado">Ventajas</td>
+                                    <td></td>
+                                    <td class="tabla-simple-categoria texto-centrado">Desventajas</td>
+                                </tr>
+
+                                <!--filas-->
+                                <tr>
+                                    <td class="tabla-simple-fila1" valign="top">
+                                        <ul>
+                                            <li>Las pruebas en código sirven como documentación del uso esperado de las clases y métodos en cuestión.</li>
+                                            <li>Las pruebas en código indican con menor ambigüedad lo que las clases y métodos deben hacer.&nbsp;</li>
+                                            <li>Las pruebas escritas con anterioridad ayudan a entender mejor la clase que se está creando, antes de escribirla.&nbsp;</li>
+                                            <li>Las pruebas escritas con anterioridad suelen incluir más casos de pruebas negativas que las que escribimos a posteriori.</li>
+
+                                        </ul>
+                                    </td>
+                                    <td></td>
+
+                                    <td class="tabla-simple-fila1" valign="top">
+                                        <ul>
+                                            <li>Tiende a basar todo el desarrollo en la programación de pequeñas unidades, sin una visión de conjunto. Hay un antipatrón clásico de UTDD que es el de una clase de prueba por clase productiva y un método
+                                                de prueba por método productivo.&nbsp;</li>
+                                            <li>Relacionado con lo anterior, muchos han criticado la pretensión de que la arquitectura evolucione sola, sin hacer nada de diseño previo. Esta pretensión es muy defendida por los propulsores del UTDD.</li>
+                                            <li>No permite probar interfaces de usuario ni comportamiento esperado por el/la cliente.&nbsp;</li>
+                                            <li>Es una práctica centrada en la programación, con lo cual no sirve para especialistas del negocio ni <i>testers</i>. Los/las&nbsp;<i>testers</i> tradicionales tienden a desconfiar de ella por este mismo motivo.&nbsp;<br></li>
+                                            <li>Si bien las refactorizaciones son más sencillas con pruebas automatizadas, los cambios de diseño medianos y grandes suelen exigir cambios en las pruebas unitarias.&nbsp;<br></li>
+
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--fin tabla-->
+                        <p>A continuación, veamos el diagrama de actividades de un ciclo de desarrollo típico utilizando UTDD.</p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+
+                        <!-- nada puede haber abajo -->
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178337"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178337/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Ciclo parcial UTDD</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p></p>
+        <p>En el diagrama de actividades se observa un ciclo de desarrollo típico utilizando UTDD:</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178337/Figura-8.2.png" alt="sd" width="80%" height="80%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 2: Ciclo parcial UTDD</p>
+
+        <p>En la figura 2 se supone que, al escribir las pruebas unitarias, definimos la interfaz de la o las clases que se van a crear. Se supone que este ciclo se ejecuta por cada porción de código a desarrollar. </p>
+        <p>Cada prueba escrita con los <i>frameworks</i> de la familia xUnit tiene una estructura secuencial como la que sigue (que ya estudiamos en las semanas 6 y 7):</p><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div style="margin-left: 3%; margin-right: 3%;">
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p>Se establece un estado inicial de los objetos a probar.&nbsp;</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Se le envían ciertos mensajes a los objetos.&nbsp;</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Se verifica que el estado de los objetos receptores haya cambiado conforme a lo que se espera como parte de su comportamiento, y que los objetos devueltos tengan los valores esperados.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>De ser necesario, se restablece el estado de los objetos.&nbsp; </p>
+            </div>
+        </div>
+
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178338"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178338/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Los primeros intentos de pruebas de integración</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Decíamos que la primera falla conceptual de hacer UTDD es que se escribían pruebas para pequeñas porciones de código, típicamente clases. Como la filosofía de la orientación a objetos tiende a ver un programa como un conjunto de objetos
+            simples colaborando mediante el envío mensajes, esto ya era problemático.</p>
+        <p>Como siempre que hablamos de integración, caemos en el problema de qué desarrollar primero y cómo probar las interacciones con módulos aún no implementados.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">La idea más simple es la de construir módulos ficticios o <i>stubs</i>, y fue la primera que se encaró. Así, se pueden construir objetos ficticios que devuelvan valores fijos o tengan un comportamiento limitado, sólo para probar.</p>
+            </div>
+        </div>
+        <p>Al avanzar en estos tipos de pruebas se fue notando la necesidad de distintos tipos de objetos ficticios, o <i>fakes</i> o dobles. Ya hemos estudiado algunos de ellos en la semana 7, pero se enumera la clasificación completa:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Dummy Object (“objeto ficticio”)</span>: son aquellos que deben generarse para probar una funcionalidad, pero que no se usan en la prueba. Por ejemplo, cuando un método necesita un objeto como parámetro,
+                            pero éste no se usa en la prueba.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Test Stub</span>: son los que reemplazan a objetos reales del sistema, generalmente para generar entradas de datos o impulsar funcionalidades del objeto que está siendo probado. Este tipo de <i>fake</i>                            fue estudiado la semana pasada.&nbsp;</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Test Spy (literalmente, “espía”)</span>: se usan para verificar los mensajes que envía el objeto que se está probando, una vez corrida la prueba.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Mock Object</span>: son objetos que reemplazan a objetos reales del sistema para observar los mensajes enviados a otros objetos desde el objeto receptor. Estos <i>fakes</i> También fueron estudiados
+                            e implementados la semana pasada. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Fake Object (literalmente, “objeto falso”)</span>: son objetos que reemplazan a otro objeto del sistema con una implementación alternativa. Por ejemplo, un reemplazo de una base de datos en disco
+                            por otra en memoria por razones de desempeño.&nbsp; </p>
+                    </div>
+                </div>
+
+                <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;"><div style="margin:16px"><p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Notemos que lo que se busca con cada una de estas soluciones es separar el objeto que se está probando de otros objetos, disminuyendo las dependencias.</p>
+            </div>
+        </div>
+        <p>De alguna manera, lo que se está buscando es mantener las pruebas de integración como pruebas unitarias, al limitar la prueba a sólo un objeto en particular.<br></p>
+                <p>Por lo tanto, no estamos ante verdaderas pruebas de integración, aunque estemos más cerca. De allí que algunos especialistas recomendaron metodologías para ir reemplazando los dobles por objetos reales a medida que se iban generando
+                    sus clases. Y así llegaríamos a la prueba de integración mediante la construcción incremental a partir de pruebas unitarias.
+                </p>
+                <p>Muchos de estos dobles no se usan solamente porque haya clases aún no implementadas. A veces usamos dobles porque es muy lento o muy complicado probar usando una base de datos o un sistema externo. Por lo tanto, <span class="" style="color: rgb(0, 46, 184);">estas técnicas sirven
+                    también para probar desacoplando interacciones</span>. </p>
+                <p>Por supuesto, a medida que surgían estas técnicas, fueron construyéndose <i>frameworks</i> que facilitaban la generación y ejecución de pruebas que las incluyeran. </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178339"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178339/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">La visión de las pruebas de cliente de XP </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Cuando <span style=" color:#1345CD; font-weight: 600">Kent Beck</span> presentó <span style=" color:#1345CD; font-weight: 600">XP</span>, una serie de buenas prácticas de desarrollo de software que se convertirían en el primer método denominado
+            ágil, planteó que una de las condiciones era la presencia de un representante del/la cliente junto al equipo de desarrollo. Son muchas las ventajas que Beck plantea de la presencia de este/a cliente ligado al equipo. Entre ellas, no era
+            menor la de que participase escribiendo las pruebas funcionales, que Beck mismo plantea como automatizadas. Lo curioso es que cuando él desarrolla los <i>frameworks </i>de pruebas, no prevé estas pruebas de clientes, al poner el foco en
+            pruebas técnicas y, por añadidura, unitarias. </p>
+        <p>Y si bien podríamos afirmar que los <i>frameworks</i> de pruebas unitarias sirven para hacer pruebas de integración, como explicamos en el ítem anterior, tampoco son éstas las pruebas que puede llegar a redactar un/a cliente.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">El problema con las pruebas técnicas -que de eso se trata cuando hablamos de las que se desarrollan con <i>frameworks</i> de la familia xUnit, sean éstas de unidad o de integración-, es que ponen el foco en el diseño y no en lo que esperamos de una
+            buena prueba de cliente, <span class="" style="color: rgb(0, 46, 184);">que se focalice en los requerimientos</span>.</p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178340"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178340/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">El punto de vista de los requerimientos y del comportamiento</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Analicemos ahora una clasificación poniendo el foco en los <span class="" style="color: rgb(0, 46, 184);">requerimientos</span>.</p>
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">ATDD: TDD ampliado </p>
+            </div>
+        </div>
+        <br>
+        <p><span style=" color:#1345CD; font-weight: 600">Acceptance Test Driven Development (ATDD)</span> es una práctica de diseño de software que obtiene el producto a partir de las pruebas de aceptación. Se basa en la misma noción de Test-First de TDD,
+            pero en vez de escribir pruebas de unidad, que escriben y usan los/las programadores/as, se escriben pruebas de aceptación de usuarios/as, en conjunto con ellos/as.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">La idea es tomar cada requerimiento, en la forma de una historia de usuario, construir varias pruebas de aceptación del/la usuario/a, y a partir de ellas construir las pruebas automáticas de aceptación, para luego escribir el código. </p>
+            </div>
+        </div>
+        <p>El diagrama de actividades del procedimiento de ATDD es algo como el que muestra la figura 3 (<span class="" style="color: rgb(0, 46, 184);">notemos que debe hacerse todo el ciclo de UTDD por cada prueba de aceptación</span>):</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178340/Figura-8.3.png" alt="sd" width="80%" height="80%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 3: Ciclo parcial ATDD</p>
+
+        <p>Lo importante del uso de <span class="" style="color: rgb(0, 46, 184);">historias de usuario</span> es que éstas son requerimientos simples y no representan el cómo, sino solamente<span class="" style="color: rgb(0, 46, 184);"> quién necesita qué y por qué.</span>            Por eso decimos que representan el requerimiento, no que lo especifican. Las pruebas de aceptación de una Historia de Usuario se convierten en las condiciones de satisfacción del mismo.</p>
+        <p>Así, ATDD fue presentada como una técnica complementaria y más abarcativa de TDD. Incluso la idea de automatización de TDD se puede llevar a ATDD: en ATDD los criterios de aceptación se convierten en especificaciones ejecutables. </p>
+        <p>La premisa fundamental es que TDD se concibió para diseñar y probar código, pero los clientes no están interesados en el código, sino en que el sistema satisfaga sus necesidades con la mejor calidad posible.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> ATDD, en cambio, permite <span class="" style="color: rgb(0, 46, 184);">conocer
+            mejor cuándo se ha satisfecho un requerimiento</span>, tanto para el/la desarrollador/a como para el/la cliente: simplemente hay que preguntar si todas las pruebas de aceptación de la Historia de Usuario están funcionando.&nbsp;</p>
+            </div>
+        </div>
+        <p>Adicionalmente, evita los requerimientos que el/la cliente da por sobreentendidos y el <i>gold-plating</i> (práctica muy común en la gestión de proyectos de software en la cual se le agregan funcionalidades al producto que el/la cliente no solicitó
+            y tampoco necesita) de los/as desarrolladores/as, y da una visibilidad mayor del avance para ambos.
+        </p>
+        <p>Incluso el criterio de aceptación no tiene por qué ser exclusivamente funcional. Los atributos de calidad también pueden incluirse en los criterios de aceptación, aunque no provengan de Historias de Usuario, y ser incorporadas las pruebas
+            de aceptación correspondientes.
+        </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178341"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178341/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">BDD: TDD mejorado </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>En respuesta a las contras que se encontraron a TDD, <span style=" color:#1345CD; font-weight: 600">Dan North</span> empezó a hablar de <span style=" color:#1345CD; font-weight: 600">Behavior Driven Development (BDD)</span>. La postura de North,
+            en la que se ve claramente la influencia de <span style=" color:#1345CD; font-weight: 600">Eric Evans y su Domain Driven Design (DDD)</span>, es que, en vez de pensar en términos de pruebas, deberíamos pensar en términos de especificaciones
+            o comportamiento.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">De ese modo, se pueden validar más fácilmente con clientes y especialistas de negocio. Y poner el foco en el comportamiento logra un grado mayor de abstracción, al escribir las pruebas desde el punto de vista del/la consumidor/a, y
+                    no del/la productor/a. </p>
+            </div>
+        </div>
+        <p>Además, el planteo de North nos recuerda que TDD no es una técnica para probar solamente pequeñas porciones de código, sino <span class="" style="color: rgb(0, 46, 184);">la interacción de objetos en escenarios</span>. De hecho, una de las
+            objeciones que hace es que TDD pone el acento en una división estructural de las pruebas, basados en pruebas de clases y métodos, mientras que lo más lógico sería probar porciones de comportamiento esperado del sistema. </p>
+        <p>Las primeras herramientas que surgieron para realizar BDD, pusieron mucho énfasis en los cambios de nombres, suprimiendo todos los métodos test y cambiándolos por <i><span class="" style="color: rgb(0, 46, 184);">should </span></i>(debería) o
+            <span class="" style="color: rgb(0, 46, 184);"><i>must </i></span>(debe), de modo que parecieran especificaciones escritas en un lenguaje de programación. Pero también se asoció BDD a mejores prácticas, como la de escribir una clase de
+            prueba por requerimiento (<span class="" style="color: rgb(0, 46, 184);">Historia de Usuario o caso de uso</span>) y un método por <span class="" style="color: rgb(0, 46, 184);">Assert</span>.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">En la filosofía de BDD, las clases y los métodos se deben escribir con el lenguaje del negocio, haciendo que los nombres de los métodos puedan leerse como oraciones. Los nombres de las pruebas son especialmente útiles cuando éstas
+                    fallan. </p>
+            </div>
+        </div>
+        <p>Esto último no es menor. Todo lo que tenga que ver con <span class="" style="color: rgb(0, 46, 184);">el vocabulario ayuda a unificarlo y mejorar la comunicación</span> entre los/las especialistas de negocio y los/las desarrolladores/as. Notemos
+            que esto está en línea con las ideas de DDD. Además, al hablar el lenguaje del/la cliente ayuda a mantener alta la abstracción, sin caer en detalles de implementación.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Incluso el superar la idea de que se trata de pruebas, hablando más bien de especificaciones, facilita su adopción, ya que pocos administradores/as de proyecto estaban dispuestos/as a escribir pruebas antes del código, aunque sí requerimientos. </p>
+            </div>
+        </div>
+        <p>Lo mismo pasaba con los/las programadores/as, que muchas veces aducían que ya había <i>testers</i> en su organización, y ellos/ellas los estaban reemplazando sin ser reconocidos por ello.<br></p>
+        <p>El procedimiento de un ciclo de BDD, llevando a un diagrama de actividades lo propuesto por North en sus primeros artículos, es representado por la figura 4 (el parecido con el diagrama de ATDD no es casual, como veremos luego):</p>
+        <!-- inicio imagen -->
+        <br>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178341/Figura-8.4.png" alt="sd" width="80%" height="80%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+            </p>
+        </div>
+
+        <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 4: Ciclo parcial BDD</p>
+
+        <p>BDD, como era de esperarse, <span class="" style="color: rgb(0, 46, 184);">sufrió algunas críticas</span>. Las analizaremos a continuación.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178342"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178342/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Conceptos y características de las TIC</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>BDD, sufrió algunas críticas. Entre ellas, se destacan:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>La que dice que BDD es sólo un cambio de nombre a TDD, cuidando un poco el lenguaje. Esto se puede ver en innumerables sitios web y blogs de programadores/as. </p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>La que dice que BDD es simplemente TDD bien hecho. </p>
+                    </div>
+                </div>
+                <p>Las críticas son válidas, aunque BDD no carece de mérito, al plantear que, como el código que se escribe se hace partiendo de requerimientos, ayuda a entender los requerimientos. Al fin y al cabo, los nombres que les damos a las cosas
+                    importan mucho.
+                </p>
+                <p>Por ejemplo, la plantilla típica de una <b>Historia de Usuario</b> es (en su formato habitual en inglés, y en castellano): </p>
+                <!--Tabla simple dos columnas-->
+                <table class="tabla-simple texto-principal" style="margin: 0 auto;">
+                    <!--Cantidad de columnas-->
+                    <colgroup span="1" width="44%"></colgroup>
+                    <colgroup span="1" width="2%"></colgroup>
+                    <colgroup span="1" width="44%"></colgroup>
+
+                    <!--Categorías-->
+                    <tbody>
+                        <tr>
+                            <td class="tabla-simple-categoria texto-centrado">Historia de Usuario (en inglés)</td>
+                            <td></td>
+                            <td class="tabla-simple-categoria texto-centrado">Historia de Usuario (en castellano)</td>
+                        </tr>
+
+                        <!--filas-->
+                        <tr>
+                            <td class="tabla-simple-fila1" valign="top">
+                                <ul>
+                                    <li>As a [X]</li>
+                                    <li>I want [Y]&nbsp;</li>
+                                    <li>so that [Z]&nbsp;</li>
+
+                                </ul>
+                            </td>
+                            <td></td>
+
+                            <td class="tabla-simple-fila1" valign="top">
+                                <ul>
+                                    <li>Como [X]</li>
+                                    <li>Deseo [Y]</li>
+                                    <li>para lograr [Z]</li>
+
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Donde <span class="" style="color: rgb(0, 46, 184);">Y</span> es una funcionalidad o característica, <span class="" style="color: rgb(0, 46, 184);">Z</span> es el beneficio o valor de la funcionalidad y <span class="" style="color: rgb(0, 46, 184);">X</span>                    es la persona o rol que se va a beneficiar con la implementación de la funcionalidad. Basándose en esta plantilla, Dan North propuso que el comportamiento de una Historia de Usuario, y por lo tanto el criterio de aceptación, se
+                    podría expresar así: </p>
+                <p><span class="" style="color: rgb(0, 46, 184);">Given</span> [un contexto inicial]&nbsp;</p>
+                <p><span class="" style="color: rgb(0, 46, 184);">When </span>[ocurre un evento]&nbsp;</p>
+                <p><span class="" style="color: rgb(0, 46, 184);">Then</span> [asegurar que se obtiene lo siguiente]</p>
+                <p>Y las herramientas de BDD creadas a partir de allí tuvieron en cuenta esto. Por ejemplo, JBehave, la primera herramienta de BDD para Java, trabaja con interfaces o anotaciones Given y Event, según la versión. </p>
+                <p>Las primeras herramientas y los artículos iniciales de BDD se basaban en encontrar cómo escribir mejor el código de TDD. En este sentido era cierto que se trataba de practicar TDD de la manera correcta y no mucho más. El foco estaba
+                    en ayudar a los/las desarrolladores/as a practicar “un buen TDD”.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Pero el uso de BDD, más las ideas de ATDD, han llevado a una nueva generación de BDD, tanto como práctica como por las herramientas. El foco está ahora puesto decididamente en una audiencia mayor, que excede a los/las desarrolladores/as,
+                    e incluye a analistas de negocio, <i>testers</i>, clientes y otros/otras interesados/as.</p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+  
+              <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178343"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178343/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">BDD vs. ATDD </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>ATDD y BDD son dos prácticas casi contemporáneas, la primera surgida en 2002 y la segunda empezada a desarrollar en 2003. Y si bien se lanzaron para resolver cuestiones diferentes (BDD surge como mejora de TDD, mientras que ATDD es una ampliación),
+            llegaron a conclusiones para nada disjuntas. En los dos casos, se trata de actividades que empiezan de lo general y las necesidades del/la usuario/a, para ir deduciendo comportamientos y generando especificaciones ejecutables. </p>
+        <p>En realidad, no está demasiado claro el límite entre ATDD y BDD. <span style=" color:#1345CD; font-weight: 600">En el fondo, es un tema más bien filosófico y de tipos de herramientas</span>. Mientras que en BDD solemos escribir las Historias
+            de Usuario en forma tradicional, en las herramientas de ATDD se enfatiza que las pruebas de aceptación también las escriban los/las clientes o especialistas de negocio. En muchos casos se trabaja con formularios en forma de tabla, que suelen
+            ser mejor comprendidos por no informáticos, y de esa manera se consigue una mayor participación de personas no especializadas. Como los <i>frameworks</i> tabulares de ATDD no suelen generar las pruebas en forma automática, debiendo hacer
+            la vinculación entre tablas realizadas con el/la cliente y el código funcional, mediante código de pruebas, esto puede verse como una desventaja frente a BDD. Pero lo que ocurre es que las herramientas de BDD suponen, tal vez de manera
+            un poco optimista, que el código escrito puede ser entendido por no informáticos: si así no fuera, la ventaja estaría del lado de las herramientas de ATDD.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Lo importante es que, tanto BDD como ATDD pusieron el énfasis en que no eran pruebas de pequeñas porciones de código lo que se desarrollaba, sino especificaciones de requerimientos ejecutables. Y así como UTDD pretende ser una técnica de
+            diseño detallado, BDD se presenta como una de diseño basado en dominio, y ATDD una de requerimientos. Ambas técnicas ponen el foco en que el software se construye para dar valor al negocio, y no debido a cuestiones técnicas, y en esto
+            están muy alineadas con los métodos ágiles.
+        </p>
+        <p>En definitiva, UTDD facilita el buen diseño de clases, mientras que ATDD y BDD facilitan construir el sistema correcto. </p>
+            </div>
+        </div>
+        <p>Las mayores coincidencias entre BDD y ATDD están en sus objetivos generales:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Mejorar las especificaciones.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Facilitar el paso de especificaciones a pruebas.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Mejorar la comunicación entre los distintos perfiles: clientes, usuarios, analistas, desarrolladores/as y <i>testers.</i></p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Mejorar la visibilidad de la satisfacción de requerimientos y del avance.</p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Disminuir el <i>gold-plating.</i></p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Usar un lenguaje único, más cerca del/la consumidor/a.</p>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+
+                    </div>
+                    <div class="col">
+                        <p>Focalizar en la comunicación, no en las pruebas.</p>
+                    </div>
+                </div>
+
+
+                <!-- 8 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+
+                    </div>
+                    <div class="col">
+                        <p>Simplificar las refactorizaciones o cambios de diseño. </p>
+                    </div>
+                </div>
+
+
+                <p>La crítica principal de este enfoque de BDD y ATDD viene de un teórico del paradigma de objetos, Bertrand Meyer, impulsor del diseño por contrato y del lenguaje de programación Eiffel. Según él, son los contratos los que deben dirigir
+                    el diseño y las pruebas. Su postura es que, si bien se pueden derivar pruebas individuales de los contratos, es imposible el camino inverso, ya que miles de pruebas individuales no pueden reemplazar la abstracción de una especificación
+                    contractual.
+                </p>
+                <p>La respuesta habitual, como lo expresa Ward Cunningham en “Fit for Developing Software: Framework for Integrated Tests”, es que si bien las especificaciones abstractas son más generales que las pruebas concretas, estas últimas, precisamente
+                    por ser concretas, son más fáciles de comprender y acordar con los/las analistas de negocio y otros/otras interesados/as. Lasse Koskela amplía esto diciendo que los ejemplos concretos son fáciles de leer, fáciles de entender y fáciles
+                    de validar.
+                </p>
+                <p><span style=" color:#1345CD; font-weight: 600">De aquí en más, consideraremos como sinónimos a ATDD y BDD.</span> </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178344"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178344/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">STDD: ejemplos como pruebas y pruebas como ejemplos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Queriendo hacer confluir las pruebas de cliente de Kent Beck con BDD y ATDD, surgió una técnica habitualmente conocida como <span style=" color:#1345CD; font-weight: 600">Story-Test Driven Development (STDD)</span>. El nombre <i>story-test</i>,
+            que Mugridge y Kerievsky eligieron para esta práctica tal vez sea poco habitual, pero es el más difundido.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> La idea subyacente es usar ejemplos como parte de las especificaciones, y que los mismos sirvan para probar la aplicación, haciendo que todos los roles se manejen con ejemplos idénticos.</p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Al fin y al cabo, habitualmente un/a analista de negocio escribe especificaciones, que le sirven a los/las desarrolladores/as y a los <i>testers</i>. Los/las desarrolladores/as construyen su código y definen pruebas unitarias, para las cuales
+            deben basarse en ejemplos de entradas y salidas. Los <i>testers</i>, por su lado, desarrollan casos de prueba, que contienen a su vez ejemplos. En algunas ocasiones, para fijar las especificaciones, los/las desarrolladores/as y los <i>testers</i>            le solicitan a los/las analistas que les den ejemplos concretos para aclarar ideas. E incluso hay ocasiones en que los/las propios/as analistas proveen escenarios, que no son otra cosa que requerimientos instanciados con ejemplos concretos.<br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">En definitiva, hay varias ocasiones en que se plantean ejemplos que, de alguna manera, podrían servir como complementos de requerimientos. De allí que algunos/as profesionales hayan pensado en especificar directamente con ejemplos, o al menos
+            acompañando los requerimientos con ejemplos. Estos requerimientos con ejemplos tienen ciertas <span class="" style="color: rgb(0, 46, 184);">ventajas</span>, de las cuales las más importantes son:<br></p>
+        <div style="background-color: rgb(250, 250, 250);">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Sirven como herramienta de comunicación. </p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Se expresan por extensión, en vez de con largas descripciones y reglas en prosa, propensas a interpretaciones diversas.&nbsp;</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Son más sencillos de acordar con los/las clientes, al ser más concretos. </p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px;">
+                    <div style="color: rgb(1, 6, 20); font-size: large;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col" style="">
+                        <p style="color: rgb(1, 6, 20); font-size: large;"><span>Evitan que se escriban ejemplos distintos, una y otra vez, con su potencial divergencia.</span></p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Sirven como pruebas de aceptación.&nbsp;</p>
+                    </div>
+                </div>
+                <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Notemos que no estamos afirmando nada de la automatización de estos ejemplos. Si bien esto suele hacerse, la técnica tiene su fundamento principal en la mejora de comunicación usando el lenguaje del negocio, y que ello llegue al diseño
+                    y al código. </p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Los roles en cada enfoque:</p>
+                <!--Tabla simple dos columnas-->
+                <table class="tabla-simple texto-principal" style="margin: 0 auto;">
+                    <!--Cantidad de columnas-->
+                    <colgroup span="1" width="44%"></colgroup>
+                    <colgroup span="1" width="2%"></colgroup>
+                    <colgroup span="1" width="44%"></colgroup>
+
+                    <!--Categorías-->
+                    <tbody>
+                        <tr>
+                            <td class="tabla-simple-categoria texto-centrado">En el enfoque tradicional:</td>
+                            <td></td>
+                            <td class="tabla-simple-categoria texto-centrado">En el enfoque de STDD:</td>
+                        </tr>
+
+                        <!--filas-->
+                        <tr>
+                            <td class="tabla-simple-fila1" valign="top">
+                                <ul>
+                                    <li>Analista de negocio: hace las veces de “traductor” entre los/las clientes y los/las desarrolladores/as o <i>testers</i>. Escucha expectativas, deseos y necesidades, y con ellos elabora especificaciones de requerimientos
+                                        y los prioriza.</li>
+                                    <li><i>Tester</i>: valida el producto contra las especificaciones. Recibe especificaciones, elabora casos de prueba en base a escenarios y ejecuta casos de prueba. En general no habla directamente con el/la cliente, sino
+                                        que usa como interlocutor al/la analista.&nbsp;</li>
+                                    <li>Desarrollador/ra: es el/la diseñador/a y constructor/a del producto. Recibe especificaciones, elabora un diseño y lo plasma en código, para luego ejecutar pruebas unitarias y de integración técnicas. Tampoco habla
+                                        directamente con el/la cliente, sino a través del/la analista.&nbsp;</li>
+                                    <li>Cliente o usuario/a: sólo habla con el/la analista.&nbsp;</li>
+
+                                </ul>
+                            </td>
+                            <td></td>
+
+                            <td class="tabla-simple-fila1" valign="top">
+                                <ul>
+                                    <li>Analista de negocio: debe ser un/a facilitador/a de intercambio de conocimiento.&nbsp;</li>
+                                    <li>Desarrollador/a: es uno/a más de los/las participantes en la elaboración de los escenarios y ejemplos, que luego le sirven para desarrollar el producto y las pruebas técnicas.&nbsp;</li>
+                                    <li><i>Tester</i>: es otro/a de los/las participantes en la elaboración de los escenarios y ejemplos, que luego le sirven para probar la aplicación.&nbsp;</li>
+                                    <li>Cliente: tiene un rol más activo, como autor/a principal de pruebas de aceptación con ejemplos, asistido/a por el resto de los/las interesados/as.<br></li>
+
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="color: rgb(1, 6, 20); font-size: large;"><br></p><p style="color: rgb(1, 6, 20); font-size: large;">Analizaremos a continuación los <span class="" style="color: rgb(0, 46, 184);">aspectos metodológicos</span> de STDD.</p><p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178345"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178345/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Aspectos metodológicos en STDD</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>En cuanto a lo metodológico, STDD propone realizar un taller por iteración. Estos sirven para intercambiar ideas entre los/las participantes, además de establecer un lenguaje común más cercano al del negocio, en el sentido del lenguaje ubicuo
+            de DDD. También en estas sesiones surgen requerimientos implícitos y aquellos que nadie hubiese contemplado, aparte de que se reduce la brecha entre lo que entiende uno/a y otro/a participante. El propio formato de taller hace que haya una
+            revisión implícita y que se tenga más presentes a los requerimientos que cuando hay que leerlos de un documento escrito.
+        </p>
+        <p>Más allá de que pusimos el énfasis en que no necesariamente las especificaciones por extensión deben automatizarse, es interesante poder hacerlo, aprovechando todas las ventajas de TDD, partiendo de genuinos criterios de aceptación.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">En este sentido</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">y siguiendo la premisa principal de TDD, no deberían desarrollarse funcionalidades que no estén acompañadas por una prueba de aceptación. Y si durante una prueba manual, o en producción, surgiera un problema, habría que analizar qué
+                    pasó con la prueba de aceptación correspondiente antes de resolverlo. </p>
+            </div>
+        </div>
+        <p>STDD ha recibido otras denominaciones: </p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;"><span class="" style="color: rgb(102, 51, 255);">Brian Marick </span>acuñó la idea de “especificación con ejemplos”, que es otro de los nombres más habituales de la práctica, y
+                    también ha calificado a las pruebas como “pruebas de cara al negocio”.</span><br></p>
+                <p><span class="" style="color: rgb(102, 51, 255);">Gerald Weinberg y Donald Gause,</span> han hablado de “requerimientos de caja negra”.</p>
+                <p><span class="" style="color: rgb(102, 51, 255);">Gojko Adzic </span>se refiere a ellos con tres nombres: el mismo de Marick, de “especificación con ejemplos”, “requerimientos guiados por pruebas” y el más abarcativo de “pruebas de aceptación
+                    ágiles”. </p>
+
+            </div>
+        </div>
+        <p>Más allá de los nombres, lo substancial es que en todos los casos nos referimos a una técnica de captura de requerimientos. Y eso es especialmente importante ya que, como dice <span style=" color:#1345CD; font-weight: 600">Fred Brooks</span> “<span class="" style="color: rgb(0, 46, 184);">la más compleja de las tareas de construir un sistema
+            de software es decidir con precisión lo que se debe construir</span>”. </p><p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178346"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178346/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Limitaciones de la práctica de especificar con ejemplos&nbsp;</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>STDD plantea escribir requerimientos por extensión. Sin embargo, no hay que olvidar que los requerimientos por intención tienen un nivel de abstracción mayor y expresan cuestiones que no siempre nos acordamos de llevar a los ejemplos.&nbsp;</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Por lo tanto, así como en otro lado dijimos que toda <span class="" style="color: rgb(0, 46, 184);">Historia de Usuario</span> debe ir acompañada de pruebas de aceptación, en <span class="" style="color: rgb(0, 46, 184);">STDD</span>                    debemos poner el foco en que los escenarios o pruebas de aceptación deben estar agrupados Historias de Usuario, que deben desarrollarse si no surgen de los talleres, aunque sólo tengan una o dos oraciones. </p>
+            </div>
+        </div>
+        <p>A veces ocurre que al plantear los requerimientos como ejemplos se pierde la visión global del proyecto. En estos casos, los/las especialistas recomiendan, en la medida de lo posible, realizar <i><span class="" style="color: rgb(0, 46, 184);">epics </span></i>
+            <span class="" style="color: rgb(0, 46, 184);">o Épicas</span> (descripción de un requerimiento con un mayor grado de granularidad que una Historia de Usuario), con pruebas de aceptación globales. </p>
+        <p>Por otro lado, no todo requerimiento puede llevarse a ejemplos en el sentido de STDD.&nbsp;</p>
+        <!--Inicio caja borde azul-->
+<div class="container">
+   <div class="caja-azul">
+     <p style="padding: 1% 2%; word-wrap: break-word;">Por ejemplo, si una aplicación debe generar números al azar, los ejemplos que podamos escribir nunca van a servir como pruebas de aceptación. Tampoco resulta fácil escribir ejemplos para pruebas de estrés o de desempeño.</p>
+   </div>
+</div>
+<!--Fin caja borde azul-->
+        <p></p>
+        <p>Otra limitación de la práctica se da en las situaciones en que la interacción es un requerimiento más importante que el comportamiento, como ocurre con las pruebas de usabilidad. Ya volveremos sobre esto. </p>
+        <p>Si partimos de las características deseables de los requerimientos, podemos analizar qué tan bien se ajusta STDD a las mismas:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Completo:</span> no se puede lograr, por el mismo hecho de que se trata de ejemplos concretos.&nbsp;</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Consistente:</span>&nbsp;se puede lograr trabajando correctamente en el taller de la iteración.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Correcto:</span> se puede lograr trabajando correctamente en el taller de la iteración.&nbsp;</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Modificable:</span> ajuste perfecto, las modificaciones se llevan a los ejemplos. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Conciso:</span> no se puede garantizar, y en principio se contradice con la noción de especificación por extensión.&nbsp; </p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Rastreable:</span> se puede lograr entre pruebas y código solamente.</p>
+                    </div>
+                </div>
+                <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+                    <!-- 1 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p><span style="font-weight: 600">No ambiguo:&nbsp;</span>ajuste perfecto por la naturaleza de los ejemplos.&nbsp;</p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 2 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p><span style="font-weight: 600">Comprensible:</span> ajuste perfecto por la naturaleza de los ejemplos.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p><span style="font-weight: 600">Validable contra las expectativas de los/las usuarios/as:</span>&nbsp;ajuste perfecto.&nbsp;</p>
+                        </div>
+                    </div>
+
+
+                    <!-- 4 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p><span style="font-weight: 600">Verificable contra las especificaciones:</span> ajuste perfecto.</p>
+                        </div>
+                    </div>
+
+
+                    <!-- 5 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p><span style="font-weight: 600">Independiente:</span> se puede lograr trabajando correctamente en el taller de la iteración. </p>
+                        </div>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p><span style="font-weight: 600">Adecuado nivel de abstracción:</span>&nbsp;no se puede garantizar, y en principio se contradice con la noción de especificación por extensión.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178347"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178347/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Formatos de las especificaciones </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Hay diversos formatos que se han intentado para realizar las especificaciones en el marco de STDD: <span class="" style="color: rgb(0, 46, 184);">tablas, texto libre, diagramas y códigos</span>. Cada uno de ellos tiene ventajas e inconvenientes,
+            defensores/as y detractores/as y hay herramientas para automatizar todas ellas.
+        </p>
+        <p><span style=" color:#1345CD; font-weight: 600">Las tablas</span> resultan una notación usual para representar entradas y salidas calculables, aunque son definitivamente inadecuadas para representar flujos de tareas, y requieren bastante trabajo
+            de programación para generar pruebas automáticas.
+        </p>
+        <p>El <span style=" color:#1345CD; font-weight: 600">texto libre </span>tiene el mismo problema de la dificultad de generación de código de pruebas, a lo que se suma una menor riqueza en la comunicación de entradas y salidas. Por otro lado, tiene
+            la ventaja de que todos los perfiles pueden entenderlo.
+        </p>
+        <p>En cuanto a los <span style=" color:#1345CD; font-weight: 600">diagramas</span>, a la vez que son muy expresivos para modelar flujos de tareas, no lo son tanto para especificar entradas y salidas. Por otro lado, si bien sirven como vehículo de
+            comunicación en talleres de requerimientos, trabajando a mano alzada, al mismo tiempo requieren un trabajo importante para derivar pruebas automáticas de ellos. </p>
+        <p>En cuanto a las <span style=" color:#1345CD; font-weight: 600">especificaciones en código</span>, su obvia ventaja radica en la facilidad de generación de pruebas automáticas, a veces incluso a un costo nulo. Sin embargo, son las menos adecuadas
+            como herramientas de comunicación y provocan una resistencia casi instintiva de los roles no técnicos.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Por lo tanto</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> hay que elegir cuidadosamente el formato que se va a utilizar, teniendo en cuenta que el mismo también va a condicionar la selección de herramientas.  </p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p> </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178348"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178348/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">El foco en el diseño orientado a objetos: NDD </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>TDD surgió en ambientes de orientación a objetos, inicialmente en proyectos <span style=" color:#1345CD; font-weight: 600">Smalltalk</span>. Y si bien es una práctica independiente del paradigma de programación, su mayor uso permanece en los
+            proyectos de sistemas orientados a objetos.</p>
+        <p>Sin embargo, desde sus inicios, en la programación orientada a objetos, se ha puesto énfasis en el comportamiento de los objetos más que en el estado. De ahí surge el problema que describimos a continuación.</p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">El problema del comportamiento</p>
+            </div>
+        </div>
+        <br>
+        <p>Considerando lo anteriormente expuesto, los fragmentos que siguen son <span style=" color:#1345CD; font-weight: 600">inadecuados</span>, porque revelan cuestiones del estado de los objetos, violando el encapsulamiento y sugiriendo una forma de
+            representación de los datos internos: </p>
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178348/S8_Codigo1.png?time=1697651013013" alt="" width="70%" height="70%" role="presentation" class="img-responsive atto_image_button_middle"><br></p>
+
+        <p>Claramente, las líneas que siguen <span style=" color:#1345CD; font-weight: 600">serían más apropiadas</span>, porque expresan lo mismo en términos de comportamiento: </p>
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178348/S8_codigo2.png?time=1697650974471" alt="" width="70%" height="70%" role="presentation"></p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Este principio fue enunciado como <span style=" color:#1345CD; font-weight: 600">Ley de Deméter</span>, y pretende que los objetos revelen lo mínimo posible de su estado interno, dando a conocer solamente su comportamiento. </p>
+            </div>
+        </div>
+        <p>En el marco de TDD lo primero que hacemos es establecer la interfaz de nuestros objetos y escribir pruebas sobre ellos suponiendo que tienen esa interfaz. Por lo tanto, el encapsulamiento de los objetos <span class="" style="color: rgb(0, 46, 184);">se debe garantizar con ejemplos</span>            antes de pasar a la implementación. </p>
+        <p>Los <i>frameworks </i>tradicionales de UTDD suelen verificar el comportamiento de los objetos, verificando el cambio de estado provocado por determinados mensajes recibidos por ellos, o los valores devueltos como consecuencia del envío de otros
+            mensajes. Ahora bien, esta forma de verificación tiene dos problemas. </p>
+        <p><span class="" style="color: rgb(0, 46, 184);">En primer lugar</span>, no siempre el comportamiento de un objeto puede evaluarse por sus cambios de estado o por los valores que devuelve.</p>
+        <!--Inicio caja borde azul-->
+<div class="container">
+   <div class="caja-azul">
+     <p style="padding: 1% 2%; word-wrap: break-word;">Por ejemplo, ¿qué pasa si el propósito de un mensaje es que el objeto receptor imprima algo en una impresora, envíe un mail o almacene ciertos datos en una base de datos? El chequeo de valores devueltos y cambios de estado no nos sirve
+            para evaluar estos comportamientos.</p>
+   </div>
+</div>
+<!--Fin caja borde azul-->
+        <p><span class="" style="color: rgb(0, 46, 184);">En segundo lugar,</span> para chequear el estado en que queda un objeto luego del envío de un mensaje, hay ocasiones en que necesitamos métodos de consulta que la clase del objeto no tiene, y nos vemos obligados a cambiar la interfaz de la misma solamente
+            para las pruebas. Esto, de nuevo, <span class="" style="color: rgb(0, 46, 184);">es contrario al principio del encapsulamiento</span>.</p><p><br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178349"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178349/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Una propuesta de solución: NDD </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Como propuesta de solución para este problema, Steve Freeman y otros tres autores plantean que el comportamiento de los objetos debería estar definido en términos de cómo envía mensajes a otros objetos, además de los resultados devueltos
+            en respuesta a mensajes recibidos, esto último propio de UTDD. </p>
+        <p>Esta práctica se presentó como <span style=" color:#1345CD; font-weight: 600">Need-Driven Development (NDD)</span>. Posteriormente, los mismos autores comenzaron a hablar de lograr un lenguaje específico de dominio con NDD, lo cual lo vincula
+            indirectamente con BDD. El método tiene una variante, habitualmente designada como Responsibility-Driven Design, aunque en este caso no se requiere que las pruebas sean previas al código. Aunque para esta materia le llamaremos <span style=" color:#1345CD; font-weight: 600">NDD</span>.&nbsp;</p>
+        <p>El propósito fundamental es resolver un buen diseño orientado a objetos y una separación clara de incumbencias, sobre la base de:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Mejorar el código con términos de dominio. </p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Preservar el encapsulamiento. </p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Reducir dependencias.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Clarificar las interacciones entre clases. </p>
+                    </div>
+                </div>
+
+
+                <p>Volviendo a la técnica, la diferencia fundamental con el UTDD tradicional, en el que se basa, es que pretende definir de antemano qué mensajes emitirá el objeto sometido a prueba cuando reciba un mensaje en particular. </p>
+                <p>Como esto requiere de otros objetos que puedan recibir a su vez los mensajes emitidos por el objeto receptor, pero dichos objetos podrían no tener su clase definida en el momento de escribir la prueba, NDD propone implementarlos como
+                    objetos ficticios a partir solamente de la interfaz requerida. En definitiva, UTDD se basa en la interfaz provista por los objetos probados, mientras que NDD necesita también la interfaz requerida para los objetos vecinos, y su comportamiento,
+                    para lo cual debe generar algún tipo de objeto ficticio. Los/las creadores/as de NDD, que también han desarrollado la herramienta jMock, proponen el uso de Mock Objects.</p>
+                <p>Por lo tanto, mientras el diagrama de secuencia típico de una prueba de UTDD es:</p>
+                <div style="text-align: center;">
+                    <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178349/Figura-8.5.png?time=1697652199788" alt="sd" width="85%" height="85%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                    </p>
+                </div>
+
+                <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 5: Test UTDD Tradicional.</p>
+
+                <p>Por otro lado, la Figura 6 ilustra cómo se vería el diagrama de secuencia típico de una prueba usando NDD:</p>
+                <div style="text-align: center;">
+                    <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178349/Figura-8.6.png" alt="sd" width="80%" height="80%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                    </p>
+                </div>
+
+                <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);">Figura 6: Test NDD.</p>
+
+                <p>El diagrama de clases correspondiente al escenario de NDD podría ser:</p>
+                <div style="text-align: center;">
+                    <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178349/Figura-8.7.png" alt="sd" width="90%" height="90%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle">
+                    </p>
+                </div>
+
+                <p style="text-align: center; font-size: medium; color: rgb(1, 6, 20);"></p>
+
+                <p>Donde Mock1 y Mock2 son clases que implementan las interfaces InterfazRequerida1 e InterfazRequerida2, y que genera el framework de Mock Objects. </p>
+                <p>Avancemos para analizar el <span class="" style="color: rgb(0, 46, 184);">procedimiento </span>a seguir.</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178350"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178350/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Procedimiento NDD</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>El procedimiento a seguir para la prueba de cada método con NDD sería el siguiente:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Escribir las expectativas para describir los servicios que el objeto receptor requiere del resto del sistema. </p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Representar los servicios como Mock Objects, mediante sus interfaces. </p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Crear el resto del contexto para que la prueba corra. </p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Definir las postcondiciones que sean necesarias. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Verificar las expectativas y las postcondiciones. </p>
+                    </div>
+                </div>
+                <p></p>
+                <p>Hay algunas recomendaciones a tener en cuenta cuando se utiliza NDD:</p>
+                <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+                    <!-- 1 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Generar objetos ficticios solamente para las clases que podamos cambiar. Las clases utilitarias o que no están bajo nuestro control deberíamos usarlas como están.&nbsp; </p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 2 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Sólo generar Mock Objects a partir de interfaces y no de clases, porque nos interesa la comunicación entre objetos, no su estado ni cómo implementan el comportamiento.&nbsp;</p>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Generar objetos ficticios sólo para los vecinos inmediatos del objeto receptor. </p>
+                        </div>
+                    </div>
+
+
+                    <!-- 4 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Evitar imponer un orden de invocación cuando esto no es necesario. En general, especificar sólo lo que se necesita. </p>
+                        </div>
+                    </div>
+
+
+                    <!-- 5 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Evitar el uso de métodos de consulta. Esta recomendación no es de cumplimiento forzoso, pero nos va a conducir a un diseño más basado en el comportamiento.&nbsp; </p>
+                        </div>
+                    </div>
+                   <!-- 5 -->
+                    <div class="row" style="margin-left: 32px">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                        </div>
+                        <div class="col">
+                            <p>Si se usan muchos Mock Objects en una misma prueba, es un indicador de que el objeto receptor tiene demasiadas responsabilidades.&nbsp;&nbsp;</p></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178351"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178351/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Discusión sobre pros y contras&nbsp;</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Una consecuencia positiva del uso de esta técnica es que, al trabajar sobre la base de protocolos, además definidos en la forma restringida que necesita cada funcionalidad, se suele llegar a interfaces bien angostas. Y como siempre se crea antes
+            la interfaz que la clase, suelen obtenerse conceptos bien abstractos definidos a nivel de interfaces. Adicionalmente, se cumple a rajatabla con el principio de programar contra interfaces. </p>
+        <p>La misma razón hace que tendamos a escribir código de pruebas menos acoplado a implementaciones particulares. Y esto, que ya de por sí es una ventaja, nos ayuda a bajar el acoplamiento de las clases de la aplicación. Por otro lado, es innegable
+            que NDD promueve el ocultamiento de implementación, ya que impone un protocolo para los objetos receptores, pero no dice cómo implementarlo. </p>
+        <p>También es cierto que permite definir objetos y sus pruebas, no sólo a partir de los cambios de estado que provocan los mensajes enviados, sino asimismo mediante los comportamientos evidenciados por los mensajes salientes.</p>
+        <p>Sin embargo, <span style=" color:#1345CD; font-weight: 600">no todo son beneficios</span>. El principal problema que representa NDD es que es sensible a las refactorizaciones de los objetos colaboradores. Efectivamente, las refactorizaciones se hacen difíciles cuando los <i>frameworks </i>de <i>Mock Objects</i>            trabajan buscando métodos por nombre usando reflexión, ya que cuando renombramos métodos, las pruebas dejan de funcionar. Encima, no es que no sea necesario refactorizar con NDD: es tanto o más necesario que en UTDD, ya que es lo único
+            que puede asegurar que no habrá duplicación de código cuando lleguemos desde distintos requerimientos y mediante varias cadenas de objetos ficticios a los mismos objetos concretos. Adicionalmente, NDD usado por gente inexperta puede empeorar
+            el acoplamiento y la localización de responsabilidades. Otra consecuencia, tal vez negativa, es que resulta costoso tener que crear <i>Mock Objects</i> realistas para todas las interfaces posibles del objeto a desarrollar.
+        </p>
+        <p>Por eso, no habría que exagerar. Es cierto que el comportamiento es importante, y que éste a menudo se evidencia con el envío de mensajes a otros objetos. Sin embargo, muchas veces el envío de un mensaje se hace solamente con el objetivo de
+            cambiar el estado de un objeto u obtener un valor del mismo. <span class="" style="color: rgb(0, 46, 184);">En estos casos, el uso del tradicional UTDD debería bastar.</span></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178352"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178352/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Pruebas de interacción y TDD Pruebas e interfaz de usuario&nbsp;</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Todas las prácticas anteriores (TDD, ATDD, BDD, STDD, NDD) fueron pensadas para especificar, diseñar y probar comportamiento de dominio. No se han planteado automatizar pruebas de interfaz de usuario, de interacción. Incluso Rick Mugridge y
+            Ward Cunningham dicen repetidas veces que no conviene hacer pruebas automatizadas sobre la interfaz de usuario, porque ésta es muy cambiante y las pruebas se desactualizan con mucha frecuencia. También Dan North, Gojko Adzi, Steve Freeman
+            y Nat Pryce ponen énfasis en separar el qué del cómo, diciendo que el cómo es menos relevante y más cambiante, y por lo tanto no debe ser parte de TDD, sino un tema a discutir en el momento de la implementación.</p>
+        <p>Adicionalmente, ocurre que las pruebas de interfaz de usuario suelen ser muy lentas de ejecutarse, lo cual las hace poco convenientes en los términos de las barreras tecnológicas a los métodos ágiles que plantea Kent Beck al presentar XP.
+            Además, hay cuestiones que sólo las puede probar satisfactoriamente un usuario humano. Por ejemplo, la ubicación de los botones, los colores, la consistencia de la aplicación en su totalidad, no son fáciles de automatizar. Y cada cambio
+            en la interfaz de usuario requiere al menos un recorrido por la misma. </p>
+        <p>Pero esto está dejando de lado algo fundamental: el valor para el negocio, que se logra indudablemente mediante el comportamiento, se exhibe y se materializa, también indudablemente en una proporción muy mayoritaria de los casos, a través
+            de la interfaz de usuario. </p>
+        <p>Por añadidura, la mayoría de los/las usuarios/as reales sólo consideran que la aplicación les sirve cuando la ven a través de su interfaz de usuario. Ergo, si cada iteración debe terminar con un entregable potencial, sólo debería considerarse
+            terminada si lo que se entrega incluye la interfaz de usuario con su interacción y navegación probadas. </p>
+        <p>En definitiva, <span style=" color:#1345CD; font-weight: 600">no se puede dejar sin probar la interfaz de usuario</span>.
+        </p>
+        <p>De todas maneras, no es que no existan herramientas para realizar pruebas de interacción de manera automática. De hecho, hace ya décadas que existen y fue el primer campo de automatización de pruebas. Casi todas las herramientas permiten grabar
+            una prueba realizada a mano para después ejecutarla en forma repetitiva, sea para chequear la resolución de un problema o para hacer pruebas de regresión.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;">El conflicto de TDD con esta forma de trabajo es más bien <span class="" style="color: rgb(102, 51, 255);">filosófico</span>: la propia noción de construir algo para luego grabar
+                    su ejecución no se lleva bien con la práctica de Test-First, básica de TDD.</span><br></p>
+            </div>
+        </div>
+        
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p>Para resolver esto, se han hecho intentos de construir pruebas a partir de maquetas de interfaz de usuario y modelos.</p><p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178353"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178353/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">La falta de una visión integral&nbsp;</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Sin embargo, todavía falta, para considerar a TDD una técnica completa, que las pruebas de interacción sobre la interfaz de usuario puedan integrarse a las pruebas de comportamiento, a nivel de modelo de negocio. Esto es, si tenemos una aplicación con comportamiento orientado a objetos, habitualmente separamos la lógica de la aplicación, o modelo de dominio, de la interfaz de usuario. El modelo es lo que se suele someter a pruebas automáticas de aceptación. 
+</p>
+				<p>Pero las pruebas de interacción, automáticas o no, no tienen ninguna relación con el comportamiento en este contexto.</p>
+        <p>De alguna manera, esta es una consecuencia, que no debería sorprender, de haber separado el modelo de la interfaz con el usuario. Es decir, al desacoplar ambas incumbencias, también desacoplamos las pruebas, y eso dificulta la integración entre ambas. 
+</p>
+        <p>Sin embargo, hay algo que no se suele tener en cuenta. Y es que la interfaz de usuario también tiene comportamiento, a veces complejo, y también es susceptible de ser modelada con objetos. Por eso mismo es que ha habido intentos de usar BDD para desarrollar interfaces web. El más destacado es la utilización del patrón denominado Page Object .</p>
+        <p>De todas maneras, aun cuando no haya una integración entre ambos tipos de pruebas, hacerlas por separado es un gran avance. De hecho, probar la interfaz de usuario sabiendo de antemano que el comportamiento está funcionando correctamente y ha sido probado, es más tranquilizante, ya que seguramente nos vayamos a encontrar con menos problemas en la prueba a través de la interfaz de usuario. 
+</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo -->
+		<br>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178354"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178354/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Limitaciones de las pruebas de interacción&nbsp;</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Las pruebas de interacción automatizadas tienen mala fama, a tal punto que a este problema se le ha dado un nombre: “El problema de la prueba frágil”. Los problemas que suelen presentar las pruebas automatizadas de interacción generadas por
+            grabación, son:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Sensibilidad al comportamiento:</span> los cambios de comportamiento provocan cambios importantes en la interfaz de usuario, que hacen que las pruebas de interacción dejen de funcionar.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Sensibilidad a la interfaz:</span> aún cambios pequeños a la interfaz de usuario suelen provocar que las pruebas dejen de correr y deban ser cambiadas.&nbsp;</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Sensibilidad a los datos:</span> cuando hay cambios en los datos que se usan para correr la aplicación, los resultados que ésta arroje van a cambiar, lo que hace que haya que generar datos especiales
+                            para probar.</p>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Sensibilidad al contexto:</span> igual que con los datos, las pruebas pueden ser sensibles a cambios en dispositivos externos a la aplicación. Esta fragilidad, más el tema ya expuesto de la lentitud
+                            de las pruebas a través de la interfaz de usuario son las que más quejas han provocado. </p>
+                    </div>
+                </div>
+                <p>Como consecuencia de estos problemas, hay algunos cuidados que debemos tener al automatizar estas pruebas:</p>
+                <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+                   
+                        <!-- 1 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p>Tratar de no probar en forma conjunta, o como parte del mismo juego de pruebas, la lógica de negocio y la lógica de interacción.</p>
+                            </div>
+                        </div>
+
+
+
+                        <!-- 2 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p>Evitar hacer este tipo de pruebas en forma automática si la lógica de negocio es muy cambiante.&nbsp;</p>
+                            </div>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p>Dado que estas pruebas son más frágiles que las de comportamiento, hay que volver a generarlas cada tanto (la esperanza de vida de estas pruebas es menor que la de las de BDD o STDD, aunque puede ser similar a las de NDD).</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178355"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659000/mod_book/chapter/178355/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Limitaciones de TDD y prácticas afines</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Como cualquier otra práctica metodológica, TDD tiene sus límites. Por eso, a continuación enumeramos algunas situaciones en las que TDD no es una buena idea:</p><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div style="margin-left: 3%; margin-right: 3%;">
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Para el desarrollo de mantenimiento evolutivo de software ya construido, en el que no se haya utilizado TDD en sus versiones previas. Lo que ocurre es que, al no haber pruebas de regresión automatizadas previas, se hace difícil ver materializadas las ventajas de TDD en las refactorizaciones y los cambios de requerimientos. TDD fue pensada como una práctica destinada a construir nuevas aplicaciones desde cero, y todos sus impulsores destacan esto.&nbsp;</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Para el diseño y pruebas de interfaces de usuario, aun cuando hay herramientas y se han hecho algunos intentos, como dijimos más arriba. Por supuesto, no es imposible, pero es dudoso que sea una opción mejor que otras prácticas metodológicas.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Para operaciones contra bases de datos. Si bien es posible y técnicamente sencillo utilizar TDD en estos casos, consume mucho tiempo de ejecución y es necesario escribir mucho código de inicialización, además de trabajar mucho para crear la infraestructura de pruebas. Tal vez la existencia de mejores herramientas en el futuro podría relativizar esta afirmación.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Para infraestructura de servicios web. Aun cuando se puede argumentar que es muy sencillo escribir pruebas funcionales de servicios web, hay cuestiones, tales como el establecimiento de valores en variables de entorno, el manejo de identificación de clientes por su IP o algún otro identificador de red, la manejo de permisos, etc., que ya no son tan sencillas y son parte de lo que debería probarse del funcionamiento de los servicios web.&nbsp; </p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>En general se asocia TDD con evitar el desarrollo de un diseño completo antes de comenzar a trabajar, esto podría ser una limitante en caso de proyectos grandes o complejos, que sí necesiten un diseño previo, aunque sea a nivel macro. Abandonar el dogmatismo extremo es un buen remedio en estos casos. </p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Existen muchas más herramientas para UTDD que para otras formas de TDD, además de que están más desarrolladas y difundidas. Esto se puede ver como una limitación del modelo, cuando no lo es: mejores herramientas cambiarían esta percepción. </p>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p>El uso de UTDD escribiendo pruebas para absolutamente todo el código no es una buena práctica, aun cuando haya herramientas que miden la cobertura de las pruebas y fomenten que se llegue al 100% de cobertura. El problema con cubrir todo el código es que el costo de UTDD se haría innecesariamente elevado. Quizá deberíamos recordar mejor la máxima de Kent Beck, de probar “aquello que se supone que puede fallar”. </p>
+            </div>
+        </div>
+
+
+        <!-- 8 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p>Escribir pruebas de métodos que asignan o consultan valores de atributos (<i>getters</i> y <i>setters</i>), no es una buena idea. Tampoco lo es pretender cubrir cada una de las ramas más insignificantes de nuestra aplicación. </p>
+            </div>
+        </div>
+
+
+
+        <!-- 9 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>La cuestión de que TDD se basa en pruebas automatizadas puede llevar a un exceso de confianza que resulte perjudicial. Lo que hay que hacer es no olvidar que, aunque automáticas, las pruebas las escribimos humanos, y por lo tanto las propias pruebas pueden tener errores. Obviamente, en la medida de que revisemos las pruebas de aceptación con clientes y usuarios/as, al menos éstas serán menos propensas a errores. </p>
+            </div>
+        </div>
+
+
+        
+        </div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[648989,648991,648992,648993,648994,648995,648996,648997,649000,649001,649004,649005,649009,649010,649013,649014,649018,649024,649027,649028,649031,649035,649038,649039,649042,649054]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1747420296/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2659000, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1748092072); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random6831d8627aa7a2'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6831d8627aa7a2'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
