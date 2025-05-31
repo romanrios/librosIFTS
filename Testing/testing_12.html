@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S12. Pruebas automatizadas con Selenium | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1747420295/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S12. Pruebas automatizadas con Selenium | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1747420295_1747421455/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"oPsrYhtuOn","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1747420295","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1747420296","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21046,"courseContextId":2643972,"contextid":2659027,"contextInstanceId":649063,"langrev":1748676245,"templaterev":"1747420296"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1747420296\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1747420296\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1747420296\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1747420296\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1747420296\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21046 context-2659027 cmid-649063 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1747420295/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S12. Pruebas automatizadas con Selenium</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Metodología de Pruebas de Sistemas 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S11. Pruebas automatizadas con Selenium
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        sábado, 31 de mayo de 2025, 15:21
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21046&amp;section=15" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649061" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=649070" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649078" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción a las pruebas automatizadas" class="font-weight-bold text-decoration-none" href="#ch178410">1. Introducción a las pruebas automatizadas</a></li><li><a title="2. Selenium" class="font-weight-bold text-decoration-none" href="#ch178411">2. Selenium</a><ul><li><a title="2.1. Características de Selenium" class="text-decoration-none" href="#ch178412">2.1. Características de Selenium</a></li><li><a title="2.2. Tipos de pruebas con Selenium" class="text-decoration-none" href="#ch178413">2.2. Tipos de pruebas con Selenium</a></li><li><a title="2.3. ¿Por qué automatizar pruebas con Selenium?" class="text-decoration-none" href="#ch178414">2.3. ¿Por qué automatizar pruebas con Selenium?</a></li><li><a title="2.4. ¿Cómo elegir la herramienta correcta de Selenium para trabajar?" class="text-decoration-none" href="#ch178415">2.4. ¿Cómo elegir la herramienta correcta de Selenium para trabajar?</a></li></ul></li><li><a title="3. Selenium WebDriver" class="font-weight-bold text-decoration-none" href="#ch178416">3. Selenium WebDriver</a><ul><li><a title="3.1. Instalar los drivers de los navegadores" class="text-decoration-none" href="#ch178417">3.1. Instalar los drivers de los navegadores</a></li><li><a title="3.2. Hard codear la ubicación del Driver" class="text-decoration-none" href="#ch178418">3.2. Hard codear la ubicación del Driver</a></li><li><a title="3.3. Escribir nuestro primer script de Selenium" class="text-decoration-none" href="#ch178419">3.3. Escribir nuestro primer script de Selenium</a></li><li><a title="3.4. Juntando todos los comandos básicos" class="text-decoration-none" href="#ch178421">3.4. Juntando todos los comandos básicos</a></li></ul></li><li><a title="4. Driver Sessions" class="font-weight-bold text-decoration-none" href="#ch178420">4. Driver Sessions</a><ul><li><a title="4.1. Opciones del navegador" class="text-decoration-none" href="#ch178422">4.1. Opciones del navegador</a></li><li><a title="4.2. Otras opciones" class="text-decoration-none" href="#ch178423">4.2. Otras opciones</a></li><li><a title="4.3. Timeouts" class="text-decoration-none" href="#ch178424">4.3. Timeouts</a></li><li><a title="4.4. Proxy" class="text-decoration-none" href="#ch178425">4.4. Proxy</a></li><li><a title="4.5. Remote WebDriver" class="text-decoration-none" href="#ch178426">4.5. Remote WebDriver</a></li><li><a title="4.6. LocalFileDetector" class="text-decoration-none" href="#ch178427">4.6. LocalFileDetector</a></li></ul></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178410"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178410/_%20%2814%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción a las pruebas automatizadas</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Las pruebas automatizadas tienen amplios <span style=" color:#1345CD; font-weight: 600">beneficios</span> como parte de una estrategia de prueba más grande diseñada para aumentar la calidad de la aplicación mientras se mantiene la velocidad de
+            entrega. Lo hace facilitando el descubrimiento de errores dentro de una aplicación en puntos anteriores del ciclo de vida de desarrollo. Un aspecto de dicha estrategia son las pruebas unitarias que se escriben a medida que se desarrollan los
+            componentes, ejecutados por el/la desarrollador/a dentro del proceso de construcción. Otro implica la integración de pruebas automatizadas más complejas en el proceso de Integración Continua. Entonces, a medida que los/las desarrolladores/as escriben
+            y confirman cambios en el código de la aplicación, la funcionalidad nueva y existente se valida continuamente.</p>
+        <p>Cuando los problemas en la base del código se identifican anteriormente en el proceso de desarrollo, a menudo son menos costosos de resolver. Probablemente, son el resultado de un cambio reciente en el código, y uno de los/las desarrolladores/as del
+            proyecto puede corregir el error rápidamente. Esto significa una menor probabilidad de que los errores de detención del programa lleguen al final del proceso de desarrollo y, en consecuencia, se presente un menor riesgo para el cronograma
+            de entrega.
+        </p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Errores comunes de las pruebas automatizadas</p>
+            </div>
+        </div>
+        <br>
+        <p>Con todos los beneficios que vienen con una implementación efectiva de pruebas automatizadas, está claro que vale la pena exprimir el jugo. Es decir, el esfuerzo que sin duda será necesario para superar los desafíos asociados con el desarrollo
+            de un proceso de automatización de pruebas valdrá la pena. </p>
+        <p>Hablaremos de algunos de los <span style=" color:#1345CD; font-weight: 600">desafíos o problemas</span> más comunes al comenzar una estrategia de prueba automatizada (cliqueá sobre el título para desplegar el texto):</p><div class="h5p-placeholder" contenteditable="false"><iframe src="https://aulasvirtuales.bue.edu.ar/h5p/embed.php?url=https%3A%2F%2Faulasvirtuales.bue.edu.ar%2Fpluginfile.php%2F2659027%2Fmod_book%2Fchapter%2F178410%2FErrores%2520en%2520pruebas%2520automatizadas.h5p" class="h5p-iframe" name="h5pcontent" style="height:230px; width: 100%; border: 0;" allowfullscreen="allowfullscreen"></iframe><script src="https://aulasvirtuales.bue.edu.ar/h5p/h5plib/v124/joubel/core/js/h5p-resizer.js"></script></div><p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178411"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178411/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Selenium</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span style=" color:#1345CD; font-weight: 600">Selenium</span> es un conjunto de utilidades que facilita la labor de obtener juegos de pruebas para aplicaciones web. Para ello nos permite grabar, editar y depurar casos de prueba, que podrán ser
+            ejecutados de forma automática e iterativa posteriormente.
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Además de ser una herramienta para registrar acciones, permite editarlas manualmente o crearlas desde cero. Las acciones se basan en el uso de diferentes API's en diferentes lenguajes (PHP, Ruby, JAVA, JavaScript, etc.) Entre su principales características
+            podemos nombrar:</p>
+        <div style="background-color: rgb(250, 250, 250);">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Facilidad de registro y ejecución de los test.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Referencia a objetos DOM en base al ID, nombre o a través de XPath.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Auto-completado para todos los comandos.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Las acciones pueden ser ejecutadas paso a paso. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Herramientas de depuración y puntos de ruptura (<i>breakpoints</i>). </p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Los test pueden ser almacenados en diferentes formatos. </p>
+                    </div>
+                </div>
+                <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;"><div style="margin:16px"><p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">El potencial de esta herramienta es que puede ser utilizado para la grabación de las pruebas funcionales durante la Generación de pruebas de regresión. Con este servicio se consigue obtener una batería de pruebas automatizadas que podrán ser
+                    utilizadas cuando sea necesario repetir las pruebas.</p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Los <span class="" style="color: rgb(0, 46, 184);">componentes </span>más importantes para realizar este proceso de pruebas son los siguientes:</p>
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Selenium Core:</span> el módulo del núcleo contiene la funcionalidad básica del marco de trabajo, incluyendo el JavaScriptTestRunner (el código base sobre el cual trabaja Selenium) y la API de comandos
+                            de prueba básicos.
+
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Selenium IDE:</span> es un entorno de desarrollo integrado para pruebas. Se encuentra implementado como una extensión de Firefox y Chrome. Esta permite grabar, editar y depurar pruebas. Originalmente
+                            se le conoció como Selenium Recorder. Se pueden desarrollar <i>scripts</i> de pruebas al crear una grabación y de esa manera se puede editar manualmente con sentencias y comandos para que la reproducción de la grabación sea
+                            correcta. Los <i>scripts</i> se generan en Selanese, un lenguaje especial para Selenium que provee comandos que ejecutan acciones sobre objetos en el navegador, como hacer clic en un botón, seleccionar de una lista de opciones,
+                            verificar la presencia de un texto, así como para tomar la totalidad de la página producto de las acciones.
+
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row" style="margin-left: 32px;">
+                    <div style="color: rgb(1, 6, 20); font-size: large;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col" style="">
+                        <p style="color: rgb(1, 6, 20); font-size: large;"><span style="color: rgb(1, 6, 20); font-size: large; font-weight: 600;">Selenium WebDriver:</span>&nbsp; es el componente más utilizado de Selenium. El mismo permite a los/las usuarios/as escribir su código en distintos lenguajes
+                            de programación e interactuar con el navegador seleccionado. WebDriver se compone de un conjunto de APIs que permiten al <i>tester</i> controlar el navegador a nivel del sistema operativo, las páginas web y sus elementos HTML.
+                            Al ejecutar Selenium WebDriver se levanta una instancia del navegador y ejecuta el <i>script</i> de prueba. Dicha instancia es específica del navegador, por ejemplo, Google ha desarrollado y mantiene ChromeDriver con el objetivo
+                            de integrarse a Selenium y dar soporte a la automatización en Chromium/Chrome. Con Selenium WebDriver también es posible la integración con diferentes librerías, como Cucumber, TestNG o JUnit. Actualmente, Selenium 4 es la
+                            última versión de Selenium, que está disponible para los lenguajes de programación: Java, .Net, Python, Ruby y JavaScript. Esta última versión tiene varias mejoras y características nuevas, como la introducción de los localizadores
+                            relativos. En el caso de utilizar algún navegador de Chromium o Firefox se han incluido formas de manejar la autenticación, la intersección de la red y tareas como esperar un cambio en el DOM, o proporcionar una forma de ver
+                            los errores de JavaScript, entre otras. Selenium permite siete localizadores de objetos diferentes como forma de interactuar con la aplicación web. Esto es importante para la creación de las pruebas automatizadas, siendo posible
+                            hacer clic, deslizar e ingresar texto a través de los localizadores.</p>
+
+                    </div>
+                </div>
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p><span style="font-weight: 600">Selenium Grid:</span> es un servidor que permite usar instancias de navegador habilitando la ejecución en forma paralela de varias pruebas simultáneas en varias máquinas. Es un entorno con múltiples
+                            instancias, que contiene un <i>hub </i>y múltiples nodos. El <i>hub </i>es un servidor “master” que controla y se comunica con nodos. Y los nodos son dispositivos remotos donde básicamente se ejecutan los <i>script</i> de pruebas de Selenium.
+                            Desde el <i>hub</i>, se envían las instrucciones de ejecución y se puede verificar si todas las aplicaciones de los diferentes sistemas se están ejecutando correctamente. Un ejemplo es la herramienta LambdaTest, que dentro de Selenium
+                            Grid se utiliza para realizar pruebas en la nube.</p>
+
+                    </div>
+                </div>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178412"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178412/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Características de Selenium</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Presentamos en este apartado, las <span style=" color:#1345CD; font-weight: 600">ventajas</span> y <span style=" color:#1345CD; font-weight: 600">desventajas</span> de Selenium.</p>
+        <p>Al ser un conjunto de herramientas, Selenium ofrece muchas posibilidades para las pruebas automatizadas, lo que hace posible que encuentre algo que se adapte a su necesidad y forma de trabajo.</p>
+        <p>Como se mencionó anteriormente, Selenium se puede utilizar en todos los navegadores modernos, como Chrome, Firefox, Safari, Internet Explorer, Opera y Edge. Es compatible con diferentes sistemas operativos como Windows, Linux, Mac OS, UNIX y funciona
+            con múltiples lenguajes de programación.</p>
+        <p>El objetivo principal de las pruebas automatizadas es ahorrar tiempo y esfuerzos. Con la ayuda de Selenium Grid, se pueden ejecutar pruebas en paralelo, lo que reduce el tiempo de ejecución de las pruebas.</p>
+        <p>Además, al ser de código abierto, las herramientas se pueden adaptar según las necesidades de cada usuario/a y existe una gran cantidad de usuarios/as que lo utilizan, lo que facilita el aprendizaje y compartir mejores prácticas.</p>
+        <p>Por último, también se destacan como otras ventajas:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Es gratis, no incluye costos de licenciamiento.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Simple de instalar.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Tiene mucha capacidad de integración, lo que permite realizar distintas pruebas y reportes en paralelo.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Reutilización de código, los <i>script </i>de pruebas se pueden utilizar en diferentes escenarios y navegadores. </p>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Cuenta con mucha documentación, tanto oficial como de la comunidad Selenium. </p>
+                    </div>
+                </div>
+              <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Desventajas de Selenium</p>
+   </div>
+ </div>
+ <br>
+ <p>Más allá de todas los beneficios y ventajas, también es oportuno mencionar que carece de algunas funcionalidades.
+</p>  
+              <p>En el caso de automatización de pruebas, tanto en aplicaciones de escritorio como en aplicaciones mobile, se requiere de otros drivers o componentes adicionales. Por ejemplo, se puede utilizar Appium para aplicaciones que se ejecutan en dispositivos móviles.</p>
+                <p>Las funcionalidades vinculadas a informes y reportes de datos de las pruebas, solo son posibles mediante integraciones con otras herramientas.</p>
+                <p>A su vez, se debe considerar el mantenimiento de la infraestructura. La configuración de varios componentes y de Selenium Grid es una tarea que requiere tiempo. Implica un seguimiento continuo, así como las actualizaciones y parches de las mismas.</p>
+                <p>Otra de sus desventajas, es que se requiere conocimiento de programación para realizar las pruebas. A pesar de ser una ventaja su utilización en varios lenguajes de programación, muchas veces los <i>tester</i> no necesariamente tienen conocimientos de desarrollo, lo que limita su uso.</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178413"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178413/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Tipos de pruebas con Selenium</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">A continuación, se detallan los diferentes tipos de pruebas que se pueden automatizar con Selenium:</p>
+        <div style="background-color: rgb(250, 250, 250);">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Dentro de las pruebas funcionales, se encuentran las <span style="font-weight: 600">pruebas de UIn</span> y para automatizar las pruebas, Selenium controla de forma remota las instancias de los navegadores, obteniendo los elementos
+                            de la interfaz gráfica de usuario y así poder simular tareas o interacciones, como completar campos, seleccionar una opción de campos desplegables, hacer clic en botones, entre otros.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px;">
+                    <div style="color: rgb(1, 6, 20); font-size: large;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col" style="">
+                        <p style="color: rgb(1, 6, 20); font-size: large;">Las&nbsp;<span style="color: rgb(1, 6, 20); font-size: large; font-weight: 600;"><span style="font-weight: 600">pruebas de regresión</span></span>&nbsp;aseguran que no se introduzcan efectos secundarios en las funcionalidades
+                            de una aplicación cuando el código cambia, o cuando se introducen nuevas funcionalidades en la aplicación. Las pruebas automatizadas facilitan mucho este tipo de pruebas, ahorrando tiempos en la liberación de nuevas versiones.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Las <span style="font-weight: 600">pruebas de compatibilidad</span> garantizan que la aplicación web cumpla con los puntos de rendimiento en las diferentes combinaciones de sistemas operativos y navegadores. Las
+                            pruebas automatizadas con Selenium facilitan mucho este tipo de pruebas debido a que tiene una gran soporte con diferentes navegadores y sistemas operativos.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>El objetivo de las <span style="font-weight: 600">pruebas end-to-end</span> es verificar que todos los puntos de contacto con la aplicación web funcionen. Por ejemplo, el <i>tester </i>podría escribir una serie de casos
+                            de prueba para verificar que la búsqueda, el registro, el pago y la consulta de un producto, funcionen según lo previsto (y fallen cuando se ingresen valores no válidos en los campos correspondientes). </p>
+                    </div>
+                </div>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+                <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178414"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178414/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Por qué automatizar pruebas con Selenium?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Cuando se realizan pruebas con frecuencia y de manera repetitiva, es un buen momento para comenzar a evaluar la necesidad de realizar pruebas automatizadas. También, cuando comienza a consumir mucho tiempo realizarlas de forma manual. Es allí cuando se debería de evaluar su automatización con Selenium.
+</p>
+        <p>Como se ha mencionado anteriormente, son muchas las ventajas para utilizar Selenium a la hora de implementar pruebas automatizadas: no requiere una licencia ni costos para utilizarlo, imita acciones de usuario, fácil de implementar, cuenta con diferentes herramientas según cada escenario, soporta diferentes lenguajes de programación, es compatible con otros framework, el código puede ser reutilizable y posee el soporte de una comunidad bastante grande.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178415"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178415/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">¿Cómo elegir la herramienta correcta de Selenium para trabajar?</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <div style="margin-left: 3%; margin-right: 3%;"><p>Debido a que hay varias herramientas o componentes de Selenium, puede que la decisión sobre qué herramienta utilizar no sea tarea sencilla para nuevos/as usuarios/as. A continuación, se detalla una breve guía para poder elegir correctamente los componentes
+                de Selenium a utilizar para cada necesidad:</p>
+            <div>
+
+                <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+                    <div style="margin:16px">
+                        <p style="color: #5811BB; font-size: large; font-weight: 600">Selenium IDE</p><ul><li> Si se tiene poco conocimiento previo de programación y de pruebas automatizadas.&nbsp;</li><li>Para crear casos de pruebas simples y suites de pruebas, que luego se pueden exportar a Selenium WebDriver.&nbsp;</li><li>Ejecutar código JavaScript personalizado utilizando runScript.&nbsp;</li><li>Se puede probar una aplicación web sólo en Firefox y Chrome.
+Se puede exportar el <i>script </i>de pruebas en varios lenguajes de programación.</li></ul><p></p></div></div>
+                <!-- Fin Cuadro amarillo borde violeta -->
+                <p></p>
+                <!-- Cuadro amarillo borde violeta -->
+                <br>
+
+                <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+                    <div style="margin:16px">
+                        <p style="color: #5811BB; font-size: large; font-weight: 600">Selenium WebDriver</p><ul><li>Si se necesita utilizar un lenguaje de programación específico para sus casos de prueba automatizados.&nbsp;</li><li>Para probar aplicaciones y generar reportes personalizados con formato HTML.&nbsp;</li><li>Si se desea probar aplicaciones web con datos dinámicos.&nbsp;</li><li>Para probar aplicaciones con funcionalidades basadas en AJAX.&nbsp;</li><li>Si se desea probar aplicaciones en diferentes plataformas usando Selenium Grid o probar aplicaciones en CI/CD.</li></ul><p></p></div></div>
+                <!-- Fin Cuadro amarillo borde violeta -->
+
+                <p></p>
+                <!-- Cuadro amarillo borde violeta -->
+                <br>
+
+                <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+                    <div style="margin:16px">
+                        <p style="color: #5811BB; font-size: large; font-weight: 600">Selenium Grid</p><ul><li> Si se necesita ejecutar casos de prueba automatizados en diferentes navegadores y sistemas operativos simultáneamente.&nbsp;</li><li>Si se necesita ejecutar una suite de pruebas muy grande y en el menor tiempo posible.
+ </li></ul><p></p>
+                    </div>
+                </div>
+                <br>
+                <!-- Fin Cuadro amarillo borde violeta -->
+
+
+
+                <!-- nada puede haber abajo -->
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178416"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178416/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Selenium WebDriver</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Lo primero que debemos hacer para comenzar a trabajar con Selenium, es <span style=" color:#1345CD; font-weight: 600">instalar las librerías correspondientes</span> que nos permitirán automatizar las pruebas. Para ello tenemos varias opciones según como prefiramos realizar las instalaciones.<br></p>
+        <p>Si utilizamos el Packet Manager podemos utilizar el comando:</p>
+        <p><span class="" style="color: rgb(184, 138, 0);">Install-Package Selenium.WebDriver</span></p>
+        <p>Si utilizamos el .NET CLI podemos utilizar el siguiente comando:</p>
+        <p><span class="" style="color: rgb(184, 138, 0);">dotnet add package Selenium.WebDriver</span></p>
+        <p>Si queremos especificarlo como una dependencia por referencia en el CSProj debemos agregar la siguiente dependencia como un <span style=" color:#1345CD; font-weight: 600">PackageReference</span> en un <span style=" color:#1345CD; font-weight: 600">ItemGroup</span>:
+        </p>
+        <p><span id="docs-internal-guid-db999910-7fff-20ed-ec34-acff93a65d7e" class="" style="color: rgb(184, 138, 0);">&lt;PackageReference Include="Selenium.WebDriver" Version="4.7.0" /&gt;</span><br></p>
+        <p>
+            
+        </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178417"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178417/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Instalar los drivers de los navegadores</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">A través de <b>WebDriver</b>, Selenium da soporte a los navegadores más grandes del mercado como por ejemplo Google Chrome, Chromium, Firefox, Internet Explorer, Safari y Edge. Estos drivers no vienen por defecto con la versión de Selenium que
+            acabamos de instalar ya que cada navegador provee su propia distribución del mismo. </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Existen 3 formas estables de instalar los drivers. Existe también una forma provista por Selenium utilizando el Selenium Manager, pero no será vista en esta materia debido a que aún está en Beta y puede no funcionar correctamente. Se puede consultar
+            la documentación de Selenium si se desea aprender al respecto.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Driver Management Software</p>
+            </div>
+        </div>
+        <br>
+        <p style="color: rgb(1, 6, 20); font-size: large;">La mayoría de las computadoras actualizan los navegadores de forma automática, pero no necesariamente los drivers de cada navegador. Para asegurarnos que tenemos la versión correcta del driver para nuestro navegador tenemos varias librerías de
+            terceros que pueden ayudarnos.
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Podemos importar el WebDriver Manager Package (<a href="https://github.com/rosolko/WebDriverManager.Net" target="_blank"><span class="" style="color: rgb(0, 61, 245);"><u>https://github.com/rosolko/WebDriverManager.Net </u></span></a>) agregando
+            las siguientes dependencias en nuestro código:</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(184, 138, 0);">using WebDriverManager;&nbsp;</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(184, 138, 0);">using WebDriverManager.DriverConfigs.Impl;</span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Luego usamos el método SetUpDriver() para configurarlo como corresponde:</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(184, 138, 0);">new DriverManager().SetUpDriver(new ChromeConfig());&nbsp;</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(184, 138, 0);">var driver = new ChromeDriver();</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">La variable de entorno PATH</p>
+            </div>
+        </div>
+        <br>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Esta opción requiere que descarguemos de manera manual el Driver, que podemos descargarla de la página oficial de Selenium <a href="https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/#quick-reference" target="_blank"><span class="" style="color: rgb(0, 61, 245);"><u>haciendo clic aquí</u></span></a>.
+            Esta opción nos da la flexibilidad de cambiar de lugar el driver en nuestra computadora sin la necesidad de actualizar nuestro código. También funcionará en múltiples computadoras sin necesidad que cada una de ellas tenga el driver almacenado
+            en exactamente el mismo lugar. Si vamos a trabajar con código que luego saldrá a producción, esta es la mejor opción. </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span id="docs-internal-guid-292f3e1b-7fff-e6f5-a970-dda80102f051">Podemos agregar los drivers en un directorio que ya está listado en el PATH o podemos agregarlo a un directorio cualquiera y luego agregarlo al PATH.</span><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span><span id="docs-internal-guid-5dcf7fe7-7fff-3bce-ee16-23dcfd0c6672">Si estamos programando en Windows, podemos ver los directorios que ya se encuentran en PATH abriendo el <span class="" style="color: rgb(0, 46, 184);">Command Prompt</span>            y ejecutando el comando:</span><br></span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span><span><span id="docs-internal-guid-c475ee8e-7fff-9a5f-c550-31f46aca7244" class="" style="color: rgb(184, 138, 0);">echo %PATH%</span><br></span>
+            </span>
+        </p>
+        
+        
+        
+        <p style="color: rgb(1, 6, 20); font-size: large;">Si la ubicación del driver no está aún en el PATH, podemos agregarlo al PATH con el comando:</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(184, 138, 0);">setx PATH "%PATH%;C:\WebDriver\bin"</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Podemos probar que hayamos agregado correctamente el driver al PATH ejecutando el comando (este es un ejemplo para el Driver de Chrome/Chromium):</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(184, 138, 0);">chromedriver.exe</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Si el PATH se configuró correctamente veremos la siguiente salida en la terminal:
+</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(184, 138, 0);">Starting ChromeDriver 95.0.4638.54 (d31a821ec901f68d0d34ccdbaea45b4c86ce543e-refs/branch-heads/4638@{#871}) on port 9515
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.</span>
+</p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178418"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178418/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Hardcodear la ubicación del Driver</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Ya hemos visto en clases anterior que hardcodear ubicaciones en el código no siempre es lo mejor ya que puede traernos problemas a la hora de utilizar nuestro software en distintas máquinas, pero si sabemos que el driver estará siempre en la misma ubicación, es una opción fácil de utilizar y no necesitamos meternos en problemas con los archivos de configuración del Sistema Operativo.
+</p>
+				<p>Sólo debemos establecer una variable global con la ubicación del Driver que hemos descargado manualmente:</p>
+        <p><span class="" style="color: rgb(184, 138, 0);">var driver = new ChromeDriver(@"C:\WebDriver\bin");</span></p>
+        <p>Este ejemplo muestra el driver de Chrome/Chromium, pero puede hacerse con todos los drivers.
+</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo -->
+		<br>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178419"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178419/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Escribir nuestro primer script de Selenium</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p style="color: rgb(1, 6, 20); font-size: large;">Ahora que hemos instalado Selenium y nos aseguramos que tenemos los Drivers instalados, podemos comenzar a <b>escribir código de Selenium</b> para comenzar a automatizar nuestras pruebas.
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Básicamente, lo único que hace Selenium es enviarle comandos al navegador para que haga algo o le envía pedidos de información. La mayoría de lo que hace Selenium es una combinación de 8 comandos básicos que deberemos conocer para trabajar.</p><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div style="margin-left: 3%; margin-right: 3%;">
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Comenzar la sesión:</span> Comenzar y detener una sesión en Selenium sirve, básicamente, para abrir y cerrar el navegador que vamos a utilizar. Antes de comenzar a probar debemos abrir una sesión para habilitar el navegador en el que vamos a probar nuestro software. Aprenderemos mas sobre las sesiones más adelante, pero la forma básica de abrir una sesión es el siguiente comando:</p>
+<p><span class="" style="color: rgb(184, 138, 0);">IWebDriver driver = new ChromeDriver();</span></p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Realizar acciones del navegador:</span> Podemos realizar muchas acciones del navegador con Selenium para ejecutar el código en el que estamos trabajando. En el ejemplo a continuación se muestra una navegación a una página web:</p>
+<p><span class="" style="color: rgb(184, 138, 0);">driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/web-form.html");</span></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Solicitar información del navegador:</span> El navegador propiamente dicho tiene mucha meta información respecto a lo que está mostrando. No solo tiene la información de nuestro software sino que tiene también información de título, tamaño del <i>browser</i>, posición del <i>browser</i>, <i>cookies</i>, <i>alerts</i>, etc. Con Selenium podemos pedir toda la información relacionada al navegador que se nos ocurra. Por ejemplo:</p>
+<p><span class="" style="color: rgb(184, 138, 0);">var title = driver.Title;</span></p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Establecer una estrategia de espera:</span> Sincronizar el código con el estado actual del navegador es uno de los mayores desafíos con Selenium, y hacerlo bien es un tema avanzado.</p> <p>Esencialmente queremos asegurarnos que el elemento que necesitamos se encuentra en la página que tenemos abierta antes de intentar localizarlo, así como también que ese elemento está en un estado en el cual podemos interactuar con él.</p> <p>Una espera implícita suele ser una mala solución a este problema, ya que dependemos de que las cosas se hagan solas. Sin embargo es la más fácil de demostrar, así que es el ejemplo que damos a continuación:</p>
+<p><span class="" style="color: rgb(184, 138, 0);">driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(500);</span></p>
+<p>Más adelante en la materia estudiaremos otras estrategias de espera.</p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Encontrar un elemento:</span>  La mayoría de los comandos que se utilizan en la mayoría de las sesiones de Selenium están relacionados a los elementos. Pero no podemos interactuar con un elemento si no lo encontramos primero. Por ejemplo: </p>
+<p><span class="" style="color: rgb(184, 138, 0);">var textBox = driver.FindElement(By.Name("my-text"));</span></p>
+
+<p><span class="" style="color: rgb(184, 138, 0);">var submitButton = driver.FindElement(By.TagName("button"));</span></p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Realizar una acción sobre un elemento:</span> Para realizar pruebas con Selenium, ejecutaremos acciones sobre los elementos. La cantidad de acciones existentes no son muchas pero si se usan de manera frecuente. Más adelante en la materia aprenderemos más sobre este componente de Selenium. </p>
+<p><span class="" style="color: rgb(184, 138, 0);">textBox.SendKeys("Selenium");</span></p>
+
+ <p><span class="" style="color: rgb(184, 138, 0);">submitButton.Click();</span></p>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.37 5.11h3.972v.07L6.025 12H7.42l3.258-6.85V4.002H5.369v1.107Z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Solicitar información del elemento:</span> Los elementos de una página web pueden almacenar mucha información a la que necesitaremos acceder. Tenemos muchas formas de acceso, un ejemplo es: </p>
+<p><span class="" style="color: rgb(184, 138, 0);">var value = message.Text;</span></p>
+           
+ </div>
+        </div>
+
+
+        <!-- 8 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #062558">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-5.03 1.803c0-1.248-.943-1.84-1.646-1.992v-.065c.598-.187 1.336-.72 1.336-1.781 0-1.225-1.084-2.121-2.654-2.121-1.57 0-2.66.896-2.66 2.12 0 1.044.709 1.589 1.33 1.782v.065c-.697.152-1.647.732-1.647 2.003 0 1.39 1.19 2.344 2.953 2.344 1.77 0 2.989-.96 2.989-2.355Zm-4.347-3.71c0 .739.586 1.255 1.383 1.255s1.377-.516 1.377-1.254c0-.733-.58-1.23-1.377-1.23s-1.383.497-1.383 1.23Zm-.281 3.645c0 .838.72 1.412 1.664 1.412.943 0 1.658-.574 1.658-1.412 0-.843-.715-1.424-1.658-1.424-.944 0-1.664.58-1.664 1.424Z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Finalizar la sesión:</span> Así como abrimos una sesión para comenzar a trabajar, debemos finalizar la sesión para liberar recursos. Una vez que finalizamos la sesión se cierra el navegador abierto, por lo que no se le puede enviar ningún comando. </p>
+<p><span class="" style="color: rgb(184, 138, 0);">driver.Quit();</span></p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178421"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178421/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Juntando todos los comandos básicos</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Podemos combinar los <span class="" style="color: rgb(0, 46, 184);"><b>8 comandos básicos</b></span> que acabamos de aprender para armar un Script completo de prueba de Selenium. Este Script se vería de la siguiente manera:</p><p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178421/S11%20scrib.png" alt="" width="85%" height="85%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+				<p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo -->
+		<span id="docs-internal-guid-672269ac-7fff-3305-76d6-523663b8012b">Podemos ver que el Script combina algunas de las herramientas vistas en clases anteriores sobre <span class="" style="color: rgb(0, 61, 245);">p</span><span class="" style="color: rgb(0, 46, 184);"><span class="" style="color: rgb(0, 61, 245);">ruebas </span>unitarias</span> con los elementos básicos de Selenium para automatizar las pruebas de la interfaz de usuario web.</span><br>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178420"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178420/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Driver Sessions</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Como ya hemos mencionado anteriormente, comenzamos y finalizamos una sesión para abrir y cerrar un navegador. Una sesión se crea de forma automática cuando inicializamos un nuevo objeto de tipo Driver.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Cada lenguaje de programación tiene distintas opciones de constructor para describir el tipo de sesión que queremos. La sesión por defecto es de tipo local. Las sesiones pueden ser de tipo local (es decir que el navegador se abre en nuestra propia
+            computadora) o de tipo remota (es decir que el navegador se abre en otra computadora distinta). </p>
+            </div>
+        </div>
+        <p>Estudiaremos ahora sobre algunas opciones compartidas por todos los navegadores. Cada navegador tiene, además de las genéricas, opciones específicas. Se recomienda consultar la documentación de Selenium (<a href="https://www.selenium.dev/documentation/webdriver/browsers/" target="_blank"><span class="" style="color: rgb(0, 46, 184);"><u>haciendo clic aquí</u></span></a>) para encontrar las opciones específicas al navegador con el que se está trabajando. </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178422"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178422/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Opciones del navegador</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Veamos ahora algunas opciones compartidas por todos los navegadores.</p>
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">browserName</p>
+   </div>
+ </div>
+ <br>
+ <p>Esta opción se utiliza para <span class="" style="color: rgb(0, 46, 184);">definir el nombre del navegador que estamos utilizando para una sesión dada</span>. Si el navegador especificado no está instalado en la máquina remota (en el caso de una sesión remota), entonces fallará la creación de la sesión. </p>
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">browserVersion</p>
+   </div>
+ </div>
+ <br>
+ <p>Esta opción <span class="" style="color: rgb(0, 46, 184);">no es obligatoria</span>, se utiliza para definir la versión del navegador a utilizar en el escritorio remoto. Es importante notar, que si se especifica la versión, debemos asegurarnos que esa versión específica sea la que está instalada en la computadora remota en la que estaremos haciendo pruebas. Si esto no es así, entonces la creación de la sesión fallará.
+</p>
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">pageLoadStrategy</p>
+   </div>
+ </div>
+ <br>
+ <p>Existen <span class="" style="color: rgb(0, 46, 184);">3 estrategias para la carga de la página</span>. Esta opción se refiere al estado de carga de la pagina y son alguno de los 3 que veremos a continuación.</p>
+        <p>Las distintas estrategias de carga de la página se utilizan, más que nada, para <span class="" style="color: rgb(0, 46, 184);">gestionar la velocidad de carga de recursos</span>. Puede ocurrir que una página sea muy pesada y tarde mucho en cargar, es por eso que debemos gestionar la estrategia de carga.</p>
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">normal (<i>default</i>)</p>
+   </div>
+ </div>
+ <br>
+ <p>La página se carga de manera completa. <span class="" style="color: rgb(0, 46, 184);">Es la opción por defecto</span> y espera a que carguen todos los recursos. El WebDriver espera a que cargue toda la página para permitir interactuar sobre la página.
+</p><p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178422/S11%20scrib2.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178423"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178423/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Otras opciones</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Continuamos mostrando opciones compartidas por todos los navegadores.</p>
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">eager</p>
+            </div>
+        </div>
+        <br>
+        <p><span class="" style="color: rgb(0, 46, 184);">La carga es interactiva</span>. El acceso al DOM está listo, pero otros recursos como imágenes o videos puede que aún estén cargando cuando se habilite el uso del WebDriver. </p>
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178423/S11%20scrib3.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+        <p style="text-align: left;"><br></p>
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">none</p>
+            </div>
+        </div>
+        <br>
+        <p><span class="" style="color: rgb(0, 46, 184);">No se espera a que se cargue ningún recurso</span> de la página web para permitir el uso del WebDriver.</p>
+        <p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178423/S11%20scrib4.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p><br></p>
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">platformName</p>
+   </div>
+ </div>
+ <br>
+ <p>Se utiliza para <span class="" style="color: rgb(0, 46, 184);">identificar el sistema operativo</span> de la máquina remota. Buscar el atributo platformName retorna el nombre de dicho sistema operativo.</p>
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">acceptInsecureCerts</p>
+   </div>
+ </div>
+ <br>
+ <p>Esta opción <span class="" style="color: rgb(0, 46, 184);">revisa si se utiliza un Certificado TLS</span> expirado o inválido al navegar en la sesión abierta. 
+Si la opción está <i>setteada</i> en <span class="" style="color: rgb(0, 46, 184);">False</span>, un certificado inseguro lanzará un error en cualquier encuentro con cualquier dominio con un certificado problemático. Si está <i>setteado</i> en <span class="" style="color: rgb(0, 46, 184);">True</span>, un certificado inválido sería aceptado por el navegador sin problemas.
+</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178424"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178424/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Timeouts</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Una sesión de WebDriver viene con un <i>session timeout</i> predeterminado. <span class="" style="color: rgb(0, 46, 184);">Un </span><i><span class="" style="color: rgb(0, 46, 184);">timeout</span></i><span class="" style="color: rgb(0, 46, 184);"> es el tiempo de espera que tiene el navegador hasta dar una respuesta</span>, si la petición toma más tiempo que el definido en el <i>timeout</i> entonces el navegador hace que salte un error.</p>
+        <p>Hay <span class="" style="color: rgb(0, 46, 184);">3 tipos de</span><i><span class="" style="color: rgb(0, 46, 184);"> timeouts</span></i> posibles.</p>
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Script Timeout</p>
+   </div>
+ </div>
+ <br>
+ <p>Especifica <span class="" style="color: rgb(0, 46, 184);">cuándo interrumpir un</span><i><span class="" style="color: rgb(0, 46, 184);"> script</span></i><span class="" style="color: rgb(0, 46, 184);"> </span>que se está ejecutando en el navegador actualmente. El tiempo por defecto es de 30000 y se asigna cuando se crea una nueva sesión del WebDriver.</p>
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Page Load Timeout</p>
+   </div>
+ </div>
+ <br>
+ <p>Especifica el <span class="" style="color: rgb(0, 46, 184);">tiempo en el que una página debe cargarse</span> en el contexto de navegación actual. El tiempo por defecto de este <i>timeout</i> es de 300000 y se asigna también cuando se crea una nueva sesión del WebDriver. Si una página aún no se termina de cargar y se llega al límite del Timeout, la carga será interrumpida y se lanzará una TimeoutException. </p>
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Implicit Wait Timeout</p>
+   </div>
+ </div>
+ <br>
+ <p>Con esto especificamos <span class="" style="color: rgb(0, 46, 184);">el tiempo a esperar</span> para la estrategia de ubicación de elementos implícita (que estudiaremos la semana que viene). El tiempo por defecto es de 0 y se asigna cuando se crea una sesión.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178425"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178425/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Proxy</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Un <span style=" color:#1345CD; font-weight: 600">servidor proxy</span> actúa como intermediario para las peticiones entre un/a cliente y un servidor. Básicamente, el tráfico fluye a través del servidor proxy cuando intenta viajar entre el/la cliente
+            y el servidor.
+        </p>
+        <p>Un servidor proxy para la automatización de <i>scripts</i> con Selenium <span class="" style="color: rgb(0, 46, 184);">puede ser útil </span>para:</p>
+        <p></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Capturar el tráfico en la red.</p>
+
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><i>Mockear</i> llamadas al <i>backend </i>hechas por el sitio web.</p>
+
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Acceder al sitio web requerido bajo topologías de red complejas o políticas organizacionales estrictas.
+                </p>
+
+            </div>
+        </div>
+        <p><span style=" color:#1345CD; font-weight: 600">Selenium WebDrivers</span> provee una forma de manejar las configuraciones de proxy:</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178425/S11%20scrib5.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178426"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178426/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Remote WebDriver</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Podemos utilizar el <span style=" color:#1345CD; font-weight: 600">WebDriver de Selenium</span> de forma remota de la misma manera que lo utilizamos localmente. La principal diferencia es que el WebDriver remoto debe ser configurado para que pueda
+            correr las pruebas en una máquina separada.
+        </p>
+        <p>Un WebDriver remoto se compone de 2 partes: un/a&nbsp;<span style=" color:#1345CD; font-weight: 600">cliente</span> y un <span style=" color:#1345CD; font-weight: 600">servidor</span>. El/la cliente son nuestras pruebas de WebDriver y el servidor es simplemente
+            un <i>servlet </i>de Java que nos permitirá <i>hostear </i>cualquier navegador moderno. </p>
+        <p>Para ejecutar un WebDriver remoto <span class="" style="color: rgb(0, 46, 184);">n</span><span class="" style="color: rgb(0, 46, 184);">ecesitamos conectarnos a un RemoteWebDriver</span>. Hacemos esto apuntando a la URL del servidor a donde estaremos corriendo las pruebas. Para poder configurar la conexión, utilizamos las opciones que vimos en el apartado
+            anterior.
+        </p>
+        <p>Aquí podemos ver un ejemplo de instanciar un WebDriver remoto apuntando a un web server remoto con la URL <span class="" style="color: rgb(0, 46, 184);">www.example.com</span>, corriendo nuestras pruebas en Firefox.</p>
+        <p></p>
+      <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178426/s11%20scrib6.jpg" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+        <p>Si por ejemplo quisiéramos utilizar las opciones vistas arriba para configurar un RemoteWebDriver que utiliza Google Chrome versión 67 en una computadora con Windows XP, <span class="" style="color: rgb(0, 46, 184);">necesitaríamos codificar lo siguiente</span>: </p><p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178426/s11%20scrib%207.png" alt="" width="70%" height="70%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p></p>
+      
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178427"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178427/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">LocalFileDetector</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Existe la funcionalidad de <span style=" color:#1345CD; font-weight: 600">LocalFileDetectos</span> que nos permite transferir archivos desde la máquina cliente al servidor remoto.&nbsp;</p>
+      <!--Inicio caja borde azul-->
+<div class="container">
+   <div class="caja-azul">
+     <p style="padding: 1% 2%; word-wrap: break-word;">Por ejemplo, si una prueba necesita subir un archivo a una aplicación web, el WebDriver puede transferir ese archivo de forma automática desde la máquina local al servidor remoto durante la ejecución de la prueba.</p>
+   </div>
+</div>
+<!--Fin caja borde azul-->
+        <p>&nbsp;No es algo que esté activado por defecto, pero puede activarse de la siguiente manera:</p>
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178427/s11%20scrib%208.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p style="text-align: left;">Una vez que el código de arriba está definido para activarlo, podemos subir un archivo de la siguiente manera:<br></p>
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659027/mod_book/chapter/178427/s11%20scrib9.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[648989,648991,648992,648993,648994,648995,648996,648997,649000,649001,649004,649005,649009,649010,649013,649014,649018,649024,649027,649028,649031,649035,649038,649039,649042,649054,649061,649078]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1747420296/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2659027, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1748714666); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random683b489b5a2172'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random683b489b5a2172'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
