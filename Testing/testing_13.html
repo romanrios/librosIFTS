@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>S13. Gestión de esperas y elementos con WebDriver | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1749843309/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, S12. Gestión de esperas y elementos con WebDriver | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1749843309_1747421455/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"HeRYoLcJTM","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1749843309","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1747420296","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":21046,"courseContextId":2643972,"contextid":2659047,"contextInstanceId":649083,"langrev":1750145045,"templaterev":"1747420296"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1747420296\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1747420296\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1747420296\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1747420296\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1747420296\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-21046 context-2659047 cmid-649083 cm-type-book category-3167 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1749843309/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>S13. Gestión de esperas y elementos con WebDriver</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Metodología de Pruebas de Sistemas 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        S13. Gestión de esperas y elementos con WebDriver
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        miércoles, 18 de junio de 2025, 14:29
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=21046&amp;section=16" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649081" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=649094" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=649098" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción" class="font-weight-bold text-decoration-none" href="#ch178447">1. Introducción</a></li><li><a title="2. Selenium Web Driver Waits" class="font-weight-bold text-decoration-none" href="#ch178448">2. Selenium Web Driver Waits</a><ul><li><a title="2.1. Explicit Wait o esperas explícitas" class="text-decoration-none" href="#ch178449">2.1. Explicit Wait o esperas explícitas</a></li><li><a title="2.2. Opciones" class="text-decoration-none" href="#ch178450">2.2. Opciones</a></li><li><a title="2.3. Condiciones esperadas" class="text-decoration-none" href="#ch178451">2.3. Condiciones esperadas</a></li><li><a title="2.4. Implicit Wait o espera implícita" class="text-decoration-none" href="#ch178452">2.4. Implicit Wait o espera implícita</a></li><li><a title="2.5. FluentWait o espera fluida" class="text-decoration-none" href="#ch178453">2.5. FluentWait o espera fluida</a></li></ul></li><li><a title="3. Web Elements" class="font-weight-bold text-decoration-none" href="#ch178454">3. Web Elements</a><ul><li><a title="3.1. File Upload o subida de archivos" class="text-decoration-none" href="#ch178455">3.1. File Upload o subida de archivos</a></li><li><a title="3.2. Locators o localizadores" class="text-decoration-none" href="#ch178456">3.2. Locators o localizadores</a></li><li><a title="3.3. Cómo funciona" class="text-decoration-none" href="#ch178457">3.3. Cómo funciona</a></li></ul></li><li><a title="4. Finders o buscadores" class="font-weight-bold text-decoration-none" href="#ch178459">4. Finders o buscadores</a><ul><li><a title="4.1. Primer elemento coincidente" class="text-decoration-none" href="#ch178460">4.1. Primer elemento coincidente</a></li><li><a title="4.2. Todos los elementos coincidentes" class="text-decoration-none" href="#ch178461">4.2. Todos los elementos coincidentes</a></li><li><a title="4.3. Encontrar elementos desde elemento" class="text-decoration-none" href="#ch178462">4.3. Encontrar elementos desde elemento</a></li></ul></li><li><a title="5. Interactions o interacciones" class="font-weight-bold text-decoration-none" href="#ch178463">5. Interactions o interacciones</a><ul><li><a title="5.1. Comandos básicos" class="text-decoration-none" href="#ch178464">5.1. Comandos básicos</a></li></ul></li><li><a title="6. Information o información" class="font-weight-bold text-decoration-none" href="#ch178465">6. Information o información</a><ul><li><a title="6.1. IsSelected" class="text-decoration-none" href="#ch178466">6.1. IsSelected</a></li><li><a title="6.2. TagName" class="text-decoration-none" href="#ch178467">6.2. TagName</a></li><li><a title="6.3. Size and Position" class="text-decoration-none" href="#ch178468">6.3. Size and Position</a></li><li><a title="6.4. Get CSS Value" class="text-decoration-none" href="#ch178469">6.4. Get CSS Value</a></li><li><a title="6.5. Text Content" class="text-decoration-none" href="#ch178470">6.5. Text Content</a></li><li><a title="6.6. Fetching Attributes or Properties" class="text-decoration-none" href="#ch178471">6.6. Fetching Attributes or Properties</a></li></ul></li><li><a title="7. Bibliografía" class="font-weight-bold text-decoration-none" href="#ch178458">7. Bibliografía</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178447"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178447/_%20%2814%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.8%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Introducción</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>En el mundo de la automatización web, <span style=" color:#1345CD; font-weight: 600">Selenium WebDriver es una herramienta ampliamente utilizada</span>&nbsp;para interactuar con navegadores
+            y realizar tareas automatizadas. Sin embargo, su funcionamiento es a menudo calificado como <span style=" color:#1345CD; font-weight: 600">bloqueante</span> para las APIs debido a su naturaleza asincrónica en un entorno web. Este hecho radica
+            en el hecho de que Selenium WebDriver opera fuera del proceso normal del navegador, enviando instrucciones a la aplicación web sin llevar un registro en tiempo real del estado del Document Object Model (DOM). </p>
+        <p>Esto plantea desafíos significativos, especialmente en lo que respecta a las condiciones de desfase entre las instrucciones del usuario y la respuesta del navegador. Estas disparidades pueden dar lugar a errores como <i><span class="" style="color: rgb(0, 46, 184);">no such element</span></i>&nbsp;al intentar
+            localizar elementos en la página.</p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;">En este contexto, exploraremos los desafíos y las estrategias para abordarlos, con un enfoque particular en las esperas explícitas, que son una herramienta clave para superar estos obstáculos y garantizar la sincronización adecuada entre Selenium
+            WebDriver y la aplicación web.</span><br></p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178448"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178448/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Selenium Web Driver Waits</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Normalmente se dice que Selenium Web Driver es bloqueante para las APIs. Esto se debe a que es una librería que está fuera del proceso normal que envía instrucciones al navegador sobre lo que debe hacer. Y como la plataforma web es intrínsecamente
+            asíncrona por naturaleza, Selenium Web Driver no lleva un registro en tiempo real del estado del DOM. Esto trae algunos desafíos que discutiremos a continuación. </p>
+        <p>La mayoría de los problemas que surgen de utilizar Selenium y Selenium Web Driver están relacionados a las condiciones de <b>desfasaje</b> que existen entre el navegador y las instrucciones del usuario. Un ejemplo puede ser cuando el/la usuario/a le
+            instruye al navegador que navegue a una cierta página, pero se retorna un <span class="" style="color: rgb(0, 46, 184);"><i>no such element error</i></span> cuando se lo intenta localizar.</p>
+        <p>Si consideramos el siguiente documento:</p>
+
+        <p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178448/S12_CODIGO1.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p>Las siguientes instrucciones del Selenium WebDriver pueden parecer inocentes y bien desarrolladas:</p>
+        <p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178448/S12_codigo2.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p>El problema aquí es que la estrategia de carga de la página por defecto utilizada en el WebDriver espera a que la variable de estado <span class="" style="color: rgb(0, 46, 184);"><span>document.readyState</span></span> (utilizada para ver si la página
+            se ha cargado o no) cambie al valor <span><span class="" style="color: rgb(0, 46, 184);"><span>complete</span></span>&nbsp;</span>(que quiere decir completada) antes de retornar de la llamada al <span class="" style="color: rgb(0, 46, 184);"><span>método navigate</span></span>.
+            Como el elemento <span class="" style="color: rgb(184, 138, 0);">p</span> se agrega después de que el documento ha terminado de cargar, este <i>script </i>de WebDriver podría no terminar nunca. Podría no terminar nunca porque no hay garantías respecto
+            a los elementos o eventos que se ejecutan de forma asíncrona y sin una espera explícita o bloqueante en esos eventos. </p>
+        <p>Afortunadamente, las instrucciones normales disponibles en los WebElements (como por ejemplo <span class="" style="color: rgb(0, 46, 184);"><span>WebElement.click</span></span> y <span class="" style="color: rgb(0, 46, 184);"><span>WebElement.sendKeys</span></span>)
+            tienen garantizado el sincronismo. Es decir que la llamada a la función no tendrá un retorno hasta que el comando haya sido completado por el navegador. Las interacciones avanzadas con APIs (<span class="" style="color: rgb(0, 46, 184);"><span>Keyboard </span></span>y<span>
+            <span class="" style="color: rgb(0, 46, 184);"><span style="">Mouse</span></span></span>) son excepciones ya que están explícitamente desarrolladas para ser comandos asíncronos.</p>
+        <p><span><span class="" style="color: rgb(0, 46, 184);">Waiting </span></span>o esperar es hacer que se espere un cierto tiempo luego de la ejecución de la tarea automatizada antes de continuar con el paso siguiente.</p>
+        <p>Para superar el problema de las condiciones de desfasaje entre el navegador y el <i>script</i> del WebDriver mencionado anteriormente, la mayoría de los clientes de Selenium contienen un <span style=" color:#1345CD; font-weight: 600"><span>wait package</span> o paquete de espera</span>.&nbsp;</p>
+        <p>Cuando utilizamos este paquete de esperas se lo conoce típicamente como una <span style=" color:#1345CD; font-weight: 600">espera explícita</span>. </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178449"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178449/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><i>Explicit Wait</i> o esperas explícitas</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Las esperas explícitas están disponibles para los/las clientes de Selenium para lenguajes imperativos y procedurales. Le permiten a nuestro código detener la ejecución de programas o hilos, hasta que la condición pasada se resuelva. La condición es
+            llamada con cierta frecuencia hasta que transcurra el tiempo de espera. Esto implica que, <span style=" color:#1345CD; font-weight: 600">mientras la condición devuelva un valor falso, seguirá intentando y esperando</span>.</p>
+        <p>Dado que la espera explícita nos permite esperar a que una condición ocurra, son útiles para sincronizar el estado entre el navegador y su DOM, y nuestro <i>script</i> de WebDriver.
+        </p>
+        <p>Para corregir nuestro set de instrucciones anterior, podríamos emplear una espera para posponer la llamada a findElement hasta que el elemento dinámicamente agregado del <i>script </i>haya sido agregado al DOM:</p>
+        <p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178449/S12_codigo3.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p>Pasamos la condición como una referencia de función que la espera ejecutará repetidamente hasta que devuelva un valor verdadero. Un valor verdadero es todo aquello que resulte en un booleano verdadero en el lenguaje empleado, como un <span><span class="" style="color: rgb(0, 46, 184);">string</span></span>,
+            un <span><span class="" style="color: rgb(0, 46, 184);">number</span></span>, un <span><span class="" style="color: rgb(0, 46, 184);">boolean</span></span>, un <span class="" style="color: rgb(0, 46, 184);">objeto </span>(incluyendo un WebElement), o
+            una lista o secuencia poblada (no vacía). Esto implica que una lista vacía devuelve falso. Cuando la condición es verdadera y se anula la espera del bloqueo, el valor de retorno de la condición se convierte en el valor de retorno de la espera.<br></p>
+        <p>Con este conocimiento, y porque la utilidad de espera ignora <i><span><span style=""><span class="" style="color: rgb(0, 46, 184);">no</span></span> <span style=""><span class="" style="color: rgb(0, 46, 184);">such element error</span></span></span> </i>por defecto, podemos refactorizar nuestras instrucciones para que sean más concisas:</p>
+        <p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178449/S12_codigo4.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p><br></p>
+        <p>En este ejemplo pasamos a una función anónima (aunque podríamos definirla de forma explícita como hicimos anteriormente para que sea reutilizable). El primer y único parámetro pasado a nuestra condición es siempre una referencia a nuestro objeto controlador, WebDriver. En un ambiente multihilo, deberíamos tener cuidado de operar en la referencia del controlador pasada a la condición en lugar de la referencia al controlador en el ámbito externo.</p>
+        <p>Debido a que la espera ignorará <span><span class="" style="color: rgb(0, 46, 184);"><i>no such element errors</i></span></span> que se lancen cuando el elemento no sea encontrado, la condición intentará hasta que se lo encuentre. Luego tomará el valor retornado, un WebElement, y lo devolverá a nuestro <i>script</i>.</p>
+        <p>Si la condición falla –por ejemplo, un valor verdadero retornado de la condición nunca es alcanzado– la espera lanzará un error o excepción llamado <span class="" style="color: rgb(0, 46, 184);"><span>timeout error</span></span>.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178450"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178450/_%20zoom%2813%29.png" alt="" width="101" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Opciones</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>La condición de espera puede ser modificada para cumplir con nuestras necesidades. A veces no es necesario esperar todo el <span><span class="" style="color: rgb(0, 46, 184);">timeout </span></span>predeterminado, ya que la penalización por no alcanzar una condición exitosa puede ser costosa.</p>
+        <p>La espera nos permite pasar un argumento para sobrescribir el <span><span class="" style="color: rgb(0, 46, 184);">timeout</span></span>:
+</p>
+        <p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178450/S12_codigo5.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178451"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178451/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Condiciones esperadas</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Debido a que es bastante común tener que sincronizar el DOM y nuestras instrucciones, la mayoría de los/las clientes también incluyen un conjunto de <span style=" color:#1345CD; font-weight: 600">condiciones esperadas predefinidas</span>. Como su
+            nombre lo indica, son condiciones que están predefinidas para operaciones de espera frecuentes.
+        </p>
+        <p>Las condiciones disponibles en los diferentes lenguajes varían, pero aquí detallaremos algunas de ellas:</p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>La alerta está presente (<span><span class="" style="color: rgb(0, 46, 184);">alert is present</span></span>).</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>El elemento existe (<span><span class="" style="color: rgb(0, 46, 184);">element exists</span></span>).</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>El elemento es visible (<span class="" style="color: rgb(0, 46, 184);"><span>element is visible</span></span>).</p>
+                    </div>
+                </div>
+
+
+                
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>El título contiene (<span class="" style="color: rgb(0, 46, 184);"><span>title contains</span></span>). </p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>El título es (<span class="" style="color: rgb(0, 46, 184);">title is</span>).</p>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+
+                    </div>
+                    <div class="col">
+                        <p>Desactualización del objeto (<span class="" style="color: rgb(0, 46, 184);"><span>element staleness</span></span>). </p>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+
+                    </div>
+                    <div class="col">
+                        <p>Texto visible (<span class="" style="color: rgb(0, 46, 184);"><span>visible text</span></span>). </p>
+                    </div>
+                </div>
+
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178452"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178452/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><i>Implicit Wait</i> o espera implícita</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Hay un segundo tipo de espera que se distingue de la espera explícita, llamada <span style=" color:#1345CD; font-weight: 600"><span>implicit wait</span> o espera implícita</span>. Al esperar implícitamente, WebDriver sondea el DOM durante un cierto tiempo cuando intenta encontrar cualquier elemento. Esto puede
+            ser útil cuando ciertos elementos de la página web no están disponibles de forma inmediata y necesitan un tiempo para cargar.
+        </p>
+        <p>Esperar implícitamente a que los elementos aparezcan está deshabilitado por defecto y requerirá una habilitación manual por sesión. Combinar esperas explícitas e implícitas causará consecuencias no deseadas, principalmente esperas inactivas durante
+            el tiempo máximo, incluso si el elemento está disponible o la condición es verdadera.
+        </p>
+        <p><span style=" color:#1345CD; font-weight: 600">Cuidado: no mezclar esperas implícitas y explícitas</span>. Hacerlo puede causar tiempos de espera impredecibles. Por ejemplo, definir una espera implícita de 10 segundos y una explícita de 15 segundos
+            podría causar un<i> timeout </i>luego de 20 segundos.</p>
+        <p>Una espera implícita es decirle a WebDriver que sondee el DOM durante un cierto período de tiempo cuando intenta encontrar un elemento o elementos si no están disponibles de inmediato. La configuración predeterminada es 0, lo que significa que
+            está deshabilitada. Una vez establecida, la espera implícita se establece durante la vida de la sesión.</p>
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178452/s12_codigo6.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178453"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178453/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><i>FluentWait</i> o espera fluida</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>La instancia de <span style=" color:#1345CD; font-weight: 600">FluentWait</span> define la máxima cantidad de tiempo que esperar por una condición como la frecuencia con la cual chequear dicha condición.</p>
+        <p>Los/las usuarios/as pueden configurar la espera para ignorar tipos específicos de excepciones mientras esperan, como <span><span style=""><span class="" style="color: rgb(0, 46, 184);">NoSuchElementExcepction</span></span> </span>al buscar un elemento de la página.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178453/S12_Codigo7.png" alt="" width="85%" height="85%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178454"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178454/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Web Elements</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>En este capítulo aprenderemos a identificar y trabajar con los elementos del DOM.</p>
+				<p>La mayoría de las personas que utilizan Selenium como herramienta de trabajo, especialmente el WebDriver, trabajan con elementos web propios de cada lenguaje.&nbsp;</p><p>Aquí aprenderemos a trabajar con los elementos existentes en la mayoría de los lenguajes web.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo -->
+		<br>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178455"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178455/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;"><i>File Upload</i> o subida de archivos</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>El diálogo de subida de archivos puede ser manejado utilizando Selenium, cuando el elemento de entrada o <span class="" style="color: rgb(0, 46, 184);"><span>input element</span></span> es de tipo <span class="" style="color: rgb(0, 46, 184);"><span>file</span></span>. Deberemos tener el archivo disponible para subirlo. El código para subir el archivo es el siguiente:</p><p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178455/S12_codigo8.png" alt="" width="80%" height="80%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+				<p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo -->
+		<br>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178456"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178456/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Locators o localizadores</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Formas de identificar uno o más elementos específicos del DOM.</p>
+        <p>Un localizador o <i>locator</i> es una forma de identificar elementos en una página. Es el argumento pasado a los métodos de Finding Element.</p>
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Localizadores Tradicionales</p>
+            </div>
+        </div>
+        <br>
+        <p>Selenium provee soporte para las siguientes <b>ocho </b>estrategias de localización en WebDriver:</p>
+        <p></p>
+        <!--Tabla 2 columnas varias filas de colore-->
+        <table class="tabla-filaColores texto-principal" style="width: 90%; margin: 0 auto;">
+            <colgroup span="1" width="30%"></colgroup>
+            <colgroup span="1" width="60%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado">Localizador</td>
+                    <td class="tabla-filaColores-categoria texto-centrado"> Descripción</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Nombre de clase (class name)</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Localiza elementos cuyo nombre de clase contiene el valor buscado (no permite nombres de clase compuestos).</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado"><p style="text-align: left;">Selector de CSS</p><p style="text-align: left;">(css selector)</p></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Localiza elementos que coincidan con un selector CSS.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Identificador (id)</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Localiza elementos cuyo atributo ID coincida con el valor buscado.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Nombre (name)</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Localiza elementos cuyo atributo NAME coincida con el valor buscado.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado"><p style="text-align: left;">Texto del enlace</p><p style="text-align: left;">(link text)</p></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Localiza elementos de anclaje cuyo texto visible coincide con el valor de búsqueda</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Texto parcial del enlace (partial link text)</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Localiza elementos de anclaje cuyo texto visible contiene el valor de búsqueda. Si coinciden varios elementos, solo se seleccionará el primero.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Nombre de etiqueta (tag name)</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Localiza elementos cuyo nombre de etiqueta coincida con el valor buscado.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Xpath</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Localiza elementos que coincidan con una expresión XPath.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Localizadores Relativos</p>
+            </div>
+        </div>
+        <br>
+        <p>Selenium 4 introduce <span style=" color:#1345CD; font-weight: 600">Relative Locators o localizadores relativos</span> (anteriormente llamados Friendly Locators). Estos localizadores son útiles cuando no es sencillo construir un localizador para
+            el elemento deseado, pero simple de describir espacialmente dónde el elemento está en relación con otro elemento que tiene un localizador de fácil construcción.
+        </p>
+        <p>Analizaremos a continuación cómo funcionan.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178457"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178457/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Cómo funciona</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Selenium utiliza la función <span><span class="" style="color: rgb(0, 46, 184);">getBoundingClientRect<span>()</span></span></span> de JavaScript para determinar el tamaño y posición de los elementos en la página y emplea esta información para localizar elementos
+            vecinos.
+        </p>
+        <p>Los métodos de localizador relativo pueden tomar como argumento para el punto de origen ya sea una referencia de elemento previamente ubicada u otro localizador. En los siguientes ejemplos estaremos utilizando únicamente localizadores, pero podríamos
+            cambiar el localizador en el método final por un elemento objeto y funcionaría de la misma manera.
+        </p>
+        <p>Consideremos el siguiente ejemplo para entender los localizadores relativos.</p>
+        <div style="text-align: center;">
+            <p style="border: 4px solid #F3ECFD;border-radius: 16px; display: inline-block; background-color: white; padding: 4px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178457/Imagen%2012.1.jpeg" alt="sd" width="70%" height="70%" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_middle"></p>
+        </div>
+
+        <!-- Fin imagen -->
+
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Localizadores Relativos Disponibles</p></div></div>
+        <p>
+        </p>
+        <ul>
+            <li><span style=" color:#1345CD; font-weight: 600">Above o Arriba</span></li>
+        </ul>
+        <p></p>
+        <p>Si el elemento del campo de texto del correo electrónico no es fácilmente identificable por alguna razón, pero el elemento del campo de texto de la contraseña sí lo es, podemos ubicar el elemento del campo de texto usando el hecho de que es un
+            elemento de "entrada" "arriba" del elemento de la contraseña.</p>
+        <p><b id="docs-internal-guid-27a7799d-7fff-8367-5d24-02ebe9b2f8a6"><span class="" style="color: rgb(184, 138, 0);"><span class="" style="color: rgb(0, 61, 245);">var</span> <span class="" style="color: rgb(51, 51, 51);">emailLocator =</span> <span class="" style="color: rgb(51, 51, 51);">RelativeBy.<span class="" style="color: rgb(255, 51, 204);">WithLocator</span></span><span class="" style="color: rgb(51, 51, 51);">(</span><span class="" style="color: rgb(255, 51, 204);"><span class="" style="color: rgb(51, 51, 51);">By.</span>TagName</span><span class="" style="color: rgb(51, 51, 51);">(</span><span class="" style="color: rgb(152, 202, 62);">"input"</span><span class="" style="color: rgb(51, 51, 51);">))</span><span class="" style="color: rgb(255, 51, 204);">.Above</span><span class="" style="color: rgb(51, 51, 51);">(By.</span><span class="" style="color: rgb(255, 51, 204);">Id</span><span class="" style="color: rgb(51, 51, 51);">(</span><span class="" style="color: rgb(152, 202, 62);">"password"</span><span class="" style="color: rgb(51, 51, 51);">));</span></span></b><br></p>
+        <p>
+        </p>
+        <ul>
+            <li><span style=" color:#1345CD; font-weight: 600">Below o Debajo</span></li>
+        </ul>
+        <p></p>
+        <p>Si el elemento del campo de texto de la contraseña no es fácilmente identificable por alguna razón, pero el elemento del campo de texto del correo electrónico sí lo es, podemos ubicar el elemento del campo de texto usando el hecho de que es un
+            elemento de "entrada" "debajo" del elemento del correo electrónico.</p>
+        <p><b id="docs-internal-guid-54dc2e83-7fff-1caa-99cb-d7b7fc11000b"><span class="" style="color: rgb(0, 61, 245);">var</span> passwordLocator = RelativeBy.<span class="" style="color: rgb(255, 51, 204);">WithLocator</span>(By.<span class="" style="color: rgb(255, 51, 204);">TagName</span>(<span class="" style="color: rgb(152, 202, 62);">"input"</span>))<span class="" style="color: rgb(255, 51, 204);">.Below</span>(By.<span class="" style="color: rgb(255, 51, 204);">Id</span>(<span class="" style="color: rgb(152, 202, 62);">"email"</span>));</b><br></p>
+        <p></p>
+        <p>
+        </p>
+        <ul>
+            <li><span style=" color:#1345CD; font-weight: 600">Left of o A la izquierda de</span></li>
+        </ul>
+        <p></p>
+        <p>Si el botón de cancelación no es fácilmente identificable por alguna razón, pero el elemento del botón de envío sí lo es, podemos ubicar el elemento del botón de cancelación usando el hecho de que es un elemento de "botón" a la "izquierda" del
+            elemento de envío.</p>
+        <p><b id="docs-internal-guid-2efe6be6-7fff-6b88-009c-b9ba3136cfb3"><span class="" style="color: rgb(0, 61, 245);">var</span> cancelLocator = RelativeBy.<span class="" style="color: rgb(255, 51, 204);">WithLocator</span>(By.<span class="" style="color: rgb(255, 51, 204);">TagName</span>(<span class="" style="color: rgb(152, 202, 62);">"button"</span>)).<span class="" style="color: rgb(255, 51, 204);">LeftOf</span>(By.<span class="" style="color: rgb(255, 51, 204);">Id</span>(<span class="" style="color: rgb(152, 202, 62);">"submit"</span>));</b></p>
+
+        <p>
+        </p>
+        <ul>
+            <li><span style=" color:#1345CD; font-weight: 600">Right of o A la derecha de</span></li>
+        </ul>
+        <p></p>
+        <p>Si el botón de envío no es fácilmente identificable por algún motivo, pero el elemento del botón de cancelación sí lo es, podemos ubicar el elemento del botón de envío utilizando el hecho de que es un elemento de "botón" "a la derecha" del elemento
+            de cancelación.</p>
+        <p><b id="docs-internal-guid-98480686-7fff-4e0a-ad6f-537a4566a655"><span class="" style="color: rgb(0, 61, 245);">var </span>submitLocator = RelativeBy.WithLocator(By.<span class="" style="color: rgb(255, 51, 204);">tagName</span>(<span class="" style="color: rgb(152, 202, 62);">"button"</span>)).<span class="" style="color: rgb(255, 51, 204);">RightOf</span>(By.<span class="" style="color: rgb(255, 51, 204);">Id</span>(<span class="" style="color: rgb(152, 202, 62);">"cancel"</span>));</b><br></p>
+        <p></p><ul><li><span style=" color:#1345CD; font-weight: 600">Near o Cercano</span></li></ul><p></p>
+        <p>Si el posicionamiento relativo no es obvio o varía según el tamaño de la ventana, puede usar el método cercano para identificar un elemento que esté a una distancia máxima de 50 px del localizador proporcionado. Un gran caso de uso para esto es
+            trabajar con un elemento de formulario que no tiene un localizador fácil de construir, pero su elemento de etiqueta de entrada asociado sí lo tiene.</p>
+        <p><b id="docs-internal-guid-2d28d484-7fff-f15b-522d-e9277bd30d21"><span class="" style="color: rgb(0, 61, 245);">var </span>emailLocator =&nbsp;</b></p>
+        <p><b>RelativeBy.<span class="" style="color: rgb(255, 51, 204);">WithLocator</span>(By.<span class="" style="color: rgb(255, 51, 204);">tagName</span>(<span class="" style="color: rgb(152, 202, 62);">"input"</span>)).<span class="" style="color: rgb(255, 51, 204);">Near</span>(By.<span class="" style="color: rgb(255, 51, 204);">Id</span>(<span class="" style="color: rgb(152, 202, 62);">"lbl-email"</span>));</b><br></p>
+        <p></p><ul><li><span style=" color:#1345CD; font-weight: 600">Encadenando localizadores relativos</span></li></ul><p></p>
+        <p>También puede encadenar localizadores si es necesario. A veces, el elemento se identifica más fácilmente si se encuentra arriba/abajo de un elemento y a la derecha/izquierda de otro.
+</p><p><b id="docs-internal-guid-7c8834d9-7fff-1bb7-6b64-6dd9dd3a62ba">var submitLocator = RelativeBy.<span class="" style="color: rgb(255, 51, 204);">WithLocator</span>(By.<span class="" style="color: rgb(255, 51, 204);">tagName</span>(<span class="" style="color: rgb(152, 202, 62);">"button"</span>))<span class="" style="color: rgb(255, 51, 204);">.Below</span>(By.<span class="" style="color: rgb(255, 51, 204);">Id</span>(<span class="" style="color: rgb(152, 202, 62);">"email"</span>)).<span class="" style="color: rgb(255, 51, 204);">RightOf</span>(By.<span class="" style="color: rgb(255, 51, 204);">Id</span>(<span class="" style="color: rgb(152, 202, 62);">"cancel"</span>));</b><br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178459"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178459/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Finders o buscadores</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Ubicar los elementos en función de los valores de ubicación proporcionados.</p>
+				<p>Uno de los aspectos fundamentales de usar Selenium es obtener referencias de elementos para trabajar. Selenium ofrece un número de estrategias de localización incluidas para identificar unívocamente a un elemento. Hay varias formas de utilizar localizadores en escenarios avanzados.&nbsp;</p><p>Consideremos el siguiente HTML snippet:</p><p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178459/S12.1.png" alt="" width="75%" height="75%" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo -->
+		En los apartados siguientes analizaremos cómo se utilizan, a partir de este ejemplo.</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178460"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178460/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Primer elemento coincidente</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Muchos localizadores coincidirán con múltiples elementos en la página. El método <i><span class="" style="color: rgb(0, 46, 184);">singular find element</span></i> retornará una referencia al primer elemento encontrado en un contexto dado.</p>
+				<p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Evaluando todo el DOM</p>
+   </div>
+ </div>
+ <br>
+ <p>Cuando el método <i><span class="" style="color: rgb(0, 46, 184);">findElement</span></i> es llamado en la instancia del controlador, retorna una referencia al primer elemento en el DOM que coincida con el localizador proporcionado. Este valor puede ser almacenado y utilizado para futuras acciones de elementos. En nuestro ejemplo de HTML, hay dos elementos que tienen el nombre de clase “tomatoes”, por tanto el método retornará el elemento en la lista “vegetales”.</p>
+        <pre><span class="" style="color: rgb(0, 61, 245); font-size: large;">var </span><span class="" style="font-size: large;">vegetable = driver.</span><span class="" style="color: rgb(255, 51, 204); font-size: large;">FindElement</span><span class="" style="font-size: large;">(By.</span><span class="" style="color: rgb(255, 51, 204); font-size: large;">ClassName</span><span class="" style="font-size: large;">(</span><span class="" style="color: rgb(152, 202, 62); font-size: large;">"tomatoes"</span><span class="" style="font-size: large;">));</span></pre>
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Evaluando un subconjunto del DOM</p>
+   </div>
+ </div>
+ <br>
+ <p>En lugar de encontrar un localizador único en todo el DOM, suele ser útil limitar la búsqueda al ámbito de otro elemento localizado. En el ejemplo anterior, hay dos elementos con un nombre de clase de "tomates" y es un poco más difícil obtener la referencia para el segundo.</p>
+        <p>Una solución es ubicar un elemento con un atributo único que sea un ancestro del elemento deseado y no un ancestro del elemento no deseado, para luego llamar a <span class="" style="color: rgb(0, 46, 184);"><i>findElement</i></span> en ese objeto:</p>
+        <pre><span class="" style="font-size: large;"><span class="" style="color: rgb(255, 51, 204);">IWebElement fruits</span> = driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">Id</span>(<span class="" style="color: rgb(152, 202, 62);">"fruits"</span>));</span><br><span class="" style="font-size: large;"><span class="" style="color: rgb(255, 51, 204);">IWebElement fruit</span> = fruits.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">ClassName</span>(<span class="" style="color: rgb(152, 202, 62);">"tomatoes"</span>));</span></pre>
+        
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Localizador optimizado</p>
+   </div>
+ </div>
+ <br>
+ <p>Es posible que una búsqueda anidada no sea la estrategia de ubicación más efectiva, ya que requiere que se emitan dos comandos separados para el navegador.</p>
+        <p>Para mejorar ligeramente el rendimiento, podemos usar CSS o XPath para encontrar este elemento en un solo comando. El siguiente ejemplo emplea un selector CSS.</p>
+        <pre><span class="" style="font-size: large;"><span class="" style="color: rgb(0, 61, 245);">var </span><span class="" style="color: rgb(255, 51, 204);">fruit </span>= driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">CssSelector</span>(<span class="" style="color: rgb(152, 202, 62);">"#fruits .tomatoes"</span>));</span></pre>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo -->
+		<br>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178461"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178461/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Todos los elementos coincidentes</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Hay varios casos de uso para necesitar obtener referencias a todos los elementos que coincidan con un localizador, en lugar de solo el primero. Los métodos de búsqueda de elementos plurales devuelven una colección de referencias de elementos. Si no hay coincidencias, se devuelve una lista vacía. En este caso, las referencias a todos los elementos de la lista de frutas y verduras se devolverán en una colección.</p>
+				<pre><span class="" style="font-size: large;"><span class="" style="color: rgb(255, 51, 204);">IReadOnlyList</span><span id="docs-internal-guid-04bac735-7fff-f687-937e-c29fcdde5697">&lt;<span class="" style="color: rgb(255, 51, 204);">IWebElement</span>&gt;</span></span><iwebelement><span class="" style="font-size: large;">plants = driver.<span class="" style="color: rgb(255, 51, 204);">FindElements</span>(By.<span class="" style="color: rgb(255, 51, 204);">TagName</span>(<span class="" style="color: rgb(152, 202, 62);">"li"</span>));</span></iwebelement></pre>
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Obtener elemento</p>
+   </div>
+ </div>
+ <br>
+ <p>A menudo, obtenemos una colección de elementos pero queremos trabajar con un elemento específico, lo que significa que necesitamos iterar sobre la colección e identificar el que deseamos:</p><p><span id="docs-internal-guid-cdd6377c-7fff-5813-4b64-64fc22851361"><pre style=""><span class="" style="color: rgb(0, 61, 245);">using</span> OpenQA.Selenium;<br><span class="" style="color: rgb(0, 61, 245);">using</span> OpenQA.Selenium.Firefox;<br><span class="" style="color: rgb(0, 61, 245);">using</span> System.Collections.Generic;<br><span class="" style="color: rgb(0, 61, 245);">namespace</span> <span class="" style="color: rgb(255, 51, 204);">FindElementsExample</span> {<br>&nbsp;<span class="" style="color: rgb(0, 61, 245);">class</span> <span class="" style="color: rgb(255, 51, 204);">FindElementsExample</span> {<br>&nbsp;&nbsp;<span class="" style="color: rgb(0, 61, 245);">public static void</span> <span class="" style="color: rgb(255, 51, 204);">Main</span>(<span class="" style="color: rgb(0, 61, 245);">string</span>[] args) {<br>&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(255, 51, 204);">IWebDriver</span> driver = <span class="" style="color: rgb(0, 61, 245);">new</span><span class="" style="color: rgb(0, 61, 245);"> </span><span class="" style="color: rgb(255, 51, 204);">FirefoxDriver</span>();<br>&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(0, 61, 245);">try </span>{<br>&nbsp;&nbsp;&nbsp;&nbsp;// <span class="" style="color: rgb(51, 51, 51);">Navigate</span><span class="" style="color: rgb(51, 51, 51);"> </span>to Url<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(255, 51, 204);">driver.Navigate</span>().<span class="" style="color: rgb(255, 51, 204);">GoToUrl</span>(<span class="" style="color: rgb(152, 202, 62);">"https://example.com"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;// Get all the elements available with tag name 'p'<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(255, 51, 204);">IList</span> &lt; <span class="" style="color: rgb(255, 51, 204);">IWebElement</span> &gt; elements =driver.<span class="" style="color: rgb(255, 51, 204);">FindElements</span>(By.<span class="" style="color: rgb(255, 51, 204);">TagName</span>(<span class="" style="color: rgb(152, 202, 62);">"p"</span>));<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(0, 61, 245);">foreach</span>(<span class="" style="color: rgb(255, 51, 204);">IWebElement</span> e <span class="" style="color: rgb(0, 61, 245);">in</span> elements) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Console.<span class="" style="color: rgb(255, 51, 204);">WriteLine</span>(e.Text);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;} <span class="" style="color: rgb(0, 61, 245);">finally </span>{<br>&nbsp;&nbsp;&nbsp;&nbsp;driver.<span class="" style="color: rgb(255, 51, 204);">Quit</span>();<br>&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;}<br>}</pre></span><br></p>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178462"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178462/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Encontrar elementos desde elemento</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Se utiliza para encontrar la lista de <span class="" style="color: rgb(0, 46, 184);"><i>WebElements</i></span> hijos coincidentes dentro del contexto del elemento padre. Para lograr esto, el WebElement padre se encadena con findElements para acceder
+            a elementos hijos.</p>
+        <p><span id="docs-internal-guid-6db4ffbc-7fff-ad5c-8e37-e72d50e67352"></span></p><pre style=""><span class="" style="color: rgb(0, 61, 245);">using</span> OpenQA.Selenium;<br><span class="" style="color: rgb(0, 61, 245);">using</span> OpenQA.Selenium.Chrome;<br>
+            <span class="" style="color: rgb(0, 61, 245);">using</span> System.Collections.Generic;<br><span class="" style="color: rgb(0, 61, 245);">namespace</span> FindElementsFromElement {<br>&nbsp;<span class="" style="color: rgb(0, 61, 245);">class </span><span class="" style="color: rgb(255, 51, 204);">FindElementsFromElement</span>                {<br>&nbsp;&nbsp;<span class="" style="color: rgb(0, 61, 245);">public static void </span><span class="" style="color: rgb(255, 51, 204);">Main</span>(string[] args) {<br>&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(255, 51, 204);">IWebDriver</span>                driver = <span class="" style="color: rgb(0, 61, 245);">new </span><span class="" style="color: rgb(255, 51, 204);">ChromeDriver</span>();<br>&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(0, 61, 245);">try </span>{<br>&nbsp;&nbsp;&nbsp;&nbsp;driver.
+                <span class="" style="color: rgb(255, 51, 204);">Navigate</span>().<span class="" style="color: rgb(255, 51, 204);">GoToUrl</span>(<span class="" style="color: rgb(152, 202, 62);">"https://example.com"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;// Get element with tag name 'div'<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="" style="color: rgb(255, 51, 204);">IWebElement</span> element = driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">TagName</span>(<span class="" style="color: rgb(152, 202, 62);">"div"</span>));<br>&nbsp;&nbsp;&nbsp;&nbsp;//
+                        Get all the elements available with tag name 'p'<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(255, 51, 204);">IList</span> &lt; <span class="" style="color: rgb(255, 51, 204);">IWebElement</span> &gt; elements =
+                        element.<span class="" style="color: rgb(255, 51, 204);">FindElements</span>(By.<span class="" style="color: rgb(255, 51, 204);">TagName</span>(<span class="" style="color: rgb(152, 202, 62);">"p"</span>));<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="" style="color: rgb(0, 61, 245);">foreach</span>(<span class="" style="color: rgb(255, 51, 204);">IWebElement</span> e <span class="" style="color: rgb(0, 61, 245);">in</span> elements) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Console.<span class="" style="color: rgb(255, 51, 204);">WriteLine</span>(e.Text);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}
+                            <span class="" style="color: rgb(0, 61, 245);">finally </span>{<br>&nbsp;&nbsp;&nbsp;&nbsp;driver.<span class="" style="color: rgb(255, 51, 204);">Quit</span>();<br>&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;}<br>}</pre>
+                            <br><p></p>
+        <p></p>
+      <div>
+   <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Obtener elemento activo</p>
+   </div>
+ </div>
+ <br>
+ <p>Se utiliza para rastrear o encontrar elementos del DOM que tienen el foco en el contenido de navegación actual.</p><p><span id="docs-internal-guid-450b34b8-7fff-fd2b-4df0-a627ba521fbb"><pre style=""><span class="" style="color: rgb(0, 61, 245);">using</span> OpenQA.Selenium;<br><span class="" style="color: rgb(0, 61, 245);">using</span> OpenQA.Selenium.Chrome;<br><span class="" style="color: rgb(0, 61, 245);">namespace</span> ActiveElement {<br>&nbsp;&nbsp;<span class="" style="color: rgb(0, 61, 245);">class</span> ActiveElement {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(0, 61, 245);">public static void</span> <span class="" style="color: rgb(255, 51, 204);">Main</span>(<span class="" style="color: rgb(0, 61, 245);">string</span>[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(255, 51, 204);">IWebDriver</span> driver = <span class="" style="color: rgb(0, 61, 245);">new </span>ChromeDriver();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(0, 61, 245);">try </span>{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Navigate to Url<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(255, 51, 204);">driver.Navigate</span>().<span class="" style="color: rgb(255, 51, 204);">GoToUrl</span>(<span class="" style="color: rgb(152, 202, 62);">"https://www.google.com"</span>);<br>&nbsp;driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">CssSelector</span>(<span class="" style="color: rgb(152, 202, 62);">"[name='q']"</span>)).<span class="" style="color: rgb(255, 51, 204);">SendKeys</span>(<span class="" style="color: rgb(152, 202, 62);">"webElement"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Get attribute of current active element<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(0, 61, 245);">string </span>attr = </pre><pre style=""><span class="" style="color: rgb(255, 51, 204);"><span class="" style="color: rgb(51, 51, 51);">driver.</span>SwitchTo</span>().<span class="" style="color: rgb(255, 51, 204);">ActiveElement</span>().<span class="" style="color: rgb(255, 51, 204);">GetAttribute</span>(<span class="" style="color: rgb(152, 202, 62);">"title"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Console.<span class="" style="color: rgb(255, 51, 204);">WriteLine</span>(attr);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <span class="" style="color: rgb(0, 61, 245);">finally</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;driver.<span class="" style="color: rgb(255, 51, 204);">Quit</span>();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}</pre></span><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178463"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178463/_%20zoom%2813%29.png" alt="" width="90" height="90" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Interactions o interacciones</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Hay cinco comandos básicos que pueden ser ejecutados en un elemento:</p>
+        <p></p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Click (aplica a cualquier elemento).</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Send keys (enviar teclas, aplica únicamente a campos de texto y elementos de contenido editable).</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Clear (limpiar, aplica únicamente a campos de texto y elementos de contenido editable).</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Submit (enviar, aplica a elementos de formulario).</p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Select (seleccionar).</p>
+                    </div>
+                </div>
+                <p>A continuación explicaremos cada uno de ellos.</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+                <!-- nada puede haber abajo -->
+                <br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178464"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178464/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Comandos básicos</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Click</p>
+            </div>
+        </div>
+        <br>
+        <p>El comando de click del elemento se ejecuta en el centro del elemento. Si el centro del elemento está oscurecido por algún motivo, Selenium devolverá un error de interceptación de click en el elemento.</p>
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Send Keys o Enviar teclas</p>
+            </div>
+        </div>
+        <br>
+        <p>El comando de envío de teclas del elemento escribe las teclas proporcionadas en un elemento editable. Normalmente, esto significa que un elemento es un elemento de entrada de un formulario con un tipo de texto o un elemento con un atributo de
+            contenido editable. Si no es editable, se devuelve un error de estado de elemento no válido.</p>
+        <p><span id="docs-internal-guid-ec58d8d5-7fff-22df-095b-0b2e2cf7132a"></span></p>
+        <pre style=""><span class="" style="color: rgb(0, 61, 245);">using </span>(var driver = new FirefoxDriver())<br>{<br>&nbsp;&nbsp;// Navigate to Url<br>&nbsp;&nbsp;driver.<span class="" style="color: rgb(255, 51, 204);">Navigate</span>().<span class="" style="color: rgb(255, 51, 204);">GoToUrl</span>(<span class="" style="color: rgb(152, 202, 62);">"https://google.com"</span>);<br>&nbsp;&nbsp;// Enter "webdriver" text and perform <span class="" style="color: rgb(51, 51, 51);">"ENTER"</span> keyboard action<br>&nbsp;&nbsp;driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.Name(<span class="" style="color: rgb(152, 202, 62);">"q"</span>)).<span class="" style="color: rgb(255, 51, 204);">SendKeys</span>(<span class="" style="color: rgb(152, 202, 62);">"webdriver"</span> + Keys.Enter);<br>}</pre>
+        <p></p>
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Clear o Limpiar</p>
+            </div>
+        </div>
+        <br>
+        <p>El comando limpiar elemento restablece el contenido de un elemento. Esto requiere que un elemento sea editable y reiniciable. Normalmente, esto significa que un elemento es un elemento de entrada de un formulario con un tipo de texto o un elemento
+            con un atributo de contenido editable. Si no se cumplen estas condiciones, se devuelve un error de estado de elemento no válido.</p>
+        <p><span id="docs-internal-guid-2aae5bac-7fff-1874-c68f-cad72628b532"></span></p><pre style=""><span class="" style="color: rgb(0, 61, 245);">using</span> OpenQA.Selenium;<br><span class="" style="color: rgb(0, 61, 245);">using</span> OpenQA.Selenium.Chrome;<br>
+            <span class="" style="color: rgb(0, 61, 245);">using </span>System;<br><span class="" style="color: rgb(0, 61, 245);">namespace</span> SnipetProjectDelete<br>{<br>&nbsp;&nbsp;<span class="" style="color: rgb(0, 61, 245);">class </span><span class="" style="color: rgb(255, 51, 204);">Program</span><br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="" style="color: rgb(0, 61, 245);">static void Main</span>(string[] args)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(255, 51, 204);">IWebDriver</span> driver = <span class="" style="color: rgb(0, 61, 245);">new </span>ChromeDriver();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="" style="color: rgb(0, 61, 245);">try</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Navigate to Url<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;driver.<span class="" style="color: rgb(255, 51, 204);">Navigate</span>().
+                        <span class="" style="color: rgb(255, 51, 204);">GoToUrl</span>(<span class="" style="color: rgb(152, 202, 62);">@"https://www.google.com"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Store 'SearchInput' element<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="" style="color: rgb(255, 51, 204);">IWebElement</span> searchInput = driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">Name</span>(<span class="" style="color: rgb(152, 202, 62);">"q"</span>));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;searchInput.
+                                <span class="" style="color: rgb(255, 51, 204);">SendKeys</span>(<span class="" style="color: rgb(152, 202, 62);">"selenium"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Clears the entered text<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;searchInput.
+                                    <span class="" style="color: rgb(255, 51, 204);">Clear</span>();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="" style="color: rgb(0, 61, 245);">finally</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;driver.
+                                        <span class="" style="color: rgb(255, 51, 204);">Quit</span>();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}</pre>
+                                            <br><div><div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;"><p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Submit o Enviar</p>
+   </div>
+ </div>
+ <br>
+ <p>En Selenium 4, esto ya no se implementa con un <span class="" style="color: rgb(0, 61, 245);"><i>endpoint</i></span> separado y funciona mediante la ejecución de un script. Como tal, se recomienda no utilizar este método y hacer clic en el botón de envío del formulario correspondiente.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178465"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178465/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Information o información</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>La información de un elemento, o su <span class="" style="color: rgb(0, 61, 245);"><i>information </i></span>como se le conoce en el rubro tecnológico, es lo que podemos aprender de un elemento. Hay una serie de detalles que se pueden consultar
+            sobre un elemento específico.</p>
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">IsDisplayed</p>
+            </div>
+        </div>
+        <br>
+        <p>Este método se utiliza para <span class="" style="color: rgb(0, 61, 245);"><b><span class="" style="color: rgb(0, 46, 184);">comprobar si el elemento conectado se muestra</span></b></span> en una página web. <span style=" color:#1345CD; font-weight: 600">Devuelve un valor booleano</span>, verdadero si el elemento conectado se muestra en el contexto
+            de navegación actual; de lo contrario, devuelve falso.</p>
+        <p>Esta funcionalidad se menciona, pero no se define en la especificación <span style=" color:#1345CD; font-weight: 600">w3c</span> debido a la imposibilidad de cubrir todas las condiciones potenciales. Como tal, Selenium no puede esperar que los
+            controladores implementen esta funcionalidad directamente y ahora se basa en la ejecución directa de una gran función de JavaScript. Esta función realiza muchas aproximaciones sobre la naturaleza y la relación de un elemento en el árbol para
+            devolver un valor.</p>
+        <p><span id="docs-internal-guid-0778b60f-7fff-60ee-b8ee-972560c4e414"></span></p>
+        <pre style="">//Navigate to the url<br>driver.Url = <span class="" style="color: rgb(152, 202, 62);">"https://www.selenium.dev/selenium/web/inputs.html"</span>;<br>//Get boolean
+            value for is element display<br><span><span class="" style="color: rgb(255, 51, 204);">Boolean </span>is_email_visible = driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">Name</span>(
+            <span class="" style="color: rgb(152, 202, 62);">"email_input"</span>)).Displayed;</span>
+                </pre>
+
+        <p></p>
+        <p></p>
+        <div>
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">IsEnabled</p>
+            </div>
+        </div>
+        <br>
+        <p>Este método se utiliza para <span style=" color:#1345CD; font-weight: 600">verificar si el elemento conectado está habilitado o deshabilitado</span> en una página web. Devuelve un <span style=" color:#1345CD; font-weight: 600">valor booleano</span>,
+            verdadero si el elemento conectado está habilitado en el contexto de navegación actual; de lo contrario, devuelve falso.</p><p><span id="docs-internal-guid-31f42acc-7fff-18ec-92fa-e1796348c970"></span></p><pre style="">// Navigate to Url<br>driver.<span class="" style="color: rgb(255, 51, 204);">Navigate</span>().<span class="" style="color: rgb(255, 51, 204);">GoToUrl</span>(<span class="" style="color: rgb(152, 202, 62);">"https://google.com"</span>);<br>// Store the WebElement<br><span class="" style="color: rgb(255, 51, 204);">IWebElement</span> element = driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">Name</span>(<span class="" style="color: rgb(152, 202, 62);">"btnK"</span>));<br>// Prints true if element is enabled else returns false<br>System.Console.<span class="" style="color: rgb(255, 51, 204);">WriteLine</span>(element.Enabled);</pre><br><p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178466"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178466/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">IsSelected</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Este método determina si el elemento al que se hace referencia está seleccionado o no. Este método se usa ampliamente en casillas de verificación, botones radiales, elementos de entrada y elementos de opción.</p>
+				<p>Devuelve un valor booleano, verdadero si el elemento al que se hace referencia está seleccionado en el contexto de navegación actual; de lo contrario, devuelve falso.</p><p><span id="docs-internal-guid-6a8368de-7fff-5dbf-fb7d-474310320b01"><pre style=""><span class="" style="font-size: medium;">// Navigate to Url</span><br><span class="" style="font-size: large;"><span class="" style="font-size: medium;">driver.</span><span class="" style="color: rgb(255, 51, 204); font-size: medium;">Navigate</span><span class="" style="font-size: medium;">().</span><span class="" style="color: rgb(255, 51, 204); font-size: medium;">GoToUrl</span><span class="" style="font-size: medium;">(</span><span class="" style="color: rgb(152, 202, 62); font-size: medium;">"https://the-internet.herokuapp.com/checkboxes"</span><span class="" style="font-size: medium;">);</span></span><br><span class="" style="font-size: medium;">// Returns true if element ins checked else returns false</span><br><span class="" style="font-size: medium;"><span class="" style="color: rgb(0, 61, 245);">bool value</span> = </span></pre><pre style=""><span class="" style="font-size: medium;">driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">CssSelector</span>(<span class="" style="color: rgb(152, 202, 62);">"input[type='checkbox']:last-of-type"</span>)).Selected;</span></pre></span></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo --><span class="" style="font-size: large;">
+		</span><br>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178467"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178467/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">TagName</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Se utiliza para obtener el nombre de etiqueta del elemento al que se hace referencia que tiene el foco en el contexto de navegación actual.</p><p><span id="docs-internal-guid-e6ac4a00-7fff-37bc-c223-33b2f20bf6f2"><pre style="">// Navigate to Url<br>driver.<span class="" style="color: rgb(255, 51, 204);">Navigate</span>().<span class="" style="color: rgb(255, 51, 204);">GoToUrl</span>(<span class="" style="color: rgb(152, 202, 62);">"https://www.example.com"</span>);<br>// Returns TagName of the element<br><span><span class="" style="color: rgb(0, 61, 245);">string </span>attr = driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">CssSelector</span>(<span class="" style="color: rgb(152, 202, 62);">"h1"</span>)).TagName;</span></pre></span></p>
+				<p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo -->
+		<br>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178468"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div class="container">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178468/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Size and Position</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando -->
+        <p>Se utiliza para obtener las dimensiones y coordenadas del elemento al que se hace referencia. El cuerpo de datos obtenido contiene los siguientes detalles:</p>
+        <p></p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Posición del eje X desde la esquina superior izquierda del elemento.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Posición del eje Y desde la esquina superior izquierda del elemento.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Altura del elemento.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 5 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"></path>
+  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Ancho del elemento. </p>
+                    </div>
+                </div>
+                <p><span id="docs-internal-guid-92a36eb9-7fff-4dc8-cbeb-e408c3998cab"></span></p><pre style="">// Navigate to Url<br>driver.<span class="" style="color: rgb(255, 51, 204);">Navigate</span>().<span class="" style="color: rgb(255, 51, 204);">GoToUrl</span>(<span class="" style="color: rgb(152, 202, 62);">"https://example.com"</span>);<br>var res = driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">CssSelector</span>(<span class="" style="color: rgb(152, 202, 62);">"h1"</span>));<br>// Return x and y coordinates referenced element<br>System.Console.<span class="" style="color: rgb(255, 51, 204);">WriteLine</span>(res.Location);<br>// Returns height, width<br>System.Console.<span class="" style="color: rgb(255, 51, 204);">WriteLine</span>(res.Size);</pre><p></p><br>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178469"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178469/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Get CSS Value</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Recupera el valor de la propiedad de estilo calculada especificada de un elemento en el contexto de navegación actual.</p><p><span id="docs-internal-guid-894fa065-7fff-384e-99a2-3768287a49b0"><pre style="">// Navigate to Url<br>driver.<span class="" style="color: rgb(255, 51, 204);">Navigate</span>().<span class="" style="color: rgb(255, 51, 204);">GoToUrl</span>(<span class="" style="color: rgb(152, 202, 62);">"https://www.example.com"</span>);<br>// Retrieves the computed style property 'color' of linktext<br><span class="" style="color: rgb(255, 51, 204);">String </span><span class="" style="color: rgb(51, 51, 51);">cssValue </span>= driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">LinkText</span>(<span class="" style="color: rgb(152, 202, 62);">"More </span></pre><pre style=""><span class="" style="color: rgb(152, 202, 62);">information..."</span>)).GetCssValue(<span class="" style="color: rgb(152, 202, 62);">"color"</span>);</pre><br></span></p>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178470"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178470/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Text Content</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Recupera el texto renderizado del elemento especificado.</p><p><span id="docs-internal-guid-88d9d988-7fff-796b-d698-ba39dcfa25f7"><pre style=""><b>/</b>/ Navigate to url<br>driver.Url=<span class="" style="color: rgb(152, 202, 62);">"https://example.com"</span>;</pre><pre style=""><br>// Retrieves the text of the element<br><span class="" style="color: rgb(255, 51, 204);">String </span>text = driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">CssSelector</span>(<span class="" style="color: rgb(152, 202, 62);">"h1"</span>)).Text;</pre><br></span><br></p>
+				<p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo -->
+		<br>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178471"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div class="container"><div style="display: inline-flex; align-items: center;"><div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178471/_%20zoom%2813%29.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Fetching Attributes or Properties</p>
+            </div>
+        </div>
+    </div>
+		
+		<br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+		    <!-- Acá todo el contenido utilizando -->
+				<p>Obtiene el valor de tiempo de ejecución asociado con un atributo DOM. Devuelve los datos asociados al atributo o propiedad DOM del elemento.
+</p><p><span id="docs-internal-guid-a67e3923-7fff-a5bc-8eea-91e8332882c8"><pre style="">//Navigate to the url<br>driver.Url=<span class="" style="color: rgb(152, 202, 62);">"https://www.selenium.dev/selenium/web/inputs.html"</span>;<br><br></pre><pre style="">//identify the email text box<br><span class="" style="color: rgb(255, 51, 204);">IWebElemen</span>t emailTxt = driver.<span class="" style="color: rgb(255, 51, 204);">FindElement</span>(By.<span class="" style="color: rgb(255, 51, 204);">Name</span>((<span class="" style="color: rgb(152, 202, 62);">"email_input"</span>)));<br>//fetch the value property associated with the textbox<br><span class="" style="color: rgb(255, 51, 204);">String </span>valueInfo = eleSelLink.<span class="" style="color: rgb(255, 51, 204);">GetAttribute</span>(<span class="" style="color: rgb(152, 202, 62);">"value"</span>);<br></pre></span><br></p>
+				<p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
+
+			<!-- nada puede haber abajo -->
+		<br>
+		</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch178458"><div style="background-color: rgb(250, 250, 250);">
+    <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="display: inline-flex; align-items: center;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; border: 8px solid #D7E3FE; display: flex; align-items: center; justify-content: center; font-size: 20px;"><br><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2659047/mod_book/chapter/178458/ICONOS-NUEVOS.png" alt="" width="90" height="80" role="presentation" class="img-responsive atto_image_button_middle">
+            </div>
+            <div style="background-color:#D7E3FE; color: #05339E; padding: 8px 60px 8px 30px ; margin-left:-1.2%; border-radius: 0px 12px 12px 0px">
+                <p style="font-size: x-large;;margin: 0;">Bibliografía</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <!-- Acá todo el contenido utilizando-->
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Bibliografía obligatoria</p>
+            </div>
+        </div>
+        <br>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Myers, Glenford (1983). El arte de Probar el Software. Editorial El Ateneo. Capítulo 5.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Bibliografía optativa</p>
+            </div>
+        </div>
+        <br>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Myers, Glenford (2011). The art of software testing- 3rd Edition. Editorial Wiley.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <div style="color: rgb(1, 6, 20); font-size: large;">
+            <div style="background-color:#E8F8A0; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px">Material multimedia</p>
+            </div>
+        </div>
+        <br>
+        <p style=""><span class="" style="font-size: large; color: rgb(1, 6, 20);">Introducción a Selenium Testing. (n.d.). QAlified. Retrieved November 1, 2022, from</span> <a href="https://qalified.com/es/introduccion-a-selenium-testing/" target="_blank"><span class="" style="color: rgb(0, 46, 184);"><u>https://qalified.com/es/introduccion-a-selenium-testing/</u></span></a></p>
+        <p style=""><span style="color: rgb(1, 6, 20); font-size: large;">Selenium Overview. (n.d.). Selenium. <a href="https://www.selenium.dev/documentation/overview/" target="_blank"><span class="" style="color: rgb(0, 46, 184);"><u>https://www.selenium.dev/documentation/overview/</u></span></a>
+            </span><br></p>
+            <p style=""><br></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+
+            <!-- nada puede haber abajo -->
+    </div>
+</div><br>
+<p></p></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[648989,648991,648992,648993,648994,648995,648996,648997,649000,649001,649004,649005,649009,649010,649013,649014,649018,649024,649027,649028,649031,649035,649038,649039,649042,649054,649061,649078,649081,649098,649101,649104]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1747420296/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2659047, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1750262862); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1747420296/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random6852f75db73e52'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6852f75db73e52'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
