@@ -4,7 +4,7 @@
     "links": [
       {
         "texto": "01 - Introducción al desarrollo frontend",
-        "url": "./Front/front_01.html"
+        "url": "./pages/Front/front_01.html"
       }
     ]
   },
@@ -13,11 +13,11 @@
     "links": [
       {
         "texto": "01 - A - Negocios y procesos",
-        "url": "./Ingenieria/ingenieria_01A.html"
+        "url": "./pages/Ingenieria/ingenieria_01A.html"
       },
       {
         "texto": "01 - B - Procesos contables",
-        "url": "./Ingenieria/ingenieria_01B.html"
+        "url": "./pages/Ingenieria/ingenieria_01B.html"
       }
     ]
   },
@@ -26,7 +26,7 @@
     "links": [
       {
         "texto": "01 - Información general sobre la materia",
-        "url": "./Nube/nube_01.html"
+        "url": "./pages/Nube/nube_01.html"
       }
     ]
   },
@@ -35,7 +35,7 @@
     "links": [
       {
         "texto": "01 - Introducción al backend",
-        "url": "./Back/back_01.html"
+        "url": "./pages/Back/back_01.html"
       }
     ]
   }
