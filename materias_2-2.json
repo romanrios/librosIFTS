@@ -1,0 +1,42 @@
+[
+  {
+    "nombre": "DSW Front-end",
+    "links": [
+      {
+        "texto": "01 - Introducción al desarrollo frontend",
+        "url": "./Front/front_01.html"
+      }
+    ]
+  },
+  {
+    "nombre": "Ingeniería de software",
+    "links": [
+      {
+        "texto": "01 - A - Negocios y procesos",
+        "url": "./Ingenieria/ingenieria_01A.html"
+      },
+      {
+        "texto": "01 - B - Procesos contables",
+        "url": "./Ingenieria/ingenieria_01B.html"
+      }
+    ]
+  },
+  {
+    "nombre": "DIS Nube",
+    "links": [
+      {
+        "texto": "01 - Información general sobre la materia",
+        "url": "./Nube/nube_01.html"
+      }
+    ]
+  },
+  {
+    "nombre": "DSW Back-end",
+    "links": [
+      {
+        "texto": "01 - Introducción al backend",
+        "url": "./Back/back_01.html"
+      }
+    ]
+  }
+]

@@ -1,0 +1,239 @@
+[
+  {
+    "nombre": "Taller de Comunicación",
+    "links": [
+      {
+        "texto": "01 - Axiomas de la comunicación",
+        "url": "./Comunicacion/comunicacion_01.html"
+      },
+      {
+        "texto": "02 - Modelos de comunicación",
+        "url": "./Comunicacion/comunicacion_02.html"
+      },
+      {
+        "texto": "03 - Comunicaciones en organizaciones",
+        "url": "./Comunicacion/comunicacion_03.html"
+      },
+      {
+        "texto": "04 - Comunicación de requerimientos",
+        "url": "./Comunicacion/comunicacion_04.html"
+      },
+      {
+        "texto": "05 - Difusión de mensajes",
+        "url": "./Comunicacion/comunicacion_05.html"
+      },
+      {
+        "texto": "06 - Comunicación Institucional",
+        "url": "./Comunicacion/comunicacion_06.html"
+      },
+      {
+        "texto": "07 - Discurso institucional",
+        "url": "./Comunicacion/comunicacion_07.html"
+      },
+      {
+        "texto": "08 - (Portfolio)",
+        "url": null
+      },
+      {
+        "texto": "09 - Sociedad de la información",
+        "url": "./Comunicacion/comunicacion_09.html"
+      },
+      {
+        "texto": "10 y 11- Realidad digital interconectada",
+        "url": "./Comunicacion/comunicacion_10.html"
+      },
+      {
+        "texto": "12 - Comunicación digital",
+        "url": "./Comunicacion/comunicacion_12.html"
+      },
+      {
+        "texto": "13 - Redes sociales",
+        "url": "./Comunicacion/comunicacion_13.html"
+      }
+    ]
+  },
+  {
+    "nombre": "MPS (Testing)",
+    "links": [
+      {
+        "texto": "01 - Introducción a las pruebas de sistemas",
+        "url": "./Testing/testing_01.html"
+      },
+      {
+        "texto": "02 - Estrategias y métodos de caja negra",
+        "url": "./Testing/testing_02.html"
+      },
+      {
+        "texto": "03 - Métodos de la estrategia de caja blanca",
+        "url": "./Testing/testing_03.html"
+      },
+      {
+        "texto": "04 - Reporte de errores",
+        "url": "./Testing/testing_04.html"
+      },
+      {
+        "texto": "05 - Métodos para corregir errores del código",
+        "url": "./Testing/testing_05.html"
+      },
+      {
+        "texto": "06 - Frameworks para automatizar pruebas unitarias",
+        "url": "./Testing/testing_06.html"
+      },
+      {
+        "texto": "07 - Herramientas de pruebas unitarias",
+        "url": "./Testing/testing_07.html"
+      },
+      {
+        "texto": "08 - (Parcial)",
+        "url": null
+      },
+      {
+        "texto": "09 - Test-Driven Development",
+        "url": "./Testing/testing_09.html"
+      },
+      {
+        "texto": "10 y 11 - Niveles superiores de Testing",
+        "url": "./Testing/testing_10.html"
+      },
+      {
+        "texto": "12 - Pruebas automatizadas con Selenium",
+        "url": "./Testing/testing_12.html"
+      },
+      {
+        "texto": "13 - Gestión de esperas y elementos con WebDriver",
+        "url": "./Testing/testing_13.html"
+      },
+      {
+        "texto": "14 - Selenium Web Driver Interactions",
+        "url": "./Testing/testing_14.html"
+      },
+      {
+        "texto": "📂 Carpeta Drive PPT clases",
+        "url": "https://drive.google.com/drive/folders/1tnlzjHmwdlpzoBaIiRYJ26f1ks0ufemm"
+      }
+    ]
+  },
+  {
+    "nombre": "PP2",
+    "links": [
+      {
+        "texto": "01 - Técnicas de relevamiento",
+        "url": "./PP2/pp2_01.html"
+      },
+      {
+        "texto": "02 - Método de análisis de casos",
+        "url": "./PP2/pp2_02.html"
+      },
+      {
+        "texto": "03 - Objetivos del desarrollo de un sistema",
+        "url": "./PP2/pp2_03.html"
+      },
+      {
+        "texto": "04 - Diagrama de flujo de datos",
+        "url": "./PP2/pp2_04.html"
+      },
+      {
+        "texto": "05 - Historias de usuario",
+        "url": "./PP2/pp2_05a.html"
+      },
+      {
+        "texto": "05 - Armado del Sprint",
+        "url": "./PP2/pp2_05b.html"
+      },
+      {
+        "texto": "06 - Diagrama Entidad relación (DER)",
+        "url": "./PP2/pp2_06.html"
+      },
+      {
+        "texto": "07 - Elementos de Caso de uso",
+        "url": "./PP2/pp2_07a.html"
+      },
+      {
+        "texto": "07 - Herramienta para armar un Caso de Uso",
+        "url": "./PP2/pp2_07b.html"
+      },
+      {
+        "texto": "08 a 12 - Fases de la etapa 3",
+        "url": "./PP2/pp2_08.html"
+      }
+    ]
+  },
+  {
+    "nombre": "DADM (Mobile)",
+    "links": [
+      {
+        "texto": "01 - Fundamentos y ciclo de vida de apps",
+        "url": "./Mobile/mobile_01.html"
+      },
+      {
+        "texto": "02 - Prototipar y testear",
+        "url": "./Mobile/mobile_02.html"
+      },
+      {
+        "texto": "03 - Herramientas de IDE Android Studio",
+        "url": "./Mobile/mobile_03.html"
+      },
+      {
+        "texto": "04 - Gestión integral en la app del club deportivo",
+        "url": "./Mobile/mobile_04.html"
+      },
+      {
+        "texto": "05 - Despliegue y Distribución de la aplicación",
+        "url": "./Mobile/mobile_05.html"
+      }
+    ]
+  },
+  {
+    "nombre": "TIC",
+    "links": [
+      {
+        "texto": "01 - Paradigmas tecnológicos",
+        "url": "./TIC/tic_01.html"
+      },
+      {
+        "texto": "02 - Hardware de computadoras",
+        "url": "./TIC/tic_02.html"
+      },
+      {
+        "texto": "03 - Internet de las Cosas",
+        "url": "./TIC/tic_03.html"
+      },
+      {
+        "texto": "04 - Hardware de red",
+        "url": "./TIC/tic_04.html"
+      },
+      {
+        "texto": "05 - Software de red",
+        "url": "./TIC/tic_05.html"
+      },
+      {
+        "texto": "06 - Modelos de referencia",
+        "url": "./TIC/tic_06.html"
+      },
+      {
+        "texto": "07 - Protocolos de red libres de colisiones",
+        "url": "./TIC/tic_07.html"
+      },
+      {
+        "texto": "08 - (Parcial)",
+        "url": null
+      },
+      {
+        "texto": "09 - DNS: El sistema de nombres de dominio",
+        "url": "./TIC/tic_09.html"
+      },
+      {
+        "texto": "10 - Seguridad en redes",
+        "url": "./TIC/tic_10.html"
+      },
+      {
+        "texto": "11 - Firmas digitales",
+        "url": "./TIC/tic_11.html"
+      },
+      {
+        "texto": "12 - Recuperación de fallos y calidad de servicio",
+        "url": "./TIC/tic_12.html"
+      }
+    ]
+  }
+]

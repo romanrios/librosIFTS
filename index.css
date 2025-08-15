@@ -5,17 +5,29 @@ html {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -38,7 +50,6 @@ body {
   min-height: 100vh;
   background-color: #f4f4f4;
   padding-top: 2rem;
-
   padding-bottom: 5rem;
 }
 
@@ -50,22 +61,6 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  font-weight: 300;
-  font-size: 2.3rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.info_autenticarse{
-  font-size: medium;
-}
-
-.info_button{
-  font-size: medium;
-  margin-top: 1rem;
 }
 
 ul {
@@ -103,6 +98,33 @@ hr {
   margin-top: 2rem;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
+}
+
+/* ---  */
+
+.title {
+  font-weight: 300;
+  font-size: 3rem;
+  margin: 30px 0;
+  color: #333;
+}
+
+.botonera {
+  margin: 40px 0;
+}
+
+.boton-anio {
+  opacity: 0.5;
+  font-size: large;
+}
+
+.boton-anio.activo {
+  background-color: #007bff;
+  color: white;
+  border-color: #0056b3;
+  border-radius: 4px;
+  font-weight: bold;
+  opacity: 1;
 }
