@@ -5,6 +5,10 @@
       {
         "texto": "01 - Introducción al desarrollo frontend",
         "url": "./pages/Front/front_01.html"
+      },
+            {
+        "texto": "02 - Maquetación con HTML",
+        "url": "./pages/Front/front_02.html"
       }
     ]
   },
@@ -36,7 +40,12 @@
       {
         "texto": "01 - Introducción al backend",
         "url": "./pages/Back/back_01.html"
+      },
+            {
+        "texto": "02 - Introducción a JavaScript",
+        "url": "./pages/Back/back_02.html"
       }
+
     ]
   }
 ]
