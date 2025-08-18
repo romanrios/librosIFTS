@@ -22,6 +22,10 @@
       {
         "texto": "01 - B - Procesos contables",
         "url": "./pages/Ingenieria/ingenieria_01B.html"
+      },
+            {
+        "texto": "02 - Información organizacional",
+        "url": "./pages/Ingenieria/ingenieria_02.html"
       }
     ]
   },
