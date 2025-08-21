@@ -46,6 +46,14 @@
         "url": "./pages/Back/back_01.html"
       },
             {
+        "texto": "📁 Introducción a JS",
+        "url": "https://docs.google.com/presentation/d/1s2RBIf705grnb8rqATOT-Nq-tsWvJOaCgbqrOFX10t0/edit?usp=sharing"
+      },
+            {
+        "texto": "📁 NodeJS – Introducción a Express",
+        "url": "https://docs.google.com/presentation/d/1zLuK0zDlLoaO0snGvL3nldc6HHsQmGMicB3dB8i6WK0/edit?usp=sharing"
+      },
+            {
         "texto": "02 - Introducción a JavaScript",
         "url": "./pages/Back/back_02.html"
       }
