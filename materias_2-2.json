@@ -43,7 +43,11 @@
       {
         "texto": "01 - Información general sobre la materia",
         "url": "./pages/Nube/nube_01.html"
-      }
+      },
+      {
+        "texto": "📁 Acceso AWS Academy",
+        "url": "https://awsacademy.instructure.com/login/canvas"
+      },
     ]
   },
   {
