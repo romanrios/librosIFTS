@@ -1,0 +1,2354 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>D4. POO con JavaScript | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1755871564/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, D4. POO con JavaScript | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1755871564_1755730568/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"geozQmWDKT","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1755871564","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1755729856","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":22553,"courseContextId":2800956,"contextid":2801014,"contextInstanceId":712871,"langrev":1755847445,"templaterev":"1755729856"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1755729856\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1755729856\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1755729856\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1755729856\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1755729856\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?config=TeX-AMS_SVG%22&delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-22553 context-2801014 cmid-712871 cm-type-book category-3279 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1755871564/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>D4. POO con JavaScript</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Desarrollo de Sistemas Web (Back End) - 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        D4. POO con JavaScript
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        domingo, 24 de agosto de 2025, 08:53
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=22553&amp;section=7" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=712870" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=712872" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=712873" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Preguntas iniciales" class="font-weight-bold text-decoration-none" href="#ch209192">1. Preguntas iniciales</a></li><li><a title="2. Javascript orientado a objetos" class="font-weight-bold text-decoration-none" href="#ch209175">2. Javascript orientado a objetos</a></li><li><a title="3. Clases" class="font-weight-bold text-decoration-none" href="#ch209176">3. Clases</a><ul><li><a title="3.1. Instanciar una clase" class="text-decoration-none" href="#ch209177">3.1. Instanciar una clase</a></li><li><a title="3.2. La palabra clave this" class="text-decoration-none" href="#ch209178">3.2. La palabra clave this</a></li><li><a title="3.3. Clases en ficheros externos" class="text-decoration-none" href="#ch209179">3.3. Clases en ficheros externos</a></li></ul></li><li><a title="4. Propiedades de una clase" class="font-weight-bold text-decoration-none" href="#ch209180">4. Propiedades de una clase</a><ul><li><a title="4.1. Propiedades públicas" class="text-decoration-none" href="#ch209181">4.1. Propiedades públicas</a></li><li><a title="4.2. Propiedades privadas" class="text-decoration-none" href="#ch209182">4.2. Propiedades privadas</a></li><li><a title="4.3. Propiedades computadas" class="text-decoration-none" href="#ch209183">4.3. Propiedades computadas</a></li></ul></li><li><a title="5. Métodos de clase" class="font-weight-bold text-decoration-none" href="#ch209184">5. Métodos de clase</a><ul><li><a title="5.1. Constructor de clase" class="text-decoration-none" href="#ch209185">5.1. Constructor de clase</a></li><li><a title="5.2. ¿Qué es un método estático?" class="text-decoration-none" href="#ch209186">5.2. ¿Qué es un método estático?</a></li><li><a title="5.3. Visibilidad de métodos" class="text-decoration-none" href="#ch209187">5.3. Visibilidad de métodos</a></li></ul></li><li><a title="6. Herencia de Clases" class="font-weight-bold text-decoration-none" href="#ch209188">6. Herencia de Clases</a><ul><li><a title="6.1. Extender una clase" class="text-decoration-none" href="#ch209189">6.1. Extender una clase</a></li><li><a title="6.2. El método super" class="text-decoration-none" href="#ch209190">6.2. El método super</a></li><li><a title="6.3. Acceder a métodos del padre" class="text-decoration-none" href="#ch209191">6.3. Acceder a métodos del padre</a></li></ul></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209192"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Preguntas iniciales</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div style="color: rgb(1, 6, 20); font-size: large; margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+    </div>
+    <div style="color: rgb(1, 6, 20); font-size: large; margin-left: 3%; margin-right: 3%;"><span id="docs-internal-guid-d6a487bd-7fff-8dcf-ca9f-5a6a99eab6f7"><p dir="ltr" style="">Exploraremos los diferentes enfoques para resolver problemas de programación. Nos centraremos en la <span class="" style="color: rgb(0, 61, 245);">Programación Orientada a Objetos (POO)</span>, un paradigma de programación que se basa en la abstracción de los "objetos" del mundo real en modelos de datos.&nbsp;</p><p dir="ltr" style=""></p><div style="display: inline-block; border-radius: 8px; overflow: hidden; border: 1px solid #9A3282;">
+    <p style="background-color: #9A3282; color: white; padding: 4px 16px; margin: 0;"><b>Te proponemos</b></p>
+        <div style="background-color: white; padding: 16px;">
+            <p><span style="font-size: large; color: #010614;">Profundizar en el lenguaje de programación JavaScript y cómo se puede utilizar de manera orientada a objetos. Aprenderemos sobre conceptos clave de la <span class="" style="color: rgb(0, 61, 245);">POO,</span> como <span class="" style="color: rgb(0, 61, 245);">Clases, Objetos, Herencia y Polimorfismo</span>, y cómo aplicarlos en JavaScript para crear programas más robustos y reutilizables.&nbsp;</span></p>
+        </div>
+    </div>
+    <p></p>
+    <p dir="ltr" style=""><br></p></span></div>
+<div style="margin-left: 3%; margin-right: 3%;">
+    <div style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(135, 206, 235); display: inline-flex; height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Preguntas orientadoras</p></div><div class="row" style="margin-left: 32px;"><div class="col" style=""><br><ul style="color: rgb(1, 6, 20); font-size: large;"><li>¿Cómo se puede utilizar el POO en Javascript?</li><li>¿Qué son las clases en JavaScript y cómo se utilizan para crear objetos?</li><li>¿Qué son las propiedades de clase y cómo se utilizan en JavaScript?</li><li>¿Qué son los métodos de clase y cuál es su función en JavaScript?</li><li>¿Cómo se implementa la herencia de clases en JavaScript?</li></ul><p style="color: rgb(1, 6, 20); font-size: large;"></p></div></div>
+    <div style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(250, 250, 250);"><br></div>
+    <div style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(250, 250, 250);"><br></div>
+</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209175"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Javascript orientado a objetos</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><br></div>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        La<span> <span class="" style="color: rgb(0, 46, 184);"><span style="">Programación Orientada a Objetos (POO, o en inglés OOP)</span></span>
+        </span> es un estilo de programación muy utilizado, donde se crean y utilizan estructuras de datos de una forma muy similar a la vida real, lo que facilita considerablemente la forma de planificar y preparar el código de tus programas o aplicaciones.
+        <p></p>
+        Cuando comenzamos a programar, nuestros ejemplos son bastante sencillos y fáciles de controlar y modificar. Sin embargo, a medida que tenemos que programar cosas más complejas, todo se vuelve más complicado de organizar.&nbsp;
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"></span></p>
+        <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;">Uno de los problemas más fáciles de observar, es que comenzamos a tener una gran cantidad de variables y funciones, que al estar inconexas en nuestro código, es fácil que al seguir añadiendo más variables y funciones, nuestro código se descontrole
+                y se vuelva muy difícil de entender.</p>
+        </div>
+        <p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93">
+        </p>
+        Por esa razón, necesitamos una forma de organizar las variables y constantes, las funciones y tenerlo todo bien agrupado, de modo que, con el tiempo, sea sencillo de entender, modificar y ampliar. Esa agrupación, en programación, se denomina
+        <span class="" style="color: rgb(0, 46, 184);"><span> Clase</span></span>.<br>
+        <p></p>
+
+        <div class="" style="width: 90%; margin: 0 auto;">
+            <div class="row">
+                <div class="col-1" style="background-color: #ae11a0; border-radius: 4px 0px 0px 4px;">
+                    <div class="d-flex justify-content-center" style="margin-top: 20px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-card-text" viewBox="0 0 16 16">
+                            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"></path>
+                            <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-11" style="background-color: #F6E7F5; border: 1px solid #ae11a0; border-radius: 0px 4px 4px 0px;">
+                    <p style="margin-top: 16px;">Para tener en cuenta:</p>
+                    <p><b>El concepto de orientación a objetos</b> se ve muy claro cuando tenemos en nuestra mente el concepto de <b>C<span>lase</span></b>. Todos los elementos relacionados con esa <b>C</b><b>lase</b> los vamos a incluir en su interior.
+                        Por un lado, las variables y constantes que teníamos «sueltas» en nuestro programa, las agruparemos dentro de una <b>C</b><b>lase</b>, donde también incluiremos todas las funciones.</p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+
+        Las variables y constantes incluidas en una <span><span class="" style="color: rgb(0, 61, 245);">C</span><span class="" style="color: rgb(0, 46, 184);"><span style=""><span class="" style="color: rgb(0, 61, 245);">lase</span></span>
+        </span>
+        </span><span class="" style="color: rgb(0, 61, 245);"> </span>se denominan propiedades, y se utilizan para guardar información relacionada (se suele denominar estado). Por otro lado, las funciones incluidas en una <span><span class="" style="color: rgb(0, 61, 245);">C</span>
+        <span class="" style="color: rgb(0, 46, 184);"><span style=""><span class="" style="color: rgb(0, 61, 245);">lase</span></span>
+            </span>
+            </span> se denominan métodos y se utilizan para realizar una acción relacionada con la
+            <span><span class="" style="color: rgb(0, 46, 184);"><span style=""><span class="" style="color: rgb(0, 61, 245);">Clase</span></span>
+            </span><span class="" style="color: rgb(0, 61, 245);">.</span></span>
+            <p></p>
+            Pensemos, por ejemplo, en el protagonista (héroe) de un juego. Tiene una serie de variables relacionadas con él (vidas, fuerza, energía, etc.), pero también tiene una serie de funciones relacionadas con él (hablar, disparar, curar, etc.) Todas ellas,
+            las podríamos agrupar en una clase porque tienen relación con ese concepto de personaje:
+            <p></p>
+            <p style="text-align: center; color: rgb(1, 6, 20); font-size: large;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2801014/mod_book/chapter/209175/M4%20-%20Java%20orientado%20a%20Objeto%201.png" alt="Características de un personaje de juego" width="700" height="407" class="img-responsive atto_image_button_text-bottom"><br></p>
+            <p style=""><span class="" style="font-size: large; color: #010614 ;">Sin embargo, el concepto de<span class="" style="color: rgb(0, 46, 184);"><b>&nbsp;</b>Clase</span> es un concepto abstracto. En el juego, por ejemplo, podríamos tener dos héroes
+                que podemos elegir al principio. Ambos héroes tienen los mismos atributos y funciones, pero son dos personajes diferentes. Por esa razón, en la programación orientada a objetos se tiene un concepto llamado<span class="" style="color: rgb(0, 46, 184);"><b> </b>Clase</span>                y otro concepto llamado <span class="" style="color: rgb(0, 46, 184);"><span>Objeto</span></span>:</span>
+            </p>
+            <p style="text-align: center; "><span class="" style="font-size: large; color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2801014/mod_book/chapter/209175/1%20-%20Semana%204.png" alt=" " width="600" height="300" class="img-responsive atto_image_button_text-bottom"></span></p>
+            <p><span class="" style="font-size: large; color: #010614 ;">El primero de ellos, la <span class="" style="color: rgb(0, 46, 184);"><span>Clase</span></span> se refiere al concepto abstracto de personaje, mientras que el segundo de ellos,
+                el objeto se refiere a un personaje concreto dentro del juego.</span><br>
+            </p>
+            En un programa o aplicación, podemos crear tantas <span class="" style="color: rgb(0, 46, 184);"><span>Clases</span></span> como necesitemos y a partir de estas <span class="" style="color: rgb(0, 46, 184);"><span>Clases</span></span> crear
+            tantos <span class="" style="color: rgb(0, 46, 184);"><span>Objetos</span></span> como necesitemos.
+            <p></p>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209176"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Clases</p>
+</article>
+<div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+    <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">El sistema de prototipos en JavaScript se puede interpretar como un enfoque informal de un concepto orientado a objetos llamado <span><span class="" style="color: rgb(0, 46, 184);">Clases</span></span>.&nbsp;</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"></span></p>
+        <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;">Una <span class="" style="color: rgb(0, 61, 245);">C</span><span class="" style="color: rgb(0, 46, 184);">lase</span> define la forma de un tipo de objeto -qué métodos y propiedades tiene este-. Tal objeto es llamado una<span class="" style="color: rgb(0, 46, 184);"><b>&nbsp;</b>Instancia</span>                de la <span><span class="" style="color: rgb(0, 61, 245);">C</span><span style=""><span class="" style="color: rgb(0, 61, 245);">lase</span></span>
+                </span>.</p>
+        </div>
+        <p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93">
+        </p>
+        <p style=""><span style="color: #010614 ;">Los prototipos son útiles para definir propiedades en las cuales todas las instancias de una <span class="" style="color: rgb(0, 61, 245);"><span>C</span></span><span class="" style="color: rgb(0, 46, 184);"><span><span class="" style="color: rgb(0, 61, 245);">lase</span>            </span>
+            </span>compartan el mismo valor, como métodos. Las propiedades que difieren por<span><span class="" style="color: rgb(0, 46, 184);"><b>&nbsp;</b>Instancia</span></span>, como la propiedad tipo en nuestros conejos, necesitan almacenarse directamente
+            en los <span><span class="" style="color: rgb(0, 61, 245);">O</span><span style=""><span class="" style="color: rgb(0, 61, 245);">bjetos</span></span>
+            </span> mismos.</span><br></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">
+          </span></p>
+        <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;">Una<span><span class="" style="color: rgb(0, 46, 184);"><b>&nbsp;</b>Clase</span></span> sólo es una forma de organizar código de forma entendible con el objetivo de simplificar el funcionamiento de nuestro programa. Además, hay que tener
+                en cuenta que<span class="" style="color: rgb(0, 46, 184);"><b> </b><span class="" style="color: #010614 ;">las</span><b> </b>Clases</span> son «conceptos abstractos» de los que se pueden crear objetos de programación, cada uno
+                con sus características concretas</p>
+        </div>
+        <p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93"><br></p>
+        <p style=""><span style="color: #010614 ;">Esto puede ser complicado de entender con palabras, pero se ve muy claro con ejemplos:</span><br></p>
+        <p style="text-align: center; color: rgb(1, 6, 20); font-size: large;">
+            <span class="" style="font-size: large; color: rgb(239, 69, 64);">
+            <b id="docs-internal-guid-cc65a096-7fff-7c7d-c878-4faf4b2f03b9"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeOIKoLs9r9trcAk28kUPYDeN89mgTh7zWXXfhUbt7cam0ED9RRYGIcTCxG-TfpiIqCtlPX0uWeiyevXhc1c7idveLk9U4IDfFPzFSVyda1UoYXlObZrSsnGprD_ybar8N1pqd0c5G8Vjg-sG2rrFi2Lvh51aW6rQQdJu4Je06j5Fajc5qP1uw?key=tmjCGr7C2g7zI8Py-PIVRg" width="602" height="265"></b>.</span></p>
+        <p style=""></p>
+        <span style="color: #010614 ;">La<span><span class="" style="color: rgb(0, 46, 184);"><b>&nbsp;</b>Clase</span></span> es el concepto abstracto de un<span><span class="" style="color: rgb(0, 46, 184);"><b>&nbsp;</b>Objeto</span></span>,
+        mientras que el <span><span class="" style="color: rgb(0, 61, 245);">O</span><span class="" style="color: rgb(0, 46, 184);"><span class="" style="color: rgb(0, 61, 245);">bjeto</span></span>
+        </span> es el elemento final que se basa en la <span><span class="" style="color: rgb(0, 61, 245);">C</span><span style=""><span class="" style="color: rgb(0, 61, 245);">lase</span></span>
+        </span>. En la imagen anterior tenemos varios ejemplos:</span>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <ul style="color: rgb(1, 6, 20);">
+        </ul>
+        <p style="color: rgb(1, 6, 20);">
+            <!-- 1 -->
+        </p>
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600; font-size: large; color: #010614 ;" class=""></span>Ejemplo 1: Hay dos <span class="" style="color: rgb(0, 46, 184);">Objetos</span>: pato y ratón. Ambos son animales, por lo que son objetos que están
+                    basados en la C<span class="" style="color: rgb(0, 46, 184);">lase Animal</span>. Tanto pato como ratón tienen las características que estarán definidas en la <span class="" style="color: rgb(0, 61, 245);">C</span><span class="" style="color: rgb(0, 46, 184);">lase Animal</span>:
+                    color, sonido que emiten, nombre, etc.</p>
+            </div>
+        </div>
+
+
+        <!-- 2 -->
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600; font-size: large; color: #010614 ;" class=""></span>Ejemplo 2: Hay dos <span class="" style="color: rgb(0, 46, 184);">Objetos </span>Seat y Opel. Se trata de dos coches, que son vehículos, puesto que
+                    están basados en la <span class="" style="color: rgb(0, 46, 184);">Clase Vehículo</span>. Cada uno tendrá las características de su <span class="" style="color: rgb(0, 46, 184);">Clase</span>: color del vehículo, número de ruedas,
+                    marca, modelo, etc.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Ejemplo 3: Hay dos<span class="" style="color: rgb(0, 46, 184);"> Objetos</span> cuadrado y c2. Se trata de dos formas geométricas, que al igual que los ejemplos anteriores tendrán sus propias características, como por ejemplo el tamaño
+                    de sus lados. El elemento cuadrado puede tener un lado de 3 cm y el elemento c2 puede tener un lado de 6 cm.</p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20);"></p>
+        <p style="color: rgb(1, 6, 20);"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209177"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Instanciar una clase</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="font-size: large; "><span><span class="" style="color: rgb(0, 46, 184);"><span class="" style="font-size: large;">Instanciar una clase</span><span class="" style="font-size: large;">
+            </span></span><span class="" style="font-size: large;"> es crear un objeto o crear una ins<span class="" style="font-size: large;">tancia a la acción de crear un nuevo objeto basado en una clase
+            particular. Esta acción la realizamos a través de la </span></span>
+            </span><span><span class="" style="color: rgb(0, 46, 184); font-size: large;">palabra<span class="" style="font-size: large;"> clave </span></span><code><span class="" style="font-size: large;">new</span></code><span class="" style="font-size: large;">
+</span><span class="" style="font-size: large;"> </span><span class="" style="font-weight: bold; color: rgb(0, 46, 184); font-size: large;">, </span><span class="" style="font-size: large;">
+            </span></span><span class="" style="font-size: large;">
+            </span><span class="" style="font-size: large;"><span class="" style="font-size: large;">s</span>eguida del nombre de la clase, la cual puede tener parámetros, en cuyo caso se controlarán desde un constructor.</span><span class="" style="font-size: large;">
+            </span></span><span class="" style="font-size: large;">
+        </span></p>
+        <p style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: #010614 ;">En Javascript, para instanciar una clase, se utiliza una sintaxis muy similar a otros lenguajes como, por ejemplo, Java. Es tan sencillo como escribir lo siguiente:</span></p>
+        <p style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><!-- Inicio de la primera caja de codigo --><span class="" style="font-size: large;">
+</span></span>
+        </p>
+        <div style="font-size: large; color: rgb(255, 255, 255); background-color: rgb(68, 68, 68); padding: 10px; border-radius: 5px 5px 0px 0px;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="font-size: large; color: rgb(255, 255, 255); background-color: rgb(68, 68, 68); padding: 10px; border-radius: 0px;">
+        </div>
+        <div style="font-size: large; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); padding: 10px; border-radius: 0px 0px 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1"><b>                           </b><p><b> </b>// Declaración de una clase (de momento, vacía)
+class Animal {}
+// Crear (instanciar) un objeto basada en una clase
+const pato = new Animal();                   </p>    </pre>
+        </div>
+        <!-- Fin de la primera caja de codigo -->
+        <p style="font-size: large; color: rgb(1, 6, 20);"></p>
+        <p style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: #010614;">Cuando creamos una variable co<span class="" style="font-size: large;">n</span><span class="" style="color: rgb(255, 51, 102); font-size: large;"> </span><code><span class="" style="font-size: large;"><code><span class="" style="font-size: large;">new</span></code><span class="" style="font-size: large; color: rgb(255, 51, 102);"> </span></span><span class="" style="font-size: large;">
+            </span></code><code><span class="" style="font-size: large;">Animal()</span></code><span class="" style="font-size: large;">, </span>estamos creando un objeto pato que es de tipo Animal, y que contendrá todas las características definidas dentro de la clase Animal.</span>
+        </p>
+        <p style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: #010614;">Una norma de estilo en el mundo de la programación es que las clases deben siempre empezar en mayúsculas (nomenclatura llamada <span class="" style="color: rgb(0, 46, 184);">PascalCase</span>).
+            Esto nos ayudará a diferenciarlas sólo con leerlas.</span>
+        </p>
+        <div style="font-size: large; color: rgb(1, 6, 20); background-color: rgb(255, 254, 235); border-top: 2px solid rgb(70, 14, 149); width: 96%; margin: 0px auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Una clase&nbsp;</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> tiene diferentes características que la forman, que generalmente se denominan miembros, y que normalmente son de dos tipos: propiedades y métodos.</p>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="font-size: large; color: rgb(1, 6, 20); margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600; font-size: large; color: #010614;" class=""><b>Propiedad</b>:&nbsp;</span><span class="" style="font-size: large; color: #010614;">Variable que existe dentro de una clase. Puede ser pública o privada.</span></p>
+            </div>
+        </div>
+
+        <ul style="font-size: large;">
+            <ul style="">
+                <ul style="">
+                    <ul style="">
+                        <ul style="color: rgb(1, 6, 20);">
+                            <li><span style="color: #010614;">Propiedad pública: Propiedad a la que se puede acceder desde fuera de la clase.</span><br></li>
+                            <li><span style="color: #010614;">Propiedad privada: Propiedad a la que no se puede acceder desde fuera de la clase.</span><br></li>
+                            <li><span style="color: #010614;">Propiedad computada: Función para acceder a una propiedad con modificaciones (getter/setter).</span></li>
+                        </ul>
+                    </ul>
+                </ul>
+            </ul>
+        </ul><br>
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600; font-size: large; color: #010614;" class="">Método:</span><span class="" style="font-size: large; color: #010614;"> Función que existe dentro de una clase. Puede ser pública o privada..</span></p>
+            </div>
+        </div>
+        <p style="font-size: large; color: rgb(1, 6, 20);"></p>
+        <ul style="font-size: large; color: rgb(1, 6, 20);">
+            <ul>
+                <ul>
+                    <ul>
+                        <ul>
+                            <li><span class="" style="font-size: large; color: #010614;">Método público: Método que se puede ejecutar desde dentro y fuera de la clase.</span></li>
+                            <li><span class="" style="font-size: large; color: #010614;">Método privado : Método que sólo se puede ejecutar desde dentro de la clase.</span></li>
+                            <li><span class="" style="font-size: large; color: #010614;">Constructor: Método especial que se ejecuta automáticamente cuando se crea una instancia.</span></li>
+                            <li><span class="" style="font-size: large; color: #010614;">Método estático: Método que se ejecuta directamente desde la clase, no desde la instancia.</span></li>
+                            <li><span class="" style="font-size: large; color: #010614;">Inicializador estático: Bloque de código que se ejecuta al definir la clase, sin necesidad de instancia.</span></li>
+                        </ul>
+                    </ul>
+                </ul>
+            </ul>
+
+
+
+
+        </ul>
+        <p style="font-size: large; color: rgb(1, 6, 20);"></p>
+        <p style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: #010614;"><br></span></p>
+        <p style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: #010614;">Como vemos, todas estas características se dividen en dos grupos:</span></p><span style="color: #010614; font-size: large;"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><div style="margin-left: 3%; margin-right: 3%;">
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600">Las propiedades:</span>&nbsp;a grandes rasgos, variables dentro de clases.</p>
+    </div>
+</div>
+
+
+
+<!-- 2 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p><span style="font-weight: 600">Los métodos:</span> a grandes rasgos, funciones dentro de clases.</p>
+    </div>
+</div>
+
+</div>
+
+<p style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: #010614;">Un ejemplo sencillo de cada uno:</span></p>
+<p style="font-size: large; color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: #010614;">
+    <!-- Inicio de la segunda caja de codigo -->
+</span></p>
+<div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+    <span style="float: left;">JavaScript</span>
+    <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(2)">
+        <span id="copyText2">Copiar código</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon2" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+    </span>
+</div>
+<div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+</div>
+<div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+    <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer2">         <p> class Animal {
+ // Propiedades
+ name = 'Garfield';
+ type = 'cat';
+ // Métodos
+ hablar() {
+   return 'Odio los lunes.';
+ }
+}   </p></pre>
+</div>
+<!-- Fin de la segunda caja de codigo --><br>
+<p></p>
+<p style="font-size: large; color: rgb(1, 6, 20);"><br></p>
+</div>
+</span>
+</div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar codigo';
+            }, 2000); // Cambiar de nuevo a "Copiar codigo" despues de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el codigo: ', err);
+        });
+    }
+</script>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209178"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">La palabra clave this</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;"><span class="" style="font-size: large;">La </span><span class="" style="font-size: large;">palabra clave </span></span><code><span class="" style="font-size: large;">this</span></code>
+            <span class="" style="font-size: large;">
+                </span><span class="" style="font-size: large;">
+                 
+            puede utilizarse en cualquier método de la clase para referirse al objeto actual. Es importante diferenciar que</span><span class="" style="color: rgb(0, 46, 184); font-size: large;"> </span><code><code><span class="" style="font-size: large;">this </span></code></code>
+                <span class="" style="font-size: large;">
+                    </span><span class="" style="font-size: large;">
+                    
+                    </span><span class="" style="font-size: large;"><span class="" style="font-size: large;">hace referencia al objeto instanciado y no a la clase.</span></span>
+                    </span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><!-- Inicio de la primera caja de codigo -->
+</span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1">                         <p> class Animal {
+ name; // Propiedad (variable de clase sin valor definido)
+
+
+ constructor(name) {
+   this.name = name; // Hacemos referencia a la propiedad name del objeto instanciado
+ }
+}
+</p></pre>
+        </div>
+        <!-- Fin de la primera caja de codigo -->
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;"><span class="" style="font-size: large;">Observa que la palab</span><span class="" style="font-size: large;">ra clave </span></span><code><span class="" style="font-size: large;">this</span></code>
+            <span class="" style="font-size: large;">
+                </span><span class="" style="font-size: large;"> 
+            no se refiere a la clase Animal exactamente, sino a la variable que utilizamos al instanciarla. Es decir, si hacemos un </span><code><span class="" style="font-size: large;">const pato = new Animal()</span></code><span class="" style="font-size: large;">
+            </span><span class="" style="font-size: large;">
+                    , se ejecutaría el constructor y la palabra clave </span><code><span class="" style="font-size: large;">this </span></code><span class="" style="font-size: large;">
+            haría referencia a pato, por lo que </span><code><span class="" style="font-size: large;">this.name</span></code><span class="" style="font-size: large;"> estaría haciendo
+            referencia a </span><code><span class="" style="font-size: large;">pato.name</span></code><span class="" style="font-size: large;">.</span></span><span class="" style="font-size: large;">
+        </span></p>
+        <p><br></p>
+    </div>
+</div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar codigo';
+            }, 2000); // Cambiar de nuevo a "Copiar codigo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el codigo: ', err);
+        });
+    }
+</script></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209179"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Clases en ficheros externos</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        Generalmente, para tener el código lo más organizado posible, las clases se suelen almacenar en ficheros individuales, de forma que cada clase que creamos, debería estar en un fichero con su mismo nombre:
+        <p></p>
+
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0; margin-top: 24px; display: flex; align-items: center;">
+            <span style="flex: 1;">JavaScript</span>
+            <span style="cursor: pointer; display: flex; align-items: center;" onclick="copyCodeToClipboard(1)">
+                <span id="copyText1">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle; margin-left: 5px;">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+                </svg>
+            </span>
+        </div>
+
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1">// Animal.js
+export class Animal {
+ /* Contenido de la clase */
+}
+            </pre>
+        </div>
+
+        <p style="margin-top: 24px;">Luego, si queremos crear objetos basados en esta clase, lo habitual suele ser importar el fichero de la clase en cuestión y crear el objeto a partir de la clase. Algo similar al siguiente fragmento de código:</p>
+
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0; display: flex; align-items: center;">
+            <span style="flex: 1;">JavaScript</span>
+            <span style="cursor: pointer; display: flex; align-items: center;" onclick="copyCodeToClipboard(2)">
+                <span id="copyText2">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon2" style="vertical-align: middle; margin-left: 5px;">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+                </svg>
+            </span>
+        </div>
+
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer2">// index.js
+import { Animal } from './Animal.js';
+const pato = new Animal();
+            </pre>
+        </div>
+
+        <div class="" style="width: 90%; margin: 24px auto 0;">
+            <div class="row">
+                <div class="col-1" style="background-color: #ae11a0; border-radius: 4px 0px 0px 4px;">
+                    <div class="d-flex justify-content-center" style="margin-top: 20px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-card-text" viewBox="0 0 16 16">
+                            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"></path>
+                            <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-11" style="background-color: #F6E7F5; border: 1px solid #ae11a0; border-radius: 0px 4px 4px 0px;">
+                    <p style="margin-top: 16px;"><span class="" style="font-size: large;">Si nuestra aplicación se complica mucho, podríamos comenzar a crear carpetas para organizar mejor aún nuestros ficheros de clases. Por ejemplo, podríamos tener la clase </span><code><span class="" style="font-size: large; color: rgb(0, 61, 245);">Animal.js</span></code>
+                        <span class="" style="font-size: large;"> dentro de una carpeta <span class="" style="color: rgb(0, 61, 245);">C</span></span><code><span class="" style="font-size: large; color: rgb(0, 61, 245);">lases</span></code><span class="" style="font-size: large;"> (o algo similar). Esto nos brindaría una mejor experiencia de desarrollo, pero el nombre de las carpetas o su organización ya dependería del/a desarrollador/a o del equipo de desarrollo.</span></p>
+                </div>
+            </div>
+        </div>
+
+        <p style="margin-top: 24px;"><br></p>
+    </div>
+</div>
+
+<script>
+    function copyCodeToClipboard(codeNumber) {
+        var codeContainer = document.getElementById('codeContainer' + codeNumber);
+        var range = document.createRange();
+        range.selectNode(codeContainer);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        try {
+            document.execCommand('copy');
+            document.getElementById('copyText' + codeNumber).textContent = '¡Copiado!';
+        } catch (err) {
+            console.error('Failed to copy: ', err);
+        }
+        window.getSelection().removeAllRanges();
+        setTimeout(() => {
+            document.getElementById('copyText' + codeNumber).textContent = 'Copiar código';
+        }, 2000);
+    }
+</script></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209180"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Propiedades de una clase</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">Las clases, siendo estructuras para guardar y almacenar información, tienen unas variables que viven dentro de la clase. Esta información (también llamada <b>estado</b>) se denomina <b>propiedad </b>o <span class="" style="color: rgb(0, 61, 245);">propiedad de clase</span>.</span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><!-- Inicio de la primera caja de c贸digo -->
+</span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1">                          <p>class Personaje {
+ name; // Propiedad sin definir (undefined)
+ type = 'Player'; // Propiedad definida
+ lifes = 5; // Propiedad definida con 5 vidas restantes
+ energy = 10; // Propiedad definida con 10 puntos de energía
+}
+</p></pre>
+        </div>
+        <!-- Fin de la primera caja de c贸digo -->
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">Tradicionalmente en Javascript, las propiedades acostumbraban a definirse a través del constructor, mediante la palabr<span class="" style="font-size: large;">a clave </span><code><span class="" style="font-size: large;">this</span></code>
+            <span class="" style="font-size: large;">, por lo que</span> es muy probable que también te las encuentres declaradas de esta forma, sin necesidad de declararlas fuera del constructor:</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(239, 69, 64);"><!-- Inicio de la segunda caja de c贸digo -->
+</span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(2)">
+        <span id="copyText2">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon2" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer2">         <p>class Personaje {
+ constructor() {
+   this.name; // Propiedad sin definir (undefined)
+   this.type = 'Player'; // Propiedad definida
+   this.lifes = 5; // Propiedad definida con 5 vidas restantes
+   this.energy = 10; // Propiedad definida con 10 puntos de energía
+ }
+}
+</p></pre>
+        </div>
+        <!-- Fin de la segunda caja de c贸digo -->
+        <p></p>
+        <p><span class="" style="font-size: large; color: #010614 ;">Puesto que se trata de propiedades de <span class="" style="font-size: large;">clase y el </span><code><span class="" style="font-size: large;">constructor() </span></code>es un
+            método que se ejecuta cuando se crea el objeto (instancia de clase), ambas son equivalentes, ya que al crear un objeto se ejecutará el constructor y se crearán esas propiedades.</span>
+        </p>
+        <p></p>
+        <p><span class="" style="font-size: large; color: #010614 ;">A la hora de utilizarlas, simplemente accedemos a ellas de la misma forma que vimos en el último ejemplo, haciendo uso de la palabra <span class="" style="font-size: large;">clave </span><code><span class="" style="font-size: large;">this</span></code>
+            <span class="" style="font-size: large;">. V</span>eamos un ejemplo un poco más elaborado, utilizando propiedades y métodos:</span>
+        </p>
+        <p><span class="" style="font-size: large; color: rgb(239, 69, 64);"><!-- Tercera caja de c贸digo -->
+</span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(3)">
+        <span id="copyText3">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon3" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer3">class Personaje {
+ name; // Propiedad sin definir (undefined)
+ type = 'Player'; // Propiedad definida
+ lifes = 5; // Propiedad definida con 5 vidas restantes
+ energy = 10; // Propiedad definida con 10 puntos de energía
+
+
+ constructor(name) {
+   this.name = name; // Modificamos el valor de la propiedad name
+   console.log(`¡Bienvenido/a, ${this.name}!`); // Accedemos al valor actual de la propiedad name
+ }
+}
+const mario = new Personaje('Mario'); // '¡Bienvenido/a, Mario!'
+<p></p></pre>
+        </div>
+        <!-- Fin de la tercera caja de c贸digo -->
+        <p></p>
+        <p></p>
+        <p><span class="" style="font-size: large; color: #010614 ;">Como se puede ver, estas propiedades existen en la clase, y se puede establecer de forma que todos los objetos tengan el mismo valor, o como en el ejemplo anterior, tengan valores diferentes dependiendo del objeto en cuestión, pasándole los valores específicos por parámetro.</span></p>
+        <p><br></p>
+    </div>
+</div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209181"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Propiedades públicas</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        Por defecto, las propiedades en las clases son públicas. Observa que siempre vamos a poder acceder a las propiedades desde el constructor u otros métodos (dentro de la clase), ya sean propiedades públicas o privadas:<p></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);">
+          <!-- Inicio de la primera caja de c贸digo -->
+</span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1">                           <p> class Personaje {
+ name;
+ energy = 10;
+
+ constructor(name) {
+   this.name = name;
+ }
+}
+
+const mario = new Personaje('Mario'); // { name: "Mario", energy: 10 }
+mario.name; // "Mario" (se puede acceder desde fuera)
+mario.name = 'Evil Mario';
+mario.name; // "Evil Mario" (se ha modificado desde fuera)
+</p></pre>
+        </div>
+        <!-- Fin de la primera caja de c贸digo -->
+        <p></p>
+        Observa también que en las últimas líneas, accedemos a la propieda<span class="" style="font-size: large;">d </span><code><span class="" style="font-size: large;"><span class="" style="font-size: large;">name</span> </span></code>
+            <span class="" style="font-size: large;">d</span>esde fuera de la clase y la modificamos. Esto ocurre porque es una propiedad pública, y es posible hacerlo.
+        <p></p>
+        <p><br></p>
+    </div>
+</div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209182"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal"><span class="" style="font-size: xx-large;">Propiedades privadas</span></p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><span class="" style="font-size: large;">
+    </span><br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;">Todas <b><span class="" style="color: rgb(0, 46, 184);">l</span></b>
+            </span><span class="" style="color: rgb(0, 46, 184);"><b><span class="" style="font-size: large;">as propiedades y métodos son públicos por defecto</span></b>
+            </span><span class="" style="font-size: large;">, sin embargo, si añadimos el carácter <code style="font-size: large;">#</code> justo antes del nombre
+            de la propiedad, se tratará de una propiedad privada:</span></span><br></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(239, 69, 64);"><span class="" style="font-size: large;">
+          </span>
+            <!-- Inicio de la primera caja de c贸digo --><span class="" style="font-size: large;">
+</span></span>
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left; font-size: large;" class="">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)"><span class="" style="font-size: large;">
+        </span><span id="copyText1" class="" style="font-size: large;">Copiar código</span><span class="" style="font-size: large;">
+            </span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;"></svg><span class="" style="font-size: x-large;">
+            </span>
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path><span class="" style="font-size: x-large;">
+            </span>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path><span class="" style="font-size: x-large;">
+        </span><span class="" style="font-size: large;">
+            </span></span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;"><span class="" style="font-size: large;">
+        </span></div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1"><span class="" style="font-size: large;">                          </span><p><span class="" style="font-size: large;"> class Personaje {
+ #name;
+ energy = 10;
+
+ constructor(name) {
+   this.#name = name;
+ }
+}
+
+const mario = new Personaje('Mario'); // { name: "Mario", energy: 10 }
+
+// Es incorrecto, el nombre correcto de la propiedad es #name
+mario.name; // undefined
+console.log(mario.name);
+
+// Los dos siguientes dan el mismo error (no se puede acceder a la propiedad privada)
+// Uncaught SyntaxError: Private field '#name' must be declared in an enclosing class
+mario.#name;
+mario.#name = 'Evil Mario';
+
+// Lo siguiente funcionará, pero ha creado otra propiedad 'name' que no es la misma que '#name'
+mario.name = 'Evil Mario';
+console.log(mario.name);          
+    </span></p></pre>
+        </div>
+        <!-- Fin de la primera caja de c贸digo -->
+        <p></p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><span class="" style="font-size: large;">Como se puede ver, las propiedades precedidas del carácter <code style="font-size: large;">#</code> son automáticamente privadas y sólo se podrá acceder a ellas desde un método de clase, ya que si se hace desde fuera obtendremos un error similar al siguiente:&nbsp;</span><code><span class="" style="font-size: large;">Uncaught SyntaxError: Private field '#name' must be declared in an enclosing class</span></code>
+            <p></p>
+            <p></p>
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><span class="" style="font-size: large;">Sin embargo, si se llama a un método público, que a su vez accede a la propiedad privada mediante </span><code><span class="" style="font-size: large;">this.#name</span></code><span class="" style="font-size: large;"> todo funcionará correctamente, ya que ese método público si es accesible desde fuera de la clase y la propiedad privada si es accesible desde dentro de la clase.</span>
+                <p></p>
+                <p><br></p>
+            </div>
+        </div>
+        <script>
+            function copyCodeToClipboard(index) {
+                var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+                navigator.clipboard.writeText(codeToCopy).then(function() {
+                    var copyIcon = document.getElementById('copyIcon' + index);
+                    var copyText = document.getElementById('copyText' + index);
+                    copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+                    copyText.textContent = 'Copiado';
+                    setTimeout(function() {
+                        copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                        copyText.textContent = 'Copiar c贸digo';
+                    }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+                }, function(err) {
+                    console.error('Error al copiar el c贸digo: ', err);
+                });
+            }
+        </script>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209183"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Propiedades computadas</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">En algunos casos nos puede interesar la utilización de lo que se llaman <span><span class="" style="color: rgb(0, 46, 184);"><span><span style=""><span class="" style="color: rgb(0, 46, 184);">propiedades computadas</span></span>
+            </span>
+            </span>
+            </span>.&nbsp;</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"></span></p>
+        <div style="display: inline-block; border-radius: 8px; overflow: hidden; border: 1px solid #9A3282;">
+            <p style="background-color: #9A3282; color: white; padding: 4px 16px; margin: 0;"><b>Las propiedades computadas</b></p>
+            <div style="background-color: white; padding: 16px;">
+                <p><span style="font-size: large; color: #010614;">son un tipo de propiedad especial que se declara como una función, y que se ejecuta cuando accedemos a la propiedad con dicho nombre.</span></p>
+            </div>
+        </div>
+        <p></p>
+        <p style=""><span style="color: #010614 ; font-size: large;" class="">Hay dos tipos de propiedades computadas, los </span><span><span style="color: #010614 ;"><code style=""><span class="" style="font-size: large;">getters</span></code>
+            <span class="" style="font-size: large;"> </span>
+                </span><span style="color: #010614 ; font-size: large;" class="">y los </span><span class="" style="font-size: large;">
+            </span><code><span class="" style="font-size: large;">setters</span></code></span><span class="" style="font-size: large;">
+            </span><span style="color: rgb(0, 46, 184); font-size: large;" class="">.</span><br></p>
+        <p style=""><span style="color: rgb(0, 46, 184);" class=""></span></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Propiedades get (getters)</p>
+        </div>
+        <p></p>
+        <p style=""><span><span style="color: #010614 ; font-size: large;" class="">Estudiemos el primer caso, la propiedad computada </span><span style="color: #010614 ;"><span style=""><span class="" style="color: rgb(0, 46, 184);"><code><span class="" style="font-size: large;">get</span></code>
+            </span>
+            </span><span class="" style="font-size: large;">
+            </span></span><span style="color: #010614 ; font-size: large;" class="">o también llamada </span><span class="" style="font-size: large;">
+            </span><i style="color: #010614 ;"><code><span class="" style="font-size: large;">getter</span></code></i><span style="color: #010614 ;"><span class="" style="color: rgb(0, 46, 184); font-size: large;">.</span><span class="" style="font-size: large;"> Para definirla, simplemente añadimos la palabra clave </span></span><span style="color: #010614 ;"><span style=""><span class="" style="color: rgb(0, 46, 184);"><code style="font-size: large;"><span class="" style="font-size: large;">get</span></code>
+            <span class="" style="font-size: large;"> </span>
+                </span>
+                </span><span class="" style="font-size: large;">
+            </span></span><span class="" style="font-size: large;">
+            </span></span><span style="color: #010614 ; font-size: large;" class="">antes del nombre de la función. De resto, se define exactamente igual que una función:</span><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><!-- Inicio de la primera caja de c贸digo -->
+</span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1">                           <p>class Personaje {
+ name;
+ energy;
+
+ constructor(name, energy = 10) {
+   this.name = name;
+   this.energy = energy;
+ }
+
+ get status() {
+   return '⭐'.repeat(this.energy);
+ }
+}
+
+const mario = new Personaje('Mario');
+mario.energy; // 10
+mario.status; // '⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐'
+</p></pre>
+        </div>
+        <!-- Fin de la primera caja de c贸digo -->
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;">Observa que aunque la definimos como una función </span><code><span class="" style="font-size: large;">status()</span></code><span class="" style="font-size: large;">, luego accedemos a ella como una propiedad </span><code><span class="" style="font-size: large;">mario.status</span></code><span class="" style="font-size: large;">. Por eso se llama propiedad computada. La idea de este tipo de propiedades, es permitir pequeñas modificaciones sobre propiedades ya existentes (en nuestro caso, </span><code><span class="" style="font-size: large;">energy</span></code>
+            <span class="" style="font-size: large;">). En lugar de devolver el valor numérico, devolvemos el número de estrellas que representa la vida del personaje.</span><br><br></span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(0, 61, 245);"></span></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Propiedades set (setters)</p>
+        </div>&nbsp;
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;">De la misma forma que podemos crear un </span><code style="font-size: large;"><span class="" style="font-size: large;">get </span></code></span>
+            <span class="" style="font-size: large;"> para obtener un valor, podemos utilizar un </span><code style="font-size: large;"><span class="" style="font-size: large;">set </span></code><span class="" style="font-size: large;">para
+            establecerlo. La idea es exactamente la misma, pero para modificar el valor. En este caso, el ejemplo no es tan didáctico, pero vamos a dar la funcionalidad inversa. Si establecemos un número de estrellas a </span><code><span class="" style="color: rgb(0, 46, 184);"><code><span class="" style="font-size: large;">status</span></code></span>
+                </code><span class="" style="font-size: large;">,
+            las cuenta y asigna el número a </span><code><span class="" style="font-size: large;">energy</span></code><span class="" style="color: rgb(0, 46, 184); font-size: large;">:</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(239, 69, 64);"><!-- Inicio de la segunda caja de c贸digo -->
+</span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(2)">
+        <span id="copyText2">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon2" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer2">         <p>class Personaje {
+ name;
+ energy;
+
+ constructor(name, energy = 10) {
+   this.name = name;
+   this.energy = energy;
+ }
+
+ get status() {
+   return '⭐'.repeat(this.energy);
+ }
+
+ set status(stars) {
+   this.energy = stars.length;
+ }
+}
+
+const mario = new Personaje('Mario');
+mario.energy; // 10
+mario.status = '⭐⭐⭐';
+mario.energy; // 3
+mario.status; // '⭐⭐⭐'
+</p></pre>
+        </div>
+        <!-- Fin de la segunda caja de c贸digo -->
+        <p></p>
+        <p style=""></p>
+        <p><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;">Ahora </span><code><span class="" style="font-size: large;">“set status(stars)”</span></code><span class="" style="font-size: large;"> se comporta como una función, y al asignar tres estrellas a </span><code><span class="" style="font-size: large;">mario.status</span></code>
+            <span class="" style="font-size: large;">
+                </span><span class="" style="font-size: large;">, automáticamente se ha cambiado el valor de </span><code><span class="" style="font-size: large;">mario.energy</span></code><span class="" style="font-size: large;">. Estas propiedades computadas nos pueden venir muy bien cuando queramos modificar ligeramente ciertos elementos de una forma automática y </span>
+                <span class="" style="font-size: large;">organizada.</span>
+                    </span><span class="" style="font-size: large;">
+        </span></p>
+        <p><br></p>
+    </div>
+</div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209184"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Métodos de clase</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="color: #010614 ; font-size: large;">U</span><span class="" style="font-size: large; color: #010614 ;"><span class="" style="color: #010614 ; font-size: large;">n</span><span class="" style="font-size: large;"> método es el nombre que recibe una función que existe dentro de una
+            clase. Se utilizan para englobar comportamientos o funcionalidades relacionadas en conjunto con la clase y mediante las cuales podemos segmentar y separar en bloques de código.</span></span><span class="" style="font-size: large;">
+        </span></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;">Por ejemplo, en el siguiente fragmento de código definimos una constante </span><code><span class="" style="font-size: large;">“text”</span></code>
+            <span class="" style="font-size: large;"> que contiene el string </span><code><span class="" style="font-size: large; color: rgb(0, 61, 245);">"Hola”</span></code><span class="" style="font-size: large;">. En la siguiente línea, ejecutamos el método </span><code><span class="" style="font-size: large;">.repeat()</span></code>
+            <span class="" style="font-size: large;">, que es una función que pertenece a todos los objetos que son definidos como string, y que simplemente repite el texto el número de veces que le pasamos por parámetro:</span>
+            </span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><!-- Inicio de la primera caja de c贸digo -->
+</span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1">                          <p>const text = 'Hola';
+text.repeat(3); // "HolaHolaHola"
+</p></pre>
+        </div>
+        <!-- Fin de la primera caja de c贸digo -->
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">Cada variable de u<span><span class="" style="font-size: large;">n determinado tipo de dato, tiene métodos asociados a dicho tipo de dato. Los objetos de tipo </span><code style=""><span class="" style="font-size: large;">string</span></code>
+            <span class="" style="font-size: large;"> </span><span class="" style="font-size: large;">tienen
+            sus propios métodos, los objetos de tipo </span><code style=""><span class="" style="font-size: large;">number</span></code><span class="" style="font-size: large;"> </span><span class="" style="font-size: large;">tienen los suy</span></span>os,
+                etc.</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">En nuestro caso, hablamos de métodos cuando nos referimos a funciones que existen en el interior de una clase.&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">Observa el siguiente ejemplo, donde tenemos una función independiente:</span></p>
+        <p><span class="" style="font-size: large; color: rgb(239, 69, 64);"><!-- Inicio de la segunda caja de c贸digo -->
+</span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(2)">
+        <span id="copyText2">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon2" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer2">         <p> function hablar() {
+ return 'Hola';
+}
+</p></pre>
+        </div>
+        <!-- Fin de la segunda caja de c贸digo -->
+        <p></p>
+        <p><span class="" style="font-size: large; color: #010614 ;">Esta función no está asociada a ningún otro elemento. Simplemente existe en el ámbito global de nuestro programa. Vamos ahora a convertirla en un método de la clase Animal:</span></p>
+        <p><span class="" style="font-size: large; color: rgb(239, 69, 64);"><!-- Tercera caja de c贸digo -->
+</span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(3)">
+        <span id="copyText3">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon3" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer3">class Animal {
+ hablar() {
+   return 'Cuak';
+ }
+}
+<p></p></pre>
+        </div>
+        <!-- Fin de la tercera caja de c贸digo -->
+        <p></p>
+        <p><span class="" style="font-size: large; color: #010614 ;">Esta función no está asociada a ningún otro elemento. Simplemente existe en el ámbito global de nuestro programa. Vamos ahora a convertirla en un método de la clase Animal:</span></p>
+        <p><span class="" style="font-size: large; color: rgb(239, 69, 64);"><!-- Cuarta caja de c贸digo -->
+</span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(4)">
+        <span id="copyText4">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon4" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer4">// Creación de una instancia u objeto (pato)
+const pato = new Animal();
+pato.hablar(); // 'Cuak'
+
+// Creación de otra instancia u objeto (donald)
+const donald = new Animal();
+donald.hablar(); // 'Cuak'
+<p></p></pre>
+        </div>
+        <!-- Fin de la cuarta caja de c贸digo -->
+
+        <p><span class="" style="font-size: large; color: #010614 ;"><br></span></p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Recordá que&nbsp;</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><span class="" style="font-size: large;">El método </span><code><span class="" style="font-size: large;">hablar()</span></code><span class="" style="font-size: large;"> existe tanto en las variables&nbsp;pato</span><b><span class="" style="font-size: large;">&nbsp;</span></b>
+                    <span class="" style="font-size: large;">como&nbsp;donald&nbsp;porque ambas son de tipo Animal. Al igual que ocurre con una función normal, se le pueden pasar varios parámetros al método y trabajar con ellos como venimos haciendo normalmente con las funciones.</span>
+                </p>
+            </div>
+        </div>
+        <br>
+        <p></p>
+        <p><br></p>
+    </div>
+</div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209185"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Constructor de clase</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <span class="" style="font-size: large;">Se le llama </span><span><code><span class="" style="font-size: large;">constructor</span></code><span class="" style="font-size: large;"> </span></span><span class="" style="font-size: large;">a un método de clase especial que se ejecuta automáticamente cuando se hace un </span><code><span class="" style="font-size: large;">new</span></code><i><span class="" style="font-size: large;"> </span></i>
+        <span class="" style="font-size: large;">de dicha clase (al instanciar el objeto). Una clase solo puede tener un constructor, y en el caso de que no se especifique un constructor a una clase, tendrá uno vacío de forma implícita.</span>
+            <p></p>
+            <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">Se pueden diferenciar diferentes tipos de constructores de objetos:
+                <p></p>
+                <p style=""><span class="" style="font-size: large; color: #010614 ;"><!-- 1 -->
+</span></p>
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600; font-size: large; color: #010614 ;" class=""><span>Constructor predeterminado</span><span>,</span>&nbsp;</span><span class="" style="font-size: large; color: #010614 ;">por defecto o por omisión. Es aquel constructor que no requiere ningún argumento. Se aplica en el caso predeterminado donde se declara un objeto sin especificar argumentos. Si no incluimos ningún constructor en una clase, el compilador generará un constructor predeterminado que inicializará los atributos miembros con los valores por defecto.&nbsp;.</span></p>
+                    </div>
+                </div>
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600; font-size: large; color: #010614 ;" class="">Constructor parametrizado:</span><span class="" style="font-size: large; color: #010614 ;"> Crea una nueva instancia de la clase e inicializa los atributos con los valores incluidos en la declaración. Pueden existir distintos constructores de este tipo, dependiendo del número de parámetros que incluyan en su definición.</span></p>
+                    </div>
+                </div>
+                <p></p>
+                <p style=""></p>
+                <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">Veamos el ejemplo anterior, donde añadiremos un constructor a la clase:
+                    <p></p>
+                    <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><!-- Inicio de la primera caja de c贸digo -->
+</b></span></p>
+                    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;"><span>
+       <span style="float: left;">JavaScript</span>
+                        <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1" style="">Copiar código</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;"></svg><b>
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </b>
+                        </span>
+                        </span>
+                    </div><span>
+<div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+</div>
+<div style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px; border-radius: 0px 0px 5px 5px;">
+    <pre style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; font-size: large; margin-top: 0px;" id="codeContainer1">       
+      <p style=""> class Animal {
+ constructor() {
+   console.log('Ha nacido un pato. 🦆');
+ }
+
+ hablar() {
+   return 'Cuak';
+ }
+}
+
+// Creación de instancia/objeto
+const pato = new Animal(); // 'Ha nacido un pato' (Se ha ejecutado implicitamente el constructor)
+pato.hablar(); // 'Cuak' (Se ha ejecutado explícitamente el método hablar)<b>
+</b></p></pre>
+</div>
+<!-- Fin de la primera caja de c贸digo --></span>
+                    <p></p>
+                    <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+                </div>
+            </div>
+            <script>
+                function copyCodeToClipboard(index) {
+                    var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+                    navigator.clipboard.writeText(codeToCopy).then(function() {
+                        var copyIcon = document.getElementById('copyIcon' + index);
+                        var copyText = document.getElementById('copyText' + index);
+                        copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+                        copyText.textContent = 'Copiado';
+                        setTimeout(function() {
+                            copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                            copyText.textContent = 'Copiar c贸digo';
+                        }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+                    }, function(err) {
+                        console.error('Error al copiar el c贸digo: ', err);
+                    });
+                }
+            </script>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209186"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">¿Qué es un método estático?</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;">En el caso anterior, al utilizar un método como por ejemplo </span><code><span class="" style="font-size: large;">hablar()</span></code>
+            <span class="" style="font-size: large;">, debemos crear el objeto basado en la clase haciendo un </span><code><span><span class="" style="font-size: large;"><span class="" style="font-size: large;">new</span> </span></span><span class="" style="font-size: large;">Animal()</span></code>
+                <span class="" style="font-size: large;">. Es lo que se denomina crear un objeto, crear una instancia de clase o instanciar un objeto.</span>
+                    </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">Sin embargo, nos podría interesar crear métodos estáticos en una clase, ya que este tipo de métodos no requieren crear una instancia, sino que se pueden ejecutar directamente sobre la clase:</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><!-- Inicio de la primera caja de c贸digo -->
+</b></span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); padding: 10px; border-radius: 0px;">
+        </div>
+        <div style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px; border-radius: 0px 0px 5px 5px;">
+            <pre style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; font-size: large; margin-top: 0px;" id="codeContainer1">    
+             <p style=""> class Animal {
+ static despedirse() {
+   return 'Adiós';
+ }
+
+ hablar() {
+   return 'Cuak';
+ }
+}
+
+Animal.despedirse(); // Método estático (no requiere instancia): 'Adiós'
+Animal.hablar(); // Uncaught TypeError: Animal.hablar is not a function
+
+const pato = new Animal(); // Creamos una instancia
+
+pato.despedirse(); // Uncaught TypeError: pato.despedirse is not a function
+pato.hablar(); // Método no estático (requiere instancia): 'Cuak'<b>
+</b></p></pre>
+        </div>
+        <!-- Fin de la primera caja de c贸digo -->
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">Como analizaremos más adelante, lo habitual suele ser utilizar métodos normales (no estáticos), ya que normalmente nos suele interesar crear múltiples objetos y guardar información (estado) en cada uno de ellos, y para eso necesitaríamos instanciar un objeto.</span></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"></span></p>
+        <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;">Una de las limitaciones de los métodos estáticos es que en su interior sólo podremos hacer referencia a elementos que también sean estáticos. No podremos acceder a propiedades o métodos no estáticos.</p>
+        </div>
+        <p></p>
+        <p style=""><span style="color: #010614 ;">Los <span><span class="" style="color: rgb(0, 61, 245);">métodos estáticos</span></span> se suelen utilizar para crear funciones de apoyo que realicen tareas genéricas que no necesiten estado de la clase,
+            pero siguen estando relacionadas con la clase y no queremos mantenerlas separadas.</span><br></p>
+        <p><br></p>
+    </div>
+</div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209187"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Visibilidad de métodos</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p><span style="font-size: large; color: #010614 ;">Al igual que ocurre con las propiedades de clase, <span style="color: rgb(0, 46, 184);">los métodos de una clase tienen una visibilidad específica que por defecto es pública</span>. Esto
+            es, los métodos son accesibles tanto desde fuera de la clase como desde dentro.</span>
+        </p>
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style="color: #3c80b3;">
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+                </svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">
+                    <span style="font-weight: 600; font-size: large; color: #010614 ;">Método público:&nbsp;</span>
+                    <span style="font-size: large; color: #010614 ;">
+                        <code><span style="font-size: large;">name()</span></code> o
+                    <code><span style="font-size: large;">this.name()</span></code>. Se puede acceder al método desde dentro y fuera de la clase.
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style="color: #3c80b3;">
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+                </svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">
+                    <span style="font-weight: 600; font-size: large; color: #010614 ;">Método privado:&nbsp;</span>
+                    <span style="font-size: large; color: #010614 ;">
+                        <code><span style="font-size: large;">#name()</span></code> o
+                    <code><span style="font-size: large;">this.#name()</span></code>. Se puede acceder al método sólo desde dentro de la clase.
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <p></p>
+        <p></p>
+
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Métodos públicos</p>
+        </div>
+
+        <p></p>
+        <p><span style="color: #010614 ;">Por norma general, los métodos de una clase son públicos, por lo que podemos acceder tanto desde dentro de la clase como desde fuera. Observa que desde el constructor estamos accediendo a </span>
+            <code><span style="font-size: large;">hablar()</span></code> desde dentro de la clase y al crear el objeto, se llamará a ese método:
+        </p>
+
+        <!-- Aquí va el código -->
+    </div>
+</div>
+<div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;"><b>
+       <span style="float: left;">JavaScript</span>
+    <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+    </span>
+</b></div><span>
+<div style="font-weight: bold; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); padding: 10px; border-radius: 0px;">
+</div>
+<div style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px; border-radius: 0px 0px 5px 5px;">
+    <pre style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; font-size: large; margin-top: 0px;" id="codeContainer1"><b>                   </b><p style="">class Personaje {
+ name = 'Mario';
+
+ constructor() {
+   this.hablar();
+ }
+
+ hablar() {
+   console.log("It's me, Mario!");
+ }
+}
+
+const mario = new Personaje(); // It's me, Mario! (se ha accedido a hablar() desde dentro de la clase)
+mario.hablar(); // It's me, Mario! (se ha accedido a hablar() desde <span>fuera de la clase)<b>
+</b></span></p>
+</pre>
+</div>
+<!-- Fin de la primera caja de c贸digo -->
+</span>
+
+<p></p>
+<p><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;">Por otro lado, al llamar a </span><code><span class="" style="font-size: large;">mario.hablar()</span></code><span class="" style="font-size: large;"> se puede ver que se permite acceder desde fuera de la clase.</span></span>
+</p>
+<p><span class="" style="font-size: large; color: rgb(0, 61, 245);"></span></p>
+<div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+    <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Métodos privados</p>
+</div>
+<p></p>
+<p><span style="color: #010614 ;">¿Qué es lo que ocurre si definimos el método <code><span class="" style="font-size: large;">hablar()</span></code><span class="" style="font-size: large;"> co</span>mo un método privado? Para ello, simplemente le
+    añadimos el símbolo # antes del nombre, asegurándonos también de incluirlo en las llamadas al método. Quedaría algo así:</span><br></p>
+<p><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><!-- Inicio de la segunda caja de c贸digo -->
+</b></span></p>
+<div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;"><b>
+        <span style="float: left;">JavaScript</span>
+    <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(2)">
+        <span id="copyText2">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon2" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+    </span>
+</b></div><span>
+<div style="font-weight: bold; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); padding: 10px; border-radius: 0px;">
+</div>
+<div style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px; border-radius: 0px 0px 5px 5px;">
+    <pre style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; font-size: large; margin-top: 0px;" id="codeContainer2">         <p style=""> class Personaje {
+ name = 'Mario';
+
+ constructor() {
+   this.#hablar();
+ }
+
+ #hablar() {
+   console.log("It's me, Mario!");
+ }
+}
+
+const mario = new Personaje(); // It's me, Mario! (se ha accedido a #hablar() desde dentro de la clase)
+
+// Da error, no se permite acceder a un método privado desde fuera de la clase
+// Uncaught SyntaxError: Private field '#hablar' must be declared in an enclosing class
+mario.#hablar();
+
+// Da error, el método hablar() no existe, ya que el nombre del método es #hablar()
+// Uncaught TypeError: mario.hablar is not a function
+mario.hablar();<b>
+</b></p></pre>
+</div>
+<!-- Fin de la segunda caja de c贸digo -->
+          </span>
+<p></p>
+<p><span class="" style="font-size: large; color: #010614 ;">Como se puede contemplar, en el caso de definir el método privado, no es posible ejecutarlo desde fuera de una clase, salvo que lo hagamos a través de un método público que llame internamente al método privado.</span></p>
+<p><br></p>
+<code>
+</code><code>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script></code></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209188"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Herencia de Clases</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">A medida que trabajamos con <span class="" style="color: rgb(0, 61, 245);">Clases</span> y <span class="" style="color: rgb(0, 61, 245);">Objetos</span> en nuestro código, una de
+            las características fundamentales que nos ayudan a reutilizar y simplificar código es la herencia de <span class="" style="color: rgb(0, 61, 245);">Clases</span>. Con esta característica podemos establecer una jerarquía de elementos y reutilizar
+            código según en qué nivel se encuentre cada elemento.</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"></span></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">¿Qué es la herencia de clases?</p>
+        </div>
+        <p></p>
+        <p style=""><span style="color: #010614 ;">A grandes rasgos, se puede denominar herencia de clases a la característica donde una clase hija obtiene las propiedades y métodos de una <span class="" style="color: rgb(0, 61, 245);">Clases </span>padre
+            porque se ha establecido una relación entre ambas. Esa relación se establece a través de la palabra clav<span class="" style="font-size: large;"><span>e </span></span>
+            </span><span><span class="" style="font-size: large;">
+            </span><span style="color: #010614 ;"><span style=""><code style=""><span class="" style="font-size: large;">extends</span></code>
+            </span>
+            </span>
+            </span><span style="color: #010614 ;"><span class="" style="font-size: large;">, c</span>omo aprenderemos más adelante.</span><br></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">Por ejemplo, tomemos el caso donde teníamos formas geométricas para trabajar con él.&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"> </span></p>
+        <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;">Observa que en primer lugar tenemos una clase padre llamada Forma que representa una forma geométrica abstracta. Dicha forma geométrica tendrá las características comunes a todos los elementos inferiores (el color, grosor del borde, etc.):&nbsp;</p>
+        </div>
+        <p style="text-align: center; color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><b id="docs-internal-guid-550f6364-7fff-c683-a260-1707b6a3001e"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfkshB5cgDJEBQs2aq4jWysikYYCDkKzjvpszxcaMKnrXzYgLDPoqawxrSSXkkfUqZ7l721G99lLi9tWCbDHEH_I66KdPAOocLA_xTePCUSafKJh2tVvauMpcGBZb4ri3QkBv1xZJfZZ_drjxrtSuUO7KVkz0MCJo7azxHyfUPz4gCtsoDXgg?key=tmjCGr7C2g7zI8Py-PIVRg" width="602" height="256"></b></b></span></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">Luego, tenemos varias clases más concretas denominadas clases hijas: Cuadrado, Circulo y Triangulo. Dichas clases tendrán las características propias que necesitará cada una de ellas:</span></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"> <!-- 1 -->
+</span></p>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span class="" style="font-size: large; color: #010614 ;"><b>El Cuadrado</b> tendrá una propiedad que será lado.</span></p>
+            </div>
+        </div>
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span class="" style="font-size: large; color: #010614 ;"><b>El Círculo</b> tendrá una propiedad radio y otro diámetro.</span></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span class="" style="font-size: large; color: #010614 ;"><b>El Triángulo </b>tendrá una propiedad base y otra altura.</span></p>
+            </div>
+        </div>
+        <p></p>
+        <p style=""><span style="color: #010614 ;">Además, estas clases heredan las características comunes de su padre, en este caso de la <span class="" style="color: rgb(0, 61, 245);">Clase Forma</span>. Así, finalmente tendremos una jerarquía de clases
+            que se basa en clases anteriores heredadas.</span><br></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">Por ejemplo, en el primer caso, los elementos c1 y c2 son cuadrados, objetos generados (instanciados) a partir de la <span class="" style="color: rgb(0, 61, 245);">Clase Cuadrado</span>,
+            que tienen cada uno una propiedad lado, definida en <span class="" style="color: rgb(0, 61, 245);">Cuadrado,</span> y además heredan propiedades comunes de la <span class="" style="color: rgb(0, 61, 245);">Clase Forma</span>, como color. De
+            la misma forma, ocurrirá con el resto de elementos.</span>
+        </p>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209189"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Extender una clase</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">En <b>Javascript</b> podemos «extender clases» de forma muy similar a como se hace en otros lenguajes de programación. Vamos a pasar a código el ejemplo anterior, utilizando herencia. Observa que en la clase hija se utiliza la palabra clave extends seguida de la clase padre que va a heredar:</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><!-- Inicio de la primera caja de c贸digo -->
+</b></span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;"><b>
+       <span style="float: left;">JavaScript</span>
+    <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+    </span>
+</b></div><b>
+<div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+</div>
+<div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+    <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1">                  <p> // Clase padre
+class Forma {
+ constructor() {
+   console.log('Soy una forma geométrica.');
+ }
+}
+
+// Clase hija
+class Cuadrado extends Forma {
+ constructor() {
+   super();
+   console.log('Soy un cuadrado.');
+ }
+}
+</p></pre>
+</div>
+<!-- Fin de la primera caja de c贸digo -->
+          </b>
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">Vemos que la clase padre Forma muestra un mensaje en su constructor. Cada clase hija extiende de su clase padre, por lo que la clase Cuadrado será una mezcla de lo que tiene la clase Forma más lo que tiene la clase Cuadrado. Vamos a instanciar los objetos del ejemplo y a comprobarlo:</span></p>
+        <p><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><span class="" style="color: rgb(239, 69, 64);"><!-- Inicio de la segunda caja de c贸digo -->
+</span></b>
+            </span>
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;"><b>
+        <span style="float: left;">JavaScript</span>
+    <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(2)">
+        <span id="copyText2">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon2" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+    </span>
+</b></div><b>
+<div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+</div>
+<div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+    <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer2">         <p>const c1 = new Cuadrado();
+// Soy una forma geométrica.
+// Soy un cuadrado.
+</p></pre>
+</div>
+<!-- Fin de la segunda caja de c贸digo -->
+          </b>
+
+        <p></p>
+        <p><span class="" style="font-size: large; color: #010614 ;"> </span></p>
+        <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;">Observa que al crear la instancia c1 a partir de la clase Cuadrado, se ha ejecutado el constructor de Cuadrado, el cuál tiene una llamada a <code> <span class="" style="font-size: large;">super()</span></code><span class="" style="font-size: large;">.</span></p>
+        </div>
+        <p></p>
+        <p><span style="color: #010614 ;">Esta es una función especial que llama al constructor de la clase padre, por lo que antes de continuar, pasa a ejecutarse el constructor de Forma, donde se muestra el mensaje Soy una forma geométrica. Al terminar, se vuelve al constructor de la clase Cuadrado, y se muestra el texto Soy un cuadrado.</span><br></p>
+        <p><br></p>
+    </div>
+</div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209190"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">El método super</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;">Como hemos estudiado, el método especial </span><code><span class="" style="font-size: large;">super()</span></code><span class="" style="font-size: large;"> s</span>e
+            encarga de llamar al constructor de la clase <span>padre </span>(también denominada <span class="" style="color: rgb(0, 61, 245);">Superclase</span>, de ahí su nombre), por lo que funcionará en cascada e irá ejecutando primero el constructor
+            del padre, y luego el texto del constructor del hijo. Hagamos algunos cambios interesantes en el ejemplo anterior, para reutilizar algunos elementos heredados.
+            </span>
+        </p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Observa el siguiente ejemplo</p>
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;"><span class="" style="font-size: large;">La clase padre tiene una propiedad&nbsp;</span><code><code><span class="" style="font-size: large;">type&nbsp;</span></code></code><span class="" style="font-size: large;">y otra color. Además, tiene un método </span><code><span class="" style="font-size: large;">show()</span></code><span class="" style="font-size: large;"> y
+                    otro método </span><code><span class="" style="font-size: large;">setColor()</span></code><span class="" style="font-size: large;">.</span></span><span class="" style="font-size: large;">
+                </span></p>
+            </div>
+        </div>
+        <p style=""><span style="color: #010614 ; font-size: large;" class="">Estos cuatro elementos son elementos que pertenecen a la clase padre, pero que cualquier clase hija que extienda de ella, heredará esos elementos. Por otro lado, fijate que la clase hijo sobreescribe la propiedad </span>
+            <span class="" style="font-size: large;">
+                </span><span style="color: #010614 ;"><span class="" style="color: rgb(0, 61, 245);"><code><span class="" style="font-size: large;">type</span></code>
+            </span><span class="" style="font-size: large;">
+            </span></span><span style="color: #010614 ; font-size: large;" class="">:</span><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><!-- Inicio de la primera caja de c贸digo -->
+</b></span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;"><b>
+       <span style="float: left;">JavaScript</span>
+    <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+    </span>
+</b></div><span>
+<div style="font-weight: bold; background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); padding: 10px; border-radius: 0px;">
+</div>
+<div style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px; border-radius: 0px 0px 5px 5px;">
+    <pre style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; font-size: large; margin-top: 0px;" id="codeContainer1"><b>                     </b><p style=""> class Forma {
+ type = 'geométrica';
+ color = 'naranja';
+
+ constructor() {
+   console.log('Constructor padre finalizado.');
+ }
+
+ show() {
+   console.log(`Soy una forma ${this.type} de color ${this.color}`);
+ }
+
+ setColor(color) {
+   this.color = color;
+ }
+}
+
+class Cuadrado extends Forma {
+ type = 'cuadrada';
+
+ constructor() {
+   super();
+   console.log('Constructor hijo finalizado.');
+ }
+}
+
+const c1 = new Cuadrado();
+c1.show(); // Soy una forma cuadrada de color naranja
+
+const c2 = new Cuadrado();
+c2.setColor('amarillo');
+c2.show(); // Soy una forma cuadrada de color amarillo<b>
+
+</b></p></pre>
+</div>
+<!-- Fin de la primera caja de c贸digo -->
+          </span>
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">Vamos a crear los dos objetos del gráfico anterior.&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;"> </span>
+            <!-- 1 --><span class="" style="font-size: large;">
+</span></span>
+        </p>
+        <div class="row" style="margin-left: 32px">
+            <div><span class="" style="font-size: large;">
+                </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3"></svg><span class="" style="font-size: large; color: rgb(0, 61, 245);">   </span>
+                <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="font-size: large; color: rgb(0, 61, 245);">
+</span><span class="" style="font-size: large;">
+            </span></div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;">Al crear la instancia del objeto c1 a partir de Cuadrado y luego ejecutar el método </span><code><span class="" style="font-size: large;">.show()</span></code>
+                    <span class="" style="font-size: large;">
+                        </span><span class="" style="font-size: large;"> heredado del padre, veremos que se está ejecutando el código del método del padre, pero obtiene la información de&nbsp;</span><code><span class="" style="font-size: large;"><code><span class="" style="font-size: large;">type</span></code>
+                    <span class="" style="font-size: large;">&nbsp;</span>
+                    </span>
+                    </code><span class="" style="font-size: large;">
+                    </span><span class="" style="font-size: large;">sobreescrita por el hijo.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div><span class="" style="font-size: large;">
+                </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3"></svg><span class="" style="font-size: large; color: rgb(0, 61, 245);">  
+  </span>
+                <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="font-size: large; color: rgb(0, 61, 245);">
+</span><span class="" style="font-size: large;">
+            </span></div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span class="" style="font-size: large; color: #010614 ;"><span class="" style="font-size: large;">Si miramos el segundo ejemplo, del objeto c2, notaremos que en él ejecutamos el método </span><code><span class="" style="font-size: large;">.setColor()</span></code>
+                    <span class="" style="font-size: large;"> del padre, que modifica la propiedad color del hijo, cambiándola por el color&nbsp;</span><b><span class="" style="font-size: large;">amarillo</span></b><span class="" style="font-size: large;">. Al ejecutar el método </span><code><span class="" style="font-size: large;">.show()</span></code>
+                    <span class="" style="font-size: large;"> comprobaremos que nos muestra la información sobreescrita por la clase hijo.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <p></p>
+        <p style=""><span style="color: #010614 ;"><span class="" style="font-size: large;">Recordá que es obligatorio llamar a </span><code><span class="" style="font-size: large;">super()</span></code><span class="" style="font-size: large;"> en el constructor de la clase hija antes de acceder a una propiedad mediante </span></span>
+            <span style="color: #010614 ;"><code style=""><span class="" style="font-size: large;">this</span></code></span><span style="color: #010614 ;"><span class="" style="font-size: large;">. De lo contrario, te aparecerá el siguiente mensaje: </span><code><span class="" style="font-size: large;">Uncaught ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor.</span></code></span><br></p>
+        <p><br></p>
+    </div>
+</div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209191"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Acceder a métodos del padre</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: #010614 ;">Como hemos estudiado, la palabra clave <code><span class="" style="font-size: large;">super()</span></code> hace referencia a la <span>superclase</span>, es decir, a la clase<span> <span style="">padre</span></span>.
+            No obstante, también podemos utilizarlas en métodos para llamar a métodos del padre según nos interese heredar o no:</span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><!-- Inicio de la primera caja de c贸digo -->
+</b></span></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: rgb(68, 68, 68); color: rgb(255, 255, 255); padding: 10px; border-radius: 0px;">
+        </div>
+        <div style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px; border-radius: 0px 0px 5px 5px;">
+            <pre style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; font-size: large; margin-top: 0px;" id="codeContainer1">           <p style=""> class Padre {
+ soloPadre() {
+   console.log('Tarea en el padre...');
+ }
+ padreHijo() {
+   console.log('Tarea en el padre...');
+ }
+ sobreHijo() {
+   console.log('Tarea en el padre...');
+ }
+}
+
+class Hijo extends Padre {
+ padreHijo() {
+   super.padreHijo();
+   console.log('Tarea en el hijo...');
+ }
+
+ soloHijo() {
+   console.log('Tarea en el hijo...');
+ }
+ sobreHijo() {
+   console.log('Tarea en el hijo...');
+ }
+}<b>
+</b></p></pre>
+        </div>
+        <!-- Fin de la primera caja de c贸digo -->
+
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"><!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        </span></p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Observa&nbsp;</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><span><span class="" style="font-size: large;">La clase Padre implementa los métodos    </span><code><span class="" style="font-size: large;">soloPadre()</span></code><span class="" style="font-size: large;">, </span><code><span class="" style="font-size: large;">padreHijo()</span></code>
+                    <span class="" style="font-size: large;"> y </span><code><span class="" style="font-size: large;">sobreHijo()</span></code><span class="" style="font-size: large;">.&nbsp;</span></span><span class="" style="font-size: large;">Por otro lado, la clase Hijo implementa los métodos </span><code><span class="" style="font-size: large;">padreHijo()</span></code>
+                        <span class="" style="font-size: large;">, </span><code><span class="" style="font-size: large;">soloHijo()</span></code><span class="" style="font-size: large;"> y </span><code><span class="" style="font-size: large;">sobreHijo()</span></code><span class="" style="font-size: large;">.&nbsp;</span></p>
+            </div>
+        </div>
+        <p style=""><span style="color: #010614 ;">Analicemos cómo se comportan si creamos una instancia de la clase hija por medio de un new Hijo() y ejecutamos cada uno de ellos:</span><br></p>
+        <p style=""><span class="" style="font-size: large; color: #010614 ;"><!--Tabla 4 columnas varias filas de colore-->
+</span></p>
+        <table class="tabla-filaColores texto-principal" style="width: 80%; margin: 0 auto;">
+            <colgroup span="1" width="15%"></colgroup>
+            <colgroup span="1" width="15%"></colgroup>
+            <colgroup span="1" width="15%"></colgroup>
+            <colgroup span="1" width="70%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado">Método</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">Clase Padre</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">Clase Hija</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">¿Se ejecuta el método en una instancia de la clase hija?</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado">SoloPadre()</td>
+                    <td class="texto-margen-tabla texto-centrado">ok</td>
+                    <td class="texto-margen-tabla texto-centrado">X</td>
+                    <td class="texto-margen-tabla">Se ejecuta porque se hereda el método del padre hacia el hijo.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado">SoloHijo()</td>
+                    <td class="texto-margen-tabla texto-centrado">X</td>
+                    <td class="texto-margen-tabla texto-centrado">ok</td>
+                    <td class="texto-margen-tabla">Se ejecuta porque simplemente existe en el hijo.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado">PadreHijo</td>
+                    <td class="texto-margen-tabla texto-centrado">ok</td>
+                    <td class="texto-margen-tabla texto-centrado">ok</td>
+                    <td class="texto-margen-tabla">Se ejecutan ambos porque super llama al padre primero.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado">SobreHijo</td>
+                    <td class="texto-margen-tabla texto-centrado">ok</td>
+                    <td class="texto-margen-tabla texto-centrado">ok</td>
+                    <td class="texto-margen-tabla">Se ejecuta sólo el hijo, porque sobreescribe el heredado del padre.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p></p>
+        <p style=""><br></p>
+    </div>
+</div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[712824,712825,712839,712840,712845,712862,712865,712866,712869,712870,712873]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1755729856/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2801014, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1756036238); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\nconfig: [\"Accessible.js\", \"Safe.js\"],\r\nerrorSettings: { message: [\"!\"] },\r\nskipStartupTypeset: true,\r\nmessageStyle: \"none\"\r\n});","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random68aafd2b8dd542'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random68aafd2b8dd542'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
