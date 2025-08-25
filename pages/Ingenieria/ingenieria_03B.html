@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>2.Paradigmas organizacionales | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1755871564/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, 2.Paradigmas organizacionales | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1755871564_1755730568/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"nsmmsBYi2s","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1755871564","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1755729856","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":22800,"courseContextId":2812100,"contextid":2812149,"contextInstanceId":723423,"langrev":1755847445,"templaterev":"1755729856"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1755729856\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1755729856\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1755729856\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1755729856\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1755729856\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?config=TeX-AMS_SVG%22&delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-22800 context-2812149 cmid-723423 cm-type-book category-3279 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1755871564/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>2.Paradigmas organizacionales</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Ingeniería de Software - 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        2.Paradigmas organizacionales
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        lunes, 25 de agosto de 2025, 18:16
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=22800&amp;section=9" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723422" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=723424" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723425" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Analogía entre seres vivos y organizaciones" class="font-weight-bold text-decoration-none" href="#ch222821">1. Analogía entre seres vivos y organizaciones</a><ul><li><a title="1.1. Ejemplo" class="text-decoration-none" href="#ch222822">1.1. Ejemplo</a></li></ul></li><li><a title="2. Paradigma Rojo" class="font-weight-bold text-decoration-none" href="#ch222823">2. Paradigma Rojo</a><ul><li><a title="2.1. Organizaciones rojas" class="text-decoration-none" href="#ch222824">2.1. Organizaciones rojas</a></li></ul></li><li><a title="3. Paradigma Ámbar" class="font-weight-bold text-decoration-none" href="#ch222825">3. Paradigma Ámbar</a><ul><li><a title="3.1. Organizaciones ámbar" class="text-decoration-none" href="#ch222826">3.1. Organizaciones ámbar</a></li></ul></li><li><a title="4. Paradigma Naranja" class="font-weight-bold text-decoration-none" href="#ch222827">4. Paradigma Naranja</a><ul><li><a title="4.1. Organizaciones naranja" class="text-decoration-none" href="#ch222828">4.1. Organizaciones naranja</a></li><li><a title="4.2. La sombra naranja" class="text-decoration-none" href="#ch222829">4.2. La sombra naranja</a></li></ul></li><li><a title="5. Paradigma Verde" class="font-weight-bold text-decoration-none" href="#ch222831">5. Paradigma Verde</a><ul><li><a title="5.1. Organizaciones verdes" class="text-decoration-none" href="#ch222830">5.1. Organizaciones verdes</a></li></ul></li><li><a title="6. Relevancia de paradigmas" class="font-weight-bold text-decoration-none" href="#ch222835">6. Relevancia de paradigmas</a></li><li><a title="7. Paso evolutivo" class="font-weight-bold text-decoration-none" href="#ch222833">7. Paso evolutivo</a><ul><li><a title="7.1. Organizaciones Teal" class="text-decoration-none" href="#ch222832">7.1. Organizaciones Teal</a></li><li><a title="7.2. Caso de éxito" class="text-decoration-none" href="#ch222836">7.2. Caso de éxito</a></li><li><a title="7.3. Nueva metáfora" class="text-decoration-none" href="#ch222834">7.3. Nueva metáfora</a></li></ul></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222821"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Analogía entre seres vivos y organizaciones&nbsp;</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <span id="docs-internal-guid-47a6990e-7fff-ba25-3c6b-e14d65eadc38"><p dir="ltr" style="font-weight: bold;"><span style="color: rgb(51, 51, 51); font-weight: 400;" data-sider-select-id="70d55ea4-693f-44d7-8d31-9fdb06e4642e"></span></p>
+        <p dir="ltr"><span data-sider-select-id="530fbbc2-fbfb-4ecc-8380-552fb4c82d03">En el mundo empresarial y organizacional, existen diversos tipos de organizaciones que se estructuran y comportan de manera diferente según sus&nbsp;</span><span data-sider-select-id="530fbbc2-fbfb-4ecc-8380-552fb4c82d03"><span data-sider-select-id="1fc2f785-cec5-498f-a5a5-ad52f1e00985"><span data-sider-select-id="c078f7bb-0abe-4d2c-bd86-5bb0c607340a" style="color: rgb(0, 46, 184);" class="">paradigmas y modelos<span class="" style="color: rgb(51, 51, 51);">.</span></span></span>&nbsp;</span><span data-sider-select-id="530fbbc2-fbfb-4ecc-8380-552fb4c82d03">Estos paradigmas representan distintas formas de entender y gestionar las organizaciones, influenciando su estructura, comportamiento y cultura organizacional.</span>
+        </p>Te proponemos pensar en las organizaciones como una analogía de un ser vivo.&nbsp;</span>
+        <p></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Reflexionemos sobre este caso:</p>
+        </div>
+
+        <p dir="ltr" style="font-weight: bold;"><span style="color: rgb(51, 51, 51); font-weight: 400;"><br>Aristóteles, el gran filósofo y científico griego, proclamó en un tratado escrito en el año 350 a.c. que las mujeres tienen menos dientes que los hombres. Hoy sabemos que esto es un disparate, pero el mundo occidental lo aceptó sin reservas durante cerca de dos mil años. Hasta que un día alguien tuvo la más revolucionaria de las ideas: “¡Contemos!”</span><br></p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600" data-sider-select-id="295f8a76-24b7-4db1-b418-07b53e3cbc00">El método científico</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px" data-sider-select-id="c2d55fe4-084d-4eb7-a5ce-69bd9f60d31d"> (formular una hipótesis y luego ponerla a prueba) está tan enraizado en nuestro pensamiento que nos cuesta concebir que alguien inteligente pueda confiar ciegamente en una autoridad sin poner a prueba sus supuestos. Sería hasta aceptable
+                    pensar que tal vez la gente de esa época no fuese tan inteligente. Pero, antes de juzgarla con tanta dureza, preguntémonos lo siguiente: ¿cabe la posibilidad de que las generaciones futuras se diviertan a nuestra costa de la misma
+                    manera? ¿Somos nosotros también prisioneros de una forma simplista de entender el mundo?</p>
+            </div>
+        </div>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="9f4693a1-4eab-47d0-88f0-585ff5489b63">Existen razones para creerlo. A modo de ejemplo, podemos plantear una sencilla pregunta:<span> <span data-sider-select-id="0167ef1b-1aad-4d09-a32d-9d72bc72c1e9" style=""><span style="color: rgb(0, 46, 184);" data-sider-select-id="fa138b8e-effe-4c9f-a749-a5c9b548a515">¿Cuántos cerebros tiene un ser humano?&nbsp;</span></span>
+            </span>
+            </span>
+        </p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Seguramente responderás que uno o, si sospechas que es una pregunta capciosa, que dos, si tomamos en cuenta el cerebro derecho y el izquierdo.&nbsp;</span></p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Hoy sabemos que tenemos tres: 
+          
+          <!-- 1 -->
+        </span></p>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p>el gran cerebro ubicado en nuestra cabeza,</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>uno pequeño en nuestro corazón,</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>otro en nuestro intestino.</p>
+            </div>
+        </div>Los dos últimos son en comparación mucho más pequeños, pero aun así son sistemas nerviosos totalmente autónomos.
+        <p></p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600"><span style="color: rgb(1, 6, 20); font-weight: 400;">Aquí es donde el asunto se pone interesante: los cerebros del corazón y del intestino se descubrieron hace poco tiempo, a pesar de que la tecnología nos habría permitido identificarlos hace mucho.</span><br></p>
+            </div>
+        </div>
+        <p dir="ltr" style=""><br></p>
+        <div style="margin-left: 3%; margin-right: 3%;"><span><span class="" style="color: rgb(255, 51, 102);"><span class="" style="color: rgb(0, 46, 184);"></span></span>
+            </span>
+        </div>
+    </div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222822"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Continuamos con el ejemplo de los cerebros:</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p></p><span id="docs-internal-guid-20621dbb-7fff-793d-a09d-7a0613183fae"><p dir="ltr" style=""></p></span><span id="docs-internal-guid-86ea0acd-7fff-a491-1d25-b5fab8ef5b07"><p dir="ltr" style="" data-sider-select-id="d4090f08-4219-418a-b735-eac3c3b9ab2d">Para los "cerebros" sólo necesitamos un cadáver, un cuchillo y un sencillo microscopio.&nbsp;</p>
+      <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+    <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><span class="sub_negrita" style="font-weight: normal;">De hecho, el cerebro del intestino lo descubrió un médico alemán llamado Auerbach, en la década de 1860. Dos colegas ingleses, Bayliss y Starling afinaron luego su descubrimiento.</span></p>
+    </div>
+    <p dir="ltr" style=""><br>Después sucedió algo extraordinario, de alguna forma, los médicos se olvidaron de este cerebro. ¡Lo perdieron de vista por completo durante un siglo! Sólo a fines de los años noventa lo redescubrieron el neurocientífico estadounidense Michael
+        Gershon y sus colaboradores.</p>
+
+    <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+        <div style="margin:16px">
+            <p style="color: #5811BB; font-size: large; font-weight: 600">¿Cómo es posible que los círculos médicos se olvidaran de la existencia de un cerebro?</p>
+            <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Guarda relación con el sistema de creencias de nuestra época: en el contexto de una visión jerárquica del mundo, sólo puede haber un cerebro al mando, así como sólo debe haber un jefe al frente de cada organización.&nbsp;</p>
+        </div>
+    </div>
+    <p dir="ltr" style="">Si bien las expresiones coloquiales “saber con el corazón” y “saber con las extrañas” existen desde hace mucho, eso de que haya tres cerebros autónomos funcionando al mismo tiempo no es compatible con la idea de que el mundo necesita jerarquías claras
+        para poder funcionar. Quizá no sea por casualidad que hayamos descubierto (o redescubierto) los otros dos cerebros precisamente cuando internet se convirtió en una influencia dominante para nosotros.&nbsp;<br><br></p>
+    <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+        <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;"><span class="sub_negrita" style="font-weight: normal;">La era de internet ha precipitado una nueva visión de mundo que contempla la posibilidad de una inteligencia distribuida en lugar de una jerarquía vertical.</span><b class="sub_negrita">&nbsp;</b></p>
+    </div>
+    <p dir="ltr" style=""><br></p>
+    <p dir="ltr" style="">En esa visión del mundo podemos dar lugar a la idea de que tenemos más de un cerebro, y que todos pueden trabajar juntos con una inteligencia compartida.</p>
+    <p dir="ltr" style="">Resulta difícil entender del todo como la gente de la Edad Media creyó el postulado aristotélico de que las mujeres tenían menos dientes que los hombres. Aun así, podríamos encontrarnos tan prisioneros de nuestros pensamientos como ellos.&nbsp;</p>
+    <p dir="ltr" style="">Los científicos modernos no observaron a través del microscopio con la suficiente atención porque “solo puede haber un cerebro”, así como los contemporáneos de Galileo se negaron a mirar por el telescopio porque era inconcebible que nuestro planeta,
+        creado por Dios, pudiera ser otra cosa que el centro del universo.</p>
+    </span><br>
+</div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222823"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Paradigma Rojo</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p><span id="docs-internal-guid-44231535-7fff-52ee-d23f-226f5512a302"><p dir="ltr"></p></span><span id="docs-internal-guid-48458f74-7fff-d935-b04f-010f828cab6e"><p dir="ltr" style="">Hagamos un repaso relámpago de la historia de las sociedades y las organizaciones.</p>
+      <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Prehistoria:&nbsp;</span>Durante decenas de miles de años, los seres humanos vivieron en clanes que reunían a unas pocas docenas, o hasta
+        unos pocos cientos de personas, como mucho. En estos clanes había ancianos venerados, pero no había jefe, no había jerarquía ni una división del trabajo significativa. De modo que no podía hablarse todavía de organización.</p>
+    </div>
+</div>
+
+
+
+<!-- 2 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Estadio Rojo:</span> Hace unos 1000 años entramos en un nuevo estadio (Impulsivo-Rojo). Aparecieron las sociedades formadas por varios miles de personas. Para tratar con este nivel totalmente nuevo de complejidad,
+            apareció el papel del jefe que hace cumplir el orden social, a través de la fuerza si era necesario.&nbsp;</p>
+    </div>
+</div>
+<!-- Cuadro amarillo borde violeta -->
+<br>
+
+<div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+    <div style="margin:16px">
+        <p style="color: #5811BB; font-size: large; font-weight: 600">Las investigaciones indican</p>
+        <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">que en este estadio las personas actúan de una manera bastante egocéntrica e impulsiva. Todavía no han interiorizado las reglas y es esencial que alguien las imponga desde arriba. Desde esta perspectiva, todo se ve a través del filtro del poder.</p>
+    </div>
+</div>
+<!-- Fin Cuadro amarillo borde violeta -->
+
+<p></p>
+<p dir="ltr" style="">Hoy en día nos horrorizamos fácilmente ante el uso crudo del poder por parte del Rojo y solemos despreciar la calidad heroica, iniciadora y pionera que ese estadio apostó a la trayectoria humana. Sin embargo, las tribus salieron de sus hábitats y empezaron
+    a explotar nuevos territorios. Los más jóvenes podían deshacerse de la perspectiva sofocante de sus mayores siempre que una situación requiriese un enfoque nuevo. La toma de iniciativa ambiciosa y la emprendeduría no existirían sin la energía obstinada
+    que apareció con el estadio Rojo.</p>
+</span><br>
+<span class="" style="color: rgb(0, 46, 184);"></span>
+</div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222824"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Organizaciones rojas</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <!--Inicio Caja definición celeste-->
+        <p></p>
+        <div class="row row-cols-auto">
+            <div>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="color: rgb(12, 118, 240);"><span class="" style="color: rgb(51, 51, 51);">El&nbsp;</span><span class="" style="color: rgb(0, 46, 184);">aglutinante de las organizaciones&nbsp;rojas</span>&nbsp;</span><span class="" style="color: rgb(51, 51, 51);">es la lealtad y el miedo que inspira el jefe para mantener a los soldados rasos a raya. Si muestra signos de debilidad o se vuelve demasiado avaricioso y desatiende su deber de cuidar de sus subalternos, es posible que alguien intente derrocarle, del mismo modo que los lobos jóvenes desbancan a un macho alfa mayor.&nbsp;</span></p>
+                <p style="margin-right: 10px; margin-left: 20px"><span class="" style="color: rgb(51, 51, 51);">Estas organizaciones tienden a ser inestables y no progresan bien, pero son muy emprendedoras y reactivas en los entornos caóticos.&nbsp;</span></p>
+            </div>
+        </div>
+        <!--Fin Caja definición-->
+        <p></p><span id="docs-internal-guid-1d09f890-7fff-4006-9a6c-d0e33fec0cb1"><p dir="ltr"></p></span><span id="docs-internal-guid-090f3cc7-7fff-969a-2dc7-2ba23a0fe23e"><p dir="ltr" style=""><span style="color: rgb(0, 61, 245);"><b><span class="sub_negrita" style="color: rgb(0, 46, 184);">Prototipo: Mafia, banda callejera</span></b>
+        </span><br></p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Históricamente las primeras organizaciones rojas aparecieron cuando las tribus se organizaron para atacar y someter a las tribus vecinas. El prototipo de organizaciones rojas actuales son la mafia y una banda callejera involucrada en el narcotráfico.</span></p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></p>
+            <!--Caja + Ejemplo + sin imagen + texto-->
+            <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+                <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                    <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                    </span>
+                </p>
+                <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                    <div class="col" style="">
+                        <p style="">Muchas pequeñas empresas en las que los jefes-fundadores hacen todo lo posible para conseguir sus objetivos y se implican en todas las actividades, ignorando las estructuras o procesos que limitarían su capacidad de actuación.&nbsp;<br></p>
+                        <ul style="color: rgb(1, 6, 20);">
+                        </ul>
+                        <p style="color: rgb(1, 6, 20);"></p>
+                    </div>
+                </div>
+            </div>
+            <!--Fin Caja + Ejemplo + imagen + texto-->
+            <p dir="ltr" style=""><br></p>
+            <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(0, 61, 245);"><b><span class="sub_negrita" style="color: rgb(0, 46, 184);">Dos avances clave</span></b>
+                </span>
+            </p>
+            <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Las organizaciones rojas representaron dos avances extraordinarios: la división del trabajo y la autoridad vertical. Hoy en día estos dos logros nos pueden dejar cierto mal sabor de boca, pero desde un punto de vista histórico fueron innovaciones importantísimas que permitieron a los grupos que trabajaban juntos hacer frente a niveles de complejidad nunca vistos hasta entonces.</span></p>
+            </span><br><span class="" style="color: rgb(255, 51, 102);"></span></div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222825"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Paradigma Ámbar</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p><span id="docs-internal-guid-2e3a7b9b-7fff-e451-f938-d60854eb3428"><p dir="ltr"></p></span><span id="docs-internal-guid-a20ea236-7fff-562d-ee9b-87d3e683d7d6"><p dir="ltr" style="">Ya hacia el año 4000 a. C. en Mesopotamia, surgió una cosmovisión más compleja. Eso facilitó el salto del mundo de los proto imperios a la era de la agricultura, a los Estados y los imperios, las burocracias y las religiones organizadas.</p><p dir="ltr" style="">Las sociedades agrarias están muy estratificadas en clases sociales o castas. Todas ellas se basan en alguna mitología fundadora, con normas divinas e inmutables que definen el bien y el mal.</p><p dir="ltr" style="">Las personas, en esta época, han aprendido a controlar la impulsividad del estadio Rojo: han interiorizado las normas y ejercen la autodisciplina al servicio de las creencias de la comunidad.&nbsp;</p><div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">La culpa y la vergüenza</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">son el aglutinante de la sociedad, y la gente dedica mucha energía a intentar adaptarse, vistiendo con la ropa adecuada, actuando como se espera de ellos y pensando como los demás.</p></div></div><p></p>
+        <p dir="ltr" style="">Las encuestas demuestran que buena parte de la población adulta hoy en día opera desde este estadio, aunque desde muchos sistemas de creencias diferentes: un fundamentalista cristiano de derecha y un líder sindical difieren en casi todos los temas,
+            y sin embargo al mismo tiempo ambos podrían actuar desde el <span class="" style="color: rgb(0, 46, 184);">mundo de las certezas Ámbar-Conformista.</span></p>
+        </span>
+        <span class="" style="color: rgb(0, 46, 184);">
+            </span><br>
+    </div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222826"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Organizaciones ámbar</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><span id="docs-internal-guid-b3084483-7fff-885f-7434-8e343543f46b"></span></p>
+        <p dir="ltr"><span id="docs-internal-guid-b3084483-7fff-885f-7434-8e343543f46b"></span></p><span id="docs-internal-guid-7fec2b60-7fff-16fd-c2a5-b3d66aaf5fbe"><p dir="ltr" style="">Estas organizaciones tienen claras capas que se aplican formando una pirámide jerárquica. El soldado raso, el sargento, el lugarteniente, el coronel, el general. Los humildes curas, que están por debajo de los obispos, los arzobispos, los cardenales y, por encima de todo, el Papa.&nbsp;</p><p dir="ltr" style="">Las <span class="" style="color: rgb(0, 46, 184);">organizaciones ámbar </span>viven
+        en un mundo de estabilidad y certidumbre. Todo el mundo sabe lo que se espera de su papel. Los rituales y procesos estables se encargan de que la vida resulte predecible para todos.</p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Avance 1: Procesos replicables:</p>
+        </div>
+
+        <p dir="ltr" style=""><br>Las organizaciones ámbar, como las sociedades agrarias, se apoyan en <span class="" style="color: rgb(0, 46, 184);">procesos estables y replicables</span>. La cosecha del año próximo se basará en el mismo patrón que la de este año y que la
+            del año pasado.&nbsp;</p>
+        <p dir="ltr" style="">Una vez los procesos estables están en orden, el conocimiento fundamental ya no depende de ninguna persona concreta: está implícito en la organización. Cualquier persona puede ser sustituida, hasta el Papa, y la organización seguirá operando sin
+            fisuras.<br></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Avance 2: Jerarquía estable</p>
+        </div>
+
+        <p dir="ltr" style=""><br>Las organizaciones ámbar se inventaron los títulos formales de los oficios, las descripciones de las profesiones y las estructuras jerárquicas. El pensamiento tiene lugar arriba; la ejecución, abajo. La gente de cualquier nivel se identifica
+            con su función, con su casilla, en el organigrama.&nbsp;</p>
+        <p dir="ltr" style="">El cura ya no conspira secretamente para apuñalar al obispo y ocupar su sitio. Eso ha permitido que las organizaciones ámbar alcancen dimensiones antes impensables (mandando misioneros a la otra punta del planeta, por ejemplo) y resultados sin
+            precedentes.&nbsp;</p>
+        <p dir="ltr" style="">Las organizaciones ámbar han construido sistemas de irrigación, pirámides y catedrales que jamás se habrían imaginado en una etapa anterior.<br><br></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplos actuales:</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    Muchos ejércitos, instituciones, religiones, agencias gubernamentales, sistemas de escuela pública y universidades están dirigidos todavía hoy siguiendo los criterios de las organizaciones ámbar. A menudo operan con la suposición oculta de que hay una
+                    manera correcta de hacer las cosas, que el mundo es (o debe ser) inmutable, y que el empleo para toda la vida ha de ser la norma. Cuando el mundo cambia, les cuesta aceptar esa necesidad de cambio y adaptarse a él.<br>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+
+
+
+        </span>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222827"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Paradigma Naranja</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p><span id="docs-internal-guid-5ddcd652-7fff-46d9-b52f-33f99244a9d2"><p dir="ltr" style="">Es el paradigma de las <span class="" style="color: rgb(0, 46, 184);">revoluciones científicas e industriales</span>. En este estadio, el mundo ya no
+        se ve como un universo fijo gobernado por las normas inmutables del bien y el mal.&nbsp;</p>
+        <p dir="ltr" style="">En cambio, se contempla como un mecanismo de relojería complejo cuyos funcionamientos internos y leyes naturales son susceptibles de ser estudiadas y comprendidas.&nbsp;</p>
+        <p dir="ltr" style="">Si soy más rápido, más listo, más innovador que los demás en entender y manipular el mundo, conseguiré más éxito, riqueza, beneficios, cuota de mercado o cualquier otra cosa que desee. Un mantra que define este paradigma dice que “puedes ser quien
+            quieras ser, que puedes conseguir todo lo que te propongas.”<br><br></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Piaget, psicólogo infantil, nos proporcionó un experimento que define el pensamiento cognitivo Naranja: a una persona se le dan tres vasos con un líquido transparente y se le dice que los puede mezclar para obtener el color amarillo.
+                        Las personas que operan con la cognición Ámbar o de estadios previos sencillamente se pondrían a mezclar los líquidos al azar.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+
+        <p dir="ltr" style=""><br>Los adolescentes que han alcanzado el estadio Naranja primero se formarán una imagen general del hecho de que hay que probar el vaso A con el B, luego el A con el C, luego el B con el C, etcétera. Probarán las distintas combinaciones una tras
+            otra.&nbsp;
+            <br></p>
+        <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><span class="sub_negrita" style="font-weight: normal;">La implicación es enorme: la persona en Naranja empieza a imaginarse posibles mundos distintos, para cuestionar los dogmas y los contratos sociales existentes.</span></p>
+        </div>
+        <p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93">
+        </p>
+        <p dir="ltr" style="">En los últimos dos siglos esta perspectiva ha transformado profundamente la humanidad, ha aportado unos niveles de prosperidad y esperanza de vida sin precedentes.&nbsp;<br></p>
+        <p dir="ltr" style="">La posibilidad de imaginar “qué pasaría si…” también nos ha liberado de la opresión del sistema de castas y de religiones, y ha reemplazado al gobierno feudal por el gobierno de la ley y la democracia.&nbsp;</p>
+        <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;"><span class="sub_negrita" style="font-weight: normal;">Esta perspectiva domina el pensamiento empresarial actual, es el punto de vista (a menudo inconsciente) que permea lo que se enseña en las escuelas de negocios de todo el mundo.</span></p>
+        </div>
+        <p dir="ltr" style=""><br></p></span>
+    </div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222828"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Organizaciones naranja</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p></p><span id="docs-internal-guid-0bbd6837-7fff-eb9f-24db-8bceefa7f8d4"><p dir="ltr" style=""><span class="" style="color: rgb(51, 51, 51);">Pensá en corporaciones que cotizan en bolsa, pensá en los bancos de Wall Street.&nbsp;</span>El
+        <span class="" style="color: rgb(0, 46, 184);">paradigma Naranja-Logro</span> marca profundamente la forma de las prácticas actuales del<i> management</i>. La mayoría de los directivos de empresas piensan de acuerdo con este marco mental; la mayoría
+        de los programas de MBA se basan en suposiciones Naranja; la mayoría de las corporaciones se apoyan en la manera Naranja de entender el <i>management</i>.&nbsp;</p>
+        <p dir="ltr" style="">Pensá en cualquier marca global, Wall-Mart, Nike, Coca-Cola, General Electric (GE), y es probable que encuentres una organización Naranja. Los Bancos de Wall Street son tal vez los ejemplos más llamativos: máquinas sin escrúpulos, innovadoras
+            y eficientes, en busca de beneficios.</p>
+        <p dir="ltr" style=""><span class="sub_negrita" style="color: rgb(0, 46, 184);">La metáfora dominante: las organizaciones como máquinas</span></p>
+        <p dir="ltr" style=""></p>El paradigma Naranja-Logro ve las organizaciones como máquinas, una metáfora que se refleja en la jerga ingenieril utilizada: unidades, capas, <i>inputs</i>, <i>outputs</i>, eficiencia, efectividad, flujos de información, cuellos de botella, reingeniería
+        y recortes. Los líderes y consultores diseñan estas "máquinas", donde las personas son recursos alineados con el organigrama y los cambios se planifican meticulosamente. Aunque las organizaciones Naranja pueden ser muy dinámicas y enérgicas, también
+        pueden resultar inertes y desalmadas.
+        <p dir="ltr" style=""></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Avance 1: Innovación</p>
+        </div>
+
+        <p dir="ltr" style=""><br>Las organizaciones Ámbar se basan en la creencia de que el mundo es inmutable, mientras que las organizaciones Naranja introducen el concepto de innovación y optimización constante. En un entorno Naranja, la competitividad se logra mediante
+            la creación de departamentos de I+D, marketing, y gestión de productos, así como la implementación de proyectos de equipo y colaboraciones interfuncionales.<br></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">A diferencia de las organizaciones Naranja, la iglesia católica y el sistema de escuelas públicas no suelen tener departamentos dedicados a la innovación o el marketing, ni adoptan proyectos interfuncionales de manera habitual.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Avance 2: Responsabilidad</p>
+        </div>
+        <p><br>Para innovar más rápido que los demás, las organizaciones Naranja aprovechan la inteligencia y creatividad de sus miembros mediante el <i>management </i>por objetivos. La alta dirección define un itinerario general y transmite los objetivos
+            hacia abajo, otorgando a los niveles inferiores cierta libertad para alcanzar estos objetivos de la mejor manera.</p>
+        <p>Para apoyar esta gestión, se desarrollaron prácticas como la planificación estratégica, presupuestos anuales, indicadores clave de rendimiento, cuadros de mando integral, evaluaciones de rendimiento, estructuras de bonos y participaciones de acciones.
+            Mientras que las organizaciones Ámbar se apoyaban en la coerción, las Naranja adoptaron incentivos y crearon el concepto de recursos humanos.<br><br></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">En el sistema de escuelas públicas y la iglesia católica, estas prácticas y estructuras están casi totalmente ausentes; a los curas no se les asignan indicadores de rendimiento.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+        <p dir="ltr" style=""></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Avance 3: Meritocracia</p>
+        </div>
+        <p dir="ltr" style=""><br></p>
+        <p>Desde una perspectiva histórica, la meritocracia fue una idea radical y liberadora. Antes, parecía natural que los curas fueran reclutados entre campesinos, mientras que los obispos y cardenales provenían de familias nobles. La idea de que un
+            humilde cura pudiera llegar a Papa era impensable.</p>
+        <p>El Naranja cambió este relato, promoviendo la idea de que cualquiera puede ascender por el escalafón. Los más listos deben dirigir, y el chico que reparte correspondencia puede llegar a ser CEO, incluso si es una chica o proviene de una minoría
+            social (aunque en la práctica, el terreno no está del todo igualado).</p>
+        <p dir="ltr" style=""></p>
+        </span><br>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Por ejemplo, la planificación de recursos, la gestión del talento, el <i>mentoring </i>y el <i>coaching</i>, la formación de liderazgo y la planificación de la sucesión son inventos del Naranja que están ausentes en sistemas tradicionales
+                        como la iglesia católica.<br></p>
+                    <p>La movilidad laboral es ahora la norma; se espera que las personas cambien de trabajo cada ciertos años, y el empleo de por vida ya no se considera un ideal.</p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+    </div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222829"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">La sombra naranja</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p><span id="docs-internal-guid-348fb26a-7fff-6057-7bb8-8ecfb273fd59"><p dir="ltr" style="">Las revoluciones científica e industrial nos han dado una gran libertad y prosperidad. Somos testigos cada vez más de la enorme sombra que proyectan sobre nuestro futuro.&nbsp;</p>
+       <div>
+            <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="c37d6f69-3b84-4ce6-a2a6-2e9d913204ee">Sombra: Innovación desbocada:</p>
+            </div>
+        </div>
+      <p dir="ltr" style=""><br>Con la mayoría de nuestras necesidades básicas cubiertas, las empresas tratan de crear más y más necesidades, y alimentan así la ilusión de que tener muchas cosas que en realidad no necesitamos más propiedades, la última moda, un cuerpo más joven nos hará sentir felices y realizados.&nbsp;</p><p dir="ltr" style="">Hemos alcanzado un nivel en el que a menudo buscamos el crecimiento por el simple crecimiento, una enfermedad que en términos médicos se denomina cáncer. El resultado es una economía depredadora de la que depende nuestra supervivencia.</p>
+       <div>
+            <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="c37d6f69-3b84-4ce6-a2a6-2e9d913204ee">Sombra 2: Carrera de ratones:</p>
+            </div>
+        </div>
+      <p dir="ltr" style=""><br>Otra sombra aparece cuando el éxito se mide exclusivamente en dinero y reconocimiento. Si sólo consideramos exitosa la vida que alcanza la cumbre, es probable que experimentemos una sensación de vacío. La crisis de la mitad de la vida es un trastorno vital típico de las organizaciones Naranja: durante veinte años hemos jugado a tener éxito y hemos competido en la llamada “carrera de ratones”. Y ahora nos damos cuenta de que no llegaremos a la cima, o que la cima no es lo que se suponía que tenía que ser. Cuando todo se reduce a objetivos y cifras, a hitos y a fechas de entrega y a otro programa de cambios y a otra iniciativa multifuncional, hay personal que no pueden evitar cuestionarse el sentido que tiene todo y anhelar algo más.&nbsp;</p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">La perspectiva Naranja</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> es sólidamente materialista, más allá de lo tangible no hay nada y nuestro anhelo de significado, de estar en contacto con algo más importante que nosotros mismos, no tiene a donde recurrir.<br> </p>
+            </div>
+        </div>
+        <p dir="ltr" style=""><br></p></span>
+    </div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222831"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Paradigma Verde</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p><span id="docs-internal-guid-24d8828c-7fff-8a9b-14ef-626ea500929b"><p dir="ltr" style="">Las personas en este estadio son muy conscientes de las sombras del Naranja: la obsesión materialista, la desigualdad social, la pérdida del sentido de comunidad, el daño que se inflige a la naturaleza.&nbsp;</p><p dir="ltr" style="">Se esfuerzan por pertenecer al grupo, por trabar vínculos fuertes y armónicos con todos los miembros de la comunidad. Insisten en que todas las personas tienen básicamente el mismo valor y que todas las voces merecen ser escuchadas.</p><p dir="ltr" style="">A finales del siglo XVIII y en el transcurso del XIX, un círculo reducido de personas que actuaban con una actitud Verde-Pluralista empezaron a abogar por la abolición de la esclavitud, por la liberación de las mujeres y por la libertad de religión. Esta visión del mundo pasó a primer plano cuando se erigió en motor de la <span class="" style="color: rgb(0, 46, 184);">contracultura</span>        de las décadas de los 60 y 70 del siglo pasado. Hoy, aunque el Naranja todavía predomina en los negocios y en la política, el Verde está muy presente en el pensamiento académico posmoderno, en las organizaciones sin fines de lucro y entre los
+        trabajadores sociales y activistas de la comunidad.</p>
+        <p dir="ltr" style=""><span class="" style="color: rgb(0, 61, 245);"><b><span class="sub_negrita" style="color: rgb(0, 46, 184);">Una nueva metáfora: las organizaciones como familias</span></b>
+            </span>
+        </p>
+        <p dir="ltr" style="">Los líderes de las organizaciones Verdes creen que las personas son algo más que piezas del engranaje organizativo. No se cansan de referirse a su organización como una familia, o una comunidad, donde todos tienen un lugar, donde los colegas se
+            cuidan los unos a los otros, donde la felicidad de cada miembro es importante para el éxito general de la organización.&nbsp;</p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Avance1: Empoderamiento</p>
+        </div>
+
+        <p dir="ltr" style=""><br></p>
+        <p dir="ltr" style="">Las personas que actúan desde la perspectiva Verde rechazan las jerarquías, por lo que las organizaciones Verdes intentan minimizarlas para empoderar a los empleados y fomentar la toma de decisiones consensuada desde el nivel más bajo. En estas
+            organizaciones, se usa la imagen de una pirámide invertida: los empleados están en la cima, mientras que los ejecutivos y el CEO, con la mayor responsabilidad, están en la base, sirviendo a los empleados. Los mandos medios se forman para ser
+            instructores y líderes inspiradores, en lugar de directivos autoritarios.<br><br></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Por ejemplo, en una organización Verde, los gerentes actúan como mentores y guías, facilitando el trabajo de sus equipos y promoviendo un entorno colaborativo y de apoyo.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <p dir="ltr" style=""><br></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Avance 2: Cultura impulsada por los valores</p>
+        </div>
+
+        <p dir="ltr" style=""><br></p>
+        <p dir="ltr" style="">En las organizaciones Verdes, los valores compartidos no son una simple fachada para ocultar el deseo de beneficios o cuota de mercado. Estos valores inspiran a los empleados y les guían en la toma de decisiones correctas, sustituyendo en muchos
+            casos los extensos manuales de normas y reglamentos que otras organizaciones utilizan para controlar a sus empleados. Entender y aplicar bien esta filosofía es a menudo el objetivo principal de los CEO de estas organizaciones.<br><br>
+            <!--Caja + Ejemplo + sin imagen + texto-->
+        </p>
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Por ejemplo, en una organización Verde, los empleados utilizan los valores de la empresa como base para sus decisiones diarias, reduciendo la necesidad de reglas estrictas y fomentando un entorno de confianza y autonomía.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+        <p></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Avance 3: Perspectiva de múltiples grupos de interés</p>
+        </div>
+
+        <p dir="ltr" style=""><br></p>
+        <p dir="ltr" style=""></p>Las organizaciones Verdes cuestionan el concepto de "valor accionarial", que prioriza maximizar los beneficios para los accionistas. Creen que las empresas tienen responsabilidades no solo con sus inversores, sino también con sus empleados,
+        clientes, proveedores, comunidades locales, la sociedad en general y el medio ambiente, y deben equilibrar todos estos intereses. Esta perspectiva se encuentra a menudo en organizaciones sin fines de lucro, ONG y en iniciativas sociales, pero
+        también está ganando terreno en el mundo empresarial, donde se valora cada vez más la importancia de los aspectos blandos del management.
+        <br><br>
+        <p dir="ltr" style=""></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Por ejemplo, Southwest Airlines, Ben &amp; Jerry’s y The Container Store son conocidas por sus prácticas Verdes, inspirando a sus empleados y superando los modelos tradicionales basados en el mando y control.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+        </span><br>
+    </div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222830"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Organizaciones verdes</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p></p><span><span id="docs-internal-guid-0be9323f-7fff-f894-02fc-7221c9ff0435" style=""><p dir="ltr" style=""><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">Las contradicciones de las organizaciones verdes</b></span></p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+
+            <br>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">El modelo funciona pero es difícil aplicarlo a gran escala:&nbsp;</span></p>
+                    <ul>
+                        <li>Existen organizaciones vibrantes y exitosas que aplican los valores y la cultura deseada.</li>
+                        <li>Sin embargo, descentralizar y empoderar a gran escala resulta complicado.</li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Contradicción intrínseca del modelo de organización verde:</span> </p>
+                    <ul>
+                        <li>Aspira a ser igualitario y a buscar el consenso.</li>
+                        <li>Mantiene una estructura jerárquica y piramidal similar al modelo Naranja.</li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Desconexión entre valores y realidad:</span> </p>
+                    <ul>
+                        <li>Se adoptan valores igualitarios y de consenso.</li>
+                        <li>En la práctica, la toma de decisiones es una combinación poco clara entre consenso y decisiones jerárquicas.</li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+
+
+            <!-- 4 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600">Parálisis organizativa en pequeñas organizaciones:</span> </p>
+                    <ul>
+                        <li>En pequeñas organizaciones, especialmente sin fines de lucro, se enfatiza el consenso.</li>
+                        <li>Esto a menudo provoca parálisis organizativa y la reaparición de juegos de poder.</li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-left: 3%; margin-right: 3%;">
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Grandes organizaciones verdes y el empoderamiento:&nbsp;</span></p>
+                    <ul>
+                        <li>Grandes y exitosas organizaciones Verdes se centran más en el empoderamiento que en el consenso.</li>
+                        <li>Desearían operar sin jerarquías, pero se conforman con estructuras tradicionales mientras intentan empoderar a sus empleados.</li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Dificultad entre los directivos para ceder el control:</span> </p>
+                    <ul>
+                        <li>Los directivos deben ceder parte del control mientras siguen siendo responsables de los resultados económicos.</li>
+                        <li>Invertir tiempo, energía y dinero en formar líderes empoderadores y serviciales es necesario para compensar las limitaciones de la estructura jerárquica..</li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Creación de una cultura vibrante como solución:</span> </p>
+                    <ul>
+                        <li>Las organizaciones se esfuerzan por crear una cultura vibrante y empoderadora.</li>
+                        <li>Esta cultura debe ser lo suficientemente fuerte como para superar los problemas inherentes a la estructura jerárquica.</li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <p dir="ltr" style=""><br></p></span></span></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222835"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Relevancia de paradigmas</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p dir="ltr" style=""><span class="" style="color: rgb(0, 46, 184);"><span style="color: rgb(51, 51, 51);">Una estructura es una simplificación útil, pero ninguna organización es Naranja o Verde al cien por cien.</span></span></p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Cómo ayudan estas estructuras de desarrollo?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Posibilitan entender diferentes visiones del mundo, pero debemos procurar no ser demasiado simplistas. Tiemblo cuando oigo a alguien afirmar que tal persona es Ámbar o Naranja. Sabemos que las cosas son mucho más complejas. Las personas
+                    pueden actuar en un aspecto de su vida, pongamos, desde una perspectiva Naranja y, en otros, desde una perspectiva Ámbar.</p>
+            </div>
+        </div>
+        <p dir="ltr" style="">En este sentido, ¿a que nos referimos cuando hablamos de una organización Ámbar? Nos referimos a las estructuras, la cultura y los procesos organizativos, no a las personas. Una organización Ámbar es aquella en la que la mayoría de las prácticas
+            de <i>management </i>(pero no todas, ninguna organización es nunca pura sangre) están guiadas por el pensamiento Ámbar-Conformista. Dicho de otro modo: la manera de seleccionar el personal, evaluar el rendimiento, hacer los presupuestos, marcar
+            objetivos, formular estrategias, etc., se lleva a cabo, en buena parte, de maneras coherentes con el pensamiento Ámbar-Conformista.</p>
+
+        <p dir="ltr" style=""><b><span class="" style="color: rgb(0, 46, 184);">¿Cómo gestionan los diferentes tipos de organizaciones las compensaciones y los incentivos?</span></b></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Compartir el botín:&nbsp;</span>en el estadio Rojo, el jefe decide la manera de compartir el botín, y aumenta o reduce las pagas como le parece (pensemos en la mafia o en los jefes del narcotráfico). No hay
+                    un proceso formal para negociar las pagas, ni tampoco ningún proceso formal de incentivos.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Mismo trabajo, misma paga:</span> en las organizaciones Ámbar, los salarios suele fijarlos una persona con un determinado rango en el escalafón (o cualquier otro marcador de rango, como el diploma o título
+                    del trabajador). No hay negociaciones individuales de sueldo ni incentivos.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Incentivos individuales:</span> el Naranja es muy partidario de los objetivos e incentivos individuales. Si la persona alcanza objetivos predeterminados (que idealmente forman parte de un presupuesto o de
+                    un sistema de objetivos en cascada), merece un bono considerable. Las grandes diferencias salariales se consideran aceptables, siempre y cuando reflejen los méritos y las aportaciones de las personas.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600">Bonos en equipo:</span> puesto que el paradigma Verde hace hincapié en la cooperación por encima de la competición, en este tipo de organizaciones los incentivos individuales dan paso a bonos de equipo. Los
+                    líderes tratan de reducir las excesivas disparidades salariales que mermaría el sentido de equidad y de comunidad (por ejemplo, a través de un múltiplo máximo entre el sueldo del CEO y el sueldo medio).</p>
+            </div>
+        </div>
+
+
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p dir="ltr" style=""><span class="" style="color: rgb(0, 46, 184);"><b>Resumiendo, los modelos organizativos:</b></span></p>
+        <!--Tabla 3 filas color 4 columnas-->
+        <table class="tabla-filaColores texto-principal" style="width:96%; margin: 0 auto;">
+            <colgroup span="1" width="25%"></colgroup>
+            <colgroup span="1" width="25%"></colgroup>
+            <colgroup span="1" width="25%"></colgroup>
+            <colgroup span="1" width="25%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado">Impulsivo (rojo)</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">Tradicional (ámbar)</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">Logro (naranja)</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">Pluralista (verde)</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" valign="top"><span id="docs-internal-guid-06dbe5b8-7fff-8690-c064-fc5160e439b4">División del trabajo</span></td>
+                    <td class="texto-margen-tabla" valign="top"><span id="docs-internal-guid-4f6d6304-7fff-d020-f397-79ea60fabfbd">Procesos replicables</span></td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top"><span id="docs-internal-guid-b15db581-7fff-1a3b-34e5-3645df82bf07">Innovación</span></td>
+                    <td class="texto-margen-tabla" valign="top"><span id="docs-internal-guid-a38ef302-7fff-4a98-6050-fd383ac7a273">Empoderamiento</span></td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" valign="top"><span id="docs-internal-guid-cfeee966-7fff-ae99-4737-1f16cb1e4c35">Autoridad de mando</span></td>
+                    <td class="texto-margen-tabla" valign="top"><span id="docs-internal-guid-2ce914ec-7fff-f62d-bb2c-800be4046380">Jerarquía estable</span></td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top"><span id="docs-internal-guid-690284ab-7fff-2678-c678-b4944ad22ac9">Responsabilidad</span></td>
+                    <td class="texto-margen-tabla" valign="top"><span id="docs-internal-guid-4af4081a-7fff-6e89-00c5-01b1b9cc7304">Cultura impulsada por los valores</span></td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" valign="top"><br></td>
+                    <td class="texto-margen-tabla" valign="top"><br></td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top"><span id="docs-internal-guid-0d0c8202-7fff-9e7f-8f7a-6c59d8c7a02c">Meritocracia</span></td>
+                    <td class="texto-margen-tabla" valign="top"><span id="docs-internal-guid-e4b28eb3-7fff-d379-bca9-45ae10f7d6b8">Modelo de grupos de interés</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222833"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Paso evolutivo</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p></p><span id="docs-internal-guid-47caf502-7fff-2396-6be5-609a517d875d"><p dir="ltr" style="">Actualmente está emergiendo un nuevo <span class="" style="color: rgb(0, 46, 184);"><b>estadio de consciencia</b></span> al que Ken Wilber ha asignado
+        el color <span class="" style="color: rgb(0, 46, 184);"><b>Teal </b></span>y que solemos llamar <b><span class="" style="color: rgb(0, 46, 184);">Evolutivo</span></b>.&nbsp;</p>
+        <p dir="ltr" style="">Como todavía está emergiendo, es demasiado pronto para decir cómo acabará influenciando al mundo. Pero ya hay bastantes académicos (Maslow, Graves, Kegan y otros) que han estudiado el paradigma adoptado por las personas que han dado el salto al
+            Teal.&nbsp;
+        </p>
+        <p dir="ltr" style="">Y nos cuentan que, una vez más, se trata de una visión profundamente nueva, una visión que abre posibilidades radicalmente nuevas. ¿Cuáles son los rasgos de esta visión del mundo?</p>
+
+
+        <br>
+
+
+        <br>
+        <table class="tabla-simple texto-principal" style="text-align: center;">
+            <colgroup>
+                <col style="width: 20%;">
+                <col style="width: 80%;">
+            </colgroup>
+            <tbody>
+                <tr class="fila-impar">
+                    <td class="tabla-simple-categoria" style="text-align: center;">&nbsp;El mundo como un lugar de desarrollo individual y colectivo</td>
+                    <td class="tabla-simple-fila1">
+                        <ul>
+                            <li style="text-align: left;">El mundo en Teal no se ve como fijo y de origen divino (Ámbar).</li>
+                            <li style="text-align: left;">No se ve como un mecanismo intrincado y sin alma (Naranja).</li>
+                            <li style="text-align: left;">Se ve como un lugar para descubrir y acceder a nuestro auténtico yo.</li>
+                            <li style="text-align: left;">Nos invita a desplegar nuestro potencial y talentos innatos.</li>
+                            <li style="text-align: left;">Impulsa a luchar por nuestros objetivos con toda nuestra energía.</li>
+                            <li style="text-align: left;">Aprendemos a desprendernos de ideas preconcebidas.&nbsp;</li>
+                            <li style="text-align: left;">Nos dirigimos hacia donde la vida nos llama.<br></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="fila-par">
+                    <td class="tabla-simple-categoria" style="text-align: center;">Amasar el ego</td>
+                    <td class="tabla-simple-fila1">
+                        <ul>
+                            <li style="text-align: left;">Escuchar las voces interiores mediante desidentificación del ego.</li>
+                            <li style="text-align: left;">Mirar el ego desde la distancia y reconocer su influencia.</li>
+                            <li style="text-align: left;">Minimizar la necesidad de controlar, dar buena imagen y encajar.</li>
+                            <li style="text-align: left;">Incrementa la capacidad de confiar en los demás y en la vida.</li>
+                            <li style="text-align: left;">Vivir desde la confianza y abundancia, no desde el miedo y la escasez.</li>
+                            <li style="text-align: left;">Enfrentar errores como oportunidades para aprender y crecer.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="fila-impar">
+                    <td class="tabla-simple-categoria" style="text-align: center;">La rectitud interna como brújula</td>
+                    <td class="tabla-simple-fila1">
+                        <ul>
+                            <li style="text-align: left;">Tomar decisiones basadas en criterios internos en vez de externos.</li>
+                            <li style="text-align: left;">Preocupación por la rectitud interna en la toma de decisiones.</li>
+                            <li style="text-align: left;">Evaluar si la decisión es correcta y leal a uno mismo.</li>
+                            <li style="text-align: left;">Asegurar que la decisión esté alineada con nuestro verdadero yo.</li>
+                            <li style="text-align: left;">Buscar ser útiles al mundo.<br></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="fila-par">
+                    <td class="tabla-simple-categoria" style="text-align: center;">Anhelar la plenitud</td>
+                    <td class="tabla-simple-fila1">
+                        <ul>
+                            <li style="text-align: left;">Experimentar el dolor y vacío de la vida moderna.</li>
+                            <li style="text-align: left;">Reconocer el distanciamiento de nuestra verdadera naturaleza.</li>
+                            <li style="text-align: left;">El alboroto diario silencia la voz de nuestras almas.</li>
+                            <li style="text-align: left;">La cultura moderna celebra la mente y descuida el cuerpo.</li>
+                            <li style="text-align: left;">Valorar lo masculino y descuidar lo femenino.</li>
+                            <li style="text-align: left;">Olvidar la comunidad y la conexión con la naturaleza.</li>
+                            <li style="text-align: left;">Anhelar integrar nuestras partes fragmentadas.</li>
+                            <li style="text-align: left;">Reunirnos con seres y formas de vida y naturaleza.</li>
+                            <li style="text-align: left;">Sentir la profunda interconexión con todo.<br></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <p dir="ltr" style=""><span class="" style="color: rgb(0, 61, 245);"><br></span></p>
+        <p dir="ltr" style=""><span class="" style="color: rgb(0, 61, 245);"><b><span class="sub_negrita" style="color: rgb(0, 46, 184);">¿Qué podría significar esto para las organizaciones?</span></b>
+            </span>
+        </p>
+        <p dir="ltr" style="">Cuando las personas cambian su visión del mundo de una manera tan profunda, es fácil suponer que estructurarán y dirigirán las organizaciones de un modo muy distinto. Pero no hay necesidad de especular. Hay organizaciones que ya operan siguiendo
+            los principios y las prácticas Teal. Y a estas alturas ya son suficientes como para que nos hagamos una idea de cómo pueden estructurarse y dirigirse las organizaciones Teal.</p>
+        </span><br>
+    </div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222832"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Organizaciones Teal: historia</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;"><span id="docs-internal-guid-8dcc214e-7fff-9bc0-a72b-83bcb55c1927"><p dir="ltr" style=""><br></p>
+      <div>
+           
+        </div>
+        <p dir="ltr" style="">Esta es una historia de <span class="" style="color: rgb(0, 46, 184);">cuidados médicos de proximidad</span> en Holanda y de una organización pionera llamada Buurtzorg. Desde antes del siglo XVIII, todos los barrios de Holanda
+        han contado con uno o más enfermeros que trabajan fuera de los hospitales y visitaban a los enfermos y a los ancianos a domicilio. Durante el siglo XX, el sistema de seguridad social se fue responsabilizando cada vez más del costo de este sistema.</p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">En la década de 1980, el gobierno holandés tuvo una idea muy lógica desde un punto de vista científico/industrial Naranja:&nbsp;</span>si se pudieran agrupar todos los enfermeros en grandes organizaciones,
+                    la economía de escala se impondría y eso supondría un ahorro para el contribuyente. Se apremió a los enfermeros a incorporarse a grandes organizaciones que empezaron a implementar prácticas modernas de gestión (Naranja).</p>
+            </div>
+        </div>
+        <p dir="ltr" style="">Rápidamente, estas organizaciones observaron que enviar siempre al mismo enfermero a los mismos pacientes resultaba ineficiente. Decidieron mandar a los pacientes a un enfermero distinto cada día, según su disponibilidad. Una mayor flexibilidad
+            significaba menos tiempos muertos entre visitas para los enfermeros. Para compensar que ahora los clientes ya no tenían la posibilidad de llamar a su enfermero, se especializarían. Los enfermeros con experiencia serían mejor remunerados y
+            se encargarían de hacer sólo las intervenciones técnicas más difíciles. Todo lo demás, cosas más sencillas, como poner inyecciones o cambiar vendajes, quedaba ahora en manos de los enfermeros menos caros, lo que suponía un ahorro en los costos.</p>
+        <p dir="ltr" style=""><span class="" style="color: rgb(0, 46, 184);"><b>Poco a poco, se impuso la maquinaria lógica Naranja</b></span></p>
+        <p dir="ltr" style="">Los gestores se dieron cuenta de que algunos enfermeros trabajaban mucho más rápido que los demás, de modo que establecieron tiempos para cada actividad. Dos minutos y medio para cambiar una media compresiva, diez minutos para poner una inyección.
+            Todo estaba especificado al minuto. Una vez definidos los tiempos, en la central se organizaron departamentos de planificación. Cada noche, el enfermero recibía una hoja con el plan detallado para el día siguiente, preparado por alguien del
+            departamento de planificación a quien probablemente no conocería nunca.</p>
+        <p dir="ltr" style=""><span class="" style="color: rgb(0, 46, 184);"><b>Y, como era de esperar, estas corporaciones empezaron a fusionarse</b></span></p>
+        <p dir="ltr" style="">Los proveedores de cuidados empezaron a fusionarse con el propósito de mejorar las economías de escala. Para gestionar a los enfermeros de estas grandes empresas se añadieron capas jerárquicas. Un manager de distrito que supervisa unas cuantas
+            docenas de enfermeros reporta a un manager, que a su vez rendía cuentas a un manager nacional. Los directivos de hoy no suelen tener ninguna experiencia en enfermería; su papel es simplemente controlar y mejorar el rendimiento de los enfermeros.
+            Disponen de muchos datos que pueden desmenuzar y analizar porque los enfermeros tienen que pegar adhesivo con un código de barras en la puerta de la casa de todos sus pacientes, escanear este código cuando entran a prestar su servicio y volverlo
+            a escanear cuando se marchan. Con todos estos datos, la dirección puede implementar mejoras continuas y puede decir a los enfermeros en qué tipo de intervenciones, flexibilidad, economías de escala, mejoras continuas, ha resultado en un incremento
+            de la eficiencia, algo claramente positivo para el sistema sanitario holandés.&nbsp;</p>
+        <div>
+            <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="c37d6f69-3b84-4ce6-a2a6-2e9d913204ee">Pero el sistema tiene un lado oscuro:<br><br><br></p>
+            </div>
+        </div>
+        <br>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Los pacientes lo odian:&nbsp;</span>Para los pacientes más mayores, a veces confusos, resulta difícil ver a diario personas desconocidas entrando en la intimidad de su hogar. Eso los obliga a compartir su
+                    historial y su enfermedad con un perfecto y apresurado desconocido.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Los enfermeros lo odian:</span> El modo en que se les pide que hagan su trabajo perjudica su vocación y su satisfacción. Se dan cuenta de que, a menudo, la atención que proporcionan es mala o insuficiente.
+                    Pero el sistema les impide hacer lo que saben que sería necesario.</p>
+            </div>
+        </div>
+        <div>
+            <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="c37d6f69-3b84-4ce6-a2a6-2e9d913204ee">El enfermero Jos de Blok creó Buurtzor en 2006</p>
+            </div>
+        </div>
+        <p dir="ltr" style="">&nbsp;<br>Jos llevaba diez años trabajando como enfermero y había experimentado de primera mano los cambios a los que su profesión había sido obligada. Fastidiado, abandonó el trabajo y creó Buurtzorg. Su organización funcionaría de manera totalmente
+            distinta. Enseguida se dio cuenta de que un equipo autogestionado de diez o doce enfermeros sin jefe ni líder de equipo era ideal para proporcionar una atención excelente, además de ser un lugar fantástico en el que trabajar.&nbsp;</p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Con una perspectiva totalmente distinta de la atención sanitaria:&nbsp;</span>El cuidado, en su mejor versión, es un pequeño milagro que ocurre, o no, a través de la relación entre un paciente y un enfermero.
+                    Y este milagro no puede darse si aplicamos un enfoque mecánico al cuidado. El mejor cuidado ocurrirá, y De Blok está convencido, cuando los enfermeros sean considerados profesionales, cuando se confié en ellos, démosles libertad, ofrecerán
+                    una atención sanitaria realmente fantástica.&nbsp;</p>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Lo primero que hace un enfermero Buurtzorg con un paciente nuevo es sentarse a tomar un café:&nbsp;</span>El todo es más que la suma de las partes. Los enfermeros ayudan a sus pacientes a crear redes de apoyo
+                    para que se sientan menos solos y menos dependientes. Por ejemplo, a menudo ayudan a los pacientes mayores y a sus hijos a establecer pautas de asistencia durante una enfermedad. Es habitual que los enfermeros inviten a sus pacientes
+                    a conocer a los vecinos para tejer una red de apoyo. El grado de cuidado y de intimidad entre los enfermeros y los pacientes puede ser extraordinario. A menudo es una relación que dura años, a veces hasta el último suspiro, cuando
+                    ayudan a sus pacientes a marcharse en paz.</p>
+            </div>
+        </div>
+        <p dir="ltr" style=""><br></p>
+        <div>
+            <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="c37d6f69-3b84-4ce6-a2a6-2e9d913204ee">Buurtzorg se ha convertido en una historia de éxito espectacular&nbsp;</p>
+            </div>
+        </div>
+        <p dir="ltr" style=""><br></p>
+        <p dir="ltr" style="">Tanto a los pacientes como a los enfermeros les gusta tanto Buurtzorg que estos últimos han estado desertando de las empresas tradicionales de cuidados asistenciales: Buurtzorg recibe mensualmente cientos de peticiones de enfermeros que quieren
+            subir a bordo de su barco. Buurtzorg emplea actualmente a más de nueve mil enfermeros, ¡dos tercios de todos los enfermeros de barrio de Holanda! Todos ellos trabajan en pequeños equipos de entre nueve y doce profesionales, sin ningún líder
+            ni ningún jefe por encima. Nadie les cronometra las intervenciones con sus pacientes. La empresa entera de nueve mil personas se gestiona desde una sede en la que sólo trabajan veintiocho personas.<br>Hace unos años, un estudio de la consultora
+            Ernts &amp;Young descubrió que Buurtzorg utiliza menos del 40% de las horas prescritas por el médico: porque en vez de trabajar con horarios insensatos, ahora ayudamos a los pacientes a adquirir la mayor autonomía posible.<br></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Se evita un 30% de los ingresos hospitalarios:&nbsp;</span>conocemos tan bien a los pacientes que somos capaces de detectar los problemas con antelación.&nbsp;</p>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Buurtzorg ahorra al sistema de seguridad social holandés cientos de millones de euros anuales:&nbsp;</span>nuestros colegas intentan aplicar los mismos principios a la atención psiquiátrica, a la atención
+                    a los jóvenes y a otros ámbitos sanitarios. Y enfermeros de todo el mundo están montando tipos parecidos de organizaciones en sus países.</p>
+            </div>
+        </div>
+        </span><br>
+    </div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222836"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Buurtzor, un caso de éxito</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;"><span id="docs-internal-guid-8dcc214e-7fff-9bc0-a72b-83bcb55c1927"><p dir="ltr" style=""><br></p><div class="row" style="margin-left: 32px"><div class="col">
+            </div>
+        </div>
+        <div>
+           
+                
+        </div>
+        <p dir="ltr" style="">Jos de Blok llevaba diez años trabajando como enfermero y había experimentado de primera mano los cambios a los que su profesión había sido obligada. Fastidiado, abandonó el trabajo y creó Buurtzorg en 2006. Su organización funcionaría de manera totalmente
+            distinta. Enseguida se dio cuenta de que <span class="" style="color: rgb(0, 46, 184);">un equipo autogestionado de diez o doce enfermeros sin jefe ni líder de equipo era ideal </span>para proporcionar una atención excelente, además de ser
+        un lugar fantástico en el que trabajar.&nbsp;</p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Con una perspectiva totalmente distinta de la atención sanitaria:&nbsp;</span>El cuidado, en su mejor versión, es un pequeño milagro que ocurre, o no, a través de la relación entre un paciente y un enfermero.
+                    Y este milagro no puede darse si aplicamos un enfoque mecánico al cuidado. El mejor cuidado ocurrirá, y De Blok está convencido, cuando los enfermeros sean considerados profesionales, cuando se confié en ellos, démosles libertad, ofrecerán
+                    una atención sanitaria realmente fantástica.&nbsp;</p>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Lo primero que hace un enfermero Buurtzorg con un paciente nuevo es sentarse a tomar un café:&nbsp;</span>El todo es más que la suma de las partes. Los enfermeros ayudan a sus pacientes a crear redes de apoyo
+                    para que se sientan menos solos y menos dependientes. Por ejemplo, a menudo ayudan a los pacientes mayores y a sus hijos a establecer pautas de asistencia durante una enfermedad. Es habitual que los enfermeros inviten a sus pacientes
+                    a conocer a los vecinos para tejer una red de apoyo. El grado de cuidado y de intimidad entre los enfermeros y los pacientes puede ser extraordinario. A menudo es una relación que dura años, a veces hasta el último suspiro, cuando
+                    ayudan a sus pacientes a marcharse en paz.</p>
+            </div>
+        </div>
+        <p dir="ltr" style=""><br></p>
+        <div>
+            <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+                <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="c37d6f69-3b84-4ce6-a2a6-2e9d913204ee">Historia de éxito</p>
+            </div>
+        </div>
+        <p dir="ltr" style=""><br>Tanto a los pacientes como a los enfermeros les gusta tanto Buurtzorg que estos últimos han estado desertando de las empresas tradicionales de cuidados asistenciales: Buurtzorg recibe mensualmente cientos de peticiones de enfermeros que quieren
+            subir a bordo de su barco.
+            <!-- Cuadro amarillo borde violeta -->
+            <br>
+
+        </p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Sobre Buurtzorg</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"></p>
+                <ul>
+                    <li> Emplea actualmente a más de nueve mil enfermeros, ¡dos tercios de todos los enfermeros de barrio de Holanda!&nbsp;</li>
+                    <li>Todos ellos trabajan en pequeños equipos de entre nueve y doce profesionales, sin ningún líder ni ningún jefe por encima.&nbsp;</li>
+                    <li>Nadie les cronometra las intervenciones con sus pacientes.&nbsp;</li>
+                    <li>La empresa entera de nueve mil personas se gestiona desde una sede en la que sólo trabajan veintiocho personas.</li>
+                </ul>
+                <p></p>
+            </div>
+        </div>
+        <p></p>
+        <p dir="ltr" style="">Hace unos años, un estudio de la consultora Ernts &amp;Young descubrió que Buurtzorg utiliza menos del 40% de las horas prescritas por el médico: porque en vez de trabajar con horarios insensatos, ahora ayudamos a los pacientes a adquirir la mayor
+            autonomía posible.
+            <br></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Se evita un 30% de los ingresos hospitalarios:&nbsp;</span>conocemos tan bien a los pacientes que somos capaces de detectar los problemas con antelación.&nbsp;</p>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Buurtzorg ahorra al sistema de seguridad social holandés cientos de millones de euros anuales:&nbsp;</span>nuestros colegas intentan aplicar los mismos principios a la atención psiquiátrica, a la atención
+                    a los jóvenes y a otros ámbitos sanitarios. Y enfermeros de todo el mundo están montando tipos parecidos de organizaciones en sus países.</p>
+            </div>
+        </div>
+        <br>
+        </span>
+    </div>
+
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222834"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Una nueva metáfora</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p></p><span id="docs-internal-guid-030ae788-7fff-1431-cb9e-3ed81cff3c90"><p dir="ltr" style="">El Naranja habla de las organizaciones como si fueran <span class="" style="color: rgb(0, 46, 184);">máquinas</span>. El Verde utiliza la metáfora de
+        las <span class="" style="color: rgb(0, 46, 184);">familias</span>. Varios de los fundadores de organizaciones Teal sienten la necesidad de crear una <span class="" style="color: rgb(0, 46, 184);">nueva metáfora.</span></p>
+        <p dir="ltr" style="">Está claro que contemplar las organizaciones como máquinas causa una sensación de impersonalidad y torpeza. Las personas son muchos más que engranajes que han de alinearse con el organigrama de una empresa.&nbsp;</p>
+        <p dir="ltr" style="">Desde una óptica Teal, la metáfora de la familia también tiende a transmitir una sensación inadecuada. Las familias, como todos sabemos, pueden ser disfuncionales. Y si nos tomamos la metáfora al pie de la letra, y yo soy tu jefe y vos me rendís
+            cuentas a mí, ¿no es como si yo fuera tu padre y vos mi hijo/a?&nbsp;</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Nueva metáfora</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Los fundadores de organizaciones Teal utilizan una metáfora distinta: comparan sus organizaciones como un organismo o con un sistema vivo. La vida, con toda su sabiduría evolutiva, gestiona un ecosistema de una belleza inconmensurable
+                    que tiende siempre a una plenitud, complejidad y consciencia superiores. Los cambios en la naturaleza ocurren en todas partes, en todo momento, con un apremio procedente de cada célula y de cada organismo, sin necesidad de un mando
+                    y un control central. </p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p dir="ltr" style="">La metáfora abre nuevos horizontes. Imaginemos cómo serían las organizaciones si dejáramos de diseñarlas como máquinas sin alma. ¿Qué podrían conseguir, y cómo sería trabajar en ellas, si las tratáramos como seres vivos, si las dejáramos alimentarse
+            por el motor evolutivo de la vida misma?<br></p>
+        <p dir="ltr" style="">Las organizaciones Teal llegan a partir de tres avances que cuestionan radicalmente el management tal y como lo conocemos.</p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600"><span>Autogestión</span>:&nbsp;</span>Las organizaciones Teal han encontrado la manera de mejorar sus estructuras, superando las pirámides jerárquicas y burocráticas para convertirse en sistemas potentes
+                    y fluidos que distribuyen la autoridad y disponen de una inteligencia colectiva.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Plenitud:</span> Las organizaciones han sido tradicionalmente lugares que animan a las personas a mostrarse con un perfil profesional estrecho. Las organizaciones Teal, en cambio, han desarrollado una serie
+                    coherente de prácticas que nos invitan a quitarnos la máscara, a reclamar nuestra plenitud interior y a llevar nuestra persona entera al trabajo.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Función evolutiva:</span> Las organizaciones Teal se consideran dotadas de vida y con su sentido propio de su objetivo. En vez de intentar predecir y controlar el futuro, se invita a los miembros de la organización
+                    a escuchar y a entender la tendencia de la organización, hacia la cual se orienta de manera natural.</p>
+            </div>
+        </div>
+        <p dir="ltr" style=""><br></p>
+        </span>
+    </div>
+
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[723378,723381,723385,723388,723402,723405,723407,723410,723412,723415,723417,723420,723422,723425]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1755729856/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2812149, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1756156273); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\nconfig: [\"Accessible.js\", \"Safe.js\"],\r\nerrorSettings: { message: [\"!\"] },\r\nskipStartupTypeset: true,\r\nmessageStyle: \"none\"\r\n});","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random68acd2c939a432'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random68acd2c939a432'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

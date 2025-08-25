@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>3B.Soporte de administración | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1755871564/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, 3B.Soporte de administración | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1755871564_1755730568/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"nsmmsBYi2s","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1755871564","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1755729856","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":22800,"courseContextId":2812100,"contextid":2812144,"contextInstanceId":723418,"langrev":1755847445,"templaterev":"1755729856"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1755729856\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1755729856\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1755729856\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1755729856\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1755729856\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?config=TeX-AMS_SVG%22&delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-22800 context-2812144 cmid-723418 cm-type-book category-3279 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1755871564/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>3B.Soporte de administración</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Ingeniería de Software - 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        3B.Soporte de administración
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        lunes, 25 de agosto de 2025, 18:13
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+
+
+                <section class="boton_texto_centrado">
+
+                    <div class="circulo_inicio">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                    </div>
+
+                    <p><a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=22800&amp;section=8">Inicio</a></p>
+                </section>
+
+
+
+                <section class="boton_texto_centrado">
+                    <div class="circulo_apertura">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                    </div>
+                    <p><a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723417">Apertura</a></p>
+                </section>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+                <section class="boton_texto_centrado">
+                    <div class="circulo_practicas">
+                        <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=723419"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </a></div>
+                    <p><a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=723419">Práctica</a></p>
+                </section>
+
+
+
+                <section class="boton_texto_centrado">
+                    <div class="circulo_cierre">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                      </div>
+
+                    <p st=""><a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723420">Cierre</a></p>
+
+                </section>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción a los sistemas de información de soporte a la administración" class="font-weight-bold text-decoration-none" href="#ch222788">1. Introducción a los sistemas de información de soporte a la administración</a></li><li><a title="2. La administración" class="font-weight-bold text-decoration-none" href="#ch222789">2. La administración</a></li><li><a title="3. Toma de decisiones gerenciales" class="font-weight-bold text-decoration-none" href="#ch222790">3. Toma de decisiones gerenciales</a><ul><li><a title="3.1. Proceso de toma de decisiones" class="text-decoration-none" href="#ch222791">3.1. Proceso de toma de decisiones</a></li></ul></li><li><a title="4. Sistemas de información" class="font-weight-bold text-decoration-none" href="#ch222792">4. Sistemas de información</a><ul><li><a title="4.1. Tipos de sistemas I" class="text-decoration-none" href="#ch222800">4.1. Tipos de sistemas I</a></li><li><a title="4.2. Tipos de sistemas II" class="text-decoration-none" href="#ch222793">4.2. Tipos de sistemas II</a></li><li><a title="4.3. Comunicación neuronal" class="text-decoration-none" href="#ch222794">4.3. Comunicación neuronal</a></li></ul></li><li><a title="5. Categorías y evolución de la ayuda asistida" class="font-weight-bold text-decoration-none" href="#ch222795">5. Categorías y evolución de la ayuda asistida</a></li><li><a title="6. Niveles de organización" class="font-weight-bold text-decoration-none" href="#ch222796">6. Niveles de organización</a></li><li><a title="7. Relación entre niveles" class="font-weight-bold text-decoration-none" href="#ch222797">7. Relación entre niveles</a><ul><li><a title="7.1. Características" class="text-decoration-none" href="#ch222798">7.1. Características</a></li><li><a title="7.2. Diferencias" class="text-decoration-none" href="#ch222799">7.2. Diferencias</a></li></ul></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222788"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal" data-sider-select-id="b03db946-4771-40ac-8e9f-17eee3ac1c68">Introducción</p>
+</article>
+<div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p style="color: rgb(1, 6, 20);"></p><span id="docs-internal-guid-53dd8ef1-7fff-42cd-2bd2-0e095b66ee53" style="color: rgb(1, 6, 20);"><p dir="ltr" style=""></p></span><span id="docs-internal-guid-126ca0c1-7fff-1e4a-047d-a1bfd1f11343" data-sider-select-id="ff4fc827-a520-41a4-b3e1-126f980e55d4" style=""><p dir="ltr" style="" data-sider-select-id="afabb28c-e40e-4568-b6dc-a1b550851803"><span class="" style="color: rgb(51, 51, 51);">Los sistemas de información basados en tecnología son desarrollados para</span> <span class="" style="color: rgb(0, 46, 184);">mejorar la efectividad en la toma de decisiones</span>,
+        <span class="" style="color: rgb(51, 51, 51);">especialmente en tareas complejas. Estas tecnologías aparecen como sistemas independientes pero la tendencia es integrarlos, dado que su objetivo es dar una solución integral a los problemas de administración de las organizaciones.</span><br>
+        <span class="" data-sider-select-id="1224469a-409b-41dc-9e45-53b2aec2f49b" style=""><br><span class="" style="color: rgb(51, 51, 51);">Un</span> </span><span style="color: rgb(0, 46, 184);" class="">sistema de información de soporte a la administración (MSS)</span>&nbsp;<span style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(51, 51, 51);">se refiere a la aplicación de cualquiera de las tecnologías, tanto en forma independiente como integrada, a la solución de problemas de administración.</span><br></span>
+                </p>
+                <p></p><span id="docs-internal-guid-8b2bba28-7fff-a6de-fba7-466314ea270f"><p dir="ltr" style=""></p></span><span id="docs-internal-guid-cd4bd395-7fff-b918-3bd6-7f2387544d9e" data-sider-select-id="412fd57d-104d-46cf-a2a1-ed7ce528d93c"><p dir="ltr" style="" data-sider-select-id="70e1a078-7293-4ff0-b2d7-579908a59eeb"><span class="" style="color: rgb(51, 51, 51);">Ahora, te presentamos una clasificación de tipos de sistemas de información de soporte a la administración:</span></p>
+                <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+                    <div style="margin-left: 3%; margin-right: 3%;" data-sider-select-id="ecb98004-0f4a-4501-8137-8bfe311c72eb">
+
+                        <br>
+                        <!-- 1 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600" data-sider-select-id="65627f7d-967f-4d13-ade9-89f2bb7f5121"></span>Sistema de soporte a las decisiones (dss).</p>
+                            </div>
+                        </div>
+
+
+
+                        <!-- 2 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600" data-sider-select-id="e7f1db18-1657-4971-8f07-3a8cd355c02e"></span>Sistema de soporte a grupos (gdss).</p>
+                            </div>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600" data-sider-select-id="62feff68-ba93-4bc4-aa06-c4649ebf37ee"></span>Sistema de información ejecutiva (eis).</p>
+                            </div>
+                        </div>
+
+
+                        <!-- 4 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600" data-sider-select-id="5e21b958-e144-440f-b91c-dd0b3d944a7f"></span>Sistemas expertos (es). </p>
+                            </div>
+                        </div>
+
+
+                        <!-- 5 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600" data-sider-select-id="22b73887-ed43-494f-8abc-82cf81e78f20"></span>Redes neuronales artificiales (ann). </p>
+                            </div>
+                        </div>
+
+                        <!-- 6 -->
+                        <div class="row" style="margin-left: 32px">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+                            </div>
+                            <div class="col">
+                                <p><span style="font-weight: 600" data-sider-select-id="4f2d38cf-85e5-403c-a982-ff7bd6bb39ad"></span>Sistemas de soporte híbridos.&nbsp; </p>
+                            </div>
+                        </div></div></div></span></span></div></div><br></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222789"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">La administración</p>
+</article>
+<div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20);"></p><span style=""><span id="docs-internal-guid-3e345680-7fff-a773-493e-6caa8a65f0ed" style="color: rgb(1, 6, 20);"><p dir="ltr"></p></span><span id="docs-internal-guid-48b988ea-7fff-8f7f-0a61-5448a4fff467" style=""><p dir="ltr" style="color: rgb(1, 6, 20);">Es necesario tener claro dos conceptos importantes para comprender los sistemas de soporte a la administración (MSS):&nbsp;</p><div style="margin-left: 3%; margin-right: 3%;" data-sider-select-id="b63303e7-c36d-4699-831a-c5c1be9f5383">
+                <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600" data-sider-select-id="4b7802f9-c60d-4a90-a536-6a28d5865df3"></span>Toma de decisiones gerenciales.&nbsp;&nbsp;</p>
+    </div>
+</div>
+
+
+
+<!-- 2 -->
+<div class="row" style="color: rgb(1, 6, 20); margin-left: 32px;">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600" data-sider-select-id="174ec7fe-85b8-4a5a-9f9b-a2d4b5f31c96"></span>Sistemas de información.</p>
+    </div>
+</div>
+<p dir="ltr" style=""><span class="" style="color: rgb(51, 51, 51);">Estos conceptos tienen un punto en común: la administración.&nbsp;</span><br><span class="" style=""><span class="" style="" data-sider-select-id="f889cd6c-874e-4881-9a51-b4181ea5926c"><br><span class="" style="color: rgb(51, 51, 51);">La&nbsp;</span></span><span class="" style="color: rgb(0, 46, 184);">administración&nbsp;</span></span><span class="" data-sider-select-id="986f1a74-a31a-4cc8-b480-b5977f745a18" style="color: rgb(51, 51, 51);">es el proceso por medio del cual se alcanzan objetivos organizacionales a través del uso de recursos como entradas. El logro de objetivos es visto como las salidas del proceso.&nbsp;</span></p>
+<!--Fin Caja definición--><br><span class="" style="color: rgb(51, 51, 51);">&nbsp;La relación entre ellos es la siguiente:</span>
+<!-- Ampliar imagen -->
+<p style="color: rgb(1, 6, 20); font-size: large; text-align: center;">
+    <a href="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812144/mod_book/chapter/222789/URL.png?time=1716579105893" target="_blank">
+        <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812144/mod_book/chapter/222789/URL.png?time=1716579105893" role="presentation" class="img-responsive atto_image_button_text-bottom" data-sider-select-id="43eafd3b-b6c9-4352-ac2b-0ed9bc5dfd86">
+    </a>
+</p>
+<div style="color: rgb(1, 6, 20); text-align: center; margin-left: 3%; margin-right: 3%;">
+    <span class="" style="font-size: large; color: rgb(51, 51, 51);">
+        <span class="" style="font-size: medium; color: rgb(51, 51, 51);">
+            Hacé clic en la imagen para ampliarla&nbsp;
+        </span>
+    <a href="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812144/mod_book/chapter/222789/URL.png?time=1716579105893" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#007bff" class="bi bi-arrows-angle-expand" viewBox="0 0 16 16" style="vertical-align: middle; cursor: pointer;">
+                <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707"></path>
+            </svg>
+        </a>
+    <span class="" style="font-size: medium; color: rgb(51, 51, 51);">
+            &nbsp;para verla en tamaño completo
+        </span>
+    <br>
+    </span>
+</div>
+<!-- Fin de ampliar imagen -->
+</div>
+
+</span>
+</span>
+</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222790"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Toma de decisiones gerenciales</p>
+</article>
+<div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20);"></p><span style=""><span id="docs-internal-guid-0759fc2c-7fff-2581-a77f-6aafbe4fa593" style="color: rgb(1, 6, 20);"><p dir="ltr"></p></span><span id="docs-internal-guid-fd87a18b-7fff-0612-0b39-8739fb6fe64e" style=""><p dir="ltr" style="color: rgb(1, 6, 20);">El nivel de productividad depende de la ejecución de ciertas funciones de la administración tales como: planificación, organización, dirección y control. Para ejecutar esas actividades, los administradores/as están comprometidos en un continuo proceso de<span class="" data-sider-select-id="84eb9d17-5b59-443c-86db-f29e001c4f33" style="color: rgb(0, 61, 245);"> <b data-sider-select-id="5420a946-d93e-496e-a98a-c7967bd4e37e"><span class="" style="color: rgb(0, 46, 184);" data-sider-select-id="e2080f79-fe45-4474-9d15-3a29808bad17">toma de decisiones</span></b>.&nbsp;</span>
+        </p>
+        <p dir="ltr" style="color: rgb(1, 6, 20);">Por años se consideró al proceso de toma de decisiones como puro arte, adquirido por experiencia (prueba y error).&nbsp;</p>
+        <p dir="ltr" style="color: rgb(1, 6, 20);" data-sider-select-id="30b20b19-5561-44df-b9e2-8106f20aa9de"><b data-sider-select-id="bb22a2fd-7907-485a-b782-e6f1f3a9da41"><span class="sub_negrita" style="color: rgb(0, 46, 184);" data-sider-select-id="d3064328-5aa9-4e92-94cf-9dc1f6f3c11d">Estilos de toma de decisiones</span></b></p>
+        <p dir="ltr" style=""><span class="" style="color: rgb(51, 51, 51);">Existen diferentes estilos de administración y toma de decisiones, basados en creatividad, juicio, intuición y experiencia, más que en métodos cuantitativamente sistemáticos basados en enfoque científicos</span>.<br>
+            <span style=""><br><b data-sider-select-id="95aca301-8a53-4596-8f59-0b7b13455fa8"><span class="sub_negrita" style="color: rgb(0, 46, 184);" data-sider-select-id="9adf7c26-47ce-49a9-aa0e-d6c6a73a89cc">Factores de la toma de decisiones</span></b>
+                </span>
+        </p>
+        </span><span class="" style="color: rgb(0, 46, 184);"><span id="docs-internal-guid-42ea4b79-7fff-8685-4d0e-e25cc4c8e841" class="" style="color: rgb(51, 51, 51);">La siguiente tabla analiza los factores que afectan a la toma de decisiones:</span>
+        </span>
+        </span>
+    </div>
+    <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;"><span class="" style="color: rgb(0, 46, 184);"><span><br></span></span>
+    </div>
+    <!--Tabla 1 fila color 3 columnas-->
+    <table class="tabla-filaColores texto-principal" style="color: rgb(1, 6, 20); width: 96%; margin: 0px auto; border-collapse: collapse;">
+        <colgroup span="1" width="33%"></colgroup>
+        <colgroup span="1" width="33%"></colgroup>
+        <colgroup span="1" width="33%"></colgroup>
+        <tbody>
+            <!-- Cabecera de la tabla -->
+            <tr style="border: 1px solid black;">
+                <td class="tabla-filaColores-categoria texto-centrado" style="border: 1px solid black;" data-sider-select-id="97f8e3fa-3366-4cd6-8706-0dc3aed7a6ab">Factor</td>
+                <td class="tabla-filaColores-categoria texto-centrado" style="border: 1px solid black;" data-sider-select-id="ef595f1e-ee67-4272-a66e-8104887f5ef9">Tendencia</td>
+                <td class="tabla-filaColores-categoria texto-centrado" style="border: 1px solid black;" data-sider-select-id="2dd2b387-a4cf-43f1-8212-e25052943695">Resultado</td>
+            </tr>
+
+            <!-- Fila 1 -->
+            <tr class="tabla-filaColores-inpar" style="border: 1px solid black;">
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="653dd156-94ac-4561-9d39-d0e23a71f920"><b id="docs-internal-guid-c37e26df-7fff-0ab2-ec1b-a19231ca303f">Tecnología</b></td>
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="042ca5a0-45fb-4dea-8ad7-77c435b09c49"><b id="docs-internal-guid-db0febc0-7fff-31d8-aac8-acfaec8a25f5">Incrementar</b></td>
+                <td class="texto-margen-tabla" valign="top" rowspan="2" style="border: 1px solid black;" data-sider-select-id="1a13ebb5-0197-44cd-b79f-20b400ae780f">
+                    <b id="docs-internal-guid-eacf6ff9-7fff-62cf-e78d-5fa7e1f7e747" data-sider-select-id="e84ca3a0-98be-4957-8d96-f0335067c079">
+                    <br>
+                    <p style="text-align: center;">
+                        <b id="docs-internal-guid-eacf6ff9-7fff-62cf-e78d-5fa7e1f7e747" data-sider-select-id="e84ca3a0-98be-4957-8d96-f0335067c079">Más alternativas para elegir</b>
+                    </p>
+                    </b>
+                </td>
+            </tr>
+
+            <!-- Subfila de Fila 1 -->
+            <tr class="tabla-filaColores-par" style="border: 1px solid black;">
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="d84396ef-502a-4c3c-9e91-618d7bea759a"><b id="docs-internal-guid-b9cbb893-7fff-d9f2-bd92-77fd0d8cbc45">Información / Computadoras</b></td>
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="b6999265-b679-4695-9aa7-b0ef7269287d"><b id="docs-internal-guid-db0febc0-7fff-31d8-aac8-acfaec8a25f5">Incrementar</b></td>
+            </tr>
+
+            <!-- Subfila 1 de Fila 2 -->
+            <tr class="tabla-filaColores-inpar" style="border: 1px solid black;">
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="7f6eb9b9-6526-424b-bc43-ccd609c0bc5a"><b id="docs-internal-guid-e93a0b86-7fff-058a-4eda-337653961f02">Complejidad estructural</b></td>
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="bc657c84-1b80-4006-b18e-a2f8b2cdd8ed"><b id="docs-internal-guid-db0febc0-7fff-31d8-aac8-acfaec8a25f5">Incrementar</b></td>
+                <td class="texto-margen-tabla" valign="top" rowspan="2" style="border: 1px solid black;" data-sider-select-id="4ada2297-fb6b-4994-91f8-624de741d1cf">
+                    <b id="docs-internal-guid-52dbf809-7fff-86fc-62ff-261dcc0d50e3" data-sider-select-id="3f6834e4-12de-43e6-b9c8-e4b45de0a7da">
+                    <br>
+                    <p style="text-align: center;">
+                        <b id="docs-internal-guid-52dbf809-7fff-86fc-62ff-261dcc0d50e3" data-sider-select-id="3f6834e4-12de-43e6-b9c8-e4b45de0a7da">Costo mayor de los errores</b>
+                    </p>
+                    </b>
+                </td>
+            </tr>
+
+            <!-- Subfila 2 de Fila 2 -->
+            <tr class="tabla-filaColores-par" style="border: 1px solid black;">
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="931f4939-95b6-4a9e-92a6-3e350b04fd92"><b id="docs-internal-guid-5ce55b3d-7fff-2f5a-0368-c2fd77e586ba">Competencia</b></td>
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="67bb910b-86b5-4b31-a31a-4f73bc5c6595"><b id="docs-internal-guid-db0febc0-7fff-31d8-aac8-acfaec8a25f5">Incrementar</b></td>
+            </tr>
+
+            <!-- Subfilas de Fila 3 -->
+            <tr class="tabla-filaColores-inpar" style="border: 1px solid black;">
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="5e4e6be9-e735-4d8c-968d-6113bd00a671"><b id="docs-internal-guid-65babb01-7fff-4fab-e186-32d4e5038840">Mercados Internacionales</b></td>
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="2b65b402-2017-4c18-a666-546d229fb75e"><b id="docs-internal-guid-db0febc0-7fff-31d8-aac8-acfaec8a25f5">Incrementar</b></td>
+                <td class="texto-margen-tabla" valign="top" rowspan="4" style="border: 1px solid black;" data-sider-select-id="a65dd89b-42c4-4d76-b9d5-65fdd7391ffc">
+                    <b id="docs-internal-guid-fb0a1a76-7fff-a1ea-cb46-613fffc7e371" data-sider-select-id="2e7b6b0e-d203-4532-99ac-28e60cfa3af0">
+                    <br><br>
+                    <p style="text-align: center;">
+                        <b id="docs-internal-guid-fb0a1a76-7fff-a1ea-cb46-613fffc7e371" data-sider-select-id="2e7b6b0e-d203-4532-99ac-28e60cfa3af0">Mayor incertidumbre acerca del futuro</b>
+                    </p>
+                    </b>
+                </td>
+            </tr>
+            <tr class="tabla-filaColores-par" style="border: 1px solid black;">
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="66ec79d1-a173-401b-8679-a36549c63f0b"><b id="docs-internal-guid-98980c81-7fff-7cd4-b738-e5f1ea3b111b">Estabilidad Política</b></td>
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="d047ec5f-404e-410a-81c6-b2aba7351ab6"><b id="docs-internal-guid-db0febc0-7fff-31d8-aac8-acfaec8a25f5" data-sider-select-id="33281aed-e4c3-42aa-8b1b-866ab1ad9212">Disminuir</b></td>
+            </tr>
+            <tr class="tabla-filaColores-inpar" style="border: 1px solid black;">
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="d5c6236e-12d6-42e1-a002-dc38f004e5df"><b id="docs-internal-guid-e80c479d-7fff-9a8c-30c5-3528f4241d6a">Consumismo</b></td>
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="2acdadfa-bd86-4fca-8fdd-1e7d133a8d6c"><b id="docs-internal-guid-db0febc0-7fff-31d8-aac8-acfaec8a25f5">Incrementar</b></td>
+            </tr>
+            <tr class="tabla-filaColores-par" style="border: 1px solid black;">
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="07a87417-609a-4646-ae74-8781eda6d6cf"><b id="docs-internal-guid-a449ea98-7fff-edb2-a8f9-c8a56a9b8982">Intervención Gubernamental</b></td>
+                <td class="texto-margen-tabla texto-centrado" valign="top" style="border: 1px solid black;" data-sider-select-id="60fd3fd7-9232-402e-8d0c-bf7d4b405d32"><b id="docs-internal-guid-db0febc0-7fff-31d8-aac8-acfaec8a25f5">Incrementar</b></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222791"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Proceso de toma de decisiones</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p></p><b id="docs-internal-guid-3f5964d1-7fff-f650-c5db-74de53858470"><p dir="ltr"></p></b><span id="docs-internal-guid-9f807dc4-7fff-488e-c6c1-d8c8b3e9cc76" data-sider-select-id="7b2bdfcb-1364-46ec-83b4-97e630c5821a"><p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">En la actualidad es más difícil tomar decisiones por dos razones:&nbsp;</span></p>
+        <div style="margin-left: 3%; margin-right: 3%;"><span class="" style="color: rgb(51, 51, 51);">
+            </span>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px; margin-right: 0;">
+                <div style="display: inline-block;"><span class="" style="color: rgb(51, 51, 51);">
+                    </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg><span class="" style="color: rgb(0, 46, 184);">
+                </span>
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="color: rgb(0, 46, 184);">
+            </span><span class="" style="color: rgb(51, 51, 51);">
+                </span></div>
+                <div class="col" style="display: inline-block; vertical-align: top; margin-left: 8px;">
+                    <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600; color: rgb(51, 51, 51);" data-sider-select-id="b64b1e41-b5e8-4c22-af7e-02cee2e2e0af" class=""></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="b6dab2e8-2b01-42fd-a9b1-ead2f893778b">Primero el número de alternativas es mucho mayor debido al mejoramiento de las tecnologías y de los sistemas de comunicación.&nbsp;</span></p>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px; margin-right: 0;">
+                <div style="display: inline-block;"><span class="" style="color: rgb(51, 51, 51);">
+                    </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg><span class="" style="color: rgb(0, 46, 184);">
+                </span>
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="color: rgb(0, 46, 184);">
+            </span><span class="" style="color: rgb(51, 51, 51);">
+                </span></div>
+                <div class="col" style="display: inline-block; vertical-align: top; margin-left: 8px;">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="8f34cc4b-11af-411f-bcb8-0b13d92ce266" class=""></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">Segundo, el costo de cometer un error puede ser muy grande, debido a la complejidad y magnitud de las operaciones y la reacción en cadena que un error puede causar en muchas partes de la organización.</span></p>
+                </div>
+            </div>
+
+        </div>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="ece5e3ba-ff13-4961-8710-b7df954a7130">Por las mismas razones, los beneficios pueden ser extremadamente grandes si se toma la decisión correcta.</span></p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="cd1a7a70-aa17-43f0-aaec-95685b22d51a"><b data-sider-select-id="61d77445-da9e-4b1a-be87-21c1b6dd0697"><span class="sub_negrita" style="color: rgb(0, 46, 184);" data-sider-select-id="5236a93a-4090-41ea-8780-0672ffb6a9ba">Fases de la toma de decisiones&nbsp;</span></b>
+            </span>
+        </p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El proceso de toma de decisión tiene tres fases:</span></p>
+        <div style="margin-left: 3%; margin-right: 3%;"><span class="" style="color: rgb(51, 51, 51);">
+            </span>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px; margin-right: 0;">
+                <div style="display: inline-block;"><span class="" style="color: rgb(51, 51, 51);">
+                    </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg><span class="" style="color: rgb(0, 46, 184);">
+                </span>
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="color: rgb(0, 46, 184);">
+            </span><span class="" style="color: rgb(51, 51, 51);">
+                </span></div>
+                <div class="col" style="display: inline-block; vertical-align: top; margin-left: 8px;">
+                    <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="0b8f341c-224f-471e-baa3-28a8c1dab196" class="">Inteligencia:&nbsp;</span><span style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="1fbc6408-2604-4dc6-b2ec-b883c0a2af0d" class="">buscar las condiciones que se requieren para las decisiones.</span></p>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px; margin-right: 0;">
+                <div style="display: inline-block;"><span class="" style="color: rgb(51, 51, 51);">
+                    </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg><span class="" style="color: rgb(0, 46, 184);">
+                </span>
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="color: rgb(0, 46, 184);">
+            </span><span class="" style="color: rgb(51, 51, 51);">
+                </span></div>
+                <div class="col" style="display: inline-block; vertical-align: top; margin-left: 8px;">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="9da6077d-7e12-426c-b521-3d6869bb0030" class="">Diseño:&nbsp;</span><span style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="0cef8190-65f2-44ce-94b5-d91329e28239" class="">invención, desarrollo y análisis de posibles cursos de acción.</span></p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px; margin-right: 0;">
+                <div style="display: inline-block;"><span class="" style="color: rgb(51, 51, 51);">
+                    </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg><span class="" style="color: rgb(0, 46, 184);">
+                </span>
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="color: rgb(0, 46, 184);">
+            </span><span class="" style="color: rgb(51, 51, 51);">
+                </span></div>
+                <div class="col" style="display: inline-block; vertical-align: top; margin-left: 8px;">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="9da6077d-7e12-426c-b521-3d6869bb0030" class="">Elección:&nbsp;</span><span style="font-size: 0.9375rem;" data-sider-select-id="0cef8190-65f2-44ce-94b5-d91329e28239"><span id="docs-internal-guid-063485df-7fff-9f82-b992-d0d5d592f6fe" data-sider-select-id="bb06458d-4b35-4efd-b732-a690fbe12511" class="" style="font-size: large; color: rgb(51, 51, 51);">selección de un curso de acción de todos aquellos que están disponibles.</span></span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="9c08627a-c9a4-48bf-880a-bb445838bf10"><b data-sider-select-id="cef98068-1593-457a-9d88-5b973fb3ede3"><span class="sub_negrita" style="color: rgb(0, 46, 184);" data-sider-select-id="e3dd7c8f-6334-4672-9599-ac9a15bf3299">Tipos de decisión&nbsp;</span></b>
+            </span>
+        </p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">De acuerdo con qué fases están estructuradas o no, tenemos los tipos de decisión:&nbsp;</span></p><p><span class="" style="font-size: large; color: rgb(51, 51, 51);">
+</span></p>
+        <div style="margin-left: 3%; margin-right: 3%;"><span class="" style="color: rgb(51, 51, 51);">
+            </span>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px; margin-right: 0;">
+                <div style="display: inline-block;"><span class="" style="color: rgb(51, 51, 51);">
+                    </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg><span class="" style="color: rgb(0, 46, 184);">
+                </span>
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="color: rgb(0, 46, 184);">
+            </span><span class="" style="color: rgb(51, 51, 51);">
+                </span></div>
+                <div class="col" style="display: inline-block; vertical-align: top; margin-left: 8px;">
+                    <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="0b8f341c-224f-471e-baa3-28a8c1dab196" class="">Estructurada o programada.</span></p>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px; margin-right: 0;">
+                <div style="display: inline-block;"><span class="" style="color: rgb(51, 51, 51);">
+                    </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg><span class="" style="color: rgb(0, 46, 184);">
+                </span>
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="color: rgb(0, 46, 184);">
+            </span><span class="" style="color: rgb(51, 51, 51);">
+                </span></div>
+                <div class="col" style="display: inline-block; vertical-align: top; margin-left: 8px;">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="9da6077d-7e12-426c-b521-3d6869bb0030" class="">Programada o inestructurada.</span></p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px; margin-right: 0;">
+                <div style="display: inline-block;"><span class="" style="color: rgb(51, 51, 51);">
+                    </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg><span class="" style="color: rgb(0, 46, 184);">
+                </span>
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="color: rgb(0, 46, 184);">
+            </span><span class="" style="color: rgb(51, 51, 51);">
+                </span></div>
+                <div class="col" style="display: inline-block; vertical-align: top; margin-left: 8px;">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"></p><span style="color: rgb(51, 51, 51); font-size: large; font-weight: 600;">No programada o inestructurada.</span><br><p></p>
+                </div>
+            </div>
+        </div>
+        </span>
+        <p></p>
+        <h5 data-sider-select-id="a22f11da-46a5-4fda-9966-27bc3ccbb6fe">
+            <p></p>
+            <ul><span class="" style="font-size: large; color: rgb(51, 51, 51);">
+            </span></ul>
+            <ul><span class="" style="font-size: large; color: rgb(51, 51, 51);">
+            </span></ul>
+            <ul><span class="" style="color: rgb(51, 51, 51);">
+            </span></ul>
+            <p></p>
+        </h5>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Si consideramos, además, qué tipos de actividades se realizan en la administración, tenemos tres tipos de control:&nbsp;</span></p>
+        <div style="margin-left: 3%; margin-right: 3%;"><span class="" style="color: rgb(51, 51, 51);">
+            </span>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px; margin-right: 0;">
+                <div style="display: inline-block;"><span class="" style="color: rgb(51, 51, 51);">
+                    </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg><span class="" style="color: rgb(0, 46, 184);">
+                </span>
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="color: rgb(0, 46, 184);">
+            </span><span class="" style="color: rgb(51, 51, 51);">
+                </span></div>
+                <div class="col" style="display: inline-block; vertical-align: top; margin-left: 8px;">
+                    <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="86c3a2da-7b26-4fd2-9935-ed20ad4582a7" class="">Operacional:&nbsp;</span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="bab12f43-0ed5-4259-81d1-3769b08055e7">ejecución efectiva y eficiente de tareas específicas.</span></p>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px; margin-right: 0;">
+                <div style="display: inline-block;"><span class="" style="color: rgb(51, 51, 51);">
+                    </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg><span class="" style="color: rgb(0, 46, 184);">
+                </span>
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="color: rgb(0, 46, 184);">
+            </span><span class="" style="color: rgb(51, 51, 51);">
+                </span></div>
+                <div class="col" style="display: inline-block; vertical-align: top; margin-left: 8px;">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" class="" data-sider-select-id="a8781c25-44e4-4c01-87a4-97012d8cc375">Gerencial:</span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="0714b65f-bf2e-4dc2-a184-cbd63f6fb069"> adquisición y eficiente utilización de recursos en el cumplimiento de los objetivos organizacionales.</span></p>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px; margin-right: 0;">
+                <div style="display: inline-block;"><span class="" style="color: rgb(51, 51, 51);">
+                    </span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg><span class="" style="color: rgb(0, 46, 184);">
+                </span>
+                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path><span class="" style="color: rgb(0, 46, 184);">
+            </span><span class="" style="color: rgb(51, 51, 51);">
+                </span></div>
+                <div class="col" style="display: inline-block; vertical-align: top; margin-left: 8px;">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" class="" data-sider-select-id="e3209271-818c-4e32-b1d1-54d922257d76">Planificación estratégica:</span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="e88f2e5d-9cc6-4847-9415-a94c072eedb9"> objetivos a largo plazo y políticas para la adquisición de recursos.</span></p>
+                </div>
+            </div>
+        </div>
+        <p dir="ltr" style=""><span class="" style="color: rgb(51, 51, 51); font-size: large;" data-sider-select-id="ca02ed20-5cd6-419e-9220-4bee3b63dbf9">La siguiente tabla ofrece un entorno para el soporte de decisiones:</span></p>
+        <!--Tabla 3 columnas varias filas de color-->
+        <table class="tabla-filaColores texto-principal" style="width: 96%; margin: 0 auto; border-collapse: collapse;" data-sider-select-id="8af0c03b-fcea-475f-927b-b2692bade889">
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="20%"></colgroup>
+            <tbody>
+                <tr style="border: 1px solid black;">
+                    <td class="tabla-filaColores-categoria texto-centrado" style="border: 1px solid black;" data-sider-select-id="310b4c30-c6ae-4923-aa39-70c39c1a6266">Fase</td>
+                    <td class="tabla-filaColores-categoria texto-centrado" style="border: 1px solid black;" data-sider-select-id="b04dd670-8cb2-40ba-aacd-bcab4f9258da">Control operacional</td>
+                    <td class="tabla-filaColores-categoria texto-centrado" style="border: 1px solid black;" data-sider-select-id="bac5e7f8-f6ca-4c08-889d-be26d9b074fd">Control gerencial</td>
+                    <td class="tabla-filaColores-categoria texto-centrado" style="border: 1px solid black;" data-sider-select-id="ca36bdc3-cd73-4052-8ddb-fef73c4db5d0">Planificación estratégica</td>
+                    <td class="tabla-filaColores-categoria texto-centrado" style="border: 1px solid black;" data-sider-select-id="aa31bfe5-1ea5-4108-a285-eec8eb068c7f">Soporte requerido</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par" style="border: 1px solid black;">
+                    <td class="texto-margen-tabla texto-centrado" style="border: 1px solid black;" data-sider-select-id="efc443a0-2adb-4dda-a027-6e7dfa8d6500"><b class="sub_negrita" id="docs-internal-guid-c7e75e03-7fff-e691-4902-77828831a060" data-sider-select-id="4e6d7ea8-e9ad-4844-b657-1ff476f8dd68">Decisión Estructurada</b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left; border: 1px solid black;" data-sider-select-id="2aabe2c9-a609-4a84-95b5-4549a26b5399"><span id="docs-internal-guid-3ab9abb2-7fff-c191-22fe-3f4ba0fd64a4" data-sider-select-id="4694f299-472e-4555-9c03-06fd9c753b0d">Contabilidad, registración de cuentas y ingreso de órdenes</span></td>
+                    <td class="texto-margen-tabla" style="border: 1px solid black;" data-sider-select-id="96ccc144-8a13-4c87-8fba-7a81a5c8af0a"><span id="docs-internal-guid-42bac506-7fff-0c51-0d88-60a6767c574c">Análisis de presupuestos, Reportes de personal. Hacer o comprar.</span></td>
+                    <td class="texto-margen-tabla" style="border: 1px solid black;" data-sider-select-id="4fcbc0ac-7226-46df-9f4c-7a01cf20fa08"><span id="docs-internal-guid-f473fcb1-7fff-2f87-022b-03eda0c4cc26">Administración Financiera, investigación de la ubicación de almacenes, sistemas de distribución</span></td>
+                    <td class="texto-margen-tabla" style="border: 1px solid black;" data-sider-select-id="12a040a8-24a2-431f-862b-944c64c3607f"><span id="docs-internal-guid-78341783-7fff-5303-b8b3-32028ee9bfbf" data-sider-select-id="bf1c3b50-2af4-41a0-8dbd-3bacba36fb1d">Mis, modelos de investigación operativa, procesamiento transaccional</span></td>
+                </tr>
+                <tr class="tabla-filaColores-inpar" style="border: 1px solid black;">
+                    <td class="texto-margen-tabla texto-centrado" style="border: 1px solid black;" data-sider-select-id="c70609a0-6ec0-4794-8d00-a5c8fd770b1e"><b class="sub_negrita" id="docs-internal-guid-6541cc39-7fff-0bbb-ff60-8b4e70883ed2">Decisión Semi-estructurada</b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="border: 1px solid black;" data-sider-select-id="1716b513-93ca-4be3-a480-6e9ee92ed296"><span id="docs-internal-guid-1443d71c-7fff-dae5-b805-e0120f9a9b94" data-sider-select-id="b8412945-4cd7-45bb-909c-a12f5d630c0d">Planificación de la Producción, Control de Inventario</span></td>
+                    <td class="texto-margen-tabla" style="text-align: center; border: 1px solid black;" data-sider-select-id="366fdeb6-bce0-4be7-81ac-5536ce12fda0"><span id="docs-internal-guid-2074c644-7fff-ff81-612e-d44cfd6ea0c4">Evaluación de créditos, preparación de presupuestos, distribución de planta, planificación de proyectos.</span></td>
+                    <td class="texto-margen-tabla" style="text-align: center; border: 1px solid black;" data-sider-select-id="6221365a-cd0c-4c35-9ec4-9c3f889de310"><span id="docs-internal-guid-e7c62aa3-7fff-2b67-dff0-e1f2107d6cb9">Construcción de plantas, fusiones y adquisiciones, planificación de nuevos productos, calidad, planificación de compensaciones</span></td>
+                    <td class="texto-margen-tabla" style="text-align: center; border: 1px solid black;" data-sider-select-id="1d7d6a0f-77b5-4445-87a6-f90dceb59d43"><span id="docs-internal-guid-d8bf542e-7fff-47bc-2868-10cf784475a5" data-sider-select-id="8041653d-09ed-4936-a715-3a671b4643f0">DSS</span></td>
+                </tr>
+                <tr class="tabla-filaColores-par" style="border: 1px solid black;">
+                    <td class="texto-margen-tabla texto-centrado" style="border: 1px solid black;" data-sider-select-id="770bf43d-d32f-4ffc-bff8-e745a1a61580"><b class="sub_negrita" id="docs-internal-guid-2dd2ba60-7fff-2989-ea71-55a4670d68f3">Decisión No Estructurada</b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left; border: 1px solid black;" data-sider-select-id="7b831b89-e9ec-4b23-afdd-9f82f91758cb"><span id="docs-internal-guid-e2a6e8a6-7fff-9c79-ad01-c8912700b4eb" data-sider-select-id="8a25780e-ab97-4dad-8f75-4b6b8f839c1e">Selección de una publicación para un revista, comprar software, aprobación de&nbsp; préstamos</span></td>
+                    <td class="texto-margen-tabla" style="border: 1px solid black;" data-sider-select-id="f80b3d8f-75ba-4b41-9d85-92302c7e5ac7"><span id="docs-internal-guid-2779331c-7fff-c52c-47ab-62b6de817551">Negociación de compra de hardware, contratación de ejecutivos</span></td>
+                    <td class="texto-margen-tabla" style="border: 1px solid black;" data-sider-select-id="03898f12-ac4a-49f8-9729-b1042256f504"><span id="docs-internal-guid-662b019b-7fff-ebc6-5324-8f8d17c5a896">Planificación de investigación y desarrollo. Desarrollo de nuevas tecnologías, planificación de responsabilidades sociales</span></td>
+                    <td class="texto-margen-tabla" style="border: 1px solid black;" data-sider-select-id="88ea4b51-2234-44bc-bbf4-e4f27954352c"><span id="docs-internal-guid-5e40cc1a-7fff-101c-ff93-cdcd9d142434" data-sider-select-id="6c125a1c-e63f-4bf0-9d3c-4676bd492d8a">DSS, ES, redes neuronales</span></td>
+                </tr>
+                <tr class="tabla-filaColores-inpar" style="border: 1px solid black;">
+                    <td class="texto-margen-tabla texto-centrado" style="border: 1px solid black;" data-sider-select-id="53c4f6ad-947d-4356-941f-c575f744cf5c"><b class="sub_negrita" id="docs-internal-guid-d8c41320-7fff-7516-433d-9bbcb08ef59d">Soporte Requerido</b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="border: 1px solid black;" data-sider-select-id="022ebb22-2053-44f4-bf61-5c1b3b8d38d9"><span id="docs-internal-guid-23955aee-7fff-825a-ab05-156f33c79ff5" data-sider-select-id="808ab6f9-e77b-40c3-8070-f4807e3248ef">MIS, ciencias de administración</span></td>
+                    <td class="texto-margen-tabla" style="border: 1px solid black;" data-sider-select-id="d2f653fd-3533-4f7b-8792-66cc6d32e34b"><span id="docs-internal-guid-ee6d225c-7fff-c11b-7c96-5a13b4006a88" data-sider-select-id="13bda9ff-1ce0-44a0-b686-52b0226324ca">ciencias de administración, DSS, ES, EIS</span></td>
+                    <td class="texto-margen-tabla" style="border: 1px solid black;" data-sider-select-id="4c85d7d5-b453-4973-b4c9-8f9d61b0001d">DSS, ES, redes neuronales</td>
+                    <td class="texto-margen-tabla" style="border: 1px solid black;" data-sider-select-id="0ad8699d-f941-41ae-bd2c-7b6e758eba85"><br></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <span id="docs-internal-guid-62b64ef0-7fff-2a70-c1f6-b9b262502a50"><p dir="ltr" style=""><span class="" style="font-size: large;" data-sider-select-id="b4ca7111-52d4-4cb0-b08d-ef5c52fdbc74"><br><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">Observaciones:</b></span>&nbsp;</span>
+        </p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600" data-sider-select-id="167b082e-1efa-4ff4-9abe-9d267bec831d"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="5b47f2d5-7da3-45c8-9de2-55889eabb42a">Administración de bajo nivel</span></p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600; font-size: large;" data-sider-select-id="956280e6-aa09-447a-8ca5-c6c32c2f6bcb" class=""></span><span data-sider-select-id="de195d6c-1b52-4a4e-a8ea-5c2fd3cc644d" class="" style="font-size: large; color: rgb(51, 51, 51);">Altos ejecutivos</span></p>
+                </div>
+            </div><br>
+        </div>
+        </span>
+
+    </div>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222792"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Sistemas de información</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p></p><span id="docs-internal-guid-6ec3606e-7fff-c12d-0e9a-3ce6a3446d6d"><p dir="ltr" style="" data-sider-select-id="0310cca7-20d5-4ce7-a70e-64fb84e1ff13"><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="7ae5be6b-fad3-4f92-b24f-fe41022c5613">Los sistemas de información están en la<span data-sider-select-id="3f38fd62-a362-4bcb-8a06-bb46e4bc2868" class="" style="color: rgb(0, 46, 184);"> base de la toma de decisiones</span>,
+        proveyendo los recursos para poder escoger la opción más conveniente.&nbsp;</span>
+        </p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Las decisiones estructuradas y semiestructuradas se soportan desde 1960, en lo que se refiere al control operacional y de gestión. Se encuentran en todas las áreas funcionales, especialmente finanzas y producción (administración de operaciones).</span></p>
+        <p dir="ltr" style=""><span class="" style="font-size: large;" data-sider-select-id="97b95251-c79e-4078-bab8-9ec6ffa9229f"><b data-sider-select-id="4a700194-4762-4d24-9c96-abb15023194d"><span class="sub_negrita" style="color: rgb(0, 46, 184);" data-sider-select-id="13a3e732-d4e4-47f7-86e9-03e08191bbe8">Problemas</span></b>
+            </span>
+        </p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="18ebe62a-e469-4318-a853-620b04273af4">A problemas altamente estructurados se los puede abstraer, analizar y clasificar en prototipos.&nbsp;<br><br></span></p>
+        <div class="row row-cols-auto">
+
+            <p></p>
+        </div>
+
+        <!--Fin Caja ejemplo-->
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style=""><span style="color: rgb(51, 51, 51); font-size: large;">El control de inventarios, hacer o comprar, reemplazo de equipos, ubicación de recursos.</span><br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <p dir="ltr" style=""><br></p>
+        <p dir="ltr" style=""><span class="" style="font-size: large;" data-sider-select-id="a5a3b7e4-ad7f-4911-bd48-43fed7686915"><b data-sider-select-id="9c64a59b-933f-4536-a0de-496bc5fc4d21"><span class="sub_negrita" style="color: rgb(0, 46, 184);" data-sider-select-id="777f38c4-cbc8-4189-88d9-5f8f2d9c6aed">Soluciones</span></b>&nbsp;</span>
+        </p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="6bdb43bb-3ab9-4f31-8fdc-1a26d791806a">Las soluciones se plantean con fórmulas cuantitativas. Este enfoque se conoce como Ciencias de la Administración o Investigación de Operaciones. Las ciencias de la administración adoptan una visión que los administradores pueden seguir bastante
+            sistemáticamente. Involucra los siguientes pasos:</span></p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600" data-sider-select-id="a7c82c28-02c1-4e2e-9f32-1a4571315ff7"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="d7074820-b1e1-4e06-8b48-ba25308e28ea">Definir el problema.</span></p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="93ac0f01-20a1-4f00-b178-5b084a6014ec" class=""></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">Clasificar el problema en categorías estándar.</span></p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="c0842ce4-7c17-407a-9617-10d59ca42f40" class=""></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">Construir un modelo matemático que describa el problema de la vida real.</span></p>
+                </div>
+            </div>
+
+
+            <!-- 4 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="6efbef66-f441-463c-b7af-b4893a3ec052" class=""></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">Encontrar potenciales soluciones al problema modelado y evaluarlas. </span></p>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600; font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="9c1af159-0bd1-4a97-b80b-697546fdfcc0" class=""></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">Elegir y recomendar una solución al problema. Este proceso está centrado alrededor del modelado.</span>                        </p>
+                </div>
+            </div>
+        </div>
+        </span><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222800"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Tipos de sistemas I</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <div style="margin-left: 3%; margin-right: 3%;"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <span class="" style="font-size: large; color: rgb(51, 51, 51);">A continuación podrás explorar los tipos de sistemas, sus características y componentes:</span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Sistemas de soporte de grupos:<br><br><br></p>
+        </div>&nbsp;</div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span class="" style="font-size: large;"><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(51, 51, 51);">Son Sistemas de soporte a decisiones que ayudan a grupos colectivamente.</span><br></span>
+
+
+        </span><br>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Sistema de soporte a las decisiones (DSS):</p>
+        </div>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span class="" style="color: rgb(51, 51, 51); font-size: large;">Sistema basado en computadoras, interactivo, que ayuda a los decisores a usar datos y modelos para resolver problemas no estructurados.&nbsp;Reúne los recursos intelectuales de los individuos con las capacidades de la computadora para mejorar la calidad de las decisiones. Trata con problemas semi-estructurados.</span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p dir="ltr" style="color: rgb(1, 6, 20);"><b><span class="sub_negrita" style="color: rgb(0, 46, 184); font-size: large;" data-sider-select-id="e8cbb83a-862e-4e7c-98cf-0e8173787371">¿Por qué usar un DSS? Razones para incorporar un DSS</span><span class="" style="font-size: large; color: rgb(0, 46, 184);">:</span></b></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600" data-sider-select-id="95baefe2-741f-47e6-9a5c-19afe8974185"></span><span data-sider-select-id="9ba9f634-e9e7-4e06-b342-a611d4b610da" class="" style="font-size: large; color: rgb(51, 51, 51);">La compañía estaba operando en una economía inestable.</span><br></p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600" data-sider-select-id="1022436a-f1fe-42da-9ba7-34c2de1b90e4"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="38ca28e7-6915-4e8e-9f0d-83fc510de82d">La compañía estaba afectada por competencia doméstica y extranjera.</span></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600" data-sider-select-id="b2fb3147-7f73-4053-a910-844c33da633f"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="dca85501-8d3e-43f6-8060-2de9b40801a5">La compañía encuentra dificultades en registrar las numerosas operaciones del negocio.</span></p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600" data-sider-select-id="0044c798-d58a-4762-8f6c-5cbbace043c2"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="373880e5-8825-48f8-a51e-09fe975fbed1">Los sistemas computarizados de la compañía no soportan los objetivos de aumento de eficiencia, factibilidad e ingreso a mercados probables.</span>                    </p>
+            </div>
+        </div>
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600" data-sider-select-id="8d32bc52-ee65-4820-ac99-02a8885d2685"></span><span class="" style="font-size: large;" data-sider-select-id="1edbef49-ddb8-4f29-a50b-c2f52c99b71e"><span class="" style="color: rgb(51, 51, 51);">El departamento de Procesamiento de Datos no direcciona las necesidades de la compañía a los requerimientos AD-HOC de los administradores y las funciones de análisis de los negocios no son inherentes a los sistemas existentes.</span><br><br>
+                    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812144/mod_book/chapter/222800/yt67%20%281%29.png" alt="" width="901" height="300" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></span>
+                </p>
+            </div>
+        </div>
+    </div><br><br></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222793"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Tipos de sistemas II</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <br>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Sistemas de información ejecutiva (EIS)</p>
+        </div>
+        <p></p><span data-sider-select-id="b75f757d-90ca-4aa7-ae2d-e2b42b483249"><span class="sub_negrita" style="color: rgb(0, 46, 184);" data-sider-select-id="2b24ba4a-554d-4343-ac4f-377eee890ec5"><br><span class="" style="font-size: large; color: rgb(51, 51, 51); font-weight: normal;" data-sider-select-id="96f7abee-707f-4a32-8b53-1d15e7548c82">Estos sistemas tienen los siguientes objetivos:</span></span>
+        </span>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600" data-sider-select-id="b9ed138a-97bf-494c-953c-ef4afabdd9d8"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="765e094b-b830-409f-8a0c-a44f2278d037">Servir a las necesidades de información de ejecutivos.</span></p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600" data-sider-select-id="63c222ee-4ee0-469e-8e91-0f4fbe3b060c"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="39b916dc-7518-4878-b6b9-8a0390d9042b">Proveer interfaces sumamente amigables para los ejecutivos.</span></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600" data-sider-select-id="e1ce35a1-39f1-443a-98cc-3066924bb6fe"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="533e0818-8d04-46d0-aef9-e697e0ae6e91">Encontrar estilos de decisión individuales para los ejecutivos.</span></p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600" data-sider-select-id="0df44471-13f3-4477-99ab-ef705f22e0b4"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="ec092d62-aa3d-4a52-8c21-64b04390ceb3">Proveer registro y control efectivo y oportuno.</span>                    </p>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600" data-sider-select-id="b9ed138a-97bf-494c-953c-ef4afabdd9d8"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="1a0291a1-aa43-42f8-adb3-68c8e53351a8">Proveer acceso rápido a información detallada existente detrás de textos, números o gráficos.</span></p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600" data-sider-select-id="63c222ee-4ee0-469e-8e91-0f4fbe3b060c"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="8882a2cb-62e9-46c5-905c-4141547980d1">Filtrar, comprimir y registrar información y datos críticos.</span></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600" data-sider-select-id="e1ce35a1-39f1-443a-98cc-3066924bb6fe"></span><span data-sider-select-id="17bc412d-954f-4e45-8acb-0d99bed7faa6" class="" style="font-size: large; color: rgb(51, 51, 51);">Identificar problemas (oportunidades).<br><br></span></p>
+            </div>
+        </div>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Sistemas expertos</p>
+        </div>
+        <p></p><span id="docs-internal-guid-2c0023cf-7fff-87ca-3e34-f71f9e73086f"><p dir="ltr" style="" data-sider-select-id="14d30a58-6c1e-4851-b229-98631988d6c5"><span style="font-size: large;"><span class="" style="color: rgb(51, 51, 51);">Cuando las organizaciones tienen problemas recurren a expertos/as para pedir consejos. Mientras más difícil el problema más caro el/la experto/a. Los sistemas expertos intentan imitar a expertos humanos.</span><br></span>
+        <span class="" style="font-size: large;"><span class="" style="" data-sider-select-id="61e8a303-3c7b-47af-990b-f4f31a76bf45"><br><span class="" style="color: rgb(51, 51, 51);">Los&nbsp;</span></span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(0, 46, 184);">sistemas expertos</span>&nbsp;</span></span><span class="" data-sider-select-id="cbdc7c25-8b73-4d14-bcec-009b22145418" style="font-size: large; color: rgb(51, 51, 51);">son paquetes de hardware/software para toma de decisiones o resolución de problemas que puede alcanzar un nivel de performance comparable con él un experto humano en algún área especializada de problema.</span></p>
+            <p dir="ltr" style=""><span style="font-size: large; color: rgb(51, 51, 51);" class="">La idea de los sistemas expertos es la <span class="" style="color: rgb(0, 46, 184);">transferencia de la experticia </span>desde el experto a la computadora y los usuarios solicitan
+                consejos específicos cuando los necesitan. La computadora puede hacer inferencias y llegar a conclusiones específicas. También ante un requerimiento pueden explicar la lógica detrás del consejo.</span><br></p>
+                <!-- Cuadro amarillo borde violeta -->
+                <br>
+
+                <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+                    <div style="margin:16px">
+                        <p style="color: #5811BB; font-size: large; font-weight: 600" data-sider-select-id="781761c4-42fb-454c-9ad4-a9260d490e84">Los ES ayudan a:</p>
+                        <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px" data-sider-select-id="23a08616-eaf7-49bd-982f-5ac2ad4d041a"> mejorar la productividad e incrementar ventajas competitivas.</p>
+                    </div>
+                </div>
+                </span></div></div><div style="margin-left: 3%; margin-right: 3%;" data-sider-select-id="f13cd2af-ba52-4fd0-9d94-f6113d3569ff"><br>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222794"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Comunicación neuronal</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <br>
+
+        <p></p><span id="docs-internal-guid-1dd4a60f-7fff-49b8-3859-a22999cf7903"><p dir="ltr" style="" data-sider-select-id="eafa595c-1cb1-4443-b8f5-105a0f85d47b"><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="e368a670-de9c-43e0-9167-28c9908b3917">La aplicación de las tecnologías previas se basa en el <span class="" style="color: rgb(0, 46, 184);">uso de datos, información y conocimiento explícitos</span>,
+        los cuales se almacenan en una computadora y se manipulan cuando es necesario.&nbsp;</span><span style="color: rgb(51, 51, 51); font-size: large;">Las personas deben tomar decisiones basadas en información parcial, inexacta e incompleta, producto de entornos rápidamente cambiantes.&nbsp;</span></p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="e1864d29-11f9-46ec-b2c7-5fd86b246341">Los <span class="" style="color: rgb(0, 46, 184);">decisores</span> se basan en su experiencia de situaciones similares
+            para las cuales no es posible la réplica exacta.</span>
+        </p><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="1ee8782c-53a5-4629-9ac9-be4126132e3f">En todas las tecnologías previas no hay un elemento de aprendizaje de la computadora. La tecnología que intenta cerrar esa brecha es la de <span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">redes Neuronales Artificiales (ANN)</b></span>.&nbsp;</span>
+        </span>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Enfoque empleado</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> <span><span data-sider-select-id="1ee8782c-53a5-4629-9ac9-be4126132e3f">E</span></span><span data-sider-select-id="76aeeaf2-a012-4faa-b1e7-8196bd3f6af9"><span data-sider-select-id="7e085006-6fb2-4a03-bb58-31662f4a1c06">sta tecnología emplea un&nbsp;</span>&nbsp;enfoque
+                    de reconocimiento de PATTERN</span><span data-sider-select-id="d7781728-2317-4bb8-80c1-30097ea4dd23">, pero se necesita aún más investigación y desarrollo.<span>&nbsp;<span>Algunos ejemplos de su uso: a</span>plicaciones
+                    médicas y financieras.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        </div><div style="margin-left: 3%; margin-right: 3%;"><div style="color: rgb(1, 6, 20); font-size: large; margin-left: 3%; margin-right: 3%;"><br></div>
+
+    </div>
+
+    <p></p>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222795"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Categorías y evolución de la ayuda asistida</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <div style="margin-left: 3%; margin-right: 3%;" data-sider-select-id="ac91b2bf-965a-41ec-8684-126b260f7ecb">
+        <br>
+        <p dir="ltr" style=""><span class="" style="color: rgb(51, 51, 51); font-size: large;">Podemos agrupar a las herramientas computarizadas o de ayuda a las decisiones en siete categorías:</span></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="5ddef908-3827-47ba-bf7f-3501ec62a9a7"><span style="font-weight: 600" data-sider-select-id="6884f192-e2cb-4c67-8647-40d36c324974"></span><span data-sider-select-id="b15bb59b-2572-4bdf-bc80-c68813459236" class="" style="font-size: large; color: rgb(51, 51, 51);">Sistemas de procesamiento de transacciones (TPS).</span><br></p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="b243008b-a858-44e6-b7d8-b69f8429e3aa"><span style="font-weight: 600" data-sider-select-id="e4bccf5f-2a9a-43f8-bb7f-c38201d1fc54"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="ca09ec7a-ef39-4bd6-ba39-0c4aa0f2e70c">Sistemas de información para la administración (MIS).</span></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="358a4665-d954-426a-9951-8383a24ff2c2"><span style="font-weight: 600" data-sider-select-id="5c33966a-6adc-4c1e-9c9f-ef4382dfe711"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="63a64081-fec8-437e-b400-4413471a2006">Sistema de automatización de oficinas (OAS).</span></p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="d0f9bef1-4431-4317-a220-6c138b05e3ad"><span style="font-weight: 600" data-sider-select-id="c1cfc1a5-393d-4d8b-9bd6-8f5e228a0a38"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="f5d25b78-93ff-4eff-9d1b-4093e67a70af">Sistema de soporte a las decisiones (DSS) y SSD grupo (GDSS).</span>                    </p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="1c21f226-ddf9-4dfe-b6d0-70cb5cf891b5"><span style="font-weight: 600" data-sider-select-id="2da5bfbe-339a-4076-b212-f735028aba25"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="b5bf396e-ce41-4e55-a537-18eb91bf8b7a">Sistemas expertos (ES).</span>                    </p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="89585217-15ba-4947-9f3c-829ca60dc202"><span style="font-weight: 600" data-sider-select-id="b5ddc7ae-8aa8-4eb8-9fa9-3694cd46b1cc"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="007ecf03-2ee1-43cd-aa91-6391a57db2b9">Sistema de información ejecutiva (EIS).</span>                    </p>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.37 5.11h3.972v.07L6.025 12H7.42l3.258-6.85V4.002H5.369v1.107Z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p data-sider-select-id="f5997622-479f-473e-a163-a56712c115fc"><span style="font-weight: 600" data-sider-select-id="49d19916-be0f-4a78-8fee-ccd4fdf09ec9"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="d4e65210-60a8-465d-81b1-0fd5153d139f">Redes neuronales artificiales (ANN).</span></p>
+            </div>
+        </div>
+        <ol>
+        </ol>
+        <p dir="ltr" style=""><span class="" style="color: rgb(51, 51, 51); font-size: large;">La siguiente tabla resume el desarrollo de los procedimientos computarizados usados como ayuda a la toma de decisiones:</span></p>
+
+        <br><span class="" style="color: rgb(51, 51, 51); font-size: large;">
+    
+        </span></div>
+
+    <table class="tabla-filaColores texto-principal" style="width:96%; margin: 0 auto;">
+        <colgroup span="1" width="20%"></colgroup>
+        <colgroup span="1" width="40%"></colgroup>
+        <colgroup span="1" width="40%"></colgroup>
+        <tbody>
+            <tr>
+                <td class="tabla-filaColores-categoria texto-centrado" data-sider-select-id="559f0087-9c39-4d38-b384-2866963f2da5">Fase</td>
+                <td class="tabla-filaColores-categoria texto-centrado" data-sider-select-id="90d7049b-08c7-4717-8fa6-edc4a39ded7d">Descripción</td>
+                <td class="tabla-filaColores-categoria texto-centrado" data-sider-select-id="d34e7f97-0f95-4b41-9419-0d35ede44ed8"><b id="docs-internal-guid-f6a44533-7fff-e510-856b-cb7f2bc05b87">Ejemplos de Herramientas </b></td>
+            </tr>
+
+            <tr class="tabla-filaColores-inpar">
+                <td class="texto-margen-tabla texto-centrado" valign="top" data-sider-select-id="128d495c-7ee2-4839-b1b9-7d40cdc466f7"> <br><b class="sub_negrita"> Temprana</b></td>
+                <td class="texto-margen-tabla texto-centrado" valign="top" data-sider-select-id="2e4b8f64-b60b-4b26-8457-322f91a5fe7e" style="text-align: left;"><span id="docs-internal-guid-1915e74b-7fff-1179-2a53-d54f9ee6fcd8" data-sider-select-id="ed59ce3c-82eb-4635-a05a-ccb492b5cf57">Computa números (gran cantidad), sumariza, organiza.</span></td>
+                <td class="texto-margen-tabla" valign="top" data-sider-select-id="46b8fd28-80a5-43c0-bd0e-e51892fcd0e3"><span id="docs-internal-guid-63f34140-7fff-643b-1131-5428686a6e6e" data-sider-select-id="a29ceed5-ecda-4ddf-80f9-2b3c15b1191f">Calculadoras, primeros programas de computadora, modelos estadísticos, modelos simples de ciencia de administración.</span></td>
+            </tr>
+
+            <!-- Nueva fila 1 -->
+            <tr>
+                <td class="texto-margen-tabla texto-centrado" valign="top" data-sider-select-id="nuevo-id"><b class="sub_negrita">Intermedia</b></td>
+                <td class="texto-margen-tabla texto-centrado" valign="top" data-sider-select-id="nuevo-id" style="text-align: left;"><span id="nuevo-id" data-sider-select-id="15c2328f-8a10-4aaa-ba17-60d5f0a5a9fa"><span id="docs-internal-guid-7611bef6-7fff-5d17-ed88-3cf20daefd13">Encuentra, organiza y muestra información relevante para la decisión</span></span>
+                </td>
+                <td class="texto-margen-tabla" valign="top" data-sider-select-id="nuevo-id"><span id="nuevo-id" data-sider-select-id="8e4068bc-e1b4-44d8-9d59-ef4ddcd5ba4c"><span id="docs-internal-guid-d002b970-7fff-81a2-0a93-a35281cd8453">DBMS, MIS, Sistemas de Archivo. Modelos de ciencias de la Administración.</span></span>
+                </td>
+            </tr>
+
+            <!-- Nueva fila 2 -->
+            <tr class="tabla-filaColores-inpar">
+                <td class="texto-margen-tabla texto-centrado" valign="top" data-sider-select-id="nuevo-id"><b class="sub_negrita">Actual</b></td>
+                <td class="texto-margen-tabla texto-centrado" valign="top" data-sider-select-id="nuevo-id" style="text-align: left;"><span id="nuevo-id" data-sider-select-id="ef536401-b9f2-4b98-92fb-af4f9c64878e"><span id="docs-internal-guid-91c20e28-7fff-a822-5a3c-f076e0f6d4bd">Realiza cálculos relevantes para la decisión sobre información relevante para la decisión; organiza, muestra resultados. Enfoque basado en consultas y amigable para el usuario. Análisis “que-si”. Interacción con decisores para la formulación y ejecución de pasos intelectuales en el procesamiento de toma de decisiones.</span></span>
+                </td>
+                <td class="texto-margen-tabla" valign="top" data-sider-select-id="nuevo-id"><span id="nuevo-id" data-sider-select-id="9913e1d0-7dc6-4ec7-8c3b-6a4e01f937ef"><span id="docs-internal-guid-a49f2039-7fff-cd9c-d699-783d3c9afeee"><p dir="ltr" style="">Modelos financieros, Planillas de Cálculo 🡺 Tendencia a exploración.</p><p dir="ltr" style="">Modelos de Investigación Operativa. Sistemas CAD. Sistemas de Soporte a las decisiones.</p></span><br></span>
+                </td>
+            </tr>
+
+            <!-- Nueva fila 3 -->
+            <tr>
+                <td class="texto-margen-tabla texto-centrado" valign="top" data-sider-select-id="nuevo-id"><b class="sub_negrita">Próximamente</b></td>
+                <td class="texto-margen-tabla texto-centrado" valign="top" data-sider-select-id="nuevo-id" style="text-align: left;"><span id="nuevo-id" data-sider-select-id="d2247bc5-395a-4ad9-8361-3ee7b6378cbd"><span id="docs-internal-guid-06c1eec9-7fff-0731-7d02-97c97a8cf4b3">Situaciones de Decisión complejas y difusas, expandiendo a tomas de decisiones cooperativas y aprendizaje de máquinas.</span></span>
+                </td>
+                <td class="texto-margen-tabla" valign="top" data-sider-select-id="nuevo-id"><span id="nuevo-id" data-sider-select-id="4f2e2d6a-87ca-44a5-958b-b57bc3fcff8d"><span id="docs-internal-guid-77a13ca9-7fff-2da4-45c8-41127550e77f">Segunda generación de Sistemas Expertos, Soporte a las decisiones de Grupo y computación Neuronal.</span></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-left: 3%; margin-right: 3%;"><span><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span id="docs-internal-guid-5edbe0ef-7fff-b96c-1a54-ea171771be11"><br><p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);" data-sider-select-id="0616c48e-e0b1-480a-bfc0-06d36e8aca96"><b data-sider-select-id="3973a3d3-8296-4d10-8d37-986d8592e9bd"><span class="sub_negrita" style="color: rgb(0, 46, 184);" data-sider-select-id="2c0f6f12-dfe8-47e2-8cc0-df2769f8a6bc">Evolución de los sistemas de información basados en computadora</span></b>
+        </span>
+        </p>
+        <p dir="ltr" style=""><span class="" style="font-size: large;"><span class="" style="color: rgb(51, 51, 51); font-size: large;">La vista evolucionaria de los CBIS (Sistemas de información basados en computadora) plantea:&nbsp;</span></span>
+        </p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600"></span><span class="" style="font-size: large;"><span class="" style="color: rgb(51, 51, 51);">Clara secuencia de corte a través del tiempo que tiene fuertes bases lógicas.&nbsp;</span><br></span>
+                </p>
+                <ul>
+                    <li><span style="color: rgb(51, 51, 51); font-size: large;" class="">Sistemas de Procesamiento de datos (EDP) aparecieron a mediados de los 50.</span></li>
+                    <li><span style="color: rgb(51, 51, 51); font-size: large;" class="">Sistemas de información gerencial en los ’60.</span></li>
+                    <li><span style="color: rgb(51, 51, 51); font-size: large;" class="">Los Sistemas de automatización de oficinas fueron desarrollados principalmente en los ’70.</span></li>
+                    <li><span style="color: rgb(51, 51, 51); font-size: large;" class="">DSS son un producto de los ’70, expandido en los ’80.</span></li>
+                    <li><span style="color: rgb(51, 51, 51); font-size: large;" class="">En 1990 vemos Sistemas de soporte a grupos y Computación neuronal emergiendo y también Sistemas de computación integrados.</span></li>
+                </ul>
+
+                <p></p>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">Tecnología común que conecta los varios tipos de CBIS: la computadora que por sí misma ha evolucionado en el tiempo.</span></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">Existe una conexión sistemática en la manera en que los sistemas procesan los datos en información.</span></p>
+            </div>
+        </div>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">La relación entre TPS, MIS, DSS, EIS y ES con otras tecnologías que no se muestran en la tabla pueden resumirse como sigue:</span></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Las tecnologías pueden ser vistas como clases únicas de tecnología de información.</span><br></p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">Las tecnologías están interrelacionadas y cada una soporta algunos aspectos de la toma de decisiones en la administración.</span></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">La evolución y creación de herramientas más nuevas ayudan a la expansión del rol de la tecnología de información para el mejoramiento de la administración en las organizaciones.</span></p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">Las interrelaciones y coordinación entre las herramientas está aún en evolución.</span></p>
+            </div>
+        </div>
+        </span>
+    </div>
+    <ul>
+    </ul>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">La clasificación de los CBIS no implica que los sistemas del mundo real deban pertenecer a una sola categoría. Por el contrario, los MIS pueden combinarse con TPS. Un DSS puede combinarse con un MIS e integrarse con un ES.</span></p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">La integración entre CBIS ocurre a lo largo de 2 dimensiones:</span></p>
+        <ul>
+        </ul>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">Tecnología (hardware, software, procesos).</span></p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600"></span><span class="" style="font-size: large; color: rgb(51, 51, 51);">Aplicaciones (administración de personal, control de inventario, planificación).</span></p>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 32px">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <p></p>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222796"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Niveles de organización</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><br></div>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812144/mod_book/chapter/222796/768986.png" alt=" " width="964" height="572" class="img-responsive atto_image_button_text-bottom"><br></div><span id="docs-internal-guid-126ca0c1-7fff-1e4a-047d-a1bfd1f11343"><span id="docs-internal-guid-2eaef40d-7fff-e8d1-bca5-389ee578d946" style="">
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Nivel estratégico</p>
+   </div>
+        <p dir="ltr" style=""><br>Nivel de plan administrativo y <span class="" style="color: rgb(0, 46, 184);">toma de decisiones</span> que dirigen o impactan en la <span class="" style="color: rgb(0, 46, 184);">dirección u objetivos</span> a largo
+        plazo de toda la organización.&nbsp;</p>
+        <p dir="ltr" style="">Estas decisiones son visionarias y orientadas al futuro. En orden de realizar análisis, planificación y decisiones se utiliza información sobre economía, mercados, competidores y las tendencias de negocios.</p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Nivel administrativo o gerencial</p>
+        </div>
+        <p dir="ltr" style=""><br>Nivel medio de administración define los modelos de negocios y se realizan decisiones tácticas orientadas a objetivos inmediatos. <br><br>
+
+            <!--Caja + Ejemplo + sin imagen + texto-->
+        </p>
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo de este tipo de decisiones:</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Adelantarse a los competidores y generar ingresos y ganancias que cumplan la misión, objetivos y estrategia de la organización.&nbsp;<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+
+        <p dir="ltr" style=""><br>A este nivel es importante el <span class="" style="color: rgb(0, 46, 184);">control</span>. El nivel medio administrativo establece los <span class="" style="color: rgb(0, 46, 184);">objetivos para el departamento o negocio</span> que sean
+            consistentes con los objetivos globales de la organización establecidos por el primer nivel administrativo o nivel estratégico.&nbsp;
+        </p>
+        <p dir="ltr" style="">Para la toma de decisiones se utiliza información tanto externa como interna, estas decisiones están enfocadas para objetivos a mediano plazo (pensando entre uno y tres años hacia el futuro).</p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Nivel operacional</p>
+        </div>
+        <p dir="ltr" style=""><br>Los administradores de departamentos, supervisores y trabajadores necesitan información detallada en tiempo real o cercana al tiempo real y la habilidad de determinar qué tan útil es dicha información.&nbsp;</p>
+        <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><span class="sub_negrita" style="font-weight: normal;">Este nivel de toma de decisiones es principalmente a corto plazo, estas decisiones son para controlar las actividades en curso y operaciones.</span></p>
+        </div>
+        <p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93">
+        </p>
+        <p dir="ltr" style="">El propósito de realizar controles en este nivel es para identificar desviaciones de los objetivos lo más pronto posible en orden de tomar acciones correctivas.&nbsp;</p>
+        <p dir="ltr" style="">Seguir ventas, inventario y atención al cliente son ejemplos de actividades de control. En este nivel la información más importante son los datos internos de la organización.</p>
+        </span>
+        </span><br>
+    </div>
+</div>
+<p></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222797"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Relación entre niveles</p>
+</article>
+<div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+
+    <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p><span><span id="docs-internal-guid-53dd8ef1-7fff-42cd-2bd2-0e095b66ee53" style=""><p dir="ltr" style=""></p></span><span id="docs-internal-guid-126ca0c1-7fff-1e4a-047d-a1bfd1f11343" style=""><p dir="ltr" style=""></p><span id="docs-internal-guid-8804b260-7fff-06f5-e751-4c685e8206d0" style=""><p dir="ltr" style="">La siguiente pirámide muestra la relación entre los sistemas de procesamiento electrónico de datos (EDP), los sistemas de información para la administración (MIS) y los sistemas de soporte a las decisiones (DSS).</p></span></span><br>
+        </span>
+    </div>
+    <div style="text-align: center; margin-left: 3%; margin-right: 3%;"><a href="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812144/mod_book/chapter/222797/78909.png?time=1711390449246" target="_blank" style="background-color: rgb(250, 250, 250);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812144/mod_book/chapter/222797/78909.png?time=1711390449246" role="presentation" class="img-responsive atto_image_button_text-bottom"></a><br></div>
+    <div style="text-align: center; margin-left: 3%; margin-right: 3%;">
+        <span class="" style="font-size: large; color: rgb(51, 51, 51);">
+        <span class="" style="font-size: medium; color: rgb(51, 51, 51);">
+            Hacé clic en la imagen para ampliarla&nbsp;
+        </span>
+        <a href="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812144/mod_book/chapter/222797/78909.png?time=1711390449246" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#007bff" class="bi bi-arrows-angle-expand" viewBox="0 0 16 16" style="vertical-align: middle; cursor: pointer;">
+                <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707"></path>
+            </svg>
+        </a>
+        <span class="" style="font-size: medium; color: rgb(51, 51, 51);">
+            &nbsp;para verla en tamaño completo
+        </span>
+        <br>
+        </span>
+    </div>
+    <!-- Fin de ampliar imagen -->
+
+    <div style="margin-left: 3%; margin-right: 3%;"><span><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span><span id="docs-internal-guid-a6d9811b-7fff-78cc-ec55-c21acf9c9757"><p dir="ltr"><b><span class="sub_negrita" style="color: rgb(0, 46, 184);">Aspectos que distinguen a los DSS:&nbsp;</span></b>
+        </p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+
+            <br>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600"></span><span class="" style="color: rgb(51, 51, 51);">Un DSS puede usarse para direccionar problemas inesperados AD HOC.</span></p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600"></span><span class="" style="color: rgb(51, 51, 51);">Un DSS puede proveer una representación válida de los sistemas del mundo real.</span></p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600"></span><span class="" style="color: rgb(51, 51, 51);">Un DSS puede proveer soporte a decisiones con un entorno a corto plazo.</span></p>
+                </div>
+            </div>
+
+
+            <!-- 4 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600"></span><span class="" style="color: rgb(51, 51, 51);">Un DSS puede evolucionar conforme el decisor aprenda más acerca del problema.&nbsp;</span> </p>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600"></span><span class="" style="color: rgb(51, 51, 51);">Un DSS puede desarrollarse por personas no profesionales del procesamiento de datos.</span><br></p>
+                    <ul></ul>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        </span>
+        </span>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+</div>
+
+<p></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222798"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Características</p>
+</article>
+<div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+
+    <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p><span><span id="docs-internal-guid-53dd8ef1-7fff-42cd-2bd2-0e095b66ee53" style=""><p dir="ltr" style=""></p></span><span id="docs-internal-guid-126ca0c1-7fff-1e4a-047d-a1bfd1f11343" style=""><p dir="ltr" style=""></p><span id="docs-internal-guid-8804b260-7fff-06f5-e751-4c685e8206d0" style=""><p dir="ltr" style=""><span style="color: rgb(51, 51, 51);" class="">Características de los MIS, OR/MS y DSS:</span></p>
+        </span>
+        </span>
+        </span>
+    </div>
+    <div style="text-align: center; margin-left: 3%; margin-right: 3%;"><span><span class="" style="color: rgb(255, 51, 102);"><b><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812144/mod_book/chapter/222798/05060709.png" alt="  " width="970" height="983" role="presentation" class="img-responsive atto_image_button_text-bottom"></b></span></span>
+    </div>
+    <div style="text-align: center; margin-left: 3%; margin-right: 3%;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812144/mod_book/chapter/222798/567.png" alt="  " width="970" height="656" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+</div>
+
+<p></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222799"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Diferencias entre DSS y ES</p>
+</article>
+<div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <br>
+
+    <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p><span><span id="docs-internal-guid-53dd8ef1-7fff-42cd-2bd2-0e095b66ee53" style=""><p dir="ltr" style=""></p></span><span id="docs-internal-guid-126ca0c1-7fff-1e4a-047d-a1bfd1f11343" style=""><p dir="ltr" style=""></p><span id="docs-internal-guid-8804b260-7fff-06f5-e751-4c685e8206d0" style=""><p dir="ltr" style=""><span style="color: rgb(73, 80, 87);">Seguidamente se analizan las diferencias entre los Sistemas de soporte a la decisión (DSS) y los Sistemas expertos (ES):</span><br></p>
+        </span>
+        </span>
+        </span>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span><span><br></span></span>
+    </div>
+    <!--Tabla 3 columnas varias filas de colore-->
+    <table class="tabla-filaColores texto-principal" style="width: 96%; margin: 0 auto;">
+        <colgroup span="1" width="20%"></colgroup>
+        <colgroup span="1" width="45%"></colgroup>
+        <colgroup span="1" width="35%"></colgroup>
+        <tbody>
+            <tr>
+                <td class="tabla-filaColores-categoria texto-centrado"><br></td>
+                <td class="tabla-filaColores-categoria texto-centrado">Integración<br>DSS</td>
+                <td class="tabla-filaColores-categoria texto-centrado">ES</td>
+            </tr>
+
+            <tr class="tabla-filaColores-par">
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita" id="docs-internal-guid-e3d5b474-7fff-07fa-0841-6fe31d7ad2fa"><span class="" style="color: rgb(0, 46, 184);">Objetivo</span></b></td>
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><span id="docs-internal-guid-4a54aa28-7fff-b9d0-b4f9-4fd6678da991">Asistir a la toma de decisiones de humanos.</span></td>
+                <td class="texto-margen-tabla" style="text-align: left;"><span id="docs-internal-guid-88ad46b7-7fff-4c7c-b1fe-907c8bb4b467">Imitar consejos humanos y reemplazarlos.</span></td>
+            </tr>
+            <tr class="tabla-filaColores-inpar">
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita" id="docs-internal-guid-6d0a429d-7fff-2ad3-5d62-ff0f286ea25c">¿Quién toma las <span class="" style="color: rgb(0, 46, 184);">decisiones</span>?</b></td>
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><span id="docs-internal-guid-61cb95ff-7fff-d2ac-4458-9ed8597166c2">El humano y/o el sistema.</span></td>
+                <td class="texto-margen-tabla" style="text-align: left;"><span id="docs-internal-guid-2b71b90b-7fff-764a-4443-2f5cdd724592">El sistema.</span></td>
+            </tr>
+            <tr class="tabla-filaColores-par">
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita" id="docs-internal-guid-997ea1a4-7fff-4bf3-3c05-3a0ea91d3ab8">Orientación <span class="" style="color: rgb(0, 46, 184);">principal</span></b></td>
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><span id="docs-internal-guid-beba7b20-7fff-f1ca-10c0-bd7edc5d10ae">Toma de decisiones.</span></td>
+                <td class="texto-margen-tabla" style="text-align: left;"><span id="docs-internal-guid-440b728c-7fff-9cbb-5160-96062d987013">Transferencia de expertos (H-M-H).</span></td>
+            </tr>
+            <tr class="tabla-filaColores-inpar">
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita" id="docs-internal-guid-3aa13705-7fff-677e-ad57-4798ae5515cb">Principal dirección de las <span class="" style="color: rgb(0, 46, 184);">consultas</span></b></td>
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><span id="docs-internal-guid-cc6cc8a4-7fff-15b2-ccbf-082c4ce53c62">Hombre consulta a la máquina.</span></td>
+                <td class="texto-margen-tabla" style="text-align: left;"><span id="docs-internal-guid-197a8578-7fff-c2c6-7ef2-715694fb1d00">Máquina consulta al hombre.</span></td>
+            </tr>
+            <tr class="tabla-filaColores-par">
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita" id="docs-internal-guid-f03ea3fb-7fff-9103-b057-389ce15d39e0">Naturaleza del <span class="" style="color: rgb(0, 46, 184);">soporte</span></b></td>
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><span id="docs-internal-guid-9ddcdce5-7fff-ebcf-788a-aa7a59532a8f">Personal, grupal, institucional.</span></td>
+                <td class="texto-margen-tabla" style="text-align: left;"><span id="docs-internal-guid-9ffb88e5-7fff-244c-2e2e-2a7da75c82a3">Personal (principalmente) y grupal.</span></td>
+            </tr>
+            <tr class="tabla-filaColores-inpar">
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita" id="docs-internal-guid-e669314b-7fff-aef2-91a7-2c5fab5c4f52">Método de <span class="" style="color: rgb(0, 46, 184);">Manipulación</span></b></td>
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><span id="docs-internal-guid-6bb7d1e6-7fff-4789-f3d0-ec16a7ceb19c">Numérico.</span></td>
+                <td class="texto-margen-tabla" style="text-align: left;"><span id="docs-internal-guid-8f79f3fd-7fff-6636-d186-f2a4a5c8b556">Simbólico.</span></td>
+            </tr>
+            <tr class="tabla-filaColores-par">
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita" id="docs-internal-guid-2abc8a47-7fff-c546-8f32-89a16e40f389">Características del <span class="">área <span class="" style="color: rgb(0, 46, 184);">problema</span></span></b></td>
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><span id="docs-internal-guid-da4221a0-7fff-8819-efb2-4d51d55bc1fe">Complejo, integrador.</span></td>
+                <td class="texto-margen-tabla" style="text-align: left;"><span id="docs-internal-guid-66cdc291-7fff-a91a-863f-43183108f106">Dominio específico.</span></td>
+            </tr>
+            <tr class="tabla-filaColores-inpar">
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita" id="docs-internal-guid-023864a8-7fff-e1d8-42e3-f129e7868236">Tipo de <span class="" style="color: rgb(0, 46, 184);">problemas</span></b></td>
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><span id="docs-internal-guid-5f827367-7fff-c9af-1857-987a9afdfe05">Único, AD HOC.</span></td>
+                <td class="texto-margen-tabla" style="text-align: left;"><span id="docs-internal-guid-0e2d8fb8-7fff-e63b-1cdd-88dced8a74ac">Repetitivo.</span></td>
+            </tr>
+            <tr class="tabla-filaColores-par">
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita" id="docs-internal-guid-681d653a-7fff-fb49-a856-0260d4358367">Contenido de la <span class="" style="color: rgb(0, 46, 184);">Base de datos</span></b></td>
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><span id="docs-internal-guid-7c529776-7fff-0d49-0af2-4f96646d5254">Conocimiento factual.</span></td>
+                <td class="texto-margen-tabla" style="text-align: left;"><span id="docs-internal-guid-7b718662-7fff-29f1-cf35-3186cda25841">Conocimiento factual y procedural.</span></td>
+            </tr>
+            <tr class="tabla-filaColores-inpar">
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita" id="docs-internal-guid-4409f152-7fff-181f-7185-b83ca5afdcd3">Capacidad de <span class="" style="color: rgb(0, 46, 184);">Razonamiento</span></b></td>
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><span id="docs-internal-guid-f3d65b4f-7fff-638f-5934-4af75836798c">No.</span><br></td>
+                <td class="texto-margen-tabla" style="text-align: left;"><span id="docs-internal-guid-290dccd1-7fff-91a1-efb3-72c535411ed0">Sí, limitada.</span><br></td>
+            </tr>
+            <tr class="tabla-filaColores-par">
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita" id="docs-internal-guid-0311ea6f-7fff-3235-bcae-fad09bdea2c9">Capacidad de <span class="" style="color: rgb(0, 46, 184);">Explicación</span></b></td>
+                <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><span id="docs-internal-guid-e69424a8-7fff-f024-6075-c93593cf7b9f">Limitada.</span><br></td>
+                <td class="texto-margen-tabla" style="text-align: left;"><span id="docs-internal-guid-290dccd1-7fff-91a1-efb3-72c535411ed0">Sí.</span><br></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+</div>
+
+<p></p></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[723378,723381,723385,723388,723402,723405,723407,723410,723412,723415,723417,723420,723422,723425]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1755729856/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2812144, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1756156273); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1755729856/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\nconfig: [\"Accessible.js\", \"Safe.js\"],\r\nerrorSettings: { message: [\"!\"] },\r\nskipStartupTypeset: true,\r\nmessageStyle: \"none\"\r\n});","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random68acd20e9eaa52'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random68acd20e9eaa52'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

@@ -34,6 +34,14 @@
       {
         "texto": "02 - Información organizacional",
         "url": "./pages/Ingenieria/ingenieria_02.html"
+      },
+            {
+        "texto": "03 - A- Soporte de administración",
+        "url": "./pages/Ingenieria/ingenieria_03A.html"
+      },
+            {
+        "texto": "03 - B - Paradigmas organizacionales",
+        "url": "./pages/Ingenieria/ingenieria_03B.html"
       }
     ]
   },
