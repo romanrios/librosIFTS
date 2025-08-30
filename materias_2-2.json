@@ -17,6 +17,10 @@
       {
         "texto": "03 - Maquetación con CSS",
         "url": "./pages/Front/front_03.html"
+      },
+      {
+        "texto": "04 - Introducción a JavaScript",
+        "url": "./pages/Front/front_04.html"
       }
     ]
   },
@@ -92,6 +96,10 @@
       {
         "texto": "03 - POO con JavaScript",
         "url": "./pages/Back/back_03.html"
+      },
+      {
+        "texto": "04 - Fundamentos de Node.js",
+        "url": "./pages/Back/back_04.html"
       }
     ]
   }
