@@ -32,11 +32,11 @@
     "nombre": "Ingeniería de Software",
     "links": [
       {
-        "texto": "01 - A - Negocios y procesos",
+        "texto": "01A - Negocios y procesos",
         "url": "./pages/Ingenieria/ingenieria_01A.html"
       },
       {
-        "texto": "01 - B - Procesos contables",
+        "texto": "01B - Procesos contables",
         "url": "./pages/Ingenieria/ingenieria_01B.html"
       },
       {
@@ -44,11 +44,11 @@
         "url": "./pages/Ingenieria/ingenieria_02.html"
       },
       {
-        "texto": "03 - A- Soporte de administración",
+        "texto": "03A- Soporte de administración",
         "url": "./pages/Ingenieria/ingenieria_03A.html"
       },
       {
-        "texto": "03 - B - Paradigmas organizacionales",
+        "texto": "03B - Paradigmas organizacionales",
         "url": "./pages/Ingenieria/ingenieria_03B.html"
       },
       {
