@@ -21,6 +21,10 @@
       {
         "texto": "04 - Introducción a JavaScript",
         "url": "./pages/Front/front_04.html"
+      },
+      {
+        "texto": "05 - ECMAScript",
+        "url": "./pages/Front/front_05.html"
       }
     ]
   },
@@ -113,16 +117,17 @@
         "texto": "📁 NodeJS - Fundamentos y gestión de módulos",
         "url": "https://docs.google.com/presentation/d/1J-P1I4Bb8WjAVcVXxZKNaSkiDTYbrUPy0FaQiPByY4U/"
       },
-      
       {
         "texto": "📁 Código Clase 3",
         "url": "https://drive.google.com/drive/folders/1MolLyZRPORH-s37EEnmEc5O6bSZY8s6o/"
       },
-
-
       {
         "texto": "04 - Fundamentos de Node.js",
         "url": "./pages/Back/back_04.html"
+      },
+      {
+        "texto": "05 - Asincronismo Web",
+        "url": "./pages/Back/back_05.html"
       }
     ]
   }
