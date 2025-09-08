@@ -25,6 +25,10 @@
       {
         "texto": "05 - ECMAScript",
         "url": "./pages/Front/front_05.html"
+      },
+      {
+        "texto": "06 - Creación de páginas webs",
+        "url": "./pages/Front/front_06.html"
       }
     ]
   },
