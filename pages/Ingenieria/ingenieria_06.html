@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>6. Configuración y administración | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1757558298/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, 6. Configuración y administración | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1757558298_1757558579/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"nZY52gwtfZ","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1757558298","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1757558299","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":22800,"courseContextId":2812100,"contextid":2812165,"contextInstanceId":723439,"langrev":1757575445,"templaterev":"1757558299"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1757558299\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1757558299\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1757558299\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1757558299\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1757558299\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?config=TeX-AMS_SVG%22&delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-22800 context-2812165 cmid-723439 cm-type-book category-3279 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1757558298/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>6. Configuración y administración</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Ingeniería de Software - 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        6. Configuración y administración
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        lunes, 15 de septiembre de 2025, 18:15
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flex_titulo_botonera">
+    <p class="titulo_principal"></p>
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=22800&amp;section=11" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                            </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723438" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+                            </svg>
+                        </div>
+                        <p>Apertura</p></section></a><section class="boton_texto_centrado"><a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=723439" class="link">
+                        <div class="circulo_desarrollo_activa">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+                                <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+                            </svg>
+                        </div>
+                        </a><p>Desarrollo</p></section>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=723440" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+                                <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+                            </svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723441" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+                                <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+                            </svg>
+                        </div>
+                        <p>Cierre</p>
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción a la gestión de configuración de software" class="font-weight-bold text-decoration-none" href="#ch222925">1. Introducción a la gestión de configuración de software</a></li><li><a title="2. Configuración del software: definición y elementos" class="font-weight-bold text-decoration-none" href="#ch222926">2. Configuración del software: definición y elementos</a><ul><li><a title="2.1. Repositorio" class="text-decoration-none" href="#ch222927">2.1. Repositorio</a></li><li><a title="2.2. Ítem de configuración" class="text-decoration-none" href="#ch222928">2.2. Ítem de configuración</a></li><li><a title="2.3. Cambio" class="text-decoration-none" href="#ch222929">2.3. Cambio</a></li><li><a title="2.4. Versión" class="text-decoration-none" href="#ch222930">2.4. Versión</a></li><li><a title="2.5. Variante" class="text-decoration-none" href="#ch222931">2.5. Variante</a></li><li><a title="2.6. Ejemplo de evolución de una configuración" class="text-decoration-none" href="#ch222932">2.6. Ejemplo de evolución de una configuración</a></li><li><a title="2.7. Línea base" class="text-decoration-none" href="#ch222933">2.7. Línea base</a></li><li><a title="2.8. Comité de Control de Cambios" class="text-decoration-none" href="#ch222934">2.8. Comité de Control de Cambios</a></li></ul></li><li><a title="3. Administración de configuración de software" class="font-weight-bold text-decoration-none" href="#ch222935">3. Administración de configuración de software</a><ul><li><a title="3.1. Identificación de ítems" class="text-decoration-none" href="#ch222936">3.1. Identificación de ítems</a></li><li><a title="3.2. Control de cambios" class="text-decoration-none" href="#ch222937">3.2. Control de cambios</a></li><li><a title="3.3. Auditorías de configuración" class="text-decoration-none" href="#ch222938">3.3. Auditorías de configuración</a></li><li><a title="3.4. Generación de informes" class="text-decoration-none" href="#ch222939">3.4. Generación de informes</a></li></ul></li><li><a title="4. Plan de gestión de configuración" class="font-weight-bold text-decoration-none" href="#ch222940">4. Plan de gestión de configuración</a></li><li><a title="5. Algunas herramientas" class="font-weight-bold text-decoration-none" href="#ch222941">5. Algunas herramientas</a></li><li><a title="6. Tips de configuración" class="font-weight-bold text-decoration-none" href="#ch222942">6. Tips de configuración</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222925"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Introducción a la gestión de la configuración del software</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p dir="ltr"><br><span class="" style="color: rgb(51, 51, 51);">Según la IEEE, <span class="" style="color: rgb(0, 46, 184);">la gestión o administración de configuración de software</span> es una disciplina que aplica dirección y monitoreo administrativo
+            y técnico para identificar y documentar las características funcionales y técnicas de los ítems de configuración, controlar los cambios de esas características, registrar y reportar los cambios y su estado de implementación y verificar correspondencia
+            con los requerimientos. (ANSI/IEEE 828, 1990).</span>
+        </p>
+        <p></p>
+        <p dir="ltr" style="">La necesidad de gestionar la configuración surge del hecho que el software evoluciona constantemente.&nbsp;</p>
+        <p dir="ltr" style="">El desarrollo del software siempre es <span class="" style="color: rgb(0, 46, 184);">progresivo </span>y dadas las características de maleabilidad propias del software, es necesario mantener organizados y controlados los cambios que se realizarán
+            al software a lo largo del tiempo.</p>
+        <p dir="ltr" style="">Los cambios en el software tienen su origen en:</p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Cambios del negocio y nuevos requerimientos.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Soporte de cambios de productos asociados.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Reorganización de las prioridades de la empresa por crecimiento.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Cambios en el presupuesto. </p>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Defectos encontrados, a corregir.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Oportunidades de mejora.</p>
+            </div>
+        </div>
+    </div><br>
+    <ul>
+    </ul>
+    <div style="margin-left: 3%; margin-right: 3%;">
+      <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Propósito</p>
+   </div>
+    <p dir="ltr" style=""><br>El propósito de la gestión de configuración de software es establecer y mantener la integridad de los productos de software a lo largo de su ciclo de vida. Ahora bien, ¿qué implica que un producto de software tenga integridad?</p>
+    <p dir="ltr" style="">Un producto de software tiene integridad cuando:</p>
+    <!-- 1 -->
+    <div class="row" style="margin-left: 32px">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+        </div>
+        <div class="col">
+            <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Satisface las necesidades del usuario.</p>
+        </div>
+    </div>
+
+
+
+    <!-- 2 -->
+    <div class="row" style="margin-left: 32px">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+        </div>
+        <div class="col">
+            <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Puede ser fácil y completamente rastreado durante su ciclo de vida.</p>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="row" style="margin-left: 32px">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+        </div>
+        <div class="col">
+            <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Satisface criterios de performance.</p>
+        </div>
+    </div>
+
+
+    <!-- 4 -->
+    <div class="row" style="margin-left: 32px">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+        </div>
+        <div class="col">
+            <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Cumple con sus expectativas de costo. </p>
+        </div>
+    </div>
+</div><br><ul>
+</ul>
+<p dir="ltr" style=""><br></p>
+<p></p>
+
+
+<!-- nada puede haber abajo --></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222926"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Configuración de software: definición y elementos</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p><span id="docs-internal-guid-107bbfd8-7fff-8100-2d10-95088f082fe7"><p dir="ltr" style="">Se define como <span class="" style="color: rgb(0, 46, 184);">configuración del software </span>al conjunto de ítems de configuración con su correspondiente
+        versión en un momento determinado.</p>
+        <p dir="ltr" style="">Una <span class="" style="color: rgb(0, 46, 184);">configuración </span>es el conjunto de todos los componentes fuentes que son compilados en un ejecutable consistente, más todos los componentes, documentos e información de su estructura que definen
+            una versión determinada del producto en un momento de tiempo.</p>
+       <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;"><span class="sub_negrita" style="font-weight: normal;">Una configuración cambia porque se añaden, retiran o modifican elementos. También hay que contemplar la posibilidad de que los mismos elementos se reorganicen de forma diferente, sin que cambien individualmente.</span></p>
+        </div>
+        <p dir="ltr" style=""><br></p><p dir="ltr" style="">El control de configuración se refiere a la evolución de un conjunto de ítems de configuración.</p>
+        <p dir="ltr" style="">La evolución del sistema consiste en: añadir, suprimir, modificar ítems de configuración; o bien, reorganizar la estructura.&nbsp;</p>
+        </span><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222927"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Repositorio</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p style="color: rgb(1, 6, 20);"><span style=""><span class="" style="color: rgb(255, 51, 204);"><br></span>Es un <span class="" style="color: rgb(0, 46, 184);">espacio de almacenamiento</span> que contiene los ítems de configuración. Ayuda a mantener la historia de cada ítem
+            de configuración, con sus atributos y relaciones. Pueden estar conformado por una o varias bases de datos.&nbsp;</span>
+        </p>
+        <p style="color: rgb(1, 6, 20);"><span style="">El repositorio <span class="" style="color: rgb(0, 46, 184);">permite centralizar </span>el almacenamiento de los ítems de configuración (IC) de un mismo sistema o producto de software, incluyendo las distintas versiones de cada
+            IC.&nbsp;</span>
+        </p>
+        <p style="text-align: center; color: rgb(1, 6, 20);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812165/mod_book/chapter/222927/Sin%20t%C3%ADtulo-1.png?time=1712091717580" alt="  " width="552" height="453" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p style="text-align: center; color: rgb(1, 6, 20);"><b><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812165/mod_book/chapter/222927/4564.png" alt=" " width="567" height="447" class="img-responsive atto_image_button_text-bottom"><br></span></b></p>
+        <p style="color: rgb(1, 6, 20);"><span style="color: rgb(51, 51, 51);"><span style="color: rgb(1, 6, 20);"><span id="docs-internal-guid-06dda19f-7fff-9f91-d22b-6ab13f7ed18a" style="font-weight: 400;">El repositorio permite <span class="" style="color: rgb(0, 46, 184);">ahorrar espacio</span> de almacenamiento, evitando guardar por duplicado elementos comunes a varias versiones o configuraciones. Para conseguir ese ahorro hay que disponer de un sistema de representación especializado para las versiones.&nbsp;</span></span>
+            </span>
+        </p>
+        <p style="color: rgb(1, 6, 20);"><span style="color: rgb(51, 51, 51); font-size: large;" class="">El repositorio facilita el almacenamiento de información de la evolución del sistema (historia), no sólo de los IC en sí.&nbsp;</span></p>
+        <p dir="ltr" style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">La siguiente figura muestra un modelo típico de trabajo con un repositorio.</span></p>
+        <p dir="ltr" style="text-align: center; "><span class="" style="font-size: large; color: rgb(51, 51, 51);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812165/mod_book/chapter/222927/3.png?time=1712091752322" alt=" " width="900" height="465" class="img-responsive atto_image_button_text-bottom"><br></span></p>
+        <p></p>
+        <p style="color: rgb(1, 6, 20);"><b id="docs-internal-guid-fa3f1cc1-7fff-1509-e6f4-ec9060b18b15"></b></p>
+        <p dir="ltr"><span id="docs-internal-guid-fa3f1cc1-7fff-1509-e6f4-ec9060b18b15">Puede haber dos tipos base de repositorios:</span></p>
+      <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Repositorio centralizado</p>
+   </div>
+        <p></p>
+        <p style="color: rgb(1, 6, 20);"><span id="docs-internal-guid-1a2ce23b-7fff-787d-a0a2-7c2d0664ee19"></span></p>
+        <ul>
+            <li><span style="color: rgb(51, 51, 51);">Un servidor contiene todos los archivos con sus versiones.</span></li>
+            <li><span style="color: rgb(51, 51, 51);">Los administradores tienen mayor control sobre el repositorio.</span></li>
+            <li><span style="color: rgb(51, 51, 51);">Falla el servidor y nadie puede trabajar.</span></li>
+        </ul><b id="docs-internal-guid-e558de54-7fff-1ddc-8da5-a36ea46fbdff"><p style="text-align: center;"><b id="docs-internal-guid-e558de54-7fff-1ddc-8da5-a36ea46fbdff"><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812165/mod_book/chapter/222927/4.png" alt=" " width="502" height="427" class="img-responsive atto_image_button_text-bottom"></span></b></p>
+        </b>
+        <p></p>
+        <p style="color: rgb(1, 6, 20);"><b><br></b></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Repositorio distribuido</p>
+   </div>
+        <p style="color: rgb(1, 6, 20);"><span id="docs-internal-guid-d3a8a120-7fff-dd87-1e37-60751f452922"></span></p>
+        <ul>
+            <li><span style="color: rgb(51, 51, 51);">Cada cliente tiene una copia exactamente igual del repositorio completo.</span></li>
+            <li><span style="color: rgb(51, 51, 51);">Si un servidor falla sólo es cuestión de “copiar y pegar”.</span></li>
+            <li><span class="" style="color: rgb(51, 51, 51);">Posibilita otras formas de trabajo no disponibles en el modelo centralizado</span><b><span class="" style="color: rgb(51, 51, 51);">.</span></b></li>
+        </ul>
+        <p><b><b id="docs-internal-guid-13a4b46a-7fff-54cd-7324-7a9442269152"></b></b>
+        </p>
+        <p dir="ltr" style="text-align: center;"><b><b id="docs-internal-guid-13a4b46a-7fff-54cd-7324-7a9442269152"><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812165/mod_book/chapter/222927/5.png" alt=" " width="502" height="427" class="img-responsive atto_image_button_text-bottom"></span></b></b>
+        </p>
+        <p></p><br>
+        <p></p>
+
+
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222928"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Ítem de configuración</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;"><br>Se llama <span class="" style="color: rgb(0, 46, 184);">ítem de configuración (IC)</span> a todos y cada uno de los artefactos
+            que forman parte del producto o del proyecto, que pueden sufrir cambios o necesitan ser compartidos entre los miembros del equipo y sobre los cuales necesitamos conocer su estado y evolución.<p></p>
+            <p dir="ltr" style="">Ejemplos de ítems de configuración pueden ser: documentos de requerimientos, documentos de diseño, código fuente, código ejecutable, plan de proyecto, etc.</p>
+            
+            <b id="docs-internal-guid-cb498a1c-7fff-c01a-5364-eaf0a98d63d6">
+            <p dir="ltr"><span class="" style="color: rgb(239, 69, 64);"></span></p>
+            </b><p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812165/mod_book/chapter/222928/6.png" alt=" " width="502" height="427" class="img-responsive atto_image_button_text-bottom"></p><br>
+            <p></p>
+
+
+            <!-- nada puede haber abajo -->
+            <br>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222929"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Cambio</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p><span id="docs-internal-guid-05917a94-7fff-bce7-7fb6-f707a3f37faf"><p dir="ltr" style="">El cambio en este contexto se define como el<span class="" style="color: rgb(0, 46, 184);"> paso de una versión de la línea
+        base a la siguiente</span>. Puede incluir modificaciones del contenido de algún componente, o modificaciones de la estructura del sistema, añadiendo, eliminando y/o reorganizando componentes.</p>
+        </span><br><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222930"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Versión</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+    
+
+
+            <p><span class="" style="color: rgb(255, 51, 204);"><br></span>Una versión se define, desde el <span class="" style="color: rgb(0, 46, 184);">punto de vista de la evolución</span>, como la forma particular de un artefacto en un instante o contexto dado.&nbsp;<br></p><span id="docs-internal-guid-816117f5-7fff-8704-2b35-3f1b7354271d"><p dir="ltr" style="">También hay que contemplar la posibilidad de que coexistan versiones alternativas de un mismo artefacto un instante dado. Es necesario <span class="" style="color: rgb(0, 46, 184);">disponer de un método para identificar unívocamente las diferentes versiones</span> de manera sistemática u organizada.</p><p dir="ltr" style="">El control de versiones se refiere a la evolución de un único ítem de configuración (IC), o de cada IC por separado.</p><p dir="ltr" style="">La evolución puede representarse gráficamente en forma de grafo, en el que los nodos son las versiones y los arcos corresponden a la creación de una nueva versión a partir de otra ya existente. El siguiente gráfico muestra las revisiones sucesivas de un componente, que dan lugar a una simple secuencia lineal.</p></span>
+            <b id="docs-internal-guid-3c398781-7fff-ad6a-1e70-160c1c362452">
+            <p dir="ltr" style="text-align: center;"><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812165/mod_book/chapter/222930/7.png" alt=" " width="500" height="165" class="atto_image_button_text-bottom"></span></p>
+            </b><span id="docs-internal-guid-41f32239-7fff-55e2-8715-6f9f973aa1fa">Esta forma de evolución no presenta problemas desde el punto de vista de organización del repositorio. Las versiones se pueden designar simplemente mediante números correlativos, como en la figura.</span><br><br><br>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222931"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Variante</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p><span id="docs-internal-guid-11befe06-7fff-ffdb-fdad-3da2c62b43be"><p dir="ltr" style="">Una variante es una <span class="" style="color: rgb(0, 46, 184);">versión de un ítem de configuración</span> (o de la configuración) que evoluciona
+        por separado.&nbsp;</p>
+        <p dir="ltr" style="">Las variantes representan configuraciones alternativas. Un producto de software puede adoptar distintas formas (configuraciones) dependiendo del lugar donde se instale.&nbsp;<br><br></p>
+      <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Dependiendo de la plataforma (máquina + S.O.) que la soporta, o de las funciones opcionales que haya de realizar o no.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <p dir="ltr" style=""><br></p>
+        <p dir="ltr" style="">Cuando hay variantes, es decir, cuando existen simultáneamente varias versiones de un ítem de configuración, el grafo de evolución ya no es una secuencia lineal, sino que adopta la forma de un árbol. Si queremos seguir numerando las versiones
+            se necesitará ahora una numeración a dos niveles. El primer número designa la variante (línea de evolución), y el segundo la versión particular (revisión) a lo largo de dicha variante, como podemos ver en la siguiente figura.</p>
+        </span>
+        <b id="docs-internal-guid-a0706a64-7fff-da8d-3c17-d7a8adea72b0">
+            <p dir="ltr" style="text-align: center;"><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812165/mod_book/chapter/222931/9.png" alt=" " width="500" height="331" class="img-responsive atto_image_button_text-bottom"></span></p>
+            </b><br><br>
+        <p></p>
+
+
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222932"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Ejemplo de evolución de una configuración</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+      
+            <p><br></p><span id="docs-internal-guid-1505f126-7fff-0c17-cd00-09cce10f0b46"><p dir="ltr" style="">Se presenta un ejemplo de evolución simple (secuencia temporal lineal).&nbsp;</p><p dir="ltr" style="">Las <span class="" style="color: rgb(0, 46, 184);">revisiones del conjunto</span> se han numerado correlativamente (Rev.1, Rev.2, ...) Cada configuración contiene una colección de elementos, no siempre los mismos.&nbsp;</p><p dir="ltr" style="">Pueden crearse o eliminarse elementos entre una revisión y la siguiente. Los <span class="" style="color: rgb(0, 46, 184);">cambios</span> individuales de un componente se indican con <span class="" style="color: rgb(0, 46, 184);">flechas</span>. Los <span class="" style="color: rgb(0, 46, 184);">componentes</span> que se mantienen <span class="" style="color: rgb(0, 46, 184);">sin cambios</span> se marcan con <span class="" style="color: rgb(0, 46, 184);">dos líneas paralelas</span> (como el signo = en vertical).</p><p dir="ltr" style="font-weight: bold;"><br></p><p dir="ltr" style="text-align: center; "><b><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812165/mod_book/chapter/222932/10.png" alt=" " width="500" height="331" class="atto_image_button_text-bottom"></span></b>
+            </p><br></span>
+            <p></p>
+
+
+
+            <!-- nada puede haber abajo -->
+            <br>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222933"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Línea base</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p><br></p><span id="docs-internal-guid-a606a0a4-7fff-35b4-8101-3ed958035d93"><p dir="ltr" style="">Una línea base es una <span class="" style="color: rgb(0, 46, 184);">configuración </span>que ha sido <span class="" style="color: rgb(0, 46, 184);">revisada </span>formalmente
+        y <span class="" style="color: rgb(0, 46, 184);">sobre la que se ha llegado a un acuerdo</span>. Sirve como base para desarrollos posteriores y puede cambiarse sólo a través de un procedimiento formal de control de cambios.</p>
+        <p dir="ltr" style="">El propósito principal de la creación y administración de líneas es la posibilidad de ir atrás en el tiempo y recuperar una versión de un producto en un momento dado del proyecto</p>
+        <p dir="ltr" style="">Una definición más formal, dada por el Estándar IEEE 610.12-1990, dice:</p>
+        <!--------- Frase comillas--------->
+
+        <div class="container" style="padding-left:0; padding-right:0; ">
+
+            <div style="display: flex;  margin-left: -1%; margin-bottom: -20px;background-color: none;">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAxRJREFUWEftl1moTlEUx383JRmiFBJvQpSQmTKXqQwPPIhIPFzzkEIyRBQy5w0PngyZQ+YhREKUqUh4MEcZHoj9v+3b/e629zn7nO+W+/Ct+vrqnP/6n/9ea+211y6jlltZLddHSWCxGSpF8H9HsAlU1PHnYoUArYFXLk+eFPcAxgL97G8+sCWHwFbAOGAE0BV4avmqUWUROAjYDnRwxBwFxmQQ2BJYB0z2+DQAvhc+jxW4FZgTEPHJCG8aKXC4WeB+oGEAP9RE8VwWgY2AQ4AcfaZ3a4G7EQIXGmEbA7jHwHLgYNYavA1085AeBpYCIo4xfXy1B/jSZuZYiCQpxbuBqR7HNXa1McKEGQac8oBvAqOAj0lEIYFyPO5xVNRU4LHW2Ea5heMgcYPdDeEj9QmsBzwD1AYK7U4g3UlidwLlHkA721ZSF+oTOBvY5vHUDjydylgFUDt548GrdKbF8vgE3gc6OQTvgfGmJlXULyLJlwGqV9cU0VuAMpJqrsBmwNsUr2+mfq6a+lkMPEjAXgL6p3ApGOqxe0I4V+BIU2cnUpdVBVgPLAngfwCq5xi7aE+W1y7YFbjCAFbGMBZgVnl82gOPMvLcA7qkCVSop2Qk/mNPmvMFfhoATmbkEXyXu+vdCIpU5FlN9TawwEkNXrs1j2kfaFNWmCswprB9H/0J6Nz+ZV/OBHbkUWe7xYGaFii+vsB1SzzLjmZ5NKoHzw0JPGImk9F5WIE+wA3rOxHYl5NHw6+GYG+KNwPzchJrZK9sE4rmtZw8i0y5bAoJ7Ag8zEGsnVwH0H9lbWuEb5ODa4Idar0R1ENNGj0zEu/1jGYLCiMRyfcOaGtS/CUUQT1XFJUe3dhi7B9S61QXOAMMiCGxGI151fpnaB7sbojVcuqnkOuaqL4ZKgv5i0d8SfbbTD7TfWdy0kTdGdhgojkkwKzRaxLwIeXjGlo11aj1+OwJMAO44nsZc6vT+aixvZfdpRdMzzsLfM2QOkGb2xbW2yxc18vL9irwPIknRmBGHTULLwksNp6lCJYiWGwEivWv9TX4F7IqfylMzJGtAAAAAElFTkSuQmCC">
+            </div>
+            <section class="contenor_comilla">
+                <section class="contenor_comillas_borde">
+                    <p class="frase_titulo_comillas"><span style="color: rgb(1, 6, 20); font-style: italic;">"Línea base es una especificación o producto que se ha revisado formalmente y sobre los que se ha llegado a un acuerdo, y que de ahí en adelante sirve como base para un desarrollo posterior y que puede cambiarse solamente a través de procedimientos formales de control de cambios"</span><br></p>
+                </section>
+            </section>
+            <div style="display: flex;justify-content: flex-end;  margin-right: -1%; margin-top: -20px; background-color: none;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAyZJREFUWEftl1mojkEYx3+nKGvKeiNKIXtSKGv2rZClUCghItnKXggXlmSJEEVKstwQkTWKLMlaXCiSCxfIcinzP82nz5yZ7515PxcnfU+dOt/M8/zn/z7bPFNFLZeqWs6PCsFyI1TxYMWD5XqgXPuYHGwMTAOGAXWB98A54GaOw0cA44F2wAfgEXCgFE4pgm2ArcAkoJ4H5CiwDPgaQXQtsNiQaeXRfQXMBB76cEIEZwD7gSYZhz8GhpQg2R44a/66ZeD8BEaaKN1x9XwEhwNXIrxSUFGYBgI6pFjqA28DXvPBfzdpM9iG/c++S1C/nwOdEwhKdaEnlzYAGxNxbtiIBAn2AJ4kgkr9JdDFsXsNKMSpIhzhVYvrwekG9GQqotXvC9y3/yu8bshjYXcAK0MEtwGrYpEcPbWiU3atV6gqI7BVVJNDBPfYdhCBU0NlHnDYrg4wuXQ7DwhwFVC/9IZ4iimQ0zmBFwAHra365jegTg6s68DQEMHmwKccoDKZZW6I40W219yKjMS9aNJjXIig1tWg1TZSRY22uH/2t2GOuU6LzzpirsG5pQhq7xnQNZFhB+CNY7MJWJ+IswZQsXpzsLCue1jhGhQJ/gNoFNDVfb46Ekdqo4HLWQQL+3L1IjO9dM84QPmmaSckuot3mgrtBzTIwGpZXAcp+aHepma8z3PAfOBQpJc0ailCZ4Bmjs1fLUZ7KQSlfwyY7SHSFPgcSVBqYwBVqytzDHmNcX8khaAGiBceUHlUs16KaEzr6Ri8Mw5o64LEEmxoRio10N4OwEegU+TQWjBdB2z2fI16Xw2vxhBsAVzwkNMZbu/L8mLorlf+Ko9rSBbBCSaR9wKtPbbyxJYsRnZfXhY5vUdceRD4+Gq9EEG9Q3R4xwCB5cCuCHKqfL1HJgZ0L5nZbyqgadorPoKjABn6RIOkrsFbEeSkooEh1MB3m9xdmoXjIyhAAbui8le1pgyiyt2xDtBT05KWxD5bQyG+Z7zYB7hrh9Dz9h2b9cHu/gpgu7U9Yd/TyrloCRFUp1dfKlfUwH8BX/ICZVVxXtx/ZlchWK4rKx787z34GxYoeClhGNLLAAAAAElFTkSuQmCC">
+            </div>
+        </div>
+
+        <!--------- Fin Frase comillas--------->
+        <p dir="ltr" style=""><br></p>
+        <p dir="ltr" style="font-weight: bold;"><br></p>
+        <p dir="ltr" style="text-align: center; font-weight: bold;"><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812165/mod_book/chapter/222933/11.png" alt=" " width="601" height="302" class="atto_image_button_text-bottom"></span></p><br>
+        <p dir="ltr" style="font-weight: bold;"><span class="sub_negrita" style="color: rgb(0, 46, 184);">Las líneas base pueden ser:</span></p>
+       <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">De especificación:&nbsp;</span>es decir contienen sólo documentación (requerimientos, diseño, planes).</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Operacional:</span> es decir que contiene una versión del producto que han pasado por un control de calidad previamente definido.</p>
+                    </div>
+                </div>
+        <p dir="ltr" style=""><br></p></span>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222934"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Comité de control</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <div style="font-size: large; margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><br>El Comité de control de cambios es la <span class="" style="color: rgb(0, 46, 184);">autoridad responsable de la aprobación de la incorporación de cambios a una línea base</span>. Y posteriormente debe verificar que los cambios implementados
+            sean los que fueron autorizados.</p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Qué debe considerar el comité de cambios?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> El Comité de control de cambios debe tener definido el procedimiento que se utilizará para realizar esta tarea, de manera de garantizar que todos los interesados que deban ser informados, se enteren de la ocurrencia de un cambio.</p></div></div>
+ <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p dir="ltr" style="color: rgb(1, 6, 20);"><br></p>
+        <p dir="ltr" style="color: rgb(1, 6, 20);"><span id="docs-internal-guid-35a4e7c0-7fff-2380-7579-303457e9b549">Está formado por representantes de todas las áreas que se vean afectadas por el cambio propuesto, ejemplos de roles de un equipo de desarrollo que pueden formar parte de un Comité de control de cambios:<span class="" style="color: rgb(255, 51, 204);">&nbsp;</span></span>
+        </p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span class="" style="color: rgb(51, 51, 51);">Líder del proyecto</span></p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span class="" style="color: rgb(51, 51, 51);">Arquitecto</span></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span class="" style="color: rgb(51, 51, 51);">Analista funcional</span></p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span class="" style="color: rgb(51, 51, 51);">Gestor de configuración de software</span> </p>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span class="" style="color: rgb(51, 51, 51);">Desarrolladores</span></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span class="" style="color: rgb(51, 51, 51);">Analistas de prueba</span></p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span class="" style="color: rgb(51, 51, 51);">Representante del cliente</span></p>
+            </div>
+        </div>
+    </div>
+    <ul style="font-size: large; color: rgb(1, 6, 20);">
+    </ul><br>
+    <p style="font-size: large; color: rgb(1, 6, 20);"></p>
+
+
+
+    <!-- nada puede haber abajo -->
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222935"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Administración de configuración de software</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+       
+            <p><br></p><span id="docs-internal-guid-b2a1bd1d-7fff-63c8-82ee-cc7560aa85b0"><p dir="ltr" style="">El siguiente esquema presenta las 4 actividades principales que conforman la disciplina de administración de configuración de software (SCM: <i>Software Configuration Management</i>).</p><p dir="ltr" style="font-weight: bold;"><br></p><p dir="ltr" style="font-weight: bold;"><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812165/mod_book/chapter/222935/12.png" alt=" " width="1060" height="707" class="img-responsive atto_image_button_text-bottom"></span></p><br></span>
+            <p></p>
+
+
+
+            <!-- nada puede haber abajo -->
+            <br>
+        </div>
+    </div>
+    <p><br></p>
+</div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222936"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Identificación de ítems</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p><br></p><span id="docs-internal-guid-c8e2af3d-7fff-59d9-b655-e47b1de47d73"><p dir="ltr" style="">Se trata de establecer <span class="" style="color: rgb(0, 46, 184);">estándares de documentación</span> y un <span class="" style="color: rgb(0, 46, 184);">esquema de identificación unívoca</span>        para los ítems de configuración que se administrarán.</p>
+      <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+    <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><span class="sub_negrita" style="font-weight: normal;">Todos aquellos artefactos que forman parte del producto o participan de la gestión del proyecto que pueden sufrir cambios o necesitan ser compartidos entre los miembros del equipo y sobre los cuales necesitamos conocer su estado y evolución.</span></p></div>
+        <p dir="ltr" style=""><br>Pueden ser requerimientos, documentos de diseño, código fuente, código ejecutable, etc.</p>
+            <p dir="ltr" style="">Es una de las primeras actividades que se realizan en la administración de configuración, y una de las primeras que debe realizarse en el proyecto.</p>
+       <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;"><span class="sub_negrita" style="font-weight: normal;"><p dir="ltr" style="">Acá se define el esquema de nombrado para cada ítem de configuración y la estructura del repositorio y se define también la asignación de los ítems de configuración dentro del repositorio.</p></span></p>
+        </div>
+            <p dir="ltr" style=""><br></p></span></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222937"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Control de cambios</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p><br>La ingeniería de software recomienda realizar el desarrollo de manera disciplinada. Las<span class="" style="color: rgb(0, 46, 184);"> herramientas de control de versiones</span> no garantizan un desarrollo razonable si cualquier miembro del
+            equipo puede realizar los cambios que quiera e integrarlos en el repositorio sin ningún tipo de control.<br></p><span id="docs-internal-guid-8b4324c2-7fff-0d2f-ff65-e3fe7d745ce5">
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Control de cambios</p><p dir="ltr">Consiste en la evaluación y registro de todos los cambios que se hagan a la configuración del software.&nbsp;</p><p dir="ltr">Está relacionado con la naturaleza evolutiva del desarrollo de software; creando por medio de cambios sucesivos realizados de una manera disciplinada. La evolución de un producto de software puede verse como la evolución de sus líneas base.<br><br></p><p></p></div></div></span><br></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222938"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Auditorías de configuración</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p><br>Sirven, junto con las revisiones técnicas para garantizar que el cambio se ha implementado correctamente</p><span id="docs-internal-guid-262c2bf2-7fff-bb87-32a5-1913e8ef612a"><p dir="ltr" style="">Hay dos tipos de auditorías a la configuración del software:</p><div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Auditoría de configuración física</p>
+   </div><br>
+        <p dir="ltr" style=""><br>Asegura que lo que está indicado para cada IC en la línea base o en la actualización se ha alcanzado realmente. Evaluación independiente de los IC para verificar que el software y su documentación son internamente consistentes y están listos para
+            ser entregados al/la cliente.</p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Auditoría de configuración funcional</p>
+   </div><br>
+        <ul style="">
+        </ul>
+        <p dir="ltr" style="">Evaluación independiente de los productos de software, verificando que la funcionalidad y performance reales de cada ítem de configuración sean consistentes con la especificación de requerimientos de software.&nbsp;</p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Para qué se realizan ambos tipos de auditoría?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Ambos tipos de auditoría se hacen a una línea base específica del producto de software en un momento de tiempo determinado. Uno de los aspectos principales que se controla en estas auditorías es la trazabilidad del producto de software, razón por la cual la Matriz de trazabilidad es una herramienta muy útil al momento de auditar, tal como se representa en el siguiente esquema. </p>
+            </div>
+        </div>
+        <p dir="ltr" style=""><br></p>
+        <p dir="ltr" style="">La <span class="" style="color: rgb(0, 46, 184);">trazabilidad </span>plantea la incorporación de vínculos entre los ítems de configuración que nos permiten detectar si todos los requerimientos que fueron comprometidos están siendo satisfechos, el estado de avance de cada requerimiento, como así
+            también vínculos hacia el origen y la razón de la incorporación de esos requerimientos en el producto de software.</p>
+        <p dir="ltr" style="font-weight: bold;"><br></p>
+        <p dir="ltr" style="text-align: center; font-weight: bold;"><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812165/mod_book/chapter/222938/13.png" alt=" " width="699" height="275" class="img-responsive atto_image_button_text-bottom"></span></p><br></span>
+        <p></p>
+
+
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222939"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Generación de informes</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p><br>Se ocupa de mantener los registros de la evolución del sistema. Maneja mucha información y salidas por lo que se suele implementar dentro de procesos automáticos, cuyo soporte depende de la herramienta de administración de configuraciones
+            que se utilice.<br></p><span id="docs-internal-guid-f83eb1bd-7fff-8575-dae1-04df58c2bf86"><p dir="ltr" style="">Algunos reportes que se pueden obtener son:<span class="" style="color: rgb(255, 51, 204);">&nbsp;</span></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Momento de incorporación o actualización de una línea base.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">&nbsp;Estado de cada cambio propuesto.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Momento en que se incorpora un cambio de configuración de software.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Estado de la documentación administrativa o técnica. </p>
+            </div>
+        </div>
+        </span>
+      <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Deficiencias detectadas durante la auditoría de configuración.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Información descriptiva de cada cambio propuesto.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Reportes de rastreabilidad de todos los cambios realizados a las líneas base durante el ciclo de vida.</p></div></div></div><br><ul>
+    </ul>
+    
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222940"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Plan de gestión de configuración</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p><br>Como todas las actividades vinculadas al desarrollo de software, las actividades vinculadas con la administración de configuración de software también deben planificarse. En el caso particular de estas actividades es deseable que la planificación
+            se haga lo más tempranamente posible.&nbsp;</p><span id="docs-internal-guid-ace5d7d7-7fff-958e-778a-c186a0656f4e"><p dir="ltr" style="">El <span class="" style="color: rgb(0, 46, 184);">Plan de administración de configuración</span> debería incluir al menos los siguientes ítems:<span class="" style="color: rgb(255, 51, 204);">&nbsp;</span></p>
+        <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Definición de los ítems de configuración (IC) que se administrarán.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Reglas de nombrado de los IC.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Herramientas que utilizar para la administración de configuración.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Responsabilidades e integrantes del Comité de control de cambios. </p>
+                    </div>
+                </div>
+      <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Procedimiento formal de cambios.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Procesos de Auditoría.</p></div></div></span></div><br><br><ul>
+        </ul>
+        
+    </div>
+
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222941"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Algunas herramientas</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <br>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">MicroFocus - PVCS Dimensions</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Platinum - CCC/Harvest&nbsp;</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Rational – ClearCase</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Microsoft – Team Fundation </p>
+            </div>
+        </div>
+      <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Accurev – Accurev</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Borland – StarTeam</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">TortoiseSVN (Herramienta de software libre)</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Subversion&nbsp;(Herramienta de software libre)</p>
+            </div>
+        </div>
+       <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Git&nbsp;(Herramienta de software libre)</p></div></div></div><br>
+</div>
+
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222942"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Tips de configuración</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <br>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Hacer de la administración de configuración de software (ACS), el trabajo de todos.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Crear un ambiente y un proceso de ingeniería que permita la administración de configuración.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Definir y documentar el proceso de administración de configuración/ingeniería, luego seleccionar la/las herramientas que le den soporte al proceso.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">El personal de ACS debe contar con Individuos con conocimientos técnicos para dar soporte al desarrollo y mantenimiento del producto. </p>
+            </div>
+        </div>
+       <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Los procedimientos y el Plan de ACS deben realizarse en las etapas iniciales del proyecto. </p>
+            </div>
+        </div>
+    </div>
+
+    <p><br></p></div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[723378,723381,723385,723388,723402,723405,723407,723410,723412,723415,723417,723420,723422,723425,723428,723431,723432,723435,723438,723441]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1757558299/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2812165, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1757970906); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\nconfig: [\"Accessible.js\", \"Safe.js\"],\r\nerrorSettings: { message: [\"!\"] },\r\nskipStartupTypeset: true,\r\nmessageStyle: \"none\"\r\n});","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random68c881e8bbb122'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random68c881e8bbb122'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

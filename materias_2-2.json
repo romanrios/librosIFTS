@@ -66,6 +66,10 @@
       {
         "texto": "05 - Proceso de desarrollo",
         "url": "./pages/Ingenieria/ingenieria_05.html"
+      },
+      {
+        "texto": "06 - Configuración y administración",
+        "url": "./pages/Ingenieria/ingenieria_06.html"
       }
     ]
   },
