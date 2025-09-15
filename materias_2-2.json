@@ -29,6 +29,10 @@
       {
         "texto": "06 - Creación de páginas webs",
         "url": "./pages/Front/front_06.html"
+      },
+      {
+        "texto": "07 - Introducción a React",
+        "url": "./pages/Front/front_07.html"
       }
     ]
   },
@@ -134,8 +138,36 @@
         "url": "./pages/Back/back_04.html"
       },
       {
+        "texto": "📁 TP Consigna CRUD",
+        "url": "https://docs.google.com/document/d/1KRL3Z9SjNvoa2euWeuxcD7T1UPoEI5LcPRiOEP0qovY/edit?usp=sharing"
+      },
+      {
+        "texto": "📁 TP Temas",
+        "url": "https://docs.google.com/document/d/16CMZcJHzW4czfV9m3n8dNmcEZi1RHBLfAn2vLapL3hU/edit?usp=sharing"
+      },
+      {
+        "texto": "📁 Código Clase 4",
+        "url": "https://drive.google.com/drive/folders/1bfcNzwRVAlFj0h65jOoTep2J7jFAaefR?usp=drive_link"
+      },
+      {
+        "texto": "🌐 Códigos HTTP",
+        "url": "https://es.semrush.com/blog/codigos-de-estado-http/"
+      },
+      {
         "texto": "05 - Asincronismo Web",
         "url": "./pages/Back/back_05.html"
+      },
+      {
+        "texto": "📁 Código Clase 5 - Asincronía",
+        "url": "https://es.semrush.com/blog/codigos-de-estado-http/"
+      },
+      {
+        "texto": "📁 NodeJS - Tareas Asíncronas - Desarrollo Back End",
+        "url": "https://docs.google.com/presentation/d/1ODwERSO3d3Rmyw--KkX1dke-MHvCZRnnmKOJJN8aw0c/edit?usp=sharing"
+      },
+      {
+        "texto": "06 - Introducción a Express",
+        "url": "./pages/Back/back_06.html"
       }
     ]
   }
