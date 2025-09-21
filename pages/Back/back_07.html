@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>D7. API REST básica con Node y Express | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1758311342/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, D7. API REST básica con Node y Express | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1758311342_1757558579/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"hVItWLGPrb","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1758311342","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1757558299","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":22553,"courseContextId":2800956,"contextid":2801030,"contextInstanceId":712887,"langrev":1757575445,"templaterev":"1757558299"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1757558299\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1757558299\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1757558299\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1757558299\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1757558299\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?config=TeX-AMS_SVG%22&delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-22553 context-2801030 cmid-712887 cm-type-book category-3279 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1758311342/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>D7. API REST básica con Node y Express</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Desarrollo de Sistemas Web (Back End) - 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        D7. API REST básica con Node y Express
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        domingo, 21 de septiembre de 2025, 13:25
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=22553&amp;section=11" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=712898" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=712888" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=712889" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Preguntas iniciales" class="font-weight-bold text-decoration-none" href="#ch209347">1. Preguntas iniciales</a></li><li><a title="2. Introducción" class="font-weight-bold text-decoration-none" href="#ch209336">2. Introducción</a></li><li><a title="3. Express Requests (El objeto request)" class="font-weight-bold text-decoration-none" href="#ch209337">3. Express Requests (El objeto request)</a></li><li><a title="4. Express Responses (El objeto response)" class="font-weight-bold text-decoration-none" href="#ch209338">4. Express Responses (El objeto response)</a></li><li><a title="5. Nodemon" class="font-weight-bold text-decoration-none" href="#ch209339">5. Nodemon</a></li><li><a title="6. REST" class="font-weight-bold text-decoration-none" href="#ch209340">6. REST</a><ul><li><a title="6.1. Obteniendo un solo recurso" class="text-decoration-none" href="#ch209341">6.1. Obteniendo un solo recurso</a></li><li><a title="6.2. Eliminar recursos" class="text-decoration-none" href="#ch209342">6.2. Eliminar recursos</a></li></ul></li><li><a title="7. Postman" class="font-weight-bold text-decoration-none" href="#ch209343">7. Postman</a><ul><li><a title="7.1. Probando requests con Postman" class="text-decoration-none" href="#ch209344">7.1. Probando requests con Postman</a></li></ul></li><li><a title="8. Ejemplo API REST (continuación)" class="font-weight-bold text-decoration-none" href="#ch209345">8. Ejemplo API REST (continuación)</a><ul><li><a title="8.1. Continuando el ejemplo API REST" class="text-decoration-none" href="#ch209346">8.1. Continuando el ejemplo API REST</a></li></ul></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209347"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;"> 
+    <p class="titulo_principal">Preguntas iniciales</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <span id="docs-internal-guid-d74f4b7d-7fff-561b-4765-b9463e594e93">Profundizaremos el uso de Express, un framework para Node.js, para manejar peticiones y respuestas en nuestras aplicaciones.&nbsp;</span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span><br></span></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span><div style="width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid #9A3282;">
+    <p style="background-color: #9A3282; color: white; padding: 4px 16px; margin: 0;"><b>Te proponemos</b></p>
+    <div style="background-color: white; padding: 16px;">
+        <p><span style="font-size: large; color: #010614;">Aprender sobre el objeto request y sus propiedades, así como el objeto response y sus métodos. Además, estudiaremos cómo utilizar Nodemon para facilitar el desarrollo de nuestras aplicaciones y abordaremos el concepto de REST y cómo crear una API REST.</span></p>
+    </div>
+</div>
+</span>
+</div>
+<div style="margin-left: 3%; margin-right: 3%;"><span><br></span></div>
+<div style="margin-left: 3%; margin-right: 3%;"><span>Utilizaremos la herramienta Postman para probar nuestras peticiones y aprenderemos cómo obtener y eliminar recursos a través de una API REST. Al final del material, estaremos listos para manejar peticiones y respuestas en aplicaciones de Node.js con Express, y podremos crear una API completa.</span></div>
+<div style="margin-left: 3%; margin-right: 3%;"><span><br></span></div>
+<div style="margin-left: 3%; margin-right: 3%;"><span><div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Preguntas Orientadoras</p>
+        </div>
+        <div class="row" style="margin-left: 32px;">
+            <div class="col" style=""><br>
+                <ul style="color: rgb(1, 6, 20); font-size: large;">
+                    <li>¿Qué es Express y cómo se utiliza en el desarrollo de aplicaciones web?&nbsp;</li>
+                    <li>¿Qué es un objeto request y qué propiedades tiene?&nbsp;</li>
+                    <li>¿Qué es un objeto response y qué métodos se utilizan para manejar las respuestas en Express?&nbsp;</li>
+                    <li>¿Qué es Nodemon y cómo se utiliza para facilitar el desarrollo de aplicaciones?&nbsp;</li>
+                    <li>¿Qué es REST y cómo se utiliza para crear una API?&nbsp;</li>
+                    <li>¿Qué es Postman y cómo se utiliza para probar peticiones y trabajar con recursos en una API REST?
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </span></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209336"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Introducción</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p><span id="docs-internal-guid-6fa55862-7fff-697a-adc8-22c55e358897"><p dir="ltr" style="">Una aplicación web retorna datos incrustados en documentos (generalmente html) listos para ser visualizados, a diferencia de una REST API que solo proporciona datos y cuyo despliegue se realiza a nivel del cliente.</p><p dir="ltr" style="">En una API Rest, la comunicación se realiza mediante diferentes tipos de request sobre una misma ruta. Por ejemplo para la ruta /users podríamos tener los siguientes métodos.</p><p dir="ltr" style=""><!-- 1 -->
+        </p><div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-size: large; color: rgb(51, 51, 51);" class=""><span style="">GET<br>Muestra los detalles de usuario.</span></span>
+        </p>
+    </div>
+</div>
+
+
+
+<!-- 2 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-size: large; color: rgb(51, 51, 51);" class="">POST<br>Crea un nuevo usuario.</span></p>
+    </div>
+</div>
+
+<!-- 3 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-size: large; color: rgb(51, 51, 51);" class="">PUT<br>Borra el usuario y crea uno nuevo en su lugar.</span></p>
+       </div>
+</div>
+
+    <!-- 4 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi b3c80b3i-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-size: large; color: rgb(51, 51, 51);" class="">DELETE<br>Borra el usuario.</span></p>
+       </div>
+</div>
+<p></p>
+<p dir="ltr" style="">Es decir, solo cambiando el método del request podemos indicarle a express que realice diferentes operaciones asociadas con un elemento del modelo de negocios de nuestro sistema (en este caso users).<br></p>
+</span><br>
+<p></p>
+
+
+<!-- nada puede haber abajo -->
+<br>
+</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209337"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Express Requests (El objeto request)</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p><span id="docs-internal-guid-8f6e90aa-7fff-750e-be11-9ba919f27d5e" style=""><p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;">El objeto request tiene más propiedades que la petición del http request del cual extiende. Estas propiedades simplifican el desarrollo y proveen funcionalidad adicional.</p><p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;"></p>
+      <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+              <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Propiedades de objeto resquest</p>
+   </div>
+      <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57"><br></p>
+   
+    <!-- 1 -->
+    <div class="row" style="margin-left: 32px">
+        <div>            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+        </div>
+        <div class="col">
+            <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span class="" style="font-size: large; color: rgb(51, 51, 51);">request.params<br>Parámetros del url.</span></p>
+    </div>
+</div>
+
+
+<!-- 2 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span class="" style="font-size: large; color: rgb(51, 51, 51);">request.query<br>Parámetros del query string..</span></p>
+    </div>
+</div>
+
+<!-- 3 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span>request.route</span><br>Ruta actual como string.</span>
+        </p>
+    </div>
+</div>
+
+
+<!-- 4 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span>request.cookies</span><br>Cookies (requiere de cookie parser).</span>
+        </p>
+    </div>
+</div>
+<!-- 4 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span>request.signedCookies</span><br>Cookies firmadas (requiere de cookie parser).</span>
+        </p>
+    </div>
+</div>
+<!-- 4 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span class="" style="font-size: large; color: rgb(51, 51, 51);">request.body<br>Contenido del cuerpo de la petición (requiere de cookie parser).</span></p>
+    </div>
+</div>
+
+</span>
+</div>
+<div style="margin-left: 3%; margin-right: 3%;"><span style="color: rgb(1, 6, 20); font-size: large;"><!-- 4 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span class="" style="font-size: large; color: rgb(51, 51, 51);">request.headers<br>Cabeceras de la petición.</span></p>
+    <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></p>
+    <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><br></p>
+</div>
+<div style="margin-left: 3%; margin-right: 3%;">
+    <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+
+
+
+
+    <!-- nada puede haber abajo -->
+    <br>
+</div>
+</div>
+</span>
+</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209338"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Express Responses (El objeto response)</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p><span id="docs-internal-guid-b5b78daa-7fff-e9c8-6506-e9febe9d1c40" style=""><p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;">El objeto response es accesible mediante los route handlers (manejadores de rutas) mediante el segundo argumento del callback.</p><p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;"><!-- Inicio de la primera caja de c贸digo -->
+</p><div style="color: rgb(255, 255, 255); font-size: large; background-color: rgb(68, 68, 68); padding: 10px; border-radius: 5px 5px 0px 0px;">
+       <span style="float: left;">JavaScript</span>
+        <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+        </span>
+    </div>
+    <div style="color: rgb(255, 255, 255); font-size: large; background-color: rgb(68, 68, 68); padding: 10px; border-radius: 0px;">
+    </div>
+    <div style="color: rgb(255, 255, 255); font-size: large; background-color: rgb(0, 0, 0); padding: 10px; border-radius: 0px 0px 5px 5px;">
+        <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1">                     <p> app.get('/articles/:id', (req, res) =&gt; {
+
+         // res (response) es la respuesta de http con sus complementos
+});                      </p></pre>
+    </div>
+    <!-- Fin de la primera caja de c贸digo -->
+    <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+    <pre style="color: rgb(1, 6, 20); font-size: large;"><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;">El response puede ser utilizado y modificado antes de ser enviado de regreso.</span><br></pre>
+    <h5 style="color: rgb(1, 6, 20); font-size: large;">
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Métodos del objeto response</p>
+        </div>
+    </h5><br>
+
+    <span style="color: rgb(1, 6, 20); font-size: large;">
+<!-- 1 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+   </div>
+    <div class="col">
+        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span>response.redirect(url)</span><br>Redirecciona la respuesta.</span>
+    </p>
+
+</div>
+</div>
+
+
+<!-- 2 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span>response.send(data)</span><br><span>Envía la respuesta.</span></span>
+        </p>
+    </div>
+</div>
+
+<!-- 3 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span>response.json(data)</span><br><span>Envía un json de regreso y agrega las cabeceras apropiadas.</span></span>
+        </p>
+    </div>
+</div>
+
+
+<!-- 4 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span>response.sendfile(path, options, callback)</span><br>Envía un archivo para descarga.</span>
+        </p>
+    </div>
+</div>
+
+<!-- 5 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color:#3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span>response.render(template, locals, callback)</span><br>Procesa un template.</span>
+        </p>
+    </div>
+</div>
+
+<!-- 6 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span class="" style="font-size: large; color: rgb(51, 51, 51);">response.locals<br>Envía datos al template.</span></p>
+    </div>
+</div>
+
+
+</span>
+</span></div>
+<div style="margin-left: 3%; margin-right: 3%;"><br></div>
+</div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209339"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Nodemon</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p><span id="docs-internal-guid-1b1d37f9-7fff-ec68-dda0-bf3eae62a7fa"><p dir="ltr" style="">Cada vez que hacemos cambios en el código de la aplicación, tenemos que reiniciarla para ver esos cambios en nuestro servidor. Reiniciamos la aplicación cerrándola primero escribiendo Ctrl+C en la consola y luego volviendo a levantarla. Sin embargo, esto es un poco engorroso. La solución a este problema es nodemon:</p><p dir="ltr" style=""> </p><div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;">nodemon observará los archivos en el directorio en el que se inició nodemon, y si algún archivo cambia, nodemon reiniciará automáticamente su aplicación de node.</p>
+        </div>
+<p></p><p dir="ltr" style=""></p><div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Instalación</p>
+   </div><p></p><h5 style=""><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;">Instalemos nodemon definiéndolo como una dependencia de desarrollo con el comando:</span><br></h5>
+        <p dir="ltr" style="">
+            <!-- Inicio de la primera caja de c贸digo -->
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1">  <p> npm install --save-dev nodemon     </p></pre>
+        </div>
+        <!-- Fin de la primera caja de c贸digo -->
+        <p dir="ltr" style="">
+        </p>
+        <pre style=""><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;">Podemos iniciar nuestra aplicación con nodemon así:</span><br></pre>
+        <p dir="ltr" style="">
+            <!-- Inicio de la segunda caja de c贸digo -->
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(2)">
+        <span id="copyText2">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon2" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer2">         <p> "devDependencies": {
+   "nodemon": "^2.0.20"
+ }
+</p></pre>
+        </div>
+        <!-- Fin de la segunda caja de c贸digo -->
+        <p></p>
+        <p dir="ltr" style="">Podemos iniciar nuestra aplicación con nodemon así:<br></p>
+        <p dir="ltr" style="">
+            <!-- Tercera caja de c贸digo -->
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(3)">
+        <span id="copyText3">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon3" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer3">node_modules/.bin/nodemon index.js
+<p></p></pre>
+        </div>
+        <!-- Fin de la tercera caja de c贸digo -->
+        <p></p>
+        <p dir="ltr" style=""><img src="https://lh7-us.googleusercontent.com/mvdoCEbIy9BvS18QLKXWEw3CUSb__DJkQPXs3nnDJYhNehwxscbHq2OSDLLqanlc3kkkcR7kvJ9iIji8rnnWYkaaLOD8CCSdiXHa-C9Z8yF4D1QKuE9m6EiRoir2ATQvrlExDRtbIRHRzcUaaHL67w" width="364" height="115"><br></p>
+        <p dir="ltr" style="">Los cambios en el código de la aplicación ahora hacen que el servidor se reinicie automáticamente.</p>
+        <p dir="ltr" style="">El comando anterior es largo y bastante desagradable para recordar, así que definamos un script npm dedicado para él en el archivo package.json:</p>
+        <p dir="ltr" style="">
+            <!-- Cuarta caja de c贸digo -->
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(4)">
+        <span id="copyText4">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon4" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer4">{
+ // ..
+ "scripts": {
+   "start": "node index.js",
+   "dev": "nodemon index.js",
+   "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+ },
+ // ..
+}
+<p></p></pre>
+        </div>
+        <!-- Fin de la cuarta caja de c贸digo -->
+        <p></p>
+        <p dir="ltr" style="">En el script no es necesario especificar la ruta node_modules/.bin/nodemon a nodemon, porque npm automáticamente sabe buscar el archivo desde ese directorio.<br></p>
+        <p dir="ltr" style="">Ahora podemos iniciar el servidor en el modo de desarrollo con el comando:</p>
+        <p dir="ltr" style="">
+            <!-- Quinta caja de c贸digo -->
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(5)">
+        <span id="copyText5">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon5" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer5">npm run dev
+<p></p></pre>
+        </div>
+        <!-- Fin de la Quinta caja de c贸digo -->
+        <p dir="ltr" style="">
+        </p>
+        <p dir="ltr" style="">A diferencia de los scripts de start y test, también tenemos que agregar run al comando.<br></p><br></span>
+        <p>.</p>
+        <script>
+            function copyCodeToClipboard(index) {
+                var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+                navigator.clipboard.writeText(codeToCopy).then(function() {
+                    var copyIcon = document.getElementById('copyIcon' + index);
+                    var copyText = document.getElementById('copyText' + index);
+                    copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+                    copyText.textContent = 'Copiado';
+                    setTimeout(function() {
+                        copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                        copyText.textContent = 'Copiar c贸digo';
+                    }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+                }, function(err) {
+                    console.error('Error al copiar el c贸digo: ', err);
+                });
+            }
+        </script>
+
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209340"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">REST</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p>
+        <p dir="ltr" style="">Representational State Transfer, también conocido como REST, se introdujo en 2000 en la disertación de Roy Fielding . REST es un estilo arquitectónico destinado a crear aplicaciones web escalables.</p>
+        <p dir="ltr" style=""></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Ejemplo API REST</p>
+        </div>
+        <p></p>
+        <h5 style=""><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;">Supongamos que tenemos una aplicación de notas y la URL raíz de nuestro servicio es </span><a href="http://localhost:8000/api" style="background-color: rgb(250, 250, 250); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;">http://localhost:8000/api</a>
+            <span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;">.&nbsp;</span><br></h5>
+        <p dir="ltr" style="">Si definimos el tipo de recurso de notas como “note”, entonces la dirección de un recurso de nota con el identificador 10, tiene la dirección única <a href="http://localhost:8000/api/notes/10">http://localhost:8000/api/notes/10</a>.</p>
+        <p dir="ltr" style="">La URL de la colección completa de todos los recursos de notas es <a href="http://localhost:8000/api/notes/10">http://localhost:8000/api/notes</a>.</p>
+        <p dir="ltr" style="">Podemos ejecutar diferentes operaciones sobre recursos. La operación a ejecutar está definida por el verbo HTTP:</p>
+        <!--- inicio tabla-->
+        <table style="border-color: #3b3939; width: 80%;" border="1">
+            <tbody>
+                <tr>
+                    <td style="width: 12%;">
+                        <p><span style="font-weight: 400;">URL</span></p>
+                    </td>
+                    <td style="width: 11.5625%;">
+                        <p><span style="font-weight: 400;">verbo</span></p>
+                    </td>
+                    <td style="width: 72.4375%;">
+                        <p><span style="font-weight: 400;">funcionalidad</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 12%;">
+                        <p><span style="font-weight: 400;">notes/10</span></p>
+                    </td>
+                    <td style="width: 11.5625%;">
+                        <p><span style="font-weight: 400;">GET</span></p>
+                    </td>
+                    <td style="width: 72.4375%;">
+                        <p><span style="font-weight: 400;">obtiene un solo recurso</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 12%;">
+                        <p><span style="font-weight: 400;">notes</span></p>
+                    </td>
+                    <td style="width: 11.5625%;">
+                        <p><span style="font-weight: 400;">GET</span></p>
+                    </td>
+                    <td style="width: 72.4375%;">
+                        <p><span style="font-weight: 400;">obtiene todos los recursos en una colección</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 12%;">
+                        <p><span style="font-weight: 400;">notes</span></p>
+                    </td>
+                    <td style="width: 11.5625%;">
+                        <p><span style="font-weight: 400;">POST</span></p>
+                    </td>
+                    <td style="width: 72.4375%;">
+                        <p><span style="font-weight: 400;">crea un nuevo recurso basado en los datos de la solicitud</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 12%;">
+                        <p><span style="font-weight: 400;">notes/10</span></p>
+                    </td>
+                    <td style="width: 11.5625%;">
+                        <p><span style="font-weight: 400;">DELETE</span></p>
+                    </td>
+                    <td style="width: 72.4375%;">
+                        <p><span style="font-weight: 400;">elimina el recurso identificado</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 12%;">
+                        <p><span style="font-weight: 400;">notes/10</span></p>
+                    </td>
+                    <td style="width: 11.5625%;">
+                        <p><span style="font-weight: 400;">PUT</span></p>
+                    </td>
+                    <td style="width: 72.4375%;">
+                        <p><span style="font-weight: 400;">reemplaza todo el recurso identificado con los datos de la solicitud</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 12%;">
+                        <p><span style="font-weight: 400;">notes/10</span></p>
+                    </td>
+                    <td style="width: 11.5625%;">
+                        <p><span style="font-weight: 400;">PATCH</span></p>
+                    </td>
+                    <td style="width: 72.4375%;">
+                        <p><span style="font-weight: 400;">reemplaza una parte del recurso identificado con los datos de la solicitud</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--- fin tabla-->
+
+        <p><br></p>
+        <p><span id="docs-internal-guid-c0882b1b-7fff-f2b6-448e-9e595e757461"></span></p>
+        <p dir="ltr" style="">En algunos lugares veremos que nuestro modelo para una API CRUD sencilla se conoce como un ejemplo de arquitectura orientada a recursos en lugar de REST.</p>
+        <p dir="ltr" style=""></p>
+        <div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+
+            <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+                    </div>
+                    <div class="col">
+                        <p><span>C</span>reamos un servidor básico con express y node. Vamos a utilizar el archivo index.js con el código principal y un archivo notes.js como ruta para las notas</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p>Para crear un ejemplo sencillo,vamos a definir un array de notas para trabajar con él. Ya veremos más adelante cómo podemos persistir estos datos a través de bases de datos. Archivo notes.js:</p>
+                        <p><br></p>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 3%; margin-right: 3%;">
+                <!-- Inicio de la primera caja de c贸digo -->
+                <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+                    <span style="float: left;">JavaScript</span>
+                    <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+                    </span>
+                </div>
+                <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+                </div>
+                <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+                    <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1">         <p> let notes = [
+ {
+   id: 1,
+   content: 'Podemos hacer casi cualquier cosa con JavaScript',
+   date: '2022-05-30T17:30:31.098Z',
+   important: true
+ },
+ {
+   id: 2,
+   content: 'Node.js utiliza la arquitectura Single Threaded Event Loop',
+   date: '2022-05-30T18:39:34.091Z',
+   important: true
+ },
+ {
+   id: 3,
+   content: 'NPM es el gestor de paquetes de Node.js.',
+   date: '2022-05-30T19:20:14.298Z',
+   important: false
+ },
+ {
+   id: 4,
+   content: 'Express.js es un framework de aplicaciones web Node.js',
+   date: '2022-05-30T19:20:14.298Z',
+   important: true
+ }
+];
+var express = require('express');
+var router = express.Router();
+router.get('/', function (req, res) {
+ res.json(notes);
+});
+module.exports = router;
+</p>      
+    </pre>
+                </div>
+                <!-- Fin de la primera caja de c贸digo -->
+            </div>
+            <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+            <div style="margin-left: 3%; margin-right: 3%;"><span><span style="">3 -- Archivo index.js:</span></span>
+            </div>
+            <div style="margin-left: 3%; margin-right: 3%;"><span><span style=""><!-- Inicio de la segunda caja de c贸digo -->
+<div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+        <span style="float: left;">JavaScript</span>
+                <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(2)">
+        <span id="copyText2">Copiar código</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon2" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+                </span>
+            </div>
+            <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+            </div>
+            <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+                <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer2"> const express = require('express');<p>const app = express();
+var notes = require('./notes.js');
+app.get('/', (request, response) =&gt; {
+ response.send('</p><h1>Hello World!</h1>');
+});
+app.use('/api/notes', notes);
+
+
+app.listen(8000, function () {
+ console.log('Escuchando el puerto 8000!');
+});
+  </pre>
+            </div>
+            <!-- Fin de la segunda caja de c贸digo -->
+            <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+            <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+            </span>
+            </span>
+        </div>
+    </div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209341"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Obteniendo un solo recurso</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p><span id="docs-internal-guid-50df8dc1-7fff-ca35-527b-f108a276c3a2"><span id="docs-internal-guid-6ed1ce52-7fff-0d30-9a14-52fa1160885d" style=""><p dir="ltr" style="">Ampliemos nuestra aplicación para que ofrezca una interfaz REST para operar con notas individuales. Primero, creemos una ruta para buscar un solo recurso.</p><p dir="ltr" style="">La dirección única que usaremos para una nota individual es de la forma notes/10, donde el número al final se refiere al número de id único de la nota.</p><p dir="ltr" style=""></p><div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+    <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;">Como vimos antes podemos definir parámetros para rutas en express usando la sintaxis de dos puntos.</p></div><p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93"></p><p dir="ltr" style="">Se puede acceder al parámetro id en la ruta de una solicitud a través del objeto request:<br></p><p dir="ltr" style=""><!-- Inicio de la primera caja de c贸digo -->
+</p><div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+       <span style="float: left;">JavaScript</span>
+        <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+        </span>
+    </div>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+    </div>
+    <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+        <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1"> router.get('/:id', (req, res) =&gt; {<p> const id = req.params.id;
+ const note = notes.find((note) =&gt; note.id === id);
+ res.json(note);
+});  
+</p></pre>
+    </div>
+    <!-- Fin de la primera caja de c贸digo -->
+    <p dir="ltr" style=""></p>
+    <p dir="ltr" style="">Ahora app.get('/api/notes/:id', ...) manejará todas las solicitudes HTTP GET, que tienen el formato /api/notes/SOMETHING, donde SOMETHING es un string arbitraria.</p>
+    <p dir="ltr" style="">Además, utilizamos el método find de arrays para encontrar la nota con un id que coincida con el parámetro. Luego, la nota se devuelve al remitente de la solicitud.</p>
+    <p dir="ltr" style="">Sin embargo, cuando probamos nuestra aplicación yendo por ejemplo a <a href="http://localhost:8000/api/notes/2">http://localhost:8000/api/notes/1</a> en nuestro navegador, notamos que no parece funcionar, ya que el navegador muestra una página vacía.
+        Vamos a debuggear para ver qué sucede.</p>
+    <p dir="ltr" style="">Agregamos comandos de console.log a nuestro código para ver qué valor tiene cada variable:</p>
+    <p dir="ltr" style="">
+        <!-- Inicio de la segunda caja de c贸digo -->
+    </p>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+        <span style="float: left;">JavaScript</span>
+        <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(2)">
+        <span id="copyText2">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon2" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+        </span>
+    </div>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+    </div>
+    <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+        <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer2"> router.get('/:id', (req, res) =&gt; {<p> const id = req.params.id;
+ console.log(id);
+ const note = notes.find((note) =&gt; note.id === id);
+ console.log(note);
+ res.json(note);
+});
+</p></pre>
+    </div>
+    <!-- Fin de la segunda caja de c贸digo -->
+    <p dir="ltr" style=""></p>
+    <p dir="ltr" style="">Cuando visitemos <a href="http://localhost:8000/api/notes/2" style="background-color: rgb(250, 250, 250);">http://localhost:8000/api/notes/1</a> nuevamente en el navegador, la consola que es la terminal en este caso, mostrará lo siguiente:<br></p>
+    <p dir="ltr" style=""><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2801030/mod_book/chapter/209341/775787.png" alt=" " width="1020" height="231" class="img-responsive atto_image_button_text-bottom"></p>
+    <p dir="ltr" style="">El parámetro id de la ruta se pasa a nuestra aplicación, pero el find método no encuentra una nota con ese id. Para profundizar nuestra investigación, también agregamos un console.log dentro de la función de comparación pasada al método find. Para
+        hacer esto, tenemos que deshacernos de la sintaxis de la función de flecha compacta&nbsp;<code><span class="" style="font-size: large;">note =&gt; note.id === id</span></code>, y usar la sintaxis con una declaración de retorno explícita:</p>
+    <p dir="ltr" style="">
+        <!-- Tercera caja de c贸digo -->
+    </p>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+        <span style="float: left;">JavaScript</span>
+        <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(3)">
+        <span id="copyText3">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon3" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+        </span>
+    </div>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+    </div>
+    <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+        <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer3">router.get('/:id', (req, res) =&gt; {
+ const id = req.params.id;
+ console.log(id);
+ const note = notes.find((note) =&gt; {
+   console.log(note.id, typeof note.id, id, typeof id, note.id === id);
+   return note.id === id;
+ });
+ console.log(note);
+ res.json(note);
+});
+<p></p></pre>
+    </div>
+    <!-- Fin de la tercera caja de c贸digo -->
+    <p dir="ltr" style=""></p>
+    <p dir="ltr" style="">Cuando volvemos a visitar la URL en el navegador, cada llamada a la función de comparación imprime algunas cosas diferentes en la consola. La salida de la consola es la siguiente:<br></p>
+    <p dir="ltr" style="">
+        <!-- Cuarta caja de c贸digo -->
+    </p>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+        <span style="float: left;">JavaScript</span>
+        <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(4)">
+        <span id="copyText4">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon4" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+        </span>
+    </div>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+    </div>
+    <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+        <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer4">Escuchando el puerto 8000!
+2
+1 number 2 string false
+2 number 2 string false
+3 number 2 string false
+4 number 2 string false
+undefined
+</pre>
+    </div>
+    <p dir="ltr" style=""></p>
+    <p dir="ltr" style="">La causa del error se aclara. La variable id contiene una cadena '1', mientras que los ids de las notas son números enteros. En JavaScript, la comparación "triple iguales" === considera que todos los valores de diferentes tipos no son iguales por
+        defecto, lo que significa que 1 no es '1'. Solucionemos el problema cambiando el parámetro id de un string a number:</p>
+    <p dir="ltr" style="">
+        <!-- Quinta caja de c贸digo -->
+    </p>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+        <span style="float: left;">JavaScript</span>
+        <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(5)">
+        <span id="copyText5">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon5" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+        </span>
+    </div>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+    </div>
+    <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+        <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer5">const id = Number(req.params.id);
+
+<p></p></pre>
+    </div>
+    <!-- Fin de la Quinta caja de c贸digo -->
+    <p></p>
+    <pre style=""><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;">Ahora si funciona la búsqueda de un recurso individual:</span><br></pre>
+    <p dir="ltr" style=""><img src="https://lh7-us.googleusercontent.com/R4mQ9fyy7995MydfyyVO3YBBsGZTv76xpU4H3gp_R9cmCNoYo8LwmjKxY-uUrkME4FYjQDLgaFYa_rQoJm7vFAlPWkUBgtGd-6bBOyWDb8mzELBLIw6T9Q25MgCUUipOdo4RP4nG80rel4K6vSI4aA" width="463" height="153"></p>
+    <p dir="ltr" style="">Sin embargo, hay otro problema con nuestra aplicación. Si buscamos una nota con un id que no existe, por ejemplo en <a href="http://localhost:8000/api/notes/100">http://localhost:8000/api/notes/100</a> el servidor responde con:</p>
+    </span><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2801030/mod_book/chapter/209341/rty66.png" alt=" " width="899" height="438" role="presentation" class="img-responsive atto_image_button_middle"></span>
+</div>
+<div style="margin-left: 3%; margin-right: 3%;"><br></div>
+<div style="margin-left: 3%; margin-right: 3%;">
+    <p><span style="">El código de estado HTTP que se devuelve es 200, lo que significa que la respuesta se realizó correctamente. No se devuelven datos con la respuesta, ya que el valor del header de content-length es 0, y lo mismo se puede verificar desde el navegador.</span><br></p>
+    <p><span id="docs-internal-guid-30dd2127-7fff-9176-e357-ce1cc86f881b"></span></p>
+    <p dir="ltr" style="">El motivo de este comportamiento es que la variable note se establece en undefined si no se encuentra una nota coincidente. La situación debe manejarse en el servidor de una mejor manera. Si no se encuentra ninguna nota, el servidor debe responder
+        con el código de estado 404 not found en lugar de 200.&nbsp;</p>
+    <p dir="ltr" style="">Hagamos el siguiente cambio en nuestro código:</p>
+    <p dir="ltr" style="">
+        <!-- Sexta caja de c贸digo -->
+    </p>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+        <span style="float: left;">JavaScript</span>
+        <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(6)">
+        <span id="copyText6">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon6" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+        </span>
+    </div>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+    </div>
+    <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+        <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer6">router.get('/:id', (req, res) =&gt; {
+ const id = Number(req.params.id);
+ const note = notes.find((note) =&gt; note.id === id);
+ if (note) {
+   res.json(note);
+ } else {
+   res.status(404).end();
+ }
+});
+<p></p></pre>
+    </div>
+    <!-- Fin de la sexta caja de c贸digo -->
+    <p dir="ltr" style=""></p>
+    <p></p>
+    <p dir="ltr" style="">Dado que no se adjuntan datos a la respuesta, utilizamos el método status para establecer el estado y el método end para responder a la solicitud sin enviar ningún dato.</p>
+    <p dir="ltr" style="">La condición if aprovecha el hecho de que todos los objetos JavaScript son truthy (<a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy">https://developer.mozilla.org/en-US/docs/Glossary/Truthy</a>), lo que significa que se evalúan como
+        verdaderos en una operación de comparación. Sin embargo, undefined es falsy (<a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">https://developer.mozilla.org/en-US/docs/Glossary/Falsy</a>), lo que significa que se evaluará como
+        falso.
+    </p>
+    <p dir="ltr" style="">Ahora si, nuestra aplicación funciona y envía el código de estado de error si no se encuentra ninguna nota. Si vamos a <a href="http://localhost:8000/api/notes/100" style="">http://localhost:8000/api/notes/100</a> veremos una pantalla como esta:</p>
+    <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2801030/mod_book/chapter/209341/57765.png" alt="  " width="899" height="438" role="presentation" class="img-responsive atto_image_button_text-bottom">
+    <p></p>
+    <script>
+        function copyCodeToClipboard(index) {
+            var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+            navigator.clipboard.writeText(codeToCopy).then(function() {
+                var copyIcon = document.getElementById('copyIcon' + index);
+                var copyText = document.getElementById('copyText' + index);
+                copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+                copyText.textContent = 'Copiado';
+                setTimeout(function() {
+                    copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                    copyText.textContent = 'Copiar c贸digo';
+                }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+            }, function(err) {
+                console.error('Error al copiar el c贸digo: ', err);
+            });
+        }
+    </script>
+    <!-- nada puede haber abajo -->
+    <br>
+</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209342"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Eliminar recursos</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;"><span id="docs-internal-guid-4c51ab84-7fff-4843-ef93-a2efa05be4c0"><p dir="ltr" style="font-weight: bold;"><br></p><p dir="ltr" style="">Implementamos una ruta para eliminar recursos. La eliminación ocurre al realizar una solicitud HTTP DELETE a la URL del recurso:</p><p dir="ltr" style="">
+      <!-- Inicio de la primera caja de c贸digo -->
+</p><div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+       <span style="float: left;">JavaScript</span>
+        <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+        </span>
+    </div>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+    </div>
+    <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+        <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1"> router.delete('/:id', (req, res) =&gt; {<p> const id = Number(req.params.id);
+ notes = notes.filter((note) =&gt; note.id !== id);
+ console.log(notes);
+ res.status(204).end();
+});     </p></pre>
+    </div>
+    <!-- Fin de la primera caja de c贸digo -->
+    <p></p>
+
+    <p dir="ltr" style="">Si la eliminación del recurso es exitosa, lo que significa que la nota existe y se elimina, respondemos a la solicitud con el código de estado “204 no content” y no devolvemos datos con la respuesta. No hay consenso sobre qué código de estado debe
+        devolverse a una solicitud DELETE si el recurso no existe. Realmente, las únicas dos opciones son 204 y 404.</p>
+    <p dir="ltr" style="">Debido a que las notas de la aplicación solo se guardan en el código, no veremos realmente cómo se elimina la nota seleccionada del array de notes. Es por eso que mostramos un console.log(notes) para poder visualizar por consola si realmente se está
+        eliminando o no la nota.</p><div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Ten en cuenta, ¿cómo probamos la operación de eliminación?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Las solicitudes HTTP GET son fáciles de realizar desde el navegador, sin embargo, las demás solicitudes como POST o DELETE no se pueden realizar fácilmente accediendo desde el navegador. </p>
+            </div>
+        </div>
+        <p dir="ltr" style="">Existen muchas herramientas para facilitar las pruebas de backends. A continuación, analizaremos el uso de Postman para probar la aplicación.<br></p>
+    </span><br>
+</div>
+</div>
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209343"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Postman</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p><span id="docs-internal-guid-178e3c13-7fff-a3db-db9f-bab401f32595"><p dir="ltr" style="">Para poder probar nuestras API de forma más productiva vamos a tener que usar algún cliente de APIs que nos permita hacer las pruebas de funcionamiento de lo que estamos construyendo, los dos clientes más famosos son Insomnia y Postman y vamos a necesitar de alguno de ellos para ir probando cada característica que vamos a ir construyendo.</p><p dir="ltr" style=""> </p><div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;">Postman en sus inicios nace como una extensión que podía ser utilizada en el navegador Chrome de Google y básicamente nos permite realizar peticiones de una manera simple para testear APIs de tipo REST propias o de terceros.&nbsp;</p>
+        </div>
+<p></p><p dir="ltr" style="">Gracias a los avances tecnológicos, Postman ha evolucionado y ha pasado de ser de una extensión a una aplicación que dispone de herramientas nativas para diversos sistemas operativos como lo son Windows, Mac y Linux.<br></p><p dir="ltr" style=""></p><div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Para qué sirve Postman</p>
+   </div><p></p><h5 style=""><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;">Postman sirve para múltiples tareas dentro de las cuales destacaremos en esta oportunidad las siguientes:</span><br></h5>
+        <p><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;"><!-- 1 -->
+</span></p>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Testear colecciones o catálogos de APIs tanto para Frontend como para Backend.</span></p>
+
+            </div>
+        </div>
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Organizar en carpetas, funcionalidades y módulos los servicios web.</span></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Permite gestionar el ciclo de vida (conceptualización y definición, desarrollo, monitoreo y mantenimiento) de nuestra API.</span></p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Generar documentación de nuestras APIs.</span> </p>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color:#3c80b3">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Trabajar con entornos (calidad, desarrollo, producción) y de este modo es posible compartir a través de un entorno cloud la información con el resto del equipo involucrado en el desarrollo.</span>                    </p>
+            </div>
+        </div>
+        </span>
+        <p></p>
+        <h5 style=""><span style="font-weight: normal;"><div style="background-color:#87CEEB; display: inline-flex;  height: 6px;"><p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Instalación Windows y Mac</p>
+   </div></span></h5>
+        <h5 style=""><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;"><br></span></h5>
+        <h5 style=""><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;">La instalación es sencilla solo tenemos que ingresar a </span><a href="https://www.postman.com/downloads/" style="background-color: rgb(250, 250, 250); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;">https://www.postman.com/downloads/</a>
+            <span style="font-size: 1.17188rem;">
+                </span><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;"> y descargar el instalador, una vez esté descargado lo ejecutamos y seguimos los pasos de la instalación, en caso de Windows descarga un archivo .exe y en caso de Mac se descarga un archivo comprimido.</span></h5>
+    </div>
+</div>
+<p><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;"></span></p>
+<h5 style=""><span style="font-weight: normal;"><div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Instalación Linux</p><p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57"><br></p>
+    <p dir="ltr" style=""></p>       
+   </div></span>
+</h5>
+<h5 style=""><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;">
+          <p dir="ltr" style=""></p>  
+          <!-- Inicio de la primera caja de c贸digo -->
+<div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+       <span style="float: left;">JavaScript</span>
+    <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+    </span>
+    </div>
+    <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+    </div>
+    <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+        <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1"><p>sudo apt install postman
+</p></pre>
+    </div>
+    <!-- Fin de la primera caja de c贸digo -->
+    </span><br></h5>
+<pre style=""><br></pre>
+
+<p></p>
+
+
+<script>
+    function copyCodeToClipboard(index) {
+        var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+        navigator.clipboard.writeText(codeToCopy).then(function() {
+            var copyIcon = document.getElementById('copyIcon' + index);
+            var copyText = document.getElementById('copyText' + index);
+            copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+            copyText.textContent = 'Copiado';
+            setTimeout(function() {
+                copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                copyText.textContent = 'Copiar c贸digo';
+            }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+        }, function(err) {
+            console.error('Error al copiar el c贸digo: ', err);
+        });
+    }
+</script>
+<!-- nada puede haber abajo -->
+<br></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209344"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Probando requests con Postman</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p><span id="docs-internal-guid-d2816c08-7fff-0fcb-3178-51164db92186"></span></p>
+        <p dir="ltr" style="">Vamos a probar la operación DELETE de la API REST que creamos. Usar Postman es bastante fácil en esta situación. Es suficiente definir la URL y luego seleccionar el tipo de solicitud correcta (DELETE). Seleccionamos la operación a realizar (DELETE),
+            escribimos la URL de nuestro endpoint y hacemos click en el botón SEND.</p>
+        <p></p>
+
+        <p><span id="docs-internal-guid-1f34c700-7fff-807c-b719-1480edb8a978"></span></p>
+        <p dir="ltr" style="">El servidor backend parece responder correctamente. Al realizar una solicitud HTTP GET a <span class="" style="color: rgb(0, 46, 184);"><u>http://localhost:8000/api/notes/2</u></span>, vemos que la eliminación fue exitosa y el código de respuesta
+            es “204 No Content”</p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2801030/mod_book/chapter/209344/9596969.png" alt=" " width="899" height="438" role="presentation" class="img-responsive atto_image_button_text-bottom"><br>
+        <p></p>
+
+        <p><br></p>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209345"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Ejemplo API REST (continuación)</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p><span id="docs-internal-guid-90914618-7fff-88ed-b506-cf4c80410884"><p dir="ltr" style=""></p><span id="docs-internal-guid-4c7c67b9-7fff-4e9b-70c5-543e11a81d6d"><h5 style=""><span style="font-weight: normal;"><div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Recibiendo Información</p>
+   </div>
+      </span></h5>
+        <h5 style=""><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;"><br></span></h5>
+        <h5 style=""><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;">A continuación, hagamos posible agregar nuevas notas al servidor. La adición de una nota ocurre al hacer una solicitud HTTP POST a la dirección </span>
+            <span class="" style="font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif; color: rgb(0, 46, 184);"><u>http://localhost:3001/api/notes</u></span><span style="color: rgb(1, 6, 20); font-size: large; font-family: Roboto, Arial, Helvetica, sans-serif;"> y se envía
+            toda la información de la nueva nota en el body de la solicitud en formato JSON.</span><br></h5>
+        <p dir="ltr" style="">Para acceder a los datos fácilmente, necesitamos la ayuda del json-parser de express, que se usa con el comando app.use(express.json()). Lo agregamos en index.js:</p>
+        <p dir="ltr" style="">
+            <!-- Inicio de la primera caja de c贸digo -->
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1"> app.use(express.json());</pre>
+        </div>
+        <!-- Fin de la primera caja de c贸digo -->
+        <p dir="ltr" style=""></p>
+        <p dir="ltr" style="">Cabe aclarar que json-parser es un middleware, por lo que se comporta como hemos visto en clases anteriores. Toma los datos sin procesar de las solicitudes que están almacenadas en el objeto request, los parsea en un objeto de JavaScript y lo
+            asigna al objeto request como una nueva propiedad de body.</p>
+        <p dir="ltr" style="">Activemos json-parser e implementemos un controlador inicial para manejar las solicitudes HTTP POST:</p>
+        <p dir="ltr" style="">
+            <!-- Inicio de la segunda caja de c贸digo -->
+        </p>
+        <p dir="ltr" style=""></p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(2)">
+        <span id="copyText2">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon2" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer2"> router.post('/', (req, res) =&gt; {<p> const note = req.body;
+ console.log(note);
+
+
+ res.json(note);
+});
+</p></pre>
+        </div>
+        <!-- Fin de la segunda caja de c贸digo -->
+         <p dir="ltr" style=""></p>
+         <p dir="ltr" style="">La función del controlador de eventos puede acceder a los datos de la propiedad body del objeto de request.</p>
+        <p dir="ltr" style="">Sin json-parser, la propiedad body no estaría definida.&nbsp;</p>
+        <p dir="ltr" style=""></p>
+        <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;">El json-parser funciona para que tome los datos JSON de una solicitud, los transforme en un objeto JavaScript y luego los adjunte a la propiedad body del objeto request antes de llamar al controlador de ruta.</p>
+        </div>
+        <p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93"></p>
+        <p dir="ltr" style="">Por el momento, la aplicación no hace nada con los datos recibidos además de imprimirlos a la consola y devolverlos en la respuesta.<br></p>
+        <p dir="ltr" style="">Antes de implementar el resto de la lógica de la aplicación, verifiquemos con Postman que el servidor realmente recibe los datos. Además de definir la URL y el tipo de solicitud en Postman, también tenemos que definir los datos enviados en body:
+        </p>
+        </span><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2801030/mod_book/chapter/209345/02020202.png" alt=" " width="899" height="438" role="presentation" class="img-responsive atto_image_button_text-bottom"><br>
+        <p dir="ltr" style=""><b></b></p>
+        </span>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><span id="docs-internal-guid-1c6f577a-7fff-45ff-ccfa-8ff889944e98"></span></p>
+        <p dir="ltr" style="">Vamos a la pestaña “body” y podemos escribir el contenido de nuestra nota. Recordemos que debe ser enviado en formato JSON. Para mejor visualización, Postman nos permite seleccionar el formato JSON.</p>
+        <p dir="ltr" style="">Hacemos click en SEND. La aplicación imprime los datos que enviamos en la solicitud a la consola:</p>
+        <p dir="ltr" style=""><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2801030/mod_book/chapter/209345/868685.png" alt=" " width="898" height="179" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p dir="ltr" style=""><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2801030/mod_book/chapter/209345/655777.png?time=1721251136014" alt="  " width="899" height="438" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+        <p dir="ltr" style=""><span id="docs-internal-guid-9c819dfd-7fff-8370-dfdb-242151c15b12">Volvamos a la aplicación. Una vez que sabemos que la aplicación recibe los datos correctamente, es el momento de finalizar el manejo de la solicitud, como veremos en la siguiente página.</span><br></p>
+        <p dir="ltr" style=""><span><span id="docs-internal-guid-2963bd5a-7fff-0c7e-6023-3bd8957edb9e"></span></span>
+        </p>
+        <pre style=""><br></pre>
+        <p></p>
+        <script>
+            function copyCodeToClipboard(index) {
+                var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+                navigator.clipboard.writeText(codeToCopy).then(function() {
+                    var copyIcon = document.getElementById('copyIcon' + index);
+                    var copyText = document.getElementById('copyText' + index);
+                    copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+                    copyText.textContent = 'Copiado';
+                    setTimeout(function() {
+                        copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                        copyText.textContent = 'Copiar c贸digo';
+                    }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+                }, function(err) {
+                    console.error('Error al copiar el c贸digo: ', err);
+                });
+            }
+        </script>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch209346"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Continuando el ejemplo API REST</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <br>
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p></p>
+        <p dir="ltr"><span id="docs-internal-guid-9c819dfd-7fff-8370-dfdb-242151c15b12">Retomando con la aplicación, y ya habiendo probado que la aplicación recibe los datos correctamente, es el momento de finalizar el manejo de la solicitud:</span><br></p>
+        <p dir="ltr">
+            <!-- Inicio de la primera caja de c贸digo -->
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(1)">
+        <span id="copyText1">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon1" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer1"><p> router.post('/', (req, res) =&gt; {
+ const maxId = notes.length &gt; 0 ? Math.max(...notes.map((n) =&gt; n.id)) : 0;
+ const note = req.body;
+ note.id = maxId + 1;
+ notes = notes.concat(note);
+ console.log(notes);
+ res.json(note);
+});
+</p></pre>
+        </div>
+        <!-- Fin de la primera caja de c贸digo -->
+        <p dir="ltr"></p>
+        <p dir="ltr">Necesitamos un id única para la nota. Primero, encontramos el número de id más grande en la lista actual y lo asignamos a la variable maxId. La id de la nueva nota se define como maxId + 1. De hecho, este método no se recomienda, pero viviremos
+            con él por ahora, ya que lo reemplazaremos pronto.</p>
+        <p dir="ltr">La versión actual todavía tiene el problema de que la solicitud HTTP POST se puede usar para agregar objetos con propiedades arbitrarias. Mejoremos la aplicación definiendo que la propiedad content no puede estar vacía. Las propiedades important
+            y date recibirán valores predeterminados. Todas las demás propiedades se descartan:</p>
+        <p dir="ltr">
+            <!-- Inicio de la segunda caja de c贸digo -->
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(2)">
+        <span id="copyText2">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon2" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer2"> const generateId = () =&gt; {<p> const maxId = notes.length &gt; 0 ? Math.max(...notes.map((n) =&gt; n.id)) : 0;
+ return maxId + 1;
+};
+</p></pre>
+        </div>
+        <!-- Fin de la segunda caja de c贸digo -->
+        <p dir="ltr"></p>
+        <p dir="ltr">La lógica para generar el nuevo número de id para notas se ha separado en una función generateId. Analicemos un poco más esta expresion:</p>
+        <p dir="ltr">
+            <!-- Tercera caja de c贸digo -->
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(3)">
+        <span id="copyText3">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon3" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer3">Math.max(...notes.map((n) =&gt; n.id))
+<p></p></pre>
+        </div>
+        <!-- Fin de la tercera caja de c贸digo -->
+        <p dir="ltr"></p>
+        <p dir="ltr">¿Qué está sucediendo exactamente en esa línea de código? notes.map(n =&gt; n.id) crea un nuevo array que contiene todos los ids de las notas. Math.max devuelve el valor máximo de los números que se le pasan.&nbsp;</p>
+        <p dir="ltr">Sin embargo, notes.map(n =&gt; n.id) es un array, por lo que no se puede asignar directamente como parámetro a Math.max. El array se puede transformar en números individuales mediante el uso de la sintaxis de spread de los "tres puntos", ....<br></p>
+        <p dir="ltr">
+            <!-- Cuarta caja de c贸digo -->
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(4)">
+        <span id="copyText4">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon4" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer4">router.post('/', (req, res) =&gt; {
+ const body = req.body;
+
+
+ if (!body.content) {
+   return res.status(400).json({
+     error: 'content missing'
+   });
+ }
+ const note = {
+   content: body.content,
+   important: body.important || false,
+   date: new Date(),
+   id: generateId()
+ };
+
+
+ notes = notes.concat(note);
+
+
+ res.json(note);
+});
+<p></p></pre>
+        </div>
+        <!-- Fin de la cuarta caja de c贸digo -->
+        <p dir="ltr"></p>
+        <p dir="ltr">Si a los datos recibidos les falta un valor para la propiedad content, el servidor responderá a la solicitud con el código de estado 400 bad request.</p>
+        <p dir="ltr"></p><div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+    <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;">Debemos tener en cuenta que llamar a return es crucial, porque de lo contrario el código se ejecutará hasta el final y la nota con formato incorrecto se guardará en la aplicación.</p></div><p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93"></p>
+        <p dir="ltr">Si la propiedad content tiene un valor, la nota se basará en los datos recibidos. Como se mencionó anteriormente, es mejor generar marcas de tiempo en el servidor que en el navegador, ya que no podemos confiar en que la máquina host que ejecuta
+            el navegador tenga su reloj configurado correctamente. La generación de la propiedad date ahora la realiza el servidor.<br></p>
+        <p dir="ltr">Si falta la propiedad important, el valor predeterminado será false. El valor predeterminado se genera actualmente de una manera bastante extraña:</p>
+        <p dir="ltr">
+            <!-- Quinta caja de c贸digo -->
+        </p>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 5px 5px 0 0;">
+            <span style="float: left;">JavaScript</span>
+            <span style="float: right; cursor: pointer;" onclick="copyCodeToClipboard(5)">
+        <span id="copyText5">Copiar código</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" id="copyIcon5" style="vertical-align: middle;">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+        </svg>
+            </span>
+        </div>
+        <div style="background-color: #444; color: #fff; padding: 10px; border-radius: 0;">
+        </div>
+        <div style="background-color: #000; color: #fff; padding: 10px; border-radius: 0 0 5px 5px;">
+            <pre style="background-color: #000; color: #fff; padding: 10px; border-radius: 5px; font-size: large; margin-top: 0;" id="codeContainer5">important: body.important || false,
+<p></p></pre>
+        </div>
+        <!-- Fin de la Quinta caja de c贸digo -->
+        <p dir="ltr"></p>
+        <p dir="ltr">Si los datos guardados en la variable body tienen la propiedad important, la expresión evaluará su valor. Si la propiedad no existe, la expresión se evaluará como falsa, que se define en el lado derecho de las líneas verticales. Para ser exactos,
+            cuando la propiedad important es false, entonces la expresión body.important || false devolverá el false del lado derecho.</p>
+        <p></p><br>
+        <p>.</p>
+
+        <script>
+            function copyCodeToClipboard(index) {
+                var codeToCopy = document.getElementById("codeContainer" + index).innerText;
+                navigator.clipboard.writeText(codeToCopy).then(function() {
+                    var copyIcon = document.getElementById('copyIcon' + index);
+                    var copyText = document.getElementById('copyText' + index);
+                    copyIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>`;
+                    copyText.textContent = 'Copiado';
+                    setTimeout(function() {
+                        copyIcon.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>`;
+                        copyText.textContent = 'Copiar c贸digo';
+                    }, 2000); // Cambiar de nuevo a "Copiar c贸digo" despu茅s de 2 segundos
+                }, function(err) {
+                    console.error('Error al copiar el c贸digo: ', err);
+                });
+            }
+        </script>
+
+        <!-- nada puede haber abajo -->
+        <br>
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[712824,712825,712839,712840,712841,712842,712843,712844,712845,712858,712859,712860,712862,712865,712866,712869,712870,712873,712874,712877,712878,712881,712882,712885,712886,712889]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1757558299/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2801030, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1758471594); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\nconfig: [\"Accessible.js\", \"Safe.js\"],\r\nerrorSettings: { message: [\"!\"] },\r\nskipStartupTypeset: true,\r\nmessageStyle: \"none\"\r\n});","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random68d027036e63c2'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random68d027036e63c2'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

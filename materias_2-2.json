@@ -172,6 +172,18 @@
       {
         "texto": "06 - Introducción a Express",
         "url": "./pages/Back/back_06.html"
+      },
+      {
+        "texto": "📁 Código Clase 6",
+        "url": "https://drive.google.com/drive/folders/1sfTx7Z-cDj7XmnfOETbJaGHBsHoSVLOw?usp=sharing"
+      },
+      {
+        "texto": "📁 Plantillas Pug",
+        "url": "https://docs.google.com/presentation/d/1DHOkI6VtNaqMv9Gl6F2BrGr3fHoy5ewrM5oI_yeFb-w/edit?slide=id.p#slide=id.p"
+      },
+      {
+        "texto": "07 - API REST básica con Node y Express",
+        "url": "./pages/Back/back_07.html"
       }
     ]
   }
