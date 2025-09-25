@@ -70,6 +70,10 @@
       {
         "texto": "06 - Configuración y administración",
         "url": "./pages/Ingenieria/ingenieria_06.html"
+      },
+            {
+        "texto": "07 - Requerimientos del sistema",
+        "url": "./pages/Ingenieria/ingenieria_07.html"
       }
     ]
   },

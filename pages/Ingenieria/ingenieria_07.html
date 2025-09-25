@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>7. Requerimientos del sistema | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1758311342/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, 7. Requerimientos del sistema | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1758311342_1757558579/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"xDKC5x7YFM","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1758311342","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1757558299","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":22800,"courseContextId":2812100,"contextid":2812170,"contextInstanceId":723444,"langrev":1758698824,"templaterev":"1757558299"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1757558299\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1757558299\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1757558299\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1757558299\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1757558299\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?config=TeX-AMS_SVG%22&delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-22800 context-2812170 cmid-723444 cm-type-book category-3279 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1758311342/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>7. Requerimientos del sistema</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Ingeniería de Software - 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        7. Requerimientos del sistema
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        jueves, 25 de septiembre de 2025, 19:28
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flex_titulo_botonera">
+    <p class="titulo_principal"></p>
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=22800&amp;section=13" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                            </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723443" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+                            </svg>
+                        </div>
+                        <p>Apertura</p></section></a><section class="boton_texto_centrado"><a href="https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=723444" class="link">
+                        <div class="circulo_desarrollo_activa">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+                                <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+                            </svg>
+                        </div>
+                        </a><p>Desarrollo</p></section>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/quiz/view.php?id=723445" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+                                <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+                            </svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723446" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+                                <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+                            </svg>
+                        </div>
+                        <p>Cierre</p>
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script>
+<p><br></p>
+<p><br></p></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción a los requerimientos" class="font-weight-bold text-decoration-none" href="#ch222946">1. Introducción a los requerimientos</a></li><li><a title="2. Importancia de los requerimientos" class="font-weight-bold text-decoration-none" href="#ch222947">2. Importancia de los requerimientos</a></li><li><a title="3. ¿Cómo encontrar buenos requerimientos?" class="font-weight-bold text-decoration-none" href="#ch222948">3. ¿Cómo encontrar buenos requerimientos?</a></li><li><a title="4. ¿De dónde provienen los requerimientos?" class="font-weight-bold text-decoration-none" href="#ch222949">4. ¿De dónde provienen los requerimientos?</a></li><li><a title="5. Requerimientos de negocio" class="font-weight-bold text-decoration-none" href="#ch222950">5. Requerimientos de negocio</a><ul><li><a title="5.1. ¿Cuál es su importancia?" class="text-decoration-none" href="#ch222951">5.1. ¿Cuál es su importancia?</a></li></ul></li><li><a title="6. Requerimientos de usuarios" class="font-weight-bold text-decoration-none" href="#ch222952">6. Requerimientos de usuarios</a></li><li><a title="7. Requerimientos funcionales" class="font-weight-bold text-decoration-none" href="#ch222953">7. Requerimientos funcionales</a><ul><li><a title="7.1. Requerimientos funcionales con requisitos agregados" class="text-decoration-none" href="#ch222954">7.1. Requerimientos funcionales con requisitos agregados</a></li></ul></li><li><a title="8. Requerimientos no funcionales" class="font-weight-bold text-decoration-none" href="#ch222955">8. Requerimientos no funcionales</a><ul><li><a title="8.1. Restricción técnica" class="text-decoration-none" href="#ch222956">8.1. Restricción técnica</a></li><li><a title="8.2. ¿Cuál es su importancia?" class="text-decoration-none" href="#ch222957">8.2. ¿Cuál es su importancia?</a></li></ul></li><li><a title="9. Sigla FURPS +" class="font-weight-bold text-decoration-none" href="#ch222958">9. Sigla FURPS +</a></li><li><a title="10. ISO/IEC 25010" class="font-weight-bold text-decoration-none" href="#ch222959">10. ISO/IEC 25010</a></li><li><a title="11. Problemas asociados a requerimientos" class="font-weight-bold text-decoration-none" href="#ch222960">11. Problemas asociados a requerimientos</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222946"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Introducción a los requerimientos</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;"><br>
+        <p dir="ltr" style="">Los <span class="" style="color: rgb(0, 46, 184);">requerimientos </span>cumplen un papel primordial en el desarrollo de software, ya que representan algo fundamental: la definición de lo que se desea construir.&nbsp;</p>
+        <p dir="ltr" style="">Una de las principales tareas en el desarrollo de software es la <span class="" style="color: rgb(0, 46, 184);">creación de especificaciones de requerimientos “correctas”</span> que describan con claridad, sin ambigüedades, en forma consistente
+            y compacta, lo que el producto debe hacer y cómo debe hacerlo. De esta manera se pretende minimizar los problemas relacionados con el desarrollo de software.</p>
+       <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">En el Proceso Unificado de Rational se los define como&nbsp;</span>&nbsp;“una condición o capacidad que debe cumplir el sistema que se desarrollará y que provienen directamente de los usuarios finales, están establecidos en un contrato, estándar, especificación, o cualquier otro documento formal provisto"</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">El IEEE (Instituto de Ingenieros eléctricos y electrónicos) los define de manera muy similar:&nbsp;</span>una condición o necesidad de un usuario para resolver un problema o alcanzar un objetivo. Una condición o capacidad que debe estar presente en un sistema o componentes de sistema para satisfacer un contrato, estándar, especificación u otro documento formal. Una representación documentada de una condición o capacidad.</p>
+                    </div>
+                </div>
+        <p dir="ltr" style="">Los requerimientos <span class="" style="color: rgb(0, 46, 184);">no consisten sólo de funciones</span>, este concepto erróneo proviene en parte por las técnicas que centran el foco de atención en los requerimientos funcionales.<br></p>
+        <br>
+        <p></p>
+
+
+        <!-- nada puede haber abajo -->
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222947"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Importancia de los requerimientos</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p><br>La importancia de los requerimientos se basa en la <span class="" style="color: rgb(0, 46, 184);">definición, selección e implementación del conjunto correcto de requerimientos</span> depende el éxito de un proyecto de desarrollo de software.&nbsp;</p>
+        <p>Ningún otro tipo de error tiene consecuencias mayores que el error en la definición y especificación de los requerimientos que el producto debe satisfacer.</p><span id="docs-internal-guid-47011b68-7fff-83b5-30db-54419c5e2316"><p dir="ltr" style="font-weight: bold;">Los requerimientos son importantes porque permiten:</p>
+       <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">&nbsp;</span>Llegar a un acuerdo con el cliente y los usuarios sobre lo que el sistema debe hacer.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Ayudar a los programadores y demás integrantes del equipo de desarrollo a comprender lo que el sistema debe hacer.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Delimitar el producto de software a construir.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Servir de base para la planificación de las iteraciones de un proyecto. </p>
+                    </div>
+                </div>
+       <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Definir la interfaz de usuario del sistema. </p>
+                    </div>
+                </div></span><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222948"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">¿Cómo encontrar buenos requerimientos?</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+       
+
+            <p>Un <span class="" style="color: rgb(0, 46, 184);">buen requerimiento expresa</span> algo que es necesario, verificable y accesible. Sin embargo, si es verificable, accesible y está bien escrito, aunque no sea necesario, es un buen requerimiento. Además, debe estar claramente
+                expresado.
+            </p><span id="docs-internal-guid-1a2159f5-7fff-bcc8-db24-9d55312b4ba7"><p dir="ltr" style="">A continuación, se detalla qué debe tenerse en cuenta para cumplir con cada uno de estos lineamientos, a la hora de escribir requerimientos:&nbsp;</p>
+       <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Necesario:&nbsp;</span>Si se tiene duda acerca de la necesidad de un requerimiento, hágase la siguiente pregunta: ¿Qué es lo peor que podría pasar si este requerimiento no es incluido? Si no encuentra una respuesta o alguna consecuencia, es probable que el requerimiento no sea necesario.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Verificable:</span> Al escribir un requerimiento debe determinarse también como se puede demostrar que el mismo está implementado en los términos que se necesitaba. Un requerimiento es verificable cuando puede ser probado. Para esto deben evitarse sentencias subjetivas o que contengan palabras subjetivas, por ejemplo: “Que sea lindo, flexible y fácil de usar”.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Accesible:</span> Para ser accesible, el requerimiento debe ser técnicamente factible y ajustarse al presupuesto, a los tiempos estipulados y a otras restricciones. En caso de existir duda acerca de si un requerimiento es o no factible, deberá realizarse el análisis correspondiente, a fin de determinarlo. En síntesis, ¿se puede implementar el requerimiento?</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600">Claro:</span> Cada requerimiento debe expresar una sola idea, ser conciso y simple. El requerimiento debe ser de fácil comprensión y se deben evitar ambigüedades.<br><ul></ul><p dir="ltr"></p></p></div></div></span><br>
+            <p></p>
+
+
+
+            <!-- nada puede haber abajo -->
+
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222949"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">¿De dónde provienen los requerimientos?</p>
+</article>
+<div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <div style="color: rgb(1, 6, 20); margin-left: 3%; margin-right: 3%;">
+        <br>
+
+
+
+
+        <p>En el ámbito del desarrollo de software, se denomina<span class="" style="color: rgb(0, 46, 184);"> dominio del problema</span> a la parte del mundo que tiene las necesidades que darán origen al software, que luego se insertará y producirá efectos.&nbsp;</p>
+        <p>Por otro lado, se denomina <span class="" style="color: rgb(0, 46, 184);">dominio de la solución</span> al espacio donde se construye el software que satisfará las necesidades identificadas en el dominio del problema.</p><span id="docs-internal-guid-9dfea1f6-7fff-6989-262f-9b95daacd87c"><p dir="ltr" style="">El espacio de intersección entre ambos dominios es la especificación de los requerimientos, de allí la importancia de que exista un conjunto de requerimientos acordado y que el mismo sea correcto.</p><p dir="ltr" style="text-align: center; font-weight: bold;"><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812170/mod_book/chapter/222949/14.png" alt=" " width="532" height="245" class="img-responsive atto_image_button_text-bottom"></span></p>
+        </span><span id="docs-internal-guid-c2eb3863-7fff-3c42-deb2-cd3340a7d477"><span style="font-size: large; color: rgb(0, 46, 184);" class=""><b>Tipos de requerimientos</b></span></span></div><div style="margin-left: 3%; margin-right: 3%;"><b><br></b><span style="color: rgb(1, 6, 20);">
+        <p style="text-align: center;"><span style="font-size: large;" class=""><b><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812170/mod_book/chapter/222949/imagen%208.PNG" alt="" width="557" height="515" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></b></span></p></span><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222950"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Requerimientos de negocio</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p><br></p>
+        <p>Son <span class="" style="color: rgb(0, 46, 184);">declaraciones </span>de más alto nivel de objetivos, metas o necesidades de la organización.&nbsp;</p>
+        <p>Ellos describen las razones por las cuales se inició un proyecto, los objetivos que debe alcanzar y las métricas que se utilizarán para medir su éxito. Los requisitos de negocio describen las necesidades de la organización en su conjunto y no
+            de grupos de interesados.</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Necesidades de negocio</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Son problemas por resolver -por ejemplo, un competidor ofrecerá al mercado un nuevo producto con el potencial de reducir la base de clientes de la empresa-. También pueden ser oportunidades para aprovechar, como la esperanza de lograr
+                    algún beneficio, por ejemplo, o entrar en nuevos mercados hasta ahora no explorados.&nbsp;</p>
+            </div>
+        </div><span id="docs-internal-guid-f538efa0-7fff-45c4-0eed-b28d994c61a8">
+            <p dir="ltr" style="">El objetivo de resolver problemas o aprovechar las oportunidades es mantener las condiciones actuales o cambiarlas a un nuevo escenario en el que se desea operar.&nbsp;</p><p dir="ltr" style=""><br></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+        </span>
+        </p>
+        <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+            <div class="col" style="">
+                <p style="">Un ejemplo relacionado con el mantenimiento de las condiciones actuales es el esfuerzo con los ajustes necesarios para seguir operando en un entorno determinado (“mantener el liderazgo de mercado"), y un ejemplo asociado con el cambio
+                    de las condiciones actuales es la iniciativa de ofrecer un nuevo servicio.&nbsp;<br></p>
+                <ul style="color: rgb(1, 6, 20);">
+                </ul>
+                <p style="color: rgb(1, 6, 20);"></p>
+            </div>
+        </div>
+    </div>
+    <!--Fin Caja + Ejemplo + imagen + texto-->
+    <br>
+    <p dir="ltr" style="">Las necesidades de negocios representan los objetivos que un área desea alcanzar. Son las métricas para evaluar el grado de éxito del proyecto a su término. 
+      <!--Caja + Ejemplo + sin imagen + texto-->
+        </p><p dir="ltr" style=""><br></p><div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Reducir en un 50% el costo actual del proceso de recaudación de las facturas de electricidad de la compañía eléctrica.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br><br><p></p>
+    </span><br>
+</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222951"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">¿Cuál es su importancia?</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <br>
+
+
+
+
+        <p>Hacer que el proyecto cumpla con los requisitos de negocio significa satisfacer al cliente. Por lo tanto, su definición clara es también la definición de los criterios de éxito del proyecto.&nbsp;</p>
+        <p>Con el conocimiento de las necesidades del negocio, hay más libertad de imaginar posibles soluciones.&nbsp;</p>
+        <p>Es común que la solicitud del área de negocios llegue en un formato como:&nbsp;</p>
+       <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Cambiar lo que se hace actualmente en una planilla Excel a un sistema de información.&nbsp;</p>
+                    </div>
+                </div>
+
+        <p>Sin conocer la motivación detrás de ese trabajo, podemos ofrecer lo que se le solicitó. Sin embargo, no tiene el mismo efecto que entregar lo que se necesita.&nbsp;<br></p>
+        <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><span class="sub_negrita" style="font-weight: normal;">Conocer claramente las necesidades de negocio brinda referencias importantes sobre el valor de negocio de las solicitudes recibidas y permite establecer más fácilmente las prioridades. Proyectos más grandes pueden implicar el esfuerzo de trabajo de muchas personas durante meses o años.&nbsp;</span></p>
+        </div>
+        <p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93">
+        </p>
+        <p>Fácilmente estos escenarios son propensos a desviar los objetivos establecidos. Al interactuar con los usuarios, se van a presentar diversas necesidades. Sin embargo, se debe buscar siempre establecer un vínculo entre estas necesidades y los requisitos
+            del negocio. </p>
+        <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;"><span class="sub_negrita" style="font-weight: normal;">Si no existe tal enlace, significa que la necesidad está fuera del alcance y no debe ser satisfecha, porque todos los requisitos de la solución deben estar relacionados con al menos uno de los requisitos de negocio del proyecto.</span></p>
+        </div><br>
+        <p></p>
+        <span id="docs-internal-guid-0ec94318-7fff-81fc-163c-589b9bfecd5d">
+            <p dir="ltr" style="">Revisar las necesidades del negocio y los objetivos asociados en marcos de validación intermedia, permite evaluar si el camino recorrido hasta el momento no se desvió del objetivo y si este presenta la mejor solución.</p>
+            </span><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222952"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Requerimientos de usuarios</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <br>
+
+
+
+
+        <p>El <span class="" style="color: rgb(0, 46, 184);">papel de los usuarios</span> es proporcionar información y <i>feedback </i>en la comprensión de estos. A la presente información se le da el nombre de requisitos de los usuarios.&nbsp;
+        </p>
+        <p>El <span class="" style="color: rgb(0, 46, 184);">objetivo </span>de este tema es entender que son estos requisitos y sus características especiales. Hay un comentario de Miles Davis que describe la importancia de comprender y saber cómo hacer
+            frente a los requisitos de los usuarios "Si usted entiende todo lo que dije, debes ser yo." A pesar de que son requisitos intermedios, a partir de ellos surgen oportunidades para identificar los conflictos que serán resueltos y las oportunidades
+            para consolidar requisitos similares.&nbsp;</p>
+        <p>Los requisitos de los usuarios son los resultados intermedios de la evolución de las necesidades de negocio hacia la especificación de la solución.<br></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Se obtienen a partir de los usuarios.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Describen sus necesidades de información para el desempeño de sus funciones.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Representan las opiniones de los usuarios sobre su interacción con la solución.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Son producto de las actividades de levantamiento de requisitos. </p>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Son insumos de las actividades de análisis de requisitos. </p>
+            </div>
+        </div><br>
+        <ul>
+        </ul><span id="docs-internal-guid-0226eb75-7fff-b988-5132-963bf21a3a24"><p dir="ltr" style="">Como resultado de las actividades de recopilación de información con los interesados y de la volatilidad de la memoria humana se deben crear registros que documenten la información recopilada y las decisiones tomadas de muchas maneras diferentes.&nbsp;</p><p dir="ltr" style=""><span><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">Estos registros pueden incluir:&nbsp;</b></span></span>
+        </p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><b>Grabaciones</b></p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><b>Notas</b></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><b>Actas o minutas</b></p>
+            </div>
+        </div><br>
+        <ul>
+        </ul>
+        <p dir="ltr" style=""><span><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">Durante la conducción del levantamiento, puede ser adecuado registrar:</b></span></span>
+        </p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p>Sólo los puntos clave en las notas.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>La grabación de audio y / o video de todo el evento.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>La preparación de una minuta.</p>
+            </div>
+        </div><br>
+        <p dir="ltr" style="">El término <span class="" style="color: rgb(0, 46, 184);">minuta </span>se utiliza con un significado distinto al asociado con la actividad de registrar una reunión detallando todas las acciones y eventos que tuvieron lugar en ese evento de la
+            reunión. Se acerca a un documento de entendimiento o memoria de levantamiento, preparado después del evento.</p>
+        <p dir="ltr" style="font-weight: bold;"><b id="docs-internal-guid-0578713f-7fff-a1e0-672c-8ec5223f029c"></b></p>
+        <p dir="ltr"><b id="docs-internal-guid-0578713f-7fff-a1e0-672c-8ec5223f029c"><span class="" style="color: rgb(239, 69, 64);"></span></b></p>
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812170/mod_book/chapter/222952/1.png" alt=" " width="532" height="462" class="img-responsive atto_image_button_text-bottom"></p>
+        </span><br><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222953"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Requerimientos funcionales</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p><br></p><span id="docs-internal-guid-40f2ba2a-7fff-ad61-1777-4d0ce07931a4"><p dir="ltr" style="">Los <span class="" style="color: rgb(0, 46, 184);">requerimientos funcionales </span>describen el comportamiento que el software debe tener en términos
+        de tareas y servicios de los usuarios.&nbsp;</p>
+        <p dir="ltr" style="">Se debe destacar que los requisitos funcionales no describen el diseño de la arquitectura de la solución, pero están profundamente afectados por ella. No se debe suponer que el trabajo de la arquitectura comienza sólo después del trabajo de requisitos.&nbsp;
+        <br><br></p>
+        <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><b class="sub_negrita">El equipo define la cantidad de páginas, contenido y elementos de diseño en el mapa del sitio para clarificar la oferta del sitio y la experiencia del usuario</b></p>
+        </div>
+        <p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93">
+        </p>
+        <p dir="ltr" style=""><br></p><p dir="ltr" style="">Las decisiones de arquitectura de alto riesgo deben ser tomadas tan pronto como sea posible, y determinados requisitos funcionales en un escenario de arquitectura se convierten en requisitos no funcionales en otro.
+            <!--Caja + Ejemplo + sin imagen + texto-->
+        </p>
+        <p dir="ltr" style=""><br></p>
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Control de acceso de usuarios corporativos.&nbsp;<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+        <p dir="ltr" style="">Dependiendo de las decisiones de arquitectura tomadas al principio del ciclo de vida, el control de acceso puede ser parte de la especificación funcional o parte de una infraestructura común que aborda requisitos no funcionales de seguridad.&nbsp;</p>
+        <p dir="ltr" style="">El <span class="" style="color: rgb(0, 46, 184);">comportamiento esperado</span> por el software y descrito en un requisito funcional, se refiere al intercambio de información entre el usuario, el software y los medios de almacenamiento hasta
+            que un objetivo específico sea alcanzado.&nbsp;</p>
+        <p dir="ltr" style="">Este <span class="" style="color: rgb(0, 46, 184);">objetivo específico</span> -la meta de un usuario- es completar la tarea bajo su responsabilidad, por lo que sus resultados pueden ser utilizados como insumos en otras tareas para los usuarios
+            con otras responsabilidades o en otro momento -sea por un usuario que tenga las mismas responsabilidades o no-.&nbsp;</p>
+        <p dir="ltr" style="">Los requisitos funcionales pueden estar presentes como parte de varios artefactos.
+            <!--Caja + Ejemplo + sin imagen + texto-->
+        </p>
+        <p dir="ltr" style=""><br></p>
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Documento de visión, historias de usuario, especificaciones de casos de uso y modelos de procesos.&nbsp;<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>Para fines de simplificación, se denominará especificación funcional a un documento que contenga requisitos funcionales, mismo que estén en proceso de desarrollo y no en su etapa final.&nbsp;
+        <p></p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Cuál es su importancia</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> <p dir="ltr"><br>La importancia de saber identificar un requisito funcional en este nivel es poder delimitar el alcance del software de manera inequívoca.&nbsp;</p><p dir="ltr">El requisito funcional especificado en este nivel puede verificarse de forma objetiva para el cumplimiento de las políticas de calidad y definiciones de dominio del problema.</p><p dir="ltr">Es el nivel en el que un caso de uso se debe identificar y elaborar antes de ser empaquetado y enviado para su diseño e implementación. Del mismo modo para una historia de usuario.</p></p></div></div>
+        </span><br>
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222954"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Requerimientos funcionales con requisitos agregados</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+
+
+
+        <p>Son <span class="" style="color: rgb(0, 46, 184);">requisitos que incorporan varios objetivos de usuarios</span> individuales en una única especificación de alto nivel.&nbsp;</p>
+        <p>Cuanto más alto sea el nivel, más generales son sus objetivos -y para que un objetivo de mayor nivel sea alcanzado, otros de menor nivel deben ser alcanzados antes-. Se refiere, por tanto, a objetivos más generales y se encuentran en un nivel
+            de cobertura asociadas a los objetivos de colaboración, a los procesos de negocio de alto nivel. No se refieren a una sola tarea o servicio.&nbsp;</p><span id="docs-internal-guid-89822620-7fff-9d7f-35cc-4b5142fe294f"><p dir="ltr" style="">Para simplificar, se considera el nombre "<span class="" style="color: rgb(0, 46, 184);">Requisitos agregados</span>"
+        para denominar los elementos en la especificación de requisitos funcionales asociados con un objetivo agregado.&nbsp;</p>
+        <p dir="ltr" style=""><br></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo de requisitos agregados</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style=""><b><strong>Seguí los siguientes pasos para llegar al objetivo:</strong></b></p>
+                    <ul>
+                        <li><span id="docs-internal-guid-89822620-7fff-9d7f-35cc-4b5142fe294f">Controlar flujo de caja.</span></li>
+                        <li><span id="docs-internal-guid-89822620-7fff-9d7f-35cc-4b5142fe294f">Gestionar relaciones con los clientes.</span></li>
+                        <li><span id="docs-internal-guid-89822620-7fff-9d7f-35cc-4b5142fe294f">Administrar cursos.&nbsp;&nbsp;</span></li>
+                    </ul>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+        <br>
+        <p dir="ltr" style=""><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Requisitos de negocio por requisitos agregados&nbsp;</span></b></p>
+        <p dir="ltr" style="">Un cuidado al que se debe prestar atención es <span class="" style="color: rgb(0, 46, 184);">diferenciar un requisito agregado de una necesidad de negocio</span>.&nbsp;</p>
+        <p dir="ltr" style="">La necesidad de negocio está en el dominio del problema con todo un universo de soluciones potenciales, por otro lado, el requisito agregado pretende describir la solución elegida.&nbsp;</p>
+        <p dir="ltr" style="">Diferenciarlos es importante debido a que sus usos son diferentes. De no hacerlo, significaría confundir la solución con el problema. Entregar un software al cliente es la parte más fácil del trabajo. Entregar un software que lo satisfaga es la
+            cuestión clave. Y para ello es necesario tener una visión clara del problema.</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Cuál es su importancia?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> En el caso de las reglas de negocio, es común que sean compartidas entre los diferentes requisitos funcionales, inclusive asignados a diferentes productos de software.&nbsp;</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Especificarlas de forma independiente de los requisitos funcionales en que se aplican contribuye a una mejor gestión de requisitos (facilidad de modificación de la especificación y especialmente reutilización).&nbsp;</p>
+            </div>
+        </div>
+        En el caso de una secuencia de pasos, su especificación por separado se justifica solamente cuando hay un comportamiento compartido por varios otros requisitos funcionales. Esto hace que los documentos de requisitos sean más fácilmente adaptables a los
+        cambios, ya que reduce la redundancia de la información.&nbsp;<br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p dir="ltr" style=""><br></p>
+        </span>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222955"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Requerimientos no funcionales</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+
+
+
+        <p>Este tema aborda a los requisitos no funcionales que describen las limitaciones de orden general a los requisitos funcionales, y con esto complementan la especificación del software.&nbsp;</p>
+        <p>El software no solo debe funcionar, sino, debe funcionar bien. Describiendo lo que significa ese "funcionar bien", los <span class="" style="color: rgb(0, 46, 184);">requisitos no funcionales</span> terminan por establecer niveles de servicio
+            esperados para el funcionamiento del software.&nbsp;</p>
+        <p>Mientras que los requisitos funcionales se refieren específicamente a las tareas de usuario, los requisitos no funcionales indican las restricciones de orden general que abordan aspectos relativos a:</p>
+        <span id="docs-internal-guid-01261091-7fff-6c9f-bc8e-77ec7c2313a2">
+           <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span style="font-weight: 600; color: rgb(51, 51, 51);" class="">Medio ambiente:</span><span class="" style="color: rgb(51, 51, 51);"> Como la interoperabilidad, la seguridad, la privacidad, el secreto.</span></p>
+    </div>
+</div>
+
+
+
+<!-- 2 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p><span style="font-weight: 600; color: rgb(51, 51, 51);" class="">Organización:&nbsp;</span><span class="" style="color: rgb(51, 51, 51);">Por ejemplo, los lugares para el funcionamiento, hardware de destino, la adhesión a las normas.</span><br></p>
+    </div>
+</div>
+
+<!-- 3 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p><span style="font-weight: 600; color: rgb(51, 51, 51);" class="">Implementación:</span><span class="" style="color: rgb(51, 51, 51);"> Como plataformas de software, hardware, lenguaje de programación.</span></p>
+    </div>
+</div>
+
+
+<!-- 4 -->
+<div class="row" style="margin-left: 32px">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+    </div>
+    <div class="col">
+        <p><span style="font-weight: 600; color: rgb(51, 51, 51);" class="">Calidad:</span><span class="" style="color: rgb(51, 51, 51);"> Por ejemplo, la facilidad de uso, la fiabilidad, el desempeño, la portabilidad y la facilidad de mantenimiento.</span> </p>
+    </div>
+</div>
+<p dir="ltr" style="">Esta relación es sólo ilustrativa de algunos tipos de requisitos no funcionales y no pretende ser una lista completa.&nbsp;</p>
+<p dir="ltr" style="">Un aspecto que facilita la <span class="" style="color: rgb(0, 46, 184);">identificación de los requisitos no funcionales </span>es que estos tienden a ser constantes entre los proyectos o cambian muy poco de un proyecto a otro en una misma organización. Así que incluso en etapas muy tempranas, se puede
+    obtener una buena visibilidad en los aspectos no funcionales necesarios para el software.</p>
+<p dir="ltr" style="">Aunque no es una regla, una característica que suele diferenciar los requisitos funcionales de no funcionales, es que los no funcionales generalmente se manifiestan sobre el software, y los funcionales de forma específica.&nbsp;</p><p dir="ltr" style=""><br></p>
+          <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">La facilidad de uso del software es un tipo de requisito no funcional, y una definición de este tema por lo general se aplicará a todo el software. Los requisitos funcionales abordan tareas concretas que el software lleva a cabo, por lo general no se extienden por todo el producto.&nbsp;<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+<p dir="ltr" style="">Otra razón útil para esta distinción es que el requisito no funcional es a menudo atribuido a la parte de arquitectura del software que soportará a las funcionalidades.</p>
+</span><br>
+</div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222956"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Restricción técnica</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p><br></p><span id="docs-internal-guid-19618c1f-7fff-9199-0c62-0a47364f462f"><p dir="ltr" style="">El <span class="" style="color: rgb(0, 46, 184);">requisito no funcional </span>es el resultado de una elaboración (opciones) para una solución particular
+        entre varias posibles. Las restricciones técnicas son limitaciones impuestas externamente a las posibles soluciones. No es algo que se acostumbra a cambiar durante el proyecto, no se negocia.&nbsp;</p>
+        <p dir="ltr" style="">El requisito no funcional puede cambiarse, las restricciones técnicas, no. La restricción técnica induce un requisito no funcional más específico.&nbsp;</p>
+        <p dir="ltr" style="">La restricción está en el dominio del problema y el requisito no funcional en el dominio de la solución. Para aclarar las diferencias entre ambos:&nbsp;</p>
+      <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Escenario 1:&nbsp;</span>La restricción indica que la interfaz del software con el usuario debe implementarse en la web. Una opción de interfaz al estilo de una aplicación de Windows queda descartada, pero hay otras opciones posibles. El requisito no funcional indica que debemos definir qué navegador soportará la aplicación. Si se selecciona Microsoft Edge, las otras opciones como Chrome o Firefox serían válidas, pero quedan descartadas.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Escenario 2:</span> La restricción requiere que el navegador admitido sea Chrome. Todas las otras opciones de navegadores quedan descartadas en la selección de la solución. La posibilidad de elección para el requisito no funcional es más restringida en este caso y podría implicar qué versión del navegador será soportada.&nbsp;&nbsp;</p>
+                    </div>
+                </div>
+        <p dir="ltr" style="">Se puede apreciar en estos escenarios, que las restricciones técnicas no dejan de ser también un subconjunto de los requisitos no funcionales.<br><br></p>
+        </span>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222957"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">¿Cuál es su importancia?</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <br>
+
+
+
+
+        <p><span>Varias decisiones de diseño también son resultados de los niveles de servicio definidos en los requisitos no funcionales, y muchos proyectos fracasan por no tener en cuenta a los requisitos no funcionales.&nbsp;</span></p>
+        <p><span>A continuación te proponemos leer el siguiente caso:</span></p>
+        <p></p>
+        <p><strong><span class="sub_negrita" style="color: rgb(0, 46, 184);">Descripción del requisito funcional:</span></strong> Imaginemos una transacción de retiro de dinero en un autoservicio, con todos sus pasos y reglas de negocio asociadas implementados.</p>
+        <p><strong><span class="sub_negrita" style="color: rgb(0, 46, 184);">Escenario:</span></strong></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Escenario inicial:&nbsp;</span>Un cliente de banco necesita retirar dinero.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Objetivo:</span> El cliente desea tener su saldo actualizado y obtener el dinero solicitado.</p>
+            </div>
+        </div>
+        <ul>
+        </ul>
+        <p><strong><span class="sub_negrita" style="color: rgb(0, 46, 184);">Pasos del proceso:</span></strong></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p>El cliente se dirige a una máquina de autoservicio para realizar la transacción.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Al intentar retirar dinero, el cliente descubre que la máquina no tiene una pantalla táctil y cuenta con pocos botones.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Debido a esta limitación, el cliente decide cambiar de máquina.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Se traslada a otra máquina que sí tiene pantalla táctil. </p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Durante el primer intento de transacción en la nueva máquina, el cliente comete un error que viola una regla de negocio. </p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>La máquina muestra un mensaje de error: “ORA-1403”. </p>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.37 5.11h3.972v.07L6.025 12H7.42l3.258-6.85V4.002H5.369v1.107Z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p>El cliente intuye que el error se debe a que ingresó incorrectamente el número de cuenta. </p>
+            </div>
+        </div>
+
+
+        <!-- 8 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-5.03 1.803c0-1.248-.943-1.84-1.646-1.992v-.065c.598-.187 1.336-.72 1.336-1.781 0-1.225-1.084-2.121-2.654-2.121-1.57 0-2.66.896-2.66 2.12 0 1.044.709 1.589 1.33 1.782v.065c-.697.152-1.647.732-1.647 2.003 0 1.39 1.19 2.344 2.953 2.344 1.77 0 2.989-.96 2.989-2.355Zm-4.347-3.71c0 .739.586 1.255 1.383 1.255s1.377-.516 1.377-1.254c0-.733-.58-1.23-1.377-1.23s-1.383.497-1.383 1.23Zm-.281 3.645c0 .838.72 1.412 1.664 1.412.943 0 1.658-.574 1.658-1.412 0-.843-.715-1.424-1.658-1.424-.944 0-1.664.58-1.664 1.424Z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p>Corrige el error e inicia una nueva transacción. </p>
+            </div>
+        </div>
+
+
+
+        <!-- 9 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.223 4.146c2.104 0 3.123-1.464 3.123-4.3 0-3.147-1.459-4.014-2.97-4.014-1.63 0-2.871 1.02-2.871 2.73 0 1.706 1.171 2.667 2.566 2.667 1.06 0 1.7-.557 1.934-1.184h.076c.047 1.67-.475 3.023-1.834 3.023-.71 0-1.149-.363-1.248-.72H5.258c.094.908.926 1.798 2.52 1.798Zm.118-3.972c.808 0 1.535-.528 1.535-1.594s-.668-1.676-1.56-1.676c-.838 0-1.517.616-1.517 1.659 0 1.072.708 1.61 1.54 1.61Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Después de tres horas, 24 minutos y 19 segundos, logra realizar el retiro exitosamente.</p>
+            </div>
+        </div><span class="sub_negrita" style="color: rgb(0, 46, 184);">Observaciones y problemas detectados:</span><br>
+        <ol>
+        </ol>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Falta de flexibilidad:&nbsp;</span>La solución no es flexible respecto al tipo de máquina, ya que requiere una interfaz táctil.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Mensajes de error opacos:</span> Los mensajes de error no son claros ni comprensibles para el usuario promedio.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Tiempos de respuesta intolerables:</span> El tiempo total para completar la transacción es excesivamente largo.</p>
+            </div>
+        </div>
+        <ul>
+        </ul>
+        <p><strong><span class="sub_negrita" style="color: rgb(0, 46, 184);">Reflexión sobre los requisitos no funcionales:</span></strong></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Los términos "inflexible", "opaco" e "intolerable" son juicios subjetivos.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Es importante definir claramente las expectativas y estándares de usabilidad y rendimiento.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">No se debe asumir lo que es "obvio" para todos los usuarios, ya que esto puede variar considerablemente.</p>
+            </div>
+        </div><br>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Recomendación</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> La clasificación de los requisitos no funcionales en categorías específicas facilita su identificación, desarrollo y validación. </p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p><br></p>
+        <p></p><span id="docs-internal-guid-5974837f-7fff-ef14-a135-061f52cf2228"><span>
+            </span>
+        </span>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222958"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Sigla FURPS +</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span style=""><br>Una clasificación muy simple es referida por la sigla FURPS + que se refiere a:</span></p>
+
+        <!-- 1 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Functionality (funcionalidad):&nbsp;</span>Se centra en los requisitos funcionales.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Usability (usabilidad):</span> Se refiere a la facilidad de uso del software e incluye factores humanos, la estética, la coherencia en la interfaz de usuario, ayuda en línea y contextual, uso de asistentes,
+                    documentación, material de entrenamiento.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Reliability (confiabilidad):</span> Se trata de la integridad, el cumplimiento y la interoperabilidad de software. Incluye aspectos de la frecuencia y la gravedad de la falla, capacidad de recuperación de
+                    desastres, previsibilidad, precisión y el tiempo medio entre fallos.&nbsp;</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600">Performance (rendimiento):</span> Es la velocidad, eficiencia, rendimiento, tiempo de respuesta y el uso de recursos. </p>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600">Supportability (compatibilidad):</span> Extensibilidad, adaptabilidad, capacidad de mantenimiento, compatibilidad, flexibilidad de configuración, escalabilidad, capacidad de instalación, capacidad de localización
+                    (por ejemplo: Internacionalización) y la capacidad de prueba.&nbsp;&nbsp; </p>
+            </div>
+        </div>
+       <!-- 4 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600">"+" se refiere a:</span> </p><ol><li dir="ltr" aria-level="2"><p dir="ltr" role="presentation"><span class="" style="color: rgb(0, 46, 184);">Restricciones de diseño: </span>restringe algo sobre el diseño de la arquitectura de software.</p></li><li dir="ltr" aria-level="2"><p dir="ltr" role="presentation"><span class="" style="color: rgb(0, 46, 184);">Restricciones de implementación: </span>restringe algo acerca de la construcción del sistema.&nbsp;</p></li><li dir="ltr" aria-level="2"><p dir="ltr" role="presentation"><span class="" style="color: rgb(0, 46, 184);">Restricciones de interfaz: </span>restricciones de formatos, el tiempo u otros factores utilizados por dicha interacción.</p></li><li dir="ltr" aria-level="2"><p dir="ltr" role="presentation"><span class="" style="color: rgb(0, 46, 184);">Restricciones físicas: </span>limitaciones sobre el hardware que debe ser soportado.&nbsp;</p></li></ol> <p></p>
+                    </div>
+                </div>
+        <span id="docs-internal-guid-b7989bc2-7fff-5afb-3e3c-ae88ea250633" style=""><br></span></div>
+</div>
+<p><br></p></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222959"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">ISO/IEC 25010</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        
+
+
+            <p><br>Otra norma más completa es la norma ISO/IEC 25010 estándar que define 31 subcategorías distribuidas en ocho categorías de calidad del producto de software/sistema.<br></p><span id="docs-internal-guid-81066a11-7fff-11b7-997b-84aae0ac6295"><p dir="ltr" style=""><b>Las categorías son</b>:&nbsp;</p>
+          
+            <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600"><span>Adecuación funcional</span>:</span>&nbsp;Grado en que un producto ofrece características que satisfacen las necesidades especificadas
+            e implícitas cuando se usa en determinadas condiciones.</p>
+        </div>
+    </div>
+
+
+
+    <!-- 2 -->
+    <div class="row" style="margin-left: 32px">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+        </div>
+        <div class="col">
+            <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600"><span>Eficiencia de desempeño</span>:</span> &nbsp;Rendimiento de la cantidad de recursos utilizados bajo ciertas condiciones.&nbsp;</p>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="row" style="margin-left: 32px">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+        </div>
+        <div class="col">
+            <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">&nbsp;Compatibilidad:</span>&nbsp;El grado en que un producto, sistema o componente puede intercambiar información con otros productos, sistemas o componentes; y también, o como alternativa, realizar sus funciones
+                necesarias mientras comparten el mismo entorno de hardware y software.&nbsp;</p>
+        </div>
+    </div>
+
+
+    <!-- 4 -->
+    <div class="row" style="margin-left: 32px">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+        </div>
+        <div class="col">
+            <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600">Usabilidad:</span> &nbsp;Grado en que un producto o sistema puede ser utilizado por determinados usuarios para conseguir determinados objetivos de manera eficaz, eficiente y satisfactoria en un determinado contexto
+                de uso. </p>
+        </div>
+    </div>
+    <!-- 1 -->
+    <div class="row" style="margin-left: 32px">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+        </div>
+        <div class="col">
+            <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600"><span>Fiabilidad</span>:</span>&nbsp;Grado en que un sistema, producto o componente realiza ciertas funciones bajo ciertas condiciones durante un cierto período de tiempo.</p>
+        </div>
+    </div>
+
+
+
+    <!-- 2 -->
+    <div class="row" style="margin-left: 32px">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+        </div>
+        <div class="col">
+            <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600"><span>Capacidad de mantenimiento</span>:</span> &nbsp;Grado de eficacia y de eficiencia con la que un producto o sistema puede modificarse por las personas con esa intención.</p>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="row" style="margin-left: 32px">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+        </div>
+        <div class="col">
+            <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600"><span>Seguridad</span>:</span> &nbsp;Grado en que un producto o sistema protege la información y los datos para que las personas o sistemas tengan el grado apropiado de acceso a sus perfiles y niveles de autorización.</p>
+        </div>
+    </div>
+
+
+    <!-- 4 -->
+    <div class="row" style="margin-left: 32px">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+        </div>
+        <div class="col">
+            <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600"><span>Portabilidad</span>:&nbsp;</span> Grado de eficacia y de eficiencia con la que un sistema, producto o componente pueden ser transferidos de un dispositivo, software o un sistema operativo a otro.&nbsp;
+            </p>
+        </div>
+    </div>
+
+
+    <br>
+    <ul style="">
+    </ul>
+    <p dir="ltr" style="">Cada una de las ocho categorías relacionadas, a su vez, agrega una serie de subcategorías.&nbsp;</p>
+    <p dir="ltr" style="">Un <span class="" style="color: rgb(0, 46, 184);">requisito no funcional</span> que establezca que el tiempo medio de respuesta tolerable sea diez segundos para transacciones interactivas, está incluida en la categoría <span class="" style="color: rgb(0, 46, 184);">eficiencia de desempeño</span>,
+        específicamente en la subcategoría <span class="" style="color: rgb(0, 46, 184);">comportamiento en el tiempo</span>, que es definida como el grado en el que el tiempo de respuesta y las tasas de procesamiento y de flujo de un producto o sistema
+        al realizar sus funciones, satisfacen sus necesidades. Tengamos en cuenta que la norma cita "<span class="" style="color: rgb(0, 46, 184);">grado</span>". Por lo tanto, es posible establecer no sólo el tiempo de respuesta promedio tolerable, sino
+        también el deseable como por ejemplo cinco segundos.&nbsp;</p>
+    <p dir="ltr" style=""><br></p>
+    <!--Caja + Ejemplo + sin imagen + texto-->
+    <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+        <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+            <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+            </span>
+        </p>
+        <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+            <div class="col" style="">
+                <p style="">Con eso, es posible establecer una señal roja para el escenario en el que este tiempo promedio sea mayor que diez segundos, una señal amarilla, cuando es mayor que cinco segundos; y una señal verde para escenarios en los que el tiempo
+                    medio de respuesta es menor que o igual a cinco segundos.<br></p>
+                <ul style="color: rgb(1, 6, 20);">
+                </ul>
+                <p style="color: rgb(1, 6, 20);"></p>
+            </div>
+        </div>
+    </div>
+    <!--Fin Caja + Ejemplo + imagen + texto-->
+    <br>
+    <p dir="ltr" style=""><br></p>
+    </span>
+</div>
+</div>
+<p><br></p>
+</div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222960"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Problemas asociados a requerimientos</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span style=""><br>Alcanzar un <span class="" style="color: rgb(0, 46, 184);">acuerdo respecto de los requerimientos para un producto de software</span> es el mayor desafío al que se enfrenta el desarrollo de software, es un problema fuertemente
+            vinculado con la comunicación y los vínculos sociales que se establecen entre todos los involucrados en el proyecto de desarrollo.&nbsp;</span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span style="">La problemática se representa en la imagen que se muestra a continuación:</span></p><span id="docs-internal-guid-7bacde56-7fff-baae-d01f-746b809cb0c2" style="">
+            <p dir="ltr" style="color: rgb(1, 6, 20); font-size: large; text-align: center;"><b><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812170/mod_book/chapter/222960/2.png" alt=" " width="661" height="386" class="img-responsive atto_image_button_text-bottom"></span></b>
+        </p>
+        <p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;">Entre los problemas más comunes, relacionados con los requerimientos, podemos incluir:&nbsp;</p>
+        <!-- 1 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Dificultad en el seguimiento de los cambios en los requerimientos.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Dificultad en la especificación de los requerimientos.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Errores en la detección de características esperadas para el software.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Mala organización. </p>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Los requerimientos no son siempre obvios y provienen de fuentes diferentes.&nbsp;</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Los requerimientos no son siempre fáciles de expresar de manera clara mediante palabras.&nbsp;</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Existen diferentes tipos de requerimientos a diferentes niveles de detalle.&nbsp;<br></p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">El número de requerimientos puede volverse inmanejable si no se controla.&nbsp; </p>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Existen varias partes interesadas y responsables, lo que significa que los requerimientos necesitan ser gestionados por grupos de personas con funciones cruzadas.&nbsp;</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Los requerimientos cambian.</p>
+            </div>
+        </div>
+
+        <p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;">En la actualidad hay un abanico de técnicas y herramientas empleadas para especificar requerimientos de software. Las mismas oscilan entre la formalidad, tales como especificaciones matemáticas o lógicas; a la informalidad del lenguaje natural
+            en forma de prosa.</p>
+        <p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;">Si bien cada una de estas técnicas tiene sus fortalezas y debilidades, ninguna de ellas es perfecta y ha logrado evitar ambigüedades y malentendidos derivados de la interacción entre todas las personas que participan en el desarrollo de un producto
+            de software.</p>
+      <div class="" style="color: rgb(1, 6, 20); font-size: large; width: 90%; margin: 0px auto;">
+    <div class="row">
+        <div class="col-1" style="background-color: #ae11a0; border-radius: 4px 0px 0px 4px;">
+            <div class="d-flex justify-content-center" style="margin-top: 20px">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-card-text" viewBox="0 0 16 16">
+                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"></path>
+                    <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="col-11" style="background-color: #F6E7F5;border: 1px solid #ae11a0; border-radius: 0px 4px 4px 0px;">
+            <p style="margin-top: 16px;">En síntesis, la problemática de los requerimientos puede resumirse en:</p>
+            <p><span><span id="docs-internal-guid-c4be1d7b-7fff-0b4d-4d55-13d385c5d2eb"></span></span></p>
+            <p dir="ltr"><ul><li>Dificultad de establecer un esquema de comprensión común entre el equipo de desarrollo y el grupo de clientes/usuarios.</li><li>El cambio de los requerimientos como consecuencia de cambios en el dominio del problema.</li><li>La imposibilidad de identificar la totalidad de los requerimientos de un producto al inicio del desarrollo.&nbsp;</li></ul></p>
+            <p></p>
+        </div>
+    </div>
+</div>
+        <p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;"><br></p><ul style="color: rgb(1, 6, 20); font-size: large;">
+        </ul>
+        <p dir="ltr" style="color: rgb(1, 6, 20); font-size: large;">La expectativa es lograr que los requerimientos cumplan con dos características:&nbsp;</p>
+      <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Que sean objetivos:&nbsp;</span>que exista una interpretación única por parte de todos los involucrados.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Que sean verificables:</span> que exista un proceso finito en tiempo y conveniente en costo para determinar que el requerimiento se ha implementado adecuadamente.</p>
+                    </div>
+                </div><br>
+        </span>
+    </div>
+</div>
+<p><br></p></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[723378,723381,723385,723388,723402,723405,723407,723410,723412,723415,723417,723420,723422,723425,723428,723431,723432,723435,723438,723441,723443,723446]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1757558299/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2812170, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1758839201); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\nconfig: [\"Accessible.js\", \"Safe.js\"],\r\nerrorSettings: { message: [\"!\"] },\r\nskipStartupTypeset: true,\r\nmessageStyle: \"none\"\r\n});","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random68d5c1f85509e2'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random68d5c1f85509e2'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
