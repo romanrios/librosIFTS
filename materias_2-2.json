@@ -33,6 +33,10 @@
       {
         "texto": "07 - Introducción a React",
         "url": "./pages/Front/front_07.html"
+      },
+      {
+        "texto": "08 - Componentes y ciclo de vida",
+        "url": "./pages/Front/front_08.html"
       }
     ]
   },
@@ -71,7 +75,7 @@
         "texto": "06 - Configuración y administración",
         "url": "./pages/Ingenieria/ingenieria_06.html"
       },
-            {
+      {
         "texto": "07 - Requerimientos del sistema",
         "url": "./pages/Ingenieria/ingenieria_07.html"
       }
@@ -188,6 +192,30 @@
       {
         "texto": "07 - API REST básica con Node y Express",
         "url": "./pages/Back/back_07.html"
+      },
+      {
+        "texto": "📁 Código Clase 7 - Mongo",
+        "url": "https://drive.google.com/drive/folders/17jOXxWkm_ns_LO6HU2hcXYWl5jrCBOKf?usp=sharing"
+      },
+      {
+        "texto": "📁 Explicación de estructura de datos",
+        "url": "https://docs.google.com/document/d/1CBWpmi1lk91PDu_Gppai9qcv6OpZWHRWew8KSgX2_Co/edit?usp=sharing"
+      },
+      {
+        "texto": "📁 Slides Mongo",
+        "url": "https://docs.google.com/presentation/d/1IglgUQARiUh0rP7eNQEmeYfCTDNdQYuv4W3y3R98BKM/edit"
+      },
+      {
+        "texto": "📁 Slides Gestión de usuarios",
+        "url": "https://docs.google.com/presentation/d/1x2s0MdMAjCuGLidhtiH4p4OoBLSdAH-Hws6LXIxy93s/edit?slide=id.g360d6c3786f_0_28#slide=id.g360d6c3786f_0_28"
+      },
+      {
+        "texto": "📁 Slides TP Pautas Segunda Entrega",
+        "url": "https://docs.google.com/presentation/d/1lUzxIMwmGA_kNCQqwZ4ZQz1ooNTvdWISLD0vgwmLfPk/edit?usp=sharing"
+      },
+      {
+        "texto": "08 - Bases de datos en Express",
+        "url": "./pages/Back/back_08.html"
       }
     ]
   }
