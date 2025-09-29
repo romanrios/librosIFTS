@@ -78,6 +78,10 @@
       {
         "texto": "07 - Requerimientos del sistema",
         "url": "./pages/Ingenieria/ingenieria_07.html"
+      },
+      {
+        "texto": "08 - Especificación de requerimientos",
+        "url": "./pages/Ingenieria/ingenieria_08.html"
       }
     ]
   },

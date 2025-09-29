@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>8. Especificación de requerimientos | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1758311342/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, 8. Especificación de requerimientos | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1758311342_1757558579/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"TGmrfdytzK","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1758311342","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1757558299","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":22800,"courseContextId":2812100,"contextid":2812175,"contextInstanceId":723449,"langrev":1758698824,"templaterev":"1757558299"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1757558299\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1757558299\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1757558299\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1757558299\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1757558299\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?config=TeX-AMS_SVG%22&delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-22800 context-2812175 cmid-723449 cm-type-book category-3279 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1758311342/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>8. Especificación de requerimientos</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Ingeniería de Software - 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        8. Especificación de requerimientos
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        lunes, 29 de septiembre de 2025, 12:13
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=22800&amp;section=14&amp;singlesec=14" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723448" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/quiz/view.php?id=613137" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723450" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script>
+<p><br></p>
+<p><br></p></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción a la ingeniería de requerimientos" class="font-weight-bold text-decoration-none" href="#ch222961">1. Introducción a la ingeniería de requerimientos</a></li><li><a title="2. Elicitación de requerimientos" class="font-weight-bold text-decoration-none" href="#ch222962">2. Elicitación de requerimientos</a><ul><li><a title="2.1. ¿Cuál es el producto generado por la elicitación?" class="text-decoration-none" href="#ch222963">2.1. ¿Cuál es el producto generado por la elicitación?</a></li><li><a title="2.2. Preparación para la elicitación" class="text-decoration-none" href="#ch222964">2.2. Preparación para la elicitación</a></li><li><a title="2.3. Ejecución de la elicitación" class="text-decoration-none" href="#ch222965">2.3. Ejecución de la elicitación</a></li><li><a title="2.4. Documentación de los resultados de la elicitación" class="text-decoration-none" href="#ch222966">2.4. Documentación de los resultados de la elicitación</a></li><li><a title="2.5. Confirmación de los resultados de la elicitación" class="text-decoration-none" href="#ch222967">2.5. Confirmación de los resultados de la elicitación</a></li></ul></li><li><a title="3. Entrevista" class="font-weight-bold text-decoration-none" href="#ch222968">3. Entrevista</a><ul><li><a title="3.1. Preparación de la entrevista" class="text-decoration-none" href="#ch222969">3.1. Preparación de la entrevista</a></li><li><a title="3.2. Fases de la entrevista" class="text-decoration-none" href="#ch222970">3.2. Fases de la entrevista</a></li></ul></li><li><a title="4. Cuestionario" class="font-weight-bold text-decoration-none" href="#ch222971">4. Cuestionario</a><ul><li><a title="4.1. ¿Qué es la encuesta?" class="text-decoration-none" href="#ch222972">4.1. ¿Qué es la encuesta?</a></li><li><a title="4.2. Preparación" class="text-decoration-none" href="#ch222973">4.2. Preparación</a></li><li><a title="4.3. Dos tipos de preguntas" class="text-decoration-none" href="#ch222974">4.3. Dos tipos de preguntas</a></li></ul></li><li><a title="5. Ejecución y finalización" class="font-weight-bold text-decoration-none" href="#ch222975">5. Ejecución y finalización</a></li><li><a title="6. Torbellino de ideas" class="font-weight-bold text-decoration-none" href="#ch222976">6. Torbellino de ideas</a><ul><li><a title="6.1. Conduciendo una sesión" class="text-decoration-none" href="#ch222977">6.1. Conduciendo una sesión</a></li></ul></li><li><a title="7. Análisis de documentación" class="font-weight-bold text-decoration-none" href="#ch222978">7. Análisis de documentación</a></li><li><a title="8. Observación directa" class="font-weight-bold text-decoration-none" href="#ch222979">8. Observación directa</a></li><li><a title="9. Especificación de requerimientos" class="font-weight-bold text-decoration-none" href="#ch222980">9. Especificación de requerimientos</a><ul><li><a title="9.1. ¿Qué es la especificación de requerimientos?" class="text-decoration-none" href="#ch222981">9.1. ¿Qué es la especificación de requerimientos?</a></li><li><a title="9.2. Inconvenientes al escribir requerimientos" class="text-decoration-none" href="#ch222982">9.2. Inconvenientes al escribir requerimientos</a></li><li><a title="9.3. Redacción de requerimientos: lineamientos" class="text-decoration-none" href="#ch222983">9.3. Redacción de requerimientos: lineamientos</a></li><li><a title="9.4. Definición de requerimientos" class="text-decoration-none" href="#ch222984">9.4. Definición de requerimientos</a></li><li><a title="9.5. Validación de requerimientos (o requisitos)" class="text-decoration-none" href="#ch222985">9.5. Validación de requerimientos (o requisitos)</a></li></ul></li><li><a title="10. Prototipo" class="font-weight-bold text-decoration-none" href="#ch222986">10. Prototipo</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222961"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Introducción a la ingeniería de requerimientos</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p><br>Vamos a comenzar definiendo lo que entendemos por Ingeniería de requerimientos.<br>
+
+        </p>
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Ingeniería de requerimientos</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Proceso sistemático de desarrollar requerimientos a través de un proceso cooperativo e iterativo de analizar el problema, documentar las observaciones resultantes en una variedad de formatos de representación y chequear la precisión de
+                    la comprensión obtenida. </p>
+            </div>
+        </div>
+        <span id="docs-internal-guid-e6492c59-7fff-f3f7-b216-94095e018a82"><p dir="ltr" style="">Si bien no hay una desagregación unificada de los procesos que conforman la ingeniería de requerimientos, <span class="" style="color: rgb(0, 46, 184);">estas diferencias son de forma y nivel de granularidad</span>        en la división de los procesos, no obstante, los propósitos son coincidentes.</p>
+        <p dir="ltr" style="">Pueden reconocerse el siguiente conjunto de características relacionadas a la ingeniería de requerimientos:</p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Las actividades involucradas (elicitar, especificar, validar), son predominantemente procesos sociales no técnicos.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">No es un proceso determinístico y lineal, por el contrario, se desarrolla de forma iterativa y no secuencial.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Es una actividad típica de resolución de problemas.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Tienen una amplia gama de opciones para la formulación de los requerimientos que van desde formulaciones informales a una especificación formal. </p>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">No está limitada a una metodología, enfoque o proceso de desarrollo en particular.&nbsp;</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Presenta las actividades de gestión y desarrollo de requerimientos y cómo interactúan entre sí.</p>
+            </div>
+        </div>
+        </span>
+        <ul style="">
+        </ul>
+        <p dir="ltr" style="">El gráfico muestra los procesos que integran la Ingeniería de requerimientos:</p>
+        <p dir="ltr" style=""><span id="docs-internal-guid-3e4af40b-7fff-b94f-0b7a-bd319fbb867e"><b><span class="" style="font-size: x-large; color: rgb(239, 69, 64);"></span></b>
+            </span>
+        </p>
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812175/mod_book/chapter/222961/3.png" alt=" " width="905" height="457" class="img-responsive atto_image_button_text-bottom"></p>
+        <p dir="ltr" style="">En las siguientes secciones trabajaremos sobre cada unos de los procesos que conforman la Ingeniería de requerimientos, que tal como se observa en el gráfico están agrupados en: Desarrollo de requerimientos y Administración de requerimientos.</p>
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222962"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Elicitación de requerimientos</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p><br>El término "elicitación de requerimientos" se consolidó con el tiempo entre las personas involucradas con la disciplina de requisitos. Sin embargo, muchas personas prefieren el término <span class="" style="color: rgb(0, 46, 184);">levantamiento de requisitos</span>.&nbsp;</p>
+        <p>Otros autores utilizan nombres tales como: <span class="" style="color: rgb(0, 46, 184);">recolección de requisitos, descubrimiento de requisitos, extracción de requisitos, recopilación de requisitos, captura de requisitos o adquisición de requisitos.</span></p>
+        <span id="docs-internal-guid-5d84c97f-7fff-1353-b4cc-4a478ffb47d2">
+            <p dir="ltr" style="">Adquirir requisitos puede darnos una idea que implica una negociación, se debe minar la información o trabajar en investigación. Todas estas premisas tienen sentido, por ello, con el fin de agruparlas optamos por utilizar la palabra <b><span class="" style="color: rgb(0, 46, 184);">elicitación</span></b>.<br></p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Qué es la elicitación?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Es un proceso de adquisición de conocimiento, donde se aplican técnicas para entender mejor el negocio en el que se ve afectado por el proyecto, para identificar a los interesados y para identificar y definir mejor los tipos de requerimientos
+                    que se presentaron la semana anterior.</p>
+            </div>
+        </div><span id="docs-internal-guid-df28f999-7fff-fddd-2044-8057072863ec"><p dir="ltr">Este proceso implica necesariamente la <span class="" style="color: rgb(0, 46, 184);">proactividad de todos los involucrados</span>. No se puede resumir la elicitación
+        a una tarea que consiste en simplemente preguntar al usuario su necesidad y registrarla como un ítem a ser tratado. Recuerda que muchos usuarios no saben lo que quieren. O saben, pero no lo pueden expresar correctamente.</p>
+        </span>
+        <p></p>
+        </span><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222963"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">¿Cuál es el producto generado por la elicitación?</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <div style="color: rgb(1, 6, 20); font-size: large; margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p><br>Son las <span class="" style="color: rgb(0, 46, 184);">memorias de levantamiento</span>, que documentan el conocimiento adquirido y cuyo formato varía dependiendo de las técnicas de elicitación utilizadas.&nbsp;<br><br></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Notas de entrevista, respuestas al cuestionario, notas de reuniones, grabaciones de audio y vídeo, etc.&nbsp;<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+        <p>Estas memorias de levantamiento representan información no estructurada.&nbsp;<br></p>
+        <p>Es necesario que la información pase a través de un refinamiento para que pueda ser utilizada en el desarrollo de software. Esto implica: organizar, sintetizar, eliminar redundancias, descubrir errores y omisiones. El tratamiento que se da a esa
+            información es llamado análisis de requisitos.</p>
+        <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><span class="sub_negrita" style="font-weight: normal;">Es el análisis de requisitos que permite evaluar si hubo calidad en la elicitación. En la práctica es muy difícil que se termine la elicitación en una fase única del proyecto.&nbsp;</span></p>
+        </div>
+        <p dir="ltr" style=""><br>Lo más razonable es que después de algunas sesiones de elicitación, con información suficiente, ya se comience el trabajo de análisis de requisitos. Y este trabajo guiará sobre qué información debe ser investigada, provocando un nuevo ciclo
+            de elicitación-análisis.</p>
+        <p dir="ltr" style="">Sea cual sea la técnica utilizada en la elicitación de requisitos, podemos destacar cuatro actividades clave:&nbsp;</p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Preparación&nbsp;</span>(o planeamiento)</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Ejecución</span></p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Documentación</span></p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600">Confirmación</span></p>
+            </div>
+        </div>
+    </div><br><br>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222964"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Preparación para la elicitación</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p><br>El <span class="" style="color: rgb(0, 46, 184);">objetivo de la preparación para la elicitación</span> es asegurar que todos los recursos necesarios estén organizados y reservados para su realización.&nbsp;</p>
+        <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;"><span class="sub_negrita" style="font-weight: normal;">Se debe entender recursos como: Agenda de personas involucradas, disponibilidad de las instalaciones, planificación de viajes (si es necesario), cuestiones de logística de manera general. La preparación es fundamental para asegurar un buen resultado en la elicitación.</span></p>
+        </div>
+        <p>&nbsp;</p>
+        <p>El <span class="" style="color: rgb(0, 46, 184);">criterio de éxito</span> es satisfacer los objetivos de información asociados al momento presente del proyecto, sin desperdiciar recursos.</p><br>
+        <p></p>
+
+
+        <!-- nada puede haber abajo -->
+        
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222965"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Ejecución de la elicitación</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <!--Tabla fila columna-->
+        <br>
+        <table class="tabla-simple texto-principal" style="width: 96%; margin: 0 auto;">
+            <colgroup span="1" width="30%" style="background-color: #6492ff;"></colgroup>
+            <colgroup span="1" width="70%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado ">Objetivo de la elicitación </td>
+                    <td class="tabla-simple-fila1 " valign="top ">
+                        Levantar información de manera proactiva con los interesados utilizando la técnica seleccionada, cada una con su propia metodología (por ejemplo, entrevistas, talleres, encuestas).<br>
+                        <ul>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Tabla fila columna-->
+
+        <table class="tabla-simple texto-principal " style="width: 96%; margin: 0 auto; ">
+            <colgroup span="1 " width="30% "></colgroup>
+            <colgroup span="1 " width="70% "></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado ">Interacción con el usuario</td>
+                    <td class="tabla-simple-fila1 " valign="top ">
+                        Al discutir necesidades, el usuario puede mencionar problemas no relacionados con el proyecto. Es crucial explicar los objetivos del proyecto.<br>
+                        <ul>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Tabla fila columna-->
+
+        <table class="tabla-simple texto-principal " style="width: 96%; margin: 0 auto; ">
+            <colgroup span="1 " width="30% "></colgroup>
+            <colgroup span="1 " width="70% "></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado ">Clarificación de necesidades</td>
+                    <td class="tabla-simple-fila1 " valign="top ">
+                        Si se mencionan necesidades fuera de los objetivos, preguntar su vínculo con el proyecto y, si no hay conexión, orientar sobre la viabilidad de un nuevo proyecto. Definir claramente los requisitos del negocio y asegurar la trazabilidad para evitar desvíos
+                        del alcance.<br>
+                        <ul>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Tabla fila columna-->
+
+        <table class="tabla-simple texto-principal " style="width: 96%; margin: 0 auto; ">
+            <colgroup span="1 " width="30% "></colgroup>
+            <colgroup span="1 " width="70% "></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado ">Captura de atributos de requisitos</td>
+                    <td class="tabla-simple-fila1 " valign="top ">
+                        Capturar los atributos de los requisitos definidos en el plan de gestión, elaborado por el director del proyecto. Ejemplos de atributos: origen, prioridad, autor, propietario, estado, riesgo.<br>
+                        <ul>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Tabla fila columna-->
+
+        <table class="tabla-simple texto-principal " style="width: 96%; margin: 0 auto; ">
+            <colgroup span="1 " width="30% "></colgroup>
+            <colgroup span="1 " width="70% "></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado ">Requisitos implícitos</td>
+                    <td class="tabla-simple-fila1 " valign="top ">
+                        Identificar deseos no manifestados por el usuario, que pueden causar problemas si no se detectan. Es un error grave en la elicitación no descubrir estos requisitos.<br>
+                        <ul>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Tabla fila columna-->
+
+        <table class="tabla-simple texto-principal " style="width: 96%; margin: 0 auto; ">
+            <colgroup span="1 " width="30% "></colgroup>
+            <colgroup span="1 " width="70% "></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado ">Técnicas para descubrir requisitos implícitos</td>
+                    <td class="tabla-simple-fila1 " valign="top ">Existen técnicas como profundizar en el conocimiento del negocio del usuario para descubrir puntos no mencionados (por ejemplo, análisis de documentos, entrevistas a expertos).<br>
+                        <ul>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Tabla fila columna-->
+
+        <table class="tabla-simple texto-principal " style="width: 96%; margin: 0 auto; ">
+            <colgroup span="1 " width="30% "></colgroup>
+            <colgroup span="1 " width="70% "></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado ">Nivel de conocimiento del usuario</td>
+                    <td class="tabla-simple-fila1 " valign="top ">Siempre hay un desnivel de conocimiento entre el ingeniero de requisitos y el usuario. Consultar a un profesional con más conocimientos puede ayudar a descubrir requisitos ocultos, aunque formar este conocimiento puede llevar años.<br>
+                        <ul>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Tabla fila columna-->
+
+        <table class="tabla-simple texto-principal " style="width: 96%; margin: 0 auto; ">
+            <colgroup span="1 " width="30% "></colgroup>
+            <colgroup span="1 " width="70% "></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado ">Mejorar el conocimiento del negocio</td>
+                    <td class="tabla-simple-fila1 " valign="top ">Organizar la información recogida para determinar deficiencias. Mejorar el conocimiento del negocio ayuda al ingeniero de requisitos a comprender mejor las necesidades del usuario (por ejemplo, sesiones de formación, revisar casos
+                        de uso previos, estudios de mercado).</td>
+                </tr>
+            </tbody>
+        </table><span class=" " style="font-size: large; ">&nbsp;</span></div>
+    <div style="margin-left: 3%; margin-right: 3%; "></div></div><br></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222966"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Documentación de los resultados de la elicitación</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;"><br>Las <span class="" style="color: rgb(0, 46, 184);">técnicas utilizadas durante la elicitación</span>, así como el enfoque planificado, determinan el tipo de documentación generado.&nbsp;</div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;">Si bien hay enfoques en que los productos de la elicitación son los productos finales, tales como las historias de usuario usadas en metodologías ágiles; que presentaremos dentro de poco. Es importante tener en cuenta que también hay enfoques en los
+        que los productos de la elicitación son informales, modelos mentales o memorias de levantamiento.<br><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><span style="padding-top: 10px; display: block;"></span>
+
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Memoria de levantamiento</p>
+        </div>
+        <br><br>Teniendo en cuenta los enfoques en que los <span class="" style="color: rgb(0, 46, 184);">productos de la elicitación son requisitos intermedios</span>, cuya finalidad es registrar las decisiones tomadas sobre cuestiones pendientes, esta
+        documentación producida es denominada memoria de levantamiento.&nbsp;<br><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Estos documentos pueden ser: actas de reunión, informes, grabación de audio o de vídeo, cuadros con anotaciones etc.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+
+        <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Propósito de documentar</p>
+
+        </div>
+        <br><br>El propósito de documentar los resultados intermedios y no ir directamente a los requisitos de análisis se debe:
+
+        <br><br>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">A no perder la información: la memoria de la gente es falible.<br></p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Compartir el conocimiento adquirido con otros miembros del equipo.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Otra persona pueda dar secuencia del análisis de requisitos; no siempre el trabajo de requisitos es realizado por una sola persona.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Que pueda ser confirmado a través de esta documentación, su comprensión con los interesados. <br><br></p>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;"><span class="sub_negrita" style="font-weight: normal;">Recordá que las dificultades de comunicación representan la mayor parte de los problemas en la Ingeniería de requisitos.</span></p>
+        </div>
+        <br><br>
+        <ul>
+        </ul>
+        <span style="padding-top: 10px; display: block;"></span>
+
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Seguimiento a preguntas y dudas</p>
+        </div>
+        <br><br>Además de la documentación de la información obtenida al realizar la elicitación es importante tener en cuenta las preguntas y las dudas abiertas que hayan surgido durante estos eventos y que no pudieron resolverse, para dar seguimiento
+        a su resolución.<br><br></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222967"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Confirmación de los resultados de la elicitación</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+        <p>Por lo general, en una primera versión de la documentación hay problemas de entendimiento y el documento retorna sin confirmación, indicando los puntos erróneos o ausentes. Después de hacer los ajustes, una nueva versión se envía a los usuarios.&nbsp;</p>
+        <p>Esta dinámica se repite hasta que los usuarios confirmen la información abordando lo discutido en los eventos de levantamiento y devuelven el documento para utilizarlo como una representación formal de sus necesidades.&nbsp;</p>
+        <p>Si la información capturada en la elicitación fue mal interpretada, entonces, sin la confirmación su documentación también será incorrecta. Esa memoria de levantamiento defectuosa se utilizará en el análisis de requisitos y dará lugar a requisitos
+            incorrectos que serán especificados, modelados e implementados.</p>
+
+        <span style="padding-top: 10px; display: block;"></span>
+
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Técnicas de elicitación de información</p>
+        </div>
+        <br><br>Existen numerosas técnicas para realizar el trabajo de recolección de información, a continuación, mencionamos las que se utilizan con más frecuencia en el contexto del desarrollo de software:
+
+        <span style="padding-top: 10px; display: block;"></span>
+
+        <b><p style="text-align: center;"><b><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812175/mod_book/chapter/222967/recoleccion.PNG" alt="" width="706" height="399" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></b></p>
+        </b><span style="padding-top: 10px; display: block;"></span>
+
+        <b><span class="" style="color: rgb(0, 61, 245);">Confirmación y seguimiento</span></b>
+        <br>La confirmación es algo sencillo y rápido de hacer y ayuda a prevenir que esos defectos de información contaminen la elicitación. Aun así, a menudo, los documentos enviados para su confirmación pueden seguir sin respuesta de la otra parte.
+        Una solución para cada evento de confirmación es determinar la fecha límite para la recepción de observaciones complementarias o rectificación de la información contenida en la propia comunicación con la memoria de levantamiento elaborada. En
+        el ámbito del proyecto como un todo, es posible establecer en las políticas de comunicación la plena eficacia de aceptación del contenido completo de la información que se envía para confirmar si las rectificaciones de comunicación no se efectúan
+        dentro de un período de hasta una cierta cantidad de días.
+
+        <span style="padding-top: 10px; display: block;"></span>
+
+        <b><span class="" style="color: rgb(0, 61, 245);">Conclusión</span></b>
+        <br>La importancia de la confirmación en la elicitación de requisitos es crucial para garantizar que la información recopilada sea correcta y útil para el desarrollo del proyecto, evitando así problemas y retrabajos en etapas posteriores.
+
+        <span style="padding-top: 10px; display: block;"></span>
+
+        <b><span class="" style="color: rgb(0, 61, 245);">Documentación de los resultados</span></b>
+        <br>Después de confirmar la información, se procede a la documentación final de los resultados de la elicitación, que servirá como base para el análisis y desarrollo del proyecto.
+
+        <span style="padding-top: 10px; display: block;"></span>
+
+        <b><span class="" style="color: rgb(0, 61, 245);">Importancia de la documentación</span></b>
+        <br>La documentación es esencial para mantener un registro formal y organizado de los requisitos y decisiones tomadas durante la elicitación, facilitando así la comunicación y colaboración entre los miembros del equipo y los stakeholders.
+
+        <span style="padding-top: 10px; display: block;"></span>
+
+        <b><span class="" style="color: rgb(0, 61, 245);">Seguimiento y ajustes</span></b>
+        <br>Es fundamental realizar un seguimiento constante y realizar ajustes cuando sea necesario para garantizar que la documentación refleje de manera precisa las necesidades y requerimientos del proyecto, y para asegurar la satisfacción de los stakeholders.
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222968"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Entrevista&nbsp;</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p><br>Es una de las mejores técnicas para recopilar información. La entrevista es una <span class="" style="color: rgb(0, 46, 184);">conversación entre dos o más personas</span>, donde el/los que entrevistan deben dirigir la entrevista de acuerdo
+            a un objetivo planteado de antemano.&nbsp;</p>
+
+        <span style="padding-top: 10px; display: block;"></span>
+
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Proceso de comunicación</p>
+        </div>
+        <br><br>La entrevista es un proceso de comunicación, en donde los participantes funcionan como emisores y receptores. El juego entre receptor y emisor es influido por una serie de reacciones de los intervinientes en el proceso comunicacional,
+        lo que puede hacer que la situación sea difícil de manejar.
+
+        <span style="padding-top: 10px; display: block;"></span>
+
+        <b><span class="" style="color: rgb(0, 46, 184);">Perturbaciones en el proceso</span></b>
+        <br>En el proceso comunicacional se detectan muchas veces perturbaciones que inciden en dicho proceso, lo que ocasiona un mal entendimiento entre emisor y receptor.
+
+        <span style="padding-top: 10px; display: block;"></span>
+
+        <b><span class="" style="color: rgb(0, 46, 184);">Situaciones a considerar<br><br></span></b>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Se dice que el que hace preguntas tontas, recibe respuestas tontas.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">El entrevistado no quiere dar a conocer los aspectos negativos, sino que trata de dar la mejor impresión.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">No siempre la gente es positiva ante los cambios.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Si se coloca al entrevistado en situaciones a las que no está acostumbrado surge nerviosismo de parte de este, que se traduce en taquicardias, timidez, sudor y que puede ser mal entendido por el/la entrevistador/a. </p>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Hay que tener en cuenta que tanto el que entrevista como el entrevistado tienen diferentes experiencias, educación, etc. Es por ello que es muy importante el lenguaje que se utiliza.</p>
+            </div>
+        </div>
+    </div><br>
+    <ul>
+    </ul>
+
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222969"><article class="flex_titulo_botonera">
+    <p class="titulo_principal">Preparación de la entrevista</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br>Hemos dicho que la entrevista es un<span class="" style="color: rgb(0, 46, 184);"> instrumento para obtener los datos e información</span> que a su vez serán necesarios para las decisiones. Una vez que se tiene en claro que la mejor técnica
+            es la entrevista, se procede a:</p>
+        <div class="container" style="color: rgb(1, 6, 20); font-size: large;">
+            <table class="table table-bordered" style="border: 1px solid black;">
+                <colgroup>
+                    <col span="1" style="width: 10%">
+                    <col span="1" style="width: 90%;">
+                </colgroup>
+                <thead>
+                    <!-- 
+                    <tr>
+                        <th scope="col" style="border: 1px solid black; text-align: center">Título 1</th>
+                        <th scope="col" style="border: 1px solid black">Título 2</th>
+
+                    </tr> -->
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #EBF1FE"><b class="sub_negrita">
+
+                            Objetivos de la entrevista
+
+
+
+
+                        </b></td>
+                        <td style="border: 1px solid black">
+                            <ul>
+                                <li>Decidir y formular el/los objetivos de la entrevista lo más concreto posible.</li>
+                                <li>Decidir a quién o quiénes va a entrevistar. Es importante entrevistar a la persona correcta.</li>
+                            </ul>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #D8E4FD"><b class="sub_negrita">
+                            Preparativos previos
+                        </b></td>
+                        <td style="border: 1px solid black">
+                            <ul>
+                                <li>Contactar con el futuro entrevistado para determinar día, hora y lugar de la entrevista. De esta manera le da tiempo al entrevistado para prepararse. En cuanto a los horarios trate de que no sea inmediatamente después del
+                                    almuerzo, ni muy al final del horario laboral. El lugar por escoger debe ser lo más neutral, sin perturbaciones, ni ruidos (llamados telefónicos, interrupciones etc.).</li>
+                                <li>Averiguar sutilmente si le molestaría que la entrevista fuese grabada.</li>
+                                <li>Averiguar si hay aspectos especiales que debe saber sobre el entrevistado.</li>
+                                <li>Revisar información existente. Eso nos permite preparar la entrevista con el fin de tomar los puntos fundamentales.</li>
+                            </ul>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; background-color: #C5D6FC"><b class="sub_negrita"> Estructuración de la información</b></td>
+                        <td style="border: 1px solid black">
+                            <ul>
+                                <li>Estructurar qué información voy a dar y cuál quiero recibir.</li>
+                                <li>Con el fin de aprovechar al máximo el tiempo de la entrevista y no olvidarse de cuestiones a preguntar es necesario hacer una&nbsp;<b><span class="" style="color: rgb(0, 46, 184);">guía de entrevista</span></b>&nbsp;que será nuestro apoyo durante el proceso comunicacional.</li>
+                            </ul>
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <span style="color: rgb(1, 6, 20); font-size: large; padding-top: 10px; display: block;"></span>
+
+        <br>
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222970"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Fases de la entrevista</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;"><b><span class="" style="color: rgb(0, 61, 245);"><br></span></b></div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <!--Tabla simple dos columnas-->
+        <table class="tabla-simple texto-principal" style="margin: 0 auto;">
+            <!--Cantidad de columnas-->
+            <colgroup span="1" width="44%"></colgroup>
+            <colgroup span="1" width="2%"></colgroup>
+            <colgroup span="1" width="44%"></colgroup>
+
+            <!--Categorías-->
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado">Fase 1: Relajamiento</td>
+                    <td></td>
+                    <td class="tabla-simple-categoria texto-centrado">Fase 2: Libre conversación</td>
+                </tr>
+
+                <!--filas-->
+                <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <p>
+                            </p><ul>
+                                <li>El <span class="" style="color: rgb(0, 46, 184);">objetivo </span>es crear una atmósfera agradable y al mismo tiempo hacer que el/la entrevistado/a se relaje y tenga una actitud positiva.&nbsp;</li>
+                                <li>La entrevista se debe realizar en una habitación donde se pueda hablar sin interrupciones, es por eso que se debe evitar: llamadas telefónicas, que se encuentren otras personas en la habitación, ruidos molestos, etc.</li>
+                                <li>Tratá de ubicarte de tal manera que el contacto visual con el/la entrevistado/a sea natural. La entrevista es un proceso de comunicación no un interrogatorio.</li>
+                            </ul>
+                       <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Empezá generando una atmósfera agradable.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Saludo y presentación.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Cuidá las palabras a utilizar, considerando al interlocutor.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Empezá siempre la entrevista con informar al/la entrevistado/a para que se va a usar la información obtenida durante la entrevista.</p></div></div>
+                        <ul>
+
+                        </ul>
+                    </td>
+                    <td></td>
+
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>
+                                El <span class="" style="color: rgb(0, 46, 184);">objetivo </span>es comenzar la comunicación con el/la entrevistado/a. Es muy importante que la conversación fluya normalmente y no parezca que es un interrogatorio.&nbsp;</li>
+                            <li>Comenzá con una pregunta global que permita al/la entrevistado/a explayarse en la conversación.&nbsp;</li>
+                            <li>Posteriormente continuá el hilo de la conversación llevándolo/a a las preguntas que necesitás que te respondan.</li>
+                            <li>Escuchá con atención al/la entrevistado/a en vez de hablar. A veces es necesario demostrar que uno/a escucha y está interesado/a, asintiendo con la cabeza o escribiendo algo.</li>
+
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Tabla simple dos columnas-->
+        <table class="tabla-simple texto-principal" style="margin: 0 auto;">
+            <!--Cantidad de columnas-->
+            <colgroup span="1" width="44%"></colgroup>
+            <colgroup span="1" width="2%"></colgroup>
+            <colgroup span="1" width="44%"></colgroup>
+
+            <!--Categorías-->
+            <tbody>
+                <tr>
+                    <td class="tabla-simple-categoria texto-centrado">Fase 3: Preguntas y control</td>
+                    <td></td>
+                    <td class="tabla-simple-categoria texto-centrado">Fase 4: Finalización</td>
+                </tr>
+
+                <!--filas-->
+                <tr>
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>
+                                El <span class="" style="color: rgb(0, 46, 184);">objetivo </span>es obtener el resto de la información (que no se obtuvo) haciendo preguntas directas y al mismo tiempo controlar con lo obtenido.&nbsp;</li>
+                            <li>Realizá las preguntas que faltan. Aquella información obtenida que no esté clara o incompleta, se vuelve a tratar.&nbsp;</li>
+                            <li>Usá la guía de entrevista marcando la que ya están contestadas.&nbsp;</li>
+                            <li>Hacé un resumen de lo que el/la entrevistado/a relató con el fin de ver si se ha comprendido correctamente.</li>
+
+                        </ul>
+                    </td>
+                    <td></td>
+
+                    <td class="tabla-simple-fila1" valign="top">
+                        <ul>
+                            <li>
+                                Da por finalizada la entrevista, dejando la puerta abierta por si necesitás volver a entrevistarlo/a por algo que no se entendió.</li>
+                            <li>Informá al/la entrevistado/a que una vez que se haga el Informe final sobre la entrevista le será enviado para su lectura.</li>
+                            <li><span class="" style="color: rgb(0, 46, 184);">Agradecé lo valioso que resulta la información que te ha dado.</span></li>
+                        </ul>
+                        <ul>
+
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <p><br></p>
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222971"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Cuestionario&nbsp;</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p><br></p>
+        <p>Es muy probable que hayas participado, o por lo menos has sido invitado a participar en alguna <span class="" style="color: rgb(0, 46, 184);">encuesta sobre la satisfacción</span> con cualquier empresa en que ha consumido productos o servicios.
+            Puede ser un hotel en el que te has hospedado, una aerolínea en la que viajaste, un banco en el que tienes una cuenta. De todos modos, sería difícil enumerar todas las empresas que utilizan esta técnica.</p>
+
+        <p>Básicamente, estas encuestas de satisfacción implican responder a un cuestionario de evaluación del producto o servicio adquirido. A veces, el cuestionario se proporciona en el papel. Pero más a menudo puede ser un sitio web para que el formulario
+            sea respondido en línea.&nbsp;</p><p><br></p>
+        <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><span class="sub_negrita" style="font-weight: normal;">El objetivo es recoger información de su experiencia como consumidor de la empresa.&nbsp;</span></p>
+        </div>
+        <p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93">
+        </p>
+        <p><br></p><p>Esto podría hacerse a través de una entrevista de alguien de la empresa a usted.&nbsp;</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Qué favorece a una encuesta en relación con las entrevistas?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> La entrevista podría ser aún más eficaz en proporcionar información, pero el costo-beneficio de su aplicación a todos los/las clientes, en general, no es ventajoso.&nbsp;Sería prohibitivo.&nbsp;</p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p>Aunque la encuesta es común en muchas empresas, ¿cuántas veces has ignorado estos cuestionarios? Si tuvieras alguna insatisfacción con la empresa, lo más probable es que hayas tenido la oportunidad de presentar su reclamo. Pero si todo salió satisfactoriamente,
+            tu deseo de responder puede ser menor.</p>
+
+        <p>Ese es un punto interesante, si la mayoría de los/las clientes no responde a la encuesta, su objetivo de conseguir una retroalimentación termina siendo dañado.</p><div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;"><span class="sub_negrita" style="font-weight: normal;">Consciente de ello, algunas empresas crean incentivos para que el/la cliente responda; proporcionan un regalo, dan derecho a participar de un sorteo, dan puntos programa de fidelización, etc. Esto aumenta enormemente el interés en participar de la encuesta.</span></p>
+        </div><br><p></p>
+        <p><br></p>
+
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222972"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">¿Qué es la encuesta?</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p><br></p>
+      <!-- Cuadro amarillo borde violeta -->A continuación te presentamos qué es una encuesta:&nbsp;</div><div style="margin-left: 3%; margin-right: 3%;"><br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Definición</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Una encuesta es una técnica de investigación que consiste en la aplicación de un cuestionario a los interesados y el posterior análisis de las respuestas, sin interacción directa con los encuestados durante su respuesta. Permite la rápida elicitación de información cuantitativa y cualitativa de un público objetivo numeroso y puede representar los puntos de vista de toda la población cuando se aplica a una muestra representativa.</p></div></div>
+ <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p></p>Además, es útil cuando los interesados no están en una sola ubicación física, minimizando la necesidad de entrevistas y reduciendo costos asociados, como viajes y problemas de huso horario.<br><br><p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222973"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+        <p class="titulo_principal">Preparación</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+        <p>En la preparación de una entrevista y una encuesta, existen muchos aspectos en común. Ambos métodos requieren una definición clara del objetivo que se persigue y la selección adecuada de la audiencia para obtener información precisa y útil. Sin
+            embargo, hay diferencias clave en cómo se realizan y en cómo se deben formular las preguntas para garantizar la calidad de las respuestas.&nbsp;<br><br><br></p>
+        <!--Tabla 3 columnas varias filas de colore-->
+        <table class="tabla-filaColores texto-principal" style="width: 96%; margin: 0 auto;">
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="40%"></colgroup>
+            <colgroup span="1" width="40%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado">Aspecto</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">Encuesta</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">Entrevista</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado">Interacción con el público</td>
+                    <td class="texto-margen-tabla texto-centrado">No hay interacción directa con los encuestados durante la respuesta.</td>
+                    <td class="texto-margen-tabla">El entrevistador puede interactuar y aclarar dudas en tiempo real.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado">Objetivo</td>
+                    <td class="texto-margen-tabla texto-centrado">Recoger información de manera rápida y económica de un público numeroso.</td>
+                    <td class="texto-margen-tabla">Obtener información detallada y profunda a través de una interacción directa.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado">Público objetivo</td>
+                    <td class="texto-margen-tabla texto-centrado">Selección de una muestra representativa; puede ser más amplio para asegurar cobertura.</td>
+                    <td class="texto-margen-tabla">Selección específica y detallada del entrevistado.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado">Claridad en las preguntas</td>
+                    <td class="texto-margen-tabla texto-centrado">Preguntas deben ser extremadamente claras y autoexplicativas, ya que no hay oportunidad para aclaraciones.</td>
+                    <td class="texto-margen-tabla">El entrevistador puede aclarar o reformular preguntas si el entrevistado no las entiende.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado">Formato del cuestionario</td>
+                    <td class="texto-margen-tabla texto-centrado">Estructurado y uniforme, con instrucciones claras; se centra en evitar malentendidos.</td>
+                    <td class="texto-margen-tabla">Más flexible, permite adaptaciones según la respuesta del entrevistado.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado">Costo y logística</td>
+                    <td class="texto-margen-tabla texto-centrado">Generalmente más económico; ideal para audiencias dispersas geográficamente.</td>
+                    <td class="texto-margen-tabla">Puede ser costoso, especialmente si requiere viajes o videoconferencias en diferentes husos horarios.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado">Orden y neutralidad</td>
+                    <td class="texto-margen-tabla texto-centrado">Debe usar un lenguaje neutro y presentar preguntas en un orden que no influya en las respuestas.</td>
+                    <td class="texto-margen-tabla">Importante mantener la neutralidad y el orden, pero hay mayor control sobre el flujo de la conversación.</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Otros aspectos a considerar:</p>
+        </div>
+        <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Consideración del público objetivo:&nbsp;</span>Es crucial agregar preguntas en la encuesta que permitan reconocer y filtrar mejor al público objetivo. Esto ayuda a eliminar respuestas de individuos que no deben ser considerados.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Preparación del cuestionario:</span> Similar al guión de preguntas de la entrevista. Desarrollar preguntas claras y, si es necesario, incluir instrucciones detalladas para responder.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Claridad de las preguntas:</span> En una encuesta, las preguntas deben ser claras para evitar respuestas sin valor. En una entrevista, el entrevistador puede ajustar las preguntas para asegurar comprensión.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600">Orden y neutralidad en las preguntas:</span> Usar lenguaje neutro y organizar las preguntas de manera que no influyan en las respuestas. Esto es importante tanto en encuestas como en entrevistas para obtener datos objetivos y precisos. </p>
+                    </div>
+                </div>
+            </div>
+        <div style="color: #0000FF; margin-bottom: 10px;"><br><br></div>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222974"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+        <p class="titulo_principal">Dos tipos de preguntas</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Preguntas con respuestas limitadas</p>
+        </div>
+        <p>Conocidas como preguntas cerradas. Cada pregunta ofrece un conjunto de posibles respuestas. Útil cuando las respuestas son bien entendidas previamente. Son muy eficaces para la elicitación de datos cuantitativos para el análisis estadístico.&nbsp;<br><br></p>
+
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style=""><b><strong>¿Cuál es el canal de comunicación con la empresa que más utilizás?&nbsp;&nbsp;</strong></b></p>
+                    <ol>
+                        <li>Intranet&nbsp;</li>
+                        <li>E-mail&nbsp;</li>
+                        <li>Teléfono</li>
+                        <li>Redes sociales&nbsp;</li>
+                    </ol>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+        <br>
+
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Preguntas con respuestas libres</p>
+        </div>
+        <p><br></p>
+        <p>Conocidas como preguntas abiertas. El encuestado es libre de contestar las preguntas como desea. Las respuestas pueden proporcionar más detalle y mayor variación en el rango posible de respuestas. Hay más dificultad en la consolidación de las
+            respuestas.&nbsp;
+            <br><br></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style=""><b><strong><b><strong>¿Cuál es el canal de comunicación con la empresa que más utilizás?&nbsp;</strong></b></strong>
+                        </b>
+                    </p>"Generalmente, prefiero comunicarme con la empresa a través del correo electrónico porque me permite mantener un registro de nuestras conversaciones y es conveniente para enviar y recibir documentos. Sin embargo, también utilizo el
+                    teléfono cuando necesito una respuesta rápida o cuando el asunto es urgente. A veces, recurro a las redes sociales para consultas generales o comentarios, ya que suelen responder bastante rápido allí."<br>
+                    <p style="text-align: right;">(Respuesta libre)</p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+        <p>Incluso con todo el cuidado en la preparación del cuestionario, es muy importante que este sea probado antes de ser distribuido. Aplicarlo a algunas personas del público observar cómo el cuestionario es respondido. Evaluar las dificultades y dudas
+            que la gente percibe y reformular lo que es necesario. Sin embargo, de nada sirve tener un cuestionario bien diseñado si no llega al público objetivo.&nbsp;</p>
+        <p>A continuación, establecé los medios más apropiados de distribución:</p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">¿Por qué no por correo electrónico? Tal vez esto es, sin duda, la mejor opción en la mayoría de los casos, pero no siempre.&nbsp;</p>
+            </div>
+        </div>
+        <p><strong><span class="" style="color: rgb(0, 46, 184);">Factores a considerar antes de optar por el correo electrónico</span></strong><span class="" style="color: rgb(0, 46, 184);">:</span><br></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">¿Cuenta con la dirección de correo electrónico de todos los de su público objetivo?</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">¿Estas direcciones están al día?</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Cuántos mensajes irán al&nbsp;<i>spam</i>?&nbsp;</p>
+            </div>
+        </div>
+        <p>Es muy difícil conseguir que el 100% del público objetivo responda a la encuesta. Entonces, evaluá cuál es la tasa de respuesta que se requiere para cumplir con los objetivos de la investigación. Este será el objetivo que se busca cuando se ejecuta
+            la encuesta.&nbsp;<br></p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Qué más tener en cuenta?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Por último, se debe establecer una fecha límite para la recepción de los cuestionarios completados para llevar a cabo el análisis de las respuestas.&nbsp;</p></div></div>
+ <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222975"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+        <p class="titulo_principal">Ejecución y finalización&nbsp;</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+        <p></p>La implementación de una encuesta se simplifica si la planificación ha sido adecuada. <span class="" style="color: rgb(0, 46, 184);">Distribuir el cuestionario y realizar un seguimiento de su recepción es crucial </span>para identificar posibles fallos en la distribución.&nbsp;</div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;"><div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+    <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><span class="sub_negrita" style="font-weight: normal;">Es importante también monitorear la evolución de la tasa de respuesta y tomar acciones si es necesario, como reforzar la solicitud de respuestas o ajustar la fecha de finalización.&nbsp;</span></p></div><p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93"><br></p></div>
+    <div style="margin-left: 3%; margin-right: 3%;">Una vez completado el período de ejecución, se procede con el <span class="" style="color: rgb(0, 46, 184);">análisis de las respuestas y la elaboración de un informe validado por los interesados</span> pertinentes.&nbsp;</div><div style="margin-left: 3%; margin-right: 3%;"><br></div><div style="margin-left: 3%; margin-right: 3%;">La técnica de encuesta, aunque rápida y económica, <span class="" style="color: rgb(0, 46, 184);">requiere atención para evitar errores
+        en el diseño del cuestionario</span> y asegurar una tasa de respuesta significativa, especialmente cuando se utilizan preguntas con respuestas ilimitadas para grandes audiencias.<br><br></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222976"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+        <p class="titulo_principal">Torbellino de ideas</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+        <p>El <span class="" style="color: rgb(0, 46, 184);">torbellino de ideas </span>es una simple técnica de grupo para la generación de ideas. Permite a la gente sugerir y explorar ideas en un ambiente libre de críticas y juicios. Una sesión de torbellino
+            de ideas funciona muy bien con cuatro a diez personas. Una persona debe ser el líder y su rol es más para iniciar la sesión que para limitarla. La sesión consta de dos fases.</p>
+<div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Fase de generación</p>
+   </div>
+       
+        <p><br>Los participantes son animados a ofrecer la mayor cantidad de ideas posibles, sin discutir el mérito de las ideas.</p>
+<div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Fase de consolidación</p>
+   </div>
+        
+        <p><br>Las ideas son discutidas, revisadas y organizadas.</p>
+
+        <p>Para el propósito de la elicitación de requerimientos de software, el torbellino de ideas puede ser de mucha ayuda para la generación de una gran variedad de <span class="" style="color: rgb(0, 46, 184);">vistas del problema</span> y en la formulación del problema en formas diferentes. Es especialmente
+            útil en la fase temprana del proceso de elicitación. Cuando se utiliza correctamente, puede ayudar a superar algunas de las dificultades subyacentes en la elicitación de requerimientos:</p>
+  <div style="margin-left: 3%; margin-right: 3%;">
+
+                <br>
+                <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Estimula el pensamiento imaginativo para ayudar al usuario a tomar conciencia de sus necesidades.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Ayuda a construir una imagen completa de las necesidades del usuario.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Evita la tendencia a focalizar en forma muy estrecha demasiado pronto.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Para determinado tipo de personalidades, permite un escenario social más confortable que algunos de las técnicas de grupo más estructuradas.</p></div></div></div><ul>
+        </ul>
+<!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Qué ventajas tiene esta técnica?<br><br></p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"><ul><li>Fácil de aprender.</li><li>Requiere costos operativos muy pequeños.&nbsp;</li><li>Intuitivo.</li><li>Poco estructurado.</li></ul></p>
+            </div>
+        </div>
+        <br>
+ <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222977"><div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <article class="flex_titulo_botonera" style="color: rgb(1, 6, 20); background-color: rgb(230, 225, 229);">
+        <p class="titulo_principal">Conduciendo una sesión</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="color: rgb(1, 6, 20);"><strong><span class="" style="color: rgb(0, 61, 245);"><br></span></strong></p>
+        <p style=""><span><span class="" style="color: rgb(51, 51, 51);"><span class="" style="color: rgb(51, 51, 51);">A continuación te proponemos realizar los siguientes pasos para conducir una sesión de torbellino de ideas junto a tu equipo.</span></span><br><br></span>
+        </p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">¿Cómo preparar la sesión?</p>
+        </div>
+        <p style=""><span><br><span class="" style="color: rgb(51, 51, 51);">Para organizar la sesión se sugiere:</span></span>
+        </p>
+        <div style="margin-left: 3%; margin-right: 3%;">
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600; color: rgb(51, 51, 51);" class="">Preparación:&nbsp;</span>
+                    </p>
+                    <li><span class="" style="color: rgb(51, 51, 51);">Identificar a los/las participantes.</span></li>
+                    <li><span class="" style="color: rgb(51, 51, 51);">Designar un/a líder.</span></li>
+                    <li><span class="" style="color: rgb(51, 51, 51);">Acordar la sesión con todos/as los/las participantes.</span></li>
+                    <li><span class="" style="color: rgb(51, 51, 51);">Preparar el lugar de reunión.</span></li>
+                    <p></p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600; color: rgb(51, 51, 51);" class="">Habilitar la palabra</span><span class="" style="color: rgb(51, 51, 51);">.</span></p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600; color: rgb(51, 51, 51);" class="">Establecer un orden de participación:</span>
+                    </p>
+                    <li><span class="" style="color: rgb(51, 51, 51);">Algunos/as líderes prefieren darle a cada participante por turno una oportunidad para expresar una idea.</span></li>
+                    <li><span class="" style="color: rgb(51, 51, 51);">Otros/as líderes toman ideas de los/las participantes sin un orden particular, seleccionándolos por su mano alzada.</span></li>
+                    <p></p>
+                </div>
+            </div>
+
+
+            <!-- 4 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600; color: rgb(51, 51, 51);" class="">Generar ideas:</span>
+                    </p>
+                    <li><span class="" style="color: rgb(51, 51, 51);">Los/las participantes son libres de generar nuevas ideas relevantes para la expresión del problema.</span></li>
+                    <li><span class="" style="color: rgb(51, 51, 51);">El proceso continúa mientras se generen ideas.</span><br></li>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <p style=""><span><br></span></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Reglas de Alex F. Osborn<br><br></p>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <table class="table table-bordered" style="border: 1px solid black;">
+            <colgroup>
+                <col span="1" style="width: 10%">
+                <col span="1" style="width: 90%;">
+            </colgroup>
+            <thead>
+                <!-- 
+                    <tr>
+                        <th scope="col" style="border: 1px solid black; text-align: center">Título 1</th>
+                        <th scope="col" style="border: 1px solid black">Título 2</th>
+
+                    </tr> -->
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid black; background-color: #EBF1FE"><b class="sub_negrita">
+
+                        Fase de generación
+
+
+
+
+                    </b></td>
+                    <td style="border: 1px solid black">Puede concluir de dos formas: <br>
+                        <ol>
+                            <li>Si no se genera una cantidad suficiente de ideas, se interrumpe la reunión y se continúa en otro momento.&nbsp;</li>
+                            <li>Si se han generado suficientes ideas y se han escrito, se pasa a la siguiente fase.</li>
+                        </ol>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; background-color: #D8E4FD"><b class="sub_negrita">
+                        Fase de consolidación
+                    </b></td>
+                    <td style="border: 1px solid black">Organizar las ideas para su mejor utilización. <br>
+                        <ul>
+                            <li>Revisar y aclarar las ideas.&nbsp;</li>
+                            <li>Combinar o volver a redactar ideas similares.&nbsp;</li>
+                            <li>Descartar ideas demasiado osadas.&nbsp;</li>
+                            <li>Clasificar las ideas por prioridades.</li>
+                        </ul>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; background-color: #C5D6FC"><b class="sub_negrita"> Fase de Cierre</b></td>
+                    <td style="border: 1px solid black">El/la líder u otra persona designada registra todas las ideas con sus prioridades y comentarios relevantes de la fase de consolidación.</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222978"><div style="background-color: rgb(250, 250, 250);">
+    <article class="flex_titulo_botonera" style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(230, 225, 229);">
+        <p class="titulo_principal">Análisis de documentación</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style="color: rgb(1, 6, 20); font-size: large;"><strong><span class="" style="color: rgb(0, 61, 245);"><br></span></strong></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;">Esta técnica consiste en la <span class="" style="color: rgb(0, 46, 184);">evaluación de información</span> relacionada con el dominio del problema. Se debe tener en claro el material que se va a estudiar, sino se corre el riesgo de <b><span class="" style="color: rgb(0, 46, 184);">coleccionar </span></b>una
+            serie de documentos sin sentido. También es necesario considerar que le relevancia de la información está relacionada directamente con el tipo de sistema de información que se va a desarrollar.<br></p>
+
+        <div style="color: rgb(0, 0, 255); font-size: large; margin-bottom: 10px;"><span class="sub_negrita" style="color: rgb(0, 46, 184);">Fuentes principales</span></div>
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Diarios, revistas, publicaciones relativas al mercado:&nbsp;</span>Nos permite tener un conocimiento general de los problemas y posibilidades futuras de dicho mercado, como así también de técnicas, máquinas,
+                    etc. nuevas, que nos pueden brindar soluciones en el nuevo sistema.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Leyes, normas, o reglamentaciones estatales:</span> Es indispensable conocer las restricciones que imponen a la empresa.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Documentación de la empresa:</span> </p>
+                <ul>
+                    <li>Planes de la organización.</li>
+                    <li>Listado de personal.</li>
+                    <li>Descripción de funciones y autoridad.</li>
+                    <li>Documentación de procesos del negocio.</li>
+                </ul>
+                <p></p>
+            </div>
+        </div>
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222979"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+        <p class="titulo_principal">Observación participativa</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+
+        <div style="color: #0000FF; margin-bottom: 10px;"><span style="color: rgb(1, 6, 20);">A veces es necesario obtener más información sobre los procedimientos, tiempos de trabajo y volumen de trabajo a través de observación directa. La relación de las competencias del personal, tiempo de trabajo y volúmenes de producción, por un lado,
+            y por el otro los métodos de trabajo usados y la efectividad/eficiencia obtenida, nos puede dar un indicador de los problemas en la organización o en la determinación de funciones.</span><br></div>
+
+        <p>Para poder hacer las mediciones correspondientes hay que <span class="" style="color: rgb(0, 46, 184);">elegir con sumo cuidado el período o momento de observación</span>. Dichos períodos pueden variar, por lo tanto, para que sean representativos
+            se deben hacer las observaciones en diferentes momentos.</p>
+
+        <p>Observar las operaciones del negocio ya sea a nivel transaccional o decisional tiene sus desventajas. El simple hecho de sentirse observado hace que la persona cambie la forma de llevar a cabo las tareas. Para evitar esto una buena técnica es
+            la <strong><span class="" style="color: rgb(0, 46, 184);">observación participativa</span></strong><span class="" style="color: rgb(0, 46, 184);"> </span>en donde el analista realiza las tareas.</p>
+
+        <div style="color: #0000FF; margin-bottom: 10px;"><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">Beneficios de la observación<br><br></b></span></div>
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Procedimientos normales de operación.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Controles y verificaciones de exactitud.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Documentación utilizada.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Decisiones que se toman. </p>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">¿Se realiza el trabajo en forma efectiva?</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">¿Se realiza el trabajo en forma eficiente?</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">El lugar donde se realiza el trabajo es ergonómicamente positivo, si no lo es, ¿cómo afecta en la productividad? </p>
+            </div>
+        </div>
+    </div><br>
+  <div style="margin-left: 3%; margin-right: 3%;">
+    <!-- Cuadro amarillo borde violeta -->
+    <br>
+
+    <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+        <div style="margin:16px">
+            <p style="color: #5811BB; font-size: large; font-weight: 600">Observación participativa</p>
+            <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Es una técnica en la cual el analista se involucra activamente en las tareas del proceso que está observando. Esto permite obtener una visión más realista y precisa de cómo se llevan a cabo las actividades, minimizando el efecto de la persona que está siendo observada.</p></div></div>
+    <p><br></p>
+</div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222980"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+        <p class="titulo_principal">Especificación de requerimientos</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div style="color: #0000FF; margin-bottom: 10px;"><br></div>
+        <div style="color: #0000FF; margin-bottom: 10px;"><span style="color: rgb(1, 6, 20);">La especificación de requerimientos se presenta no sólo con el objetivo de organizar los requisitos, sino también como una herramienta para descubrir requisitos implícitos, ocultos y cuyo descubrimiento tardío puede hacer fracasar el proyecto
+            y anular los resultados de las inversiones ya realizadas.<br></span><br></div>
+
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Objetivo de la especificación</p>
+        </div>
+        <p><br>Si la elicitación de requisitos encuentra las piezas del rompecabezas, entonces la especificación de requerimientos busca armarlo. El objetivo de la especificación de requerimientos es aumentar la comprensión actual de la información, completarla
+            y mejorarla. La información descubierta con la elicitación de las necesidades del negocio y de los requisitos de los usuarios son sus entradas.</p>
+
+        <div style="color: #0000FF; margin-bottom: 10px;"><b><span class="" style="color: rgb(0, 46, 184);">Relación entre análisis y elicitación</span></b></div>
+        <p>Una representación más completa del análisis debe incluir, como parte de sus productos, <span class="" style="color: rgb(0, 46, 184);">directrices para nuevas sesiones de elicitación</span> basadas en el descubrimiento de estas necesidades de información o decisión. Esta representación, debe posicionar
+            la relación entre el análisis y la elicitación como bidireccional.</p>
+<!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Especificación de requerimientos</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Es el proceso de detallar, documentar y validar los requisitos del sistema. Es una fase crucial en el ciclo de vida del desarrollo de software, ya que sirve como base para el diseño, implementación y pruebas del sistema.</p></div></div>
+        <p><br></p>
+
+        <p style="text-align: center;"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812175/mod_book/chapter/222980/1.png" alt=" " width="800" height="499" class="img-responsive atto_image_button_text-bottom"></p><p style="text-align: center;"><br></p></div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222981"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+        <p class="titulo_principal">¿Qué es la especificación de requerimientos?</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div style="color: #0000FF; margin-bottom: 10px;"><br></div>
+        <div style="color: #0000FF; margin-bottom: 10px;"><span style="color: rgb(1, 6, 20);">Es la <span class="" style="color: rgb(0, 46, 184);">transformación de la información</span> presente en los requisitos de los usuarios y las necesidades de negocio en un conjunto de requerimientos de software,
+            funcionales y no funcionales.</span><br></div>
+
+        <div style="color: #0000FF; margin-bottom: 10px;"><b><span class="sub_negrita" style="color: rgb(0, 46, 184);">Procesos involucrados</span></b></div>
+        <p>Esta transformación se realiza utilizando diferentes procesos de:</p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Revisión de la información.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Descomposición de la información.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Síntesis de la información.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Generación de modelos. </p>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Descripción de los requerimientos. </p>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 3%; margin-right: 3%;"><br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Especificación de requerimientos</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Es el proceso de detallar, documentar y validar los requisitos del sistema. Es una fase crucial en el ciclo de vida del desarrollo de software, ya que sirve como base para el diseño, implementación y pruebas del sistema. </p>
+            </div>
+        </div>
+        <div style="background-color: #FAFAFA; padding: 10px; margin-top: 10px; color: #FF007F;"><br></div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222982"><div style="background-color: rgb(250, 250, 250);">
+    <article class="flex_titulo_botonera" style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(230, 225, 229);">
+        <p class="titulo_principal">Inconvenientes al escribir requerimientos</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div style="color: rgb(0, 0, 255); font-size: large; margin-bottom: 10px;"><br></div>
+        <p style="color: rgb(1, 6, 20); font-size: large;">A continuación, se detallarán los principales inconvenientes a la hora de escribir requerimientos, incluyendo algunos lineamientos para evitarlos.</p>
+  <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Evitar el uso de supuestos erróneos:&nbsp;</span>Ocurren por dos motivos: o porque el autor del requerimiento no tiene acceso a toda la información o porque la información no existe. Para eliminar el primer problema, se debe documentar la información crítica relacionada con el proyecto, incluyendo:<br></p><ul><li>Necesidades</li><li>Metas</li><li>Objetivos</li><li>Restricciones</li><li>Omisiones</li><li>Operaciones conceptuales</li><li>Presupuesto</li><li>Tiempos</li><li>Gestión/Organización</li></ul><p>En el segundo caso, en donde la información no existe, el autor del requerimiento debería documentar los supuestos que asuma. Así, cuando el requerimiento sea revisado, los supuestos podrán revisarse y los problemas derivados de los mismos serán claramente identificables.</p><p></p></div></div><br>
+  <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">No incluir cuestiones relacionadas con el ambiente de implementación:&nbsp;</span>La especificación de requerimientos debe expresar&nbsp;<b><span class="" style="color: rgb(0, 46, 184);">qué</span></b><span class="" style="color: rgb(0, 46, 184);">&nbsp;</span>es necesario, no&nbsp;<b><span class="" style="color: rgb(0, 46, 184);">cómo</span></b><span class="" style="color: rgb(0, 46, 184);">&nbsp;</span>hacerlo.</p>
+                    </div>
+                </div>
+        <div style="color: rgb(0, 0, 255); font-size: large; margin-bottom: 10px;"><br></div>
+  <!-- 1 -->
+                <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Utilizar un lenguaje simple, consistente y conciso:&nbsp;</span>Los requerimientos deben ser fáciles de leer y de entender. Al expresar un requerimiento en lenguaje natural es recomendable hacerlo usando un lenguaje simple y conciso. De ser posible se debería evitar las construcciones con oraciones largas y complejas, párrafos y terminología ambigua.</p></div></div>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br><br></p>
+    </div>
+</div>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222983"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+        <p class="titulo_principal">Redacción de requerimientos: algunos lineamientos</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p><br></p>
+        Los lineamientos generales son <span class="" style="color: rgb(0, 46, 184);">principios o directrices que sirven como guía para la elaboración de requerimientos</span> de manera efectiva y clara. Al seguir estos lineamientos, se puede asegurar
+        que los requerimientos sean comprensibles, consistentes y adecuados para el desarrollo del proyecto.
+        <br><br>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Mantener oraciones cortas para facilitar la comprensión.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Expresar un solo requerimiento por oración.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Evitar la conjunción "y" para no mezclar conceptos.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">No usar jergas, abreviaturas y acrónimos. </p>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Asegurarse de que los acrónimos sean claros y específicos.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Mantener párrafos cortos, no más de 7 oraciones.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Usar tablas y listas para presentar información.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Usar terminología consistente en todo el documento. </p>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Definir términos en un diccionario de datos.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Usar "debe" para requerimientos obligatorios.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Usar verbos en futuro para lo que será provisto externamente.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Evitar cláusulas condicionales anidadas en requerimientos.</p>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Usar "debería" para requerimientos recomendados.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Utilizar tablas de decisión si las sentencias anidadas son necesarias.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Preferir la voz activa sobre la voz pasiva.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">No expresar relaciones complejas en lenguaje natural; usar diagramas. </p>
+            </div>
+        </div>
+       <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Evitar referencias anónimas; dar descripciones breves.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Cuidar la ortografía y la gramática para evitar confusiones.</p>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222984"><div style="background-color: rgb(250, 250, 250);">
+    <article class="flex_titulo_botonera" style="color: rgb(1, 6, 20); font-size: large; background-color: rgb(230, 225, 229);">
+        <p class="titulo_principal">Definición de requerimientos</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <br>
+        <!--Tabla 2 columnas varias filas de colore-->
+        <table class="tabla-filaColores texto-principal" style="color: rgb(1, 6, 20); font-size: large; width: 96%; margin: 0px auto;">
+            <colgroup span="1" width="30%"></colgroup>
+            <colgroup span="1" width="70%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado">Componentes</td>
+                    <td class="tabla-filaColores-categoria texto-centrado"> Descripción</td>
+                </tr>
+
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita">Ambigüedad de términos</b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Los requerimientos pueden no ser verificables por distintas razones. Sin embargo, la razón más común es el uso de términos ambiguos o subjetivos en la descripción de estos, lo cual implica que dichos términos podrán ser interpretados
+                        de distinta manera por distintos/as lectores/as.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita">Términos a evitar</b></td>
+                    <td class="texto-margen-tabla texto-centrado">
+                        <p style="text-align: left;"></p>
+                        Mínimo //&nbsp;Máximo //&nbsp;Rápido //&nbsp;Interfaz amigable //&nbsp;Fácil //&nbsp;Suficiente // Adecuado<br><ul>
+                        </ul>
+                        <p></p>
+                    </td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita">Metas vs. Requerimientos</b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Si no se puede definir con claridad qué se necesita exactamente, entonces se está definiendo una meta de diseño, no un requerimiento. Para expresar las metas de diseño, use la palabra&nbsp;<b><span class="" style="color: rgb(0, 46, 184);">debería</span></b>.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita">Verificación de Requerimientos</b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Para realizar la verificación de los requerimientos, suelen usarse&nbsp;<i>checklist&nbsp;</i>o listas de verificación.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita">Uso de Checklists</b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Un&nbsp;<i>checklist&nbsp;</i>es una lista de preguntas utilizada por el/la analista para evaluar cada uno de los requerimientos. Los/las analistas deberían ir completando esta lista a medida que vayan leyendo el documento de requerimientos.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita">Implementación de Listas de Análisis</b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Esta lista de análisis puede implementarse con una hoja de cálculo donde las filas sean los identificadores de requerimientos y las columnas sean los ítems del&nbsp;<i>checklist</i>.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita">Evolución de Checklists</b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Los&nbsp;<i>checklists&nbsp;</i>son recursos de la organización que deberían evolucionar a medida que se obtenga más experiencia en el proceso de análisis de requerimientos.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita">Objetivo del Análisis</b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">El objetivo del análisis es descubrir problemas de requerimientos; no es una actividad de gestión de la calidad (ya que es una etapa posterior del proceso).</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;"><b class="sub_negrita">No omitir requerimientos necesarios</b></td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">
+                        <p>Muchas veces ocurre que hay requerimientos que son omitidos porque los/las encargados/as de detectarlos se focalizan sólo en una parte del sistema.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="color: rgb(255, 0, 127); font-size: large; background-color: rgb(250, 250, 250); padding: 10px; margin-top: 10px;"><br><br></div>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222985"><div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+        <p class="titulo_principal">Validación de requerimientos (o requisitos)</p>
+    </article>
+
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <br>
+        <!--Tabla 2 columnas varias filas de colores con líneas completas-->
+
+
+        <table class="tabla-filaColores texto-principal" style="width: 90%; margin: 0 auto; border: 1px solid black;">
+            <colgroup span="1" width="20%"></colgroup>
+            <colgroup span="1" width="80%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado">Objetivo de validación</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">La validación de los requisitos es un trabajo de garantía de calidad en la Ingeniería de requisitos que busca asegurar que todos los requisitos especificados estén alineados con los requisitos del negocio.</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="tabla-filaColores-categoria texto-centrado">Alcance y propósito</td>
+                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">El propósito es garantizar que la especificación defina el producto adecuado que será desarrollado. En resumen, se evalúa si el software satisface al/la cliente.</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="tabla-filaColores-categoria texto-centrado">Técnicas de validación</td>
+                    <td>
+                        <table style="width: 100%; border: 0px solid black; border-collapse: collapse;">
+                            <thead>
+                                <tr class="tabla-filaColores-categoria">
+                                    <td class="texto-margen-tabla texto-centrado">Prototipos</td>
+                                    <td class="texto-margen-tabla texto-centrado">Animación</td>
+                                    <td class="texto-margen-tabla texto-centrado">Sistemas expertos</td>
+                                    <td class="texto-margen-tabla texto-centrado">Conocimientos requeridos</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tabla-filaColores-par">
+                                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Método eficiente para validar requisitos presentando propuestas concretas del producto.</td>
+                                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Representación visual interactiva de objetos principales en tiempo real.</td>
+                                    <td class="texto-margen-tabla texto-centrado" style="text-align: left;">Herramientas CASE con conocimiento especializado del proceso.</td>
+                                    <td class="texto-margen-tabla texto-centrado">
+                                        <p style="text-align: left;"><ul><li>Conocimiento del método.</li><li>Conocimiento del dominio.</li></ul></p><br></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+        <br><br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch222986"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Prototipo</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p><span class="" style="color: rgb(255, 51, 204);"><br></span></p>
+        <p>La <span class="" style="color: rgb(0, 46, 184);">creación de prototipos</span> es una técnica que pretende simular para el usuario el funcionamiento de sus necesidades antes de que el producto final esté listo. Es un <span class="" style="color: rgb(0, 46, 184);">proceso iterativo</span>            de generar versiones iniciales de prototipos, y a través de ellos el usuario puede analizar si se están cumpliendo los requisitos e incluso descubrir nuevos requisitos. También se utiliza para <span class="" style="color: rgb(0, 46, 184);">mejorar la experiencia del usuario</span>,
+            evaluar las opciones de <span class="" style="color: rgb(0, 46, 184);">diseño </span>y establecer una base para el <span class="" style="color: rgb(0, 46, 184);">desarrollo final</span> del producto.</p>
+
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Ciclo de creación</p>
+        </div>
+        <p><br>Comienza en la <span class="" style="color: rgb(0, 46, 184);">obtención de los requisitos</span>, mediante el diseño de un prototipo, donde se deciden qué técnicas y qué enfoque de prototipado usar, y luego construir un prototipo. Después
+            de la construcción del prototipo, el usuario y el/la desarrollador/a lo utilizarán para refinar requisitos. Entonces, el proceso comienza de nuevo para una nueva creación de prototipos hasta que todas las condiciones sean propicias para el
+            desarrollo.
+        </p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Elección de método a utilizar</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">Qué método utilizar para la creación del prototipo debe hacerse con cuidado, siempre alineado con el objetivo del prototipo, ya que estos influenciarán en la productividad y el costo de su proyecto. La elección de un enfoque equivocado
+                    a su objetivo puede obstaculizar el desarrollo en lugar de ayudar. </p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">Evaluación del prototipo</b></span></p>
+        <p>Una vez terminado el prototipo, <span class="" style="color: rgb(0, 46, 184);">el/la desarrollador/a y el/la cliente se deben reunir </span>y evaluar si los prototipos construidos se ajustan a los requisitos. El <i>feedback</i> con esos inconvenientes es el producto de mayor valor de la creación
+            de prototipos. Servirá como <span class="" style="color: rgb(0, 46, 184);">entrada para que los requisitos se puedan refinar</span> aún más.<br><br></p>
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[723378,723381,723385,723388,723402,723405,723407,723410,723412,723415,723417,723420,723422,723425,723428,723431,723432,723435,723438,723441,723443,723446,723448,723450]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1757558299/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2812175, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1759158730); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\nconfig: [\"Accessible.js\", \"Safe.js\"],\r\nerrorSettings: { message: [\"!\"] },\r\nskipStartupTypeset: true,\r\nmessageStyle: \"none\"\r\n});","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random68daa20e855b02'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random68daa20e855b02'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
