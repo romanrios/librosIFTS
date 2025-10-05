@@ -37,6 +37,10 @@
       {
         "texto": "08 - Componentes y ciclo de vida",
         "url": "./pages/Front/front_08.html"
+      },
+      {
+        "texto": "09 - Estilos en React",
+        "url": "./pages/Front/front_09.html"
       }
     ]
   },
@@ -220,6 +224,10 @@
       {
         "texto": "08 - Bases de datos en Express",
         "url": "./pages/Back/back_08.html"
+      },
+      {
+        "texto": "09 - Creación de una API REST completa",
+        "url": "./pages/Back/back_09.html"
       }
     ]
   }
