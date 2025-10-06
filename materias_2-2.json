@@ -42,7 +42,7 @@
         "texto": "09 - Estilos en React",
         "url": "./pages/Front/front_09.html"
       }
-    ]
+    ] 
   },
   {
     "nombre": "Ingeniería de Software",
@@ -86,6 +86,10 @@
       {
         "texto": "08 - Especificación de requerimientos",
         "url": "./pages/Ingenieria/ingenieria_08.html"
+      },
+            {
+        "texto": "09 - Administración de requerimientos",
+        "url": "./pages/Ingenieria/ingenieria_09.html"
       }
     ]
   },
