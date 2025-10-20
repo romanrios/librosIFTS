@@ -45,6 +45,10 @@
       {
         "texto": "10 - Formularios en React",
         "url": "./pages/Front/front_10.html"
+      },
+      {
+        "texto": "11 - APIs",
+        "url": "./pages/Front/front_11.html"
       }
     ]
   },
@@ -98,6 +102,10 @@
       {
         "texto": "10 - Proyectos",
         "url": "./pages/Ingenieria/ingenieria_10.html"
+      },
+      {
+        "texto": "11 - Metodología ágil",
+        "url": "./pages/Ingenieria/ingenieria_11.html"
       }
     ]
   },
@@ -115,6 +123,10 @@
       {
         "texto": "03 - Módulo 1: Info. gral. sobre los conceptos de la nube",
         "url": "./pages/Nube/nube_03.html"
+      },
+      {
+        "texto": "📁 Clase 10 - (Opcional) Contenedores",
+        "url": "./pages/nube/nube_clase_10.pdf"
       }
     ]
   },
@@ -240,6 +252,10 @@
       {
         "texto": "09 - Creación de una API REST completa",
         "url": "./pages/Back/back_09.html"
+      },
+      {
+        "texto": "10 - Autenticación, cookies y sesiones",
+        "url": "./pages/Back/back_10.html"
       }
     ]
   }

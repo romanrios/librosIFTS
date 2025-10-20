@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>11. Metodología ágil | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1760202135/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, 11. Metodología ágil | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1760202135_1757558579/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"zfkLncOJGS","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1760202135","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1757558299","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":22800,"courseContextId":2812100,"contextid":2812188,"contextInstanceId":723462,"langrev":1760772244,"templaterev":"1757558299","developerdebug":true};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":true,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":"RAW","insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1757558299\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1757558299\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":"DEBUG","modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1757558299\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1757558299\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1757558299\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?config=TeX-AMS_SVG%22&delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-22800 context-2812188 cmid-723462 cm-type-book category-3279 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1760202135/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>11. Metodología ágil</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Ingeniería de Software - 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        11. Metodología ágil
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        lunes, 20 de octubre de 2025, 08:23
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=22800&amp;section=13" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723461&amp;forceview=1" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+                <a href="" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723463" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Métodos ágiles" class="font-weight-bold text-decoration-none" href="#ch223025">1. Métodos ágiles</a></li><li><a title="2. Manifiesto ágil: valores" class="font-weight-bold text-decoration-none" href="#ch223026">2. Manifiesto ágil: valores</a><ul><li><a title="2.1. Principios del Manifiesto" class="text-decoration-none" href="#ch223036">2.1. Principios del Manifiesto</a></li><li><a title="2.2. Agilismo" class="text-decoration-none" href="#ch223037">2.2. Agilismo</a></li></ul></li><li><a title="3. Historias de usuario" class="font-weight-bold text-decoration-none" href="#ch223027">3. Historias de usuario</a><ul><li><a title="3.1. Redacción de una historia de usuario" class="text-decoration-none" href="#ch223034">3.1. Redacción de una historia de usuario</a></li><li><a title="3.2. Criterios de aceptación" class="text-decoration-none" href="#ch223035">3.2. Criterios de aceptación</a></li><li><a title="3.3. INVEST - Características de una historia de usuario" class="text-decoration-none" href="#ch223028">3.3. INVEST - Características de una historia de usuario</a></li></ul></li><li><a title="4. Estimaciones en ambientes ágiles" class="font-weight-bold text-decoration-none" href="#ch223029">4. Estimaciones en ambientes ágiles</a><ul><li><a title="4.1. Planning poker" class="text-decoration-none" href="#ch223030">4.1. Planning poker</a></li><li><a title="4.2. La sabiduría de las multitudes" class="text-decoration-none" href="#ch223031">4.2. La sabiduría de las multitudes</a></li></ul></li><li><a title="5. Cómo derivar la duración de un proyecto en ambientes ágiles" class="font-weight-bold text-decoration-none" href="#ch223032">5. Cómo derivar la duración de un proyecto en ambientes ágiles</a></li><li><a title="6. Algunas consideraciones finales" class="font-weight-bold text-decoration-none" href="#ch223033">6. Algunas consideraciones finales</a></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223025"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Introducción a los métodos ágiles</p>
+</article>
+<div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p style=""><br></p>
+        <p style="color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: rgb(51, 51, 51);">En febrero de 2001 se reunieron en Utah (EEUU) un grupo de diecisiete profesionales reconocidos del desarrollo de software, representantes de nuevos métodos y críticos de los procesos predictivos de control; convocados por Kent Beck, para discutir sobre el desarrollo de software, con el objetivo de determinar los valores y principios que les permitirían a los equipos desarrollar software de mejor calidad y responder con más eficiencia a los cambios que pudieran surgir a lo largo de un proyecto de desarrollo.<br></span></p><p style="color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Se pretendía ofrecer una <span class="" style="color: rgb(0, 46, 184);">alternativa a los procesos de desarrollo de software tradicionales</span>, basados en los de control predictivo.</span></p>
+        <p style="color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: rgb(51, 51, 51);">En esta reunión, se creó la<span class="" style="color: rgb(0, 46, 184);"> Agile Alliance</span>, una organización sin fines de lucro, cuyo objetivo es el de promover los valores y principios de la filosofía ágil y ayudar a las organizaciones en su adopción.</span></p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Manifiesto ágil</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">La piedra angular del movimiento&nbsp;y está apoyada con la firma de más de 100 referentes de la industria de software mundial.</p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20);"><br></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223026"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Manifiesto ágil: valores</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br>El Manifiesto ágil se compone de 4 valores y doce principios. Observá la siguiente infografía:</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"></span></p><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812188/mod_book/chapter/223026/Sin%20t%C3%ADtulo-1.png" alt=" " width="1060" height="450" class="img-responsive atto_image_button_text-bottom">
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Estudiemos ahora lo que significa cada uno de estos valores:</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">Valorar a las personas y las interacciones entre ellas por sobre los procesos y las herramientas</b></span></span>
+            </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Las personas son el factor clave para el éxito en un proyecto de software. Es esencial priorizar la construcción de un buen equipo que pueda crear su propio entorno y procesos según sus necesidades, en lugar de imponerles un entorno predefinido.<br><br></span></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">En lugar de establecer un conjunto rígido de herramientas y procesos desde el principio, un equipo ágil se reúne regularmente para discutir y ajustar su forma de trabajo según lo que mejor funcione para ellos.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Valorar el software funcionando por sobre la documentación detallada</span></b>
+            </span>
+            </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">La prioridad es tener un software que funcione y que proporcione valor al usuario. La documentación debe ser mínima y enfocada en lo esencial para tomar decisiones importantes, evitando la ilusión de progreso basada en documentos extensos.<br><br></span></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Un equipo ágil se enfoca en desarrollar y entregar software usable en iteraciones cortas, y solo crea la documentación necesaria para soportar esas entregas, como notas de <i>release </i>o instrucciones básicas de uso.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Valorar la colaboración con el cliente por sobre la negociación de contratos</span></b>
+            </span>
+            </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Una colaboración continua con el cliente asegura que el proyecto se mantenga alineado con sus necesidades y expectativas. Esta interacción constante se prefiere a una relación basada en la negociación de contratos donde cada parte podría verse como adversaria.<br><br></span></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">En lugar de depender de un contrato detallado que define todos los requisitos al inicio, un equipo ágil trabaja con el cliente a lo largo del proyecto, revisando y ajustando los requisitos y prioridades en cada iteración.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Valorar la respuesta a los cambios por sobre el seguimiento estricto de los planes&nbsp;</span></b>
+            </span>
+            </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span></p>La capacidad de adaptarse a los cambios durante el proyecto es crucial. Los planes deben ser flexibles y abiertos a ajustes en lugar de ser seguidos rígidamente, ya que
+        las circunstancias y la información disponibles pueden cambiar.
+        <p style=""><br></p>
+        <!--Caja + Ejemplo + sin imagen + texto-->
+        <div style="position: relative; border-radius: 8px; border: 1px solid #ae11a0; background-color: white; padding-top: 16px;">
+            <p style="color: white; background-color: #ae11a0; padding: 4px 16px; border-radius: 8px; position: absolute; top: -16px; left: 16px; z-index: 1;">
+                <span class="" style="font-size: large;"><b><span class="" style="font-size: large;">Ejemplo</span></b>
+                </span>
+            </p>
+            <div style="margin: 32px 8px 16px 8px; display: flex; align-items: center;">
+                <div class="col" style="">
+                    <p style="">Si durante el desarrollo se descubre una nueva tecnología que podría mejorar significativamente el producto, el equipo ágil adapta sus planes para incorporarla, en lugar de seguir estrictamente el plan original.<br></p>
+                    <ul style="color: rgb(1, 6, 20);">
+                    </ul>
+                    <p style="color: rgb(1, 6, 20);"></p>
+                </div>
+            </div>
+        </div>
+        <!--Fin Caja + Ejemplo + imagen + texto-->
+        <br>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223036"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Principios del Manifiesto</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style=""><span class="" style="font-size: large; color: rgb(0, 61, 245);"><br><span class="" style="color: rgb(51, 51, 51);">Te invitamos a observar la siguiente infografía para recorrer los principios del manifiesto ágil.</span></span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812188/mod_book/chapter/223036/5.png" alt=" " width="1060" height="634" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span class="" style="font-size: large; color: rgb(51, 51, 51);">Los valores anteriores son los pilares sobre los cuales se construyen los doce principios del manifiesto ágil. De estos doce principios, los dos primeros son generales y resumen gran parte del espíritu ágil del desarrollo de software, mientras que los siguientes son más específicos y orientados al proceso o al equipo de desarrollo:</span></p>
+        <p></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p>Nuestra mayor prioridad es satisfacer al cliente a través de entregas tempranas y frecuentes de software con valor.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Aceptar el cambio incluso en etapas tardías del desarrollo. Los procesos ágiles aprovechan los cambios para darle al cliente ventajas competitivas.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Entregar software funcionando en forma frecuente, desde un par de semanas a un par de meses, prefiriendo el periodo de tiempo más corto.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Expertos del negocio y desarrolladores deben trabajar juntos diariamente durante la ejecución del proyecto. </p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Construir proyectos en torno a personas motivadas, generándoles el ambiente necesario, atendiendo sus necesidades y confiando en que ellos van a poder hacer el trabajo. </p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>La manera más eficiente y efectiva de compartir la información dentro de un equipo de desarrollo es la conversación cara a cara. </p>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.37 5.11h3.972v.07L6.025 12H7.42l3.258-6.85V4.002H5.369v1.107Z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p>El software funcionando es la principal métrica de progreso. </p>
+            </div>
+        </div>
+
+
+        <!-- 8 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-5.03 1.803c0-1.248-.943-1.84-1.646-1.992v-.065c.598-.187 1.336-.72 1.336-1.781 0-1.225-1.084-2.121-2.654-2.121-1.57 0-2.66.896-2.66 2.12 0 1.044.709 1.589 1.33 1.782v.065c-.697.152-1.647.732-1.647 2.003 0 1.39 1.19 2.344 2.953 2.344 1.77 0 2.989-.96 2.989-2.355Zm-4.347-3.71c0 .739.586 1.255 1.383 1.255s1.377-.516 1.377-1.254c0-.733-.58-1.23-1.377-1.23s-1.383.497-1.383 1.23Zm-.281 3.645c0 .838.72 1.412 1.664 1.412.943 0 1.658-.574 1.658-1.412 0-.843-.715-1.424-1.658-1.424-.944 0-1.664.58-1.664 1.424Z"></path>
+</svg>
+
+            </div>
+            <div class="col">
+                <p>Los procesos ágiles promueven el desarrollo sostenible. Los sponsors, desarrolladores y usuarios deben poder mantener un ritmo constante indefinidamente. </p>
+            </div>
+        </div>
+
+
+
+        <!-- 9 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.223 4.146c2.104 0 3.123-1.464 3.123-4.3 0-3.147-1.459-4.014-2.97-4.014-1.63 0-2.871 1.02-2.871 2.73 0 1.706 1.171 2.667 2.566 2.667 1.06 0 1.7-.557 1.934-1.184h.076c.047 1.67-.475 3.023-1.834 3.023-.71 0-1.149-.363-1.248-.72H5.258c.094.908.926 1.798 2.52 1.798Zm.118-3.972c.808 0 1.535-.528 1.535-1.594s-.668-1.676-1.56-1.676c-.838 0-1.517.616-1.517 1.659 0 1.072.708 1.61 1.54 1.61Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>La atención continua a la excelencia técnica y buenos diseños incrementan la agilidad. </p>
+            </div>
+        </div>
+
+
+        <!-- 10 -->
+        <div class="row" style="margin-left: 32px">
+            <div style="margin-left: -10px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812188/mod_book/chapter/223036/10%20circulo.png" alt="10" width="24" height="24" role="presentation" class="img-responsive atto_image_button_text-bottom">
+            </div>
+            <div class="col" style="margin-left: -8px">
+                <p>La simplicidad –el arte de maximizar la cantidad de trabajo no hecho- es esencial. </p>
+            </div>
+        </div>
+        <!-- 10 -->
+        <div class="row" style="margin-left: 32px">
+            <div style="margin-left: -10px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812188/mod_book/chapter/223036/11%20circulo.png" alt="10" width="24" height="24" role="presentation" class="img-responsive atto_image_button_text-bottom">
+            </div>
+            <div class="col" style="margin-left: -8px">
+                <p>Las mejores arquitecturas, requerimientos y diseños emergen de equipos auto-organizados. </p>
+            </div>
+        </div>
+        <!-- 10 -->
+        <div class="row" style="margin-left: 32px">
+            <div style="margin-left: -10px">
+                <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812188/mod_book/chapter/223036/12%20circulo.png" alt="10" width="24" height="24" role="presentation" class="img-responsive atto_image_button_text-bottom">
+            </div>
+            <div class="col" style="margin-left: -8px">
+                <p>A intervalos regulares, el equipo reflexiona acerca de cómo convertirse en más efectivos, luego mejora y ajusta su comportamiento adecuadamente. </p>
+            </div>
+        </div>
+
+        <br><p><span class="" style="font-size: large; color: rgb(51, 51, 51);">Existen numerosos métodos o <i>frameworks </i>(marcos de trabajo) ágiles actualmente en la industria, en la próxima semana les presentaremos uno de los <i>frameworks </i>más utilizados en la actualidad para gestión ágil de proyectos: <span class="" style="color: rgb(0, 46, 184);">SCRUM.</span></span></p>
+        <p></p>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223037"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Agilismo</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br>Abordaremos la forma que propone el <b><span class="" style="color: rgb(0, 46, 184);">agilismo</span></b><span class="" style="color: rgb(0, 46, 184);"> </span>para tratar los
+            requerimientos.
+            </span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span style="color: rgb(51, 51, 51);">Dada la situación habitual en los proyectos de desarrollo de software donde clientes/usuarios se comunican con los equipos de desarrollo a través de extensos documentos de requerimientos que están sujetos a interpretaciones, lo que provoca malentendidos y que finalmente el software construido no se corresponda con la realidad esperada.&nbsp;</span><br></p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Por qué no siempre se logra que la sea comunicación efectiva?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Una de las principales razones por las cuales la utilización de especificaciones detalladas, como medio de comunicación, no conduce a resultados satisfactorios es porque sólo cubre una porción mínima (7%) del espectro de la comunicación humana: el contenido.&nbsp; </p>
+            </div>
+        </div>
+        <br>
+ <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Según Albert Mehrabian, la comunicación humana se compone de tres partes:&nbsp;</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"></p>
+        <!-- 1 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">En un 7%: El contenido (las palabras, lo dicho).</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">En un 38%: El tono de la voz.&nbsp;</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="color: rgb(1, 6, 20); font-size: large; margin-left: 32px;">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">En un 55%: Las expresiones faciales.</p>
+            </div>
+        </div>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Por lo que se deduce que, para <span class="" style="color: rgb(0, 46, 184);">tener una comunicación sólida, completa, es necesario el contacto cara-a-cara</span> entre los interlocutores.&nbsp;</span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);">En un esfuerzo orientado a que esas conversaciones existan y por resolver los problemas asociados a la identificación de los requerimientos, es que Mike Cohn creó la técnica de <span class="" style="color: rgb(0, 46, 184);">Historias de usuario</span>            (en inglés<i> User Stories</i>).</span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223027"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Historia de usuarios</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Una<b> <span class="" style="color: rgb(0, 46, 184);">historia de usuario</span></b> (<i>user story</i>) es una descripción corta de una funcionalidad, valuada por un usuario o cliente
+            de un sistema.</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Componentes de una historia de usuario</span><span class="" style="color: rgb(0, 46, 184);">&nbsp;</span></b>
+            </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Una historia de usuario se compone de 3 elementos, también conocidos como “las tres Cs” de las Historias de usuario:&nbsp;</span></p>
+        <p style=""></p>
+       <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Cards (fichas):&nbsp;</span>&nbsp;Toda historia de usuario debe poder describirse en una ficha de papel pequeña. Si una Historia de usuario no puede describirse en ese tamaño, es una señal de que estamos traspasando las fronteras y comunicando demasiada información que debería compartirse cara a cara.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Conversación:</span> Toda historia de usuario debe tener una conversación con el Dueño de Producto (Product Owner). Una comunicación cara a cara que intercambia no sólo información sino también pensamientos, opiniones y sentimientos.&nbsp;</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Confirmación:</span> Toda historia de usuario debe estar lo suficientemente explicada para que el equipo de desarrollo sepa qué es lo que debe construir y qué es lo que el Product Owner espera. Esto se conoce también como Pruebas de Aceptación.&nbsp;<span style="color: rgb(51, 51, 51);">&nbsp;</span></p></div></div><ul>
+        </ul>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223034"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Redacción de una historia de usuario</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <p style=""><span style="color: rgb(51, 51, 51); font-size: large;"><br></span></p>
+        <p style=""><span style="color: rgb(51, 51, 51); font-size: large;">Mike Cohn sugiere una determinada forma de redactar historias de usuario bajo el siguiente formato:&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812188/mod_book/chapter/223034/00.png" alt=" " width="1060" height="450" class="img-responsive atto_image_button_text-bottom"></b></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812188/mod_book/chapter/223034/1.png" alt=" " width="1060" height="450" class="img-responsive atto_image_button_text-bottom"></b></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Las ventajas de escribir las historias de esta forma son, principalmente:&nbsp;</span></p>
+        <p style=""></p>
+       <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Primera persona:&nbsp;</span>La redacción en primera persona de la historia de usuario invita a quien la lee a ponerse en el lugar del usuario.&nbsp;</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Priorización:</span> Tener esta estructura para redactar la historia de usuario ayuda al responsable del producto a priorizar. Le permite visualizar mejor cuál es la funcionalidad, quien se beneficia y cuál es el valor de esta.&nbsp;</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Propósito:</span> Conocer el propósito de una funcionalidad permite al equipo de desarrollo plantear alternativas que cumplan con el mismo objetivo en el caso de que el costo de la funcionalidad solicitada sea alto o su construcción no sea viable.&nbsp;&nbsp;</p></div></div><ul>
+        </ul>
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812188/mod_book/chapter/223034/2.png" alt=" " width="1060" height="450" class="img-responsive atto_image_button_text-bottom"></b></span></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223035"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Criterios de aceptación</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p style=""><span style="color: rgb(51, 51, 51); font-size: large;" class=""><br>Vamos a adentrarnos en el tema de los <span class="" style="color: rgb(0, 46, 184);">criterios de aceptación</span> y su importancia.&nbsp;</span></p>
+        <p style=""><span style="color: rgb(51, 51, 51);">Después de 50 años de historia de ingeniería de software, se ha llegado a la conclusión de que los criterios de aceptación, que son la base para la creación de las pruebas, son un excelente lenguaje para detallar requerimientos funcionales, y es por ello que toman una gran importancia en las historias de usuario.</span><br></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Para medir la calidad de un criterio de aceptación, es decir que tan bien definido está, se utiliza el método SMART, que define que deben ser:</span></p>
+        <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600"><i>Specific,</i></span><span>&nbsp;específicos.</span></p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600"><i>Measurable,&nbsp;</i></span>medibles.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600"><i>Achievable,</i></span>&nbsp;alcanzables.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600"><i>Relevant,</i></span>&nbsp;relevantes.</p>
+                    </div>
+                </div>
+      <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600"><i>Time-boxed,</i></span>&nbsp;limitados en el tiempo. </p>
+                    </div>
+                </div>
+        <p style=""></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Los criterios se suelen expresar en forma de <i>checklist</i>, o como una frase continua sin estructura. También hay formatos más estructurados para definirlas. En nuestro caso elegimos el formato de <i>checklists </i>(viñetas).</span></p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Importancia</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">
+                    </p><p>Ayudan al equipo de desarrollo a entender el funcionamiento del producto, de manera que estimarán mejor el tamaño de la historia subyacente. Durante la fase de desarrollo servirán, además, de guía para la tomar de decisiones.</p>
+                    <p>Luego, el propietario de producto comprobará, a través de estos criterios de aceptación y la definición de hecho (trabajaremos sobre esto en la próxima semana), si cada una de las historias de usuario se puede aceptar y dar por finalizada.<br><br></p>
+                <p></p>
+            </div>
+        </div>
+        <p style=""><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223028"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">INVEST: características de una historia de usuario</p>
+</article>
+<div style="background-color: rgb(250, 250, 250); font-size: large;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p style=""><span class="" style="font-size: large;"><br>El <span class="" style="color: rgb(0, 46, 184);">modelo INVEST</span><span class="" style="color: rgb(0, 46, 184);"> </span>es conjunto de características recomendadas para evaluar la calidad de una
+            historia de usuario.&nbsp;</span>
+        </p>
+        <p style="color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: rgb(51, 51, 51);">El uso de la regla mnemotécnica INVEST ayuda a su recordarlas.&nbsp;</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812188/mod_book/chapter/223028/3.png" alt=" " width="1060" height="720" class="img-responsive atto_image_button_text-bottom"></b></span></p>
+        <p style="color: rgb(1, 6, 20);"><b class="sub_negrita"><span style="color: rgb(0, 46, 184);" class="">Infografía resumen de lo visto sobre historias de usuario (</span><i style="color: rgb(0, 61, 245);"><span class="" style="color: rgb(0, 46, 184);">user stories</span></i><span style="color: rgb(0, 46, 184);" class="">)</span></b><br></p>
+        <p style="color: rgb(1, 6, 20);"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><b><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812188/mod_book/chapter/223028/4.png" alt=" " width="1060" height="799" class="img-responsive atto_image_button_text-bottom"></b></span></p>
+        <p style="color: rgb(1, 6, 20);"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223029"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Estimaciones en ambientes ágiles</p>
+</article>
+<div style="background-color: rgb(250, 250, 250);">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Las estimaciones en proyectos basados en procesos de control empírico, como son los proyectos que utilizan métodos ágiles, proponen comenzar a trabajar en un proyecto sin la necesidad de tener una estimación precisa basada en supuestos, y siendo conscientes de que la estimación inicial es de un orden de magnitud probable, para poder ganar experiencia rápidamente y así estimar con mayor certeza prescindiendo de supuestos.</span></span>
+            <span class="" style="font-size: large; color: rgb(51, 51, 51);">
+                </span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="font-size: large; color: rgb(51, 51, 51);">Para mitigar el riesgo de proveer estimaciones incorrectas, usando métodos ágiles se opta por reducir la precisión de las estimaciones en función de cuánto conocimiento se tiene sobre el esfuerzo que se requiere estimar. De esta manera, los </span><b><span class="" style="font-size: large; color: rgb(0, 46, 184);">requerimientos </span></b>
+            <span class="" style="font-size: large; color: rgb(51, 51, 51);">
+                y sus </span><b><span class="" style="font-size: large; color: rgb(0, 46, 184);">estimaciones </span></b><span class="" style="font-size: large; color: rgb(51, 51, 51);">se categorizan en diferentes niveles de precisión.<br><br></span></span>
+        </p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Introducción a la escala PBI's</p>
+        </div>
+        <p style=""><span class="" style="font-size: large;"><br><span class="" style="font-size: large; color: rgb(51, 51, 51);">Los niveles de precisión dependen de las características identificadas para el producto, contenidas en la Lista de Producto (Product Backlog) (PBI´s) y las estimaciones recomendadas. Podemos enumerar la siguiente escala de PBI´s y sus estimaciones:</span></span></p>
+        <p style=""></p>
+        <table class="tabla-filaColores texto-principal" style="width: 96%; margin: 0 auto;">
+            <colgroup span="1" width="25%"></colgroup>
+            <colgroup span="1" width="25%"></colgroup>
+            <colgroup span="1" width="25%"></colgroup>
+            <colgroup span="1" width="25%"></colgroup>
+
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado" data-sider-select-id="a08d0ba9-6580-40fc-a8a5-3ca27268a385">Nivel de Estimación</td>
+                    <td class="tabla-filaColores-categoria texto-centrado" data-sider-select-id="81626f79-2d21-4261-abe0-3f7463f2bcc7">Descripción</td>
+                    <td class="tabla-filaColores-categoria texto-centrado" data-sider-select-id="fb5642dc-e389-4ff9-b13e-9d0bca3a510c">Unidad de Medida</td>
+                    <td class="tabla-filaColores-categoria texto-centrado" data-sider-select-id="940eabfe-ed21-42a6-be57-02110b54c3f0">Técnica Recomendada</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" valign="top">Alto nivel</td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top">Estimación de épicas</td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top">Talles de remera (XS, S, M, L, XL)</td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top">Técnica “Talles de remera”</td>
+                </tr>
+                <tr class="tabla-filaColores-par">
+                    <td class="texto-margen-tabla texto-centrado" valign="top">Nivel medio</td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top">Estimación de historias de usuario</td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top">Puntos de historia</td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top">Sucesión de Fibonacci (1, 1, 2, 3, 5, 8…)</td>
+                </tr>
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" valign="top">Bajo nivel</td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top">Estimación de tareas o actividades</td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top">Horas ideales</td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top">-</td>
+                    <!-- Aquí puedes poner el contenido correcto para esta celda -->
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <p style=""><span class="" style="font-size: large;"></span></p>
+        <p><span class="" style="color: rgb(0, 46, 184); font-size: large;"><b class="sub_negrita"><span class="" style="font-size: large;">Escala de tamaños del product backlog</span></b></span></p>
+        <p><span class="" style="color: rgb(51, 51, 51); font-size: large;">Al comenzar el proyecto, el Product Backlog se compone de bloques funcionales estimados según sus tamaños: XS, S, M, L, XL. Esta aproximación nos da una visión inicial de la problemática y las características del producto.</span></p>
+        <p><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita"><span class="" style="font-size: large;">Descomposición y estimación de historias de usuario</span></b></span></p>
+        <p><span class="" style="color: rgb(51, 51, 51); font-size: large;">Las historias de usuario se descomponen en funcionalidades más específicas. Estas se estiman usando la sucesión Fibonacci modificada: 0, 1, 2, 3, 5, 8, 13, 21…</span></p>
+        <p><span class="" style="color: rgb(51, 51, 51); font-size: large;">Para su estimación, se utiliza la técnica comparativa llamada poker planning o poker estimation, que se describirá más adelante.</span></p>
+        <p style=""><span class="" style="font-size: large;"></span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223030"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Planning poker</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style=""><span class="" style="color: rgb(51, 51, 51); font-size: large;"><br></span></p>
+        <p style=""><span class="" style="color: rgb(51, 51, 51); font-size: large;"><span class="" style="color: rgb(51, 51, 51);">James Greening presentó la técnica llamada</span> “<i><span class="" style="color: rgb(0, 46, 184);">Planning Poker</span></i>” o “<i><span class="" style="color: rgb(0, 46, 184);">Poker Estimation</span></i>”,
+            que intenta evitar el análisis parálisis en la planificación del <i>release </i>de software.&nbsp;</span>
+        </p>
+        <p style=""><span class="" style="color: rgb(51, 51, 51); font-size: large;">Se basa en el método<span class="" style="color: rgb(0, 46, 184);"><i> Wideband Delphi</i></span> para realizar la estimación de requerimientos (o <i>User Stories)</i> de forma colaborativa
+            en un equipo.&nbsp;</span>
+        </p>
+        <p style=""><span class="" style="color: rgb(51, 51, 51); font-size: large;">La técnica consiste en que cada integrante del equipo posee en sus manos una baraja de cartas con los
+                números&nbsp;</span><span style="color: rgb(51, 51, 51);" class="">correspondientes a la sucesión de Fibonacci y se siguen los siguientes pasos:&nbsp;</span></p>
+        <p style=""></p>
+      <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p>El responsable del negocio presenta una historia de usuario para ser estimada.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Todos los/las participantes proceden a realizar su estimación en forma secreta, sin influenciar al resto del equipo, poniendo su carta elegida boca abajo sobre la mesa.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Una vez que todos/as los/las integrantes han estimado, se dan vuelta las cartas y se discuten principalmente los extremos.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Al finalizar la discusión se levantan las cartas y se vuelve a estimar, esta vez con más información que la que se tenía previamente. </p>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+ <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Las rondas siguen hasta que se logra consenso en el equipo y luego se continúa desde el punto número uno con una nueva historia de usuario. </p>
+            </div>
+        </div>
+        <br><p style=""><span class="" style="color: rgb(51, 51, 51); font-size: large;">Considerando que las personas no saben estimar en términos absolutos y son buenos comparando cosas, y que es generalmente más rápido, dado que se obtiene una mejor dinámica grupal y se emplea mejor el tiempo de análisis de las historias de usuario.&nbsp;</span></p>
+        <p style=""><span class="" style="color: rgb(51, 51, 51); font-size: large;"><b><span class="" style="color: rgb(0, 46, 184);">Base canónica&nbsp;</span></b>
+            </span>
+        </p>
+        <p style=""><span class="" style="color: rgb(51, 51, 51); font-size: large;">La técnica prevé la elección de una historia base, llamada <b><span class="" style="color: rgb(0, 46, 184);">canónica</span></b><span class="" style="color: rgb(0, 46, 184);"> </span>que
+            es la que se tomará como referencia para comparar las demás historias, y esa es la que se estima primero, el resto se estima comparándola con la canónica para determinar cuánto más grande o pequeña es en relación a esta.</span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223031"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">La sabiduría de las multitudes</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">&nbsp;</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Esta es una tesis que implica que dadas las circunstancias requeridas, <span class="" style="color: rgb(0, 46, 184);">un grupo de personas puede tomar una decisión más acertada </span>que la mejor de las decisiones de la mayoría (si no todos) los integrantes del grupo individualmente.</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Para que esto pueda suceder, se recomiendan las siguientes condiciones:</span></p>
+        <p style=""></p>
+      <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Diversidad de opiniones:&nbsp;</span>ada persona debería tener información particular aún si es sólo una interpretación excéntrica de los hechos conocidos. El grupo debe tener diversidad de perfiles.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Independencia:</span> las opiniones de los participantes no deberían estar influenciadas por las opiniones de los que los rodean, con el objetivo de evitar el pensamiento de grupo.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Agregación:</span> El grupo debería tener la capacidad de sumar las opiniones individuales y no simplemente votar por la mejor opción.</p></div></div><ol>
+        </ol>
+        <p></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223032"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Derivar la duración de un proyecto en ambientes ágiles</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="color: rgb(255, 51, 204);"><br></span>La duración de un proyecto no se <b>estima</b>, se deriva tomando el número total de puntos de historia (
+            <i>story points</i>) de sus historias de usuario (<i>user stories</i>) y dividiéndolo por la velocidad del equipo.&nbsp;</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Velocidad del equipo</span></b>
+            </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Ahora bien, ¿qué es la velocidad del equipo?</span></p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">¿Qué es la velocidad?</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> La velocidad es una métrica del progreso de un equipo. Esta se calcula sumando el número de puntos de historia asignados a cada historia de usuario como valor de estimación, que el equipo pudo completar durante la iteración. </p>
+            </div>
+        </div>
+        Para el cálculo de velocidad sólo cuentan los puntos de historia de las historias de usuario que está completas, terminadas; no parcialmente completas.<br><br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">La velocidad no se estima, <span class="" style="color: rgb(0, 46, 184);">se calcula al final de la iteración</span> en función de las historias de usuario que el referente del cliente,
+            en algunos métodos ágiles se le llama Dueño de Producto, acepta.&nbsp;</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">La velocidad nos ayuda a determinar un horizonte de planificación apropiado.</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">La estimación en puntos de historia separa completamente la estimación de tamaño/esfuerzo de la estimación de duración.</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Métrica de progreso</span></b>
+            </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span></p>La velocidad en metodologías ágiles se refiere a la métrica que indica el ritmo de trabajo de un equipo.&nbsp;</div>
+    <div style="margin-left: 3%; margin-right: 3%;">Según el manifiesto ágil, la mejor medida de progreso es el software funcionando, promoviendo así un enfoque minimalista hacia las métricas.&nbsp;<br><br></div>
+    <div style="margin-left: 3%; margin-right: 3%;">
+        <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><span class="sub_negrita" style="font-weight: normal;">Estas métricas son específicas de cada equipo y contexto de proyecto, y no deben extrapolarse a otros productos o equipos.&nbsp;</span></p>
+        </div>
+        <p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93"><br>Derivar la duración de un proyecto basándose en la velocidad del equipo puede ser arriesgado, ya que esta puede variar entre iteraciones. Esta velocidad influye en la planificación del <i>release</i>, determinando cuántas iteraciones serán
+            necesarias para completar los puntos de historia planificados para alcanzar los objetivos del <i>release</i>.<br><br>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812188/mod_book/chapter/223032/6.png" alt=" " width="1060" height="307" class="img-responsive atto_image_button_text-bottom"><br><br></span></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223033"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Algunas consideraciones finales</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Muchas teorías y enfoques convergen en las siguientes características sobre estimaciones en proyectos ágiles:&nbsp;</span></p>
+      <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">No tiene sentido presentar estimaciones certeras al comienzo de un proyecto ya que su probabilidad de ocurrencia es extremadamente baja por el alto nivel de incertidumbre.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Intentar bajar dicha incertidumbre mediante el análisis puede llevarnos al “Análisis Parálisis”. Para evitar esto debemos estimar a alto nivel con un elevado grado de probabilidad, actuar rápidamente, aprender de nuestras acciones y refinar las estimaciones frecuentemente. Este enfoque se conoce también como “Elaboración Progresiva”.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">La mejor estimación es la que provee el equipo que realizará el trabajo. Esta estimación será mucho más realista que la estimación provista por un experto ajeno al equipo.&nbsp;</p>
+                    </div>
+                </div>
+
+        <p style=""></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[723378,723381,723385,723388,723402,723405,723407,723410,723412,723415,723417,723420,723422,723425,723428,723431,723432,723435,723438,723441,723443,723446,723448,723450,723452,723454,723457,723459,723461,723463]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1757558299/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2812188, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"trace"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1760959197); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\nconfig: [\"Accessible.js\", \"Safe.js\"],\r\nerrorSettings: { message: [\"!\"] },\r\nskipStartupTypeset: true,\r\nmessageStyle: \"none\"\r\n});","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random68f61bab200272'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random68f61bab200272'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>
