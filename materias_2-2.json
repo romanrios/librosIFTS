@@ -49,6 +49,10 @@
       {
         "texto": "11 - APIs",
         "url": "./pages/Front/front_11.html"
+      },
+      {
+        "texto": "12 - Testing en aplicaciones React",
+        "url": "./pages/Front/front_12.html"
       }
     ]
   },
