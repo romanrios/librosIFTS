@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>12. Marco de trabajo | DGHPEF</title>
+    <link rel="shortcut icon" href="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/theme/1761146253/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, 12. Marco de trabajo | DGHPEF" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/theme/styles.php/academiaba/1761146253_1757558579/all" />
+<link rel="stylesheet" type="text/css" href="https://aulasvirtuales.bue.edu.ar/mod/book/tool/print/print.css" />
+<link rel="stylesheet" href="../font.css">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/aulasvirtuales.bue.edu.ar","homeurl":{},"sesskey":"imOeTBcLGZ","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1761146253","slasharguments":1,"theme":"academiaba","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1757558299","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","language":"es","courseId":22800,"courseContextId":2812100,"contextid":2812192,"contextInstanceId":723466,"langrev":1760972633,"templaterev":"1757558299","developerdebug":true};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":true,"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"filter":"RAW","insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?m\/1757558299\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"m\/1757558299\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":"DEBUG","modules":{"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompleted-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_coursecompletioneabc-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_language-form":{"requires":["base","node","event","node-event-simulate","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_mediagallery-base":{"requires":["base","node","selector-css3","dd-constrain","dd-proxy","dd-drop","dd-plugin","moodle-core-notification","event"]},"moodle-mod_mediagallery-mediabox":{"requires":["base","node","selector-css3"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_trail-trailkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_htmlbootstrapeditor-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_mediagallery-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_snippet-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/aulasvirtuales.bue.edu.ar\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1757558299\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1757558299\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/aulasvirtuales.bue.edu.ar\/lib\/javascript.php\/1757558299\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?config=TeX-AMS_SVG%22&delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.getElementById('username');
+    const placeholderText = "Nombre de usuario (El nombre de usuario es el nombre de documento, sin comas ni puntos)";
+    const updatedPlaceholder = placeholderText.replace(/\(.*\)/, ""); // Remove text inside parentheses
+    usernameInput.placeholder = updatedPlaceholder.trim();
+  });
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-book-print" class="format-tiles  path-mod path-mod-book chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam aulasvirtuales-bue-edu-ar pagelayout-embedded course-22800 context-2812192 cmid-723466 cm-type-book category-3279 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/polyfills/polyfill.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple.js"></script><script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" >
+    <section class="embedded-main">
+        <div role="main"><div class="book p-4">
+    <div class="text-right"><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimir el Libro Completo" title="Imprimir el Libro Completo" src="https://aulasvirtuales.bue.edu.ar/theme/image.php/academiaba/booktool_print/1761146253/book" />Imprimir el Libro Completo</a></div>
+    <div class="text-center pb-3 book_title"><h1>12. Marco de trabajo</h1></div>
+    <div class="book_info w-100 pt-6 d-inline-block">
+        <div class="w-50 float-left">
+            <table>
+                <tr>
+                    <td>
+                        Sitio:
+                    </td>
+                    <td class="pl-3">
+                        <a href="https://aulasvirtuales.bue.edu.ar">Agencia de Habilidades para el Futuro</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Curso:
+                    </td>
+                    <td class="pl-3">
+                        Ingeniería de Software - 2° A
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libro:
+                    </td>
+                    <td class="pl-3">
+                        12. Marco de trabajo
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 float-left">
+            <table class="float-right">
+                <tr>
+                    <td>
+                        Imprimido por:
+                    </td>
+                    <td class="pl-3">
+                        Román Ríos
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Día:
+                    </td>
+                    <td class="pl-3">
+                        lunes, 27 de octubre de 2025, 08:03
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w-100 book_description">
+        <div class="py-5">
+            <h2 class="text-center pb-5">Descripción</h2>
+             <p class="book_summary"><article class="flexEnd_botonera">
+
+    <section class="botonera_posicion" id="botonera">
+        <section class="columna_centrada">
+            <!-- <p>Barra de navegación</p> -->
+            <article class="touch_point">
+
+                <a href="https://aulasvirtuales.bue.edu.ar/course/view.php?id=22800&amp;section=14" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                              </svg>
+                        </div>
+                        <p>Inicio</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723465&amp;forceview=1" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_apertura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"></path>
+</svg>
+                        </div>
+                        <p>Apertura</p>
+                    </section>
+                </a>
+
+                <section class="boton_texto_centrado link">
+                    <div class="circulo_desarrollo_activa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+</svg>
+                    </div>
+                    <p>Desarrollo</p>
+
+                </section>
+
+
+                <a href="" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_practicas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                      <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+</svg>
+                        </div>
+                        <p>Práctica</p>
+                    </section>
+                </a>
+
+                <a href="https://aulasvirtuales.bue.edu.ar/mod/page/view.php?id=723467" class="link">
+                    <section class="boton_texto_centrado">
+                        <div class="circulo_cierre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eject" viewBox="0 0 16 16">
+ <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"></path>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"></path>
+</svg>
+                        </div>
+
+                        <p st="">Cierre</p>
+
+                    </section>
+                </a>
+
+            </article>
+        </section>
+    </section>
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        let pantallaDesktop = window.innerWidth;
+        let pantallaCelular = 700;
+
+        if (pantallaDesktop < pantallaCelular) {
+            document.getElementById("botonera").style.display = "none"
+        }
+    });
+</script></p>
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="py-5"><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Tabla de contenidos</h2><ul><li><a title="1. Introducción a Scrum 2020" class="font-weight-bold text-decoration-none" href="#ch223038">1. Introducción a Scrum 2020</a></li><li><a title="2. Teoría de Scrum" class="font-weight-bold text-decoration-none" href="#ch223039">2. Teoría de Scrum</a></li><li><a title="3. Valores de Scrum" class="font-weight-bold text-decoration-none" href="#ch223040">3. Valores de Scrum</a></li><li><a title="4. El equipo Scrum (Scrum team)" class="font-weight-bold text-decoration-none" href="#ch223041">4. El equipo Scrum (Scrum team)</a><ul><li><a title="4.1. Desarrolladores" class="text-decoration-none" href="#ch223042">4.1. Desarrolladores</a></li><li><a title="4.2. Propietario del producto (product owner)" class="text-decoration-none" href="#ch223043">4.2. Propietario del producto (product owner)</a></li><li><a title="4.3. Scrum master" class="text-decoration-none" href="#ch223044">4.3. Scrum master</a></li></ul></li><li><a title="5. Eventos" class="font-weight-bold text-decoration-none" href="#ch223045">5. Eventos</a><ul><li><a title="5.1. Sprint" class="text-decoration-none" href="#ch223046">5.1. Sprint</a></li><li><a title="5.2. Planificación de Sprint" class="text-decoration-none" href="#ch223047">5.2. Planificación de Sprint</a></li><li><a title="5.3. Scrum diario (Daily Scrum)" class="text-decoration-none" href="#ch223048">5.3. Scrum diario (Daily Scrum)</a></li><li><a title="5.4. Revisión del Sprint (Sprint review)" class="text-decoration-none" href="#ch223049">5.4. Revisión del Sprint (Sprint review)</a></li><li><a title="5.5. La retrospectiva del Sprint (Sprint retrospective)" class="text-decoration-none" href="#ch223050">5.5. La retrospectiva del Sprint (Sprint retrospective)</a></li></ul></li><li><a title="6. Artefactos" class="font-weight-bold text-decoration-none" href="#ch223051">6. Artefactos</a><ul><li><a title="6.1. Pila del producto (product backlog)" class="text-decoration-none" href="#ch223052">6.1. Pila del producto (product backlog)</a></li><li><a title="6.2. La pila del Sprint (Sprint backlog)" class="text-decoration-none" href="#ch223053">6.2. La pila del Sprint (Sprint backlog)</a></li><li><a title="6.3. Incremento (increment)" class="text-decoration-none" href="#ch223054">6.3. Incremento (increment)</a></li></ul></li></ul></div></div>
+    </div>
+    <div class="w-100">
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223038"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Introducción a Scrum 2020</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="color: rgb(255, 51, 204);"><br></span>Scrum es un marco de trabajo ligero que ayuda a las personas, equipos y organizaciones a generar valor a través de soluciones
+            adaptables para problemas complejos.&nbsp;</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">En pocas palabras, Scrum requiere un Scrum Master para fomentar un entorno donde:</span></p>
+        <p style=""></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"></path>
+        </svg>
+            </div>
+            <div class="col">
+                <p><span>Un propietario del producto (</span><i>product owner</i><span>) ordena el trabajo de un problema complejo en un Product Backlog.&nbsp;</span></p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-2-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>El equipo de Scrum convierte una selección del trabajo en un Incremento de valor durante un Sprint.&nbsp;</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-3-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p><span>El equipo de Scrum y sus partes interesadas (</span><i>stakeholders</i><span>) inspeccionan los resultados y realizan los ajustes necesarios para el próximo Sprint.&nbsp;</span></p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-4-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p>Repetir. </p>
+            </div>
+        </div>
+
+        <br>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Scrum es simple. Probalo tal cual y determiná si su filosofía, teoría y estructura ayudan a alcanzar metas y crear valor.&nbsp;</span></p>
+        <p style=""><br></p>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">El marco de Scrum es deliberadamente incompleto,</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px">sólo define las partes necesarias para implementar la teoría de Scrum. Scrum se basa en la inteligencia colectiva de las personas que lo utilizan; en lugar de proporcionar a las personas instrucciones detalladas, las reglas de Scrum guían
+                    sus relaciones e interacciones. </p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">En el marco de trabajo se pueden emplear diversos procesos, técnicas y métodos. Scrum <span class="" style="color: rgb(0, 46, 184);">envuelve las prácticas existentes o las hace innecesarias</span>.
+            Scrum hace visible la eficacia relativa de la gestión actual, el entorno y las técnicas de trabajo, de modo que se pueden realizar mejoras.&nbsp;</span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812192/mod_book/chapter/223038/Sin%20t%C3%ADtulo-1.png" alt=" " width="1172" height="620" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">En las sucesivas secciones iremos explicando el </span><i><span class="" style="font-size: large; color: rgb(51, 51, 51);">framework</span></i><span class="" style="font-size: large; color: rgb(51, 51, 51);">.</span></p>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223039"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Teoría de Scrum</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></p>
+        <p>Scrum se fundamenta en el empirismo y el pensamiento Lean. El empirismo enfatiza la toma de decisiones basadas en la experiencia directa y la observación, mientras que el pensamiento Lean se centra en eliminar desperdicios y enfocarse en lo esencial.</p>
+        <p><span><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">Enfoque iterativo e incremental</b></span></span>
+        </p>
+        <p>Scrum utiliza un enfoque iterativo e incremental para mejorar la previsibilidad y mitigar riesgos en los proyectos. Los equipos Scrum están compuestos por individuos con todas las habilidades necesarias para llevar a cabo el trabajo, adaptándose
+            según las necesidades emergentes.</p>
+        <p><span><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">Eventos Clave y el sprint</b></span></span>
+        </p>
+        <p>Scrum organiza cuatro eventos esenciales dentro de un marco temporal conocido como Sprint. Estos eventos son cruciales para la inspección y la adaptación continua, pilares fundamentales de Scrum que aseguran la efectividad y la agilidad del proceso.</p>
+        <p><strong><span class="sub_negrita" style="color: rgb(0, 46, 184);">Pilares de Scrum</span></strong></p>
+        <!--Tabla 1 fila color 3 columnas-->
+        <table class="tabla-filaColores texto-principal" style="width:100%; margin: 0 auto;">
+            <colgroup span="1" width="33%"></colgroup>
+            <colgroup span="1" width="33%"></colgroup>
+            <colgroup span="1" width="33%"></colgroup>
+            <tbody>
+                <tr>
+                    <td class="tabla-filaColores-categoria texto-centrado">Transparencia</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">Inspección</td>
+                    <td class="tabla-filaColores-categoria texto-centrado">Adaptación</td>
+                </tr>
+
+                <tr class="tabla-filaColores-inpar">
+                    <td class="texto-margen-tabla texto-centrado" valign="top"> <br>
+                        <p style="text-align: left;">La transparencia implica que el proceso y el trabajo deben ser visibles para todos los involucrados, desde los que realizan el trabajo hasta los que reciben el producto final.&nbsp;</p>
+                        <p style="text-align: left;">Esto facilita la toma de decisiones informadas y reduce el riesgo de tomar decisiones que puedan comprometer el valor del producto.</p>
+                    </td>
+                    <td class="texto-margen-tabla texto-centrado" valign="top"> <br>
+                        <p style="text-align: left;">La inspección requiere revisar de manera frecuente los artefactos de Scrum y el progreso hacia los objetivos acordados.&nbsp;</p>
+                        <p style="text-align: left;">Esta práctica rigurosa permite detectar desviaciones o problemas potenciales a tiempo, asegurando que el proyecto se mantenga en curso y se corrijan los errores de manera oportuna.</p>
+                    </td>
+                    <td class="texto-margen-tabla" valign="top"> <br> La adaptación implica ajustar el proceso o los productos generados si se detectan desviaciones significativas o resultados insatisfactorios. <br><br>Scrum promueve una cultura de mejora continua, donde los equipos están empoderados
+                        para adaptarse rápidamente a medida que aprenden de la inspección y la retroalimentación.</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <br> Scrum, con su enfoque en el empirismo y el pensamiento Lean, proporciona un marco sólido para gestionar proyectos de manera ágil y efectiva. Al enfatizar la transparencia, la inspección y la adaptación, Scrum permite a los equipos enfrentar
+        los desafíos del desarrollo de software de manera eficiente y adaptable, optimizando continuamente tanto el proceso como el producto final.
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223040"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Valores de Scrum</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El uso exitoso de Scrum depende de que las personas sean más competentes en vivir cinco valores:</span><br></p>
+        <p style="text-align: center; "><span class="" style="font-size: large; color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812192/mod_book/chapter/223040/1.png" alt=" " width="400" height="226" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span></p>
+        <p>El equipo de Scrum se compromete a alcanzar sus objetivos de manera colaborativa, enfocándose en el trabajo del Sprint para lograr un progreso significativo. Promueven la transparencia al ser abiertos sobre su trabajo y los desafíos que enfrentan.</p>
+        <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><span class="sub_negrita" style="font-weight: normal;">Los miembros del equipo de Scrum se respetan mutuamente como individuos competentes e independientes, lo cual también es reconocido por sus colegas. Valoran la integridad al enfrentar problemas complejos.</span></p>
+        </div>
+        <p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93">
+        </p>
+        <p>Estos valores guían al equipo en su trabajo diario, influenciando sus decisiones, acciones y comportamiento. Es crucial que las prácticas y decisiones dentro del marco de Scrum refuercen estos valores en lugar de debilitarlos.</p>
+       <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+            <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;"><span class="sub_negrita" style="font-weight: normal;">A medida que el equipo interactúa con los eventos y artefactos de Scrum, aprenden y exploran estos valores.&nbsp;</span></p>
+        </div>
+        <p><br>Cuando estos valores son internalizados tanto por el equipo como por sus colaboradores, los pilares empíricos de Scrum (transparencia, inspección y adaptación) fortalecen la confianza y la efectividad del equipo.</p>
+        <p><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span></p>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223041"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">El equipo de Scrum</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span></p>
+        <p>El núcleo de Scrum es el equipo Scrum, compuesto por un Scrum Master, un Product Owner y desarrolladores. Este equipo es una unidad integrada y autónoma centrada en un único objetivo: el producto.</p>
+        <p><strong>Características del Equipo de Scrum</strong></p>
+      <!-- 1 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Multifuncionalidad y autogestión:&nbsp;</span>&nbsp;Los equipos de Scrum son multifuncionales, lo que significa que cada miembro posee habilidades variadas para generar valor en cada Sprint. Además, son autogestionados, tomando decisiones internas sobre qué, cuándo y cómo trabajar.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Tamaño óptimo:</span> Los equipos de Scrum son lo bastante pequeños para mantener agilidad y lo bastante grandes para completar trabajo significativo en cada Sprint, generalmente 10 o menos personas. Equipos más pequeños tienden a comunicarse mejor y ser más productivos.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600">Organización y coordinación:</span> &nbsp;Si el equipo crece demasiado, se recomienda reorganizarlo en varios equipos Scrum cohesionados, todos enfocados en el mismo producto. Deben compartir el mismo objetivo, backlog y Product Owner.</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600">Responsabilidades y empoderamiento:</span> El equipo Scrum es responsable de todas las actividades relacionadas con el producto, desde colaboración y desarrollo hasta operación y mantenimiento. Están estructurados para gestionar su propio trabajo y operan en Sprints para mantener un ritmo sostenible. </p>
+                    </div>
+                </div>
+       <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600">Creación de valor sprints:</span> Todo el equipo Scrum tiene la responsabilidad colectiva de entregar un incremento valioso en cada Sprint. Las tres responsabilidades específicas dentro del equipo son los desarrolladores, el Product Owner y el Scrum Master. </p>
+                    </div>
+                </div>
+        <p>Imagina un equipo Scrum compuesto por un Scrum Master que facilita el proceso, un Product Owner que guía las prioridades del producto y desarrolladores que trabajan juntos para crear mejoras incrementales en cada ciclo de Sprint. A continuación dejamos esta imagen para representar esta idea.</p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812192/mod_book/chapter/223041/2.png" alt=" " width="607" height="472" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223042"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Desarrolladores</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Los desarrolladores son las <span class="" style="color: rgb(0, 46, 184);">personas del equipo Scrum que se comprometen a crear cualquier aspecto de un Incremento útil</span> (funcional) en cada Sprint.&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Las <span class="" style="color: rgb(0, 46, 184);">habilidades específicas </span>que necesitan los desarrolladores son a menudo amplias y variarán con el dominio del trabajo. Sin embargo, siempre son responsables de:<span class="" style="color: rgb(255, 51, 204);">&nbsp;</span></span>
+          <!-- 1 -->
+                </p><div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36">Crear un plan para el Sprint, el Sprint Backlog;</p>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62">Inculcar la calidad adhiriéndose a una definición de hecho;&nbsp;</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7">Adaptar su plan cada día hacia el objetivo Sprint;&nbsp;</p>
+                    </div>
+                </div>
+
+
+                <!-- 4 -->
+                <div class="row" style="margin-left: 32px">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                    </div>
+                    <div class="col">
+                        <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15">Responsabilizarse mutuamente como profesionales.&nbsp;</p></div></div><ul>
+        </ul>
+        <p></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223043"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Propietario del producto</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El propietario del producto es <span class="" style="color: rgb(0, 46, 184);">r</span><span class="" style="color: rgb(0, 46, 184);">esponsable de maximizar el valor del producto</span>            resultante del trabajo del equipo de Scrum.&nbsp;</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">La forma en que esto se hace esto puede variar ampliamente entre organizaciones, equipos Scrum e individuos.&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Pila del producto</span></b>
+            </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El propietario del producto también es responsable de la gestión eficaz de la pila del producto (<i>product backlog</i>), que incluye:&nbsp;</span></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600"></span>Desarrollar y comunicar explícitamente el objetivo del producto.&nbsp;</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600"></span>Creación y comunicación clara de elementos de trabajo pendiente del producto.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600"></span>Pedido de artículos de trabajo pendiente del producto.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600"></span>Asegurarse de que el trabajo pendiente del producto sea transparente, visible y comprendido.</p>
+            </div>
+        </div>
+        <ul>
+        </ul>
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El propietario del producto puede hacer el trabajo anterior o puede delegar la responsabilidad a otros. En cualquier caso, el propietario del producto sigue siendo responsable.&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Decisiones&nbsp;</span></b>
+            </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Para que los propietarios de productos tengan éxito, toda la organización debe respetar sus decisiones. <span class="" style="color: rgb(0, 46, 184);">Estas decisiones son visibles en el contenido y el orden del trabajo</span>            pendiente del producto, y a través del Incremento inspeccionable en la revisión de Sprint.&nbsp;</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El propietario del producto <span class="" style="color: rgb(0, 46, 184);">es una persona</span>, no un comité. Puede representar las necesidades de muchas partes interesadas en
+            el trabajo pendiente del producto. Aquellos que deseen cambiar el trabajo pendiente del producto pueden hacerlo tratando de negociar con criterio con el <i>Product Owner.</i>&nbsp;</span>
+        </p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223044"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Scrum master</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="color: rgb(255, 51, 204);"><br></span><span class="" style="color: rgb(51, 51, 51);">El Scrum master es responsable de establecer Scrum. Lo consigue ayudando a todos a comprender la teoría y la práctica
+            de Scrum, tanto dentro del equipo como en toda la organización.&nbsp;</span></span><span class="" style="color: rgb(51, 51, 51);">
+        </span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="color: rgb(51, 51, 51);">El Scrum master</span> <span class="" style="color: rgb(0, 46, 184);">es responsable de la efectividad del </span><i><span class="" style="color: rgb(0, 46, 184);">Scrum team</span></i>.
+            <span class="" style="color: rgb(51, 51, 51);"> Lo logra al permitir que el equipo Scrum mejore sus prácticas, dentro del marco de Scrum.&nbsp;</span>
+                </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="color: rgb(51, 51, 51);">Los Scrum masters son </span><span class="" style="color: rgb(0, 46, 184);">verdaderos líderes</span><span class="" style="color: rgb(51, 51, 51);"> que sirven al equipo Scrum y a toda la organización.&nbsp;</span></span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Tareas</span></b>
+            </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El Scrum master sirve al equipo de Scrum de varias maneras, incluyendo:&nbsp;</span></p>
+        <p style=""></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600"></span>Capacitar a los miembros del equipo en autogestión y multifuncionalidad.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600"></span>Ayudar al equipo de Scrum a centrarse en la creación de incrementos de alto valor que cumplan con la definición de hecho.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600"></span>Promover la eliminación de los impedimentos para el progreso del equipo Scrum.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600"></span><span>Asegurar de que todos los eventos de Scrum se lleven a cabo, sean positivos, productivos y que se respete el tiempo establecido (</span><i>time-box</i>) para cada uno de ellos.</p>
+            </div>
+        </div>
+        <ul>
+        </ul>
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="color: rgb(51, 51, 51);">El Scrum Master sirve al Propietario del Producto (</span><i><span class="" style="color: rgb(51, 51, 51);">product owner</span></i>
+            <span class="" style="color: rgb(51, 51, 51);">) de varias maneras, incluyendo:&nbsp;</span>
+                </span>
+        </p>
+        <p style=""></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600"></span>Ayudar a encontrar técnicas para una definición eficaz de los objetivos del producto y la gestión de los retrasos en el producto</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600"></span>Ayudar al equipo de Scrum a comprender la necesidad de elementos de trabajo pendiente de productos claros y concisos.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600"></span>Ayudar a establecer la planificación empírica de productos para un entorno complejo.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600"></span>Facilitar la colaboración de las partes interesadas según sea solicitado o necesario.</p>
+            </div>
+        </div>
+        <ul>
+        </ul>
+        <p></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El Scrum Master sirve a la organización de varias maneras, incluyendo:&nbsp;</span></p>
+        <p style=""></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600"></span>Liderar, capacitar y mentorizar a la organización en su adopción de Scrum.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600"></span>Planificar y asesorar sobre la implementación de Scrum dentro de la organización.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600"></span>Ayudar a las personas y a las partes interesadas a comprender y promulgar un enfoque empírico para el trabajo complejo.</p>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600"></span>Eliminar las barreras entre las partes interesadas y los equipos de Scrum. </p>
+            </div>
+        </div>
+        <br></div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223045"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Eventos</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El Sprint es un <span class="" style="color: rgb(0, 46, 184);">contenedor para todos los eventos</span>. Cada uno es una oportunidad formal para inspeccionar y adaptar los artefactos de Scrum.&nbsp;</span></p>
+      <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+    <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><span class="sub_negrita" style="font-weight: normal;">Estos eventos están diseñados específicamente para permitir la transparencia necesaria. Si no se realizan los eventos según lo prescrito, se pierden oportunidades para inspeccionar y adaptarse.&nbsp;</span></p></div><p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93">
+        </p><p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Los eventos se utilizan en Scrum para crear <span class="" style="color: rgb(0, 46, 184);">regularidad</span> y minimizar la <span class="" style="color: rgb(0, 46, 184);">necesidad de reuniones </span>no definidas en Scrum.&nbsp;</span></p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">De manera óptima, todos los eventos se llevan a cabo al mismo <span class="" style="color: rgb(0, 46, 184);">tiempo y lugar</span> para reducir la complejidad.&nbsp;</span></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223046"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Sprint</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+
+
+            <p style="color: rgb(1, 6, 20); font-size: large;"><span style="color: rgb(51, 51, 51);">Son <span class="" style="color: rgb(0, 46, 184);">eventos de longitud fija</span> (</span><i style="color: rgb(51, 51, 51);">timebox</i><span style="color: rgb(51, 51, 51);">) de un mes o menos para crear consistencia. Un nuevo Sprint
+                comienza inmediatamente después de la conclusión del Sprint anterior.&nbsp;</span><br></p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Todo el trabajo necesario para alcanzar el objetivo del producto, incluyendo la Planificación (Sprint Planning), Daily Scrums, Revisión del Sprint (Sprint Review) y la Retrospectiva (Sprint Retrospective), ocurren dentro del Sprints.&nbsp;</span></p>
+            <p style="text-align: center; color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812192/mod_book/chapter/223046/5.png" alt=" " width="599" height="278" class="img-responsive atto_image_button_text-bottom"></span></p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Durante el Sprint:</span></b>
+                </span>
+            </p>
+            <p style=""></p>
+            <!-- 1 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600"></span>No se hacen cambios que pongan en peligro el objetivo Sprint</p>
+                </div>
+            </div>
+
+
+
+            <!-- 2 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600"></span>La calidad no disminuye.</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600"></span>El trabajo pendiente del producto se refina según sea necesario.</p>
+                </div>
+            </div>
+
+
+            <!-- 4 -->
+            <div class="row" style="margin-left: 32px">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+                </div>
+                <div class="col">
+                    <p data-sider-select-id="82e47890-00e9-4163-85f4-69eab032df15"><span style="font-weight: 600"></span>El alcance se puede clarificar y renegociar con el Propietario del Producto a medida que se aprende más</p>
+                </div>
+            </div>
+            <ul>
+            </ul>
+            <p></p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Los Sprints permiten la <span class="" style="color: rgb(0, 46, 184);">previsibilidad</span> al garantizar la inspección y adaptación del progreso hacia un objetivo del Producto,
+                como mínimo, una vez al mes en el calendario.&nbsp;</span>
+            </p>
+            <div style="background-color: #FFFEEB; border-right: 6px solid #5811BB; padding: 10px;">
+                <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: right;"><span class="sub_negrita" style="font-weight: normal;">Cuando el horizonte de un Sprint es demasiado largo, el objetivo de Sprint puede volverse obsoleto, la complejidad puede aumentar y el riesgo puede aumentar.</span></p>
+            </div>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br>Los Sprints más cortos se pueden emplear para generar más ciclos de aprendizaje y limitar el riesgo de coste y esfuerzo a un período de tiempo más pequeño. Cada Sprint puede considerarse un proyecto corto.&nbsp;</span></p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Progreso</span></b>
+                </span>
+            </p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Existen varias prácticas para pronosticar el progreso, como gráficos de <i>burn-downs</i>, <i>burn-ups</i>, o flujos acumulativos. Si bien han demostrado ser útiles, estos no sustituyen la importancia del empirismo. En entornos complejos, se desconoce lo que sucederá. Sólo lo que ya ha sucedido se puede utilizar para la toma de decisiones con vistas a futuro.&nbsp;</span></p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Un Sprint podría ser cancelado si el objetivo del Sprint se vuelve obsoleto. Sólo el Propietario del Producto tiene la autoridad para cancelar el Sprint.&nbsp;</span></p>
+            <p><br></p>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223047"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Planificación del sprint</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El <span class="" style="color: rgb(0, 46, 184);"><i>Sprint planning</i></span> inicia el Sprint estableciendo el trabajo que se realizará para el mismo. Este plan resultante es
+            creado por el trabajo colaborativo de todo el equipo de Scrum.&nbsp;</span>
+        </p>
+        <p style="text-align: center; color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812192/mod_book/chapter/223047/6.png" alt=" " width="500" height="232" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El propietario del producto (<i>product owner</i>) se asegura de que los asistentes estén preparados para discutir los elementos de trabajo pendiente de producto más importantes y cómo se asignan al objetivo del producto. El equipo de Scrum también puede invitar a otras personas a asistir a la planificación del Sprint para proporcionar asesoramiento.&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">La planificación del Sprint aborda los siguientes temas:&nbsp;</span></p>
+        <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+            <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Tema uno: ¿Por qué este Sprint es valioso?</p></div>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br>El Propietario del Producto propone cómo el producto podría aumentar su valor y utilidad en el Sprint actual. A continuación, todo el equipo de Scrum colabora para definir un objetivo de Sprint que comunique por qué el Sprint es valioso para las partes interesadas. El objetivo Sprint debe finalizarse antes del final de la planificación de Sprint.&nbsp;</span></p>
+      <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Tema dos: ¿Qué se puede hacer este Sprint?</p>
+   </div>
+        
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br>A través del debate con el propietario del producto, los desarrolladores seleccionan los elementos del <i>product backlog</i> para incluir en el Sprint actual. El equipo de Scrum puede refinar estos elementos durante este proceso, lo que aumenta la comprensión y confianza.&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Seleccionar cuánto se puede completar dentro de un Sprint puede ser un desafío. Sin embargo, cuanto más sepan los desarrolladores sobre su rendimiento pasado, su capacidad futura y su definición de hecho, más seguro estarán en sus pronósticos de Sprint.&nbsp;</span></p>
+        
+      <div style="background-color:#87CEEB; display: inline-flex;  height: 6px;">
+        <p style="font-size: x-large; color: #010614; margin-top: -22px; padding-right: 4px" data-sider-select-id="93101215-b3ea-463e-83f8-5745366f7f57">Tema tres: ¿Cómo se realizará el trabajo elegido?</p>
+   </div>
+      
+    <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br>Para cada elemento de trabajo pendiente de producto seleccionado, los desarrolladores planifican el trabajo necesario para crear un incremento que cumpla con la definición de hecho. Esto se hace normalmente mediante la descomposición de elementos de trabajo pendiente del producto en elementos de trabajo más pequeños que se puedan realizar en un día o menos. La forma de hacerlo es según la discreción de los propios desarrolladores. Nadie más les dice cómo convertir los elementos de trabajo pendiente del producto en incrementos de valor.&nbsp;</span></p>
+    <!-- Cuadro amarillo borde violeta -->
+    <br>
+
+    <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+        <div style="margin:16px">
+            <p style="color: #5811BB; font-size: large; font-weight: 600">El objetivo de Sprint (Sprint goal)</p>
+            <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> los elementos de trabajo pendiente de producto seleccionados para el Sprint, más el plan para entregarlos se conocen conjuntamente como el trabajo pendiente de Sprint (Sprint backlog).&nbsp; </p>
+        </div>
+    </div>
+    <br>
+    <!-- Fin Cuadro amarillo borde violeta -->
+
+    <p style=""><span style="color: rgb(51, 51, 51);">El Sprint planning tiene una <span class="" style="color: rgb(0, 46, 184);">duración máxima de ocho horas </span>para un Sprint de un mes. Para sprints más cortos, el evento suele ser más corto.&nbsp;</span><br></p>
+    <p><br></p>
+</div></div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223048"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Scrum diario</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+       
+
+
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span></p>
+            <p>El <span class="" style="color: rgb(0, 46, 184);">Daily Scrum </span>en Scrum se enfoca en inspeccionar el progreso hacia el Objetivo del Sprint y adaptar el Sprint Backlog según sea necesario para alcanzarlo. Es un evento diario de 15 minutos para los desarrolladores del equipo Scrum, realizado
+                siempre en el mismo lugar y horario durante los días laborables del Sprint.</p>
+            <!-- Cuadro amarillo borde violeta -->
+            <br>
+
+            <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+                <div style="margin:16px">
+                    <p style="color: #5811BB; font-size: large; font-weight: 600">Daily Scrum</p>
+                    <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> es un evento diario de 15 minutos para los desarrolladores del equipo Scrum, destinado a inspeccionar el progreso hacia el Objetivo del Sprint y adaptar el Sprint Backlog según sea necesario. Para mantener la simplicidad, se lleva
+                        a cabo todos los días laborables del Sprint en el mismo lugar y horario. </p>
+                </div>
+            </div>
+            <br>
+            <!-- Fin Cuadro amarillo borde violeta -->
+
+            <p>Si el Product Owner o el Scrum Master están activamente involucrados en tareas del Sprint, participan como desarrolladores en el Daily Scrum.<br></p>
+            <p>Los desarrolladores pueden elegir cualquier estructura y técnicas que consideren efectivas, siempre que el enfoque del Daily Scrum sea el progreso hacia el objetivo del Sprint y resulte en un plan de acción claro para el próximo día de trabajo.
+                Esto <span class="" style="color: rgb(0, 46, 184);">promueve la autogestión</span> y el enfoque en las prioridades establecidas.</p>
+            <div style="background-color: #FFFEEB; border-left: 6px solid #5811BB; padding: 10px;">
+                <p data-sider-select-id="8349c92a-4dd2-456a-9ad2-af345ed621a8" style="text-align: left;"><span class="sub_negrita" style="font-weight: normal;">El Daily Scrum mejora la comunicación, identifica impedimentos, facilita la toma rápida de decisiones y reduce la necesidad de otras reuniones.</span></p>
+            </div>
+            <p dir="ltr" style="" data-sider-select-id="a8516c33-6b29-4c5f-83db-c33f5c2e7d93">
+            </p>
+            <p>Aunque el Daily Scrum es crucial, no es la única oportunidad para que los desarrolladores ajusten su plan. Durante el día, frecuentemente se reúnen para discutir detalladamente sobre adaptaciones o replanificaciones del trabajo restante del
+                Sprint.<br></p><br>
+            <p></p>
+            <p style=""><span class="" style="font-size: large; color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812192/mod_book/chapter/223048/7.png" alt=" " width="1082" height="502" class="img-responsive atto_image_button_text-bottom"></span></p>
+            <p><br></p>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223049"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Revisión del Sprint</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        
+
+
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="color: rgb(255, 51, 204);"><br></span></span></p><p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El <span class="" style="color: rgb(0, 46, 184);">propósito de la revisión del Sprint</span> es inspeccionar el resultado del Sprint y determinar futuras adaptaciones.&nbsp;</span>
+            </p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El equipo de Scrum presenta los resultados de su trabajo a las partes interesadas clave y se discute el progreso hacia el <span class="" style="color: rgb(0, 46, 184);">Objetivo de Producto</span>.&nbsp;</span></p>
+            <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812192/mod_book/chapter/223049/8.png" alt=" " width="1082" height="502" class="img-responsive atto_image_button_text-bottom"></span></p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Durante el evento, el equipo de Scrum y <span class="" style="color: rgb(0, 46, 184);">las partes interesadas revisan lo que se logró</span> en el Sprint y lo que ha cambiado en su entorno.&nbsp;</span></p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">En base a esta información, l<span class="" style="color: rgb(0, 46, 184);">os asistentes colaboran en qué hacer a continuación</span>.&nbsp;</span></p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El <span class="" style="color: rgb(0, 46, 184);">trabajo pendiente del producto también se puede ajustar</span> para satisfacer nuevas oportunidades. Sprint Review es una sesión de trabajo y el equipo de Scrum debe evitar limitarla a que se convierta en una simple presentación.&nbsp;</span></p>
+            <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">La <span class="" style="color: rgb(0, 46, 184);">revisión de Sprint es el penúltimo evento del Sprint </span>y se utiliza en un plazo máximo de cuatro horas para un Sprint de un mes. Para sprints más cortos, el evento suele ser más corto.</span>&nbsp;</p>
+            <p><br></p>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223050"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">La retrospectiva del Sprint</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;"><br></div><div style="margin-left: 3%; margin-right: 3%;">El<span class="" style="color: rgb(0, 46, 184);"> propósito de la retrospectiva Sprint</span> es planificar formas de aumentar la calidad y la eficacia.&nbsp;
+        <p></p>
+        <p style=""><span style="color: rgb(51, 51, 51);">El equipo de Scrum inspecciona <span class="" style="color: rgb(0, 46, 184);">cómo fue el último Sprint </span>con respecto a individuos, interacciones, procesos, herramientas y su definición de Hecho.&nbsp;</span><br></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Los <span class="" style="color: rgb(0, 46, 184);">elementos inspeccionados a menudo varían según el dominio del trabajo.</span> Las suposiciones que los desviaron se identifican y se exploran sus orígenes.&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El equipo de Scrum analiza<span class="" style="color: rgb(0, 46, 184);"> qué fue bien durante el Sprint, qué problemas encontró y cómo esos problemas fueron (o no fueron) resueltos</span>.&nbsp;</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812192/mod_book/chapter/223050/9.png" alt=" " width="1082" height="502" class="img-responsive atto_image_button_text-bottom"></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El equipo de Scrum <span class="" style="color: rgb(0, 46, 184);">identifica los cambios más útiles para mejorar su eficacia</span>. Las mejoras más impactantes se abordan lo antes posible. Incluso se pueden agregar al Sprint Backlog para el próximo Sprint.&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="color: rgb(0, 46, 184);">La retrospectiva Sprint concluye el Sprin</span>t. Se utiliza un intervalo de <span class="" style="color: rgb(0, 46, 184);">tiempo de hasta un máximo de tres horas para un Sprint de un mes</span>. Para sprints más cortos, el evento suele ser más corto.&nbsp;</span></p>
+        <p><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223051"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Artefactos</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><br></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Los artefactos de Scrum <span class="" style="color: rgb(0, 46, 184);">representan trabajo o valor.</span> Están diseñados para maximizar la transparencia de la información clave.
+            Por lo tanto, cada uno de los que los inspecciona tienen la misma base para la adaptación.&nbsp;</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><b class="sub_negrita"><span class="" style="color: rgb(0, 46, 184);">Compromisos&nbsp;</span></b>
+            </span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Cada artefacto contiene un compromiso para garantizar que proporciona información que mejora la transparencia y el enfoque con el que se puede medir el progreso:&nbsp;</span></p>
+        <p style=""></p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600"></span>Para el trabajo pendiente del producto es el objetivo del producto.&nbsp;</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600"></span>Para el Sprint Backlog es el Sprint Goal.&nbsp;</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="ee5a9773-9a00-48b6-97c8-b344015ed1a7"><span style="font-weight: 600"></span>Para el Incremento es la Definición de Hecho.&nbsp;</p>
+            </div>
+        </div>
+        <br>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">Estos compromisos existen para reforzar el empirismo y los valores de Scrum para el equipo de Scrum y sus partes interesadas.&nbsp;</span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812192/mod_book/chapter/223051/10.png" alt=" " width="799" height="317" class="img-responsive atto_image_button_text-bottom"></span></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223052"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Pila del producto</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+        <br>
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span></p>
+        <p>La pila de producto <span class="" style="color: rgb(0, 46, 184);">representa una lista dinámica y priorizada de requisitos que guían la mejora continua del producto</span>. Es la única fuente de trabajo para el equipo Scrum.</p>
+        <p>Sus <span class="" style="color: rgb(0, 46, 184);">elementos</span>, aptos para ser abordados por el equipo Scrum en un Sprint, <span class="" style="color: rgb(0, 46, 184);">se determinan en la reunión de planificación del Sprint</span>, luego
+            de actividades de refinamiento. Este proceso descompone los elementos en unidades más pequeñas y precisas, añadiendo detalles como descripciones, prioridades y tamaños, adaptados al contexto del proyecto.<br></p>
+        <p><span><span class="" style="color: rgb(0, 46, 184);"><b class="Sub_negrita">Responsabilidades y compromisos:</b></span></span>
+        </p>
+        <p>Los desarrolladores son responsables de estimar el tamaño de los elementos de trabajo. El Propietario del Producto apoya a los desarrolladores en la comprensión y selección de las mejores alternativas.</p>
+        <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Objetivo del producto</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> representa un estado futuro deseado del producto, sirviendo como guía para la planificación del equipo Scrum. Este objetivo se encuentra dentro de la Pila de Producto y define qué cumplirá el producto en su totalidad. </p>
+            </div>
+        </div>
+        <br>
+        <!-- Fin Cuadro amarillo borde violeta -->
+
+        <p><span><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">Compromiso y enfoque:</b></span></span><br></p>
+        <p>Un producto, ya sea un servicio, un producto físico o abstracto, debe entregar valor definido con claridad, con partes interesadas identificadas y usuarios bien definidos. El objetivo del producto es <span class="" style="color: rgb(0, 46, 184);">una meta a largo plazo</span> que el equipo Scrum
+            debe cumplir o reevaluar antes de avanzar hacia el siguiente.</p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"></span></p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223053"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Pila del Sprint</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="color: rgb(255, 51, 204);"><br></span>El trabajo pendiente de Sprint se compone del <span class="" style="color: rgb(0, 46, 184);">objetivo sprint (por qué)</span>,
+            el <span class="" style="color: rgb(0, 46, 184);">conjunto de elementos de
+                trabajo pendiente</span> de producto seleccionados para el Sprint <span class="" style="color: rgb(0, 46, 184);">(qué)</span>, así como un <span class="" style="color: rgb(0, 46, 184);">plan accionable</span> para entregar el incremento
+            <span class="" style="color: rgb(0, 46, 184);">(cómo)</span>.&nbsp;</span>
+        </p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El trabajo pendiente de Sprint es un<span class="" style="color: rgb(0, 46, 184);"> plan</span> por y para los desarrolladores. Es una imagen muy visible y en tiempo real del trabajo que los desarrolladores planean realizar durante el Sprint para lograr el Objetivo Sprint. Por lo tanto, el Sprint Backlog se actualiza a lo largo del Sprint a medida que se aprende más. Debe tener suficientes detalles para que puedan inspeccionar su progreso en el Scrum Diario.&nbsp;</span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(0, 46, 184);"><b class="sub_negrita">Compromiso: Sprint Goal&nbsp;</b></span></p>
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);">El Sprint Goal es el único objetivo para el Sprint. Aunque el objetivo de Sprint es un compromiso de los desarrolladores, proporciona flexibilidad en términos del trabajo exacto necesario para lograrlo. El Objetivo Sprint también crea <span class="" style="color: rgb(0, 46, 184);">coherencia y enfoque</span>, animando al equipo de Scrum a trabajar juntos en lugar de en iniciativas separadas.&nbsp;</span></p>
+      <!-- Cuadro amarillo borde violeta -->
+        <br>
+
+        <div style="background-color: #FFFEEB; border-top: 2px solid #460E95; width: 96%; margin: 0 auto;">
+            <div style="margin:16px">
+                <p style="color: #5811BB; font-size: large; font-weight: 600">Objetivo de Sprint&nbsp;</p>
+                <p style="color: #010614 ; font-size: large; padding-bottom: 16px; margin-top: -12px"> Se crea durante el evento Sprint Planning y, a continuación, se agrega al Trabajo pendiente de Sprint. A medida que los desarrolladores trabajan durante el Sprint, tienen en cuenta el objetivo de Sprint. Si el trabajo resulta ser diferente de lo que esperaban, colaboran con el propietario del producto para negociar el alcance del Trabajo pendiente de Sprint dentro del Sprint sin afectar al objetivo de Sprint.&nbsp; </p>
+            </div>
+        </div>
+        <p style=""><br></p>
+    </div>
+</div></div>
+            </div>
+            <div class="pb-5">
+            <div class="book_chapter pt-3" id="ch223054"><article class="flex_titulo_botonera" style="background-color: #E6E1E5;">
+    <p class="titulo_principal">Incremento</p>
+</article>
+<div style="background-color: #FAFAFA; font-size: large; color: #010614 ;">
+    <div style="margin-left: 3%; margin-right: 3%;">
+
+
+        <p style=""><span class="" style="font-size: large; color: rgb(51, 51, 51);"><span class="" style="color: rgb(255, 51, 204);"><br></span></span>
+        </p>
+        <p>Un incremento <span class="" style="color: rgb(0, 46, 184);">representa un avance hacia el Objetivo del Producto</span>. Cada Incremento es <span class="" style="color: rgb(0, 46, 184);">acumulativo</span> y se verifica exhaustivamente para garantizar
+            su compatibilidad con los Incrementos anteriores. Para aportar valor, cada incremento debe ser<span class="" style="color: rgb(0, 46, 184);"> utilizable y entregable.</span></p>
+        <p>Durante un Sprint, <span class="" style="color: rgb(0, 46, 184);">se pueden desarrollar múltiples incrementos</span>. Estos se presentan en la revisión Sprint, respaldando así el<span class="" style="color: rgb(0, 46, 184);"> enfoque empírico de Scrum</span>.
+            No obstante, un Incremento puede ser entregado a las partes interesadas antes del final del Sprint; sin embargo, la Revisión Sprint no debe ser vista como un medio para liberar valor.<br></p>
+        <p><span><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">Definición de hecho y calidad:</b></span></span>
+        </p>
+        <!-- 1 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">   <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="a9cb5e26-405f-40b1-b48e-5408a2774d36"><span style="font-weight: 600">Definición de hecho:&nbsp;</span>La Definición de Hecho es una descripción formal del estado que debe alcanzar un Incremento para cumplir con los estándares de calidad requeridos para el producto. Define
+                    los criterios específicos que el trabajo completado debe cumplir antes de que se considere terminado y potencialmente entregable.</p>
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="row" style="margin-left: 32px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16" style=" color: #00bf63">  
+  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"></path>
+</svg>
+            </div>
+            <div class="col">
+                <p data-sider-select-id="3e5ae0fa-9fe2-40c2-ae97-ed0665e4ed62"><span style="font-weight: 600">Definición de calidad:</span> Se verifica exhaustivamente para garantizar su compatibilidad con los Incrementos anteriores y asegurar que cada Incremento sea utilizable y entregable.</p>
+            </div>
+        </div>
+        <p><span><span class="" style="color: rgb(0, 46, 184);"><b class="sub_negrita">Estándares y colaboración:</b></span></span><br></p>
+        <p>Si la Definición de Hecho es un estándar organizativo, todos los equipos de Scrum deben adherirse a ella como mínimo. En ausencia de un estándar organizativo, cada equipo de Scrum debe crear una Definición de Hecho adecuada para el producto. Es
+            esencial que todos los equipos que trabajen juntos en un producto definan y cumplan mutuamente con la misma Definición de Hecho.</p>
+        <p style="color: rgb(1, 6, 20); font-size: large;"><span class="" style="font-size: large; color: rgb(239, 69, 64);"><img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/2812192/mod_book/chapter/223054/11.png" alt=" " width="700" height="371" class="img-responsive atto_image_button_text-bottom"><br><br></span></p>
+    </div>
+</div></div>
+            </div>
+    </div>
+</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[723378,723381,723385,723388,723402,723405,723407,723410,723412,723415,723417,723420,723422,723425,723428,723431,723432,723435,723438,723441,723443,723446,723448,723450,723452,723454,723457,723459,723461,723463,723465,723467]" data-defaultcourseicon="pie-chart"></div></div>
+    </section>
+</div>
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://aulasvirtuales.bue.edu.ar/lib/requirejs.php/1757558299/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+M.util.js_pending('theme_academiaba/theme'); require(['theme_academiaba/theme'], function(amd) {M.util.js_complete('theme_academiaba/theme');});;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2812192, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"trace"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1761562942); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/lib/editor/atto/plugins/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/admin/tool/htmlbootstrapeditor/content.js"></script>
+<script src="https://aulasvirtuales.bue.edu.ar/lib/javascript.php/1757558299/admin/tool/htmlbootstrapeditor/editor.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\nconfig: [\"Accessible.js\", \"Safe.js\"],\r\nerrorSettings: { message: [\"!\"] },\r\nskipStartupTypeset: true,\r\nmessageStyle: \"none\"\r\n});","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random68ff5179c7fbb2'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random68ff5179c7fbb2'); });
+})();
+//]]>
+</script>
+
+</body>
+</html>

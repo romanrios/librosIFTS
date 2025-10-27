@@ -110,6 +110,10 @@
       {
         "texto": "11 - Metodología ágil",
         "url": "./pages/Ingenieria/ingenieria_11.html"
+      },
+      {
+        "texto": "12 - Marco de trabajo",
+        "url": "./pages/Ingenieria/ingenieria_12.html"
       }
     ]
   },
