@@ -53,6 +53,10 @@
       {
         "texto": "12 - Testing en aplicaciones React",
         "url": "./pages/Front/front_12.html"
+      },
+      {
+        "texto": "13 - Despliegue de aplicaciones React",
+        "url": "./pages/Front/front_13.html"
       }
     ]
   },
